@@ -15,3 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
+export {P5Lib};
+export * from './sketch-context';

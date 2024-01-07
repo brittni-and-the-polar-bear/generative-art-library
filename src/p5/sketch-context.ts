@@ -15,3 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
+const noCanvas: P5Lib = new P5Lib((p: P5Lib): void => {
+    p.setup = (): void => {
+        p.createCanvas(0, 0);
+    }
+});
+
+class SketchContext {
+    private static _p5?: P5Lib;
+
+    public static get p5(): P5Lib {
+        return this._p5 ?? noCanvas;
+    }
+
+    public static initialize(p5: P5Lib): void {
+        if (!this._p5) {
+            this._p5 = p5;
+        }
+    }
+}
+
+export {SketchContext};
+export default SketchContext;
