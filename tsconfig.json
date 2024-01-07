@@ -3,17 +3,11 @@
     /* Language and Environment */
     "target": "es6",
     "paths": {
-      "assets": [
-        "./assets"
+      "@batpb/p5-lib": [
+        "./src/p5"
       ],
-      "common": [
-        "./src/common"
-      ],
-      "p5-lib": [
-        "./src/common/p5"
-      ],
-      "sketch": [
-        "./src/sketch"
+      "@batpb/genart": [
+        "./src"
       ]
     },
     /* Modules */
