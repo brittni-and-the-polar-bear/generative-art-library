@@ -1,10 +1,46 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
+    /* Language and Environment */
+    "target": "es6",
+    "paths": {
+      "assets": [
+        "./assets"
+      ],
+      "common": [
+        "./src/common"
+      ],
+      "p5-lib": [
+        "./src/common/p5"
+      ],
+      "sketch": [
+        "./src/sketch"
+      ]
+    },
+    /* Modules */
+    "module": "es6",
+    "moduleResolution": "node",
+    "rootDirs": [
+      "./src",
+      "./tests"
+    ],
+    /* Emit */
+    "outDir": "./out/dist",
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+    /* Interop Constraints */
+    "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    /* Type Checking */
     "strict": true,
-    "skipLibCheck": true
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "allowUnreachableCode": false
   }
 }
