@@ -10,6 +10,7 @@
         "./src"
       ]
     },
+
     /* Modules */
     "module": "es6",
     "moduleResolution": "node",
@@ -20,6 +21,7 @@
     /* Emit */
     "outDir": "./out/dist",
     "sourceMap": true,
+    "declaration": true,
     "removeComments": true,
     "noEmitOnError": true,
     "preserveConstEnums": true,
