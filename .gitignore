@@ -5,3 +5,10 @@
 
 # node and npm
 node_modules/
+
+# output directories
+out/
+dist/
+
+# jest
+tests-coverage/
