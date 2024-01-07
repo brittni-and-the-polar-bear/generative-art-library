@@ -3,11 +3,14 @@
     /* Language and Environment */
     "target": "es6",
     "paths": {
-      "@batpb/p5-lib": [
-        "./src/p5"
-      ],
       "@batpb/genart": [
         "./src"
+      ],
+      "@batpb/color": [
+        "./src/color"
+      ],
+      "@batpb/p5-lib": [
+        "./src/p5"
       ]
     },
 
@@ -22,6 +25,7 @@
     "outDir": "./out/dist",
     "sourceMap": true,
     "declaration": true,
+    "declarationMap": true,
     "removeComments": true,
     "noEmitOnError": true,
     "preserveConstEnums": true,
