@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
   "main": "out/dist/index.js",
+  "files": [
+    "out/dist/*"
+  ],
   "scripts": {
     "build": "sh ./scripts/shell/delete-out.sh; rollup --config",
     "lint:tests": "npx eslint ./tests",
@@ -45,6 +48,7 @@
     "p5": "^1.9.0"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.39.1",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-node-resolve": "^15.2.3",
