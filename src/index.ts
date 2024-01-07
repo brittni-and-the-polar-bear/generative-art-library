@@ -30,3 +30,6 @@ function sketch(p5: P5Lib): void {
 const p5: P5Lib = new P5Lib(sketch);
 
 export {p5 as sketch};
+
+// library exports
+export * from '@batpb/color';
