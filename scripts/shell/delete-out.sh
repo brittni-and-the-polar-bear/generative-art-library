@@ -18,8 +18,8 @@
 
 echo 'Removing all output files.'
 
-sh ./scripts/delete-dist.sh;
-sh ./scripts/delete-tests-coverage.sh;
+sh ./scripts/shell/delete-dist.sh;
+sh ./scripts/shell/delete-tests-coverage.sh;
 
 echo 'Removing /out';
 
