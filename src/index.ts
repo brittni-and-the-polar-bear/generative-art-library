@@ -15,4 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-console.log('Hello, World!');
+import {P5Lib} from '@batpb/p5-lib';
+
+function sketch(p5: P5Lib): void {
+    p5.setup = (): void => {
+        return;
+    }
+
+    p5.draw = (): void => {
+        return;
+    }
+}
+
+const p5: P5Lib = new P5Lib(sketch);
+
+export {p5 as sketch};
