@@ -26,10 +26,12 @@ export default {
     input: 'src/index.ts',
     output: {
         dir: './out/dist',
-        format: 'umd',
+        // format: 'umd',
+        // preserveModules: false,
+        format: 'es',
+        preserveModules: true,
         name: 'GenerativeArtTemplate',
-        sourcemap: true,
-        preserveModules: true
+        sourcemap: true
     },
     plugins: [
         typescript(),

@@ -12,3 +12,6 @@ dist/
 
 # jest
 tests-coverage/
+
+# api-extractor
+api-temp/

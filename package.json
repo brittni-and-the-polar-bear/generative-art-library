@@ -2,12 +2,17 @@
   "name": "@batpb/genart",
   "version": "0.1.0",
   "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
-  "main": "out/dist/index.js",
+  "main": "",
+  "types": "",
   "files": [
-    "out/dist/*"
+    "./LICENSE",
+    "./package.json",
+    "./package-lock.json",
+    "./README.md"
   ],
   "scripts": {
     "build": "sh ./scripts/shell/delete-out.sh; rollup --config",
+    "build:types": "npx api-extractor run --local --verbose",
     "lint:tests": "npx eslint ./tests",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -44,8 +49,8 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library#readme",
   "dependencies": {
-    "@types/p5": "^1.7.6",
-    "p5": "^1.9.0"
+    "@batpb/genart-base": "file:~/Desktop/npm-test/batpb-genart-base-0.1.0.tgz",
+    "@batpb/genart-color-collections": "file:~/Desktop/npm-test/batpb-genart-color-collections-0.1.0.tgz"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.39.1",

@@ -2,17 +2,6 @@
   "compilerOptions": {
     /* Language and Environment */
     "target": "es6",
-    "paths": {
-      "@batpb/genart": [
-        "./src"
-      ],
-      "@batpb/color": [
-        "./src/color"
-      ],
-      "@batpb/p5-lib": [
-        "./src/p5"
-      ]
-    },
 
     /* Modules */
     "module": "es6",
@@ -26,7 +15,8 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "removeComments": true,
+    "declarationDir": "./out/dist/types",
+    "removeComments": false,
     "noEmitOnError": true,
     "preserveConstEnums": true,
     /* Interop Constraints */

@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
   "projectFolder": ".",
-  "mainEntryPointFilePath": "<projectFolder>/out/dist/index.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/out/dist/types/index.d.ts",
   "bundledPackages": [
-    "p5 "
+    "p5"
   ],
   "newlineKind": "lf",
   "enumMemberOrder": "preserve",
@@ -25,10 +25,10 @@
   },
   "dtsRollup": {
     "enabled": true,
-    "untrimmedFilePath": "<projectFolder>/out/dist/<unscopedPackageName>.d.ts",
-    "alphaTrimmedFilePath": "<projectFolder>/out/dist/<unscopedPackageName>-alpha.d.ts",
-    "betaTrimmedFilePath": "<projectFolder>/out/dist/<unscopedPackageName>-beta.d.ts",
-    "publicTrimmedFilePath": "<projectFolder>/out/dist/<unscopedPackageName>-public.d.ts"
+    "untrimmedFilePath": "<projectFolder>/out/dist/index.d.ts",
+    "alphaTrimmedFilePath": "<projectFolder>/out/types/<unscopedPackageName>-alpha.d.ts",
+    "betaTrimmedFilePath": "<projectFolder>/out/types/<unscopedPackageName>-beta.d.ts",
+    "publicTrimmedFilePath": "<projectFolder>/out/types/<unscopedPackageName>-public.d.ts"
   },
   "tsdocMetadata": {
     "enabled": true,
