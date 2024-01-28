@@ -7,22 +7,24 @@
     "module": "es6",
     "moduleResolution": "node",
     "rootDirs": [
-      "./src",
-      "./tests"
+      "./src"
     ],
+
     /* Emit */
     "outDir": "./out/dist",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "./out/dist/types",
+    "declarationDir": "./out/types",
     "removeComments": false,
     "noEmitOnError": true,
     "preserveConstEnums": true,
+
     /* Interop Constraints */
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+
     /* Type Checking */
     "strict": true,
     "noImplicitAny": true,

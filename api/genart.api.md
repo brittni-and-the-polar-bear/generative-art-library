@@ -6,7 +6,6 @@
 
 
 export * from "@batpb/genart-base";
-export * from "@batpb/genart-color-collections";
 
 // (No @packageDocumentation comment for this package)
 

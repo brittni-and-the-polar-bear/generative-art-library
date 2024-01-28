@@ -6,12 +6,10 @@
 # node and npm
 node_modules/
 
-# output directories
+# output
 out/
 dist/
+types/
 
-# jest
-tests-coverage/
-
-# api-extractor
-api-temp/
+# api extractor
+api/temp/
