@@ -1,0 +1,63 @@
+{
+  "name": "@batpb/genart",
+  "version": "0.0.1",
+  "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
+  "main": "./out/dist/index.js",
+  "types": "./out/dist/index.d.ts",
+  "files": [
+    "./out/dist/**",
+    "./.node-version",
+    "./LICENSE",
+    "./package.json",
+    "./package-lock.json",
+    "./README.md"
+  ],
+  "scripts": {
+    "build:source": "rm -r ./out; npx tsc",
+    "build:types": "rm -r ./api; npx api-extractor run --local --verbose",
+
+    "prepack": "npm run build:source; npm run build:types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-library.git"
+  },
+  "keywords": [
+    "code art",
+    "generative art",
+    "p5",
+    "p5.js",
+    "p5js",
+    "p5js-library",
+    "typescript"
+  ],
+  "author": {
+    "name": "brittni and the polar bear",
+    "url": "https://linktr.ee/brittniandthepolarbear"
+  },
+  "contributors": [
+    {
+      "name": "brittni watkins",
+      "url": "https://linktr.ee/brittniwatkins"
+    },
+    {
+      "name": "azurepolarbear",
+      "url": "https://linktr.ee/azurepolarbear"
+    }
+  ],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library/issues"
+  },
+  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library#readme",
+  "dependencies": {
+    "@batpb/genart-base": "^0.0.1",
+    "@types/p5": "^1.7.6",
+    "p5": "^1.9.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.39.4"
+  }
+}
