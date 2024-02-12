@@ -10,7 +10,7 @@ responsive generative art projects.
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml) [![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml)
 
 ![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart)
-![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library) ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library) ![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/min/%40batpb/genart) ![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/%40batpb/genart)
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library) ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)
 
 ![NPM Downloads](https://img.shields.io/npm/dt/%40batpb%2Fgenart)
 
