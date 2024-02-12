@@ -8,8 +8,7 @@ node_modules/
 
 # output
 out/
-dist/
-types/
 
 # api extractor
 api/temp/
+api/genart.api.json
