@@ -39,4 +39,8 @@ license can be found in the LICENSE file of the root directory.
 
 ## Color Collections
 
+[color-hex](https://www.color-hex.com/)
+
 [coolors](https://coolors.co/)
+
+[culrs](https://culrs.com/)
