@@ -1,6 +1,6 @@
 # Generative Art Library
 
-Copyright (C) 2023-2024 Brittni Watkins
+Copyright (C) 2023-2024 brittni and the polar bear LLC.
 
 A [TypeScript](https://www.typescriptlang.org/) compatible library built on [p5.js](https://p5js.org/) for creating
 responsive generative art projects.
@@ -39,4 +39,8 @@ license can be found in the LICENSE file of the root directory.
 
 ## Color Collections
 
+[color-hex](https://www.color-hex.com/)
+
 [coolors](https://coolors.co/)
+
+[culrs](https://culrs.com/)
