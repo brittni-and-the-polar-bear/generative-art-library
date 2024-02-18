@@ -4,19 +4,23 @@
     "target": "es6",
 
     /* Modules */
-    "module": "umd",
+    "module": "es6",
     "moduleResolution": "node",
     "rootDirs": [
       "./src"
     ],
 
+    /* JSON Modules */
+    "resolveJsonModule": false,
+    "resolvePackageJsonExports": false,
+    "resolvePackageJsonImports": false,
+
     /* Emit */
-    "outDir": "./out/dist",
+    "outDir": "./out/compiled",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "./out/types",
-    "removeComments": false,
+    "removeComments": true,
     "noEmitOnError": true,
     "preserveConstEnums": true,
 
