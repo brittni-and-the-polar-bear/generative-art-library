@@ -39,7 +39,7 @@ license can be found in the LICENSE file of the root directory.
 
 [Color Namer](https://colornamer.robertcooper.me/)
 
-## Color Collections
+## Color Palettes
 
 [color-hex](https://www.color-hex.com/)
 
