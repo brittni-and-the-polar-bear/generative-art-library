@@ -9,24 +9,29 @@
 
 ## Publish v0.4.0
 
-- [ ] publish palettes library v0.4.0
-- [ ] close issue #18
-- [ ] publish genart library v0.4.0
+- [x] publish palettes library v0.4.0
+- [x] close issue #18
+- [x] publish genart library v0.4.0
 - [ ] update color test code
 - [ ] publish [color test repo](https://github.com/azurepolarbear/gen-art-test_color) v1.0.0
 
-## Socket Score Improvement Test ([See GitHub Issue](https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/42))
+## Socket Score Improvement Test
 
-- [ ] record current Socket score (score = `REPLACE ME`)
-- [ ] remove terser and minifying from library
-- [ ] release a new version
+<a href="https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/42" target="_blank" rel="noopener noreferrer">See GitHub Issue</a>
+
+- [x] record current Socket score (score = 58)
+- [x] record current bundle size (size = 64.3 KB)
+- [x] remove terser and minifying from library
+- [x] release a new version
 - [ ] wait for Socket score to be calculated
 - [ ] record new Socket score (score = `REPLACE ME`)
 
 If we see a significant improvement, we will remove minifying from all libraries. This will mean that the color and
 palette libraries will need to be split up.
 
-## Socket Score Improvement ([See the GitHub Issue](https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/43))
+## Socket Score Improvement
+
+<a href="https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/43" target="_blank" rel="noopener noreferrer">See GitHub Issue</a>
 
 - [ ] review all issues in the Socket platform
   - Are any of them actionable?

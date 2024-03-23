@@ -11,11 +11,13 @@ generative art projects.
 ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)
 ![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)</a>
 
-## see it in action! [coming soon!]
+## see it in action! (coming soon!)
 
-## meet the team [coming soon!]
+## meet the team (coming soon!)
 
 ## [development resources](./resources.md)
+
+## [development priorities](./progress-tracking/priority.md)
 
 ## LICENSE information
 
