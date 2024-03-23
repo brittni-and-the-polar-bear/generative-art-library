@@ -3,7 +3,7 @@
 ## README
 
 - [ ] add link to npm library
-  - [ ] generative-art-library
+  - [x] generative-art-library
   - [ ] generative-art-library_base
   - [ ] generative-art-library_palettes
 
