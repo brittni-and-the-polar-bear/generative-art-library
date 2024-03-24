@@ -35,6 +35,16 @@ of the root directory.
 
 ----
 
+# Getting Started
+
+## Install with [npm](https://www.npmjs.com/)
+
+```shell
+npm install @batpb/genart
+```
+
+----
+
 # Resources
 
 ## Color Names
