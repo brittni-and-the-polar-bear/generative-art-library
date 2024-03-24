@@ -2,17 +2,17 @@
 
 ## Color Class
 
-- [ ] color class
+- [x] color class
 - [ ] color transitions
   - [ ] fade
   - [ ] lerp
 
 ## Color Selection with Palettes
 
-- [ ] palette 1
-- [ ] palette 2
-- [ ] palette 3
-- [ ] palette 4
+- [x] palette 1
+- [x] palette 2
+- [x] palette 3
+- [x] palette 4
 - [ ] palette 5
 - [ ] color selection with weighted
   palettes ([See the GitHub Issue](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/issues/19))
