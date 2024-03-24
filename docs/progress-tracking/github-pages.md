@@ -2,7 +2,7 @@
 
 ## Project Updates
 
-- [ ] add pages link on GitHub about
+- [x] add pages link on GitHub about
 - [ ] generative-art-library
 - [ ] generative-art-library_base (make base "home page")
 - [ ] generative-art-library_palettes (make palettes "home page")
@@ -17,7 +17,8 @@
 
 ## Copyright
 
-- [ ] update other pages to match generative art library layout
+- [ ] update pages layout of all sites
+  - [ ] [brittni-and-the-polar-bear.github.io/generative-art-library](https://brittni-and-the-polar-bear.github.io/generative-art-library/)
   - [ ] [blwatkins.github.io](https://blwatkins.github.io/)
   - [ ] [azurepolarbear.github.io](https://azurepolarbear.github.io/)
   - [ ] [brittni-and-the-polar-bear.github.io](https://brittni-and-the-polar-bear.github.io/)

@@ -1,12 +1,5 @@
 # General Tasks
 
-## README
-
-- [ ] add link to npm library
-  - [x] generative-art-library
-  - [x] generative-art-library_base
-  - [ ] generative-art-library_palettes
-
 ## Publish v0.4.0
 
 - [x] publish palettes library v0.4.0
