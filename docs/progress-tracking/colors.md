@@ -38,7 +38,7 @@
 - [ ] set up new repository
   - [ ] .gitignore
   - [ ] README
-  - [ ] LICENSE
+  - [x] LICENSE
   - [ ] .node-version
   - [ ] node and npm
   - [ ] branch protections
