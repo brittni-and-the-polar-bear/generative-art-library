@@ -42,4 +42,6 @@ palette libraries will need to be split up.
 
 ## [Prohibition](https://prohibition.art/) integration
 
+## Create and Publish Documentation
+
 ### [All Progress](./progress.md)
