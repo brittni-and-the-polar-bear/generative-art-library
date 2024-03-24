@@ -1,4 +1,4 @@
-# generative art library
+# <a href="https://www.npmjs.com/package/@batpb/genart" target="_blank" rel="noopener noreferrer">@batpb/genart</a> - generative art library
 
 A <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a> compatible library
 built on <a href="https://p5js.org/" target="_blank" rel="noopener noreferrer">p5.js</a> for creating responsive
@@ -10,6 +10,18 @@ generative art projects.
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library)
 ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)
 ![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)</a>
+
+----
+
+## Getting Started
+
+### Install with <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npm</a>
+
+```shell
+npm install @batpb/genart
+```
+
+----
 
 ## see it in action! (coming soon!)
 
