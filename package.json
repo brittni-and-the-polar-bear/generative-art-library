@@ -49,7 +49,7 @@
   "bugs": {
     "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library/issues"
   },
-  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library#readme",
+  "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
   "dependencies": {
     "@batpb/genart-palettes": "^0.4.1",
     "@types/p5": "^1.7.6",
