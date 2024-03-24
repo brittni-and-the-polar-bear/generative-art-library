@@ -4,7 +4,7 @@
 
 - [ ] add link to npm library
   - [x] generative-art-library
-  - [ ] generative-art-library_base
+  - [x] generative-art-library_base
   - [ ] generative-art-library_palettes
 
 ## Publish v0.4.0
