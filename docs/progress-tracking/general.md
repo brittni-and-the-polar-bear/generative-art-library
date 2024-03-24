@@ -1,13 +1,5 @@
 # General Tasks
 
-## Publish v0.4.0
-
-- [x] publish palettes library v0.4.0
-- [x] close issue #18
-- [x] publish genart library v0.4.0
-- [ ] update color test code
-- [ ] publish [color test repo](https://github.com/azurepolarbear/gen-art-test_color) v1.0.0
-
 ## Socket Score Improvement Test
 
 <a href="https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/42" target="_blank" rel="noopener noreferrer">See GitHub Issue</a>

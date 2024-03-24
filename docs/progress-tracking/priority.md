@@ -1,6 +1,5 @@
 # Task Priority
 
-- [ ] [Publish v0.4.0](./general.md#publish-v040)
 - [ ] [Copyright](./github-pages.md#copyright)
 - [ ] [Project Updates](./github-pages.md#project-updates)
 - [ ] [Color Class](./colors.md#color-class)
