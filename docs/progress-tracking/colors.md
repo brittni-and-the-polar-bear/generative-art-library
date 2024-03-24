@@ -45,14 +45,14 @@
 
 ## Color Selection with RBG ranges
 
-- [ ] set up new repository
+- [x] set up new repository
   - [x] .gitignore
-  - [ ] README
+  - [x] README
   - [x] LICENSE
   - [x] .node-version
   - [x] node and npm
-  - [ ] branch protections
-  - [ ] tag protections
+  - [x] branch protections
+  - [x] tag protections
   - [x] issue templates
   - [x] GitHub Actions
     - [x] dependabot
