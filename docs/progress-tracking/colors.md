@@ -1,5 +1,15 @@
 # Colors Tasks
 
+## Split Color Configurations Out of Color Palettes Repository
+
+## Split Palette Configurations Out of Color Palettes Repository
+
+- [ ] holiday-christmas
+- [ ] holiday-valentines
+- [ ] all holidays (maybe?)
+- [ ] miscellaneous
+- [ ] nature
+
 ## Color Class
 
 - [x] color class
@@ -36,24 +46,24 @@
 ## Color Selection with RBG ranges
 
 - [ ] set up new repository
-  - [ ] .gitignore
+  - [x] .gitignore
   - [ ] README
   - [x] LICENSE
-  - [ ] .node-version
-  - [ ] node and npm
+  - [x] .node-version
+  - [x] node and npm
   - [ ] branch protections
   - [ ] tag protections
-  - [ ] issue templates
-  - [ ] GitHub Actions
-    - [ ] dependabot
-    - [ ] codeql
-    - [ ] node.js
-    - [ ] npm deprecate
-    - [ ] npm-publish
-  - [ ] rollup
-  - [ ] typescript
-  - [ ] eslint
-  - [ ] jest
+  - [x] issue templates
+  - [x] GitHub Actions
+    - [x] dependabot
+    - [x] codeql
+    - [x] node.js
+    - [x] npm deprecate
+    - [x] npm-publish
+  - [x] rollup
+  - [x] typescript
+  - [x] eslint
+  - [x] jest
 - [ ] color selector type enum
 - [ ] red
 - [ ] green
