@@ -29,7 +29,7 @@ npm install @batpb/genart
 
 ## [development resources](./resources.md)
 
-## [development priorities](./progress-tracking/priority.md)
+## [development tasks](./progress-tracking/progress.md)
 
 ## LICENSE information
 

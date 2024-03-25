@@ -64,9 +64,9 @@
   - [x] typescript
   - [x] eslint
   - [x] jest
-- [ ] color selector type enum
-- [ ] red
-- [ ] green
+- [x] color selector type enum
+- [x] red
+- [x] green
 - [ ] blue
 - [ ] magenta
 - [ ] yellow
@@ -74,7 +74,7 @@
 - [ ] black
 - [ ] white
 - [ ] random
-- [ ] n colors or infinite colors
+- [x] n colors or infinite colors
 
 ## Color Name Retrieval ([See the GitHub Issue](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/issues/21))
 

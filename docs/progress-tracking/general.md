@@ -1,5 +1,14 @@
 # General Tasks
 
+## Output Package Documentation
+
+- [ ] research: how to output typescript library documentation
+- [ ] research: how to output javascript documentation
+
+## Address All TODOs
+- [ ] address all TODO items in all packages
+- [ ] address all unit test TODO items
+
 ## Socket Score Improvement Test
 
 <a href="https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/42" target="_blank" rel="noopener noreferrer">See GitHub Issue</a>

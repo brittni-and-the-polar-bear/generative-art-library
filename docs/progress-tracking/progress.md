@@ -1,7 +1,5 @@
 # Development Progress
 
-## [Priority](./priority.md)
-
 ## [General](./general.md)
 
 ## [GitHub Pages](./github-pages.md)
