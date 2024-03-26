@@ -27,9 +27,13 @@ npm install @batpb/genart
 
 ## meet the team (coming soon!)
 
+----
+
 ## [development resources](./resources.md)
 
 ## [development tasks](./progress-tracking/progress.md)
+
+----
 
 ## LICENSE information
 
