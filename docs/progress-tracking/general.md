@@ -1,34 +1,22 @@
 # General Tasks
 
 ## Output Package Documentation
+- [ ] output package documentation using [typedoc](https://github.com/TypeStrong/typedoc)
+  - [ ] full library
+  - [ ] base
+  - [ ] color palettes
+  - [ ] rgb color
+- [ ] add package documentation to GitHub pages
 
-- [ ] research: how to output typescript library documentation
-- [ ] research: how to output javascript documentation
+## TSDoc ESLint Plugin
+- [ ] add TSDoc ESLint plugin to all projects
+  - [ ] base
+  - [ ] color palettes
+  - [ ] rgb color
 
 ## Address All TODOs
 - [ ] address all TODO items in all packages
 - [ ] address all unit test TODO items
-
-## Socket Score Improvement Test
-
-<a href="https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/42" target="_blank" rel="noopener noreferrer">See GitHub Issue</a>
-
-- [x] record current Socket score (score = 58)
-- [x] record current bundle size (size = 64.3 KB)
-- [x] remove terser and minifying from library
-- [x] release a new version
-- [ ] wait for Socket score to be calculated
-- [ ] record new Socket score (score = `REPLACE ME`)
-
-If we see a significant improvement, we will remove minifying from all libraries. This will mean that the color and
-palette libraries will need to be split up.
-
-## Socket Score Improvement
-
-<a href="https://github.com/brittni-and-the-polar-bear/generative-art-library_base/issues/43" target="_blank" rel="noopener noreferrer">See GitHub Issue</a>
-
-- [ ] review all issues in the Socket platform
-  - Are any of them actionable?
 
 ## [fx(hash)](https://www.fxhash.xyz/) integration
 
