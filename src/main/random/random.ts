@@ -19,22 +19,37 @@ import {WeightedElement} from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
+ *
+ * @public
+ * @group Classes
+ * @group Random
  */
 class Random {
-    private static _randomMethod: () => number = Math.random;
+    /**
+     * The primary function to be called when generating any random numbers.
+     * Set to {@link !Math.random} by default.
+     *
+     * @private
+     * @static
+     */
+    private static _randomMethod: (() => number) = Math.random;
 
     /**
-     * @param method {() => number} - the method to be used as the base random method of the class.
-     * All methods in this class get their randomness from this function.
+     * @public
+     * @static
+     * @param method - The primary function to be called when generating any random numbers.<br/>
+     * Set to {@link !Math.random} by default.
      */
     public static set randomMethod(method: () => number) {
         Random._randomMethod = method;
     }
 
     /**
-     * @param min {number} - the minimum number that can be returned from this function (inclusive).
-     * @param max {number} - the maximum number that can be returned from the function (non-inclusive).
-     * @returns {number} - a random floating point value greater than or equal to min and less than max.
+     * @public
+     * @static
+     * @param min - The minimum number that can be returned from this function (inclusive).
+     * @param max - The maximum number that can be returned from the function (non-inclusive).
+     * @returns A random floating point value greater than or equal to min and less than max.
      */
     public static randomFloat(min: number, max: number): number {
         if (min > max) {
@@ -47,25 +62,28 @@ class Random {
     }
 
     /**
-     * @param min {number} - the minimum number that can be returned from this function (inclusive).
-     * @param max {number} - the maximum number that can be returned from the function (non-inclusive).
-     * @returns {number} - a random integer value greater than or equal to min and less than max.
+     * @public
+     * @static
+     * @param min - The minimum number that can be returned from this function (inclusive).
+     * @param max - The maximum number that can be returned from the function (non-inclusive).
+     * @returns A random integer value greater than or equal to min and less than max.
      */
     public static randomInt(min: number, max: number): number {
         return Math.floor(Random.randomFloat(min, max));
     }
 
     /**
-     * @param chanceOfTrue {number} - a floating point number between 0 and 1.
+     * @public
+     * @static
+     * @param chanceOfTrue - A floating point number between 0 and 1.
      * If provided, it represents the percent chance that this method will return true.
-     * @returns {boolean} - a random boolean value.
+     * @returns A random boolean value.
      */
     public static randomBoolean(chanceOfTrue?: number): boolean {
         let value: boolean = true;
 
         if (chanceOfTrue
-            && chanceOfTrue > 0
-            && chanceOfTrue < 1) {
+            && (chanceOfTrue > 0 && chanceOfTrue < 1)) {
             const r: number = Random.randomFloat(0, 1);
 
             if (r > chanceOfTrue) {
@@ -73,20 +91,19 @@ class Random {
             }
         } else {
             const r: number = Random.randomInt(0, 2);
-
-            if (r % 2 === 0) {
-                value = false;
-            }
+            value = r % 2 === 0;
         }
 
         return value;
     }
 
     /**
-     * @param list {<Type>} - the list of elements to be selected from.
-     * @returns {<Type>} - a random element from the given list.
-     * If an empty list is provided, the function will return undefined.
-     * This method assumes an equal distribution for all elements of the list.
+     * @public
+     * @static
+     * @param list - The list of elements to be selected from.
+     * @returns A random element from the given list.
+     * This method assumes an equal distribution for all elements of the list.<br/>
+     * If an empty list is provided, the function will return {@link !undefined}.
      */
     public static randomElement<Type>(list: Type[]): Type | undefined {
         let element: Type | undefined = undefined;
@@ -104,12 +121,15 @@ class Random {
     }
 
     /**
-     * @param list {<Type>} - the list of elements to be selected from.
-     * <b>IMPORTANT:</b> the sum of weights of the objects in this list should be equal to 1.0.
-     *
-     * @returns {<Type>} - a random element from the given list.
+     * @public
+     * @static
+     * @param list - The list of elements to be selected from.<br/>
+     * <b>IMPORTANT: The sum of weights of the objects in this list should be equal to 1.0.</b>
+     * @returns A random element from the given list.
      * The distribution of the choices will be determined by the weights of each
-     * element in the list.
+     * element in the list.<br/>
+     * If an empty list is provided, the function will return {@link !undefined}.<br/>
+     * If the sum of weights in the list is less than 1.0, the function will return {@link !undefined}.
      */
     public static randomWeightedElement<Type>(list: WeightedElement<Type>[]): Type | undefined {
         let element: Type | undefined = undefined;

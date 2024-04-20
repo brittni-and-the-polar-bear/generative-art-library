@@ -16,6 +16,10 @@
   ],
   "scripts": {
     "build:source": "rm -r ./out; rollup --config",
+    "test": "rm -r ./out/tests-coverage; jest",
+    "lint": "eslint ./src",
+    "docs": "typedoc",
+    "size-limit": "size-limit",
     "prepack": "npm run build:source"
   },
   "repository": {
@@ -52,7 +56,6 @@
   },
   "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
   "dependencies": {
-    "@batpb/genart-palettes": "^0.4.1",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0"
   },
@@ -76,6 +79,7 @@
     "typedoc-plugin-coverage": "^3.1.0",
     "typedoc-plugin-extra-footer": "^1.0.1",
     "typedoc-plugin-inline-sources": "^1.0.2",
+    "typedoc-plugin-mdn-links": "^3.1.21",
     "typescript": "^5.4.5"
   },
   "size-limit": [
