@@ -13,9 +13,9 @@ generative art projects.
 
 ----
 
-## Getting Started
+# Getting Started
 
-### Install with <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npm</a>
+## Install with <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npm</a>
 
 ```
 npm install @batpb/genart
@@ -35,7 +35,7 @@ npm install @batpb/genart
 
 ----
 
-## LICENSE information
+# LICENSE information
 
 The source code of this project is licensed under the 
 <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GNU Affero General Public Version 3.0 License</a>.
