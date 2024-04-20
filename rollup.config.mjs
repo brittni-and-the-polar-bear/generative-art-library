@@ -30,11 +30,16 @@ export default {
         sourcemap: true,
         preserveModules: false,
         globals: {
+            p5: 'p5',
             '@batpb/genart-base': 'genartBase',
             '@batpb/genart-palettes': 'genartPalettes'
         }
     },
-    external: ['@batpb/genart-base', '@batpb/genart-palettes'],
+    external: [
+        'p5',
+        '@batpb/genart-base',
+        '@batpb/genart-palettes'
+    ],
     plugins: [
         eslint({
             include: ['./src/**/*.ts'],

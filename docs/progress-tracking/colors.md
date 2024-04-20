@@ -1,18 +1,28 @@
 # Colors Tasks
 
+## Split Color Configurations Out of Color Palettes Repository
+
+## Split Palette Configurations Out of Color Palettes Repository
+
+- [ ] holiday-christmas
+- [ ] holiday-valentines
+- [ ] all holidays (maybe?)
+- [ ] miscellaneous
+- [ ] nature
+
 ## Color Class
 
-- [ ] color class
+- [x] color class
 - [ ] color transitions
   - [ ] fade
   - [ ] lerp
 
 ## Color Selection with Palettes
 
-- [ ] palette 1
-- [ ] palette 2
-- [ ] palette 3
-- [ ] palette 4
+- [x] palette 1
+- [x] palette 2
+- [x] palette 3
+- [x] palette 4
 - [ ] palette 5
 - [ ] color selection with weighted
   palettes ([See the GitHub Issue](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/issues/19))
@@ -35,28 +45,28 @@
 
 ## Color Selection with RBG ranges
 
-- [ ] set up new repository
-  - [ ] .gitignore
-  - [ ] README
-  - [ ] LICENSE
-  - [ ] .node-version
-  - [ ] node and npm
-  - [ ] branch protections
-  - [ ] tag protections
-  - [ ] issue templates
-  - [ ] GitHub Actions
-    - [ ] dependabot
-    - [ ] codeql
-    - [ ] node.js
-    - [ ] npm deprecate
-    - [ ] npm-publish
-  - [ ] rollup
-  - [ ] typescript
-  - [ ] eslint
-  - [ ] jest
-- [ ] color selector type enum
-- [ ] red
-- [ ] green
+- [x] set up new repository
+  - [x] .gitignore
+  - [x] README
+  - [x] LICENSE
+  - [x] .node-version
+  - [x] node and npm
+  - [x] branch protections
+  - [x] tag protections
+  - [x] issue templates
+  - [x] GitHub Actions
+    - [x] dependabot
+    - [x] codeql
+    - [x] node.js
+    - [x] npm deprecate
+    - [x] npm-publish
+  - [x] rollup
+  - [x] typescript
+  - [x] eslint
+  - [x] jest
+- [x] color selector type enum
+- [x] red
+- [x] green
 - [ ] blue
 - [ ] magenta
 - [ ] yellow
@@ -64,7 +74,7 @@
 - [ ] black
 - [ ] white
 - [ ] random
-- [ ] n colors or infinite colors
+- [x] n colors or infinite colors
 
 ## Color Name Retrieval ([See the GitHub Issue](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/issues/21))
 
