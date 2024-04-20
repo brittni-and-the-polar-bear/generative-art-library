@@ -35,6 +35,8 @@ npm install @batpb/genart
 
 ----
 
+# Experiments
+
 [run the experiments](https://brittni-and-the-polar-bear.github.io/generative-art-library/experiments/)
 
 ----
