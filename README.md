@@ -14,7 +14,7 @@ for creating responsive generative art projects.
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library)
 ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)
 ![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)
-![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-library/latest)
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-library/latest)](https://www.npmjs.com/package/@batpb/genart)
 
 [![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart)](https://socket.dev/npm/package/@batpb/genart)
 
