@@ -9,7 +9,9 @@
     "rootDirs": [
       "./src"
     ],
-
+    "paths": {
+      "random": ["./src/main/random"]
+    },
     /* JSON Modules */
     "resolveJsonModule": false,
     "resolvePackageJsonExports": false,
