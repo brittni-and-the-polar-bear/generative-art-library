@@ -5,6 +5,10 @@ Copyright (C) 2023-2024 brittni and the polar bear LLC.
 A [TypeScript](https://www.typescriptlang.org/) compatible library built on [p5.js](https://p5js.org/) 
 for creating responsive generative art projects.
 
+[GitHub Pages](https://brittni-and-the-polar-bear.github.io/generative-art-library/)
+
+Documentation (coming soon!)
+
 ## Package Stats
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)
