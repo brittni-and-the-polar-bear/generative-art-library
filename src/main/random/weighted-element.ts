@@ -15,9 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
+/**
+ * A structure for specifying weights of different values
+ * when selecting elements in an uneven distribution.
+ * The greater the weight, the more likely the element will be chosen.
+ * @public
+ * @category Random
+ */
 interface WeightedElement<Type> {
-    value: Type,
-    weight: number
+    /**
+     * The value returned if this element is selected.
+     * @public
+     * @readonly
+     */
+    readonly value: Type,
+
+    /**
+     * The weight associated with this element.
+     * The greater the weight, the more likely the element will be selected.
+     * @public
+     * @readonly
+     */
+    readonly weight: number
 }
 
 export {type WeightedElement};

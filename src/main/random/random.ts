@@ -19,16 +19,13 @@ import {WeightedElement} from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
- *
  * @public
- * @group Classes
- * @group Random
+ * @category Random
  */
 class Random {
     /**
      * The primary function to be called when generating any random numbers.
      * Set to {@link !Math.random} by default.
-     *
      * @private
      * @static
      */
