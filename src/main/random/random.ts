@@ -15,8 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {WeightedElement} from './weighted-element';
 import {Range} from 'math';
+
+import {WeightedElement} from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
@@ -68,7 +69,7 @@ class Random {
      * and less than {@link Range.max}.
      */
     public static randomFloatInRange(range: Range): number {
-        return (Random._randomMethod() * (range.max - range.min)) + range.min;
+        return Random.randomFloat(range.min, range.max);
     }
 
     /**

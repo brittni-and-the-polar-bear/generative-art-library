@@ -24,6 +24,7 @@ const config: JestConfigWithTsJest = {
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
+        '^color$': '<rootDir>/src/main/color',
         '^context$': '<rootDir>/src/main/p5',
         '^map$': '<rootDir>/src/main/map',
         '^math$': '<rootDir>/src/main/math',
