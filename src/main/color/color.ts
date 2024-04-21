@@ -24,31 +24,26 @@ const p5: P5Lib = SketchContext.p5;
 /**
  * Color information and functionality.
  * Colors are stored in RGBA format.
- * @public
  * @category Color
  */
 class Color {
     /**
      * The color's red component. Ranges in value from 0-255.
-     * @private
      */
     private _red: number;
 
     /**
      * The color's green component. Ranges in value from 0-255.
-     * @private
      */
     private _green: number;
 
     /**
      * The color's blue component. Ranges in value from 0-255.
-     * @private
      */
     private _blue: number;
 
     /**
      * The color's alpha component. Ranges in value from 0-255.
-     * @private
      */
     private _alpha: number; // 0-255
 
@@ -56,7 +51,6 @@ class Color {
      * @param color - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
-     * @public
      */
     public constructor(color?: P5Lib.Color) {
         this._red = 0;
@@ -76,8 +70,6 @@ class Color {
      * @param a - Some number between 0 and 1.
      * @returns A {@link !P5Lib.Color | p5.js Color} object matching the color specified
      * by the given {@link h}{@link s}{@link l}{@link a} values.
-     * @public
-     * @static
      */
     public static getHSLColor(h: number, s: number, l: number, a?: number): P5Lib.Color {
         let color: P5Lib.Color;
@@ -102,8 +94,6 @@ class Color {
      * @param a - Some number between 0 and 1.
      * @returns A {@link !P5Lib.Color | p5.js Color} object matching the color specified
      * by the given {@link h}{@link s}{@link l}{@link a} values.
-     * @public
-     * @static
      */
     public static getHSLAColor(h: number, s: number, l: number, a: number): P5Lib.Color {
         return Color.getHSLColor(h, s, l, a);
@@ -112,7 +102,6 @@ class Color {
     /**
      * @returns A {@link !P5Lib.Color | p5.js Color} object matching the current
      * {@link red}, {@link green}, {@link blue}, and {@link alpha} values.
-     * @public
      */
     public get color(): P5Lib.Color {
         p5.colorMode(p5.RGB);
@@ -124,7 +113,6 @@ class Color {
      * @param c - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
-     * @public
      */
     public set color(c: P5Lib.Color) {
         this.setColorValues(c);
@@ -132,7 +120,6 @@ class Color {
 
     /**
      * @returns The current red component value (0-255).
-     * @public
      */
     public get red(): number {
         return this._red;
@@ -140,8 +127,7 @@ class Color {
 
     /**
      * Set the value of the {@link red} component.
-     * @param r - The new value of the {@link red} component.
-     * @public
+     * @param r -
      */
     public set red(r: number) {
         this._red = Math.floor(p5.constrain(r, 0, 255));
@@ -149,7 +135,6 @@ class Color {
 
     /**
      * @returns The current green component value (0-255).
-     * @public
      */
     public get green(): number {
         return this._green;
@@ -157,8 +142,7 @@ class Color {
 
     /**
      * Set the value of the {@link green} component.
-     * @param g - The new value of the {@link green} component.
-     * @public
+     * @param g -
      */
     public set green(g: number) {
         this._green = Math.floor(p5.constrain(g, 0, 255));
@@ -166,7 +150,6 @@ class Color {
 
     /**
      * @returns The current blue component value (0-255).
-     * @public
      */
     public get blue(): number {
         return this._blue;
@@ -174,8 +157,7 @@ class Color {
 
     /**
      * Set the value of the {@link blue} component.
-     * @param b - The new value of the {@link blue} component.
-     * @public
+     * @param b -
      */
     public set blue(b: number) {
         this._blue = Math.floor(p5.constrain(b, 0, 255));
@@ -183,7 +165,6 @@ class Color {
 
     /**
      * @returns The current alpha component value (0-255).
-     * @public
      */
     public get alpha(): number {
         return this._alpha;
@@ -191,8 +172,7 @@ class Color {
 
     /**
      * Set the value of the {@link alpha} component.
-     * @param a - The new value of the {@link alpha} component.
-     * @public
+     * @param a -
      */
     public set alpha(a: number) {
         this._alpha = Math.floor(p5.constrain(a, 0, 255));
