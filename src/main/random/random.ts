@@ -16,6 +16,7 @@
  */
 
 import {WeightedElement} from './weighted-element';
+import {Range} from 'math';
 
 /**
  * A collection of static methods for retrieving random values.
@@ -61,12 +62,36 @@ class Random {
     /**
      * @public
      * @static
+     * @param range - The {@link Range} that determines the minimum and maximum
+     * values that can be returned from the function.
+     * @returns A random floating point value greater than or equal to {@link Range.min}
+     * and less than {@link Range.max}.
+     */
+    public static randomFloatInRange(range: Range): number {
+        return (Random._randomMethod() * (range.max - range.min)) + range.min;
+    }
+
+    /**
+     * @public
+     * @static
      * @param min - The minimum number that can be returned from this function (inclusive).
      * @param max - The maximum number that can be returned from the function (non-inclusive).
      * @returns A random integer value greater than or equal to min and less than max.
      */
     public static randomInt(min: number, max: number): number {
         return Math.floor(Random.randomFloat(min, max));
+    }
+
+    /**
+     * @public
+     * @static
+     * @param range - The {@link Range} that determines the minimum and maximum
+     * values that can be returned from the function.
+     * @returns A random integer value greater than or equal to {@link Range.min}
+     * and less than {@link Range.max}.
+     */
+    public static randomIntInRange(range: Range): number {
+        return Math.floor(Random.randomFloatInRange(range));
     }
 
     /**

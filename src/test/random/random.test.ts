@@ -16,6 +16,7 @@
  */
 
 import {Random, WeightedElement} from 'random';
+import {Range} from 'math';
 
 describe('random tests', (): void => {
     test.each([
@@ -51,10 +52,55 @@ describe('random tests', (): void => {
         {min: 1_750, max: 800, expectMin: 800, expectMax: 1_750},
         {min: 0, max: 1, expectMin: 0, expectMax: 1},
         {min: 0, max: 2, expectMin: 0, expectMax: 2}
+    ])('$# random float in range test: randomFloatInRange(new Range($min, $max))',
+        ({min, max, expectMin, expectMax}): void => {
+            const range: Range = new Range(min, max);
+            for (let i: number = 0; i < 10; i++) {
+                const r: number = Random.randomFloatInRange(range);
+                expect(r).toBeGreaterThanOrEqual(expectMin);
+                expect(r).toBeLessThan(expectMax);
+            }
+        }
+    );
+
+    test.each([
+        {min: 0, max: 250, expectMin: 0, expectMax: 250},
+        {min: -65, max: 65, expectMin: -65, expectMax: 65},
+        {min: -270, max: -85, expectMin: -270, expectMax: -85},
+        {min: 500, max: 550, expectMin: 500, expectMax: 550},
+        {min: 6_000, max: 0, expectMin: 0, expectMax: 6_000},
+        {min: 99, max: -90, expectMin: -90, expectMax: 99},
+        {min: -30, max: -60, expectMin: -60, expectMax: -30},
+        {min: 1_750, max: 800, expectMin: 800, expectMax: 1_750},
+        {min: 0, max: 1, expectMin: 0, expectMax: 1},
+        {min: 0, max: 2, expectMin: 0, expectMax: 2}
     ])('$# random int test: randomInt($min, $max)',
         ({min, max, expectMin, expectMax}): void => {
             for (let i: number = 0; i < 10; i++) {
                 const r: number = Random.randomInt(min, max);
+                expect(r).toBeGreaterThanOrEqual(expectMin);
+                expect(r).toBeLessThan(expectMax);
+                expect(Math.floor(r)).toBe(r);
+            }
+        }
+    );
+
+    test.each([
+        {min: 0, max: 250, expectMin: 0, expectMax: 250},
+        {min: -65, max: 65, expectMin: -65, expectMax: 65},
+        {min: -270, max: -85, expectMin: -270, expectMax: -85},
+        {min: 500, max: 550, expectMin: 500, expectMax: 550},
+        {min: 6_000, max: 0, expectMin: 0, expectMax: 6_000},
+        {min: 99, max: -90, expectMin: -90, expectMax: 99},
+        {min: -30, max: -60, expectMin: -60, expectMax: -30},
+        {min: 1_750, max: 800, expectMin: 800, expectMax: 1_750},
+        {min: 0, max: 1, expectMin: 0, expectMax: 1},
+        {min: 0, max: 2, expectMin: 0, expectMax: 2}
+    ])('$# random int in range test: randomIntInRange(new Range($min, $max))',
+        ({min, max, expectMin, expectMax}): void => {
+            const range: Range = new Range(min, max);
+            for (let i: number = 0; i < 10; i++) {
+                const r: number = Random.randomIntInRange(range);
                 expect(r).toBeGreaterThanOrEqual(expectMin);
                 expect(r).toBeLessThan(expectMax);
                 expect(Math.floor(r)).toBe(r);
