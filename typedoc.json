@@ -43,5 +43,20 @@
   },
   "treatWarningsAsErrors": false,
 
-  "extraFooter": "<br/>Copyright &copy; 2023-2024 <a href=\"https://brittni-and-the-polar-bear.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">brittni and the polar bear LLC</a>"
+  "extraFooter": "<br/>Copyright &copy; 2023-2024 <a href=\"https://brittni-and-the-polar-bear.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">brittni and the polar bear LLC</a>",
+
+  "externalSymbolLinkMappings": {
+    "global": {
+      "P5Lib": "https://p5js.org/reference/#/p5/p5",
+      "p5": "https://p5js.org/reference/#/p5/p5"
+    },
+    "p5": {
+      "P5Lib": "https://p5js.org/reference/#/p5/p5",
+      "p5": "https://p5js.org/reference/#/p5/p5"
+    },
+    "@types/p5": {
+      "P5Lib": "https://p5js.org/reference/#/p5/p5",
+      "p5": "https://p5js.org/reference/#/p5/p5"
+    }
+  }
 }
