@@ -203,7 +203,6 @@ class Color {
      * @param color - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
-     * @private
      */
     private setColorValues(color: P5Lib.Color): void {
         this.red = p5.red(color);
