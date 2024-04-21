@@ -15,3 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
+describe('color selector tests', (): void => {
+    test('color selector test: >2 colors; in order', (): void => {
+
+    });
+
+    test('color selector test: >2 colors; random order', (): void => {
+
+    });
+
+    test('color selector test: 2 colors; in order', (): void => {
+
+    });
+
+    test('color selector test: 2 colors; random order', (): void => {
+
+    });
+
+    test('color selector test: 1 color; in order', (): void => {
+
+    });
+
+    test('color selector test: 1 color; random order', (): void => {
+
+    });
+});
