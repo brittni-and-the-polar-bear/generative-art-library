@@ -48,7 +48,7 @@
   "externalSymbolLinkMappings": {
     "global": {
       "P5Lib": "https://p5js.org/reference/#/p5/p5",
-      "p5": "https://p5js.org/reference/#/p5/p5"
+      "P5Lib.Color": "https://p5js.org/reference/#/p5.Color"
     },
     "p5": {
       "P5Lib": "https://p5js.org/reference/#/p5/p5",

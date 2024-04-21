@@ -33,7 +33,7 @@ Documentation (coming soon!)
 
 ## Install with [npm](https://www.npmjs.com/)
 
-```
+```shell
 npm install @batpb/genart
 ```
 
@@ -52,16 +52,6 @@ The source code of this project is licensed under the
 The full text of the license can be found in the 
 [LICENSE file](https://github.com/brittni-and-the-polar-bear/generative-art-library/blob/main/LICENSE) 
 of the root directory.
-
-----
-
-# Getting Started
-
-## Install with [npm](https://www.npmjs.com/)
-
-```shell
-npm install @batpb/genart
-```
 
 ----
 

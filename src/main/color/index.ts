@@ -16,5 +16,5 @@
  */
 
 export * from './color';
-export * from './color-selector';
-export * from './color-selector-manager';
+// export * from './color-selector';
+// export * from './color-selector-manager';

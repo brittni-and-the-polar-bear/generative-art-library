@@ -45,17 +45,17 @@ class Range {
     }
 
     /**
-     * If the given {@link value} is less than the current {@link _min},
+     * If the given {@link newMax} is less than the current {@link _min},
      * the fields {@link _min} and {@link _max} will be set so that {@link _min} is less than {@link _max}.
-     * @param value - The new maximum value of the Range.
+     * @param newMax - The new maximum value of the Range.
      */
-    public set max(value: number) {
-        if (value < this._min) {
-            console.warn(`max (${value}) is less than current min (${this._min}). object fields will be set so that min is less than max.`);
+    public set max(newMax: number) {
+        if (newMax < this._min) {
+            console.warn(`max (${newMax}) is less than current min (${this._min}). object fields will be set so that min is less than max.`);
             this._max = this._min;
-            this._min = value;
+            this._min = newMax;
         } else {
-            this._max = value;
+            this._max = newMax;
         }
     }
 
@@ -68,17 +68,17 @@ class Range {
     }
 
     /**
-     * If the given {@link value} is greater than the current {@link _max},
+     * If the given {@link newMin} is greater than the current {@link _max},
      * the fields {@link _min} and {@link _max} will be set so that {@link _min} is less than {@link _max}.
-     * @param value - The new minimum value of the Range.
+     * @param newMin - The new minimum value of the Range.
      */
-    public set min(value: number) {
-        if (value > this._max) {
-            console.warn(`min (${value}) is greater than current max (${this._max}). object fields will be set so that min is less than max.`);
+    public set min(newMin: number) {
+        if (newMin > this._max) {
+            console.warn(`min (${newMin}) is greater than current max (${this._max}). object fields will be set so that min is less than max.`);
             this._min = this._max;
-            this._max = value;
+            this._max = newMin;
         } else {
-            this._min = value;
+            this._min = newMin;
         }
     }
 }
