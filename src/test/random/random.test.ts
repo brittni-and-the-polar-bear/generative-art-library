@@ -305,4 +305,13 @@ describe('random tests', (): void => {
         expect(logSpy).toHaveBeenCalled();
         logSpy.mockRestore();
     });
+
+    test('test set random method', (): void => {
+        Random.randomMethod = (): number => {
+            return 1;
+        };
+        const min: number = 10;
+        const max: number = 100;
+        expect(Random.randomFloat(min, max)).toBe(max);
+    });
 });

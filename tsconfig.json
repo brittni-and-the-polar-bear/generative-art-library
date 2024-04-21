@@ -10,6 +10,7 @@
       "./src"
     ],
     "paths": {
+      "math": ["./src/main/math"],
       "random": ["./src/main/random"]
     },
     /* JSON Modules */
@@ -22,7 +23,7 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "removeComments": false,
+    "removeComments": true,
     "noEmitOnError": true,
     "preserveConstEnums": true,
 
