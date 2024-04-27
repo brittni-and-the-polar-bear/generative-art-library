@@ -17,14 +17,11 @@
 
 /**
  * A map of string keys to some ValueType.
- * @public
  * @category Maps
  */
 class StringMap<ValueType> {
     /**
      * The underlying map object.
-     * @private
-     * @readonly
      */
     private readonly _map: Map<string, ValueType>;
 
@@ -33,7 +30,6 @@ class StringMap<ValueType> {
     }
 
     /**
-     * @public
      * @returns All the keys of the map.
      */
     public get keys(): IterableIterator<string> {
@@ -41,7 +37,6 @@ class StringMap<ValueType> {
     }
 
     /**
-     * @public
      * @returns All the values of the map.
      */
     public get values(): IterableIterator<ValueType> {
@@ -49,7 +44,6 @@ class StringMap<ValueType> {
     }
 
     /**
-     * @public
      * @returns The size of the map.
      */
     public get size(): number {
@@ -57,10 +51,28 @@ class StringMap<ValueType> {
     }
 
     /**
+     * Retrieve the value associated with the given {@link key}.
+     *
+     * @param key - The key of the desired value in the map.
+     */
+    public get(key: string): ValueType | undefined {
+        return this._map.get(key);
+    }
+
+    /**
+     * Associate the given {@link key} with the given {@link value} in the map.
+     *
+     * @param key - Key to set in the map.
+     * @param value - Value to be associated with the key.
+     */
+    public setKey(key: string, value: ValueType): void {
+        this._map.set(key, value);
+    }
+
+    /**
      * Associate the given {@link key} with the given {@link value} in the map
      * only if the key has not been set in the map.
      *
-     * @public
      * @param key - Key to set in the map.
      * @param value - Value to be associated with the key.
      * @param errorMessage - Message to log if the key already has a value.
@@ -76,7 +88,7 @@ class StringMap<ValueType> {
 
             isSet = false;
         } else {
-            this._map.set(key, value);
+            this.setKey(key, value);
             isSet = true;
         }
 
