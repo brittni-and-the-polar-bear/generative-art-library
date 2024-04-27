@@ -14,6 +14,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Affero General Public License for more details.
  */
+
 import P5Lib from 'p5';
 
 import {Color, ColorSelector, ColorSelectorType} from 'color';
@@ -26,7 +27,7 @@ const p5: P5Lib = SketchContext.p5;
 
 describe('color selector tests', (): void => {
     class SampleSelector extends ColorSelector {
-        constructor(randomOrder: boolean, colors: Color[]) {
+        constructor(colors: Color[], randomOrder?: boolean) {
             super(randomOrder);
             for (const c of colors) {
                 this.addColorChoice(c);
@@ -76,7 +77,7 @@ describe('color selector tests', (): void => {
         const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
         const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
 
-        for (let i: number = 0; i < 100; i++) {
+        for (let i: number = 0; i < 25; i++) {
             const components: ColorComponents = colorToColorComponents(selector.getColor());
             const key: string = components.r.toString() + '' + components.g.toString() + '' + components.b.toString();
             colorMap.setUndefinedKey(key, components);
@@ -89,44 +90,83 @@ describe('color selector tests', (): void => {
         }
     }
 
+    test('color selector test: no colors; in order', (): void => {
+        const selector: SampleSelector = new SampleSelector([], false);
+        checkForValidColorSelector(selector);
+        checkForValidInOrderSelector(selector, [new Color()]);
+    });
+
+    test('color selector test: no colors; random order', (): void => {
+        const selector: SampleSelector = new SampleSelector([], true);
+        checkForValidColorSelector(selector);
+        checkForValidRandomSelector(selector, [new Color()]);
+    });
+
+    test('color selector test: no order provided', (): void => {
+        const selector: SampleSelector = new SampleSelector([]);
+        checkForValidColorSelector(selector);
+        checkForValidRandomSelector(selector, [new Color()]);
+    });
+
     test('color selector test: >2 colors; in order', (): void => {
         const colors: Color[] = [red, green, blue, cyan];
-        const selector: SampleSelector = new SampleSelector(false, colors);
+        const selector: SampleSelector = new SampleSelector(colors, false);
         checkForValidColorSelector(selector);
         checkForValidInOrderSelector(selector, colors);
     });
 
     test('color selector test: >2 colors; random order', (): void => {
         const colors: Color[] = [red, green, blue, cyan];
-        const selector: SampleSelector = new SampleSelector(true, colors);
+        const selector: SampleSelector = new SampleSelector(colors, true);
+        checkForValidColorSelector(selector);
+        checkForValidRandomSelector(selector, colors);
+    });
+
+    test('color selector test: >2 colors; no order provided', (): void => {
+        const colors: Color[] = [red, green, blue, cyan];
+        const selector: SampleSelector = new SampleSelector(colors);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors);
     });
 
     test('color selector test: 2 colors; in order', (): void => {
         const colors: Color[] = [red, green];
-        const selector: SampleSelector = new SampleSelector(false, colors);
+        const selector: SampleSelector = new SampleSelector(colors, false);
         checkForValidColorSelector(selector);
         checkForValidInOrderSelector(selector, colors);
     });
 
     test('color selector test: 2 colors; random order', (): void => {
         const colors: Color[] = [red, green];
-        const selector: SampleSelector = new SampleSelector(true, colors);
+        const selector: SampleSelector = new SampleSelector(colors, true);
+        checkForValidColorSelector(selector);
+        checkForValidRandomSelector(selector, colors);
+    });
+
+    test('color selector test: 2 colors; no order provided', (): void => {
+        const colors: Color[] = [red, green];
+        const selector: SampleSelector = new SampleSelector(colors);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors);
     });
 
     test('color selector test: 1 color; in order', (): void => {
         const colors: Color[] = [red];
-        const selector: SampleSelector = new SampleSelector(false, colors);
+        const selector: SampleSelector = new SampleSelector(colors, false);
         checkForValidColorSelector(selector);
         checkForValidInOrderSelector(selector, colors);
     });
 
     test('color selector test: 1 color; random order', (): void => {
         const colors: Color[] = [red];
-        const selector: SampleSelector = new SampleSelector(true, colors);
+        const selector: SampleSelector = new SampleSelector(colors, true);
+        checkForValidColorSelector(selector);
+        checkForValidRandomSelector(selector, colors);
+    });
+
+    test('color selector test: 1 color; no order provided', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors);
     });

@@ -1,15 +1,5 @@
 # Colors Tasks
 
-## Split Color Configurations Out of Color Palettes Repository
-
-## Split Palette Configurations Out of Color Palettes Repository
-
-- [ ] holiday-christmas
-- [ ] holiday-valentines
-- [ ] all holidays (maybe?)
-- [ ] miscellaneous
-- [ ] nature
-
 ## Color Class
 
 - [x] color class

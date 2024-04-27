@@ -97,7 +97,7 @@ abstract class ColorSelector {
      * object (black) will be returned.
      */
     public selectColorFromChoices(): Color {
-        let col: Color;
+        let col: Color = new Color();
 
         if (this._randomOrder) {
             col =  Random.randomElement(this._colorChoices) ?? (new Color());
@@ -105,8 +105,6 @@ abstract class ColorSelector {
             if (this._currentIndex < this._colorChoices.length) {
                 col = this._colorChoices[this._currentIndex];
                 this.incrementCurrentIndex();
-            } else {
-                col = new Color();
             }
         }
 
