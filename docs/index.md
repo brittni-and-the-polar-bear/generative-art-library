@@ -23,6 +23,10 @@ npm install @batpb/genart
 
 ----
 
+# [Documentation](./doc/index.html)
+
+----
+
 ## [run the experiments](./experiments/index.md)
 
 ## meet the team (coming soon!)
