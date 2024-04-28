@@ -57,6 +57,8 @@
   "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
   "dependencies": {
     "@types/p5": "^1.7.6",
+    "color-name-list": "^10.22.0",
+    "nearest-color": "^0.4.4",
     "p5": "^1.9.3"
   },
   "devDependencies": {
