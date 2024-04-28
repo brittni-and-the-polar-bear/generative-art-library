@@ -21,7 +21,6 @@
     if (location.protocol === 'file:') {
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateUseElements);
         else updateUseElements()
-
         function updateUseElements() {
             document.querySelectorAll('use').forEach(el => {
                 if (el.getAttribute('href').includes('#icon-')) {
