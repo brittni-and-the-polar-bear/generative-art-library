@@ -21,11 +21,11 @@ import analyzer from 'rollup-plugin-analyzer';
 import ts from 'rollup-plugin-ts';
 
 export default {
-    input: './src/main/index.ts',
+    input: './src/main/batpb-genart.ts',
     output: {
         dir: './out',
         format: 'umd',
-        name: 'genart',
+        name: 'batpb-genart',
         sourcemap: true,
         preserveModules: false,
         globals: {

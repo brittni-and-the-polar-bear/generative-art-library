@@ -1,6 +1,8 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": ["./src/main/index.ts"],
+  "entryPoints": [
+    "./src/main/batpb-genart.ts"
+  ],
   "out": "./out/doc",
 
   "plugin": [
