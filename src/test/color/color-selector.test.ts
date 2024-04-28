@@ -15,48 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import P5Lib from 'p5';
-
-import {Color, ColorSelector, ColorSelectorType} from 'color';
-import {SketchContext} from 'context';
+import {Color, ColorSelector, DefaultColorSelector} from 'color';
 import {StringMap} from 'map';
 
-import {ColorComponents, colorToColorComponents} from '../shared/color';
-
-const p5: P5Lib = SketchContext.p5;
+import {blue, ColorComponents, colorToColorComponents, cyan, green, red, SampleSelector} from '../shared/color';
 
 describe('color selector tests', (): void => {
-    class SampleSelector extends ColorSelector {
-        constructor(colors: Color[], randomOrder?: boolean) {
-            super(randomOrder);
-            for (const c of colors) {
-                this.addColorChoice(c);
-            }
-        }
-
-        get colorNames(): string[] {
-            // TODO - get names of colors from system
-            return ['name1', 'name2', 'name3'];
-        }
-
-        getColor(): Color {
-            return this.selectColorFromChoices();
-        }
-
-        get name(): string {
-            return 'sample color selector';
-        }
-
-        get type(): ColorSelectorType {
-            return ColorSelectorType.Palette;
-        }
-    }
-
-    const red: Color = new Color(p5.color(255, 0, 0));
-    const green: Color = new Color(p5.color(0, 255, 0));
-    const blue: Color = new Color(p5.color(0, 0, 255));
-    const cyan: Color = new Color(p5.color(0, 255, 255));
-
     function checkForValidColorSelector(selector: ColorSelector): void {
         expect(selector.type).toBeTruthy();
         expect(selector.name).toBeTruthy();
@@ -89,6 +53,12 @@ describe('color selector tests', (): void => {
             expect(expectedComponents).toContainEqual(components);
         }
     }
+
+    test('test default color selector', (): void => {
+        const selector: DefaultColorSelector = new DefaultColorSelector();
+        checkForValidColorSelector(selector);
+        checkForValidInOrderSelector(selector, [new Color()]);
+    });
 
     test('color selector test: no colors; in order', (): void => {
         const selector: SampleSelector = new SampleSelector([], false);
