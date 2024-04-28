@@ -3,12 +3,11 @@
 # WebStorm
 .idea/
 
-# node and npm
+# npm
 node_modules/
 
 # output
 out/
 
-# api extractor
-api/temp/
-api/genart.api.json
+# jest
+src/**/*.js

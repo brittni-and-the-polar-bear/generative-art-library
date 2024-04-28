@@ -1,20 +1,5 @@
 # GitHub Pages Tasks
 
-## Project Updates
-
-- [x] add pages link on GitHub about
-- [ ] generative-art-library
-- [ ] generative-art-library_base (make base "home page")
-- [ ] generative-art-library_palettes (make palettes "home page")
-- [ ] add pages link to README
-  - [ ] generative-art-library
-  - [ ] generative-art-library_base (make base "home page")
-  - [ ] generative-art-library_palettes (make palettes "home page")
-- [ ] set pages link as package homepage
-  - [ ] generative-art-library
-  - [ ] generative-art-library_base (make base "home page")
-  - [ ] generative-art-library_palettes (make palettes "home page")
-
 ## Copyright
 
 - [ ] update pages layout of all sites
