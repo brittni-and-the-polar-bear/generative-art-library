@@ -9,6 +9,11 @@ for creating responsive generative art projects.
 
 Documentation (coming soon!)
 
+## Important Notice
+
+This project is currently in active development.
+Large changes may be made to the API between minor versions.
+
 ## Package Stats
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)
@@ -17,13 +22,14 @@ Documentation (coming soon!)
 [![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library)
 ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)
-![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)
-![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-library/latest)](https://www.npmjs.com/package/@batpb/genart)
+![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)](https://www.npmjs.com/package/@batpb/genart)
 
 [![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart)](https://socket.dev/npm/package/@batpb/genart)
 
 ![GitHub issues by-label (bug)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library/bug?color=red)
 ![GitHub issues by-label (security)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library/security?color=red)
+
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-library/latest)
 
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/brittni-and-the-polar-bear/generative-art-library)
 
