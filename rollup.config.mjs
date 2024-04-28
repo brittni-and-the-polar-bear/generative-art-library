@@ -24,7 +24,7 @@ export default {
     input: './src/main/batpb-genart.ts',
     output: {
         dir: './out',
-        format: 'umd',
+        format: 'es',
         name: 'batpb-genart',
         sourcemap: true,
         preserveModules: false,
