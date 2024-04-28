@@ -16,7 +16,6 @@
  */
 
 import eslint from '@rollup/plugin-eslint';
-import terser from '@rollup/plugin-terser';
 
 import analyzer from 'rollup-plugin-analyzer';
 import ts from 'rollup-plugin-ts';
@@ -30,15 +29,11 @@ export default {
         sourcemap: true,
         preserveModules: false,
         globals: {
-            p5: 'p5',
-            '@batpb/genart-base': 'genartBase',
-            '@batpb/genart-palettes': 'genartPalettes'
+            p5: 'p5'
         }
     },
     external: [
-        'p5',
-        '@batpb/genart-base',
-        '@batpb/genart-palettes'
+        'p5'
     ],
     plugins: [
         eslint({
@@ -46,9 +41,8 @@ export default {
             throwOnError: true,
             throwOnWarning: true
         }),
-        terser(),
         analyzer({
-            summaryOnly: true
+            summaryOnly: false
         }),
         ts()
     ]

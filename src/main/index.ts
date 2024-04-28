@@ -15,5 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from '@batpb/genart-base';
-export * from '@batpb/genart-palettes';
+export * from './math';
+export * from './random';
+export * from './map';
+export * from './p5';
+export * from './color'

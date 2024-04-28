@@ -16,6 +16,10 @@
   ],
   "scripts": {
     "build:source": "rm -r ./out; rollup --config",
+    "test": "rm -r ./out/tests-coverage; jest",
+    "lint": "eslint ./src",
+    "docs": "typedoc",
+    "size-limit": "size-limit",
     "prepack": "npm run build:source"
   },
   "repository": {
@@ -28,7 +32,8 @@
     "p5",
     "p5.js",
     "p5js",
-    "p5js-library",
+    "p5.js library",
+    "p5js library",
     "typescript"
   ],
   "author": {
@@ -51,20 +56,42 @@
   },
   "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
   "dependencies": {
-    "@batpb/genart-palettes": "^0.4.1",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.3"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-eslint": "^9.0.5",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@size-limit/preset-big-lib": "^11.1.2",
+    "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
+    "canvas": "^2.11.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "rollup": "^4.17.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-ts": "^3.4.5",
+    "size-limit": "^11.1.2",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-coverage": "^3.1.0",
+    "typedoc-plugin-extra-footer": "^1.0.1",
+    "typedoc-plugin-inline-sources": "^1.0.2",
+    "typedoc-plugin-mdn-links": "^3.1.21",
     "typescript": "^5.4.5"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "./out/index.js",
+      "import": "{ createStore }",
+      "limit": "20 s"
+    },
+    {
+      "path": "./out/index.js",
+      "import": "{ createStore }",
+      "limit": "200 kB"
+    }
+  ]
 }
