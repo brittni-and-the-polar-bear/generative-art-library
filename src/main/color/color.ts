@@ -179,6 +179,19 @@ class Color {
     }
 
     /**
+     * @returns The hex color string for the RGB
+     * ({@link red}, {@link green}, {@link blue})
+     * components of the color.
+     */
+    public get hex(): string {
+        return this.getRGBHex(false);
+    }
+
+    public getRGBHex(withAlpha: boolean): string {
+
+    }
+
+    /**
      * Set the color values.
      * @param color - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
