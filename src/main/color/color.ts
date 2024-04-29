@@ -181,14 +181,41 @@ class Color {
     /**
      * @returns The hex color string for the RGB
      * ({@link red}, {@link green}, {@link blue})
-     * components of the color.
+     * components of the color (#RRGGBB).
      */
     public get hex(): string {
         return this.getRGBHex(false);
     }
 
+    /**
+     * The hex color string for the RGBA
+     * ({@link red}, {@link green}, {@link blue}, {@link alpha})
+     * components of the color.
+     *
+     * @param withAlpha - if `true`, an alpha component will be included in the hex
+     * string (#RRGGBBAA).<br/>
+     * If `false`, only the RGB components will be included (#RRGGBB).
+     */
     public getRGBHex(withAlpha: boolean): string {
+        let hex: string = '#';
+        hex = hex + this.red.toString(16).padStart(2, '0');
+        hex = hex + this.green.toString(16).padStart(2, '0');
+        hex = hex + this.blue.toString(16).padStart(2, '0');
 
+        if (withAlpha) {
+            hex = hex + this.alpha.toString(16).padStart(2, '0');
+        }
+
+        return hex.toUpperCase();
+    }
+
+    /**
+     * The hex color string for the RGBA
+     * ({@link red}, {@link green}, {@link blue}, {@link alpha})
+     * components of the color.
+     */
+    public getRGBAHex(): string {
+        return this.getRGBHex(true);
     }
 
     /**

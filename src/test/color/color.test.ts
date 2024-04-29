@@ -20,20 +20,11 @@ import P5Lib from 'p5';
 import {Color} from 'color';
 import {SketchContext} from 'context';
 
-import {ColorComponents, colorToColorComponents} from '../shared/color';
+import {ColorComponents, colorToColorComponents, p5ColorToColorComponents} from '../shared/color';
 
 const p5: P5Lib = SketchContext.p5;
 
 describe('color tests', (): void => {
-    const p5ColorToColorComponents = (color: P5Lib.Color): ColorComponents => {
-        return {
-            r: Math.floor(p5.red(color)),
-            g: Math.floor(p5.green(color)),
-            b: Math.floor(p5.blue(color)),
-            a: Math.floor(p5.alpha(color))
-        };
-    };
-
     test('get hsl color', (): void => {
         const h: number = 238;
         const s: number = 65;
@@ -374,25 +365,58 @@ describe('color tests', (): void => {
         {r: 255, g: 0, b: 0, a: 0, hex: '#FF0000'},
         {r: 255, g: 0, b: 0, a: 255, hex: '#FF0000'},
         {r: 255, g: 0, b: 0, a: 100, hex: '#FF0000'},
-        {r: 255, g: 0, b: 0, a: undefined, hex: '#841EE4'},
-        {r: 255, g: 0, b: 0, a: 0, hex: '#841EE4'},
-        {r: 255, g: 0, b: 0, a: 255, hex: '#841EE4'},
-        {r: 255, g: 0, b: 0, a: 100, hex: '#841EE4'},
-        {r: 255, g: 0, b: 0, a: undefined, hex: '#802B4E'},
-        {r: 255, g: 0, b: 0, a: 0, hex: '#802B4E'},
-        {r: 255, g: 0, b: 0, a: 255, hex: '#802B4E'},
-        {r: 255, g: 0, b: 0, a: 100, hex: '#802B4E'},
+        {r: 132, g: 30, b: 228, a: undefined, hex: '#841EE4'},
+        {r: 132, g: 30, b: 228, a: 0, hex: '#841EE4'},
+        {r: 132, g: 30, b: 228, a: 255, hex: '#841EE4'},
+        {r: 132, g: 30, b: 228, a: 100, hex: '#841EE4'},
+        {r: 128, g: 43, b: 78, a: undefined, hex: '#802B4E'},
+        {r: 128, g: 43, b: 78, a: 0, hex: '#802B4E'},
+        {r: 128, g: 43, b: 78, a: 255, hex: '#802B4E'},
+        {r: 128, g: 43, b: 78, a: 100, hex: '#802B4E'}
     ])('$# get hex: rgba($r, $g, $b, $a)',
         ({r, g, b, a, hex}): void => {
             let c: Color;
 
-            if (a) {
+            if (a !== undefined) {
                 c = new Color(p5.color(r, g, b, a));
             } else {
                 c = new Color(p5.color(r, g, b));
             }
 
             expect(c.hex).toBe(hex);
+            expect(c.getRGBHex(false)).toBe(hex);
+        }
+    );
+
+    test.each([
+        {r: 0, g: 0, b: 0, a: undefined, hex: '#000000FF'},
+        {r: 0, g: 0, b: 0, a: 0, hex: '#00000000'},
+        {r: 0, g: 0, b: 0, a: 255, hex: '#000000FF'},
+        {r: 0, g: 0, b: 0, a: 100, hex: '#00000064'},
+        {r: 255, g: 0, b: 0, a: undefined, hex: '#FF0000FF'},
+        {r: 255, g: 0, b: 0, a: 0, hex: '#FF000000'},
+        {r: 255, g: 0, b: 0, a: 255, hex: '#FF0000FF'},
+        {r: 255, g: 0, b: 0, a: 100, hex: '#FF000064'},
+        {r: 132, g: 30, b: 228, a: undefined, hex: '#841EE4FF'},
+        {r: 132, g: 30, b: 228, a: 0, hex: '#841EE400'},
+        {r: 132, g: 30, b: 228, a: 255, hex: '#841EE4FF'},
+        {r: 132, g: 30, b: 228, a: 100, hex: '#841EE464'},
+        {r: 128, g: 43, b: 78, a: undefined, hex: '#802B4EFF'},
+        {r: 128, g: 43, b: 78, a: 0, hex: '#802B4E00'},
+        {r: 128, g: 43, b: 78, a: 255, hex: '#802B4EFF'},
+        {r: 128, g: 43, b: 78, a: 100, hex: '#802B4E64'}
+    ])('$# get hex with alpha: rgba($r, $g, $b, $a)',
+        ({r, g, b, a, hex}): void => {
+            let c: Color;
+
+            if (a !== undefined) {
+                c = new Color(p5.color(r, g, b, a));
+            } else {
+                c = new Color(p5.color(r, g, b));
+            }
+
+            expect(c.getRGBAHex()).toBe(hex);
+            expect(c.getRGBHex(true)).toBe(hex);
         }
     );
 });

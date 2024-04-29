@@ -65,3 +65,12 @@ export class SampleSelector extends ColorSelector {
 export function colorToColorComponents(c: Color): ColorComponents {
     return {r: c.red, g: c.green, b: c.blue, a: c.alpha};
 }
+
+export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
+    return {
+        r: Math.floor(p5.red(color)),
+        g: Math.floor(p5.green(color)),
+        b: Math.floor(p5.blue(color)),
+        a: Math.floor(p5.alpha(color))
+    };
+}
