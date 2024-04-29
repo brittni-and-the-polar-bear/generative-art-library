@@ -15,6 +15,57 @@
  * See the GNU Affero General Public License for more details.
  */
 
-class ColorNameManager {
+// const list = require('color-name-list');
 
+import nearestColor from "nearest-color";
+// import {StringMap} from "map";
+// import {Color} from "../color";
+
+class ColorNameManager {
+    // static from function
+    // only create if null/undefined with full color structure -> map of name to hex
+    // use to get closest colors
+    // new issue, add all CSS colors to library
+    // private static _closestColor = null;
+    // private static readonly _colors: StringMap<string> = new StringMap<string>();
+    //
+    // public static addColor(color: Color): void {
+    //
+    // }
+
+    public static getColorName(): void {
+
+    }
+
+    public static getColorNameWithExactMatch(): string {
+        var things = [
+            {name: 'yellow', 'source': '#ffff00', 'rgb': {r: 255, g: 255, b: 0}},
+            {name: 'blue', 'source': '#0000ff', 'rgb': {r: 0, g: 0, b: 255}},
+        ]
+
+        let c = nearestColor('#FF0000', things);
+        console.log(c);
+
+        c = nearestColor('#aa774a');
+        // let s: string = '#f80'
+        console.log(c);
+
+        // let hexs = ['#ffffff', '#00ffff'];
+        // let other = {magenta: '#ff00ff', black: "#000000"}
+        // let b = nearestColor.STANDARD_COLORS;
+        let count = 0;
+        for (const f in nearestColor.STANDARD_COLORS) {
+            if (f) {
+                count++;
+            }
+        }
+
+        console.log(count);
+        const cm = nearestColor.from(nearestColor.STANDARD_COLORS);
+        let x = cm('#004582');
+        console.log(x);
+        return '';
+    }
 }
+
+export {ColorNameManager};
