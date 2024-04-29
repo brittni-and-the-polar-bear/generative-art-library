@@ -20,14 +20,9 @@ import P5Lib from 'p5';
 import {Color} from 'color';
 import {SketchContext} from 'context';
 
-const p5: P5Lib = SketchContext.p5;
+import {ColorComponents, colorToColorComponents} from '../shared/color';
 
-interface ColorComponents {
-    readonly r: number,
-    readonly g: number,
-    readonly b: number,
-    readonly a: number
-}
+const p5: P5Lib = SketchContext.p5;
 
 describe('color tests', (): void => {
     const p5ColorToColorComponents = (color: P5Lib.Color): ColorComponents => {
@@ -36,15 +31,6 @@ describe('color tests', (): void => {
             g: Math.floor(p5.green(color)),
             b: Math.floor(p5.blue(color)),
             a: Math.floor(p5.alpha(color))
-        };
-    };
-
-    const colorToColorComponents = (color: Color): ColorComponents => {
-        return {
-            r: color.red,
-            g: color.green,
-            b: color.blue,
-            a: color.alpha
         };
     };
 
@@ -378,4 +364,35 @@ describe('color tests', (): void => {
         color.alpha = value;
         expect(color.alpha).toBe(value);
     });
+
+    test.each([
+        {r: 0, g: 0, b: 0, a: undefined, hex: '#000000'},
+        {r: 0, g: 0, b: 0, a: 0, hex: '#000000'},
+        {r: 0, g: 0, b: 0, a: 255, hex: '#000000'},
+        {r: 0, g: 0, b: 0, a: 100, hex: '#000000'},
+        {r: 255, g: 0, b: 0, a: undefined, hex: '#FF0000'},
+        {r: 255, g: 0, b: 0, a: 0, hex: '#FF0000'},
+        {r: 255, g: 0, b: 0, a: 255, hex: '#FF0000'},
+        {r: 255, g: 0, b: 0, a: 100, hex: '#FF0000'},
+        {r: 255, g: 0, b: 0, a: undefined, hex: '#841EE4'},
+        {r: 255, g: 0, b: 0, a: 0, hex: '#841EE4'},
+        {r: 255, g: 0, b: 0, a: 255, hex: '#841EE4'},
+        {r: 255, g: 0, b: 0, a: 100, hex: '#841EE4'},
+        {r: 255, g: 0, b: 0, a: undefined, hex: '#802B4E'},
+        {r: 255, g: 0, b: 0, a: 0, hex: '#802B4E'},
+        {r: 255, g: 0, b: 0, a: 255, hex: '#802B4E'},
+        {r: 255, g: 0, b: 0, a: 100, hex: '#802B4E'},
+    ])('$# get hex: rgba($r, $g, $b, $a)',
+        ({r, g, b, a, hex}): void => {
+            let c: Color;
+
+            if (a) {
+                c = new Color(p5.color(r, g, b, a));
+            } else {
+                c = new Color(p5.color(r, g, b));
+            }
+
+            expect(c.hex).toBe(hex);
+        }
+    );
 });

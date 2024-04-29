@@ -32,7 +32,8 @@ export const yellow: Color = new Color(p5.color(255, 255, 0));
 export interface ColorComponents {
     readonly r: number,
     readonly g: number,
-    readonly b: number
+    readonly b: number,
+    readonly a?: number,
 }
 
 export class SampleSelector extends ColorSelector {
@@ -62,5 +63,5 @@ export class SampleSelector extends ColorSelector {
 }
 
 export function colorToColorComponents(c: Color): ColorComponents {
-    return {r: c.red, g: c.green, b: c.blue};
+    return {r: c.red, g: c.green, b: c.blue, a: c.alpha};
 }
