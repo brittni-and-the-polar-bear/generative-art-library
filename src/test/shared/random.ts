@@ -16,22 +16,7 @@
  */
 
 /**
- * A structure for specifying weights of different values
- * when selecting elements in an uneven distribution.
- * The greater the weight, the more likely the element will be chosen.
- * @category Random
+ * The maximum number of times a test that involves randomness
+ * should be executed.
  */
-interface WeightedElement<Type> {
-    /**
-     * The value returned if this element is selected.
-     */
-    readonly value: Type,
-
-    /**
-     * The weight associated with this element.
-     * The greater the weight, the more likely the element will be selected.
-     */
-    readonly weight: number
-}
-
-export {type WeightedElement};
+export const RANDOM_TEST_TRIES: number = 250;
