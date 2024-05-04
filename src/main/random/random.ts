@@ -27,14 +27,10 @@ class Random {
     /**
      * The primary function to be called when generating any random numbers.
      * Set to {@link !Math.random} by default.
-     * @private
-     * @static
      */
     private static _randomMethod: (() => number) = Math.random;
 
     /**
-     * @public
-     * @static
      * @param method - The primary function to be called when generating any random numbers.<br/>
      * Set to {@link !Math.random} by default.
      */
@@ -43,8 +39,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param min - The minimum number that can be returned from this function (inclusive).
      * @param max - The maximum number that can be returned from the function (non-inclusive).
      * @returns A random floating point value greater than or equal to min and less than max.
@@ -60,8 +54,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param range - The {@link Range} that determines the minimum and maximum
      * values that can be returned from the function.
      * @returns A random floating point value greater than or equal to {@link Range.min}
@@ -72,8 +64,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param min - The minimum number that can be returned from this function (inclusive).
      * @param max - The maximum number that can be returned from the function (non-inclusive).
      * @returns A random integer value greater than or equal to min and less than max.
@@ -83,8 +73,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param range - The {@link Range} that determines the minimum and maximum
      * values that can be returned from the function.
      * @returns A random integer value greater than or equal to {@link Range.min}
@@ -95,8 +83,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param chanceOfTrue - A floating point number between 0 and 1.
      * If provided, it represents the percent chance that this method will return true.
      * @returns A random boolean value.
@@ -120,8 +106,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param list - The list of elements to be selected from.
      * @returns A random element from the given list.
      * This method assumes an equal distribution for all elements of the list.<br/>
@@ -143,8 +127,6 @@ class Random {
     }
 
     /**
-     * @public
-     * @static
      * @param list - The list of elements to be selected from.<br/>
      * <b>IMPORTANT: The sum of weights of the objects in this list should be equal to 1.0.</b>
      * @returns A random element from the given list.
