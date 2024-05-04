@@ -21,7 +21,6 @@ import {WeightedElement} from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
- * @public
  * @category Random
  */
 class Random {
