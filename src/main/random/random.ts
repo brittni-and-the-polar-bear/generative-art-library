@@ -31,8 +31,9 @@ class Random {
     private static _randomMethod: (() => number) = Math.random;
 
     /**
-     * @param method - The primary function to be called when generating any random numbers.<br/>
+     * Set the primary function to be called when generating any random numbers.<br/>
      * Set to {@link !Math.random} by default.
+     * @param method -
      */
     public static set randomMethod(method: () => number) {
         Random._randomMethod = method;
@@ -113,9 +114,9 @@ class Random {
      */
     public static randomElement<Type>(list: Type[]): Type | undefined {
         let element: Type | undefined = undefined;
+        const size: number = list.length;
 
-        if (list.length > 0) {
-            const size: number = list.length;
+        if (size > 0) {
             const index: number = Random.randomInt(0, size);
 
             if (index < size) {

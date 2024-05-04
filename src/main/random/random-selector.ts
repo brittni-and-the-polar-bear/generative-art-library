@@ -15,12 +15,50 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {Random} from './random';
+
 /**
  * A class for randomly selecting elements from a given list.
+ * This class assumes an equal distribution for all elements of the list.
  * @category Random
  */
-class RandomSelector {
+class RandomSelector<Type> {
+    /**
+     * @param _elements - The elements that {@link randomElement} and
+     * {@link getRandomElementAndRemove} can select from.
+     */
+    public constructor(private readonly _elements: Type[]) {
+    }
 
+    /**
+     * Selects random element from {@link _elements}.<br/>
+     * This method assumes an equal distribution for all elements of the list.<br/>
+     * If {@link _elements} is empty, the function will return {@link !undefined}.
+     */
+    public randomElement(): Type | undefined {
+        return Random.randomElement(this._elements);
+    }
+
+    /**
+     * Selects random element from {@link _elements}, then removes that element from the list.<br/>
+     * This method assumes an equal distribution for all elements of the list.<br/>
+     * If {@link _elements} is empty, the function will return {@link !undefined}.
+     */
+    public getRandomElementAndRemove(): Type | undefined {
+        let element: Type | undefined = undefined;
+        const size: number = this._elements.length;
+
+        if (size > 0) {
+            const index: number = Random.randomInt(0, size);
+
+            if (index < size) {
+                element = this._elements[index];
+                this._elements.splice(index, 1);
+            }
+        }
+
+        return element;
+    }
 }
 
 export {RandomSelector};
