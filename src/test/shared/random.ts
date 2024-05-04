@@ -15,4 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
+/**
+ * The maximum number of times a test that involves randomness
+ * should be executed.
+ */
 export const RANDOM_TEST_TRIES: number = 250;
