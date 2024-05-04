@@ -24,10 +24,21 @@ import {Random} from './random';
  */
 class RandomSelector<Type> {
     /**
-     * @param _elements - The elements that {@link randomElement} and
+     * The elements that {@link getRandomElement} and
      * {@link getRandomElementAndRemove} can select from.
+     * @private
      */
-    public constructor(private readonly _elements: Type[]) {
+    private readonly _elements: Type[];
+
+    public constructor(elements: Type[]) {
+        this._elements = Array.from(elements);
+    }
+
+    /**
+     * Get the number of elements in the {@link _elements} list.
+     */
+    public get size(): number {
+        return this._elements.length;
     }
 
     /**
@@ -35,7 +46,7 @@ class RandomSelector<Type> {
      * This method assumes an equal distribution for all elements of the list.<br/>
      * If {@link _elements} is empty, the function will return {@link !undefined}.
      */
-    public randomElement(): Type | undefined {
+    public getRandomElement(): Type | undefined {
         return Random.randomElement(this._elements);
     }
 
