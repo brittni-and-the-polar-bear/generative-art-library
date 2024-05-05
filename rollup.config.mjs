@@ -27,16 +27,18 @@ export default {
         dir: './out',
         format: 'es',
         name: 'batpb-genart',
-        sourcemap: true,
+        sourcemap: false,
         preserveModules: false,
         globals: {
             p5: 'p5',
-            'nearest-color': 'nearest-color'
+            'nearest-color': 'nearest-color',
+            'color-name-list': 'color-name-list/dist/colornames.json'
         }
     },
     external: [
         'p5',
-        'nearest-color'
+        'nearest-color',
+        'color-name-list/dist/colornames.json'
     ],
     plugins: [
         eslint({

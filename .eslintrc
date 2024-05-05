@@ -60,7 +60,10 @@
     "@typescript-eslint/no-useless-constructor": "error",
 
     "@typescript-eslint/class-literal-property-style": ["error", "getters"],
+
     "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+
     "@typescript-eslint/prefer-for-of": "off"
   }
 }
