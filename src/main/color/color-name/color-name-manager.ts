@@ -15,56 +15,54 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// const list = require('color-name-list');
+import colorNames from 'color-name-list/dist/colornames.json';
+import nearestColor from 'nearest-color';
 
-import nearestColor from "nearest-color";
-// import {StringMap} from "map";
-// import {Color} from "../color";
+import {StringMap} from 'map';
 
+interface ColorMatch {
+    name: string,
+    value: string,
+    rgb: { r: number, g: number, b: number },
+    distance: number
+}
+
+/**
+ * @category Color
+ */
 class ColorNameManager {
-    // static from function
-    // only create if null/undefined with full color structure -> map of name to hex
-    // use to get closest colors
-    // new issue, add all CSS colors to library
-    // private static _closestColor = null;
-    // private static readonly _colors: StringMap<string> = new StringMap<string>();
-    //
-    // public static addColor(color: Color): void {
-    //
-    // }
+    private static _nearestColor: any;
+    private static readonly _matchedColors: StringMap<string> = new StringMap<string>();
 
-    public static getColorName(): void {
+    public static getColorName(hex: string): string {
+        let match: string = '';
 
-    }
-
-    public static getColorNameWithExactMatch(): string {
-        var things = [
-            {name: 'yellow', 'source': '#ffff00', 'rgb': {r: 255, g: 255, b: 0}},
-            {name: 'blue', 'source': '#0000ff', 'rgb': {r: 0, g: 0, b: 255}},
-        ]
-
-        let c = nearestColor('#FF0000', things);
-        console.log(c);
-
-        c = nearestColor('#aa774a');
-        // let s: string = '#f80'
-        console.log(c);
-
-        // let hexs = ['#ffffff', '#00ffff'];
-        // let other = {magenta: '#ff00ff', black: "#000000"}
-        // let b = nearestColor.STANDARD_COLORS;
-        let count = 0;
-        for (const f in nearestColor.STANDARD_COLORS) {
-            if (f) {
-                count++;
+        if (this.hasMatch(hex)) {
+            match = this._matchedColors.get(hex) ?? '';
+        } else {
+            if (!this._nearestColor) {
+                const colors = colorNames.reduce((o, {name, hex}) => Object.assign(o, {[name]: hex}), {});
+                this._nearestColor = nearestColor.from(colors);
             }
+
+            const result: ColorMatch | string = this._nearestColor(hex);
+
+            if (result) {
+                if (typeof result === 'string') {
+                    match = result;
+                } else {
+                    match = result.name ?? '';
+                }
+            }
+
+            this._matchedColors.setUndefinedKey(hex, match);
         }
 
-        console.log(count);
-        const cm = nearestColor.from(nearestColor.STANDARD_COLORS);
-        let x = cm('#004582');
-        console.log(x);
-        return '';
+        return match;
+    }
+
+    public static hasMatch(hex: string): boolean {
+        return this._matchedColors.hasKey(hex);
     }
 }
 

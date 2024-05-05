@@ -16,6 +16,7 @@
  */
 
 import eslint from '@rollup/plugin-eslint';
+import json from '@rollup/plugin-json';
 
 import analyzer from 'rollup-plugin-analyzer';
 import ts from 'rollup-plugin-ts';
@@ -29,11 +30,13 @@ export default {
         sourcemap: true,
         preserveModules: false,
         globals: {
-            p5: 'p5'
+            p5: 'p5',
+            'nearest-color': 'nearest-color'
         }
     },
     external: [
-        'p5'
+        'p5',
+        'nearest-color'
     ],
     plugins: [
         eslint({
@@ -44,6 +47,7 @@ export default {
         analyzer({
             summaryOnly: false
         }),
+        json(),
         ts()
     ]
 };

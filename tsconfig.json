@@ -17,7 +17,7 @@
       "random": ["./src/main/random"]
     },
     /* JSON Modules */
-    "resolveJsonModule": false,
+    "resolveJsonModule": true,
     "resolvePackageJsonExports": false,
     "resolvePackageJsonImports": false,
 

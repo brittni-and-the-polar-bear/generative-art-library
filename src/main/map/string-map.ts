@@ -60,6 +60,15 @@ class StringMap<ValueType> {
     }
 
     /**
+     * Returns `true` if the map contains the given {@link key},
+     * returns `false` if it does not.
+     * @param key -
+     */
+    public hasKey(key: string): boolean {
+        return this._map.has(key);
+    }
+
+    /**
      * Associate the given {@link key} with the given {@link value} in the map.
      *
      * @param key - Key to set in the map.
