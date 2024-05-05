@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import module from 'p5';
-export = module;
+import p5 from 'p5';
+
+export = p5;
 export as namespace P5Lib;
