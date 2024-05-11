@@ -18,8 +18,23 @@
 import {ColorNameManager} from 'color';
 
 describe('color name manager test', (): void => {
-    test('test get color name with exact match', (): void => {
-        const name: string = ColorNameManager.getColorNameWithExactMatch();
-        expect(name).toBeTruthy();
-    });
+    test.each([
+        {hex: 'this is not a hex', expectedName: undefined},
+        {hex: '000000', expectedName: 'black'},
+        {hex: '#000000', expectedName: 'black'}
+        // random color lowercase
+        // with hash
+        // without hash
+        // random color uppercase
+        // with hash
+        // without hash
+    ])('$# get color name: $hex ($expectedName)',
+        ({hex, expectedName}): void => {
+            const name: string | undefined = ColorNameManager.getColorName(hex);
+            expect(name).toBe(expectedName);
+        }
+    );
+
+    //  test -> nearest color is only created once
+    // test -> lowercase and capital hexes are only set once
 });

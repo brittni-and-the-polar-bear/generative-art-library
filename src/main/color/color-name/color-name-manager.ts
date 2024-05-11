@@ -27,6 +27,8 @@ interface ColorMatch {
     distance: number
 }
 
+// TODO - documentation
+
 /**
  * @category Color
  */
@@ -34,28 +36,39 @@ class ColorNameManager {
     private static _nearestColor: any;
     private static readonly _matchedColors: StringMap<string> = new StringMap<string>();
 
-    public static getColorName(hex: string): string {
-        let match: string = '';
+    public static getColorName(colorHex: string): string | undefined {
+        colorHex = colorHex.toUpperCase();
+        let match: string | undefined = undefined;
 
-        if (this.hasMatch(hex)) {
-            match = this._matchedColors.get(hex) ?? '';
+        if (this.hasMatch(colorHex)) {
+            match = this._matchedColors.get(colorHex);
         } else {
             if (!this._nearestColor) {
                 const colors = colorNames.reduce((o, {name, hex}) => Object.assign(o, {[name]: hex}), {});
                 this._nearestColor = nearestColor.from(colors);
             }
 
-            const result: ColorMatch | string = this._nearestColor(hex);
+            try {
+                const result: ColorMatch | string = this._nearestColor(colorHex);
 
-            if (result) {
-                if (typeof result === 'string') {
-                    match = result;
-                } else {
-                    match = result.name ?? '';
+                if (result) {
+                    if (typeof result === 'string') {
+                        match = result;
+                    } else {
+                        match = result.name ?? undefined;
+                    }
                 }
-            }
 
-            this._matchedColors.setUndefinedKey(hex, match);
+                if (match) {
+                    this._matchedColors.setUndefinedKey(colorHex, match);
+                }
+            } catch {
+                match = undefined;
+            }
+        }
+
+        if (match) {
+            match = match.toLowerCase();
         }
 
         return match;

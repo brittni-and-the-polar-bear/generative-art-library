@@ -21,6 +21,11 @@ import {SketchContext} from 'context';
 
 const p5: P5Lib = SketchContext.p5;
 
+// TODO - add name field
+// TODO - build color from PaletteColor -> intersection type with p5.Color in constructor and set color
+// TODO - get name from PaletteColor
+// TODO - if name is falsy -> use nearest color -> do not set name since rgb values can change between calls
+
 /**
  * Color information and functionality.
  * Colors are stored in RGBA format.

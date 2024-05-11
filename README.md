@@ -35,6 +35,12 @@ Large changes may be made to the API between minor versions.
 
 ----
 
+<!--TODO - Add getting started with template project -->
+
+<!-- TODO - Getting started instructions for TypeScript with Rollup from scratch (minimum dependencies) -->
+
+<!-- TODO - Getting started instructions for JavaScript with Rollup from scratch (minimum dependencies) -->
+
 # Getting Started
 
 ## Install with [npm](https://www.npmjs.com/)
