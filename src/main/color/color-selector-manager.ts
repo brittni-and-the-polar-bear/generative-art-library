@@ -15,21 +15,42 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Random} from '../random';
-import {ColorSelector} from './color-selector';
+import {Random} from 'random';
 
+import {ColorSelector, DefaultColorSelector} from './color-selector';
+
+/**
+ * Manager to select a random {@link ColorSelector} from a {@link !Set}.
+ * @category Color
+ */
 class ColorSelectorManager {
+    /**
+     * Underlying {@link !Set} of {@link ColorSelector} objects.
+     */
     private readonly _colorSelectors: Set<ColorSelector> = new Set<ColorSelector>();
 
-    public getRandomColorSelector(): ColorSelector | undefined {
+    /**
+     * Select a random {@link ColorSelector} from the {@link _colorSelectors} set.
+     * @returns A random {@link ColorSelector}. If a selector cannot be chosen,
+     * a {@link DefaultColorSelector} object will be returned.
+     */
+    public getRandomColorSelector(): ColorSelector {
         const selectors: ColorSelector[] = Array.from(this._colorSelectors);
-        return Random.randomElement(selectors);
+        return Random.randomElement(selectors) ?? (new DefaultColorSelector());
     }
 
+    /**
+     * Add a {@link ColorSelector} to the {@link _colorSelectors} set.
+     * @param selector -
+     */
     public addColorSelector(selector: ColorSelector): void {
         this._colorSelectors.add(selector);
     }
 
+    /**
+     * Add multiple {@link ColorSelector} objects to the {@link _colorSelectors} set.
+     * @param selectors -
+     */
     public addColorSelectors(selectors: Iterable<ColorSelector>): void {
         for (const selector of selectors) {
             this._colorSelectors.add(selector);

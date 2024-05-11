@@ -15,23 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-/**
- * A structure for specifying weights of different values
- * when selecting elements in an uneven distribution.
- * The greater the weight, the more likely the element will be chosen.
- * @category Random
- */
-interface WeightedElement<Type> {
-    /**
-     * The value returned if this element is selected.
-     */
-    readonly value: Type,
-
-    /**
-     * The weight associated with this element.
-     * The greater the weight, the more likely the element will be selected.
-     */
-    readonly weight: number
-}
-
-export {type WeightedElement};
+window.navigationData = "data:application/octet-stream;base64,H4sIAAAAAAAAE5WRMWvDMBCF/8vNpqahCcVr0qGDl7jQIWQQ0lkSkU7GOkNK6X8vyVDbsWXTUbr3vnt3d/oGxitDAfvgQgsZSGOdapGgOI1rFTqUHNpSkNB4kzaCDRQgnYgRYz6nejLsHWRwsaSgeN68/mTz1I+vBnskUucfgDfBmJZkrURbynTAWnSOV3BzqtVJE6mmvvPAWYomJo5ScWtJl6KZgv9Ka3A2CbhGrixphwfrkaIN9E4Kr32ruiPJNlDME9Jx693LoO9RkMZp6vv3cuKjIBV8IvP/sDPQqVEFv+T8RKsNo3pz6JG4R1hibGshMeYPmjFus92N5mu2qWNfkKXZB7q/pwcfludWeP4F/OBnl+kDAAA="

@@ -32,7 +32,12 @@ const enum ColorSelectorType {
     /**
      * Color selector that chooses color randomly from a range of RGB(A) values.
      */
-    RGB = 'RGB color selector'
+    RGB = 'RGB color selector',
+
+    /**
+     * Default color selector. Should only be used in {@link DefaultColorSelector}.
+     */
+    Default = 'default color selector'
 }
 
 /**
@@ -97,7 +102,7 @@ abstract class ColorSelector {
      * object (black) will be returned.
      */
     public selectColorFromChoices(): Color {
-        let col: Color;
+        let col: Color = new Color();
 
         if (this._randomOrder) {
             col =  Random.randomElement(this._colorChoices) ?? (new Color());
@@ -105,8 +110,6 @@ abstract class ColorSelector {
             if (this._currentIndex < this._colorChoices.length) {
                 col = this._colorChoices[this._currentIndex];
                 this.incrementCurrentIndex();
-            } else {
-                col = new Color();
             }
         }
 
@@ -135,4 +138,43 @@ abstract class ColorSelector {
     }
 }
 
-export {ColorSelector, ColorSelectorType};
+/**
+ * Default color selector.
+ * To be used when a valid color selector cannot be found.
+ * @category Color
+ */
+class DefaultColorSelector extends ColorSelector {
+    public constructor() {
+        super(false);
+    }
+
+    /**
+     * @returns `['black']`
+     */
+    public get colorNames(): string[] {
+        return ['black'];
+    }
+
+    /**
+     * @returns A black color `#000000`
+     */
+    public getColor(): Color {
+        return (new Color());
+    }
+
+    /**
+     * @returns `'default color selector'`
+     */
+    public get name(): string {
+        return 'default color selector';
+    }
+
+    /**
+     * @returns {@link ColorSelectorType.Default}
+     */
+    public get type(): ColorSelectorType {
+        return ColorSelectorType.Default;
+    }
+}
+
+export {ColorSelectorType, ColorSelector, DefaultColorSelector};

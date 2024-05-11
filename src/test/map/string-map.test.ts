@@ -68,6 +68,15 @@ describe('string-map tests', (): void => {
         }
     });
 
+    test('set key and get key', (): void => {
+        const map: StringMap<number> = new StringMap<number>();
+        map.setKey('molly', 10);
+        expect(map.get('molly')).toBe(10);
+        map.setKey('molly', 20);
+        expect(map.get('molly')).toBe(20);
+        expect(map.get('harry')).toBeUndefined();
+    });
+
     test('set undefined key', (): void => {
         const map: StringMap<number> = new StringMap<number>();
         const logSpy = jest.spyOn(global.console, 'warn');
