@@ -37,11 +37,9 @@ class DefaultColorSelector extends ColorSelector {
         return ['black'];
     }
 
-    // TODO - Add color strip to represent color (with name and hex)
-    // TODO - Combine example in local apb color palette files with example in batpb color palettes page
     /**
      * @returns A black color `#000000`.<br/>
-     * <div style="background: #000000;"><p><br/></p></div>
+     * <div class="color-block" style="background: #000000;"><h2 class="color-block white-pass">black (#000000)</h2></div>
      * @public
      */
     public getColor(): Color {
