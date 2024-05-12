@@ -45,7 +45,6 @@ export class SampleSelector extends ColorSelector {
     }
 
     get colorNames(): string[] {
-        // TODO - get names of colors from system
         return ['name1', 'name2', 'name3'];
     }
 
