@@ -15,3 +15,23 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {StringMap} from 'map';
+import {PaletteColor} from './palette-color';
+
+export function addColor(color: PaletteColor,
+                         colors: StringMap<PaletteColor>,
+                         mapName: string): void {
+    const key: string = color.HEX;
+    colors.setUndefinedKey(key, color, `color ${key} already exists in ${mapName}.`);
+}
+
+export function addColors(source: StringMap<PaletteColor>,
+                          destination: StringMap<PaletteColor>,
+                          destinationMapName: string): void {
+    for (const color of source.values) {
+        const key: string = color.HEX;
+        destination.setUndefinedKey(key, color, `color ${key} already exists in ${destinationMapName}.`);
+    }
+}
+
+export * from './palette-color';
