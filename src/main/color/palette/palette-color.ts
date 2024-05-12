@@ -17,19 +17,21 @@
 
 // color names derived from https://colornamer.robertcooper.me/
 
+// TODO - documentation
+
 interface PaletteColor {
-    readonly rgb: {
-        readonly r: number,
-        readonly g: number,
-        readonly b: number
+    readonly RGB: {
+        readonly R: number,
+        readonly G: number,
+        readonly B: number
     },
-    readonly hsl: {
-        readonly h: number,
-        readonly s: number,
-        readonly l: number
+    readonly HSL: {
+        readonly H: number,
+        readonly S: number,
+        readonly L: number
     }
-    readonly hexString: string,
-    readonly name: string
+    readonly HEX: string,
+    readonly NAME: string
 }
 
 export {type PaletteColor};
