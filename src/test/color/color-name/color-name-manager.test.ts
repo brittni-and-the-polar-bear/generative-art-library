@@ -21,15 +21,15 @@ import {ColorNameManager} from 'color';
 import {StringMap} from 'map';
 
 describe('color name manager test', (): void => {
-    let logSpy: any;
+    let nearestColorSpy: any;
 
     beforeAll((): void => {
-        logSpy = jest.spyOn(nearestColor, 'from');
+        nearestColorSpy = jest.spyOn(nearestColor, 'from');
     });
 
     afterAll((): void => {
-        expect(logSpy).not.toHaveBeenCalled();
-        logSpy.mockRestore();
+        expect(nearestColorSpy).not.toHaveBeenCalled();
+        nearestColorSpy.mockRestore();
     });
 
     test.each([
