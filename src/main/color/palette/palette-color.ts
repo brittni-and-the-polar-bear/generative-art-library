@@ -15,3 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// color names derived from https://colornamer.robertcooper.me/
+
+interface PaletteColor {
+    readonly rgb: {
+        readonly r: number,
+        readonly g: number,
+        readonly b: number
+    },
+    readonly hsl: {
+        readonly h: number,
+        readonly s: number,
+        readonly l: number
+    }
+    readonly hexString: string,
+    readonly name: string
+}
+
+export {type PaletteColor};
