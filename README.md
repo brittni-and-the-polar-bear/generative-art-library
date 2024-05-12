@@ -39,7 +39,7 @@ Large changes may be made to the API between minor versions.
 
 ----
 
-### GitHub
+### github
 
 ![GitHub followers](https://img.shields.io/github/followers/brittni-and-the-polar-bear)
 ![GitHub Repo stars](https://img.shields.io/github/stars/brittni-and-the-polar-bear/generative-art-library)
@@ -79,9 +79,7 @@ npm install @batpb/genart
 
 ----
 
-# Experiments
-
-## [run the experiments](https://brittni-and-the-polar-bear.github.io/generative-art-library/experiments/)
+# [experiments](https://brittni-and-the-polar-bear.github.io/generative-art-library/experiments/)
 
 ----
 
