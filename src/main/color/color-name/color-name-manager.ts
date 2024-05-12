@@ -72,6 +72,10 @@ class ColorNameManager {
      * @static
      */
     public static getColorName(colorHex: string): string | undefined {
+        if (!colorHex.startsWith('#')) {
+            colorHex = '#' + colorHex;
+        }
+
         colorHex = colorHex.toUpperCase();
         let match: string | undefined = undefined;
 
