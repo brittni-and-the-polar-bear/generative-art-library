@@ -15,8 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './math';
-export * from './random';
-export * from './map';
-export * from './p5';
-export * from './color'
+export * from 'math';
+export * from 'random';
+export * from 'map';
+export * from 'context';
+export * from 'color'
+export * from 'palette';
+export * from 'palette-colors';
