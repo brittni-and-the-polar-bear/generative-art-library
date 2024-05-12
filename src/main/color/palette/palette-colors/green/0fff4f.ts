@@ -15,8 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// noinspection ES6PreferShortImport
-import {PaletteColor} from '../palette-color';
+import {PaletteColor} from 'palette';
 
 /**
  * <div class="color-block" style="background: #0FFF4F;"><h2 class="color-block black-pass">cathode green (#0FFF4F)</h2></div>
