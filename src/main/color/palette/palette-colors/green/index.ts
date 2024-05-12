@@ -16,10 +16,16 @@
  */
 
 import {StringMap} from 'map'
-
 import {addColor, PaletteColor} from 'palette';
 
-// TODO - Doocumentation
+/**
+ * A map of hex values to {@link PaletteColor} objects for all
+ * green palette colors.
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html#green target="_blank" rel="noopener noreferrer"">See the Colors</a>
+ * @category Palette
+ * @category Palette Color Collection
+ * @category Palette Colors (Green)
+ */
 const GREEN_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 const mapName: string = 'GREEN_PALETTE_COLORS';
 
