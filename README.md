@@ -5,16 +5,14 @@ Copyright (C) 2023-2024 brittni and the polar bear LLC.
 A [TypeScript](https://www.typescriptlang.org/) compatible library built on [p5.js](https://p5js.org/) 
 for creating responsive generative art projects.
 
-[GitHub Pages](https://brittni-and-the-polar-bear.github.io/generative-art-library/)
+## [see the project's GitHub Pages blog](https://brittni-and-the-polar-bear.github.io/generative-art-library/)
 
-Documentation (coming soon!)
-
-## Important Notice
+## important notice
 
 This project is currently in active development.
 Large changes may be made to the API between minor versions.
 
-## Package Stats
+## package stats
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)
 [![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml)
@@ -35,15 +33,9 @@ Large changes may be made to the API between minor versions.
 
 ----
 
-<!--TODO - Add getting started with template project -->
+# getting started
 
-<!-- TODO - Getting started instructions for TypeScript with Rollup from scratch (minimum dependencies) -->
-
-<!-- TODO - Getting started instructions for JavaScript with Rollup from scratch (minimum dependencies) -->
-
-# Getting Started
-
-## Install with [npm](https://www.npmjs.com/)
+## install with [npm](https://www.npmjs.com/)
 
 ```shell
 npm install @batpb/genart
@@ -51,13 +43,21 @@ npm install @batpb/genart
 
 ----
 
-# Experiments
-
-[run the experiments](https://brittni-and-the-polar-bear.github.io/generative-art-library/experiments/)
+# [documentation](https://brittni-and-the-polar-bear.github.io/generative-art-library/doc/index.html)
 
 ----
 
-# LICENSE Information
+# Experiments
+
+## [run the experiments](https://brittni-and-the-polar-bear.github.io/generative-art-library/experiments/)
+
+----
+
+# meet the team (coming soon!)
+
+----
+
+# LICENSE information
 
 The source code of this project is licensed under the 
 [GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html). 
@@ -67,13 +67,13 @@ of the root directory.
 
 ----
 
-# Resources
+# [development resources](https://brittni-and-the-polar-bear.github.io/generative-art-library/resources.html)
 
-## Color Names
+## color names
 
 [Color Namer](https://colornamer.robertcooper.me/)
 
-## Color Palettes
+## color palettes
 
 [color-hex](https://www.color-hex.com/)
 
