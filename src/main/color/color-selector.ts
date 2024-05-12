@@ -18,27 +18,7 @@
 import {Random} from 'random';
 
 import {Color} from './color';
-
-/**
- * Enum for the different types of ColorSelectors.
- * @category Color
- */
-const enum ColorSelectorType {
-    /**
-     * Color selector that chooses colors from a pre-selected palette.
-     */
-    Palette = 'palette color selector',
-
-    /**
-     * Color selector that chooses color randomly from a range of RGB(A) values.
-     */
-    RGB = 'RGB color selector',
-
-    /**
-     * Default color selector. Should only be used in {@link DefaultColorSelector}.
-     */
-    Default = 'default color selector'
-}
+import {ColorSelectorType} from './color-selector-type';
 
 /**
  * ColorSelectors choose and return colors from some set list or criteria.
@@ -47,68 +27,83 @@ const enum ColorSelectorType {
 abstract class ColorSelector {
     /**
      * A set list of {@link Color} objects that the selector can choose from.
+     * @private
+     * @readonly
      */
-    private readonly _colorChoices: Color[] = [];
+    private readonly _COLOR_CHOICES: Color[] = [];
 
     /**
      * A flag that determines the color selection order
      * of {@link selectColorFromChoices}.<br/>
      * When `true`, {@link selectColorFromChoices} will select colors
-     * from {@link _colorChoices} in a random order.<br/>
+     * from {@link _COLOR_CHOICES} in a random order.<br/>
      * When `false`, {@link selectColorFromChoices} will select colors
      * list order.
+     * @private
+     * @readonly
      */
-    private readonly _randomOrder: boolean;
+    private readonly _RANDOM_ORDER: boolean;
 
     /**
-     * The current index of {@link _colorChoices} being chosen
-     * when colors are selected in list order (i.e. {@link _randomOrder} is `false`).
+     * The current index of {@link _COLOR_CHOICES} being chosen
+     * when colors are selected in list order (i.e. {@link _RANDOM_ORDER} is `false`).
+     * @private
      */
     private _currentIndex: number = 0;
 
     /**
      * @param randomOrder A flag that determines the color selection order
      * of {@link selectColorFromChoices}.
-     * @see {@link _randomOrder}
+     * @see {@link _RANDOM_ORDER}
+     * @constructor
      */
     protected constructor(randomOrder?: boolean) {
-        this._randomOrder = randomOrder ?? Random.randomBoolean();
+        this._RANDOM_ORDER = randomOrder ?? Random.randomBoolean();
     }
 
     /**
      * Select and return a {@link Color} object.
+     * @public
+     * @abstract
      */
     public abstract getColor(): Color;
 
     /**
      * @returns The name of the selector (e.g. 'blue rgb color selector').
+     * @public
+     * @abstract
      */
     public abstract get name(): string;
 
     /**
      * @returns A list of the names of the colors the selector
      * is choosing from.
+     * @public
+     * @abstract
      */
     public abstract get colorNames(): string[];
 
     /**
      * @returns The {@link ColorSelectorType} of the selector.
+     * @public
+     * @abstract
      */
     public abstract get type(): ColorSelectorType;
 
     /**
-     * @returns The selected {@link Color} from the {@link _colorChoices} list.<br/>
-     * If {@link _colorChoices} is empty, a default {@link Color}
+     * @returns The selected {@link Color} from the {@link _COLOR_CHOICES} list.<br/>
+     * If {@link _COLOR_CHOICES} is empty, a default {@link Color}
      * object (black) will be returned.
+     * @public
      */
     public selectColorFromChoices(): Color {
         let col: Color = new Color();
 
-        if (this._randomOrder) {
-            col =  Random.randomElement(this._colorChoices) ?? (new Color());
+        if (this._RANDOM_ORDER) {
+            col = Random.randomElement(this._COLOR_CHOICES) ?? (new Color());
         } else {
-            if (this._currentIndex < this._colorChoices.length) {
-                col = this._colorChoices[this._currentIndex];
+            if (this._currentIndex < this._COLOR_CHOICES.length) {
+                col = this._COLOR_CHOICES[this._currentIndex];
                 this.incrementCurrentIndex();
             }
         }
@@ -117,20 +112,20 @@ abstract class ColorSelector {
     }
 
     /**
-     * Add a {@link Color} to the {@link _colorChoices} list.
+     * Add a {@link Color} to the {@link _COLOR_CHOICES} list.
      * @param color -
      */
     protected addColorChoice(color: Color): void {
-        this._colorChoices.push(color);
+        this._COLOR_CHOICES.push(color);
     }
 
     /**
      * Increment {@link _currentIndex} to select the next
-     * {@link Color} element in the {@link _colorChoices} list.
-     * @see {@link _randomOrder}
+     * {@link Color} element in the {@link _COLOR_CHOICES} list.
+     * @see {@link _RANDOM_ORDER}
      */
     private incrementCurrentIndex(): void {
-        const length: number = this._colorChoices.length;
+        const length: number = this._COLOR_CHOICES.length;
 
         if (length > 0) {
             this._currentIndex = (this._currentIndex + 1) % length;
@@ -138,43 +133,4 @@ abstract class ColorSelector {
     }
 }
 
-/**
- * Default color selector.
- * To be used when a valid color selector cannot be found.
- * @category Color
- */
-class DefaultColorSelector extends ColorSelector {
-    public constructor() {
-        super(false);
-    }
-
-    /**
-     * @returns `['black']`
-     */
-    public get colorNames(): string[] {
-        return ['black'];
-    }
-
-    /**
-     * @returns A black color `#000000`
-     */
-    public getColor(): Color {
-        return (new Color());
-    }
-
-    /**
-     * @returns `'default color selector'`
-     */
-    public get name(): string {
-        return 'default color selector';
-    }
-
-    /**
-     * @returns {@link ColorSelectorType.Default}
-     */
-    public get type(): ColorSelectorType {
-        return ColorSelectorType.Default;
-    }
-}
-
-export {ColorSelectorType, ColorSelector, DefaultColorSelector};
+export {ColorSelector};
