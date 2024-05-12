@@ -20,7 +20,7 @@ import type {JestConfigWithTsJest} from 'ts-jest';
 const config: JestConfigWithTsJest = {
     collectCoverage: true,
     coverageDirectory: './out/tests-coverage',
-    coverageReporters: ['text', 'lcov'],
+    coverageReporters: ['text', 'lcov', 'json', 'json-summary'],
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
