@@ -20,7 +20,7 @@ h2.white-pass {
 
 # All Colors
 
-## Greens
+## Green
 
 <div class="color-block" style="background: #0FFF4F;"><h2 class="color-block black-pass">cathode green (#0FFF4F)</h2></div>
 
