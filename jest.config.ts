@@ -28,7 +28,10 @@ const config: JestConfigWithTsJest = {
         '^context$': '<rootDir>/src/main/p5',
         '^map$': '<rootDir>/src/main/map',
         '^math$': '<rootDir>/src/main/math',
-        '^random$': '<rootDir>/src/main/random'
+        '^palette$': '<rootDir>/src/main/color/palette',
+        '^palette-colors$': '<rootDir>/src/main/color/palette/palette-colors',
+        '^random$': '<rootDir>/src/main/random',
+        '^unit-test/shared$': '<rootDir>/src/test/shared'
     },
     testEnvironment: 'jsdom',
     testRegex: './src/test/.*\\.(test|spec)?\\.(ts|tsx)$',

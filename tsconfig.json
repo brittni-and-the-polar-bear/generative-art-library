@@ -14,7 +14,10 @@
       "context": ["./src/main/p5"],
       "map": ["./src/main/map"],
       "math": ["./src/main/math"],
-      "random": ["./src/main/random"]
+      "palette": ["./src/main/color/palette"],
+      "palette-colors": ["./src/main/color/palette/palette-colors"],
+      "random": ["./src/main/random"],
+      "unit-test/shared": ["./src/test/shared"]
     },
     /* JSON Modules */
     "resolveJsonModule": true,
