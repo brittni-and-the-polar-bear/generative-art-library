@@ -9,7 +9,7 @@ generative art projects.
 This project is currently in active development.
 Large changes may be made to the API between minor versions.
 
-## package stats
+## [package stats](./package-stats.md)
 
 <a href="https://www.npmjs.com/package/@batpb/genart" target="_blank" rel="noopener noreferrer">![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library)
@@ -18,13 +18,7 @@ Large changes may be made to the API between minor versions.
 
 ----
 
-# getting started
-
-## install with <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npm</a>
-
-```shell
-npm install @batpb/genart
-```
+# [getting started](./getting-started.md)
 
 ----
 
@@ -32,9 +26,7 @@ npm install @batpb/genart
 
 ----
 
-# Experiments
-
-## [run the experiments](./experiments/index.md)
+# [experiments](./experiments/index.md)
 
 ----
 
