@@ -4,6 +4,7 @@
     "./src/main/batpb-genart.ts"
   ],
   "out": "./out/doc",
+  "customCss": "./typedoc/typedoc.css",
 
   "plugin": [
     "typedoc-plugin-extra-footer",
