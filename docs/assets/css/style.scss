@@ -24,7 +24,11 @@ header {
   position: static;
 }
 
+section {
+  min-height: 100vh;
+}
+
 footer {
   position: static;
-  float: inherit;
+  display: inline-block;
 }
