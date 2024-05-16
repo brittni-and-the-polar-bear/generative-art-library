@@ -16,13 +16,7 @@
  */
 
 import {GREEN_PALETTE_COLORS} from 'palette-colors';
-import {checkForValidStringMap} from 'unit-test/shared';
-
-export const GREEN_HEXES: {hexString: string}[] = [
-    {hexString: '#006F57'},
-    {hexString: '#0FFF4F'},
-    {hexString: '#23856D'}
-];
+import {GREEN_HEXES, checkForValidStringMap} from 'unit-test/shared';
 
 describe('green palette colors', (): void => {
     test('valid string map: GREEN_PALETTE_COLORS', (): void => {

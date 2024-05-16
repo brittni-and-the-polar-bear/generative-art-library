@@ -17,6 +17,8 @@
 
 import {PaletteColor} from 'palette';
 
+import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
+
 /**
  * <div class="color-block" style="background: #0FFF4F;"><h2 class="color-block black-pass">cathode green (#0FFF4F)</h2></div>
  *
@@ -25,11 +27,17 @@ import {PaletteColor} from 'palette';
  *
  * @source
  */
-const _0FFF4F: PaletteColor = {
+export const _0FFF4F: PaletteColor = {
     HEX: '#0FFF4F',
     RGB: {R: 15, G: 255, B: 79},
     HSL: {H: 136, S: 100, L: 53},
     NAME: 'cathode green'
 };
 
-export {_0FFF4F};
+let added: boolean = false;
+
+if (!added) {
+    GREEN_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
+    ALL_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
+    added = true;
+}

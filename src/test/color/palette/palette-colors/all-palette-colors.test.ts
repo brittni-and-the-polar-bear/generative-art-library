@@ -20,10 +20,15 @@ import P5Lib from 'p5';
 import {Color} from 'color';
 import {SketchContext} from 'context';
 import {PaletteColor} from 'palette';
-import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from 'palette-colors';
+import {ALL_PALETTE_COLORS} from 'palette-colors';
 
-import {checkComponents, checkForValidStringMap, ColorComponents, p5ColorToColorComponents} from 'unit-test/shared';
-import {GREEN_HEXES} from './palette-colors/green/green-palette-colors.test';
+import {
+    GREEN_HEXES,
+    checkComponents,
+    checkForValidStringMap,
+    p5ColorToColorComponents,
+    ColorComponents
+} from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
 
@@ -106,10 +111,10 @@ describe('all palette colors', (): void => {
 
     test.each(
         ALL_HEXES
-    )('$# successful addition of green color: $hexString',
+    )('$# successful addition of color: $hexString',
         ({hexString}): void => {
-            expect(GREEN_HEXES).toBeTruthy();
-            expect(new Set<string>(GREEN_PALETTE_COLORS.keys)).toContain(hexString);
+            expect(ALL_HEXES).toBeTruthy();
+            expect(new Set<string>(ALL_PALETTE_COLORS.keys)).toContain(hexString);
         }
     );
 });

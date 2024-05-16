@@ -15,9 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './map';
-export * from './math';
-export * from './palette';
-export * from './random';
-export * from './palette-color';
+export const GREEN_HEXES: { hexString: string }[] = [
+    {hexString: '#006F57'},
+    {hexString: '#0FFF4F'},
+    {hexString: '#23856D'}
+];

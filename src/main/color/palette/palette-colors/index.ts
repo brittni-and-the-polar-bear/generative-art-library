@@ -15,20 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {StringMap} from 'map';
-import {addColors, PaletteColor} from 'palette';
-
-/**
- * A map of hex values to {@link PaletteColor} objects for all palette colors.
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
- * @category Palette
- * @category Palette Color Collection
- */
-const ALL_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
-const mapName: string = 'ALL_PALETTE_COLORS';
-
-import {GREEN_PALETTE_COLORS} from './green';
-addColors(GREEN_PALETTE_COLORS, ALL_PALETTE_COLORS, mapName);
 export * from './green';
-
-export {ALL_PALETTE_COLORS};
+export * from './palette-color-maps';
