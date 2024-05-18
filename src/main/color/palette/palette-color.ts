@@ -22,7 +22,7 @@
  * A color to be used in a Palette.
  * @category Palette
  */
-interface PaletteColor {
+export interface PaletteColor {
     /**
      * The RGB (red, green, blue) components of the color.
      */
@@ -73,5 +73,3 @@ interface PaletteColor {
      */
     readonly NAME: string
 }
-
-export {type PaletteColor};
