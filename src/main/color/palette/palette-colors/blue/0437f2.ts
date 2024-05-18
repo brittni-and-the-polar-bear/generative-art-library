@@ -15,7 +15,31 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './black';
-export * from './blue';
-export * from './green';
-export * from './palette-color-maps';
+import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
+
+/**
+ * <div class="color-block" style="background: #0437F2;">
+ *     <h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+ * </div>
+ *
+ * @category Palette Color (All)
+ * @category Palette Color (Blue)
+ *
+ * @source
+ */
+export const _0437F2: PaletteColor = {
+    HEX: '#0437F2',
+    RGB: {R: 4, G: 55, B: 241},
+    HSL: {H: 227, S: 97, L: 48},
+    NAME: 'vibrant blue'
+};
+
+let added: boolean = false;
+
+if (!added) {
+    BLUE_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
+    ALL_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
+    added = true;
+}

@@ -19,6 +19,12 @@ export const BLACK_HEXES: { hexString: string }[] = [
     {hexString: '#121212'}
 ];
 
+export const BLUE_HEXES: { hexString: string }[] = [
+    {hexString: '#0437F2'},
+    {hexString: '#1D90AF'},
+    {hexString: '#7DCED8'}
+];
+
 export const GREEN_HEXES: { hexString: string }[] = [
     {hexString: '#006F57'},
     {hexString: '#0FFF4F'},

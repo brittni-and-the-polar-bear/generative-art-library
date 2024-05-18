@@ -29,6 +29,15 @@ export const BLACK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
 
 /**
  * A map of hex values to {@link PaletteColor} objects for all
+ * blue palette colors.
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html#blue" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * @category Palette Color Collection
+ * @category Palette Color (Blue)
+ */
+export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
+
+/**
+ * A map of hex values to {@link PaletteColor} objects for all
  * green palette colors.
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html#green" target="_blank" rel="noopener noreferrer">See the Colors</a>
  * @category Palette Color Collection

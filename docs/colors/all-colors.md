@@ -33,6 +33,19 @@ import {_121212} from 'palette-colors';
 let darkToneInk: PaletteColor = _121212;
 ````
 
+## Blue
+
+<div class="color-block" style="background: #0437F2;">
+<h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+</div>
+
+````typescript
+import {PaletteColor} from 'palette';
+import {_0437F2} from 'palette-colors';
+
+let vibrantBlue: PaletteColor = _0437F2;
+````
+
 ## Green
 
 <div class="color-block" style="background: #0FFF4F;">
