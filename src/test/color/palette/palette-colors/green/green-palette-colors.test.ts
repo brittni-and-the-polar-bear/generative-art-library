@@ -21,6 +21,7 @@ import {GREEN_HEXES, checkForValidStringMap} from 'unit-test/shared';
 describe('green palette colors', (): void => {
     test('valid string map: GREEN_PALETTE_COLORS', (): void => {
        checkForValidStringMap(GREEN_PALETTE_COLORS);
+       expect(GREEN_PALETTE_COLORS.size).toBe(GREEN_HEXES.length);
     });
 
     test.each(

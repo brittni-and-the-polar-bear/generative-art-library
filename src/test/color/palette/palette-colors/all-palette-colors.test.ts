@@ -62,8 +62,9 @@ function makeRGBKey(RGB: {R: number, G: number, B: number}): string {
 }
 
 describe('all palette colors', (): void => {
-    test('valid string map for all palettes', (): void => {
+    test('valid string map: ALL_PALETTE_COLORS', (): void => {
         checkForValidStringMap(ALL_PALETTE_COLORS);
+        expect(ALL_PALETTE_COLORS.size).toBe(ALL_HEXES.length);
     });
 
     test('all colors are unique', (): void => {
