@@ -20,10 +20,12 @@ import {PaletteColor} from 'palette';
 import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #0FFF4F;"><h2 class="color-block black-pass">cathode green (#0FFF4F)</h2></div>
+ * <div class="color-block" style="background: #0FFF4F;">
+ *     <h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
+ * </div>
  *
- * @category Palette Colors (All)
- * @category Palette Colors (Green)
+ * @category Palette Color (All)
+ * @category Palette Color (Green)
  *
  * @source
  */

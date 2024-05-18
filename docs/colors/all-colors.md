@@ -20,9 +20,24 @@ h2.white-pass {
 
 # All Colors
 
+## Black
+
+<div class="color-block" style="background: #121212;">
+<h2 class="color-block white-pass">dark tone ink (#121212)</h2>
+</div>
+
+````typescript
+import {PaletteColor} from 'palette';
+import {_121212} from 'palette-colors';
+
+let darkToneInk: PaletteColor = _121212;
+````
+
 ## Green
 
-<div class="color-block" style="background: #0FFF4F;"><h2 class="color-block black-pass">cathode green (#0FFF4F)</h2></div>
+<div class="color-block" style="background: #0FFF4F;">
+<h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
+</div>
 
 ````typescript
 import {PaletteColor} from 'palette';

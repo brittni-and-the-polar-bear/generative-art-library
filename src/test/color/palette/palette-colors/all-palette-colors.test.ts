@@ -24,6 +24,7 @@ import {ALL_PALETTE_COLORS} from 'palette-colors';
 
 import {
     GREEN_HEXES,
+    BLACK_HEXES,
     checkComponents,
     checkForValidStringMap,
     p5ColorToColorComponents,
@@ -34,6 +35,7 @@ const p5: P5Lib = SketchContext.p5;
 
 const ALL_HEXES: {hexString: string}[] = [];
 ALL_HEXES.push(...GREEN_HEXES);
+ALL_HEXES.push(...BLACK_HEXES);
 
 function buildTestColorsArray(): {c: PaletteColor}[] {
     const colors: {c: PaletteColor}[] = [];

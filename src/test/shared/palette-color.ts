@@ -15,6 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
+export const BLACK_HEXES: { hexString: string }[] = [
+    {hexString: '#121212'}
+];
+
 export const GREEN_HEXES: { hexString: string }[] = [
     {hexString: '#006F57'},
     {hexString: '#0FFF4F'},
