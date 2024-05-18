@@ -28,7 +28,7 @@ const p5: P5Lib = SketchContext.p5;
  * Colors are stored in RGBA format.
  * @category Color
  */
-class Color {
+export class Color {
     /**
      * The color's red component. Ranges in value from 0-255.
      */
@@ -277,5 +277,3 @@ class Color {
         this._name = null;
     }
 }
-
-export {Color};
