@@ -17,24 +17,24 @@
 
 import {PaletteColor} from 'palette';
 
-import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
+import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #121212;">
- *     <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
+ * <div class="color-block" style="background: #FF6BB5;">
+ *     <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
  * </div>
  *
  * @category Palette Color (All)
- * @category Palette Color (Black)
+ * @category Palette Color (Pink)
  *
  * @source
  */
-export const _121212: PaletteColor = {
-    HEX: '#121212',
-    RGB: {R: 18, G: 18, B: 18},
-    HSL: {H: 0, S: 0, L: 7},
-    NAME: 'dark tone ink'
+export const _FF6BB5: PaletteColor = {
+    HEX: '#FF6BB5',
+    RGB: {R: 255, G: 107, B: 181},
+    HSL: {H: 330, S: 100, L: 71},
+    NAME: 'fen hong pink'
 };
 
-BLACK_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
-ALL_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
+PINK_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
+ALL_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);

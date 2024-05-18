@@ -36,10 +36,5 @@ export const _0437F2: PaletteColor = {
     NAME: 'vibrant blue'
 };
 
-let added: boolean = false;
-
-if (!added) {
-    BLUE_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
-    ALL_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
-    added = true;
-}
+BLUE_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
+ALL_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);

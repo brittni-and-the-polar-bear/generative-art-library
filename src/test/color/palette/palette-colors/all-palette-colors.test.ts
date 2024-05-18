@@ -29,7 +29,7 @@ import {
     checkComponents,
     checkForValidStringMap,
     p5ColorToColorComponents,
-    ColorComponents
+    ColorComponents, PINK_HEXES
 } from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
@@ -38,7 +38,8 @@ const ALL_HEXES: {hexString: string}[] = [];
 ALL_HEXES.push(
     ...BLACK_HEXES,
     ...BLUE_HEXES,
-    ...GREEN_HEXES
+    ...GREEN_HEXES,
+    ...PINK_HEXES
 );
 
 function buildTestColorsArray(): {c: PaletteColor}[] {

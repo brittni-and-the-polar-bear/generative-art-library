@@ -36,10 +36,5 @@ export const _0FFF4F: PaletteColor = {
     NAME: 'cathode green'
 };
 
-let added: boolean = false;
-
-if (!added) {
-    GREEN_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
-    ALL_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
-    added = true;
-}
+GREEN_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
+ALL_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);

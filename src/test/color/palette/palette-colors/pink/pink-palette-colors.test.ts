@@ -15,26 +15,22 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
+import {PINK_PALETTE_COLORS} from 'palette-colors';
 
-import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
+import {PINK_HEXES, checkForValidStringMap} from 'unit-test/shared';
 
-/**
- * <div class="color-block" style="background: #121212;">
- *     <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
- * </div>
- *
- * @category Palette Color (All)
- * @category Palette Color (Black)
- *
- * @source
- */
-export const _121212: PaletteColor = {
-    HEX: '#121212',
-    RGB: {R: 18, G: 18, B: 18},
-    HSL: {H: 0, S: 0, L: 7},
-    NAME: 'dark tone ink'
-};
+describe('pink palette colors', (): void => {
+    test('valid string map: PINK_PALETTE_COLORS', (): void => {
+       checkForValidStringMap(PINK_PALETTE_COLORS);
+       expect(PINK_PALETTE_COLORS.size).toBe(PINK_HEXES.length);
+    });
 
-BLACK_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
-ALL_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
+    test.each(
+        PINK_HEXES
+    )('$# successful addition of pink color: $hexString',
+        ({hexString}): void => {
+            expect(PINK_HEXES).toBeTruthy();
+            expect(new Set<string>(PINK_PALETTE_COLORS.keys)).toContain(hexString);
+        }
+    );
+});

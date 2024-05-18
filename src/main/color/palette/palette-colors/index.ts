@@ -18,4 +18,5 @@
 export * from './black';
 export * from './blue';
 export * from './green';
+export * from './pink';
 export * from './palette-color-maps';
