@@ -21,8 +21,12 @@ import {Color} from 'color';
 import {SketchContext} from 'context';
 
 import {ColorComponents, colorToColorComponents, p5ColorToColorComponents} from '../shared/color';
+import {PaletteColor} from "palette";
+import {_0FFF4F} from "palette-colors";
 
 const p5: P5Lib = SketchContext.p5;
+
+const defaultColorName: string = 'black';
 
 describe('color tests', (): void => {
     test('get hsl color', (): void => {
@@ -66,7 +70,23 @@ describe('color tests', (): void => {
         const defaultColor: Color = new Color();
         expect(colorToColorComponents(defaultColor)).toEqual(expected);
         expect(p5ColorToColorComponents(defaultColor.color)).toEqual(expected);
+        expect(defaultColor.name).toBe(defaultColorName);
     });
+
+    test('color built with PaletteColor object', (): void => {
+        const c: PaletteColor = _0FFF4F;
+        const expected: ColorComponents = {
+            r: c.RGB.R, g: c.RGB.G, b: c.RGB.B, a: 255
+        }
+        const expectedName: string = c.NAME;
+
+        const color: Color = new Color(c);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
+    });
+
+    test.todo('add test to test color with multiple palette colors');
 
     test('color built with (c) parameter', (): void => {
         const w: number = 153;
@@ -74,10 +94,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color built with (c,a) parameter', (): void => {
@@ -87,10 +109,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: a
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color built with (r,g,b) parameter', (): void => {
@@ -101,10 +125,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color built with (r,g,b,a) parameter', (): void => {
@@ -116,10 +142,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: a
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color built with (h, s, l) parameter', (): void => {
@@ -130,10 +158,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color built with (h, s, l, a) parameter', (): void => {
@@ -145,10 +175,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: Math.floor(255 * a)
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color built with hex color code parameter', (): void => {
@@ -159,10 +191,12 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(expectedName).toBe(expectedName);
     });
 
     test('color set with (c) parameter', (): void => {
@@ -171,11 +205,14 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color set with (c,a) parameter', (): void => {
@@ -185,11 +222,14 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: a
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color set with (r,g,b) color', (): void => {
@@ -200,11 +240,14 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color set with (r,g,b,a) color', (): void => {
@@ -215,11 +258,14 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color set with (h, s, l) parameter', (): void => {
@@ -230,11 +276,14 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color set with (h, s, l, a) parameter', (): void => {
@@ -246,11 +295,14 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: Math.floor(255 * a)
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('color set with hex color code parameter', (): void => {
@@ -261,99 +313,151 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
+        const expectedName: string = '';
 
         const color: Color = new Color();
+        expect(color.name).toBe(defaultColorName);
         color.color = c;
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set red to value > 255', (): void => {
+        const expectedName: string = '';
+
         const color: Color = new Color();
         expect(color.red).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.red = 500;
         expect(color.red).toBe(255);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set red to value < 0', (): void => {
         const color: Color = new Color();
         expect(color.red).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.red = -100;
         expect(color.red).toBe(0);
+        expect(color.name).toBe(defaultColorName);
     });
 
     test('set red to valid value', (): void => {
-        const color: Color = new Color();
         const value: number = 40;
+        const expectedName: string = '';
+
+        const color: Color = new Color();
         expect(color.red).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.red = value;
         expect(color.red).toBe(value);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set green to value > 255', (): void => {
+        const expectedName: string = '';
+
         const color: Color = new Color();
         expect(color.green).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.green = 500;
         expect(color.green).toBe(255);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set green to value < 0', (): void => {
         const color: Color = new Color();
         expect(color.green).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.green = -100;
         expect(color.green).toBe(0);
+        expect(color.name).toBe(defaultColorName);
     });
 
     test('set green to valid value', (): void => {
-        const color: Color = new Color();
         const value: number = 40;
+        const expectedName: string = '';
+
+        const color: Color = new Color();
         expect(color.green).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.green = value;
         expect(color.green).toBe(value);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set blue to value > 255', (): void => {
+        const expectedName: string = '';
+
         const color: Color = new Color();
         expect(color.blue).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.blue = 500;
         expect(color.blue).toBe(255);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set blue to value < 0', (): void => {
         const color: Color = new Color();
         expect(color.blue).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.blue = -100;
         expect(color.blue).toBe(0);
+        expect(color.name).toBe(defaultColorName);
     });
 
     test('set blue to valid value', (): void => {
-        const color: Color = new Color();
         const value: number = 40;
+        const expectedName: string = '';
+
+        const color: Color = new Color();
         expect(color.blue).toBe(0);
+        expect(color.name).toBe(defaultColorName);
+
         color.blue = value;
         expect(color.blue).toBe(value);
+        expect(color.name).toBe(expectedName);
     });
 
     test('set alpha to value > 255', (): void => {
         const color: Color = new Color();
         expect(color.alpha).toBe(255);
+        expect(color.name).toBe(defaultColorName);
+
         color.alpha = 500;
         expect(color.alpha).toBe(255);
+        expect(color.name).toBe(defaultColorName);
     });
 
     test('set alpha to value < 0', (): void => {
         const color: Color = new Color();
         expect(color.alpha).toBe(255);
+        expect(color.name).toBe(defaultColorName);
+
         color.alpha = -100;
         expect(color.alpha).toBe(0);
+        expect(color.name).toBe(defaultColorName);
     });
 
     test('set alpha to valid value', (): void => {
-        const color: Color = new Color();
         const value: number = 40;
+
+        const color: Color = new Color();
         expect(color.alpha).toBe(255);
+        expect(color.name).toBe(defaultColorName);
+
         color.alpha = value;
         expect(color.alpha).toBe(value);
+        expect(color.name).toBe(defaultColorName);
     });
 
     test.each([

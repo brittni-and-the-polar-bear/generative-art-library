@@ -18,13 +18,10 @@
 import P5Lib from 'p5';
 
 import {SketchContext} from 'context';
+import {PaletteColor} from 'palette';
+import {ColorNameManager} from "./color-name";
 
 const p5: P5Lib = SketchContext.p5;
-
-// TODO - add name field
-// TODO - build color from PaletteColor -> intersection type with p5.Color in constructor and set color
-// TODO - get name from PaletteColor
-// TODO - if name is falsy -> use nearest color -> do not set name since rgb values can change between calls
 
 /**
  * Color information and functionality.
@@ -53,18 +50,34 @@ class Color {
     private _alpha: number; // 0-255
 
     /**
-     * @param color - A {@link !P5Lib.Color | p5.js Color} object.
-     * The color's RGBA components will become the values of
-     * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
+     * The color's name. Retrieved from a {@link PaletteColor} or the
+     * {@link ColorNameManager}.
      */
-    public constructor(color?: P5Lib.Color) {
+    private _name: string | null;
+
+    /**
+     * @param color - A {@link !P5Lib.Color | p5.js Color} or {@link PaletteColor} object.
+     * If given a {@link !P5Lib.Color | p5.js Color}, the color's RGBA components
+     * will become the values of {@link red}, {@link green}, {@link blue}, and {@link alpha}.<br/>
+     * If given a {@link PaletteColor}, the color's {@link PaletteColor.HEX HEX} value will be
+     * used to build the color.
+     */
+    public constructor(color?: P5Lib.Color | PaletteColor) {
         this._red = 0;
         this._green = 0;
         this._blue = 0;
         this._alpha = 255;
+        this._name = 'black';
 
         if (color) {
-            this.setColorValues(color);
+            if (color instanceof P5Lib.Color) {
+                this.setColorValues(color);
+                this._name = null;
+            } else {
+                const c: P5Lib.Color = p5.color(color.HEX);
+                this.setColorValues(c);
+                this._name = color.NAME;
+            }
         }
     }
 
@@ -114,13 +127,15 @@ class Color {
     }
 
     /**
-     * Set the current color.
+     * Set the current color.<br/>
+     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      * @param c - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
      */
     public set color(c: P5Lib.Color) {
         this.setColorValues(c);
+        this._name = null;
     }
 
     /**
@@ -131,11 +146,13 @@ class Color {
     }
 
     /**
-     * Set the value of the {@link red} component.
+     * Set the value of the {@link red} component.<br/>
+     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      * @param r -
      */
     public set red(r: number) {
         this._red = Math.floor(p5.constrain(r, 0, 255));
+        this._name = null;
     }
 
     /**
@@ -146,11 +163,13 @@ class Color {
     }
 
     /**
-     * Set the value of the {@link green} component.
+     * Set the value of the {@link green} component.<br/>
+     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      * @param g -
      */
     public set green(g: number) {
         this._green = Math.floor(p5.constrain(g, 0, 255));
+        this._name = null;
     }
 
     /**
@@ -161,11 +180,13 @@ class Color {
     }
 
     /**
-     * Set the value of the {@link blue} component.
+     * Set the value of the {@link blue} component.<br/>
+     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      * @param b -
      */
     public set blue(b: number) {
         this._blue = Math.floor(p5.constrain(b, 0, 255));
+        this._name = null;
     }
 
     /**
@@ -176,11 +197,29 @@ class Color {
     }
 
     /**
-     * Set the value of the {@link alpha} component.
+     * Set the value of the {@link alpha} component.<br/>
+     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      * @param a -
      */
     public set alpha(a: number) {
         this._alpha = Math.floor(p5.constrain(a, 0, 255));
+        this._name = null;
+    }
+
+    /**
+     * @returns The name of the color.
+     */
+    public get name(): string {
+        if (!this._name) {
+            this._name = 'UNKNOWN';
+            const name: string | undefined = ColorNameManager.getColorName(this.hex);
+
+            if (name) {
+                this._name = name;
+            }
+        }
+
+        return this._name;
     }
 
     /**
@@ -224,7 +263,8 @@ class Color {
     }
 
     /**
-     * Set the color values.
+     * Set the color values.<br/>
+     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      * @param color - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
@@ -234,6 +274,7 @@ class Color {
         this.green = p5.green(color);
         this.blue = p5.blue(color);
         this.alpha = p5.alpha(color);
+        this._name = null;
     }
 }
 
