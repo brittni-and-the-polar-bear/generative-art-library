@@ -22,17 +22,21 @@ h2.white-pass {
 
 Categories are in alphabetical order.
 
-Colors in the same category are in alphabetical order by hex value.
+Colors in the same category are in numeric order by hex value.
 
 # Table of Contents
 
 [Black](#black)
+  - [dark tone ink](#dark-tone-ink-121212)
 
 [Blue](#blue)
+  - [vibrant blue](#vibrant-blue-0437f2)
 
 [Green](#green)
+  - [cathode green](#cathode-green-0fff4f)
 
 [Pink](#pink)
+  - [fen hong pink](#fen-hong-pink-ff6bb5)
 
 [Purple](#purple)
   - [poison purple](#poison-purple-7a00f5)
@@ -40,7 +44,9 @@ Colors in the same category are in alphabetical order by hex value.
 # Black
 
 <div class="color-block" style="background: #121212;">
+<a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
 <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
+</a>
 </div>
 
 ````typescript
@@ -55,7 +61,9 @@ let darkToneInk: PaletteColor = _121212;
 # Blue
 
 <div class="color-block" style="background: #0437F2;">
+<a href="https://coolors.co/0437f2" target="_blank" rel="noopener noreferrer">
 <h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+</a>
 </div>
 
 ````typescript
@@ -70,7 +78,9 @@ let vibrantBlue: PaletteColor = _0437F2;
 # Green
 
 <div class="color-block" style="background: #0FFF4F;">
+<a href="https://coolors.co/0fff4f" target="_blank" rel="noopener noreferrer">
 <h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
+</a>
 </div>
 
 ````typescript
@@ -85,7 +95,9 @@ let cathodeGreen: PaletteColor = _0FFF4F;
 # Pink
 
 <div class="color-block" style="background: #FF6BB5;">
+<a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
 <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
+</a>
 </div>
 
 ````typescript
@@ -100,7 +112,9 @@ let fenHongPink: PaletteColor = _FF6BB5;
 # Purple
 
 <div class="color-block" style="background: #7A00F5;">
+<a href="https://coolors.co/7a00f5" target="_blank" rel="noopener noreferrer">
 <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
+</a>
 </div>
 
 ````typescript
