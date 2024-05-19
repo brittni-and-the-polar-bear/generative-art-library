@@ -35,7 +35,7 @@ Colors in the same category are in alphabetical order by hex value.
 [Pink](#pink)
 
 [Purple](#purple)
-  - [poison purple](#poison-purple)
+  - [poison purple](#poison-purple-7a00f5)
 
 # Black
 
