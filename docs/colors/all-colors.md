@@ -34,6 +34,9 @@ Colors in the same category are in alphabetical order by hex value.
 
 [Pink](#pink)
 
+[Purple](#purple)
+  - [poison purple](#poison-purple)
+
 # Black
 
 <div class="color-block" style="background: #121212;">
@@ -90,6 +93,21 @@ import {PaletteColor} from 'palette';
 import {_FF6BB5} from 'palette-colors';
 
 let fenHongPink: PaletteColor = _FF6BB5;
+````
+
+[Table of Contents](#table-of-contents)
+
+# Purple
+
+<div class="color-block" style="background: #7A00F5;">
+<h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
+</div>
+
+````typescript
+import {PaletteColor} from 'palette';
+import {_7A00F5} from 'palette-colors';
+
+let poisonPurple: PaletteColor = _7A00F5;
 ````
 
 [Table of Contents](#table-of-contents)

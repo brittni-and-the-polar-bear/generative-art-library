@@ -15,32 +15,22 @@
  * See the GNU Affero General Public License for more details.
  */
 
-type HexCollection = {hexString: string}[];
+import {PURPLE_PALETTE_COLORS} from 'palette-colors';
 
-export const BLACK_HEXES: HexCollection = [
-    {hexString: '#121212'}
-];
+import {PURPLE_HEXES, checkForValidStringMap} from 'unit-test/shared';
 
-export const BLUE_HEXES: HexCollection = [
-    {hexString: '#0437F2'},
-    {hexString: '#1D90AF'},
-    {hexString: '#7DCED8'}
-];
+describe('purple palette colors', (): void => {
+    test('valid string map: PURPLE_PALETTE_COLORS', (): void => {
+       checkForValidStringMap(PURPLE_PALETTE_COLORS);
+       expect(PURPLE_PALETTE_COLORS.size).toBe(PURPLE_HEXES.length);
+    });
 
-export const GREEN_HEXES: HexCollection = [
-    {hexString: '#006F57'},
-    {hexString: '#0FFF4F'},
-    {hexString: '#23856D'}
-];
-
-export const PINK_HEXES: HexCollection = [
-    {hexString: '#EC407A'},
-    {hexString: '#F06090'},
-    {hexString: '#F48FB1'},
-    {hexString: '#F8BACF'},
-    {hexString: '#FF6BB5'}
-];
-
-export const PURPLE_HEXES: HexCollection = [
-    {hexString: '#7A00F5'}
-];
+    test.each(
+        PURPLE_HEXES
+    )('$# successful addition of purple color: $hexString',
+        ({hexString}): void => {
+            expect(PURPLE_HEXES).toBeTruthy();
+            expect(new Set<string>(PURPLE_PALETTE_COLORS.keys)).toContain(hexString);
+        }
+    );
+});

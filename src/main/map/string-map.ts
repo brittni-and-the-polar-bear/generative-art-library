@@ -17,7 +17,7 @@
 
 /**
  * A map of string keys to some ValueType.
- * @category Maps
+ * @category Map
  */
 class StringMap<ValueType> {
     /**
