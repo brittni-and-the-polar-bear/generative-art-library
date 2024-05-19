@@ -15,5 +15,30 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette';
-export * from './palette-color';
+import {PaletteColor} from "./palette-color";
+
+/**
+ * A collection of {@link PaletteColor} objects.
+ * @category Palette
+ */
+export interface Palette {
+    /**
+     * The name of the palette.
+     */
+    readonly name: string,
+
+    /**
+     * The source of the palette. May be the URL where the palette can be found.
+     */
+    readonly source: string,
+
+    /**
+     * A flag indicating if the palette is a gradient.
+     */
+    readonly isGradient: boolean,
+
+    /**
+     * The list of {@link PaletteColor} objects that compose the palette.
+     */
+    readonly colors: PaletteColor[]
+}
