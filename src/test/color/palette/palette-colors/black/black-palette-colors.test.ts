@@ -18,6 +18,8 @@
 import {BLACK_PALETTE_COLORS} from 'palette-colors';
 import {BLACK_HEXES, checkForValidStringMap} from 'unit-test/shared';
 
+// TODO - test that hex in all palette colors is properly formatted (REGEX!)
+
 describe('black palette colors', (): void => {
     test('valid string map: BLACK_PALETTE_COLORS', (): void => {
        checkForValidStringMap(BLACK_PALETTE_COLORS);

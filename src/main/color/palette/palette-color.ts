@@ -17,10 +17,8 @@
 
 // color names derived from https://colornamer.robertcooper.me/
 
-import {Palette} from './palette';
-
 /**
- * A color to be used in a {@link Palette}.
+ * A color to be used in a Palette.
  *
  * @category Palette
  */

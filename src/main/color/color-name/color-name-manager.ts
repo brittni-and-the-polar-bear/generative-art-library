@@ -19,6 +19,7 @@ import colorNames from 'color-name-list/dist/colornames.json';
 import nearestColor from 'nearest-color';
 
 import {StringMap} from 'map';
+import {PaletteColor} from 'palette';
 
 interface NearestColorMatch {
     name: string,
@@ -27,24 +28,19 @@ interface NearestColorMatch {
     distance: number
 }
 
-// TODO - After palette colors have been created, add all palette color names to the manager
-// TODO - function should accept a list of palette colors to 'load' names from
-
 const _COLORS = colorNames.reduce((o, {name, hex}) => Object.assign(o, {[name]: hex}), {});
 const _NEAREST_COLOR = nearestColor.from(_COLORS);
 
 /**
  * Manager to store and retrieve the names of colors based on their
  * hex string value.
+ *
  * @category Color
  */
-class ColorNameManager {
+export class ColorNameManager {
     /**
      * A map of colors whose names have already been retrieved from the
      * nearest color method.
-     * @private
-     * @static
-     * @readonly
      */
     private static readonly _MATCHED_COLORS: StringMap<string> = new StringMap<string>();
 
@@ -52,21 +48,16 @@ class ColorNameManager {
      * Retrieves the name of the color represented by the given {@link colorHex}.
      * If the {@link colorHex} string is not well formatted or the nearest color function
      * encounters an error, the method will return {@link !undefined}.
+     *
      * @param colorHex - The hex string representation of the color whose
      * name is being retrieved (format: `#RRGGBB`).
-     * @public
-     * @static
      */
     public static getColorName(colorHex: string): string | undefined {
-        if (!colorHex.startsWith('#')) {
-            colorHex = '#' + colorHex;
-        }
-
-        colorHex = colorHex.toUpperCase();
+        colorHex = ColorNameManager.formatHex(colorHex);
         let match: string | undefined = undefined;
 
-        if (this.hasMatch(colorHex)) {
-            match = this._MATCHED_COLORS.get(colorHex);
+        if (ColorNameManager.hasMatch(colorHex)) {
+            match = ColorNameManager._MATCHED_COLORS.get(colorHex);
         } else {
             try {
                 const result: NearestColorMatch | null = _NEAREST_COLOR(colorHex);
@@ -76,7 +67,7 @@ class ColorNameManager {
                 }
 
                 if (match) {
-                    this._MATCHED_COLORS.setUndefinedKey(colorHex, match);
+                    ColorNameManager._MATCHED_COLORS.setUndefinedKey(colorHex, match);
                 }
             } catch {
                 match = undefined;
@@ -92,15 +83,41 @@ class ColorNameManager {
 
     /**
      * Does the given {@link hex} string already have a color name match?
-     * @param hex -
+     *
+     * @param hex
+     *
      * @return `true` if the {@link hex} has a direct color name match in the manager,
      * `false` if it does not.
-     * @public
-     * @static
      */
     public static hasMatch(hex: string): boolean {
-        return this._MATCHED_COLORS.hasKey(hex);
+        return ColorNameManager._MATCHED_COLORS.hasKey(hex);
+    }
+
+    /**
+     * Add the given {@link PaletteColor.HEX} and {@link PaletteColor.NAME}
+     * to the {@link _MATCHED_COLORS} map.
+     *
+     * @param color
+     */
+    public static addColor(color: PaletteColor): void {
+        const hex: string = ColorNameManager.formatHex(color.HEX);
+        ColorNameManager._MATCHED_COLORS.setKey(hex, color.NAME);
+    }
+
+    /**
+     * Adds a hash symbol (#) to the beginning of the given string
+     * if one is missing and returns the result with all uppercase
+     * characters.
+     *
+     * @param original
+     */
+    private static formatHex(original: string): string {
+        let hex: string = original;
+
+        if (!hex.startsWith('#')) {
+            hex = '#' + hex;
+        }
+
+        return hex.toUpperCase();
     }
 }
-
-export {ColorNameManager};
