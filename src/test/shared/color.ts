@@ -73,3 +73,15 @@ export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
         a: Math.floor(p5.alpha(color))
     };
 }
+
+export function checkForValidHexColorString(hex: string): void {
+    const hexRegExp: RegExp = /^#[A-F|0-9]{6}$/;
+    const isValid = hexRegExp.test(hex);
+    expect(isValid).toBeTruthy();
+}
+
+export function checkForValidHexColorStringWithAlpha(hex: string): void {
+    const hexRegExp: RegExp = /^#[A-F|0-9]{8}$/;
+    const isValid = hexRegExp.test(hex);
+    expect(isValid).toBeTruthy();
+}

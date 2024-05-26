@@ -20,7 +20,12 @@ import P5Lib from 'p5';
 import {Color} from 'color';
 import {SketchContext} from 'context';
 
-import {ColorComponents, colorToColorComponents, p5ColorToColorComponents} from '../shared/color';
+import {
+    checkForValidHexColorString, checkForValidHexColorStringWithAlpha,
+    ColorComponents,
+    colorToColorComponents,
+    p5ColorToColorComponents
+} from '../shared/color';
 import {PaletteColor} from "palette";
 import {_0437F2, _0FFF4F, _7A00F5, _FF6BB5} from "palette-colors";
 
@@ -493,7 +498,10 @@ describe('color tests', (): void => {
                 c = new Color(p5.color(r, g, b));
             }
 
+            checkForValidHexColorString(c.hex);
             expect(c.hex).toBe(hex);
+
+            checkForValidHexColorString(c.getRGBHex(false));
             expect(c.getRGBHex(false)).toBe(hex);
         }
     );
@@ -525,7 +533,10 @@ describe('color tests', (): void => {
                 c = new Color(p5.color(r, g, b));
             }
 
+            checkForValidHexColorStringWithAlpha(c.getRGBAHex());
             expect(c.getRGBAHex()).toBe(hex);
+
+            checkForValidHexColorStringWithAlpha(c.getRGBHex(true));
             expect(c.getRGBHex(true)).toBe(hex);
         }
     );

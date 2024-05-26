@@ -31,7 +31,7 @@ import {
     checkComponents,
     checkForValidStringMap,
     p5ColorToColorComponents,
-    ColorComponents
+    ColorComponents, checkForValidHexColorString
 } from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
@@ -117,6 +117,14 @@ describe('all palette colors', (): void => {
             const rgb: P5Lib.Color = p5.color(c.RGB.R, c.RGB.G, c.RGB.B);
             const rgbComponents: ColorComponents = p5ColorToColorComponents(rgb);
             checkComponents(rgbComponents, c);
+        }
+    );
+
+    test.each(
+        buildTestColorsArray()
+    )('$# valid hex color value: $c.HEX',
+        ({c}): void => {
+            checkForValidHexColorString(c.HEX);
         }
     );
 
