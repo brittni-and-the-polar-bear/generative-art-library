@@ -23,11 +23,12 @@ import {MISCELLANEOUS_PALETTES} from '../palette-maps';
 /**
  * <!-- Coolors Palette Widget -->
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
- * <script data-id="02542825816779253">new CoolorsPaletteWidget("02542825816779253", ["121212","0437f2","ff6bb5","0fff4f","7a00f5"]); </script>
+ * <script data-id="03645021947508318">new CoolorsPaletteWidget("03645021947508318", ["121212","0437f2","0fff4f","7a00f5","ff6bb5"]); </script>
  *
  * @see {@link _121212}
  * @see {@link _0437F2}
  * @see {@link _0FFF4F}
+ * @see {@link _FF6BB5}
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
@@ -41,9 +42,9 @@ export const BRITTNI: Palette = {
     colors: [
         _121212,
         _0437F2,
-        _FF6BB5,
         _0FFF4F,
-        _7A00F5
+        _7A00F5,
+        _FF6BB5
     ]
 };
 

@@ -21,11 +21,15 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #FF6BB5;">
- *     <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
+ *     <a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
+ *     </a>
  * </div>
  *
- * @category Palette Color (All)
- * @category Palette Color (Pink)
+ * @see {@link BRITTNI}
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Pink)
  *
  * @source
  */

@@ -10,7 +10,7 @@
 
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
-<script data-id="035233432920731467">new CoolorsPaletteWidget("035233432920731467", ["121212","0437f2","ff6bb5","0fff4f","7a00f5"]); </script>
+<script data-id="03645021947508318">new CoolorsPaletteWidget("03645021947508318", ["121212","0437f2","0fff4f","7a00f5","ff6bb5"]); </script>
 
 ````typescript
 import {BRITTNI} from 'palettes';

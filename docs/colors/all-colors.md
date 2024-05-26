@@ -6,32 +6,12 @@
 
 ## [Green Colors](./green-colors.md)
 
-# Table of Contents
+## [Pink Colors](./pink-colors.md)
 
-[Pink](#pink)
-  - [fen hong pink](#fen-hong-pink-ff6bb5)
+# Table of Contents
 
 [Purple](#purple)
   - [poison purple](#poison-purple-7a00f5)
-
-# Pink
-
-## fen hong pink (#FF6BB5)
-
-<div class="color-block" style="background: #FF6BB5;">
-<a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
-<h3 class="color-block black-pass">fen hong pink (#FF6BB5)</h3>
-</a>
-</div>
-
-````typescript
-import {PaletteColor} from 'palette';
-import {_FF6BB5} from 'palette-colors';
-
-let fenHongPink: PaletteColor = _FF6BB5;
-````
-
-[Table of Contents](#table-of-contents)
 
 # Purple
 
