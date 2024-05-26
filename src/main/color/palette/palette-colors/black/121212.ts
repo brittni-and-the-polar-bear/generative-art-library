@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
 import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
@@ -42,3 +43,4 @@ export const _121212: PaletteColor = {
 
 BLACK_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
 ALL_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
+ColorNameManager.addColor(_121212);

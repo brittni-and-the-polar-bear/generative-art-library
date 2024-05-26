@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
 import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
@@ -42,3 +43,4 @@ export const _FF6BB5: PaletteColor = {
 
 PINK_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
 ALL_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
+ColorNameManager.addColor(_FF6BB5);

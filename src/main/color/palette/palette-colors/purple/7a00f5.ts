@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
 import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS} from '../palette-color-maps';
@@ -42,3 +43,4 @@ export const _7A00F5: PaletteColor = {
 
 PURPLE_PALETTE_COLORS.setUndefinedKey(_7A00F5.HEX, _7A00F5);
 ALL_PALETTE_COLORS.setUndefinedKey(_7A00F5.HEX, _7A00F5);
+ColorNameManager.addColor(_7A00F5);

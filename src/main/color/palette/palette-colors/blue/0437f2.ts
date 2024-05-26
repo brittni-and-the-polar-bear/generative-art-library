@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
 import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
@@ -42,3 +43,4 @@ export const _0437F2: PaletteColor = {
 
 BLUE_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
 ALL_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
+ColorNameManager.addColor(_0437F2);
