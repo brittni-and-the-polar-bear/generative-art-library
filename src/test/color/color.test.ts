@@ -80,14 +80,13 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            {hex: _0437F2.HEX, paletteColor: _0437F2},
-            {hex: _0FFF4F.HEX, paletteColor: _0FFF4F},
-            {hex: _7A00F5.HEX, paletteColor: _7A00F5},
-            {hex: _FF6BB5.HEX, paletteColor: _FF6BB5}
+            {paletteColor: _0437F2},
+            {paletteColor: _0FFF4F},
+            {paletteColor: _7A00F5},
+            {paletteColor: _FF6BB5}
         ]
-    )('$# color built with PaletteColor object: $hex',
-        ({hex, paletteColor}): void => {
-            expect(hex).toBeTruthy();
+    )('$# color built with PaletteColor object: $paletteColor.HEX',
+        ({paletteColor}): void => {
             const expected: ColorComponents = {
                 r: paletteColor.RGB.R, g: paletteColor.RGB.G, b: paletteColor.RGB.B, a: 255
             }
