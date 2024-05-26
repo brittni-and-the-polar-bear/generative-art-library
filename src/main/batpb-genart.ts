@@ -22,3 +22,4 @@ export * from 'context';
 export * from 'color'
 export * from 'palette';
 export * from 'palette-colors';
+export * from 'palettes';
