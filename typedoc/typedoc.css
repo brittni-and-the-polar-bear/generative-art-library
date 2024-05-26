@@ -19,16 +19,16 @@ div.color-block {
     text-align: center;
 }
 
-h2.color-block {
+.color-block {
     width: 100%;
     margin: 0;
     padding: 0.5em;
 }
 
-h2.black-pass {
+.black-pass {
     color: black;
 }
 
-h2.white-pass {
+.white-pass {
     color: white;
 }
