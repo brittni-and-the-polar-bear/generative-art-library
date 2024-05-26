@@ -21,17 +21,18 @@ import {PaletteColor} from 'palette';
 /**
  * A map of hex values to {@link PaletteColor} objects for all palette colors.
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
- * @category Palette
- * @category Palette Color Collection
+ *
+ * @category Palette Color Collections
  */
 export const ALL_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * black palette colors.
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html#black" target="_blank" rel="noopener noreferrer">See the Colors</a>
- * @category Palette Color Collection
- * @category Palette Color (Black)
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/black-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ *
+ * @category Palette Color Collections
+ * @category Palette Colors (Black)
  */
 export const BLACK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 

@@ -1,33 +1,8 @@
-<style>
-div.color-block {
-    text-align: center;
-}
-
-.color-block {
-    width: 100%;
-    margin: 0;
-    padding: 0.5em;
-}
-
-.black-pass {
-    color: black;
-}
-
-.white-pass {
-    color: white;
-}
-</style>
-
 # All Colors
 
-Categories are in alphabetical order.
-
-Colors in the same category are in numeric order by hex value.
+## [Black Colors](./black-colors.md)
 
 # Table of Contents
-
-[Black](#black)
-  - [dark tone ink](#dark-tone-ink-121212)
 
 [Blue](#blue)
   - [vibrant blue](#vibrant-blue-0437f2)
@@ -40,25 +15,6 @@ Colors in the same category are in numeric order by hex value.
 
 [Purple](#purple)
   - [poison purple](#poison-purple-7a00f5)
-
-# Black
-
-## dark tone ink (#121212)
-
-<div class="color-block" style="background: #121212;">
-<a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
-<h3 class="color-block white-pass">dark tone ink (#121212)</h3>
-</a>
-</div>
-
-````typescript
-import {PaletteColor} from 'palette';
-import {_121212} from 'palette-colors';
-
-let darkToneInk: PaletteColor = _121212;
-````
-
-[Table of Contents](#table-of-contents)
 
 # Blue
 
