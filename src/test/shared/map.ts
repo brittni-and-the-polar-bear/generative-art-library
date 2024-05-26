@@ -17,7 +17,7 @@
 
 import {StringMap} from 'map';
 
-export function checkForValidStringMap<Type>(map: StringMap<Type>): void {
+export function checkForValidStringMap<Type>(map: StringMap<Type>, expectedSize?: number): void {
     expect(map).toBeTruthy();
     expect(map.size).toBeGreaterThan(0);
 
@@ -28,4 +28,8 @@ export function checkForValidStringMap<Type>(map: StringMap<Type>): void {
     expect(values.length).toBe(keys.length);
 
     expect(keys.length).toBe(map.size);
+
+    if (expectedSize) {
+        expect(map.size).toBe(expectedSize);
+    }
 }

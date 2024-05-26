@@ -15,22 +15,26 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
-import {_0437F2, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
-import {BRITTNI} from 'palettes';
+import {Palette} from 'palette';
+import {BRITTNI, MISCELLANEOUS_PALETTES} from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
-describe('BRITTNI palette tests', (): void => {
-    const colors: PaletteColor[] = [
-        _121212,
-        _0437F2,
-        _0FFF4F,
-        _7A00F5,
-        _FF6BB5
+describe('miscellaneous palettes map test', (): void => {
+    const ALL_MISC_PALETTES: [{name: string, palette: Palette}] = [
+        {name: BRITTNI.NAME, palette: BRITTNI}
     ]
 
-    test('BRITTNI palette is valid', (): void => {
-        checkForValidPalette(BRITTNI, colors);
+    test('valid map: MISCELLANEOUS_PALETTES', (): void => {
+       checkForValidStringMap(MISCELLANEOUS_PALETTES, ALL_MISC_PALETTES.length);
     });
+
+    test.each(
+        ALL_MISC_PALETTES
+    )('$# palette successfully added to map: $name',
+        ({name, palette}): void => {
+            expect(name).toBeTruthy();
+            checkForPaletteInMap(palette, MISCELLANEOUS_PALETTES);
+        }
+    );
 });

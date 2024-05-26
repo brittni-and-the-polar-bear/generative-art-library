@@ -19,15 +19,15 @@ import P5Lib from 'p5';
 
 import {Color} from 'color';
 import {SketchContext} from 'context';
+import {_0437F2, _0FFF4F, _7A00F5, _FF6BB5} from 'palette-colors';
 
 import {
-    checkForValidHexColorString, checkForValidHexColorStringWithAlpha,
     ColorComponents,
+    checkForValidHexColorString,
+    checkForValidHexColorStringWithAlpha,
     colorToColorComponents,
     p5ColorToColorComponents
-} from '../shared/color';
-import {PaletteColor} from "palette";
-import {_0437F2, _0FFF4F, _7A00F5, _FF6BB5} from "palette-colors";
+} from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
 
@@ -80,19 +80,21 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            _0437F2,
-            _0FFF4F,
-            _7A00F5,
-            _FF6BB5
+            {hex: _0437F2.HEX, paletteColor: _0437F2},
+            {hex: _0FFF4F.HEX, paletteColor: _0FFF4F},
+            {hex: _7A00F5.HEX, paletteColor: _7A00F5},
+            {hex: _FF6BB5.HEX, paletteColor: _FF6BB5}
         ]
-    )('color built with PaletteColor object',
-        (c: PaletteColor): void => {
+    )('$# color built with PaletteColor object: $hex',
+        ({hex, paletteColor}): void => {
+            expect(hex).toBeTruthy();
             const expected: ColorComponents = {
-                r: c.RGB.R, g: c.RGB.G, b: c.RGB.B, a: 255
+                r: paletteColor.RGB.R, g: paletteColor.RGB.G, b: paletteColor.RGB.B, a: 255
             }
-            const expectedName: string = c.NAME;
 
-            const color: Color = new Color(c);
+            const expectedName: string = paletteColor.NAME;
+
+            const color: Color = new Color(paletteColor);
             expect(colorToColorComponents(color)).toEqual(expected);
             expect(p5ColorToColorComponents(color.color)).toEqual(expected);
             expect(color.name).toBe(expectedName);
