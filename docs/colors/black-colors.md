@@ -26,11 +26,11 @@ Colors are in numeric order by hex value.
 
 [dark tone ink](#dark-tone-ink-121212)
 
-## dark tone ink (#121212)
+# dark tone ink (#121212)
 
 <div class="color-block" style="background: #121212;">
   <a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
-    <h3 class="color-block white-pass">dark tone ink (#121212)</h3>
+    <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
   </a>
 </div>
 

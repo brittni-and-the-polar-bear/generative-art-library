@@ -21,11 +21,15 @@ import {ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #7A00F5;">
- *     <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
+ *     <a href="https://coolors.co/7a00f5" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
+ *     </a>
  * </div>
  *
- * @category Palette Color (All)
- * @category Palette Color (Purple)
+ * @see {@link BRITTNI}
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Purple)
  *
  * @source
  */
