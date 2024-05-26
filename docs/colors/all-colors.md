@@ -2,6 +2,8 @@
 
 ## [Black Colors](./black-colors.md)
 
+## [Blue Colors](./blue-colors.md)
+
 # Table of Contents
 
 [Blue](#blue)
@@ -15,25 +17,6 @@
 
 [Purple](#purple)
   - [poison purple](#poison-purple-7a00f5)
-
-# Blue
-
-## vibrant blue (#0437F2)
-
-<div class="color-block" style="background: #0437F2;">
-<a href="https://coolors.co/0437f2" target="_blank" rel="noopener noreferrer">
-<h3 class="color-block white-pass">vibrant blue (#0437F2)</h3>
-</a>
-</div>
-
-````typescript
-import {PaletteColor} from 'palette';
-import {_0437F2} from 'palette-colors';
-
-let vibrantBlue: PaletteColor = _0437F2;
-````
-
-[Table of Contents](#table-of-contents)
 
 # Green
 

@@ -20,6 +20,7 @@ import {PaletteColor} from 'palette';
 
 /**
  * A map of hex values to {@link PaletteColor} objects for all palette colors.
+ *
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
@@ -29,6 +30,7 @@ export const ALL_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palette
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * black palette colors.
+ *
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/black-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
@@ -39,9 +41,11 @@ export const BLACK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * blue palette colors.
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html#blue" target="_blank" rel="noopener noreferrer">See the Colors</a>
- * @category Palette Color Collection
- * @category Palette Color (Blue)
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/blue-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ *
+ * @category Palette Color Collections
+ * @category Palette Colors (Blue)
  */
 export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 

@@ -26,6 +26,7 @@ import {MISCELLANEOUS_PALETTES} from '../palette-maps';
  * <script data-id="02542825816779253">new CoolorsPaletteWidget("02542825816779253", ["121212","0437f2","ff6bb5","0fff4f","7a00f5"]); </script>
  *
  * @see {@link _121212}
+ * @see {@link _0437F2}
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)

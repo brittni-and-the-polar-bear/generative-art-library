@@ -21,9 +21,9 @@ import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #121212;">
- *   <a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
- *     <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
- *   </a>
+ *     <a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
+ *     </a>
  * </div>
  *
  * @see {@link BRITTNI}

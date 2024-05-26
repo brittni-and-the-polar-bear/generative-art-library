@@ -21,11 +21,15 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #0437F2;">
- *     <h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+ *     <a href="https://coolors.co/0437f2" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+ *     </a>
  * </div>
  *
- * @category Palette Color (All)
- * @category Palette Color (Blue)
+ * @see {@link BRITTNI}
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Blue)
  *
  * @source
  */
