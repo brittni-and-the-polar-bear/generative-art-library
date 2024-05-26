@@ -20,10 +20,8 @@ import {PaletteColor} from 'palette';
 import {ColorComponents} from './color';
 import {checkNumberWithinAmount} from './math';
 
-function checkComponents(actual: ColorComponents, expected: PaletteColor): void {
+export function checkComponents(actual: ColorComponents, expected: PaletteColor): void {
     checkNumberWithinAmount(actual.r, expected.RGB.R, 1);
     checkNumberWithinAmount(actual.g, expected.RGB.G, 1);
     checkNumberWithinAmount(actual.b, expected.RGB.B, 1);
 }
-
-export {checkComponents};
