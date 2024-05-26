@@ -13,7 +13,7 @@
 ````typescript
 import {BRITTNI} from 'palettes';
 
-let name: string = _121212.NAME;
+let name: string = BRITTNI.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
