@@ -22,7 +22,7 @@ import {SketchContext} from 'context';
 
 import {ColorComponents, colorToColorComponents, p5ColorToColorComponents} from '../shared/color';
 import {PaletteColor} from "palette";
-import {_0FFF4F} from "palette-colors";
+import {_0437F2, _0FFF4F, _7A00F5, _FF6BB5} from "palette-colors";
 
 const p5: P5Lib = SketchContext.p5;
 
@@ -73,20 +73,26 @@ describe('color tests', (): void => {
         expect(defaultColor.name).toBe(defaultColorName);
     });
 
-    test('color built with PaletteColor object', (): void => {
-        const c: PaletteColor = _0FFF4F;
-        const expected: ColorComponents = {
-            r: c.RGB.R, g: c.RGB.G, b: c.RGB.B, a: 255
+    test.each(
+        [
+            _0437F2,
+            _0FFF4F,
+            _7A00F5,
+            _FF6BB5
+        ]
+    )('color built with PaletteColor object',
+        (c: PaletteColor): void => {
+            const expected: ColorComponents = {
+                r: c.RGB.R, g: c.RGB.G, b: c.RGB.B, a: 255
+            }
+            const expectedName: string = c.NAME;
+
+            const color: Color = new Color(c);
+            expect(colorToColorComponents(color)).toEqual(expected);
+            expect(p5ColorToColorComponents(color.color)).toEqual(expected);
+            expect(color.name).toBe(expectedName);
         }
-        const expectedName: string = c.NAME;
-
-        const color: Color = new Color(c);
-        expect(colorToColorComponents(color)).toEqual(expected);
-        expect(p5ColorToColorComponents(color.color)).toEqual(expected);
-        expect(color.name).toBe(expectedName);
-    });
-
-    test.todo('add test to test color with multiple palette colors');
+    );
 
     test('color built with (c) parameter', (): void => {
         const w: number = 153;
@@ -94,7 +100,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'million grey';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
@@ -109,7 +115,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: a
         }
-        const expectedName: string = '';
+        const expectedName: string = 'million grey';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
@@ -125,7 +131,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
@@ -142,7 +148,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: a
         }
-        const expectedName: string = '';
+        const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
@@ -158,7 +164,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
@@ -175,7 +181,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: Math.floor(255 * a)
         }
-        const expectedName: string = '';
+        const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color(c);
         expect(colorToColorComponents(color)).toEqual(expected);
@@ -205,7 +211,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'million grey';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -222,7 +228,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: a
         }
-        const expectedName: string = '';
+        const expectedName: string = 'million grey';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -240,7 +246,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -258,7 +264,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -276,7 +282,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -295,7 +301,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: Math.floor(255 * a)
         }
-        const expectedName: string = '';
+        const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -313,7 +319,7 @@ describe('color tests', (): void => {
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         }
-        const expectedName: string = '';
+        const expectedName: string = 'orbital';
 
         const color: Color = new Color();
         expect(color.name).toBe(defaultColorName);
@@ -324,7 +330,7 @@ describe('color tests', (): void => {
     });
 
     test('set red to value > 255', (): void => {
-        const expectedName: string = '';
+        const expectedName: string = 'red';
 
         const color: Color = new Color();
         expect(color.red).toBe(0);
@@ -347,7 +353,7 @@ describe('color tests', (): void => {
 
     test('set red to valid value', (): void => {
         const value: number = 40;
-        const expectedName: string = '';
+        const expectedName: string = 'sepia black';
 
         const color: Color = new Color();
         expect(color.red).toBe(0);
@@ -359,7 +365,7 @@ describe('color tests', (): void => {
     });
 
     test('set green to value > 255', (): void => {
-        const expectedName: string = '';
+        const expectedName: string = 'green';
 
         const color: Color = new Color();
         expect(color.green).toBe(0);
@@ -382,7 +388,7 @@ describe('color tests', (): void => {
 
     test('set green to valid value', (): void => {
         const value: number = 40;
-        const expectedName: string = '';
+        const expectedName: string = 'tides of darkness';
 
         const color: Color = new Color();
         expect(color.green).toBe(0);
@@ -394,7 +400,7 @@ describe('color tests', (): void => {
     });
 
     test('set blue to value > 255', (): void => {
-        const expectedName: string = '';
+        const expectedName: string = 'blue';
 
         const color: Color = new Color();
         expect(color.blue).toBe(0);
@@ -417,7 +423,7 @@ describe('color tests', (): void => {
 
     test('set blue to valid value', (): void => {
         const value: number = 40;
-        const expectedName: string = '';
+        const expectedName: string = 'midnight';
 
         const color: Color = new Color();
         expect(color.blue).toBe(0);

@@ -19,6 +19,7 @@ import nearestColor from 'nearest-color';
 
 import {ColorNameManager} from 'color';
 import {StringMap} from 'map';
+import {PaletteColor} from "palette";
 
 describe('color name manager test', (): void => {
     let nearestColorSpy: any;
@@ -70,5 +71,26 @@ describe('color name manager test', (): void => {
         expect(redName).toBe(name);
         expect(logSpy).toHaveBeenCalledTimes(1);
         logSpy.mockRestore();
+    });
+
+    test('addColor(PaletteColor) method', (): void => {
+       const fakeColor: PaletteColor = {
+           RGB: {R: 0, G: 0, B: 0},
+           HSL: {H: 0, S: 0, L: 0},
+           HEX: '#000000',
+           NAME: 'test fake color'
+       };
+
+       const hex: string = fakeColor.HEX;
+       const expectedOriginalName: string = 'black';
+       const expectedNewName: string = fakeColor.NAME;
+
+       const originalName: string | undefined = ColorNameManager.getColorName(hex);
+       expect(originalName).toBe(expectedOriginalName);
+
+       ColorNameManager.addColor(fakeColor);
+
+       const newName: string | undefined = ColorNameManager.getColorName(hex);
+       expect(newName).toBe(expectedNewName);
     });
 });

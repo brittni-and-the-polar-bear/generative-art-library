@@ -26,6 +26,7 @@ const p5: P5Lib = SketchContext.p5;
 /**
  * Color information and functionality.
  * Colors are stored in RGBA format.
+ *
  * @category Color
  */
 export class Color {
@@ -74,7 +75,7 @@ export class Color {
                 this.setColorValues(color);
                 this._name = null;
             } else {
-                const c: P5Lib.Color = p5.color(color.HEX);
+                const c: P5Lib.Color = p5.color(color.RGB.R, color.RGB.G, color.RGB.B);
                 this.setColorValues(c);
                 this._name = color.NAME;
             }
@@ -86,6 +87,7 @@ export class Color {
      * @param s - Some number between 0 and 100.
      * @param l - Some number between 0 and 100.
      * @param a - Some number between 0 and 1.
+     *
      * @returns A {@link !P5Lib.Color | p5.js Color} object matching the color specified
      * by the given {@link h}{@link s}{@link l}{@link a} values.
      */
@@ -110,6 +112,7 @@ export class Color {
      * @param s - Some number between 0 and 100.
      * @param l - Some number between 0 and 100.
      * @param a - Some number between 0 and 1.
+     *
      * @returns A {@link !P5Lib.Color | p5.js Color} object matching the color specified
      * by the given {@link h}{@link s}{@link l}{@link a} values.
      */
@@ -129,6 +132,7 @@ export class Color {
     /**
      * Set the current color.<br/>
      * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
+     *
      * @param c - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
@@ -148,7 +152,8 @@ export class Color {
     /**
      * Set the value of the {@link red} component.<br/>
      * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
-     * @param r -
+     *
+     * @param r
      */
     public set red(r: number) {
         this._red = Math.floor(p5.constrain(r, 0, 255));
@@ -165,7 +170,8 @@ export class Color {
     /**
      * Set the value of the {@link green} component.<br/>
      * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
-     * @param g -
+     *
+     * @param g
      */
     public set green(g: number) {
         this._green = Math.floor(p5.constrain(g, 0, 255));
@@ -182,7 +188,8 @@ export class Color {
     /**
      * Set the value of the {@link blue} component.<br/>
      * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
-     * @param b -
+     *
+     * @param b
      */
     public set blue(b: number) {
         this._blue = Math.floor(p5.constrain(b, 0, 255));
@@ -197,13 +204,12 @@ export class Color {
     }
 
     /**
-     * Set the value of the {@link alpha} component.<br/>
-     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
-     * @param a -
+     * Set the value of the {@link alpha} component.
+     *
+     * @param a
      */
     public set alpha(a: number) {
         this._alpha = Math.floor(p5.constrain(a, 0, 255));
-        this._name = null;
     }
 
     /**
@@ -265,6 +271,7 @@ export class Color {
     /**
      * Set the color values.<br/>
      * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
+     *
      * @param color - A {@link !P5Lib.Color | p5.js Color} object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
