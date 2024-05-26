@@ -3,17 +3,17 @@ div.color-block {
     text-align: center;
 }
 
-h2.color-block {
+.color-block {
     width: 100%;
     margin: 0;
     padding: 0.5em;
 }
 
-h2.black-pass {
+.black-pass {
     color: black;
 }
 
-h2.white-pass {
+.white-pass {
     color: white;
 }
 </style>
@@ -43,9 +43,11 @@ Colors in the same category are in numeric order by hex value.
 
 # Black
 
+## dark tone ink (#121212)
+
 <div class="color-block" style="background: #121212;">
 <a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
-<h2 class="color-block white-pass">dark tone ink (#121212)</h2>
+<h3 class="color-block white-pass">dark tone ink (#121212)</h3>
 </a>
 </div>
 
@@ -60,9 +62,11 @@ let darkToneInk: PaletteColor = _121212;
 
 # Blue
 
+## vibrant blue (#0437F2)
+
 <div class="color-block" style="background: #0437F2;">
 <a href="https://coolors.co/0437f2" target="_blank" rel="noopener noreferrer">
-<h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+<h3 class="color-block white-pass">vibrant blue (#0437F2)</h3>
 </a>
 </div>
 
@@ -77,9 +81,11 @@ let vibrantBlue: PaletteColor = _0437F2;
 
 # Green
 
+## cathode green (#0FFF4F)
+
 <div class="color-block" style="background: #0FFF4F;">
 <a href="https://coolors.co/0fff4f" target="_blank" rel="noopener noreferrer">
-<h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
+<h3 class="color-block black-pass">cathode green (#0FFF4F)</h3>
 </a>
 </div>
 
@@ -94,9 +100,11 @@ let cathodeGreen: PaletteColor = _0FFF4F;
 
 # Pink
 
+## fen hong pink (#FF6BB5)
+
 <div class="color-block" style="background: #FF6BB5;">
 <a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
-<h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
+<h3 class="color-block black-pass">fen hong pink (#FF6BB5)</h3>
 </a>
 </div>
 
@@ -111,9 +119,11 @@ let fenHongPink: PaletteColor = _FF6BB5;
 
 # Purple
 
+## poison purple (#7A00F5)
+
 <div class="color-block" style="background: #7A00F5;">
 <a href="https://coolors.co/7a00f5" target="_blank" rel="noopener noreferrer">
-<h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
+<h3 class="color-block white-pass">poison purple (#7A00F5)</h3>
 </a>
 </div>
 
