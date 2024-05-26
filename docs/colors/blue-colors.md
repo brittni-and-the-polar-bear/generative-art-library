@@ -1,3 +1,23 @@
+<style>
+  div.color-block {
+    text-align: center;
+  }
+
+  .color-block {
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+  }
+
+  .black-pass {
+    color: black;
+  }
+
+  .white-pass {
+    color: white;
+  }
+</style>
+
 # Blue Colors
 
 Colors are in numeric order by hex value.

@@ -27,6 +27,7 @@ import {MISCELLANEOUS_PALETTES} from '../palette-maps';
  *
  * @see {@link _121212}
  * @see {@link _0437F2}
+ * @see {@link _0FFF4F}
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)

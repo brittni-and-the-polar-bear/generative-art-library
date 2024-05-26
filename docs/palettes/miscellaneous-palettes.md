@@ -1,3 +1,5 @@
+<!--suppress JSUnresolvedLibraryURL -->
+
 # Miscellaneous Palettes
 
 # Table of Contents

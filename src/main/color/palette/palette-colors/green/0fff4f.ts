@@ -21,11 +21,15 @@ import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #0FFF4F;">
- *     <h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
+ *     <a href="https://coolors.co/0fff4f" target="_blank" rel="noopener noreferrer">
+ *         <h3 class="color-block black-pass">cathode green (#0FFF4F)</h3>
+ *     </a>
  * </div>
  *
- * @category Palette Color (All)
- * @category Palette Color (Green)
+ * @see {@link BRITTNI}
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Green)
  *
  * @source
  */

@@ -18,26 +18,26 @@
   }
 </style>
 
-# Black Colors
+# Green Colors
 
 Colors are in numeric order by hex value.
 
 # Table of Contents
 
-[dark tone ink](#dark-tone-ink-121212)
+[cathode green](#cathode-green-0fff4f)
 
-## dark tone ink (#121212)
+## cathode green (#0FFF4F)
 
-<div class="color-block" style="background: #121212;">
-  <a href="https://coolors.co/121212" target="_blank" rel="noopener noreferrer">
-    <h3 class="color-block white-pass">dark tone ink (#121212)</h3>
+<div class="color-block" style="background: #0FFF4F;">
+  <a href="https://coolors.co/0fff4f" target="_blank" rel="noopener noreferrer">
+    <h3 class="color-block black-pass">cathode green (#0FFF4F)</h3>
   </a>
 </div>
 
 ````typescript
-import {_121212} from 'palette-colors';
+import {_0FFF4F} from 'palette-colors';
 
-let name: string = _121212.NAME;
+let name: string = _0FFF4F.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
