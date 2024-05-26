@@ -15,8 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - gradient palette
-// TODO - weighted palette
-
 export * from './miscellaneous';
 export * from './palette-maps';
