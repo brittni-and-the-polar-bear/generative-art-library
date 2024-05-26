@@ -25,20 +25,20 @@ export interface Palette {
     /**
      * The name of the palette.
      */
-    readonly name: string,
+    readonly NAME: string,
 
     /**
      * The source of the palette. May be the URL where the palette can be found.
      */
-    readonly source: string,
+    readonly SOURCE: string,
 
     /**
      * A flag indicating if the palette is a gradient.
      */
-    readonly isGradient: boolean,
+    readonly IS_GRADIENT: boolean,
 
     /**
      * The list of {@link PaletteColor} objects that compose the palette.
      */
-    readonly colors: PaletteColor[]
+    readonly COLORS: PaletteColor[]
 }

@@ -37,10 +37,10 @@ import {MISCELLANEOUS_PALETTES} from '../palette-maps';
  * @source
  */
 export const BRITTNI: Palette = {
-    name: 'brittni',
-    source: 'brittni',
-    isGradient: false,
-    colors: [
+    NAME: 'brittni',
+    SOURCE: 'brittni',
+    IS_GRADIENT: false,
+    COLORS: [
         _121212,
         _0437F2,
         _0FFF4F,
@@ -49,4 +49,4 @@ export const BRITTNI: Palette = {
     ]
 };
 
-MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.name, BRITTNI);
+MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
