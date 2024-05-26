@@ -17,9 +17,11 @@
 
 // color names derived from https://colornamer.robertcooper.me/
 
-// TODO - add link to Palette class
+import {Palette} from './palette';
+
 /**
- * A color to be used in a Palette.
+ * A color to be used in a {@link Palette}.
+ *
  * @category Palette
  */
 export interface PaletteColor {
