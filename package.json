@@ -57,7 +57,7 @@
   "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
   "dependencies": {
     "@types/p5": "^1.7.6",
-    "p5": "^1.9.3"
+    "p5": "^1.9.4"
   },
   "devDependencies": {
     "@rollup/plugin-eslint": "^9.0.5",
