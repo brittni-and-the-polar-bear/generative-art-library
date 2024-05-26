@@ -17,6 +17,5 @@
 
 // import {BRITTNI} from 'palettes';
 
-// TODO - look at all TODOs
 // TODO - brittni unit tests
 // TODO - misc map unit tests

@@ -22,6 +22,9 @@ import {SketchContext} from 'context';
 
 const p5: P5Lib = SketchContext.p5;
 
+const hexPattern: RegExp = /^#[A-F|0-9]{6}$/;
+const hexWithAlphaPattern: RegExp = /^#[A-F|0-9]{8}$/;
+
 export const red: Color = new Color(p5.color(255, 0, 0));
 export const green: Color = new Color(p5.color(0, 255, 0));
 export const blue: Color = new Color(p5.color(0, 0, 255));
@@ -75,13 +78,11 @@ export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
 }
 
 export function checkForValidHexColorString(hex: string): void {
-    const hexRegExp: RegExp = /^#[A-F|0-9]{6}$/;
-    const isValid = hexRegExp.test(hex);
+    const isValid: boolean = hexPattern.test(hex);
     expect(isValid).toBeTruthy();
 }
 
 export function checkForValidHexColorStringWithAlpha(hex: string): void {
-    const hexRegExp: RegExp = /^#[A-F|0-9]{8}$/;
-    const isValid = hexRegExp.test(hex);
+    const isValid: boolean = hexWithAlphaPattern.test(hex);
     expect(isValid).toBeTruthy();
 }
