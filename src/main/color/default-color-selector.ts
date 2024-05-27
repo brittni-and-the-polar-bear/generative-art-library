@@ -59,7 +59,7 @@ class DefaultColorSelector extends ColorSelector {
      * @public
      */
     public get type(): ColorSelectorType {
-        return ColorSelectorType.Default;
+        return ColorSelectorType.DEFAULT;
     }
 }
 

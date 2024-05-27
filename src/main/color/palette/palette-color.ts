@@ -17,8 +17,9 @@
 
 // color names derived from https://colornamer.robertcooper.me/
 
+// TODO - update release notes
 /**
- * A color to be used in a Palette.
+ * A color to be used in a {@link Palette}.
  *
  * @category Palette
  */
@@ -71,5 +72,17 @@ export interface PaletteColor {
     /**
      * The name of the color.
      */
-    readonly NAME: string
+    readonly NAME: string,
+
+    /**
+     * Discriminator for determining if an object is a PaletteColor.
+     */
+    readonly DISCRIMINATOR: 'I_PALETTE-COLOR';
+}
+
+//TODO - add documentation
+// TODO - add unit tests
+// TODO - add to release notes
+export function isPaletteColor(object: any): object is PaletteColor {
+    return object.DISCRIMINATOR === 'I_PALETTE-COLOR';
 }

@@ -15,15 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// TODO - update release notes
+
 /**
- * Enum for the different types of ColorSelectors.
+ * Enum for the different types of {@link ColorSelector} classes.
+ *
  * @category Color
  */
-const enum ColorSelectorType {
+export const enum ColorSelectorType {
     /**
      * Color selector that chooses colors from a pre-selected palette.
      */
-    Palette = 'palette color selector',
+    PALETTE = 'palette color selector',
 
     /**
      * Color selector that chooses color randomly from a range of RGB(A) values.
@@ -33,7 +36,5 @@ const enum ColorSelectorType {
     /**
      * Default color selector. Should only be used in {@link DefaultColorSelector}.
      */
-    Default = 'default color selector'
+    DEFAULT = 'default color selector'
 }
-
-export {ColorSelectorType};

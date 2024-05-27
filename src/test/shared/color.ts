@@ -60,7 +60,7 @@ export class SampleSelector extends ColorSelector {
     }
 
     get type(): ColorSelectorType {
-        return ColorSelectorType.Palette;
+        return ColorSelectorType.PALETTE;
     }
 }
 
