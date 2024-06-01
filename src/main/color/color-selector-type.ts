@@ -15,8 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - update release notes
-
 /**
  * Enum for the different types of {@link ColorSelector} classes.
  *
