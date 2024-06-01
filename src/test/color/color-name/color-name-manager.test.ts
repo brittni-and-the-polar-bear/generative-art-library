@@ -23,11 +23,7 @@ import {StringMap} from 'map';
 import {PaletteColor} from 'palette';
 
 describe('color name manager test', (): void => {
-    let nearestColorSpy: any;
-
-    beforeAll((): void => {
-        nearestColorSpy = jest.spyOn(nearestColor, 'from');
-    });
+    const nearestColorSpy = jest.spyOn(nearestColor, 'from');
 
     afterAll((): void => {
         expect(nearestColorSpy).not.toHaveBeenCalled();

@@ -99,9 +99,9 @@ export class Color {
 
         if (a) {
             a = p5.constrain(a, 0, 1);
-            color = p5.color(`hsla(${h}, ${s}%, ${l}%, ${a})`);
+            color = p5.color(`hsla(${h.toString()}, ${s.toString()}%, ${l.toString()}%, ${a.toString()})`);
         } else {
-            color = p5.color(`hsl(${h}, ${s}%, ${l}%)`);
+            color = p5.color(`hsl(${h.toString()}, ${s.toString()}%, ${l.toString()}%)`);
         }
 
         return color;

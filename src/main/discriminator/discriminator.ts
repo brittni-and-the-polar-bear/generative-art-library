@@ -19,6 +19,10 @@ import {PaletteColor} from 'palette';
 
 import {Discriminators} from './discriminators';
 
+interface CompatibleObject {
+    DISCRIMINATOR?: string
+}
+
 /**
  * Methods for evaluating if objects implement various interfaces.
  *
@@ -37,8 +41,8 @@ export class Discriminator {
     public static isPaletteColor(object: any): object is PaletteColor {
         let hasMatch: boolean = false;
 
-        if (object) {
-            hasMatch = object.DISCRIMINATOR === Discriminators.PALETTE_COLOR;
+        if (object && typeof object === 'object') {
+            hasMatch = (object as CompatibleObject).DISCRIMINATOR === Discriminators.PALETTE_COLOR;
         }
 
         return hasMatch;
