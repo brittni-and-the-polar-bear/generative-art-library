@@ -15,12 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'color'
-export * from 'context';
-export * from 'discriminator';
-export * from 'map';
-export * from 'math';
-export * from 'palette';
-export * from 'palettes';
-export * from 'palette-colors';
-export * from 'random';
+import {Discriminators} from 'discriminator';
+
+describe('discriminators tests', (): void => {
+    test('all discriminators are unique', (): void => {
+        const valuesSet: Set<string> = new Set<string>(Object.values(Discriminators))
+        expect(valuesSet.size).toBe(Object.values(Discriminators).length);
+    })
+});

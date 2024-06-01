@@ -16,6 +16,7 @@
  */
 
 import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
@@ -38,7 +39,8 @@ export const _0437F2: PaletteColor = {
     HEX: '#0437F2',
     RGB: {R: 4, G: 55, B: 241},
     HSL: {H: 227, S: 97, L: 48},
-    NAME: 'vibrant blue'
+    NAME: 'vibrant blue',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
 BLUE_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);

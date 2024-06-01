@@ -55,7 +55,7 @@ class DefaultColorSelector extends ColorSelector {
     }
 
     /**
-     * @returns {@link ColorSelectorType.Default}
+     * @returns {@link ColorSelectorType.DEFAULT}
      * @public
      */
     public get type(): ColorSelectorType {

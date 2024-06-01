@@ -18,8 +18,9 @@
 import nearestColor from 'nearest-color';
 
 import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
 import {StringMap} from 'map';
-import {PaletteColor} from "palette";
+import {PaletteColor} from 'palette';
 
 describe('color name manager test', (): void => {
     let nearestColorSpy: any;
@@ -78,7 +79,8 @@ describe('color name manager test', (): void => {
            RGB: {R: 0, G: 0, B: 0},
            HSL: {H: 0, S: 0, L: 0},
            HEX: '#000000',
-           NAME: 'test fake color'
+           NAME: 'test fake color',
+           DISCRIMINATOR: Discriminators.PALETTE_COLOR
        };
 
        const hex: string = fakeColor.HEX;

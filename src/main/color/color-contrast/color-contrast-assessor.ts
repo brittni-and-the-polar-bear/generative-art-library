@@ -18,7 +18,8 @@
 import {getContrastRatios, ResponseObject} from 'cococh';
 
 import {Color} from 'color';
-import {isPaletteColor, PaletteColor} from 'palette';
+import {Discriminator} from 'discriminator';
+import {PaletteColor} from 'palette';
 
 //TODO - Documentation
 // TODO - unit tests
@@ -64,7 +65,7 @@ export class ColorContrastAssessor {
         if (colorA instanceof Color && colorB instanceof Color) {
             hexA = colorA.hex;
             hexB = colorB.hex;
-        } else if (isPaletteColor(colorA) && isPaletteColor(colorB)) {
+        } else if (Discriminator.isPaletteColor(colorA) && Discriminator.isPaletteColor(colorB)) {
             hexA = colorA.HEX;
             hexB = colorB.HEX;
         } else if (typeof colorA === 'string' && typeof colorB === 'string') {

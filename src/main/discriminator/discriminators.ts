@@ -15,12 +15,25 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'color'
-export * from 'context';
-export * from 'discriminator';
-export * from 'map';
-export * from 'math';
-export * from 'palette';
-export * from 'palettes';
-export * from 'palette-colors';
-export * from 'random';
+/**
+ * The collection of discriminator values for library interfaces.
+ * All values should be unique.
+ *
+ * @category Discriminator
+ */
+export enum Discriminators {
+    /**
+     * Discriminator for the {@link Palette} interface.
+     */
+    PALETTE = 'I_PALETTE',
+
+    /**
+     * Discriminator for the {@link PaletteColor} interface.
+     */
+    PALETTE_COLOR = 'I_PALETTE-COLOR',
+
+    /**
+     * Discriminator for the {@link WeightedElement} interface.
+     */
+    WEIGHTED_ELEMENT = 'I_WEIGHTED-ELEMENT'
+}

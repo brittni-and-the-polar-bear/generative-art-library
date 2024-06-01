@@ -15,12 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'color'
-export * from 'context';
-export * from 'discriminator';
-export * from 'map';
-export * from 'math';
-export * from 'palette';
-export * from 'palettes';
-export * from 'palette-colors';
-export * from 'random';
+export * from './discriminator';
+export * from './discriminators';
