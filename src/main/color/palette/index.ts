@@ -17,3 +17,4 @@
 
 export * from './palette';
 export * from './palette-color';
+export * from './palette-color-selector';

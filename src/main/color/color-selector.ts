@@ -22,13 +22,12 @@ import {ColorSelectorType} from './color-selector-type';
 
 /**
  * ColorSelectors choose and return colors from some set list or criteria.
+ *
  * @category Color
  */
 export abstract class ColorSelector {
     /**
      * A set list of {@link Color} objects that the selector can choose from.
-     * @private
-     * @readonly
      */
     private readonly _COLOR_CHOICES: Color[] = [];
 
@@ -39,62 +38,50 @@ export abstract class ColorSelector {
      * from {@link _COLOR_CHOICES} in a random order.<br/>
      * When `false`, {@link selectColorFromChoices} will select colors
      * list order.
-     * @private
-     * @readonly
      */
     private readonly _RANDOM_ORDER: boolean;
 
     /**
      * The current index of {@link _COLOR_CHOICES} being chosen
      * when colors are selected in list order (i.e. {@link _RANDOM_ORDER} is `false`).
-     * @private
      */
     private _currentIndex: number = 0;
 
     /**
      * @param randomOrder A flag that determines the color selection order
      * of {@link selectColorFromChoices}.
+     *
      * @see {@link _RANDOM_ORDER}
-     * @constructor
      */
     protected constructor(randomOrder?: boolean) {
         this._RANDOM_ORDER = randomOrder ?? Random.randomBoolean();
     }
 
     /**
-     * Select and return a {@link Color} object.
-     * @public
-     * @abstract
-     */
-    public abstract getColor(): Color;
-
-    /**
-     * @returns The name of the selector (e.g. 'blue rgb color selector').
-     * @public
-     * @abstract
-     */
-    public abstract get name(): string;
-
-    /**
      * @returns A list of the names of the colors the selector
      * is choosing from.
-     * @public
-     * @abstract
      */
     public abstract get colorNames(): string[];
 
     /**
+     * @returns The name of the selector (e.g. 'blue rgb color selector').
+     */
+    public abstract get name(): string;
+
+    /**
      * @returns The {@link ColorSelectorType} of the selector.
-     * @public
-     * @abstract
      */
     public abstract get type(): ColorSelectorType;
+
+    /**
+     * Select and return a {@link Color} object.
+     */
+    public abstract getColor(): Color;
 
     /**
      * @returns The selected {@link Color} from the {@link _COLOR_CHOICES} list.<br/>
      * If {@link _COLOR_CHOICES} is empty, a default {@link Color}
      * object (black) will be returned.
-     * @public
      */
     public selectColorFromChoices(): Color {
         let col: Color = new Color();
@@ -122,6 +109,7 @@ export abstract class ColorSelector {
     /**
      * Increment {@link _currentIndex} to select the next
      * {@link Color} element in the {@link _COLOR_CHOICES} list.
+     *
      * @see {@link _RANDOM_ORDER}
      */
     private incrementCurrentIndex(): void {

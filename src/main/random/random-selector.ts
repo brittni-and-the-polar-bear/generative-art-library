@@ -20,13 +20,13 @@ import {Random} from './random';
 /**
  * A class for randomly selecting elements from a given list.
  * This class assumes an equal distribution for all elements of the list.
+ *
  * @category Random
  */
-class RandomSelector<Type> {
+export class RandomSelector<Type> {
     /**
      * The elements that {@link getRandomElement} and
      * {@link getRandomElementAndRemove} can select from.
-     * @private
      */
     private readonly _elements: Type[];
 
@@ -71,5 +71,3 @@ class RandomSelector<Type> {
         return element;
     }
 }
-
-export {RandomSelector};
