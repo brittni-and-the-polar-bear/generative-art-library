@@ -15,7 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "./palette-color";
+import {Discriminators} from 'discriminator';
+
+import {PaletteColor} from './palette-color';
 
 /**
  * A collection of {@link PaletteColor} objects.
@@ -53,5 +55,10 @@ export interface Palette {
         '#000000': string[],
         '#FFFFFF': string[],
         [HEX: string]: string[]
-    }
+    },
+
+    /**
+     * Discriminator for determining if an object is a Palette.
+     */
+    readonly DISCRIMINATOR: Discriminators.PALETTE;
 }
