@@ -31,12 +31,14 @@ export default {
         preserveModules: false,
         globals: {
             p5: 'p5',
+            cococh: 'cococh',
             'nearest-color': 'nearest-color',
             'color-name-list': 'color-name-list/dist/colornames.json'
         }
     },
     external: [
         'p5',
+        'cococh',
         'nearest-color',
         'color-name-list/dist/colornames.json'
     ],
