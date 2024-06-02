@@ -15,10 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
 import {_0437F2, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
 
-import {MISCELLANEOUS_PALETTES} from '../palette-maps';
+import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -33,8 +34,6 @@ import {MISCELLANEOUS_PALETTES} from '../palette-maps';
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
- *
- * @source
  */
 export const BRITTNI: Palette = {
     NAME: 'brittni',
@@ -63,7 +62,10 @@ export const BRITTNI: Palette = {
         '#0FFF4F': ['#000000', '#121212', '#0437F2', '#7A00F5'],
         '#7A00F5': ['#FFFFFF', '#0FFF4F'],
         '#FF6BB5': ['#000000', '#121212']
-    }
+    },
+
+    DISCRIMINATOR: Discriminators.PALETTE
 };
 
+ALL_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
 MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
