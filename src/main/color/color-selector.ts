@@ -15,10 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Random} from 'random';
+import {SketchContext} from 'context';
+import {Random, WeightedElement} from 'random';
 
 import {Color} from './color';
 import {ColorSelectorType} from './color-selector-type';
+
+const p5: P5Lib = SketchContext.p5;
 
 /**
  * ColorSelectors choose and return colors from some set list or criteria.
@@ -96,6 +99,21 @@ export abstract class ColorSelector {
         }
 
         return col;
+    }
+
+    // TODO - unit test
+    // TODO - documentation
+    // TODO - update release notes
+    public chooseBackgroundColor(chanceOfBlack: number,
+                                 chanceOfWhite: number,
+                                 chanceOfColor: number): Color {
+        const weightedColors: WeightedElement<Color>[] = [
+            {value: new Color(p5.color(0)), weight: chanceOfBlack},
+            {value: new Color(p5.color(255)), weight: chanceOfWhite},
+            {value: this.getColor(), weight: chanceOfColor}
+        ];
+
+        return Random.randomWeightedElement(weightedColors) ?? (new Color());
     }
 
     /**
