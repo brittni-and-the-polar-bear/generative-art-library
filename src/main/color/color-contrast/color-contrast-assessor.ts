@@ -21,7 +21,6 @@ import {Color} from 'color';
 import {Discriminator} from 'discriminator';
 import {PaletteColor} from 'palette';
 
-// TODO - add to release notes
 /**
  * Web Content Accessibility Guidelines (WCAG) color contrast categories.<br/>
  * To learn more about WCAG, visit
@@ -41,7 +40,6 @@ export enum ContrastStandard {
     AAA = 'AAA'
 }
 
-// TODO - add to release notes
 /**
  * Font size category used to evaluate the accessibility standard.
  *
