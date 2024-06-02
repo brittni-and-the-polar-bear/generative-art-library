@@ -19,6 +19,7 @@ import P5Lib from 'p5';
 
 import {Color, ColorSelector, ColorSelectorType} from 'color';
 import {SketchContext} from 'context';
+import {checkNumberWithinAmount} from "./math";
 
 const p5: P5Lib = SketchContext.p5;
 
@@ -85,4 +86,10 @@ export function checkForValidHexColorString(hex: string): void {
 export function checkForValidHexColorStringWithAlpha(hex: string): void {
     const isValid: boolean = hexWithAlphaPattern.test(hex);
     expect(isValid).toBeTruthy();
+}
+
+export function checkForEquivalentComponents(actual: ColorComponents, expected: ColorComponents): void {
+    checkNumberWithinAmount(actual.r, expected.r, 1);
+    checkNumberWithinAmount(actual.g, expected.g, 1);
+    checkNumberWithinAmount(actual.b, expected.b, 1);
 }

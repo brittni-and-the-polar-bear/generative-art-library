@@ -31,7 +31,7 @@ import {
     checkComponents,
     checkForValidStringMap,
     p5ColorToColorComponents,
-    ColorComponents, checkForValidHexColorString
+    ColorComponents, checkForValidHexColorString, checkForEquivalentComponents
 } from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
@@ -73,8 +73,7 @@ function makeRGBKey(RGB: {R: number, G: number, B: number}): string {
 
 describe('all palette colors', (): void => {
     test('valid string map: ALL_PALETTE_COLORS', (): void => {
-        checkForValidStringMap(ALL_PALETTE_COLORS);
-        expect(ALL_PALETTE_COLORS.size).toBe(ALL_HEXES.length);
+        checkForValidStringMap(ALL_PALETTE_COLORS, ALL_HEXES.length);
     });
 
     test('all colors are unique', (): void => {
@@ -117,6 +116,10 @@ describe('all palette colors', (): void => {
             const rgb: P5Lib.Color = p5.color(c.RGB.R, c.RGB.G, c.RGB.B);
             const rgbComponents: ColorComponents = p5ColorToColorComponents(rgb);
             checkComponents(rgbComponents, c);
+
+            checkForEquivalentComponents(hslComponents, hexComponents);
+            checkForEquivalentComponents(hslComponents, rgbComponents);
+            checkForEquivalentComponents(rgbComponents, hexComponents);
         }
     );
 
@@ -136,4 +139,8 @@ describe('all palette colors', (): void => {
             expect(new Set<string>(ALL_PALETTE_COLORS.keys)).toContain(hexString);
         }
     );
+
+    test.todo('all color objects are in the map');
+
+    test.todo('all keys match palette color hex');
 });

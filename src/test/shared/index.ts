@@ -20,4 +20,4 @@ export * from './map';
 export * from './math';
 export * from './palette';
 export * from './random';
-export * from './palette-color';
+export * from './palette-colors';

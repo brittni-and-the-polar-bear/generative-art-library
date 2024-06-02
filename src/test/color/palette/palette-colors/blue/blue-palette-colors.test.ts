@@ -32,4 +32,8 @@ describe('blue palette colors', (): void => {
             expect(new Set<string>(BLUE_PALETTE_COLORS.keys)).toContain(hexString);
         }
     );
+
+    test.todo('all color objects are in the map');
+
+    test.todo('all keys match palette color hex');
 });

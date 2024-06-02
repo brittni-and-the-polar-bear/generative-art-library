@@ -18,9 +18,10 @@
 import {StringMap} from 'map';
 import {Palette, PaletteColor} from 'palette';
 
-import {ColorComponents} from './color';
+import {checkForValidHexColorString, ColorComponents} from './color';
 import {checkForValidStringMap} from './map';
 import {checkNumberWithinAmount} from './math';
+import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from "color-contrast";
 
 export function checkComponents(actual: ColorComponents, expected: PaletteColor): void {
     checkNumberWithinAmount(actual.r, expected.RGB.R, 1);
@@ -46,4 +47,46 @@ export function checkForPaletteInMap(palette: Palette, map: StringMap<Palette>):
     const actualPalette: Palette | undefined = map.get(palette.NAME);
     expect(actualPalette).toBeTruthy();
     expect(actualPalette).toEqual(palette);
+}
+
+export function checkForPaletteNameKeyMatch(map: StringMap<Palette>): void {
+    for (const key of map.keys) {
+        const palette: Palette | undefined = map.get(key);
+        expect(palette).toBeTruthy();
+
+        if (palette) {
+            expect(palette.NAME).toBe(key);
+        }
+    }
+}
+
+export function checkForValidContrastMap(palette: Palette): void {
+    checkForValidPalette(palette);
+    expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
+    expect(palette.CONTRAST_MAP['#FFFFFF']).not.toContain('#000000');
+
+    const validHexes: string[] = palette.COLORS.map((color: PaletteColor): string => {
+       return color.HEX;
+    });
+    validHexes.push('#000000');
+    validHexes.push('#FFFFFF');
+
+    for (const key in palette.CONTRAST_MAP) {
+        checkForValidHexColorString(key);
+        expect(validHexes).toContain(key);
+
+        for (const hex of palette.CONTRAST_MAP[key]) {
+            checkForValidHexColorString(hex);
+            expect(validHexes).toContain(hex);
+
+            const meetsRatio: boolean =
+                ColorContrastAssessor.meetsContrastStandard(
+                    key,
+                    hex,
+                    ContrastStandard.AA,
+                    ContrastFontSize.NORMAL
+                );
+            expect(meetsRatio).toBeTruthy();
+        }
+    }
 }

@@ -18,22 +18,26 @@
 import {Palette} from 'palette';
 import {BRITTNI, MISCELLANEOUS_PALETTES} from 'palettes';
 
-import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
+import {checkForPaletteInMap, checkForPaletteNameKeyMatch, checkForValidStringMap} from 'unit-test/shared';
+
+const EXPECTED_PALETTES: {palette: Palette}[] = [
+    {palette: BRITTNI}
+]
 
 describe('miscellaneous palettes map test', (): void => {
-    const ALL_MISC_PALETTES: {palette: Palette}[] = [
-        {palette: BRITTNI}
-    ]
-
-    test('valid map: MISCELLANEOUS_PALETTES', (): void => {
-       checkForValidStringMap(MISCELLANEOUS_PALETTES, ALL_MISC_PALETTES.length);
+    test('valid string map: MISCELLANEOUS_PALETTES', (): void => {
+       checkForValidStringMap(MISCELLANEOUS_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
-        ALL_MISC_PALETTES
+        EXPECTED_PALETTES
     )('$# palette successfully added to map: $palette.NAME',
         ({palette}): void => {
             checkForPaletteInMap(palette, MISCELLANEOUS_PALETTES);
         }
     );
+
+    test('all keys match associated palette name', (): void => {
+        checkForPaletteNameKeyMatch(MISCELLANEOUS_PALETTES);
+    });
 });

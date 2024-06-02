@@ -50,10 +50,6 @@ export const BRITTNI: Palette = {
         _FF6BB5
     ],
 
-    // TODO - Verify '#000000' does not contain '#FFFFFF'
-    // TODO - verify '#FFFFFF' does not contain '#000000'
-    // TODO - verify only keys values are palette hexes, '#000000, and '#FFFFFF'
-    // TODO - Unit Test - Verify AA.NORMAL Pass for all pairs
     CONTRAST_MAP: {
         '#000000': ['#0FFF4F', '#FF6BB5'],
         '#FFFFFF': ['#121212', '#0437F2', '#7A00F5'],
