@@ -57,8 +57,6 @@ export enum ContrastFontSize {
     LARGE = 'large'
 }
 
-// TODO - unit tests
-// TODO - add to release notes
 /**
  * Evaluates if two colors meet the AA or AAA contrast standard
  * of the Web Content Accessibility Guidelines (WCAG).<br/>
@@ -69,19 +67,24 @@ export enum ContrastFontSize {
  * @category Color Contrast
  */
 export class ColorContrastAssessor {
-
-    // TODO - unit tests
+    public static meetsContrastStandard(colorA: Color,
+                                        colorB: Color): boolean;
+    public static meetsContrastStandard(colorA: PaletteColor,
+                                        colorB: PaletteColor): boolean;
+    public static meetsContrastStandard(colorA: string,
+                                        colorB: string): boolean;
     public static meetsContrastStandard(colorA: Color,
                                         colorB: Color,
-                                        standard?: ContrastStandard,
-                                        fontSize?: ContrastFontSize): boolean;
+                                        standard: ContrastStandard,
+                                        fontSize: ContrastFontSize): boolean;
     public static meetsContrastStandard(colorA: PaletteColor,
                                         colorB: PaletteColor,
-                                        standard?: ContrastStandard,
-                                        fontSize?: ContrastFontSize): boolean;
-    public static meetsContrastStandard(colorA: string, colorB: string,
-                                        standard?: ContrastStandard,
-                                        fontSize?: ContrastFontSize): boolean;
+                                        standard: ContrastStandard,
+                                        fontSize: ContrastFontSize): boolean;
+    public static meetsContrastStandard(colorA: string,
+                                        colorB: string,
+                                        standard: ContrastStandard,
+                                        fontSize: ContrastFontSize): boolean;
     /**
      * Evaluates if two colors have an appropriate contrast ratio
      * for the given {@link ContrastStandard} and {@link ContrastFontSize}.
@@ -117,7 +120,6 @@ export class ColorContrastAssessor {
         );
     }
 
-    // TODO - unit tests
     /**
      * Do the given colors conform to guidelines for the given standard and font size?
      *
