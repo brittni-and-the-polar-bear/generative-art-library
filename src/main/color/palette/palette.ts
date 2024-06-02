@@ -49,5 +49,9 @@ export interface Palette {
      * The only colors listed in this map should be the colors of the
      * palette, black (#000000), and white (#FFFFFF).
      */
-    readonly CONTRAST_MAP: { [HEX: string]: string[] }
+    readonly CONTRAST_MAP: {
+        '#000000': string[],
+        '#FFFFFF': string[],
+        [HEX: string]: string[]
+    }
 }

@@ -38,15 +38,32 @@ import {MISCELLANEOUS_PALETTES} from '../palette-maps';
  */
 export const BRITTNI: Palette = {
     NAME: 'brittni',
+
     SOURCE: 'brittni',
+
     IS_GRADIENT: false,
+
     COLORS: [
         _121212,
         _0437F2,
         _0FFF4F,
         _7A00F5,
         _FF6BB5
-    ]
+    ],
+
+    // TODO - Verify '#000000' does not contain '#FFFFFF'
+    // TODO - verify '#FFFFFF' does not contain '#000000'
+    // TODO - verify only keys values are palette hexes, '#000000, and '#FFFFFF'
+    // TODO - Unit Test - Verify AA.NORMAL Pass for all pairs
+    CONTRAST_MAP: {
+        '#000000': ['#0FFF4F', '#FF6BB5'],
+        '#FFFFFF': ['#121212', '#0437F2', '#7A00F5'],
+        '#121212': ['#FFFFFF', '#0FFF4F', '#FF6BB5'],
+        '#0437F2': ['#FFFFFF', '#0FFF4F'],
+        '#0FFF4F': ['#000000', '#121212', '#0437F2', '#7A00F5'],
+        '#7A00F5': ['#FFFFFF', '#0FFF4F'],
+        '#FF6BB5': ['#000000', '#121212']
+    }
 };
 
 MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
