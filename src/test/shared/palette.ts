@@ -62,14 +62,20 @@ export function checkForPaletteNameKeyMatch(map: StringMap<Palette>): void {
 
 export function checkForValidContrastMap(palette: Palette): void {
     checkForValidPalette(palette);
-    expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
-    expect(palette.CONTRAST_MAP['#FFFFFF']).not.toContain('#000000');
 
     const validHexes: string[] = palette.COLORS.map((color: PaletteColor): string => {
        return color.HEX;
     });
-    validHexes.push('#000000');
-    validHexes.push('#FFFFFF');
+
+    if (validHexes.indexOf('#000000') < 0) {
+        expect(palette.CONTRAST_MAP['#FFFFFF']).not.toContain('#000000');
+        validHexes.push('#000000');
+    }
+
+    if (validHexes.indexOf('#FFFFFF') < 0) {
+        expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
+        validHexes.push('#FFFFFF');
+    }
 
     for (const key in palette.CONTRAST_MAP) {
         checkForValidHexColorString(key);
@@ -79,14 +85,21 @@ export function checkForValidContrastMap(palette: Palette): void {
             checkForValidHexColorString(hex);
             expect(validHexes).toContain(hex);
 
-            const meetsRatio: boolean =
+            const meetsNormalRatio: boolean =
                 ColorContrastAssessor.meetsContrastStandard(
                     key,
                     hex,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
-            expect(meetsRatio).toBeTruthy();
+            const meetsLargeRatio: boolean =
+                ColorContrastAssessor.meetsContrastStandard(
+                    key,
+                    hex,
+                    ContrastStandard.AA,
+                    ContrastFontSize.LARGE
+                );
+            expect(meetsNormalRatio && meetsLargeRatio).toBeTruthy();
         }
     }
 }
