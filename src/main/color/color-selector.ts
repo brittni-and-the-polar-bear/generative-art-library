@@ -24,7 +24,7 @@ import {ColorSelectorType} from './color-selector-type';
  * ColorSelectors choose and return colors from some set list or criteria.
  * @category Color
  */
-abstract class ColorSelector {
+export abstract class ColorSelector {
     /**
      * A set list of {@link Color} objects that the selector can choose from.
      * @private
@@ -132,5 +132,3 @@ abstract class ColorSelector {
         }
     }
 }
-
-export {ColorSelector};
