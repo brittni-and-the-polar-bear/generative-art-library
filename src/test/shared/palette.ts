@@ -15,13 +15,20 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {Color} from 'color';
+import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
 import {StringMap} from 'map';
 import {Palette, PaletteColor} from 'palette';
 
 import {checkForValidHexColorString, ColorComponents} from './color';
 import {checkForValidStringMap} from './map';
 import {checkNumberWithinAmount} from './math';
-import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from "color-contrast";
+
+export function getColorsArray(colors: PaletteColor[]): Color[] {
+    return colors.map((color: PaletteColor) => {
+        return new Color(color);
+    });
+}
 
 export function checkComponents(actual: ColorComponents, expected: PaletteColor): void {
     checkNumberWithinAmount(actual.r, expected.RGB.R, 1);
@@ -67,12 +74,12 @@ export function checkForValidContrastMap(palette: Palette): void {
        return color.HEX;
     });
 
-    if (validHexes.indexOf('#000000') < 0) {
+    if (!validHexes.includes('#000000')) {
         expect(palette.CONTRAST_MAP['#FFFFFF']).not.toContain('#000000');
         validHexes.push('#000000');
     }
 
-    if (validHexes.indexOf('#FFFFFF') < 0) {
+    if (!validHexes.includes('#FFFFFF')) {
         expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
         validHexes.push('#FFFFFF');
     }

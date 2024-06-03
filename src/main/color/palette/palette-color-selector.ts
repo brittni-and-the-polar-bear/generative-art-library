@@ -28,9 +28,6 @@ const p5: P5Lib = SketchContext.p5;
 // TODO - update release notes
 export class PaletteColorSelector extends ColorSelector {
     // TODO - documentation
-    private static readonly _MIN_COLOR_COUNT: number = 1;
-
-    // TODO - documentation
     private readonly _NAME: string;
 
     // TODO - documentation
@@ -45,8 +42,8 @@ export class PaletteColorSelector extends ColorSelector {
 
         this._NAME = this.buildName(palette);
 
-        let count: number = colorCount ?? Random.randomInt(PaletteColorSelector._MIN_COLOR_COUNT, palette.COLORS.length + 1);
-        count = p5.constrain(count, PaletteColorSelector._MIN_COLOR_COUNT, palette.COLORS.length);
+        let count: number = colorCount ?? Random.randomInt(PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length + 1);
+        count = p5.constrain(count, PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length);
 
         const paletteOrder: boolean = buildWithPaletteOrder ?? Random.randomBoolean();
 
@@ -78,7 +75,11 @@ export class PaletteColorSelector extends ColorSelector {
     }
 
     // TODO - documentation
-    // TODO - unit test - does color selector have the right name?
+    private static get MIN_COLOR_COUNT(): number {
+        return 1;
+    }
+
+    // TODO - documentation
     private buildName(palette: Palette): string {
         let paletteName: string = palette.NAME.toLowerCase();
 
@@ -92,23 +93,25 @@ export class PaletteColorSelector extends ColorSelector {
 
     // TODO - documentation
     private choosePaletteColors(palette: Palette, buildWithPaletteOrder: boolean, colorCount: number): void {
-        colorCount = p5.constrain(colorCount, PaletteColorSelector._MIN_COLOR_COUNT, palette.COLORS.length);
+        colorCount = p5.constrain(colorCount, PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length);
 
-        if (buildWithPaletteOrder) {
-            for (let i: number = 0; i < colorCount; i++) {
-                const pc: PaletteColor = palette.COLORS[i];
-                this.addColorChoice(new Color(pc));
-                this._COLOR_NAMES.push(pc.NAME);
-            }
-        } else {
-            const selector: RandomSelector<PaletteColor> = new RandomSelector<PaletteColor>(palette.COLORS);
-
-            for (let i: number = 0; i < colorCount; i++) {
-                const pc: PaletteColor | undefined = selector.getRandomElementAndRemove();
-
-                if (pc) {
+        if (palette.COLORS.length > 0) {
+            if (buildWithPaletteOrder) {
+                for (let i: number = 0; i < colorCount; i++) {
+                    const pc: PaletteColor = palette.COLORS[i];
                     this.addColorChoice(new Color(pc));
                     this._COLOR_NAMES.push(pc.NAME);
+                }
+            } else {
+                const selector: RandomSelector<PaletteColor> = new RandomSelector<PaletteColor>(palette.COLORS);
+
+                for (let i: number = 0; i < colorCount; i++) {
+                    const pc: PaletteColor | undefined = selector.getRandomElementAndRemove();
+
+                    if (pc) {
+                        this.addColorChoice(new Color(pc));
+                        this._COLOR_NAMES.push(pc.NAME);
+                    }
                 }
             }
         }

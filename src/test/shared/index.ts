@@ -16,6 +16,7 @@
  */
 
 export * from './color';
+export * from './color-selector';
 export * from './map';
 export * from './math';
 export * from './palette';
