@@ -101,7 +101,6 @@ export abstract class ColorSelector {
         return col;
     }
 
-    // TODO - unit test
     // TODO - documentation
     // TODO - update release notes
     public chooseBackgroundColor(chanceOfBlack: number,

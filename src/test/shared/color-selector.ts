@@ -86,9 +86,9 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
         for (let i: number = 0; i < colorCount; i++) {
             const c: Color = selector.getColor();
             const components: ColorComponents = colorToColorComponents(c);
-            const expected: Color = inOrderColors[i];
-            const expectedComponents: ColorComponents = colorToColorComponents(expected);
-            expect(components).toEqual(expectedComponents);
+            const expectedSelection: Color = inOrderColors[i];
+            const expectedSelectionComponents: ColorComponents = colorToColorComponents(expectedSelection);
+            expect(components).toEqual(expectedSelectionComponents);
         }
     } else {
         for (let i: number = 0; i < colors.length * 2; i++) {
