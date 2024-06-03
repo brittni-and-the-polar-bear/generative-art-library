@@ -28,8 +28,6 @@ import {
     checkForValidRandomSelector
 } from 'unit-test/shared';
 
-
-
 describe('color selector tests', (): void => {
     test('test default color selector', (): void => {
         const selector: DefaultColorSelector = new DefaultColorSelector();
@@ -117,4 +115,18 @@ describe('color selector tests', (): void => {
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors, true);
     });
+
+    test.todo('test background color selection: all options');
+
+    test.todo('test background color selection: black only');
+
+    test.todo('test background color selection: white only');
+
+    test.todo('test background color selection: color only');
+
+    test.todo('test background color selection: black or white only');
+
+    test.todo('test background color selection: black or color only');
+
+    test.todo('test background color selection: white or color only');
 });
