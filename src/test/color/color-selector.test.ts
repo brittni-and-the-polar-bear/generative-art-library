@@ -234,4 +234,16 @@ describe('color selector tests', (): void => {
 
         expect(colorNames.size).toBe(2);
     });
+
+    test('test background color selection: incorrect weights', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents = colorToColorComponents(new Color());
+
+        for (let i: number = 0; i < 10; i++) {
+            const background: Color = selector.getBackgroundColor(0, 0.1, 0.1);
+            const bgComponents: ColorComponents = colorToColorComponents(background);
+            expect(expectedComponents).toEqual(bgComponents);
+        }
+    });
 });
