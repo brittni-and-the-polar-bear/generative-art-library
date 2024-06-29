@@ -51,25 +51,21 @@ export class PaletteColorSelector extends ColorSelector {
     }
 
     // TODO - documentation
-    // TODO - unit test
     public override get colorNames(): string[] {
         return this._COLOR_NAMES;
     }
 
     // TODO - documentation
-    // TODO - unit test
     public override get name(): string {
         return this._NAME;
     }
 
     // TODO - documentation
-    // TODO - unit test
     public override get type(): ColorSelectorType {
         return ColorSelectorType.PALETTE;
     }
 
     // TODO - documentation
-    // TODO - unit test
     public override getColor(): Color {
         return this.selectColorFromChoices();
     }
@@ -94,13 +90,14 @@ export class PaletteColorSelector extends ColorSelector {
     // TODO - documentation
     private choosePaletteColors(palette: Palette, buildWithPaletteOrder: boolean, colorCount: number): void {
         colorCount = p5.constrain(colorCount, PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length);
+        const colorNames: Set<string> = new Set<string>();
 
         if (palette.COLORS.length > 0) {
             if (buildWithPaletteOrder) {
                 for (let i: number = 0; i < colorCount; i++) {
                     const pc: PaletteColor = palette.COLORS[i];
                     this.addColorChoice(new Color(pc));
-                    this._COLOR_NAMES.push(pc.NAME);
+                    colorNames.add(pc.NAME);
                 }
             } else {
                 const selector: RandomSelector<PaletteColor> = new RandomSelector<PaletteColor>(palette.COLORS);
@@ -110,10 +107,12 @@ export class PaletteColorSelector extends ColorSelector {
 
                     if (pc) {
                         this.addColorChoice(new Color(pc));
-                        this._COLOR_NAMES.push(pc.NAME);
+                        colorNames.add(pc.NAME);
                     }
                 }
             }
         }
+
+        this._COLOR_NAMES.push(...Array.from(colorNames));
     }
 }

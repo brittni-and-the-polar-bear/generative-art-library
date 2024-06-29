@@ -25,6 +25,7 @@ import {
     checkForValidRandomSelector,
     getColorsArray
 } from 'unit-test/shared';
+import {ColorSelectorType} from "color";
 
 const TEST_PALETTE_A: Palette = {
     NAME: 'test A palette',
@@ -57,7 +58,7 @@ const TEST_PALETTE_B: Palette = {
 };
 
 describe('palette color selector tests', (): void => {
-    test('test palette color selector names', (): void => {
+    test('test palette color selector get name', (): void => {
         const selectorA: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_A);
         expect(selectorA).toBeTruthy();
         expect(selectorA.name).toBe('test a palette color selector');
@@ -65,6 +66,42 @@ describe('palette color selector tests', (): void => {
         const selectorB: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_B);
         expect(selectorB).toBeTruthy();
         expect(selectorB.name).toBe('test b palette color selector');
+    });
+
+    test('test palette color selector get color', (): void => {
+        const selectorA: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_A);
+        expect(selectorA).toBeTruthy();
+
+        for (let i: number = 0; i < 10; i++) {
+            expect(selectorA.getColor()).toBeTruthy();
+        }
+
+        const selectorB: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_B);
+        expect(selectorB).toBeTruthy();
+
+        for (let i: number = 0; i < 10; i++) {
+            expect(selectorB.getColor()).toBeTruthy();
+        }
+    });
+
+    test('test palette color selector get type', (): void => {
+        const selectorA: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_A);
+        expect(selectorA).toBeTruthy();
+        expect(selectorA.type).toBe(ColorSelectorType.PALETTE);
+
+        const selectorB: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_B);
+        expect(selectorB).toBeTruthy();
+        expect(selectorB.type).toBe(ColorSelectorType.PALETTE);
+    });
+
+    test('test palette color selector get color names', (): void => {
+        const selectorA: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_A);
+        expect(selectorA).toBeTruthy();
+        expect(selectorA.colorNames.length).toBeGreaterThan(0);
+
+        const selectorB: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_B);
+        expect(selectorB).toBeTruthy();
+        expect(selectorB.colorNames.length).toBe(0);
     });
 
     test('test palette color selector: palette only', (): void => {
