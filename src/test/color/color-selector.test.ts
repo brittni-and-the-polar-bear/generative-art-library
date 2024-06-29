@@ -18,15 +18,19 @@
 import {Color, DefaultColorSelector} from 'color';
 
 import {
+    ColorComponents,
     SampleSelector,
+    RANDOM_TEST_TRIES,
     blue,
     cyan,
     green,
     red,
     checkForValidColorSelector,
     checkForValidInOrderSelector,
-    checkForValidRandomSelector
+    checkForValidRandomSelector,
+    colorToColorComponents
 } from 'unit-test/shared';
+import {SketchContext} from "context";
 
 describe('color selector tests', (): void => {
     test('test default color selector', (): void => {
@@ -116,17 +120,118 @@ describe('color selector tests', (): void => {
         checkForValidRandomSelector(selector, colors, true);
     });
 
-    test.todo('test background color selection: all options');
+    test('test background color selection: all options', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents[] = [
+            colorToColorComponents(new Color()),
+            colorToColorComponents(new Color(SketchContext.p5.color(255))),
+            colorToColorComponents(red)
+        ];
+        const colorNames: Set<string> = new Set<string>();
 
-    test.todo('test background color selection: black only');
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(0.33, 0.33, 0.34);
+            const bgComponents: ColorComponents = colorToColorComponents(background);
+            colorNames.add(background.name);
+            expect(expectedComponents).toContainEqual(bgComponents);
+        }
 
-    test.todo('test background color selection: white only');
+        expect(colorNames.size).toBe(3);
+    });
 
-    test.todo('test background color selection: color only');
+    test('test background color selection: black only', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents = colorToColorComponents(new Color());
 
-    test.todo('test background color selection: black or white only');
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(1, 0, 0);
+            const bgComponents: ColorComponents = colorToColorComponents(background)
+            expect(bgComponents).toStrictEqual(expectedComponents);
+        }
+    });
 
-    test.todo('test background color selection: black or color only');
+    test('test background color selection: white only', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents = colorToColorComponents(
+            new Color(SketchContext.p5.color(255))
+        );
 
-    test.todo('test background color selection: white or color only');
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(0, 1, 0);
+            const bgComponents: ColorComponents = colorToColorComponents(background)
+            expect(bgComponents).toStrictEqual(expectedComponents);
+        }
+    });
+
+    test('test background color selection: color only', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents = colorToColorComponents(red);
+
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(0, 0, 1);
+            const bgComponents: ColorComponents = colorToColorComponents(background)
+            expect(bgComponents).toStrictEqual(expectedComponents);
+        }
+    });
+
+    test('test background color selection: black or white only', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents[] = [
+            colorToColorComponents(new Color()),
+            colorToColorComponents(new Color(SketchContext.p5.color(255)))
+        ];
+        const colorNames: Set<string> = new Set<string>();
+
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(0.5, 0.5, 0);
+            const bgComponents: ColorComponents = colorToColorComponents(background);
+            colorNames.add(background.name);
+            expect(expectedComponents).toContainEqual(bgComponents);
+        }
+
+        expect(colorNames.size).toBe(2);
+    });
+
+    test('test background color selection: black or color only', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents[] = [
+            colorToColorComponents(new Color()),
+            colorToColorComponents(red)
+        ];
+        const colorNames: Set<string> = new Set<string>();
+
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(0.5, 0, 0.5);
+            const bgComponents: ColorComponents = colorToColorComponents(background);
+            colorNames.add(background.name);
+            expect(expectedComponents).toContainEqual(bgComponents);
+        }
+
+        expect(colorNames.size).toBe(2);
+    });
+
+    test('test background color selection: white or color only', (): void => {
+        const colors: Color[] = [red];
+        const selector: SampleSelector = new SampleSelector(colors);
+        const expectedComponents: ColorComponents[] = [
+            colorToColorComponents(new Color(SketchContext.p5.color(255))),
+            colorToColorComponents(red)
+        ];
+        const colorNames: Set<string> = new Set<string>();
+
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
+            const background: Color = selector.chooseBackgroundColor(0, 0.5, 0.5);
+            const bgComponents: ColorComponents = colorToColorComponents(background);
+            colorNames.add(background.name);
+            expect(expectedComponents).toContainEqual(bgComponents);
+        }
+
+        expect(colorNames.size).toBe(2);
+    });
 });

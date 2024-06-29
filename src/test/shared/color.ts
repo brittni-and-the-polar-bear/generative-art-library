@@ -42,22 +42,18 @@ export interface ColorComponents {
 
 export class SampleSelector extends ColorSelector {
     constructor(colors: Color[], randomOrder?: boolean) {
-        super(randomOrder);
+        super('sample color selector', randomOrder);
         for (const c of colors) {
             this.addColorChoice(c);
         }
-    }
 
-    get colorNames(): string[] {
-        return ['name1', 'name2', 'name3'];
+        this.COLOR_NAMES.add('name1');
+        this.COLOR_NAMES.add('name2');
+        this.COLOR_NAMES.add('name3');
     }
 
     getColor(): Color {
         return this.selectColorFromChoices();
-    }
-
-    get name(): string {
-        return 'sample color selector';
     }
 
     get type(): ColorSelectorType {
