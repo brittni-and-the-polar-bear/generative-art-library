@@ -21,6 +21,7 @@ import {WeightedElement} from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
+ *
  * @category Random
  */
 class Random {
@@ -33,7 +34,8 @@ class Random {
     /**
      * Set the primary function to be called when generating any random numbers.<br/>
      * Set to {@link !Math.random} by default.
-     * @param method -
+     *
+     * @param method
      */
     public static set randomMethod(method: () => number) {
         Random._randomMethod = method;
@@ -42,6 +44,7 @@ class Random {
     /**
      * @param min - The minimum number that can be returned from this function (inclusive).
      * @param max - The maximum number that can be returned from the function (non-inclusive).
+     *
      * @returns A random floating point value greater than or equal to min and less than max.
      */
     public static randomFloat(min: number, max: number): number {
@@ -57,6 +60,7 @@ class Random {
     /**
      * @param range - The {@link Range} that determines the minimum and maximum
      * values that can be returned from the function.
+     *
      * @returns A random floating point value greater than or equal to {@link Range.min}
      * and less than {@link Range.max}.
      */
@@ -67,6 +71,7 @@ class Random {
     /**
      * @param min - The minimum number that can be returned from this function (inclusive).
      * @param max - The maximum number that can be returned from the function (non-inclusive).
+     *
      * @returns A random integer value greater than or equal to min and less than max.
      */
     public static randomInt(min: number, max: number): number {
@@ -76,6 +81,7 @@ class Random {
     /**
      * @param range - The {@link Range} that determines the minimum and maximum
      * values that can be returned from the function.
+     *
      * @returns A random integer value greater than or equal to {@link Range.min}
      * and less than {@link Range.max}.
      */
@@ -86,6 +92,7 @@ class Random {
     /**
      * @param chanceOfTrue - A floating point number between 0 and 1.
      * If provided, it represents the percent chance that this method will return true.
+     *
      * @returns A random boolean value.
      */
     public static randomBoolean(chanceOfTrue?: number): boolean {
@@ -108,6 +115,7 @@ class Random {
 
     /**
      * @param list - The list of elements to be selected from.
+     *
      * @returns A random element from the given list.
      * This method assumes an equal distribution for all elements of the list.<br/>
      * If an empty list is provided, the function will return {@link !undefined}.
