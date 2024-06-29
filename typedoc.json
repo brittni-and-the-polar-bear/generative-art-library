@@ -37,7 +37,7 @@
     "@deprecated": true
   },
 
-  "sort": ["source-order"],
+  "sort": ["kind", "visibility", "static-first", "alphabetical", "enum-value-ascending"],
 
   "validation": {
     "notExported": true,
