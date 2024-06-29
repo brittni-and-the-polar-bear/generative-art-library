@@ -30,11 +30,6 @@ import {PaletteColor} from './palette-color';
  */
 export class PaletteColorSelector extends ColorSelector {
     /**
-     * The color selector type: {@link ColorSelectorType.PALETTE}.
-     */
-    private readonly _TYPE: ColorSelectorType = ColorSelectorType.PALETTE;
-
-    /**
      * @param palette - The {@link Palette} from which colors will be selected.
      *
      * @param buildWithPaletteOrder - When `true`, {@link choosePaletteColors} will choose
@@ -73,7 +68,7 @@ export class PaletteColorSelector extends ColorSelector {
      * @returns {@link ColorSelectorType.PALETTE}
      */
     public override get type(): ColorSelectorType {
-        return this._TYPE;
+        return ColorSelectorType.PALETTE;
     }
 
     /**

@@ -131,7 +131,7 @@ describe('color selector tests', (): void => {
         const colorNames: Set<string> = new Set<string>();
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(0.33, 0.33, 0.34);
+            const background: Color = selector.getBackgroundColor(0.33, 0.33, 0.34);
             const bgComponents: ColorComponents = colorToColorComponents(background);
             colorNames.add(background.name);
             expect(expectedComponents).toContainEqual(bgComponents);
@@ -146,7 +146,7 @@ describe('color selector tests', (): void => {
         const expectedComponents: ColorComponents = colorToColorComponents(new Color());
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(1, 0, 0);
+            const background: Color = selector.getBackgroundColor(1, 0, 0);
             const bgComponents: ColorComponents = colorToColorComponents(background)
             expect(bgComponents).toStrictEqual(expectedComponents);
         }
@@ -160,7 +160,7 @@ describe('color selector tests', (): void => {
         );
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(0, 1, 0);
+            const background: Color = selector.getBackgroundColor(0, 1, 0);
             const bgComponents: ColorComponents = colorToColorComponents(background)
             expect(bgComponents).toStrictEqual(expectedComponents);
         }
@@ -172,7 +172,7 @@ describe('color selector tests', (): void => {
         const expectedComponents: ColorComponents = colorToColorComponents(red);
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(0, 0, 1);
+            const background: Color = selector.getBackgroundColor(0, 0, 1);
             const bgComponents: ColorComponents = colorToColorComponents(background)
             expect(bgComponents).toStrictEqual(expectedComponents);
         }
@@ -188,7 +188,7 @@ describe('color selector tests', (): void => {
         const colorNames: Set<string> = new Set<string>();
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(0.5, 0.5, 0);
+            const background: Color = selector.getBackgroundColor(0.5, 0.5, 0);
             const bgComponents: ColorComponents = colorToColorComponents(background);
             colorNames.add(background.name);
             expect(expectedComponents).toContainEqual(bgComponents);
@@ -207,7 +207,7 @@ describe('color selector tests', (): void => {
         const colorNames: Set<string> = new Set<string>();
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(0.5, 0, 0.5);
+            const background: Color = selector.getBackgroundColor(0.5, 0, 0.5);
             const bgComponents: ColorComponents = colorToColorComponents(background);
             colorNames.add(background.name);
             expect(expectedComponents).toContainEqual(bgComponents);
@@ -226,7 +226,7 @@ describe('color selector tests', (): void => {
         const colorNames: Set<string> = new Set<string>();
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const background: Color = selector.chooseBackgroundColor(0, 0.5, 0.5);
+            const background: Color = selector.getBackgroundColor(0, 0.5, 0.5);
             const bgComponents: ColorComponents = colorToColorComponents(background);
             colorNames.add(background.name);
             expect(expectedComponents).toContainEqual(bgComponents);

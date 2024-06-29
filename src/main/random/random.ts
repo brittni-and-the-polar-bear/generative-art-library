@@ -130,11 +130,12 @@ class Random {
     /**
      * @param list - The list of elements to be selected from.<br/>
      * <b>IMPORTANT: The sum of weights of the objects in this list should be equal to 1.0.</b>
+     *
      * @returns A random element from the given list.
      * The distribution of the choices will be determined by the weights of each
      * element in the list.<br/>
-     * If an empty list is provided, the function will return {@link !undefined}.<br/>
-     * If the sum of weights in the list is less than 1.0, the function will return {@link !undefined}.
+     * If an empty list is provided, the function will return `undefined`.<br/>
+     * If the sum of weights in the list is less than 1.0, the function will return `undefined`.
      */
     public static randomWeightedElement<Type>(list: WeightedElement<Type>[]): Type | undefined {
         let element: Type | undefined = undefined;

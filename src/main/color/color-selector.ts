@@ -21,18 +21,28 @@ import {Random, WeightedElement} from 'random';
 import {Color} from './color';
 import {ColorSelectorType} from './color-selector-type';
 
-const p5: P5Lib = SketchContext.p5;
-
 /**
  * ColorSelectors choose and return colors from some set list or criteria.
  *
  * @category Color
+ * @category Color Selector
  */
 export abstract class ColorSelector {
     /**
-     * A set list of {@link Color} objects that the selector can choose from.
+     * A list of {@link Color} objects that the selector can choose from.
      */
     private readonly _COLOR_CHOICES: Color[] = [];
+
+    /**
+     * A set of the names of the colors that can be
+     * or have been chosen by the color selector.
+     */
+    private readonly _COLOR_NAMES: Set<string> = new Set<string>();
+
+    /**
+     * The name of the color selector.
+     */
+    private readonly _NAME: string;
 
     /**
      * A flag that determines the color selection order
@@ -51,25 +61,16 @@ export abstract class ColorSelector {
     private _currentIndex: number = 0;
 
     /**
-     * @param randomOrder A flag that determines the color selection order
+     * @param name - The name of the color selector.
+     * @param randomOrder - A flag that determines the color selection order
      * of {@link selectColorFromChoices}.
      *
      * @see {@link _RANDOM_ORDER}
      */
-    protected constructor(randomOrder?: boolean) {
+    protected constructor(name: string, randomOrder?: boolean) {
         this._RANDOM_ORDER = randomOrder ?? Random.randomBoolean();
+        this._NAME = name;
     }
-
-    /**
-     * @returns A list of the names of the colors the selector
-     * is choosing from.
-     */
-    public abstract get colorNames(): string[];
-
-    /**
-     * @returns The name of the selector (e.g. 'blue rgb color selector').
-     */
-    public abstract get name(): string;
 
     /**
      * @returns The {@link ColorSelectorType} of the selector.
@@ -80,6 +81,21 @@ export abstract class ColorSelector {
      * Select and return a {@link Color} object.
      */
     public abstract getColor(): Color;
+
+    /**
+     * @returns The names of the colors that can be or have been chosen
+     * by the color selector.
+     */
+    public get colorNames(): string[] {
+        return Array.from(this._COLOR_NAMES);
+    }
+
+    /**
+     * @returns The name of the selector (e.g. 'blue rgb color selector').
+     */
+    public get name(): string {
+        return this._NAME;
+    }
 
     /**
      * @returns The selected {@link Color} from the {@link _COLOR_CHOICES} list.<br/>
@@ -101,18 +117,41 @@ export abstract class ColorSelector {
         return col;
     }
 
-    // TODO - documentation
     // TODO - update release notes
-    public chooseBackgroundColor(chanceOfBlack: number,
-                                 chanceOfWhite: number,
-                                 chanceOfColor: number): Color {
+    /**
+     * Select and return a {@link Color} object to be used as a background.
+     * The color will either be black (#000000), white (#FFFFFF), or a color
+     * from the selector, chosen by the {@link getColor} method.<br/>
+     * <b>IMPORTANT: The sum of chanceOfBlack, chanceOfWhite, and chanceOfColor
+     * should be equal to 1.0.</b>
+     *
+     * @param chanceOfBlack - The percent (0-1) chance that the chosen color
+     * will be black (#000000). The sum of all percentages should be equal to 1.0.
+     *
+     * @param chanceOfWhite - The percent (0-1) chance that the chosen color
+     * will be white (#FFFFFF). The sum of all percentages should be equal to 1.0.
+     *
+     * @param chanceOfColor - The percent (0-1) chance that the chosen color
+     * will be a color from the selector ({@link getColor}).
+     * The sum of all percentages should be equal to 1.0.
+     */
+    public getBackgroundColor(chanceOfBlack: number,
+                              chanceOfWhite: number,
+                              chanceOfColor: number): Color {
         const weightedColors: WeightedElement<Color>[] = [
-            {value: new Color(p5.color(0)), weight: chanceOfBlack},
-            {value: new Color(p5.color(255)), weight: chanceOfWhite},
+            {value: new Color(SketchContext.p5.color(0)), weight: chanceOfBlack},
+            {value: new Color(SketchContext.p5.color(255)), weight: chanceOfWhite},
             {value: this.getColor(), weight: chanceOfColor}
         ];
 
         return Random.randomWeightedElement(weightedColors) ?? (new Color());
+    }
+
+    /**
+     * @returns The {@link _COLOR_NAMES} set.
+     */
+    protected get COLOR_NAMES(): Set<string> {
+        return this._COLOR_NAMES;
     }
 
     /**
