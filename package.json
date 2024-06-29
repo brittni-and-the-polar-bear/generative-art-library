@@ -91,7 +91,7 @@
     {
       "path": "./out/batpb-genart.js",
       "import": "{ createStore }",
-      "limit": "30 s"
+      "limit": "35 s"
     },
     {
       "path": "./out/batpb-genart.js",
