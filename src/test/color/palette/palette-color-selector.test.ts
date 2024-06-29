@@ -188,8 +188,6 @@ describe('palette color selector tests', (): void => {
         }
     );
 
-    //TODO - duplicate start
-
     test('test palette color selector: random build, all colors, not random order', (): void => {
         const selector: PaletteColorSelector =
             new PaletteColorSelector(
