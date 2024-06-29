@@ -117,7 +117,6 @@ export abstract class ColorSelector {
         return col;
     }
 
-    // TODO - update release notes
     /**
      * Select and return a {@link Color} object to be used as a background.
      * The color will either be black (#000000), white (#FFFFFF), or a color
