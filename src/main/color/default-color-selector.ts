@@ -22,45 +22,32 @@ import {ColorSelectorType} from './color-selector-type';
 /**
  * Default color selector.
  * To be used when a valid color selector cannot be found.
+ *
  * @category Color
+ * @category Color Selector
  */
-class DefaultColorSelector extends ColorSelector {
+export class DefaultColorSelector extends ColorSelector {
     public constructor() {
-        super(false);
-    }
-
-    /**
-     * @returns `['black']`
-     * @public
-     */
-    public get colorNames(): string[] {
-        return ['black'];
+        super('default color selector', false);
+        this.COLOR_NAMES.add('black');
     }
 
     /**
      * @returns A black color `#000000`.<br/>
-     * <div class="color-block" style="background: #000000;"><h2 class="color-block white-pass">black (#000000)</h2></div>
-     * @public
+     * <div class="color-block" style="background: #000000;">
+     *     <a href="https://coolors.co/000000" target="_blank" rel="noopener noreferrer">
+     *         <h2 class="color-block white-pass">black (#000000)</h2>
+     *     </a>
+     * </div>
      */
     public getColor(): Color {
         return (new Color());
     }
 
     /**
-     * @returns `'default color selector'`
-     * @public
-     */
-    public get name(): string {
-        return 'default color selector';
-    }
-
-    /**
      * @returns {@link ColorSelectorType.DEFAULT}
-     * @public
      */
     public get type(): ColorSelectorType {
         return ColorSelectorType.DEFAULT;
     }
 }
-
-export {DefaultColorSelector};
