@@ -22,61 +22,81 @@ import {Random, RandomSelector} from 'random';
 import {Palette} from './palette';
 import {PaletteColor} from './palette-color';
 
-const p5: P5Lib = SketchContext.p5;
-
-// TODO - documentation
-// TODO - update release notes
+/**
+ * A basic {@link ColorSelector} that chooses colors from a given {@link Palette}.
+ *
+ * @category Palette
+ * @category Color Selector
+ */
 export class PaletteColorSelector extends ColorSelector {
-    // TODO - documentation
-    private readonly _NAME: string;
+    /**
+     * The color selector type: {@link ColorSelectorType.PALETTE}.
+     */
+    private readonly _TYPE: ColorSelectorType = ColorSelectorType.PALETTE;
 
-    // TODO - documentation
-    private readonly _COLOR_NAMES: string[] = [];
-
-    // TODO - documentation
+    /**
+     * @param palette - The {@link Palette} from which colors will be selected.
+     *
+     * @param buildWithPaletteOrder - When `true`, {@link choosePaletteColors} will choose
+     * colors in the order they appear in the order they appear in the {@link Palette.COLORS}
+     * list. If buildWithPaletteOrder is `true` and {@link randomOrder} is `false`, the order
+     * of colors from {@link getColor} will match the order of colors in the palette.
+     *
+     * @param colorCount - The number of colors available in the selector. This number
+     * should be greater than or equal to {@link MIN_COLOR_COUNT} and less than or
+     * equal to the number of colors in the given {@link palette}.
+     *
+     * @param randomOrder - A flag that determines the color selection order of {@link getColor}.
+     * When `true`, colors will be chosen in a random order.
+     * When `false`, colors will be chosen in the order they were selected
+     * in {@link choosePaletteColors}.
+     */
     constructor(palette: Palette,
                 buildWithPaletteOrder?: boolean,
                 colorCount?: number,
                 randomOrder?: boolean) {
-        super(randomOrder);
-
-        this._NAME = this.buildName(palette);
+        super(PaletteColorSelector.buildName(palette), randomOrder);
 
         let count: number = colorCount ?? Random.randomInt(PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length + 1);
-        count = p5.constrain(count, PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length);
+        count = SketchContext.p5.constrain(
+            count,
+            PaletteColorSelector.MIN_COLOR_COUNT,
+            palette.COLORS.length
+        );
 
         const paletteOrder: boolean = buildWithPaletteOrder ?? Random.randomBoolean();
 
         this.choosePaletteColors(palette, paletteOrder, count);
     }
 
-    // TODO - documentation
-    public override get colorNames(): string[] {
-        return this._COLOR_NAMES;
-    }
-
-    // TODO - documentation
-    public override get name(): string {
-        return this._NAME;
-    }
-
-    // TODO - documentation
+    /**
+     * @returns {@link ColorSelectorType.PALETTE}
+     */
     public override get type(): ColorSelectorType {
-        return ColorSelectorType.PALETTE;
+        return this._TYPE;
     }
 
-    // TODO - documentation
+    /**
+     * @inheritdoc
+     */
     public override getColor(): Color {
         return this.selectColorFromChoices();
     }
 
-    // TODO - documentation
+    /**
+     * @returns 1
+     */
     private static get MIN_COLOR_COUNT(): number {
         return 1;
     }
 
-    // TODO - documentation
-    private buildName(palette: Palette): string {
+    /**
+     * Build the name of the selector from the name
+     * of the given {@link Palette}.
+     *
+     * @param palette
+     */
+    private static buildName(palette: Palette): string {
         let paletteName: string = palette.NAME.toLowerCase();
 
         if (!paletteName.endsWith(' palette')) {
@@ -87,17 +107,32 @@ export class PaletteColorSelector extends ColorSelector {
         return paletteName;
     }
 
-    // TODO - documentation
+    /**
+     * Choose the colors from the given {@link Palette} that will be available in the selector.
+     *
+     * @param palette
+     *
+     * @param buildWithPaletteOrder - When `true`, colors will be chosen from the palette
+     * in the order they appear in the {@link Palette.COLORS} list. When `false`, colors will
+     * be chosen from the palette in random order.
+     *
+     * @param colorCount - The number of colors to choose from the palette. This number
+     * should be greater than or equal to {@link MIN_COLOR_COUNT} and less than or
+     * equal to the number of colors in the given palette.
+     */
     private choosePaletteColors(palette: Palette, buildWithPaletteOrder: boolean, colorCount: number): void {
-        colorCount = p5.constrain(colorCount, PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length);
-        const colorNames: Set<string> = new Set<string>();
+        colorCount = SketchContext.p5.constrain(
+            colorCount,
+            PaletteColorSelector.MIN_COLOR_COUNT,
+            palette.COLORS.length
+        );
 
         if (palette.COLORS.length > 0) {
             if (buildWithPaletteOrder) {
                 for (let i: number = 0; i < colorCount; i++) {
                     const pc: PaletteColor = palette.COLORS[i];
                     this.addColorChoice(new Color(pc));
-                    colorNames.add(pc.NAME);
+                    this.COLOR_NAMES.add(pc.NAME);
                 }
             } else {
                 const selector: RandomSelector<PaletteColor> = new RandomSelector<PaletteColor>(palette.COLORS);
@@ -107,12 +142,10 @@ export class PaletteColorSelector extends ColorSelector {
 
                     if (pc) {
                         this.addColorChoice(new Color(pc));
-                        colorNames.add(pc.NAME);
+                        this.COLOR_NAMES.add(pc.NAME);
                     }
                 }
             }
         }
-
-        this._COLOR_NAMES.push(...Array.from(colorNames));
     }
 }
