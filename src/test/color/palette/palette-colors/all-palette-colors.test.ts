@@ -23,6 +23,7 @@ import {PaletteColor} from 'palette';
 import {ALL_PALETTE_COLORS} from 'palette-colors';
 
 import {
+    ColorComponents,
     GREEN_HEXES,
     BLACK_HEXES,
     BLUE_HEXES,
@@ -31,7 +32,8 @@ import {
     checkComponents,
     checkForValidStringMap,
     p5ColorToColorComponents,
-    ColorComponents, checkForValidHexColorString, checkForEquivalentComponents
+    checkForValidHexColorString,
+    checkForEquivalentComponents
 } from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
@@ -44,16 +46,6 @@ ALL_HEXES.push(
     ...PINK_HEXES,
     ...PURPLE_HEXES
 );
-
-function buildTestColorsArray(): {c: PaletteColor}[] {
-    const colors: {c: PaletteColor}[] = [];
-
-    for (const color of ALL_PALETTE_COLORS.values) {
-        colors.push({c: color});
-    }
-
-    return colors;
-}
 
 function makeHSLKey(HSL: {H: number, S: number, L: number}): string {
     let key: string = '';
@@ -102,45 +94,59 @@ describe('all palette colors', (): void => {
     });
 
     test.each(
-        buildTestColorsArray()
-    )('$# consistent color: $c.HEX',
-        ({c}): void => {
-            const hsl: P5Lib.Color = Color.getHSLColor(c.HSL.H, c.HSL.S, c.HSL.L);
-            const hslComponents: ColorComponents = p5ColorToColorComponents(hsl);
-            checkComponents(hslComponents, c);
+        ALL_HEXES
+    )('$# - consistent color: $hexString',
+        ({hexString}): void => {
+            const c: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
+            expect(c).toBeTruthy();
 
-            const hex: P5Lib.Color = p5.color(c.HEX);
-            const hexComponents: ColorComponents = p5ColorToColorComponents(hex);
-            checkComponents(hexComponents, c);
+            if (c) {
+                const hsl: P5Lib.Color = Color.getHSLColor(c.HSL.H, c.HSL.S, c.HSL.L);
+                const hslComponents: ColorComponents = p5ColorToColorComponents(hsl);
+                checkComponents(hslComponents, c);
 
-            const rgb: P5Lib.Color = p5.color(c.RGB.R, c.RGB.G, c.RGB.B);
-            const rgbComponents: ColorComponents = p5ColorToColorComponents(rgb);
-            checkComponents(rgbComponents, c);
+                const hex: P5Lib.Color = p5.color(c.HEX);
+                const hexComponents: ColorComponents = p5ColorToColorComponents(hex);
+                checkComponents(hexComponents, c);
 
-            checkForEquivalentComponents(hslComponents, hexComponents);
-            checkForEquivalentComponents(hslComponents, rgbComponents);
-            checkForEquivalentComponents(rgbComponents, hexComponents);
-        }
-    );
+                const rgb: P5Lib.Color = p5.color(c.RGB.R, c.RGB.G, c.RGB.B);
+                const rgbComponents: ColorComponents = p5ColorToColorComponents(rgb);
+                checkComponents(rgbComponents, c);
 
-    test.each(
-        buildTestColorsArray()
-    )('$# valid hex color value: $c.HEX',
-        ({c}): void => {
-            checkForValidHexColorString(c.HEX);
+                checkForEquivalentComponents(hslComponents, hexComponents);
+                checkForEquivalentComponents(hslComponents, rgbComponents);
+                checkForEquivalentComponents(rgbComponents, hexComponents);
+            }
         }
     );
 
     test.each(
         ALL_HEXES
-    )('$# successful addition of color: $hexString',
+    )('$# - successful addition of color: $hexString',
         ({hexString}): void => {
-            expect(ALL_HEXES).toBeTruthy();
-            expect(new Set<string>(ALL_PALETTE_COLORS.keys)).toContain(hexString);
+            expect(hexString).toBeTruthy();
+            checkForValidHexColorString(hexString);
+
+            const pc: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
+            expect(pc).toBeTruthy();
+
+            if (pc) {
+                expect(pc.RGB).toBeTruthy();
+                expect(pc.RGB.R).toBeTruthy();
+                expect(pc.RGB.G).toBeTruthy();
+                expect(pc.RGB.B).toBeTruthy();
+
+                expect(pc.HSL).toBeTruthy();
+                expect(pc.HSL.H).toBeTruthy();
+                expect(pc.HSL.S).toBeTruthy();
+                expect(pc.HSL.L).toBeTruthy();
+
+                expect(pc.HEX).toBeTruthy();
+                checkForValidHexColorString(pc.HEX);
+                expect(pc.HEX).toBe(hexString);
+
+                expect(pc.NAME).toBeTruthy();
+            }
         }
     );
-
-    test.todo('all color objects are in the map');
-
-    test.todo('all keys match palette color hex');
 });
