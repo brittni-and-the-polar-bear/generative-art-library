@@ -9,3 +9,5 @@
 ## [Pink Colors](./pink-colors.md)
 
 ## [Purple Colors](./purple-colors.md)
+
+## [How to Add a New Color](./add-new-color.md)
