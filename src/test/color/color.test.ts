@@ -19,7 +19,7 @@ import P5Lib from 'p5';
 
 import {Color} from 'color';
 import {SketchContext} from 'context';
-import {_0437F2, _0FFF4F, _7A00F5, _FF6BB5} from 'palette-colors';
+import {_0437F1, _0FFF4F, _7A00F5, _FF6BB5} from 'palette-colors';
 
 import {
     ColorComponents,
@@ -80,7 +80,7 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            {paletteColor: _0437F2},
+            {paletteColor: _0437F1},
             {paletteColor: _0FFF4F},
             {paletteColor: _7A00F5},
             {paletteColor: _FF6BB5}

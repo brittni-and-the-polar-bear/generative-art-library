@@ -16,7 +16,7 @@
  */
 
 import {Palette, PaletteColorSelector} from 'palette';
-import {_0437F2, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
 import {Discriminators} from 'discriminator';
 
 import {
@@ -33,7 +33,7 @@ const TEST_PALETTE_A: Palette = {
     COLORS: [
         _7A00F5,
         _121212,
-        _0437F2,
+        _0437F1,
         _FF6BB5,
         _0FFF4F
     ],

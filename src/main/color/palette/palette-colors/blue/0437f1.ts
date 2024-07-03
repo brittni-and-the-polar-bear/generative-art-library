@@ -21,11 +21,10 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
-// TODO - check HSL
 /**
- * <div class="color-block" style="background: #0437F2;">
- *     <a href="https://coolors.co/0437f2" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block white-pass">vibrant blue (#0437F2)</h2>
+ * <div class="color-block" style="background: #0437F1;">
+ *     <a href="https://coolors.co/0437f1" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">blue bouquet (#0437F1)</h2>
  *     </a>
  * </div>
  *
@@ -36,14 +35,14 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @source
  */
-export const _0437F2: PaletteColor = {
-    HEX: '#0437F2',
+export const _0437F1: PaletteColor = {
+    HEX: '#0437F1',
     RGB: {R: 4, G: 55, B: 241},
     HSL: {H: 227, S: 97, L: 48},
-    NAME: 'vibrant blue',
+    NAME: 'blue bouquet',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLUE_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
-ALL_PALETTE_COLORS.setUndefinedKey(_0437F2.HEX, _0437F2);
-ColorNameManager.addColor(_0437F2);
+BLUE_PALETTE_COLORS.setUndefinedKey(_0437F1.HEX, _0437F1);
+ALL_PALETTE_COLORS.setUndefinedKey(_0437F1.HEX, _0437F1);
+ColorNameManager.addColor(_0437F1);

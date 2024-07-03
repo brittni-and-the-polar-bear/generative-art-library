@@ -17,17 +17,17 @@
 
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
-import {_0437F2, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
 
 import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
- * <script data-id="03645021947508318">new CoolorsPaletteWidget("03645021947508318", ["121212","0437f2","0fff4f","7a00f5","ff6bb5"]); </script>
+ * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
  * @see {@link _121212}
- * @see {@link _0437F2}
+ * @see {@link _0437F1}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
  * @see {@link _FF6BB5}
@@ -44,7 +44,7 @@ export const BRITTNI: Palette = {
 
     COLORS: [
         _121212,
-        _0437F2,
+        _0437F1,
         _0FFF4F,
         _7A00F5,
         _FF6BB5
@@ -52,10 +52,10 @@ export const BRITTNI: Palette = {
 
     CONTRAST_MAP: {
         '#000000': ['#0FFF4F', '#FF6BB5'],
-        '#FFFFFF': ['#121212', '#0437F2', '#7A00F5'],
+        '#FFFFFF': ['#121212', '#0437F1', '#7A00F5'],
         '#121212': ['#FFFFFF', '#0FFF4F', '#FF6BB5'],
-        '#0437F2': ['#FFFFFF', '#0FFF4F'],
-        '#0FFF4F': ['#000000', '#121212', '#0437F2', '#7A00F5'],
+        '#0437F1': ['#FFFFFF', '#0FFF4F'],
+        '#0FFF4F': ['#000000', '#121212', '#0437F1', '#7A00F5'],
         '#7A00F5': ['#FFFFFF', '#0FFF4F'],
         '#FF6BB5': ['#000000', '#121212']
     },
