@@ -1,20 +1,15 @@
 # How to Add a New Color
 
-<!-- TODO: Make external links open in a new tab -->
-
 # Step 1: Categorize the Color
 
 Valid Categories:
 
   * black
   * blue
-  * brown
   * green
   * pink
   * purple
   * red
-  * white
-  * yellow
 
 # Step 2: Add the File For the Color
 
@@ -41,7 +36,7 @@ The `HEX` property should be in all uppercase letters and prepended with a `#` s
 The `NAME` property should be in all lowercase letters.<br/>
 **Example:** `NAME: "bird's eye"`
 
-If you do not have a name in mind for your color, you can find a name on the [Color namer website](https://colornamer.robertcooper.me/).
+If you do not have a name in mind for your color, you can find a name on the <a href="https://colornamer.robertcooper.me/" target="_blank" rel="noopener noreferrer">Color namer website</a>.
 
 The `DISCRIMINATOR` property should be `Discriminators.PALETTE_COLOR`.<br/>
 **Example:** `DISCRIMINATOR: Discriminators.PALETTE_COLOR`
@@ -84,11 +79,11 @@ If the "valid color" test fails, the `PaletteColor` object may not be configured
 
 ## Step 8, Part A: Add The Color Block `div`
 
-Determine if the color has a greater contrast with black (`#000000`) or white (`#FFFFFF`) on the [WebAIM Contrast Checker website](https://webaim.org/resources/contrastchecker/).
+Determine if the color has a greater contrast with black (`#000000`) or white (`#FFFFFF`) on the <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker website</a>.
 
 Add the color block `div` to the documentation. The class of the `div` should be `color-block`. The `background` of the `div` should be the new color.
 
-The link should go to the corresponding [coolors](https://coolors.co/) page for the new color.
+The link should go to the corresponding <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">coolors</a> page for the new color.
 
 The `h2` element should have a class of `color-block`.
 
