@@ -16,3 +16,4 @@
  */
 
 export * from './bc010a';
+export * from './d01625';

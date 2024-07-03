@@ -26,7 +26,7 @@ export const BLACK_HEXES: HexCollection = [
 ];
 
 export const BLUE_HEXES: HexCollection = [
-    {hexString: '#0437F2'},
+    {hexString: '#0437F1'},
     {hexString: '#1D90AF'},
     {hexString: '#7DCED8'}
 ];
@@ -50,7 +50,8 @@ export const PURPLE_HEXES: HexCollection = [
 ];
 
 export const RED_HEXES: HexCollection = [
-    {hexString: '#BC010A'}
+    {hexString: '#BC010A'},
+    {hexString: '#D01625'}
 ];
 
 export function checkForValidPaletteColor(pc: PaletteColor): void {

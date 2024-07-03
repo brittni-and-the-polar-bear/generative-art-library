@@ -24,7 +24,9 @@ Colors are in numeric order by hex value.
 
 # Table of Contents
 
-[bird's eye](#birds-eye-bc010a)
+[bird's eye (#BC010A)](#birds-eye-bc010a)
+
+[cartoon violence (#D01625)](#cartoon-violence-d01625)
 
 # bird's eye (#BC010A)
 
@@ -38,6 +40,22 @@ Colors are in numeric order by hex value.
 import {_BC010A} from 'palette-colors';
 
 let name: string = _BC010A.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# cartoon violence (#D01625)
+
+<div class="color-block" style="background: #D01625;">
+  <a href="https://coolors.co/d01625" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">cartoon violence (#D01625)</h2>
+  </a>
+</div>
+
+````typescript
+import {_D01625} from 'palette-colors';
+
+let name: string = _D01625.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
