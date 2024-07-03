@@ -21,7 +21,6 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
-// TODO - check HSL
 /**
  * <div class="color-block" style="background: #FF6BB5;">
  *     <a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
