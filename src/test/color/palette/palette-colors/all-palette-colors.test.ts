@@ -29,11 +29,13 @@ import {
     BLUE_HEXES,
     PINK_HEXES,
     PURPLE_HEXES,
+    RED_HEXES,
     checkComponents,
     checkForValidStringMap,
     p5ColorToColorComponents,
     checkForValidHexColorString,
-    checkForEquivalentComponents
+    checkForEquivalentComponents,
+    checkForValidPaletteColor
 } from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
@@ -44,7 +46,8 @@ ALL_HEXES.push(
     ...BLUE_HEXES,
     ...GREEN_HEXES,
     ...PINK_HEXES,
-    ...PURPLE_HEXES
+    ...PURPLE_HEXES,
+    ...RED_HEXES
 );
 
 function makeHSLKey(HSL: {H: number, S: number, L: number}): string {
@@ -67,6 +70,38 @@ describe('all palette colors', (): void => {
     test('valid string map: ALL_PALETTE_COLORS', (): void => {
         checkForValidStringMap(ALL_PALETTE_COLORS, ALL_HEXES.length);
     });
+
+    test.each(
+        ALL_HEXES
+    )('$# - successful addition of color: $hexString',
+        ({hexString}): void => {
+            expect(hexString).toBeTruthy();
+            checkForValidHexColorString(hexString);
+
+            const pc: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
+            expect(pc).toBeTruthy();
+
+            if (pc) {
+                expect(pc.HEX).toBe(hexString);
+            }
+        }
+    );
+
+    test.each(
+        ALL_HEXES
+    )('$# - valid color: $hexString',
+        ({hexString}): void => {
+            expect(hexString).toBeTruthy();
+            checkForValidHexColorString(hexString);
+
+            const pc: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
+            expect(pc).toBeTruthy();
+
+            if (pc) {
+                checkForValidPaletteColor(pc);
+            }
+        }
+    );
 
     test('all colors are unique', (): void => {
         const hexValues: Set<string> = new Set<string>();
@@ -116,36 +151,6 @@ describe('all palette colors', (): void => {
                 checkForEquivalentComponents(hslComponents, hexComponents);
                 checkForEquivalentComponents(hslComponents, rgbComponents);
                 checkForEquivalentComponents(rgbComponents, hexComponents);
-            }
-        }
-    );
-
-    test.each(
-        ALL_HEXES
-    )('$# - successful addition of color: $hexString',
-        ({hexString}): void => {
-            expect(hexString).toBeTruthy();
-            checkForValidHexColorString(hexString);
-
-            const pc: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
-            expect(pc).toBeTruthy();
-
-            if (pc) {
-                expect(pc.RGB).toBeTruthy();
-                expect(pc.RGB.R).toBeTruthy();
-                expect(pc.RGB.G).toBeTruthy();
-                expect(pc.RGB.B).toBeTruthy();
-
-                expect(pc.HSL).toBeTruthy();
-                expect(pc.HSL.H).toBeTruthy();
-                expect(pc.HSL.S).toBeTruthy();
-                expect(pc.HSL.L).toBeTruthy();
-
-                expect(pc.HEX).toBeTruthy();
-                checkForValidHexColorString(pc.HEX);
-                expect(pc.HEX).toBe(hexString);
-
-                expect(pc.NAME).toBeTruthy();
             }
         }
     );

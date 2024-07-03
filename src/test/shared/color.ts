@@ -19,7 +19,8 @@ import P5Lib from 'p5';
 
 import {Color, ColorSelector, ColorSelectorType} from 'color';
 import {SketchContext} from 'context';
-import {checkNumberWithinAmount} from "./math";
+
+import {checkNumberWithinAmount} from './math';
 
 const p5: P5Lib = SketchContext.p5;
 

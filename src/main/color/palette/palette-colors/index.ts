@@ -20,4 +20,5 @@ export * from './blue';
 export * from './green';
 export * from './pink';
 export * from './purple';
+export * from './red';
 export * from './palette-color-maps';

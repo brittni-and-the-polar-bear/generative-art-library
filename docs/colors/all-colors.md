@@ -10,4 +10,6 @@
 
 ## [Purple Colors](./purple-colors.md)
 
+## [Red Colors](./red-colors.md)
+
 ## [How to Add a New Color](./add-new-color.md)

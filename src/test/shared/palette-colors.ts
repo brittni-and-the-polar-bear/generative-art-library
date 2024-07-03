@@ -15,6 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {PaletteColor} from 'palette';
+
+import {checkForValidHexColorString} from './color';
+
 type HexCollection = {hexString: string}[];
 
 export const BLACK_HEXES: HexCollection = [
@@ -44,3 +48,19 @@ export const PINK_HEXES: HexCollection = [
 export const PURPLE_HEXES: HexCollection = [
     {hexString: '#7A00F5'}
 ];
+
+export const RED_HEXES: HexCollection = [
+    {hexString: '#BC010A'}
+];
+
+export function checkForValidPaletteColor(pc: PaletteColor): void {
+    expect(pc.RGB).toBeTruthy();
+    expect(pc.HSL).toBeTruthy();
+
+    expect(pc.HEX).toBeTruthy();
+    checkForValidHexColorString(pc.HEX);
+    expect(pc.HEX.toUpperCase()).toBe(pc.HEX);
+
+    expect(pc.NAME).toBeTruthy();
+    expect(pc.NAME.toLowerCase()).toBe(pc.NAME);
+}

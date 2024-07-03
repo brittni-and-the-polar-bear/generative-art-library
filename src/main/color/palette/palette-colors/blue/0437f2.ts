@@ -21,6 +21,7 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
+// TODO - check HSL
 /**
  * <div class="color-block" style="background: #0437F2;">
  *     <a href="https://coolors.co/0437f2" target="_blank" rel="noopener noreferrer">

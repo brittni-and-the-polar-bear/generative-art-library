@@ -19,31 +19,28 @@ import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
 
-import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
+import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
 
-// TODO - check HSL
 /**
- * <div class="color-block" style="background: #FF6BB5;">
- *     <a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
+ * <div class="color-block" style="background: #BC010A;">
+ *     <a href="https://coolors.co/bc010a" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
  *     </a>
  * </div>
  *
- * @see {@link BRITTNI}
- *
  * @category Palette Colors (All)
- * @category Palette Colors (Pink)
+ * @category Palette Colors (Red)
  *
  * @source
  */
-export const _FF6BB5: PaletteColor = {
-    HEX: '#FF6BB5',
-    RGB: {R: 255, G: 107, B: 181},
-    HSL: {H: 330, S: 100, L: 71},
-    NAME: 'fen hong pink',
+export const _BC010A: PaletteColor = {
+    HEX: '#BC010A',
+    RGB: {R: 188, G: 1, B: 10},
+    HSL: {H: 357, S: 99, L: 37},
+    NAME: "bird's eye",
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
-};
+}
 
-PINK_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
-ALL_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
-ColorNameManager.addColor(_FF6BB5);
+RED_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
+ALL_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
+ColorNameManager.addColor(_BC010A);
