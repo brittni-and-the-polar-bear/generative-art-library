@@ -15,13 +15,20 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {PaletteColor} from 'palette';
 import {BLUE_PALETTE_COLORS} from 'palette-colors';
-import {BLUE_HEXES, checkForValidStringMap} from 'unit-test/shared';
+
+import {
+    BLUE_HEXES,
+    checkForValidStringMap,
+    checkForValidHexColorString,
+    checkForValidPaletteColor
+} from 'unit-test/shared';
 
 describe('blue palette colors', (): void => {
     test('valid string map: BLUE_PALETTE_COLORS', (): void => {
-       checkForValidStringMap(BLUE_PALETTE_COLORS);
-       expect(BLUE_PALETTE_COLORS.size).toBe(BLUE_HEXES.length);
+        checkForValidStringMap(BLUE_PALETTE_COLORS);
+        expect(BLUE_PALETTE_COLORS.size).toBe(BLUE_HEXES.length);
     });
 
     test.each(
@@ -30,6 +37,38 @@ describe('blue palette colors', (): void => {
         ({hexString}): void => {
             expect(BLUE_HEXES).toBeTruthy();
             expect(new Set<string>(BLUE_PALETTE_COLORS.keys)).toContain(hexString);
+        }
+    );
+
+    test.each(
+        BLUE_HEXES
+    )('$# - successful addition of blue color: $hexString',
+        ({hexString}): void => {
+            expect(hexString).toBeTruthy();
+            checkForValidHexColorString(hexString);
+
+            const pc: PaletteColor | undefined = BLUE_PALETTE_COLORS.get(hexString);
+            expect(pc).toBeTruthy();
+
+            if (pc) {
+                expect(pc.HEX).toBe(hexString);
+            }
+        }
+    );
+
+    test.each(
+        BLUE_HEXES
+    )('$# - valid blue color: $hexString',
+        ({hexString}): void => {
+            expect(hexString).toBeTruthy();
+            checkForValidHexColorString(hexString);
+
+            const pc: PaletteColor | undefined = BLUE_PALETTE_COLORS.get(hexString);
+            expect(pc).toBeTruthy();
+
+            if (pc) {
+                checkForValidPaletteColor(pc);
+            }
         }
     );
 });

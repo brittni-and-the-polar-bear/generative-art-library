@@ -40,7 +40,6 @@ describe('red palette colors', (): void => {
         }
     );
 
-    // TODO - add to other color categories
     test.each(
         RED_HEXES
     )('$# - successful addition of red color: $hexString',
@@ -57,7 +56,6 @@ describe('red palette colors', (): void => {
         }
     );
 
-    // TODO - add to other color categories
     test.each(
         RED_HEXES
     )('$# - valid red color: $hexString',
