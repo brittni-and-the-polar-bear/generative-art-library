@@ -21,9 +21,11 @@
   * [Step 8, Part B: Add the `@category` Annotations](#step-8-part-b-add-the-category-annotations)
   * [Step 8, Part C: Add the `@source` Annotation](#step-8-part-c-add-the-source-annotation)
 
-[Step 9: Add Color to the Color Category Markdown Page](#step-9-add-color-to-the-color-category-markdown-page)
+[Step 9: Add the New Color to the Color Category Markdown Page](#step-9-add-the-new-color-to-the-color-category-markdown-page)
 
-[Step 10: Add Color to the Release Notes](#step-10-add-color-to-the-release-notes)
+[Step 10: Add the New Color to the Color Category by Shade Markdown Page](#step-10-add-the-new-color-to-the-color-category-by-shade-markdown-page)
+
+[Step 11: Add Color to the Release Notes](#step-11-add-color-to-the-release-notes)
 
 [Full `PaletteColor` File Example](#full-palettecolor-file-example)
 
@@ -102,8 +104,7 @@ In the `/src/test/shared/palette-colors.ts` file, add the hex value of the color
 
 Run the unit tests for all palette colors (`/src/test/color/palette/palette-colors/all-palette-colors.test.ts`).
 
-Run the unit tests for the category of the new color.<br/>
-**Example:** `/src/test/color/palette/palette-colors/red/red-palette-colors.test.ts`
+Run the unit tests for all palette color categories (`/src/test/color/palette/palette-colors/palette-colors.test.ts`).
 
 For any failing tests, be sure that the `PaletteColor` object is being properly exported and added to any required maps.
 
@@ -157,9 +158,11 @@ Add a `@source` annotation to the documentation. This will allow the source code
 
 [Table of Contents](#table-of-contents)
 
-# Step 9: Add Color to the Color Category Markdown Page
+# Step 9: Add the New Color to the Color Category Markdown Page
 
-Add an entry to the correct color category markdown page for the new color. This entry will include the color block `div` and TypeScript example. Be sure to add the new markdown section to the Table of Contents.
+Add an entry to the correct color category markdown page for the new color.
+This entry will include the color block `div` and TypeScript example.
+Be sure to add the new markdown section to the Table of Contents.
 
 ## Color Category Entry Example
 
@@ -180,7 +183,24 @@ let name: string = _BC010A.NAME;
 
 [Table of Contents](#table-of-contents)
 
-# Step 10: Add Color to the Release Notes
+# Step 10: Add the New Color to the Color Category by Shade Markdown Page
+
+Add an entry to the correct color category by shade markdown page for the new color.
+This entry will only include the color block `div`.
+
+## Color Category by Shade Entry Example
+
+```markdown
+<div class="color-block" style="background: #BC010A;">
+  <a href="./red-colors.html#birds-eye-bc010a">
+    <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
+  </a>
+</div>
+```
+
+[Table of Contents](#table-of-contents)
+
+# Step 11: Add Color to the Release Notes
 
 Add the color as a new constant to the release notes draft markdown.
 

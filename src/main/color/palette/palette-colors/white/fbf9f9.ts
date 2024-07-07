@@ -21,6 +21,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #FBF9F9;">
+ *     <a href="https://coolors.co/fbf9f9" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">doctor white (#FBF9F9)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (White)
+ *
+ * @source
+ */
 export const _FBF9F9: PaletteColor = {
     HEX: '#FBF9F9',
     RGB: {R: 251, G: 249, B: 249},

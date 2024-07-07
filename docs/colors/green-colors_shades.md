@@ -22,19 +22,19 @@
 # Green Colors by Shade
 
 <div class="color-block" style="background: #007058;">
-  <a href="./green-colors.html#teal-dark-green-007058" target="_blank" rel="noopener noreferrer">
+  <a href="./green-colors.html#teal-dark-green-007058">
     <h2 class="color-block white-pass">teal dark green (#007058)</h2>
   </a>
 </div>
 
 <div class="color-block" style="background: #23856D;">
-  <a href="./green-colors.html#accent-green-blue-23856d" target="_blank" rel="noopener noreferrer">
+  <a href="./green-colors.html#accent-green-blue-23856d">
     <h2 class="color-block black-pass">accent green blue (#23856D)</h2>
   </a>
 </div>
 
 <div class="color-block" style="background: #0FFF4F;">
-  <a href="./green-colors.html#cathode-green-0fff4f" target="_blank" rel="noopener noreferrer">
+  <a href="./green-colors.html#cathode-green-0fff4f">
     <h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
   </a>
 </div>
