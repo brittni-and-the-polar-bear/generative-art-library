@@ -33,15 +33,6 @@ describe('green palette colors', (): void => {
 
     test.each(
         GREEN_HEXES
-    )('$# successful addition of green color: $hexString',
-        ({hexString}): void => {
-            expect(GREEN_HEXES).toBeTruthy();
-            expect(new Set<string>(GREEN_PALETTE_COLORS.keys)).toContain(hexString);
-        }
-    );
-
-    test.each(
-        GREEN_HEXES
     )('$# - successful addition of green color: $hexString',
         ({hexString}): void => {
             expect(hexString).toBeTruthy();

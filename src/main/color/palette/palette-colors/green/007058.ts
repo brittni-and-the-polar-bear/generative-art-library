@@ -15,12 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
 
-// TODO - documentation
-// TODO - release notes
-// TODO - unit tests
+import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from "../palette-color-maps";
+
+/**
+ * <div class="color-block" style="background: #007058;">
+ *     <a href="https://coolors.co/007058" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">teal dark green (#007058)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Green)
+ *
+ * @source
+ */
 export const _007058: PaletteColor = {
     HEX: '#007058',
     RGB: {R: 0, G: 112, B: 88},
@@ -28,3 +40,7 @@ export const _007058: PaletteColor = {
     NAME: 'teal dark green',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+ALL_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
+GREEN_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
+ColorNameManager.addColor(_007058);

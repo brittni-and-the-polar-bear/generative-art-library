@@ -32,7 +32,7 @@ export const BLUE_HEXES: HexCollection = [
 ];
 
 export const GREEN_HEXES: HexCollection = [
-    {hexString: '#006F57'},
+    {hexString: '#007058'},
     {hexString: '#0FFF4F'},
     {hexString: '#23856D'}
 ];
