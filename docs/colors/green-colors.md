@@ -22,11 +22,15 @@
 
 Colors are in numeric order by hex value.
 
+Colors are ordered by shade on the [Green Colors by Shade](./green-colors_shades.md) page.
+
 # Table of Contents
 
 [teal dark green (#007058)](#teal-dark-green-007058)
 
 [cathode green (#0FFF4F)](#cathode-green-0fff4f)
+
+[accent green blue (#23856D)](#accent-green-blue-23856d)
 
 # teal dark green (#007058)
 
@@ -56,6 +60,22 @@ let name: string = _007058.NAME;
 import {_0FFF4F} from 'palette-colors';
 
 let name: string = _0FFF4F.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# accent green blue (#23856D)
+
+<div class="color-block" style="background: #23856D;">
+  <a href="https://coolors.co/23856d" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">accent green blue (#23856D)</h2>
+  </a>
+</div>
+
+````typescript
+import {_23856D} from 'palette-colors';
+
+let name: string = _23856D.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

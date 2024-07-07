@@ -21,6 +21,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #23856D;">
+ *     <a href="https://coolors.co/23856d" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">accent green blue (#23856D)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Green)
+ *
+ * @source
+ */
 export const _23856D: PaletteColor = {
     HEX: '#23856D',
     RGB: {R: 35, G: 133, B: 109},
