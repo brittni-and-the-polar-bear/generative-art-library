@@ -15,5 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './0fff4f';
-export * from './007058';
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+// TODO - documentation
+// TODO - release notes
+// TODO - unit tests
+export const _007058: PaletteColor = {
+    HEX: '#007058',
+    RGB: {R: 0, G: 112, B: 88},
+    HSL: {H: 167, S: 100, L: 22},
+    NAME: 'teal dark green',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
