@@ -35,7 +35,7 @@ import {
     p5ColorToColorComponents,
     checkForValidHexColorString,
     checkForEquivalentComponents,
-    checkForValidPaletteColor
+    checkForValidPaletteColor, WHITE_HEXES
 } from 'unit-test/shared';
 
 const p5: P5Lib = SketchContext.p5;
@@ -47,7 +47,8 @@ ALL_HEXES.push(
     ...GREEN_HEXES,
     ...PINK_HEXES,
     ...PURPLE_HEXES,
-    ...RED_HEXES
+    ...RED_HEXES,
+    ...WHITE_HEXES
 );
 
 function makeHSLKey(HSL: {H: number, S: number, L: number}): string {
