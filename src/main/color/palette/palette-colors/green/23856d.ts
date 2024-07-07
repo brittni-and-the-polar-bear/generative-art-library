@@ -15,6 +15,20 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './007058';
-export * from './0fff4f';
-export * from './23856d';
+import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
+
+export const _23856D: PaletteColor = {
+    HEX: '#23856D',
+    RGB: {R: 35, G: 133, B: 109},
+    HSL: {H: 165, S: 58, L: 33},
+    NAME: 'accent green blue',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+ALL_PALETTE_COLORS.setUndefinedKey(_23856D.HEX, _23856D);
+GREEN_PALETTE_COLORS.setUndefinedKey(_23856D.HEX, _23856D);
+ColorNameManager.addColor(_23856D);
