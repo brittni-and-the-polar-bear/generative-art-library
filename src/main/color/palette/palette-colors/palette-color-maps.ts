@@ -93,3 +93,14 @@ export const PURPLE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Pale
  * @category Palette Colors (Red)
  */
 export const RED_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
+
+/**
+ * A map of hex values to {@link PaletteColor} objects for all
+ * white palette colors.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/white-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ *
+ * @category Palette Color Collections
+ * @category Palette Colors (White)
+ */
+export const WHITE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();

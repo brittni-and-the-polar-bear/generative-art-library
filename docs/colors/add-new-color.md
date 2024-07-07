@@ -31,12 +31,13 @@
 
 Valid Categories:
 
-  * black
-  * blue
-  * green
-  * pink
-  * purple
-  * red
+* black
+* blue
+* green
+* pink
+* purple
+* red
+* white
 
 [Table of Contents](#table-of-contents)
 
