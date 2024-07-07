@@ -19,7 +19,7 @@ import {PaletteColor} from 'palette';
 
 import {checkForValidHexColorString} from './color';
 
-type HexCollection = {hexString: string}[];
+export type HexCollection = {hexString: string}[];
 
 export const BLACK_HEXES: HexCollection = [
     {hexString: '#121212'}
@@ -52,6 +52,10 @@ export const PURPLE_HEXES: HexCollection = [
 export const RED_HEXES: HexCollection = [
     {hexString: '#BC010A'},
     {hexString: '#D01625'}
+];
+
+export const WHITE_HEXES: HexCollection = [
+    {hexString: '#FBF9F9'}
 ];
 
 export function checkForValidPaletteColor(pc: PaletteColor): void {

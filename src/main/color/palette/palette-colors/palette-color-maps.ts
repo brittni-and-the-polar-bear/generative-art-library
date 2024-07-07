@@ -94,6 +94,7 @@ export const PURPLE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Pale
  */
 export const RED_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - release notes
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * white palette colors.
