@@ -79,10 +79,10 @@ export class PaletteColorSelector extends ColorSelector {
     }
 
     /**
-     * @returns 1
+     * @returns 2
      */
     private static get MIN_COLOR_COUNT(): number {
-        return 1;
+        return 2;
     }
 
     /**

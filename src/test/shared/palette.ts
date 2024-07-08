@@ -39,7 +39,7 @@ export function checkComponents(actual: ColorComponents, expected: PaletteColor)
 export function checkForValidPalette(palette: Palette, expectedColors?: PaletteColor[]): void {
     expect(palette).toBeTruthy();
     expect(palette.NAME).toBeTruthy();
-    expect(palette.SOURCE).toBeTruthy();
+    expect(palette.NAME.toLowerCase()).toBe(palette.NAME)
     expect(palette.COLORS).toBeTruthy();
     expect(palette.COLORS.length).toBeGreaterThanOrEqual(2);
 

@@ -38,8 +38,6 @@ import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 export const BRITTNI: Palette = {
     NAME: 'brittni',
 
-    SOURCE: 'brittni',
-
     IS_GRADIENT: false,
 
     COLORS: [

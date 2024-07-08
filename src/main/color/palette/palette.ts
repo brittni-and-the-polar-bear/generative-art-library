@@ -32,7 +32,7 @@ export interface Palette {
     /**
      * The source of the palette. May be the URL where the palette can be found.
      */
-    readonly SOURCE: string,
+    readonly SOURCE?: string,
 
     /**
      * A flag indicating if the palette is a gradient.
@@ -51,7 +51,7 @@ export interface Palette {
      * The only colors listed in this map should be the colors of the
      * palette, black (#000000), and white (#FFFFFF).
      */
-    readonly CONTRAST_MAP: {
+    readonly CONTRAST_MAP?: {
         /**
          * The colors in the palette that pass the WCAG AA standard when
          * compared to black (#000000). This list should NOT contain
