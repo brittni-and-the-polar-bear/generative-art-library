@@ -14,7 +14,7 @@
 
 [Step 6: Add the Color to the `ColorNameManager`](#step-6-add-the-color-to-the-colornamemanager)
 
-[Step 7: Add the Color to the PaletteColor Unit Tests](#step-7-add-the-color-to-the-palettecolor-unit-tests)
+[Step 7: Add the New Color to the PaletteColor Unit Tests](#step-7-add-the-new-color-to-the-palettecolor-unit-tests)
 
 [Step 8: Add Documentation](#step-8-add-documentation)
   * [Step 8, Part A: Add The Color Block `div`](#step-8-part-a-add-the-color-block-div)
@@ -98,7 +98,7 @@ Pass the `PaletteColor` object into the `ColorNameManager.addColor` method.
 
 [Table of Contents](#table-of-contents)
 
-# Step 7: Add the Color to the PaletteColor Unit Tests
+# Step 7: Add the New Color to the PaletteColor Unit Tests
 
 In the `/src/test/shared/palette-colors.ts` file, add the hex value of the color to the proper category collection.
 
