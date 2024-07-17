@@ -14,10 +14,11 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Affero General Public License for more details.
  */
-
+import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
 import {_007058, _23856D, _BC010A, _D01625, _FBF9F9} from 'palette-colors';
-import {Discriminators} from "discriminator";
+
+import {ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES} from '../../palette-maps';
 
 export const MUTED_CHRISTMAS: Palette = {
     NAME: 'muted christmas',
@@ -46,3 +47,7 @@ export const MUTED_CHRISTMAS: Palette = {
 
     DISCRIMINATOR: Discriminators.PALETTE
 }
+
+ALL_PALETTES.setUndefinedKey(MUTED_CHRISTMAS.NAME, MUTED_CHRISTMAS);
+HOLIDAY_PALETTES.setUndefinedKey(MUTED_CHRISTMAS.NAME, MUTED_CHRISTMAS);
+CHRISTMAS_PALETTES.setUndefinedKey(MUTED_CHRISTMAS.NAME, MUTED_CHRISTMAS);
