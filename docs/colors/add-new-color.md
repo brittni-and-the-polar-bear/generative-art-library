@@ -8,11 +8,11 @@
 
 [Step 3: Create the `PaletteColor` Object](#step-3-create-the-palettecolor-object)
 
-[Step 4: Add the Color to the `PaletteColor` Maps](#step-4-add-the-color-to-the-palettecolor-maps)
+[Step 4: Export the Color from the `index.ts` File](#step-4-export-the-color-from-the-indexts-file)
 
-[Step 5: Add the Color to the `ColorNameManager`](#step-5-add-the-color-to-the-colornamemanager)
+[Step 5: Add the Color to the `PaletteColor` Maps](#step-5-add-the-color-to-the-palettecolor-maps)
 
-[Step 6: Export the Color from the `index.ts` File](#step-6-export-the-color-from-the-indexts-file)
+[Step 6: Add the Color to the `ColorNameManager`](#step-6-add-the-color-to-the-colornamemanager)
 
 [Step 7: Add the Color to the PaletteColor Unit Tests](#step-7-add-the-color-to-the-palettecolor-unit-tests)
 
@@ -77,7 +77,14 @@ The `DISCRIMINATOR` property should be `Discriminators.PALETTE_COLOR`.<br/>
 
 [Table of Contents](#table-of-contents)
 
-# Step 4: Add the Color to the `PaletteColor` Maps
+# Step 4: Export the Color from the `index.ts` File
+
+In the `index.ts` file in the same category directory, add a statement to export the color.<br/>
+**Example:** `export * from './bc010a';`
+
+[Table of Contents](#table-of-contents)
+
+# Step 5: Add the Color to the `PaletteColor` Maps
 
 Add the color to the `PaletteColor` map matching its category, using the `setUndefinedKey` method. The key will be the `HEX` property, and the value will be the `PaletteColor` object.
 
@@ -85,16 +92,9 @@ Add the color to the `PaletteColor` map for all palette colors, using the `setUn
 
 [Table of Contents](#table-of-contents)
 
-# Step 5: Add the Color to the `ColorNameManager`
+# Step 6: Add the Color to the `ColorNameManager`
 
 Pass the `PaletteColor` object into the `ColorNameManager.addColor` method.
-
-[Table of Contents](#table-of-contents)
-
-# Step 6: Export the Color from the `index.ts` File
-
-In the `index.ts` file in the same category directory, add a statement to export the color.<br/>
-**Example:** `export * from './bc010a';`
 
 [Table of Contents](#table-of-contents)
 
