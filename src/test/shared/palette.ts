@@ -17,6 +17,7 @@
 
 import {Color} from 'color';
 import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
+import {Discriminators} from 'discriminator';
 import {StringMap} from 'map';
 import {Palette, PaletteColor} from 'palette';
 
@@ -42,6 +43,7 @@ export function checkForValidPalette(palette: Palette, expectedColors?: PaletteC
     expect(palette.NAME.toLowerCase()).toBe(palette.NAME)
     expect(palette.COLORS).toBeTruthy();
     expect(palette.COLORS.length).toBeGreaterThanOrEqual(2);
+    expect(palette.DISCRIMINATOR).toBe(Discriminators.PALETTE);
 
     if (expectedColors) {
         expect(palette.COLORS).toEqual(expectedColors);

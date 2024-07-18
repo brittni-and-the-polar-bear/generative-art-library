@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
 
 import {checkForValidHexColorString} from './color';
@@ -68,4 +69,6 @@ export function checkForValidPaletteColor(pc: PaletteColor): void {
 
     expect(pc.NAME).toBeTruthy();
     expect(pc.NAME.toLowerCase()).toBe(pc.NAME);
+
+    expect(pc.DISCRIMINATOR).toBe(Discriminators.PALETTE_COLOR);
 }
