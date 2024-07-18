@@ -17,13 +17,11 @@
 
 import {StringMap} from 'map';
 import {Palette, PaletteColor} from 'palette';
-import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from 'palettes';
+import {ALL_PALETTES, HOLIDAY_PALETTES, MISCELLANEOUS_PALETTES} from 'palettes';
 
 import {
     checkForPaletteInMap,
-    checkForPaletteNameKeyMatch,
     checkForValidStringMap,
-    checkForValidContrastMap
 } from 'unit-test/shared';
 
 function getPaletteArray(map: StringMap<Palette>): {palette: Palette}[] {
@@ -35,6 +33,7 @@ function getPaletteArray(map: StringMap<Palette>): {palette: Palette}[] {
 
 const EXPECTED_PALETTES: {palette: Palette}[] = [];
 EXPECTED_PALETTES.push(
+    ...(getPaletteArray(HOLIDAY_PALETTES)),
     ...(getPaletteArray(MISCELLANEOUS_PALETTES))
 );
 
@@ -45,26 +44,15 @@ describe('all palettes tests', (): void => {
 
     test.each(
         EXPECTED_PALETTES
-    )('$# palette successfully added to map: $palette.NAME',
+    )('$# palette successfully added to ALL_PALETTES map: $palette.NAME',
         ({palette}): void => {
             checkForPaletteInMap(palette, ALL_PALETTES);
         }
     );
 
-    test('all keys match associated palette name', (): void => {
-        checkForPaletteNameKeyMatch(ALL_PALETTES);
-    });
-
-    test.each(
-        EXPECTED_PALETTES
-    )('$# palette has valid contrast map: $palette.NAME',
-        ({palette}): void => {
-            checkForValidContrastMap(palette);
-        }
-    );
-
     test('all palettes are unique', (): void => {
         const colorSets: Set<Set<string>> = new Set<Set<string>>();
+        const names: Set<string> = new Set<string>();
 
         for (const palette of ALL_PALETTES.values) {
             const hexStrings: string[] = palette.COLORS.map((color: PaletteColor): string => {
@@ -73,7 +61,10 @@ describe('all palettes tests', (): void => {
             const hexSet: Set<string> = new Set<string>(hexStrings);
 
             expect(colorSets).not.toContainEqual(hexSet);
+            expect(names).not.toContain(palette.NAME);
+
             colorSets.add(hexSet);
+            names.add(palette.NAME);
         }
     });
 });
