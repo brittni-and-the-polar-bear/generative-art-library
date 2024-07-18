@@ -2,6 +2,8 @@
 
 # Miscellaneous Palettes
 
+Palettes are in alphabetic order by object name.
+
 # Table of Contents
 
 [brittni](#brittni)
@@ -19,3 +21,7 @@ let name: string = BRITTNI.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
+
+----
+
+[All Palettes](../all-palettes.md)
