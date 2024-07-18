@@ -167,6 +167,18 @@ Run each category unit test to ensure that they pass.
 
 [Table of Contents](#table-of-contents)
 
+# Step 9: Run the ALL_PALETTES Unit Test
+
+Run the unit test for the `ALL_PALETTES` palette map (`/src/test/color/palette/palettes/all-palettes.test.ts`).
+
+If the "all palettes are unique" test fails, the palette already exists in the library or a palette with the same name already exists in the library.
+
+The colors in your palette may exist in a different palette under a different name or in a different category.
+
+You may need to change the name of your palette, if your color combination does not already exist in the library.
+
+[Table of Contents](#table-of-contents)
+
 # Full `PaletteColor` File Example
 
 ```typescript
