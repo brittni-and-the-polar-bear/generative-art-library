@@ -2,6 +2,8 @@
 
 # Table of Contents
 
+
+
 # Step 1: [Add Any New Colors for the Palette](../colors/add-new-color.md)
 
 [Table of Contents](#table-of-contents)
@@ -88,14 +90,14 @@ All hex values should be written with capital letters.
 ### `CONTRAST_MAP` Example
 
 ```typescript
-// type definition for example purposes only
+// type definition included for example purposes only
 type ContrastMap = {
     readonly '#000000': string[],
     readonly '#FFFFFF': string[],
     readonly [HEX: string]: string[]
 }
 
-// const object declaration for example purposes only
+// const object declaration included for example purposes only
 // CONTRAST_MAP will be a property of the new Palette object.
 const CONTRAST_MAP: ContrastMap = {
     '#000000': ['#0FFF4F', '#FF6BB5'],
@@ -171,11 +173,117 @@ Run each category unit test to ensure that they pass.
 
 Run the unit test for the `ALL_PALETTES` palette map (`/src/test/color/palette/palettes/all-palettes.test.ts`).
 
-If the "all palettes are unique" test fails, the palette already exists in the library or a palette with the same name already exists in the library.
+If the "all palettes are unique" test fails, the new palettes color combination already exists in the library or a palette with the same name already exists in the library.
 
-The colors in your palette may exist in a different palette under a different name or in a different category.
+The colors in your palette may exist in a palette under a different name or in a different category.
 
 You may need to change the name of your palette, if your color combination does not already exist in the library.
+
+[Table of Contents](#table-of-contents)
+
+# Step 10: Add Documentation
+
+## Step 10, Part A: Add the Coolors Palette Widget
+
+Go to <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">https://coolors.co/</a>
+
+Create a palette with all the colors of the new palette.
+The palette color order should match how the colors are listed in the source code.
+
+Export the palette for embedding and copy the provided HTML code.
+
+Paste the HTML at the top of the palette documentation.
+
+### Coolors Palette Widget Example
+
+```html
+<!-- Coolors Palette Widget -->
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+<script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+```
+
+[Table of Contents](#table-of-contents)
+
+## Step 10, Part B: Add the `@see` Annotations for Each `PaletteColor`
+
+Add a `@see` annotation with a `@link` for every `PaletteColor` object in the palette.
+
+**Example:** `@see {@link _121212}`
+
+[Table of Contents](#table-of-contents)
+
+## Step 10, Part C: Add the `@see` Annotation to Each `PaletteColor`
+
+Add a `@see` annotation with a `@link` to the palette in documentation of every `PaletteColor` object in the palette.
+
+**Example:** `@see {@link BRITTNI}`
+
+[Table of Contents](#table-of-contents)
+
+## Step 10, Part D: Add the `@category` Annotations
+
+Add `@category` annotations for the `Palettes (All)` category and each palette category of the new palette (e.g. `@category Palettes (Miscellaneous)`).
+
+[Table of Contents](#table-of-contents)
+
+# Step 11: Add the New Palette to the Palette Category Markdown Page
+
+Add an entry to the correct palette category markdown page for the new palette.
+This entry will include the Coolors Palette Widget and TypeScript example.
+
+Be sure to add the new markdown section to the Table of Contents.
+
+The palette should only be added to one category markdown file, preferably the most specific category.
+
+## Palette Category Entry Example
+
+````markdown
+# brittni
+
+<!-- Coolors Palette Widget -->
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+<script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+
+```typescript
+import {BRITTNI} from 'palettes';
+
+let name: string = BRITTNI.NAME;
+```
+````
+
+[Table of Contents](#table-of-contents)
+
+# Step 12: Add Palette to the Release Notes
+
+Add the palette as a new constant to the release notes draft markdown file.
+
+## Release Notes Entry Example
+
+````markdown
+## `BRITTNI`
+
+<!-- Coolors Palette Widget -->
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+<script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+
+```typescript
+/**
+ * <!-- Coolors Palette Widget -->
+ * <script src="https://coolors.co/palette-widget/widget.js"></script>
+ * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+ *
+ * @see {@link _121212}
+ * @see {@link _0437F1}
+ * @see {@link _0FFF4F}
+ * @see {@link _7A00F5}
+ * @see {@link _FF6BB5}
+ *
+ * @category Palettes (All)
+ * @category Palettes (Miscellaneous)
+ */
+declare const BRITTNI: Palette;
+```
+````
 
 [Table of Contents](#table-of-contents)
 

@@ -162,6 +162,7 @@ Add a `@source` annotation to the documentation. This will allow the source code
 
 Add an entry to the correct color category markdown page for the new color.
 This entry will include the color block `div` and TypeScript example.
+
 Be sure to add the new markdown section to the Table of Contents.
 
 ## Color Category Entry Example
@@ -202,7 +203,7 @@ This entry will only include the color block `div`.
 
 # Step 11: Add Color to the Release Notes
 
-Add the color as a new constant to the release notes draft markdown.
+Add the color as a new constant to the release notes draft markdown file.
 
 ## Release Notes Entry Example
 
