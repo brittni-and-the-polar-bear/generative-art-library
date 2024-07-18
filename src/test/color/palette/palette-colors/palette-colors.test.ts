@@ -61,8 +61,7 @@ describe.each(
         const CATEGORY_HEXES: {hexString: string}[] = hexes;
 
         test(`valid string map: ${PALETTE_MAP_NAME}`, (): void => {
-            checkForValidStringMap(colorsMap);
-            expect(colorsMap.size).toBe(hexes.length);
+            checkForValidStringMap(colorsMap, hexes.length);
         });
 
         test.each(
