@@ -22,7 +22,7 @@ import {BRITTNI} from 'palettes';
 import {checkForValidPalette} from 'unit-test/shared';
 
 describe('BRITTNI palette tests', (): void => {
-    const colors: PaletteColor[] = [
+    const expectedColors: PaletteColor[] = [
         _121212,
         _0437F1,
         _0FFF4F,
@@ -31,6 +31,6 @@ describe('BRITTNI palette tests', (): void => {
     ]
 
     test('BRITTNI palette is valid', (): void => {
-        checkForValidPalette(BRITTNI, colors);
+        checkForValidPalette(BRITTNI, expectedColors);
     });
 });
