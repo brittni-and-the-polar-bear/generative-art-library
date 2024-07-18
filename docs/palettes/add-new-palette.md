@@ -57,14 +57,21 @@ Otherwise, it should be set to `false`.
 
 [Table of Contents](#table-of-contents)
 
-## Step 4, Part D: Set the Colors
+## Step 4, Part D: Set the `DISCRIMINATOR` Property
+
+The `DISCRIMINATOR` property should be `Discriminators.PALETTE`.<br/>
+**Example:** `DISCRIMINATOR: Discriminators.PALETTE`
+
+[Table of Contents](#table-of-contents)
+
+## Step 4, Part E: Set the Colors
 
 The `COLORS` property of the palette will be an array of `PaletteColor` objects.
 The colors array should be considered an ordered list.
 
 [Table of Contents](#table-of-contents)
 
-## Step 4, Part E: Create the Contrast Map
+## Step 4, Part F: Create the Contrast Map
 
 The `CONTRAST_MAP` property is an optional property.
 
@@ -103,10 +110,60 @@ const CONTRAST_MAP: ContrastMap = {
 
 [Table of Contents](#table-of-contents)
 
-## Step 4, Part F: Set the `DISCRIMINATOR` Property
+# Step 5: Export the Color from the `index.ts` File
 
-The `DISCRIMINATOR` property should be `Discriminators.PALETTE`.<br/>
-**Example:** `DISCRIMINATOR: Discriminators.PALETTE`
+In the `index.ts` file in the same category directory, add a statement to export the palette.<br/>
+**Example:** `export * from './brittni';`
+
+[Table of Contents](#table-of-contents)
+
+# Step 6: Add the Palette to the `Palette` Maps
+
+Add the color to the `Palette` map matching its category and any parent categories, using the `setUndefinedKey` method. The key will be the `NAME` property, and the value will be the `Palette` object.
+
+Add the color to the `Palette` map for all palettes, using the `setUndefinedKey` method. The key will be the `NAME` property, and the value will be the `Palette` object.
+
+[Table of Contents](#table-of-contents)
+
+# Step 7: Add the New Palette to the Palette Unit Tests
+
+In the `src/test/palette/palettes/<category>` directory, create the unit test for the individual palette.
+The purpose of these unit tests are to make sure that the palette only contains its expected colors and to make sure that the palette has a valid configuration (at least 2 colors, lowercase name, valid contrast map, etc.).
+Each nested category will be its own directory (e.g. `holiday/christmas`).
+
+Run the unit test to ensure that it passes.
+
+## Individual Palette Unit Test Example
+
+```typescript
+import {PaletteColor} from 'palette';
+import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {BRITTNI} from 'palettes';
+
+import {checkForValidPalette} from 'unit-test/shared';
+
+describe('BRITTNI palette tests', (): void => {
+    const expectedColors: PaletteColor[] = [
+        _121212,
+        _0437F1,
+        _0FFF4F,
+        _7A00F5,
+        _FF6BB5
+    ]
+
+    test('BRITTNI palette is valid', (): void => {
+        checkForValidPalette(BRITTNI, expectedColors);
+    });
+});
+```
+
+[Table of Contents](#table-of-contents)
+
+# Step 8: Add the New Palette to the Palette Category Unit Tests
+
+Add the new palette to the `EXPECTED_PALETTES` list in each category unit test.
+
+Run each category unit test to ensure that they pass.
 
 [Table of Contents](#table-of-contents)
 
