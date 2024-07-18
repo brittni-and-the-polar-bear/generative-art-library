@@ -15,4 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './muted-christmas';
+export * from './classic-christmas';

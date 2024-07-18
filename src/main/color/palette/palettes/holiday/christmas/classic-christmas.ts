@@ -20,8 +20,23 @@ import {_007058, _23856D, _BC010A, _D01625, _FBF9F9} from 'palette-colors';
 
 import {ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES} from '../../palette-maps';
 
-export const MUTED_CHRISTMAS: Palette = {
-    NAME: 'muted christmas',
+/**
+ * <!-- Coolors Palette Widget -->
+ * <script src="https://coolors.co/palette-widget/widget.js"></script>
+ * <script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"]); </script>
+ *
+ * @see {@link _BC010A}
+ * @see {@link _D01625}
+ * @see {@link _007058}
+ * @see {@link _23856D}
+ * @see {@link _FBF9F9}
+ *
+ * @category Palettes (All)
+ * @category Palettes (Holiday)
+ * @category Palettes (Christmas)
+ */
+export const CLASSIC_CHRISTMAS: Palette = {
+    NAME: 'classic christmas',
 
     SOURCE: 'https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8',
 
@@ -48,6 +63,6 @@ export const MUTED_CHRISTMAS: Palette = {
     DISCRIMINATOR: Discriminators.PALETTE
 }
 
-ALL_PALETTES.setUndefinedKey(MUTED_CHRISTMAS.NAME, MUTED_CHRISTMAS);
-HOLIDAY_PALETTES.setUndefinedKey(MUTED_CHRISTMAS.NAME, MUTED_CHRISTMAS);
-CHRISTMAS_PALETTES.setUndefinedKey(MUTED_CHRISTMAS.NAME, MUTED_CHRISTMAS);
+ALL_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS.NAME, CLASSIC_CHRISTMAS);
+HOLIDAY_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS.NAME, CLASSIC_CHRISTMAS);
+CHRISTMAS_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS.NAME, CLASSIC_CHRISTMAS);

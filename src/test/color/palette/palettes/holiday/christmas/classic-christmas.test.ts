@@ -17,11 +17,13 @@
 
 import {PaletteColor} from 'palette';
 import {_007058, _23856D, _BC010A, _D01625, _FBF9F9} from 'palette-colors';
-import {MUTED_CHRISTMAS} from 'palettes';
+import {CLASSIC_CHRISTMAS} from 'palettes';
 
 import {checkForValidPalette} from 'unit-test/shared';
 
-describe('MUTED_CHRISTMAS palette tests', (): void => {
+const PALETTE_NAME: string = 'CLASSIC_CHRISTMAS';
+
+describe('CLASSIC_CHRISTMAS palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         _BC010A,
         _D01625,
@@ -30,7 +32,7 @@ describe('MUTED_CHRISTMAS palette tests', (): void => {
         _FBF9F9
     ]
 
-    test('MUTED_CHRISTMAS palette is valid', (): void => {
-        checkForValidPalette(MUTED_CHRISTMAS, expectedColors);
+    test(`${PALETTE_NAME} palette is valid`, (): void => {
+        checkForValidPalette(CLASSIC_CHRISTMAS, expectedColors);
     });
 });

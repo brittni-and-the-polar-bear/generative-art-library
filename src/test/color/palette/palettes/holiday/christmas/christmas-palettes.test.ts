@@ -16,12 +16,12 @@
  */
 
 import {Palette} from 'palette';
-import {CHRISTMAS_PALETTES, MUTED_CHRISTMAS} from 'palettes';
+import {CHRISTMAS_PALETTES, CLASSIC_CHRISTMAS} from 'palettes';
 
 import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
 const EXPECTED_PALETTES: {palette: Palette}[] = [
-    {palette: MUTED_CHRISTMAS}
+    {palette: CLASSIC_CHRISTMAS}
 ]
 
 const MAP_NAME: string = 'CHRISTMAS_PALETTES';

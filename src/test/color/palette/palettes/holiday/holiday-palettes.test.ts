@@ -16,12 +16,12 @@
  */
 
 import {Palette} from 'palette';
-import {HOLIDAY_PALETTES, MUTED_CHRISTMAS} from 'palettes';
+import {HOLIDAY_PALETTES, CLASSIC_CHRISTMAS} from 'palettes';
 
 import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
 const EXPECTED_PALETTES: {palette: Palette}[] = [
-    {palette: MUTED_CHRISTMAS} // christmas
+    {palette: CLASSIC_CHRISTMAS} // christmas
 ]
 
 const MAP_NAME: string = 'HOLIDAY_PALETTES';

@@ -37,23 +37,6 @@ export function checkComponents(actual: ColorComponents, expected: PaletteColor)
     checkNumberWithinAmount(actual.b, expected.RGB.B, 1);
 }
 
-export function checkForValidPalette(palette: Palette, expectedColors?: PaletteColor[]): void {
-    expect(palette).toBeTruthy();
-    expect(palette.NAME).toBeTruthy();
-    expect(palette.NAME.toLowerCase()).toBe(palette.NAME)
-    expect(palette.COLORS).toBeTruthy();
-    expect(palette.COLORS.length).toBeGreaterThanOrEqual(2);
-    expect(palette.DISCRIMINATOR).toBe(Discriminators.PALETTE);
-
-    if (expectedColors) {
-        expect(palette.COLORS).toEqual(expectedColors);
-    }
-
-    if (palette.CONTRAST_MAP) {
-        checkForValidContrastMap(palette);
-    }
-}
-
 function checkForValidContrastMap(palette: Palette): void {
     const validHexes: string[] = palette.COLORS.map((color: PaletteColor): string => {
         return color.HEX;
@@ -97,6 +80,23 @@ function checkForValidContrastMap(palette: Palette): void {
                 expect(meetsNormalRatio && meetsLargeRatio).toBeTruthy();
             }
         }
+    }
+}
+
+export function checkForValidPalette(palette: Palette, expectedColors?: PaletteColor[]): void {
+    expect(palette).toBeTruthy();
+    expect(palette.NAME).toBeTruthy();
+    expect(palette.NAME.toLowerCase()).toBe(palette.NAME)
+    expect(palette.COLORS).toBeTruthy();
+    expect(palette.COLORS.length).toBeGreaterThanOrEqual(2);
+    expect(palette.DISCRIMINATOR).toBe(Discriminators.PALETTE);
+
+    if (expectedColors) {
+        expect(palette.COLORS).toEqual(expectedColors);
+    }
+
+    if (palette.CONTRAST_MAP) {
+        checkForValidContrastMap(palette);
     }
 }
 
