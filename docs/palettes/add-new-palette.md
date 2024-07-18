@@ -2,7 +2,45 @@
 
 # Table of Contents
 
+[Step 1: Add Any New Colors for the Palette](#step-1-add-any-new-colors-for-the-palette)
 
+[Step 2: Categorize the Palette](#step-2-categorize-the-palette)
+
+[Step 3: Add the File for the Palette](#step-3-add-the-file-for-the-palette)
+
+[Step 4: Create the `Palette` Object](#step-4-create-the-palette-object)
+  * [Step 4, Part A: Set Palette Name](#step-4-part-a-set-palette-name)
+  * [Step 4, Part B: Set Palette Source](#step-4-part-b-set-palette-source)
+  * [Step 4, Part C: Set the `isGradient` Flag](#step-4-part-c-set-the-isgradient-flag)
+  * [Step 4, Part D: Set the `DISCRIMINATOR` Property](#step-4-part-d-set-the-discriminator-property)
+  * [Step 4, Part E: Set the Colors](#step-4-part-e-set-the-colors)
+  * [Step 4, Part F: Create the Contrast Map](#step-4-part-f-create-the-contrast-map)
+
+[Step 5: Export the Color from the `index.ts` File](#step-5-export-the-color-from-the-indexts-file)
+
+[Step 6: Add the Palette to the `Palette` Maps](#step-6-add-the-palette-to-the-palette-maps)
+
+[Step 7: Add the New Palette to the Palette Unit Tests](#step-7-add-the-new-palette-to-the-palette-unit-tests)
+
+[Step 8: Add the New Palette to the Palette Category Unit Tests](#step-8-add-the-new-palette-to-the-palette-category-unit-tests)
+
+[Step 9: Run the ALL_PALETTES Unit Test](#step-9-run-the-all_palettes-unit-test)
+
+[Step 10: Add Documentation](#step-10-add-documentation)
+  * [Step 10, Part A: Add the Coolors Palette Widget](#step-10-part-a-add-the-coolors-palette-widget)
+  * [Step 10, Part B: Add the `@see` Annotations for Each `PaletteColor`](#step-10-part-b-add-the-see-annotations-for-each-palettecolor)
+  * [Step 10, Part C: Add the `@see` Annotation to Each `PaletteColor`](#step-10-part-c-add-the-see-annotation-to-each-palettecolor)
+  * [Step 10, Part D: Add the `@category` Annotations](#step-10-part-d-add-the-category-annotations)
+
+[Step 11: Add the New Palette to the Palette Category Markdown Page](#step-11-add-the-new-palette-to-the-palette-category-markdown-page)
+
+[Step 12: Add Palette to the Release Notes](#step-12-add-palette-to-the-release-notes)
+
+[Full `PaletteColor` File Example](#full-palettecolor-file-example)
+
+[Table of Contents](#table-of-contents)
+
+----
 
 # Step 1: [Add Any New Colors for the Palette](../colors/add-new-color.md)
 

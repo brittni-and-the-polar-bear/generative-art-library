@@ -28,6 +28,8 @@ Colors are in numeric order by hex value.
 
 [cartoon violence (#D01625)](#cartoon-violence-d01625)
 
+----
+
 # bird's eye (#BC010A)
 
 <div class="color-block" style="background: #BC010A;">

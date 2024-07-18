@@ -26,6 +26,8 @@ Colors are in numeric order by hex value.
 
 [fen hong pink](#fen-hong-pink-ff6bb5)
 
+----
+
 # fen hong pink (#FF6BB5)
 
 <div class="color-block" style="background: #FF6BB5;">

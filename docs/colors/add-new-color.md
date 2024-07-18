@@ -29,6 +29,8 @@
 
 [Full `PaletteColor` File Example](#full-palettecolor-file-example)
 
+----
+
 # Step 1: Categorize the Color
 
 Valid Categories:

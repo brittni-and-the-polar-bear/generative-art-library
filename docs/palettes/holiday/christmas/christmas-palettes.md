@@ -8,6 +8,8 @@ Palettes are in alphabetic order by object name.
 
 [classic christmas](#classic-christmas)
 
+----
+
 # classic christmas
 
 <!-- Coolors Palette Widget -->

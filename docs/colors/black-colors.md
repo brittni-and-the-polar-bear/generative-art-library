@@ -26,6 +26,8 @@ Colors are in numeric order by hex value.
 
 [dark tone ink](#dark-tone-ink-121212)
 
+----
+
 # dark tone ink (#121212)
 
 <div class="color-block" style="background: #121212;">

@@ -32,6 +32,8 @@ Colors are ordered by shade on the [Green Colors by Shade](./green-colors_shades
 
 [accent green blue (#23856D)](#accent-green-blue-23856d)
 
+----
+
 # teal dark green (#007058)
 
 <div class="color-block" style="background: #007058;">

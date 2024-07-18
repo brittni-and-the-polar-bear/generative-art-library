@@ -26,6 +26,8 @@ Colors are in numeric order by hex value.
 
 [blue bouquet (#0437F1)](#blue-bouquet-0437f1)
 
+----
+
 # blue bouquet (#0437F1)
 
 <div class="color-block" style="background: #0437F1;">

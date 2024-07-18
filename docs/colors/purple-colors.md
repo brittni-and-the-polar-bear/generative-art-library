@@ -26,6 +26,8 @@ Colors are in numeric order by hex value.
 
 [poison purple](#poison-purple-7a00f5)
 
+----
+
 # poison purple (#7A00F5)
 
 <div class="color-block" style="background: #7A00F5;">

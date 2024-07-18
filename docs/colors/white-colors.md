@@ -28,6 +28,8 @@ Colors are ordered by shade on the [White Colors by Shade](./white-colors_shades
 
 [doctor white (#FBF9F9)](#doctor-white-fbf9f9)
 
+----
+
 # doctor white (#FBF9F9)
 
 <div class="color-block" style="background: #FBF9F9;">

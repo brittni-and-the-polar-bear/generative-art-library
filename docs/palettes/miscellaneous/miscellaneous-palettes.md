@@ -8,6 +8,8 @@ Palettes are in alphabetic order by object name.
 
 [brittni](#brittni)
 
+----
+
 # brittni
 
 <!-- Coolors Palette Widget -->
