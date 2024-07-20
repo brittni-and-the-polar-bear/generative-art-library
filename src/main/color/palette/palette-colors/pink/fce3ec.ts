@@ -15,17 +15,20 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
-import {Discriminators} from "discriminator";
+
+import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _FCE3EC: PaletteColor = {
     HEX: '#FCE3EC',
-
     RGB: {R: 252, G: 227, B: 236},
-
     HSL: {H: 338, S: 81, L: 94},
-
     NAME: 'spun sugar',
-
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 }
+
+PINK_PALETTE_COLORS.setUndefinedKey(_FCE3EC.HEX, _FCE3EC);
+ALL_PALETTE_COLORS.setUndefinedKey(_FCE3EC.HEX, _FCE3EC);
+ColorNameManager.addColor(_FCE3EC);
