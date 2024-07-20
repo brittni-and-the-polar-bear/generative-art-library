@@ -15,5 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './fce3ec';
-export * from './ff6bb5';
+import {PaletteColor} from 'palette';
+import {Discriminators} from "discriminator";
+
+export const _FCE3EC: PaletteColor = {
+    HEX: '#FCE3EC',
+
+    RGB: {R: 252, G: 227, B: 236},
+
+    HSL: {H: 338, S: 81, L: 94},
+
+    NAME: 'spun sugar',
+
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+}
