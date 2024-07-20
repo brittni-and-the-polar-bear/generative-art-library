@@ -22,11 +22,31 @@
 
 Colors are in numeric order by hex value.
 
+Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.md) page.
+
 # Table of Contents
 
-[fen hong pink](#fen-hong-pink-ff6bb5)
+[spun sugar (#FCE3EC)](#spun-sugar-fce3ec)
+
+[fen hong pink (#FF6BB5)](#fen-hong-pink-ff6bb5)
 
 ----
+
+# spun sugar (#FCE3EC)
+
+<div class="color-block" style="background: #FCE3EC;">
+  <a href="https://coolors.co/fce3ec" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
+  </a>
+</div>
+
+````typescript
+import {_FCE3EC} from 'palette-colors';
+
+let name: string = _FCE3EC.NAME;
+````
+
+[Table of Contents](#table-of-contents)
 
 # fen hong pink (#FF6BB5)
 

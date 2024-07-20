@@ -21,6 +21,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #FCE3EC;">
+ *     <a href="https://coolors.co/fce3ec" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Pink)
+ *
+ * @source
+ */
 export const _FCE3EC: PaletteColor = {
     HEX: '#FCE3EC',
     RGB: {R: 252, G: 227, B: 236},

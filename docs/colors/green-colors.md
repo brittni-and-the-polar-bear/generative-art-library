@@ -22,7 +22,7 @@
 
 Colors are in numeric order by hex value.
 
-Colors are ordered by shade on the [Green Colors by Shade](./green-colors_shades.md) page.
+Colors are ordered by shade on the [Green Colors by Shade](./green-colors-shades.md) page.
 
 # Table of Contents
 
