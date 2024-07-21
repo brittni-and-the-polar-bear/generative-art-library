@@ -39,7 +39,7 @@ export const _FCE3EC: PaletteColor = {
     HSL: {H: 338, S: 81, L: 94},
     NAME: 'spun sugar',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
-}
+};
 
 PINK_PALETTE_COLORS.setUndefinedKey(_FCE3EC.HEX, _FCE3EC);
 ALL_PALETTE_COLORS.setUndefinedKey(_FCE3EC.HEX, _FCE3EC);

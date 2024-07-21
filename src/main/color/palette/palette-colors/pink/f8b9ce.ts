@@ -15,6 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './f8b9ce';
-export * from './fce3ec';
-export * from './ff6bb5';
+import {PaletteColor} from "palette";
+import {Discriminators} from "discriminator";
+
+export const _F8B9CE: PaletteColor = {
+    HEX: '#F8B9CE',
+    RGB: {R: 248, G: 185, B: 206},
+    HSL: {H: 340, S: 82, L: 85},
+    NAME: "christy's smile",
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
