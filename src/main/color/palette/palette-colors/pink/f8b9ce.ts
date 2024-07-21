@@ -15,8 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "palette";
-import {Discriminators} from "discriminator";
+import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _F8B9CE: PaletteColor = {
     HEX: '#F8B9CE',
@@ -25,3 +28,7 @@ export const _F8B9CE: PaletteColor = {
     NAME: "christy's smile",
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+PINK_PALETTE_COLORS.setUndefinedKey(_F8B9CE.HEX, _F8B9CE);
+ALL_PALETTE_COLORS.setUndefinedKey(_F8B9CE.HEX, _F8B9CE);
+ColorNameManager.addColor(_F8B9CE);
