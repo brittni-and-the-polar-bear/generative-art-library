@@ -27,6 +27,11 @@
   </a>
 </div>
 
+<div class="color-block" style="background: #F8B9CE;">
+  <a href="./pink-colors.html#christys-smile-f8b9ce" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
+  </a>
+</div>
 
 <div class="color-block" style="background: #FCE3EC;">
   <a href="./pink-colors.html#spun-sugar-fce3ec" target="_blank" rel="noopener noreferrer">

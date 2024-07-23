@@ -26,11 +26,28 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 
 # Table of Contents
 
+[christy's smile (#F8B9CE)](#christys-smile-f8b9ce)
+
 [spun sugar (#FCE3EC)](#spun-sugar-fce3ec)
 
 [fen hong pink (#FF6BB5)](#fen-hong-pink-ff6bb5)
 
 ----
+
+# christy's smile (#F8B9CE)
+
+<div class="color-block" style="background: #F8B9CE;">
+  <a href="https://coolors.co/f8b9ce" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
+  </a>
+</div>
+
+```typescript
+import {_F8B9CE} from 'palette-colors';
+let name: string = _F8B9CE.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # spun sugar (#FCE3EC)
 
