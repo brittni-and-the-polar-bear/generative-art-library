@@ -21,6 +21,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #F8B9CE;">
+ *     <a href="https://coolors.co/f8b9ce" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Pink)
+ *
+ * @source
+ */
 export const _F8B9CE: PaletteColor = {
     HEX: '#F8B9CE',
     RGB: {R: 248, G: 185, B: 206},
