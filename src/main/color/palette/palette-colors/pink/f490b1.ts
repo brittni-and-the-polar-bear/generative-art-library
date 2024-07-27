@@ -15,7 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './f490b1';
-export * from './f8b9ce';
-export * from './fce3ec';
-export * from './ff6bb5';
+// #f490b1
+// 340°, 82%, 76%
+// 244, 144, 177
+// Sachet Pink
+
+import {PaletteColor} from "palette";
+
+export const _F490B1: PaletteColor = {
+
+};
