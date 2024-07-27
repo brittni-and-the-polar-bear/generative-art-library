@@ -160,9 +160,9 @@ Add a `@source` annotation to the documentation. This will allow the source code
 
 [Table of Contents](#table-of-contents)
 
-# Step 9: Add the New Color to the Color Category Markdown Page
+# Step 9: Add the New Color to the Color Category by Hex Markdown Page
 
-Add an entry to the correct color category markdown page for the new color.
+Add an entry for the new color to the correct color category by hex markdown page.
 This entry will include the color block `div` and TypeScript example.
 
 Be sure to add the new markdown section to the Table of Contents.
@@ -182,13 +182,15 @@ Be sure to add the new markdown section to the Table of Contents.
 import {_BC010A} from 'palette-colors';
 let name: string = _BC010A.NAME;
 ```
+
+[Table of Contents](#table-of-contents)
 ````
 
 [Table of Contents](#table-of-contents)
 
-# Step 10: Add the New Color to the Color Category by Shade Markdown Page
+# Step 10: Add the New Color to the Color Category by Luminance Markdown Page
 
-Add an entry to the correct color category by shade markdown page for the new color.
+Add an entry for the new color to the correct color category by luminance markdown page.
 Entries should be ordered by luminance value, which can be calculated on
 <a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
 
@@ -199,7 +201,7 @@ This entry will only include the color block `div`.
 ```markdown
 <!-- luminance: 0.10734989 -->
 <div class="color-block" style="background: #BC010A;">
-  <a href="./red-colors.html#birds-eye-bc010a">
+  <a href="./red-colors-by-hex.html#birds-eye-bc010a">
     <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
   </a>
 </div>
