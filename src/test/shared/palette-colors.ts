@@ -22,6 +22,20 @@ import {checkForValidHexColorString} from './color';
 
 export type HexCollection = {hexString: string}[];
 
+export function checkForValidPaletteColor(pc: PaletteColor): void {
+    expect(pc.RGB).toBeTruthy();
+    expect(pc.HSL).toBeTruthy();
+
+    expect(pc.HEX).toBeTruthy();
+    checkForValidHexColorString(pc.HEX);
+    expect(pc.HEX.toUpperCase()).toBe(pc.HEX);
+
+    expect(pc.NAME).toBeTruthy();
+    expect(pc.NAME.toLowerCase()).toBe(pc.NAME);
+
+    expect(pc.DISCRIMINATOR).toBe(Discriminators.PALETTE_COLOR);
+}
+
 export const BLACK_HEXES: HexCollection = [
     {hexString: '#121212'}
 ];
@@ -39,7 +53,7 @@ export const GREEN_HEXES: HexCollection = [
 ];
 
 export const PINK_HEXES: HexCollection = [
-    {hexString: '#EC407A'},
+    {hexString: '#EC417A'},
     {hexString: '#F06090'},
     {hexString: '#F490B1'},
     {hexString: '#F8B9CE'},
@@ -59,17 +73,3 @@ export const RED_HEXES: HexCollection = [
 export const WHITE_HEXES: HexCollection = [
     {hexString: '#FBF9F9'}
 ];
-
-export function checkForValidPaletteColor(pc: PaletteColor): void {
-    expect(pc.RGB).toBeTruthy();
-    expect(pc.HSL).toBeTruthy();
-
-    expect(pc.HEX).toBeTruthy();
-    checkForValidHexColorString(pc.HEX);
-    expect(pc.HEX.toUpperCase()).toBe(pc.HEX);
-
-    expect(pc.NAME).toBeTruthy();
-    expect(pc.NAME.toLowerCase()).toBe(pc.NAME);
-
-    expect(pc.DISCRIMINATOR).toBe(Discriminators.PALETTE_COLOR);
-}
