@@ -26,6 +26,8 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 
 # Table of Contents
 
+[radishical (#EC417A)](#radishical-ec417a)
+
 [medium pink (#F06090)](#medium-pink-f06090)
 
 [sachet pink (#F490B1)](#sachet-pink-f490b1)
@@ -37,6 +39,21 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 [fen hong pink (#FF6BB5)](#fen-hong-pink-ff6bb5)
 
 ----
+
+# radishical (#EC417A)
+
+<div class="color-block" style="background: #EC417A;">
+  <a href="https://coolors.co/ec417a" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">radishical (#EC417A)</h2>
+  </a>
+</div>
+
+```typescript
+import {_EC417A} from 'palette-colors';
+let name: string = _EC417A.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # medium pink (#F06090)
 
