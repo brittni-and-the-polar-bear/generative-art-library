@@ -189,11 +189,15 @@ let name: string = _BC010A.NAME;
 # Step 10: Add the New Color to the Color Category by Shade Markdown Page
 
 Add an entry to the correct color category by shade markdown page for the new color.
+Entries should be ordered by luminance value, which can be calculated on
+<a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
+
 This entry will only include the color block `div`.
 
 ## Color Category by Shade Entry Example
 
 ```markdown
+<!-- luminance: 0.10734989 -->
 <div class="color-block" style="background: #BC010A;">
   <a href="./red-colors.html#birds-eye-bc010a">
     <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
