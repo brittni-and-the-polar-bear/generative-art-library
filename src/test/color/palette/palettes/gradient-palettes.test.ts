@@ -16,27 +16,27 @@
  */
 
 import {Palette} from 'palette';
-import {HOLIDAY_PALETTES, CLASSIC_CHRISTMAS, GLITTER} from 'palettes';
+import {GLITTER, GRADIENT_PALETTES} from 'palettes';
 
 import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
 const EXPECTED_PALETTES: {palette: Palette}[] = [
-    {palette: CLASSIC_CHRISTMAS}, // christmas
-    {palette: GLITTER} // valentines-day
+    {palette: GLITTER}
 ]
 
-const MAP_NAME: string = 'HOLIDAY_PALETTES';
+const MAP_NAME: string = 'GRADIENT_PALETTES';
 
-describe('holiday palettes map test', (): void => {
+describe('gradient palettes map test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(HOLIDAY_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(GRADIENT_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({palette}): void => {
-            checkForPaletteInMap(palette, HOLIDAY_PALETTES);
+            checkForPaletteInMap(palette, GRADIENT_PALETTES);
+            expect(palette.IS_GRADIENT).toBeTruthy();
         }
     );
 });

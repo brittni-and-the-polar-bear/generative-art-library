@@ -209,8 +209,11 @@ describe('BRITTNI palette tests', (): void => {
 # Step 8: Add the New Palette to the Palette Category Unit Tests
 
 Add the new palette to the `EXPECTED_PALETTES` list in each category unit test.
-
 Run each category unit test to ensure that they pass.
+
+If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
+add the new palette to the `EXPECTED_PALETTES` list in the gradient palettes unit test.
+Run the unit test to ensure that it passes.
 
 [Table of Contents](#table-of-contents)
 
