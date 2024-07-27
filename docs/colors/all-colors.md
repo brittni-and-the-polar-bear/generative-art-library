@@ -6,7 +6,7 @@
 
 ## [Green Colors](./green-colors.md)
 
-## [Pink Colors](./pink-colors.md)
+## [Pink Colors](./pink-colors-by-luminance.md)
 
 ## [Purple Colors](./purple-colors.md)
 

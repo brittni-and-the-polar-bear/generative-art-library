@@ -19,14 +19,21 @@
   }
 </style>
 
-# Pink Colors by Shade
+# Pink Colors by Luminance
 
-Colors are in numeric order by luminance value. Luminance values were calculated on
+Colors are in numeric order by luminance value. Luminance values were calculated on the
 <a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
+
+Colors are ordered by hex value on the [Pink Colors by Hex](./pink-colors-by-hex.md) page.
+This page also contains code usage examples.
+
+Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entries.
+
+----
 
 <!-- luminance: 0.230186012 -->
 <div class="color-block" style="background: #EC417A;">
-  <a href="https://coolors.co/ec417a" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors.html#radishical-ec417a" target="_blank" rel="noopener noreferrer">
     <h2 class="color-block black-pass">radishical (#EC417A)</h2>
   </a>
 </div>

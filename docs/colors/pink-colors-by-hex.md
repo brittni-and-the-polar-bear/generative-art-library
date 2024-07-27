@@ -18,11 +18,16 @@
   }
 </style>
 
-# Pink Colors
+# Pink Colors by Hex
 
 Colors are in numeric order by hex value.
 
-Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.md) page.
+Colors are ordered by luminance on the [Pink Colors by Luminance](./pink-colors-by-luminance) page.
+
+Color block links redirect to
+<a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
+
+----
 
 # Table of Contents
 
