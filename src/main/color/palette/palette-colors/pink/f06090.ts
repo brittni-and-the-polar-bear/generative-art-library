@@ -26,6 +26,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #F06090;">
+ *     <a href="https://coolors.co/f06090" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">medium pink (#F06090)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Pink)
+ *
+ * @source
+ */
 export const _F06090: PaletteColor = {
     HEX: '#F06090',
     RGB: {R: 240, G: 96, B: 144},
