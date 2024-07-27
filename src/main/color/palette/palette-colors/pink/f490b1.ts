@@ -15,13 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #f490b1
-// 340°, 82%, 76%
-// 244, 144, 177
-// Sachet Pink
-
-import {PaletteColor} from "palette";
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
 
 export const _F490B1: PaletteColor = {
-
+    HEX: '#F490B1',
+    RGB: {R: 244, G: 144, B: 177},
+    HSL: {H: 340, S: 82, L: 76},
+    NAME: 'sachet pink',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
