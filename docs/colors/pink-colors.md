@@ -26,6 +26,8 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 
 # Table of Contents
 
+[medium pink (#F06090)](#medium-pink-f06090)
+
 [sachet pink (#F490B1)](#sachet-pink-f490b1)
 
 [christy's smile (#F8B9CE)](#christys-smile-f8b9ce)
@@ -35,6 +37,21 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 [fen hong pink (#FF6BB5)](#fen-hong-pink-ff6bb5)
 
 ----
+
+# medium pink (#F06090)
+
+<div class="color-block" style="background: #F06090;">
+  <a href="https://coolors.co/f06090" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">medium pink (#F06090)</h2>
+  </a>
+</div>
+
+```typescript
+import {_F06090} from 'palette-colors';
+let name: string = _F06090.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # sachet pink (#F490B1)
 
