@@ -52,6 +52,7 @@ Valid Categories:
 
 * holiday
   * christmas
+  * valentines-day
 * miscellaneous
 
 [Table of Contents](#table-of-contents)
