@@ -21,6 +21,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #F490B1;">
+ *     <a href="https://coolors.co/f490b1" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Pink)
+ *
+ * @source
+ */
 export const _F490B1: PaletteColor = {
     HEX: '#F490B1',
     RGB: {R: 244, G: 144, B: 177},
