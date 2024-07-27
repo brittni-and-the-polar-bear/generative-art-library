@@ -28,6 +28,19 @@ import {Palette} from 'palette';
  */
 export const ALL_PALETTES: StringMap<Palette> = new StringMap<Palette>();
 
+// TODO - add unit tests
+// TODO - add to release notes
+/**
+ * A map of palette names to {@link Palette} objects for gradient palettes.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/gradient-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ *
+ * @category Palette Collections
+ * @category Palettes (Gradient)
+ */
+export const GRADIENT_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+
+// TODO - move into unique directory (see holiday palette maps)
 /**
  * A map of palette names to {@link Palette} objects for all miscellaneous palettes.
  *

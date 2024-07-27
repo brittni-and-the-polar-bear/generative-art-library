@@ -160,9 +160,15 @@ In the `index.ts` file in the same category directory, add a statement to export
 
 # Step 6: Add the Palette to the `Palette` Maps
 
-Add the color to the `Palette` map matching its category and any parent categories, using the `setUndefinedKey` method. The key will be the `NAME` property, and the value will be the `Palette` object.
+Add the color to the `Palette` map matching its category and any parent categories, using the `setUndefinedKey` method.
+The key will be the `NAME` property, and the value will be the `Palette` object.
 
-Add the color to the `Palette` map for all palettes, using the `setUndefinedKey` method. The key will be the `NAME` property, and the value will be the `Palette` object.
+Add the color to the `Palette` map for all palettes, using the `setUndefinedKey` method.
+The key will be the `NAME` property, and the value will be the `Palette` object.
+
+If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
+add the color to the `Palette` map for gradient palettes, using the `setUndefinedKey` method.
+The key will be the `NAME` property, and the value will be the `Palette` object.
 
 [Table of Contents](#table-of-contents)
 

@@ -15,7 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './christmas';
-export * from './valentines-day';
+import {StringMap} from 'map';
+import {Palette} from 'palette';
 
-export * from './holiday-palette-maps';
+// TODO - add to release notes
+// TODO - add unit tests
+/**
+ * A map of palette names to {@link Palette} objects for all Valentine's Day palettes.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/holiday/valentines-day/valentines-day-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ *
+ * @category Palette Collections
+ * @category Palettes (Holiday)
+ * @category Palettes (Valentine's Day)
+ */
+export const VALENTINES_PALETTES: StringMap<Palette> = new StringMap<Palette>();

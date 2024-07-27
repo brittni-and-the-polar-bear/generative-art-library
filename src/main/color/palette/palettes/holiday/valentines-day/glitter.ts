@@ -18,6 +18,7 @@
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
 import {_EC417A, _F06090, _F490B1, _F8B9CE, _FCE3EC} from 'palette-colors';
+import {ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES} from "palettes";
 
 export const GLITTER: Palette = {
     NAME: 'glitter',
@@ -46,3 +47,9 @@ export const GLITTER: Palette = {
 
     DISCRIMINATOR: Discriminators.PALETTE
 };
+
+VALENTINES_PALETTES.setUndefinedKey(GLITTER.NAME, GLITTER);
+HOLIDAY_PALETTES.setUndefinedKey(GLITTER.NAME, GLITTER);
+ALL_PALETTES.setUndefinedKey(GLITTER.NAME, GLITTER);
+
+GRADIENT_PALETTES.setUndefinedKey(GLITTER.NAME, GLITTER);
