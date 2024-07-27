@@ -15,8 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _F490B1: PaletteColor = {
     HEX: '#F490B1',
@@ -25,3 +28,7 @@ export const _F490B1: PaletteColor = {
     NAME: 'sachet pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+PINK_PALETTE_COLORS.setUndefinedKey(_F490B1.HEX, _F490B1);
+ALL_PALETTE_COLORS.setUndefinedKey(_F490B1.HEX, _F490B1);
+ColorNameManager.addColor(_F490B1);
