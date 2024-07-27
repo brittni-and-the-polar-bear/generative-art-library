@@ -15,11 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #f06090
-// 340°, 83%, 66%
-// 240, 96, 144
-// medium pink
-
 import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
