@@ -17,6 +17,8 @@
 
 import {PaletteColor} from "palette";
 import {Discriminators} from "discriminator";
+import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from "../palette-color-maps";
+import {ColorNameManager} from "color";
 
 // #ec417a
 // #EC417A
@@ -31,3 +33,7 @@ export const _EC417A: PaletteColor = {
     NAME: 'radishical',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+PINK_PALETTE_COLORS.setUndefinedKey(_EC417A.HEX, _EC417A);
+ALL_PALETTE_COLORS.setUndefinedKey(_EC417A.HEX, _EC417A);
+ColorNameManager.addColor(_EC417A);
