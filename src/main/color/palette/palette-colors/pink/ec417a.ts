@@ -15,7 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { PaletteColor } from "palette";
+import {PaletteColor} from "palette";
+import {Discriminators} from "discriminator";
 
 // #ec417a
 // #EC417A
@@ -24,5 +25,9 @@ import { PaletteColor } from "palette";
 // radishical
 
 export const _EC417A: PaletteColor = {
-
+    HEX: '#EC417A',
+    RGB: {R: 236, G: 65, B: 122},
+    HSL: {H: 340, S: 82, L: 59},
+    NAME: 'radishical',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
