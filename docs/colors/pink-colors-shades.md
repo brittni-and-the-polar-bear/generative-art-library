@@ -27,6 +27,12 @@
   </a>
 </div>
 
+<div class="color-block" style="background: #F490B1;">
+  <a href="./pink-colors.html#sachet-pink-f490b1" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
+  </a>
+</div>
+
 <div class="color-block" style="background: #F8B9CE;">
   <a href="./pink-colors.html#christys-smile-f8b9ce" target="_blank" rel="noopener noreferrer">
     <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
