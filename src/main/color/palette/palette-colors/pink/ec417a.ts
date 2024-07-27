@@ -20,12 +20,18 @@ import {Discriminators} from "discriminator";
 import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from "../palette-color-maps";
 import {ColorNameManager} from "color";
 
-// #ec417a
-// #EC417A
-// 340°, 82%, 59%
-// 236, 65, 122
-// radishical
-
+/**
+ * <div class="color-block" style="background: #EC417A;">
+ *     <a href="https://coolors.co/ec417a" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">radishical (#EC417A)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Pink)
+ *
+ * @source
+ */
 export const _EC417A: PaletteColor = {
     HEX: '#EC417A',
     RGB: {R: 236, G: 65, B: 122},
