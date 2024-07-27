@@ -15,9 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './ec417a';
-export * from './f06090';
-export * from './f490b1';
-export * from './f8b9ce';
-export * from './fce3ec';
-export * from './ff6bb5';
+import { PaletteColor } from "palette";
+
+// #ec417a
+// #EC417A
+// 340°, 82%, 59%
+// 236, 65, 122
+// radishical
+
+export const _EC417A: PaletteColor = {
+
+};
