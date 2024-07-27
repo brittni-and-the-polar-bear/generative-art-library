@@ -31,10 +31,10 @@ export function getColorsArray(colors: PaletteColor[]): Color[] {
     });
 }
 
-export function checkComponents(actual: ColorComponents, expected: PaletteColor): void {
-    checkNumberWithinAmount(actual.r, expected.RGB.R, 1);
-    checkNumberWithinAmount(actual.g, expected.RGB.G, 1);
-    checkNumberWithinAmount(actual.b, expected.RGB.B, 1);
+export function checkComponents(components: ColorComponents, paletteColor: PaletteColor): void {
+    checkNumberWithinAmount(components.r, paletteColor.RGB.R, 1);
+    checkNumberWithinAmount(components.g, paletteColor.RGB.G, 1);
+    checkNumberWithinAmount(components.b, paletteColor.RGB.B, 1);
 }
 
 function checkForValidContrastMap(palette: Palette): void {

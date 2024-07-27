@@ -41,7 +41,7 @@ export const GREEN_HEXES: HexCollection = [
 export const PINK_HEXES: HexCollection = [
     {hexString: '#EC407A'},
     {hexString: '#F06090'},
-    {hexString: '#F48FB1'},
+    {hexString: '#F490B1'},
     {hexString: '#F8B9CE'},
     {hexString: '#FCE3EC'},
     {hexString: '#FF6BB5'}
