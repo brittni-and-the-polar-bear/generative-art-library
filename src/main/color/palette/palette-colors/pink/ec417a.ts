@@ -15,10 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "palette";
-import {Discriminators} from "discriminator";
-import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from "../palette-color-maps";
-import {ColorNameManager} from "color";
+import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #EC417A;">
