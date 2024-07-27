@@ -26,6 +26,8 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 
 # Table of Contents
 
+[sachet pink (#F490B1)](#sachet-pink-f490b1)
+
 [christy's smile (#F8B9CE)](#christys-smile-f8b9ce)
 
 [spun sugar (#FCE3EC)](#spun-sugar-fce3ec)
@@ -33,6 +35,21 @@ Colors are ordered by shade on the [Pink Colors by Shade](./pink-colors-shades.m
 [fen hong pink (#FF6BB5)](#fen-hong-pink-ff6bb5)
 
 ----
+
+# sachet pink (#F490B1)
+
+<div class="color-block" style="background: #F490B1;">
+  <a href="https://coolors.co/f490b1" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
+  </a>
+</div>
+
+```typescript
+import {_F490B1} from 'palette-colors';
+let name: string = _F490B1.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # christy's smile (#F8B9CE)
 
