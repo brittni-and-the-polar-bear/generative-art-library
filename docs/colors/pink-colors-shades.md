@@ -24,6 +24,13 @@
 Colors are in numeric order by luminance value. Luminance values were calculated on
 <a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
 
+<!-- luminance: 0.230186012 -->
+<div class="color-block" style="background: #EC417A;">
+  <a href="https://coolors.co/ec417a" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">radishical (#EC417A)</h2>
+  </a>
+</div>
+
 <!-- luminance: 0.2890462369 -->
 <div class="color-block" style="background: #F06090;">
   <a href="./pink-colors.html#medium-pink-f06090" target="_blank" rel="noopener noreferrer">
