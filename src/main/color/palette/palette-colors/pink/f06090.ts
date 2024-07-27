@@ -15,8 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './f06090';
-export * from './f490b1';
-export * from './f8b9ce';
-export * from './fce3ec';
-export * from './ff6bb5';
+// #f06090
+// 340°, 83%, 66%
+// 240, 96, 144
+// medium pink
+
+import {PaletteColor} from "palette";
+
+export const _F06090: PaletteColor = {
+
+};
