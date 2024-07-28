@@ -20,6 +20,7 @@ import {PaletteColor} from 'palette';
 import {
     BLACK_PALETTE_COLORS,
     BLUE_PALETTE_COLORS,
+    GRAY_PALETTE_COLORS,
     GREEN_PALETTE_COLORS,
     PINK_PALETTE_COLORS,
     PURPLE_PALETTE_COLORS,
@@ -34,6 +35,7 @@ import {
     checkForValidStringMap,
     BLACK_HEXES,
     BLUE_HEXES,
+    GRAY_HEXES,
     GREEN_HEXES,
     PINK_HEXES,
     PURPLE_HEXES,
@@ -46,6 +48,7 @@ const COLOR_CATEGORIES:
     [
         {category: 'black', colorsMap: BLACK_PALETTE_COLORS, hexes: BLACK_HEXES},
         {category: 'blue', colorsMap: BLUE_PALETTE_COLORS, hexes: BLUE_HEXES},
+        {category: 'gray', colorsMap: GRAY_PALETTE_COLORS, hexes: GRAY_HEXES},
         {category: 'green', colorsMap: GREEN_PALETTE_COLORS, hexes: GREEN_HEXES},
         {category: 'pink', colorsMap: PINK_PALETTE_COLORS, hexes: PINK_HEXES},
         {category: 'purple', colorsMap: PURPLE_PALETTE_COLORS, hexes: PURPLE_HEXES},

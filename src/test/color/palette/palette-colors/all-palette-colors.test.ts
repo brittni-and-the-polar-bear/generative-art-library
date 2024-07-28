@@ -24,9 +24,10 @@ import {ALL_PALETTE_COLORS} from 'palette-colors';
 
 import {
     ColorComponents,
-    GREEN_HEXES,
     BLACK_HEXES,
     BLUE_HEXES,
+    GRAY_HEXES,
+    GREEN_HEXES,
     PINK_HEXES,
     PURPLE_HEXES,
     RED_HEXES,
@@ -44,6 +45,7 @@ const ALL_HEXES: {hexString: string}[] = [];
 ALL_HEXES.push(
     ...BLACK_HEXES,
     ...BLUE_HEXES,
+    ...GRAY_HEXES,
     ...GREEN_HEXES,
     ...PINK_HEXES,
     ...PURPLE_HEXES,
