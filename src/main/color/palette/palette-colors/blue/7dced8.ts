@@ -29,6 +29,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #7DCED8;">
+ *     <a href="https://coolors.co/7dced8" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">spray (#7DCED8)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Blue)
+ *
+ * @source
+ */
 export const _7DCED8: PaletteColor = {
     HEX: '#7DCED8',
     RGB: {R: 125, G: 206, B: 216},
