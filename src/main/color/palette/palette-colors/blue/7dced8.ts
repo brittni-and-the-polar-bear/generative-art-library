@@ -22,3 +22,20 @@
 // spray
 // luminance: 0.5346045524
 // black pass
+
+import {PaletteColor} from 'palette';
+import {Discriminators} from "discriminator";
+import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from "palette-colors";
+import {ColorNameManager} from "color";
+
+export const _7DCED8: PaletteColor = {
+    HEX: '#7DCED8',
+    RGB: {R: 125, G: 206, B: 216},
+    HSL: {H: 187, S: 54, L: 67},
+    NAME: 'spray',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+BLUE_PALETTE_COLORS.setUndefinedKey(_7DCED8.HEX, _7DCED8);
+ALL_PALETTE_COLORS.setUndefinedKey(_7DCED8.HEX, _7DCED8);
+ColorNameManager.addColor(_7DCED8);
