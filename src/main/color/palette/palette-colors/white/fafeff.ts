@@ -23,11 +23,24 @@
 // luminance: 0.9842761548
 // black-pass
 
+import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
-import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from "../palette-color-maps";
-import {ColorNameManager} from "color";
 
+import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
+
+/**
+ * <div class="color-block" style="background: #FAFEFF;">
+ *     <a href="https://coolors.co/fafeff" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (White)
+ *
+ * @source
+ */
 export const _FAFEFF: PaletteColor = {
     HEX: '#FAFEFF',
     RGB: {R: 250, G: 254, B: 255},
