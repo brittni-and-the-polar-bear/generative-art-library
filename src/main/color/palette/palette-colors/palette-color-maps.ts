@@ -18,8 +18,6 @@
 import {StringMap} from 'map';
 import {PaletteColor} from 'palette';
 
-// TODO - update all file structures
-// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all palette colors.
  *
@@ -45,7 +43,7 @@ export const BLACK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
  * A map of hex values to {@link PaletteColor} objects for all
  * blue palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/blue-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/blue/blue-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Blue)
@@ -56,7 +54,7 @@ export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palett
  * A map of hex values to {@link PaletteColor} objects for all
  * green palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/green-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/green/green-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Green)
@@ -67,7 +65,7 @@ export const GREEN_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
  * A map of hex values to {@link PaletteColor} objects for all
  * pink palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/pink-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/pink/pink-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Pink)
@@ -78,7 +76,7 @@ export const PINK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palett
  * A map of hex values to {@link PaletteColor} objects for all
  * purple palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/purple-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/purple/purple-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Purple)
@@ -89,7 +87,7 @@ export const PURPLE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Pale
  * A map of hex values to {@link PaletteColor} objects for all
  * red palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/red-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/red/red-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Red)
@@ -100,7 +98,7 @@ export const RED_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palette
  * A map of hex values to {@link PaletteColor} objects for all
  * white palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/white-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/white/white-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (White)

@@ -22,12 +22,12 @@
 
 Colors are in numeric order by hex value.
 
-Colors are ordered by luminance on the [Green Colors by Luminance](./green-colors-by-luminance) page.
+Colors are ordered by luminance on the [Green Colors by Luminance](./green-colors-by-luminance.md) page.
 
 Color block links redirect to
 <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 

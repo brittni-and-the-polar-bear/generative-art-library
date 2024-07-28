@@ -27,7 +27,7 @@ Colors are ordered by luminance on the [White Colors by Luminance](./white-color
 Color block links redirect to
 <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 

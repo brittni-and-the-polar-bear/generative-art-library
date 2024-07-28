@@ -19,23 +19,24 @@
   }
 </style>
 
-# White Colors by Luminance
+# Purple Colors by Luminance
 
 Colors are in numeric order by luminance value. Luminance values were calculated with the
 <a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
 
-Colors are ordered by hex value on the [White Colors by Hex](./white-colors-by-hex.md) page.
+Colors are ordered by hex value on the [Purple Colors by Hex](./purple-colors-by-hex.md) page.
 This page also contains code usage examples.
 
-Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) entries.
+Color block links redirect to [Purple Colors by Hex](./purple-colors-by-hex.md) entries.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 
-<div class="color-block" style="background: #FBF9F9;">
-  <a href="./white-colors.html#doctor-white-fbf9f9">
-    <h2 class="color-block black-pass">doctor white (#FBF9F9)</h2>
+<!-- luminance: 0.1073014734 -->
+<div class="color-block" style="background: #7A00F5;">
+  <a href="./purple-colors-by-hex.html#poison-purple-7a00f5">
+    <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
   </a>
 </div>
 

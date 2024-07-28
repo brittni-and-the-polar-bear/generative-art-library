@@ -29,7 +29,7 @@ This page also contains code usage examples.
 
 Color block links redirect to [Green Colors by Hex](./green-colors-by-hex.md) entries.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 

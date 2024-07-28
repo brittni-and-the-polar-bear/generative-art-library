@@ -29,7 +29,7 @@ This page also contains code usage examples.
 
 Color block links redirect to [Red Colors by Hex](./red-colors-by-hex.md) entries.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 

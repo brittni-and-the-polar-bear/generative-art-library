@@ -27,7 +27,7 @@ Colors are ordered by luminance on the [Red Colors by Luminance](./red-colors-by
 Color block links redirect to
 <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 

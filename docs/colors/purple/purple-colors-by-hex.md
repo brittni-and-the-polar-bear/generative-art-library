@@ -18,37 +18,37 @@
   }
 </style>
 
-# Blue Colors by Hex
+# Purple Colors by Hex
 
 Colors are in numeric order by hex value.
 
-Colors are ordered by luminance on the [Blue Colors by Luminance](./blue-colors-by-luminance.md) page.
+Colors are ordered by luminance on the [Purple Colors by Luminance](./purple-colors-by-luminance.md) page.
 
 Color block links redirect to
 <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
 
-[All Colors](./all-colors.md)
+[All Colors](../all-colors.md)
 
 ----
 
 # Table of Contents
 
-[blue bouquet (#0437F1)](#blue-bouquet-0437f1)
+[poison purple](#poison-purple-7a00f5)
 
 ----
 
-# blue bouquet (#0437F1)
+# poison purple (#7A00F5)
 
-<div class="color-block" style="background: #0437F1;">
-  <a href="https://coolors.co/0437f1" target="_blank" rel="noopener noreferrer">
-    <h2 class="color-block white-pass">blue bouquet (#0437F1)</h2>
+<div class="color-block" style="background: #7A00F5;">
+  <a href="https://coolors.co/7a00f5" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
   </a>
 </div>
 
 ````typescript
-import {_0437F1} from 'palette-colors';
+import {_7A00F5} from 'palette-colors';
 
-let name: string = _0437F1.NAME;
+let name: string = _7A00F5.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
