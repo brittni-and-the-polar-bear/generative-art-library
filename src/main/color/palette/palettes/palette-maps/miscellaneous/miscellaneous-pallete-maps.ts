@@ -19,21 +19,11 @@ import {StringMap} from 'map';
 import {Palette} from 'palette';
 
 /**
- * A map of palette names to {@link Palette} objects for all palettes.
+ * A map of palette names to {@link Palette} objects for all miscellaneous palettes.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/all-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
- *
- * @category Palette Collections
- * @category Palettes (All)
- */
-export const ALL_PALETTES: StringMap<Palette> = new StringMap<Palette>();
-
-/**
- * A map of palette names to {@link Palette} objects for gradient palettes.
- *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/gradient-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/miscellaneous/miscellaneous-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
  *
  * @category Palette Collections
- * @category Palettes (Gradient)
+ * @category Palettes (Miscellaneous)
  */
-export const GRADIENT_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+export const MISCELLANEOUS_PALETTES: StringMap<Palette> = new StringMap<Palette>();
