@@ -46,6 +46,10 @@ export const BLUE_HEXES: HexCollection = [
     {hexString: '#7DCED8'}
 ];
 
+export const BROWN_HEXES: HexCollection = [
+    {hexString: '#3B2212'}
+];
+
 export const GRAY_HEXES: HexCollection = [
     {hexString: '#F0F3F4'}
 ];

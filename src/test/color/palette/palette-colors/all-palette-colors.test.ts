@@ -26,6 +26,7 @@ import {
     ColorComponents,
     BLACK_HEXES,
     BLUE_HEXES,
+    BROWN_HEXES,
     GRAY_HEXES,
     GREEN_HEXES,
     PINK_HEXES,
@@ -45,6 +46,7 @@ const ALL_HEXES: {hexString: string}[] = [];
 ALL_HEXES.push(
     ...BLACK_HEXES,
     ...BLUE_HEXES,
+    ...BROWN_HEXES,
     ...GRAY_HEXES,
     ...GREEN_HEXES,
     ...PINK_HEXES,
