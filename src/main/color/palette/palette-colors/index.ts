@@ -15,11 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color-maps';
 export * from './black';
 export * from './blue';
+export * from './gray';
 export * from './green';
 export * from './pink';
 export * from './purple';
 export * from './red';
 export * from './white';
+
+export * from './palette-color-maps';

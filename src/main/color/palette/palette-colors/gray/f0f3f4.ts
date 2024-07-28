@@ -23,8 +23,11 @@
 // luminance - 0.8915810279
 // black-pass
 
-import {PaletteColor} from "palette";
-import {Discriminators} from "discriminator";
+import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _F0F3F4: PaletteColor = {
     HEX: '#F0F3F4',
@@ -33,3 +36,7 @@ export const _F0F3F4: PaletteColor = {
     NAME: 'zappy zebra',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+GRAY_PALETTE_COLORS.setUndefinedKey(_F0F3F4.HEX, _F0F3F4);
+ALL_PALETTE_COLORS.setUndefinedKey(_F0F3F4.HEX, _F0F3F4);
+ColorNameManager.addColor(_F0F3F4);
