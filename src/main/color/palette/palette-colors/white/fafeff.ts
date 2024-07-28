@@ -23,8 +23,19 @@
 // luminance: 0.9842761548
 // black-pass
 
-import {PaletteColor} from "palette";
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from "../palette-color-maps";
+import {ColorNameManager} from "color";
 
 export const _FAFEFF: PaletteColor = {
-
+    HEX: '#FAFEFF',
+    RGB: {R: 250, G: 254, B: 255},
+    HSL: {H: 192, S: 100, L: 99},
+    NAME: 'polar bear in a blizzard',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+WHITE_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
+ALL_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
+ColorNameManager.addColor(_FAFEFF);
