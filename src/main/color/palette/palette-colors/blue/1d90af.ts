@@ -23,8 +23,11 @@
 // luminance: 0.2330287385
 // black-pass
 
+import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _1D90AF: PaletteColor = {
     HEX: '#1D90AF',
@@ -33,3 +36,7 @@ export const _1D90AF: PaletteColor = {
     NAME: 'mediterranean sea',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+BLUE_PALETTE_COLORS.setUndefinedKey(_1D90AF.HEX, _1D90AF);
+ALL_PALETTE_COLORS.setUndefinedKey(_1D90AF.HEX, _1D90AF);
+ColorNameManager.addColor(_1D90AF);
