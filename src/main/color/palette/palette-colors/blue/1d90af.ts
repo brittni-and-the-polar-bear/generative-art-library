@@ -29,6 +29,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #1D90AF;">
+ *     <a href="https://coolors.co/1d90af" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">mediterranean sea (#1D90AF)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Blue)
+ *
+ * @source
+ */
 export const _1D90AF: PaletteColor = {
     HEX: '#1D90AF',
     RGB: {R: 29, G: 144, B: 175},
