@@ -18,11 +18,18 @@
   }
 </style>
 
-# Green Colors
+# Green Colors by Hex
 
 Colors are in numeric order by hex value.
 
-Colors are ordered by shade on the [Green Colors by Shade](./green-colors-shades.md) page.
+Colors are ordered by luminance on the [Green Colors by Luminance](./green-colors-by-luminance) page.
+
+Color block links redirect to
+<a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
+
+[All Colors](./all-colors.md)
+
+----
 
 # Table of Contents
 
@@ -81,3 +88,7 @@ let name: string = _23856D.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
+
+----
+
+Fin.

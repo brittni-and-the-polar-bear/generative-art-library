@@ -8,7 +8,7 @@
 
 ## [Blue Colors](./blue-colors.md)
 
-## [Green Colors](./green-colors.md)
+## [Green Colors](./green-colors-by-hex)
 
 ## [Pink Colors](./pink-colors-by-luminance.md)
 
