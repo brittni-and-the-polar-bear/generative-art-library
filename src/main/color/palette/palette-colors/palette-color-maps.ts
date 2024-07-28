@@ -57,7 +57,7 @@ export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palett
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/gray/gray-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
- * @category Palette Colors (Green)
+ * @category Palette Colors (Gray)
  */
 export const GRAY_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 

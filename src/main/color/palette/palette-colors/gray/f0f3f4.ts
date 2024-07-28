@@ -29,6 +29,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #F0F3F4;">
+ *     <a href="https://coolors.co/f0f3f4" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">zappy zebra (#F0F3F4)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Gray)
+ *
+ * @source
+ */
 export const _F0F3F4: PaletteColor = {
     HEX: '#F0F3F4',
     RGB: {R: 240, G: 243, B: 244},
