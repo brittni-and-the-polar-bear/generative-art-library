@@ -168,7 +168,7 @@ This entry will include the color block `div` and TypeScript example.
 
 Be sure to add the new markdown section to the Table of Contents.
 
-## Color Category Entry Example
+## Color Category by Hex Example Entry
 
 ````markdown
 # bird's eye (#BC010A)
@@ -197,7 +197,7 @@ Entries should be ordered by luminance value, which can be calculated on
 
 This entry will only include the color block `div`.
 
-## Color Category by Shade Entry Example
+## Color Category by Luminance Example Entry
 
 ```markdown
 <!-- luminance: 0.10734989 -->
