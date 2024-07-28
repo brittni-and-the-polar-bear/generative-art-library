@@ -37,6 +37,7 @@ Valid Categories:
 
 * black
 * blue
+* gray
 * green
 * pink
 * purple
