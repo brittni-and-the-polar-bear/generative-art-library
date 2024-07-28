@@ -33,9 +33,17 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
 
 ----
 
+<!-- luminance: 0.9510014633 -->
 <div class="color-block" style="background: #FBF9F9;">
   <a href="./white-colors.html#doctor-white-fbf9f9">
     <h2 class="color-block black-pass">doctor white (#FBF9F9)</h2>
+  </a>
+</div>
+
+<!-- luminance: 0.9842761548 -->
+<div class="color-block" style="background: #FAFEFF;">
+  <a href="./white-colors.html#polar-bear-in-a-blizzard-fafeff">
+    <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
   </a>
 </div>
 
