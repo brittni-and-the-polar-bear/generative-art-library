@@ -15,6 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './0437f1';
-export * from './1d90af';
-export * from './7dced8';
+// #1d90af
+// #1D90AF
+// 193°, 72%, 40%
+// 29, 144, 175
+// mediterranean sea
+// luminance: 0.2330287385
+// black-pass
+
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+export const _1D90AF: PaletteColor = {
+    HEX: '#1D90AF',
+    RGB: {R: 29, G: 144, B: 175},
+    HSL: {H: 193, S: 72, L: 40},
+    NAME: 'mediterranean sea',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
