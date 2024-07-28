@@ -286,6 +286,9 @@ Be sure to add the new markdown section to the Table of Contents.
 
 The palette should only be added to one category markdown file, preferably the most specific category.
 
+If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
+add an entry for the new palette to the gradient palettes markdown page.
+
 ## Palette Category Entry Example
 
 ````markdown
@@ -300,6 +303,8 @@ import {BRITTNI} from 'palettes';
 
 let name: string = BRITTNI.NAME;
 ```
+
+[Table of Contents](#table-of-contents)
 ````
 
 [Table of Contents](#table-of-contents)
@@ -392,3 +397,7 @@ MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
 ```
 
 [Table of Contents](#table-of-contents)
+
+----
+
+Fin.
