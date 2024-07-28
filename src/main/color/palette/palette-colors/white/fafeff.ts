@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #fafeff
-// #FAFEFF
-// 192°, 100%, 99%
-// 250, 254, 255
-// polar bear in a blizzard
-// luminance: 0.9842761548
-// black-pass
-
 import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
