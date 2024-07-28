@@ -18,6 +18,9 @@
 import {StringMap} from 'map';
 import {PaletteColor} from 'palette';
 
+// TODO - update all file structures
+// TODO - update links
+
 /**
  * A map of hex values to {@link PaletteColor} objects for all palette colors.
  *
