@@ -40,6 +40,13 @@ Color block links redirect to [Blue Colors by Hex](./blue-colors-by-hex.md) entr
   </a>
 </div>
 
+<!-- luminance: 0.5346045524 -->
+<div class="color-block" style="background: #7DCED8;">
+  <a href="./blue-colors.html#spray-7dced8">
+    <h2 class="color-block black-pass">spray (#7DCED8)</h2>
+  </a>
+</div>
+
 ----
 
 Fin.

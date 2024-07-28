@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #7dced8
-// #7DCED8
-// 187°, 54%, 67%
-// 125, 206, 216
-// spray
-// luminance: 0.5346045524
-// black pass
-
 import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
