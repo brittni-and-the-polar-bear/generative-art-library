@@ -6,9 +6,9 @@
 
 ## [Black Colors](./black-colors.md)
 
-## [Blue Colors](./blue-colors.md)
+## [Blue Colors](./blue-colors-by-luminance.md)
 
-## [Green Colors](./green-colors-by-hex)
+## [Green Colors](./green-colors-by-luminance.md)
 
 ## [Pink Colors](./pink-colors-by-luminance.md)
 

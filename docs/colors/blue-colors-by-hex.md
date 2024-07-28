@@ -18,9 +18,18 @@
   }
 </style>
 
-# Blue Colors
+# Blue Colors by Hex
 
 Colors are in numeric order by hex value.
+
+Colors are ordered by luminance on the [Blue Colors by Luminance](./blue-colors-by-luminance.md) page.
+
+Color block links redirect to
+<a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
+
+[All Colors](./all-colors.md)
+
+----
 
 # Table of Contents
 
@@ -43,3 +52,7 @@ let name: string = _0437F1.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
+
+----
+
+Fin.

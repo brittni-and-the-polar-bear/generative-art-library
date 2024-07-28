@@ -22,7 +22,7 @@
 
 Colors are in numeric order by hex value.
 
-Colors are ordered by luminance on the [Red Colors by Luminance](./red-colors-by-luminance) page.
+Colors are ordered by luminance on the [Red Colors by Luminance](./red-colors-by-luminance.md) page.
 
 Color block links redirect to
 <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
