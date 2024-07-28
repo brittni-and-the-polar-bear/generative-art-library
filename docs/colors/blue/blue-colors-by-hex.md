@@ -35,6 +35,8 @@ Color block links redirect to
 
 [blue bouquet (#0437F1)](#blue-bouquet-0437f1)
 
+[spray (#7DCED8)](#spray-7dced8)
+
 ----
 
 # blue bouquet (#0437F1)
@@ -49,6 +51,22 @@ Color block links redirect to
 import {_0437F1} from 'palette-colors';
 
 let name: string = _0437F1.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# spray (#7DCED8)
+
+<div class="color-block" style="background: #7DCED8;">
+  <a href="https://coolors.co/7dced8" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">spray (#7DCED8)</h2>
+  </a>
+</div>
+
+````typescript
+import {_7DCED8} from 'palette-colors';
+
+let name: string = _7DCED8.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
