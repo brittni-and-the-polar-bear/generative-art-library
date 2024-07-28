@@ -40,6 +40,13 @@ Color block links redirect to [Blue Colors by Hex](./blue-colors-by-hex.md) entr
   </a>
 </div>
 
+<!-- luminance: 0.2330287385 -->
+<div class="color-block" style="background: #1D90AF;">
+  <a href="https://coolors.co/1d90af" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">mediterranean sea (#1D90AF)</h2>
+  </a>
+</div>
+
 <!-- luminance: 0.5346045524 -->
 <div class="color-block" style="background: #7DCED8;">
   <a href="./blue-colors.html#spray-7dced8">

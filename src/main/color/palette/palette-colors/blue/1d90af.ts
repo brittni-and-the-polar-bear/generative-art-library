@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #1d90af
-// #1D90AF
-// 193°, 72%, 40%
-// 29, 144, 175
-// mediterranean sea
-// luminance: 0.2330287385
-// black-pass
-
 import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';

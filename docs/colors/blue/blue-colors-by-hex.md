@@ -35,6 +35,8 @@ Color block links redirect to
 
 [blue bouquet (#0437F1)](#blue-bouquet-0437f1)
 
+[mediterranean sea (#1D90AF)](#mediterranean-sea-1d90af)
+
 [spray (#7DCED8)](#spray-7dced8)
 
 ----
@@ -51,6 +53,22 @@ Color block links redirect to
 import {_0437F1} from 'palette-colors';
 
 let name: string = _0437F1.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# mediterranean sea (#1D90AF)
+
+<div class="color-block" style="background: #1D90AF;">
+  <a href="https://coolors.co/1d90af" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">mediterranean sea (#1D90AF)</h2>
+  </a>
+</div>
+
+````typescript
+import {_1D90AF} from 'palette-colors';
+
+let name: string = _1D90AF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
