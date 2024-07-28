@@ -18,8 +18,25 @@
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
 import {_EC417A, _F06090, _F490B1, _F8B9CE, _FCE3EC} from 'palette-colors';
-import {ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES} from "palettes";
 
+import {ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES} from '../../palette-maps';
+
+/**
+ * <!-- Coolors Palette Widget -->
+ * <script src="https://coolors.co/palette-widget/widget.js"></script>
+ * <script data-id="09635237276120507">new CoolorsPaletteWidget("09635237276120507", ["fce3ec","f8b9ce","f490b1","f06090","ec417a"],"glitter"); </script>
+ *
+ * @see {@link _FCE3EC}
+ * @see {@link _F8B9CE}
+ * @see {@link _F490B1}
+ * @see {@link _F06090}
+ * @see {@link _EC417A}
+ *
+ * @category Palettes (Holiday/Valentine's Day)
+ * @category Palettes (Holiday)
+ * @category Palettes (Gradient)
+ * @category Palettes (All)
+ */
 export const GLITTER: Palette = {
     NAME: 'glitter',
 

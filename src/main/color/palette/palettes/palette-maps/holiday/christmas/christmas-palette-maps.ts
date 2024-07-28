@@ -24,7 +24,7 @@ import {Palette} from 'palette';
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/holiday/christmas/christmas-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
  *
  * @category Palette Collections
+ * @category Palettes (Holiday/Christmas)
  * @category Palettes (Holiday)
- * @category Palettes (Christmas)
  */
 export const CHRISTMAS_PALETTES: StringMap<Palette> = new StringMap<Palette>();

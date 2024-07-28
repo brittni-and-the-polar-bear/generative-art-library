@@ -23,7 +23,7 @@ import {ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES} from '../../palette-
 /**
  * <!-- Coolors Palette Widget -->
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
- * <script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"]); </script>
+ * <script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"],"classic christmas"); </script>
  *
  * @see {@link _BC010A}
  * @see {@link _D01625}
@@ -31,9 +31,9 @@ import {ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES} from '../../palette-
  * @see {@link _23856D}
  * @see {@link _FBF9F9}
  *
- * @category Palettes (All)
+ * @category Palettes (Holiday/Christmas)
  * @category Palettes (Holiday)
- * @category Palettes (Christmas)
+ * @category Palettes (All)
  */
 export const CLASSIC_CHRISTMAS: Palette = {
     NAME: 'classic christmas',

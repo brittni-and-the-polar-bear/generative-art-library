@@ -272,6 +272,9 @@ Add a `@see` annotation with a `@link` to the palette in documentation of every 
 
 Add `@category` annotations for the `Palettes (All)` category and each palette category of the new palette (e.g. `@category Palettes (Miscellaneous)`).
 
+If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
+add a `@category` annotation for the `Palettes (Gradient)` category.
+
 [Table of Contents](#table-of-contents)
 
 # Step 11: Add the New Palette to the Palette Category Markdown Page
