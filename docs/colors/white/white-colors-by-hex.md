@@ -33,9 +33,27 @@ Color block links redirect to
 
 # Table of Contents
 
+[polar bear in a blizzard (#FAFEFF)](#polar-bear-in-a-blizzard-fafeff)
+
 [doctor white (#FBF9F9)](#doctor-white-fbf9f9)
 
 ----
+
+# polar bear in a blizzard (#FAFEFF)
+
+<div class="color-block" style="background: #FAFEFF;">
+  <a href="https://coolors.co/fafeff" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
+  </a>
+</div>
+
+````typescript
+import {_FAFEFF} from 'palette-colors';
+
+let name: string = _FAFEFF.NAME;
+````
+
+[Table of Contents](#table-of-contents)
 
 # doctor white (#FBF9F9)
 
