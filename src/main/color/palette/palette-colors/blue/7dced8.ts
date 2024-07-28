@@ -23,10 +23,11 @@
 // luminance: 0.5346045524
 // black pass
 
+import {ColorNameManager} from 'color';
+import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
-import {Discriminators} from "discriminator";
-import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from "palette-colors";
-import {ColorNameManager} from "color";
+
+import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _7DCED8: PaletteColor = {
     HEX: '#7DCED8',
