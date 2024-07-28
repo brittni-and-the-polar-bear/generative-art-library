@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #f0f3f4
-// #F0F3F4
-// 195°, 15%, 95%
-// 240, 243, 244
-// zappy zebra
-// luminance - 0.8915810279
-// black-pass
-
 import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
