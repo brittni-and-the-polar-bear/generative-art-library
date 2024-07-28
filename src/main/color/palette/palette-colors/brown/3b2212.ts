@@ -23,8 +23,11 @@
 // luminance: 0.021175342
 // white pass
 
+import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
+
+import {ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS} from '../palette-color-maps';
 
 export const _3B2212: PaletteColor = {
     HEX: '#3B2212',
@@ -33,3 +36,7 @@ export const _3B2212: PaletteColor = {
     NAME: 'délicieux au chocolat',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+BROWN_PALETTE_COLORS.setUndefinedKey(_3B2212.HEX, _3B2212);
+ALL_PALETTE_COLORS.setUndefinedKey(_3B2212.HEX, _3B2212);
+ColorNameManager.addColor(_3B2212);
