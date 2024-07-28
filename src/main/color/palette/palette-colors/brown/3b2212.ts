@@ -15,14 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './black';
-export * from './blue';
-export * from './brown';
-export * from './gray';
-export * from './green';
-export * from './pink';
-export * from './purple';
-export * from './red';
-export * from './white';
+// #3b2212
+// #3B2212
+// 23°, 53%, 15%
+// 59, 34, 18
+// délicieux au chocolat
+// luminance: 0.021175342
+// white pass
 
-export * from './palette-color-maps';
+import {PaletteColor} from 'palette';
+
+export const _3B2212: PaletteColor = {
+
+};
