@@ -35,42 +35,42 @@ Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entr
 
 <!-- luminance: 0.230186012 -->
 <div class="color-block" style="background: #EC417A;">
-  <a href="./pink-colors-by-hex.html#radishical-ec417a" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors-by-hex.html#radishical-ec417a">
     <h2 class="color-block black-pass">radishical (#EC417A)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.2890462369 -->
 <div class="color-block" style="background: #F06090;">
-  <a href="./pink-colors-by-hex.html#medium-pink-f06090" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors-by-hex.html#medium-pink-f06090">
     <h2 class="color-block black-pass">medium pink (#F06090)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.3511158604 -->
 <div class="color-block" style="background: #FF6BB5;">
-  <a href="./pink-colors-by-hex.html#fen-hong-pink-ff6bb5" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors-by-hex.html#fen-hong-pink-ff6bb5">
     <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.4235393909 -->
 <div class="color-block" style="background: #F490B1;">
-  <a href="./pink-colors-by-hex.html#sachet-pink-f490b1" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors-by-hex.html#sachet-pink-f490b1">
     <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.5911061368 -->
 <div class="color-block" style="background: #F8B9CE;">
-  <a href="./pink-colors-by-hex.html#christys-smile-f8b9ce" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors-by-hex.html#christys-smile-f8b9ce">
     <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.8168974579 -->
 <div class="color-block" style="background: #FCE3EC;">
-  <a href="./pink-colors-by-hex.html#spun-sugar-fce3ec" target="_blank" rel="noopener noreferrer">
+  <a href="./pink-colors-by-hex.html#spun-sugar-fce3ec">
     <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
   </a>
 </div>

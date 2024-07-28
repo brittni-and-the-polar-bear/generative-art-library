@@ -14,7 +14,7 @@
 
 ## [Purple Colors](./purple-colors.md)
 
-## [Red Colors](./red-colors.md)
+## [Red Colors](./red-colors-by-luminance.md)
 
 ## [White Colors](./white-colors-by-luminance.md)
 
