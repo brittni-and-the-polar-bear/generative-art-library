@@ -18,9 +18,18 @@
   }
 </style>
 
-# Purple Colors
+# Purple Colors by Hex
 
 Colors are in numeric order by hex value.
+
+Colors are ordered by luminance on the [Purple Colors by Luminance](./purple-colors-by-luminance) page.
+
+Color block links redirect to
+<a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
+
+[All Colors](./all-colors.md)
+
+----
 
 # Table of Contents
 
@@ -43,3 +52,7 @@ let name: string = _7A00F5.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
+
+----
+
+Fin.

@@ -12,7 +12,7 @@
 
 ## [Pink Colors](./pink-colors-by-luminance.md)
 
-## [Purple Colors](./purple-colors.md)
+## [Purple Colors](./purple-colors-by-hex)
 
 ## [Red Colors](./red-colors-by-luminance.md)
 

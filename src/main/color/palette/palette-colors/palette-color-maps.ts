@@ -82,13 +82,11 @@ export const GREEN_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
  */
 export const PINK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
-// TODO - update all file structures
-// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * purple palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/purple-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/purple-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Purple)
