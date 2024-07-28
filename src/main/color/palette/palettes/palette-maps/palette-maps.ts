@@ -28,8 +28,6 @@ import {Palette} from 'palette';
  */
 export const ALL_PALETTES: StringMap<Palette> = new StringMap<Palette>();
 
-// TODO - add unit tests
-// TODO - add to release notes
 /**
  * A map of palette names to {@link Palette} objects for gradient palettes.
  *
