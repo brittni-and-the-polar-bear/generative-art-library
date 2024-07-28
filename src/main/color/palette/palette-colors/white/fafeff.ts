@@ -15,5 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './fafeff';
-export * from './fbf9f9';
+// #fafeff
+// #FAFEFF
+// 192°, 100%, 99%
+// 250, 254, 255
+// polar bear in a blizzard
+// luminance: 0.9842761548
+// black-pass
+
+import {PaletteColor} from "palette";
+
+export const _FAFEFF: PaletteColor = {
+
+};
