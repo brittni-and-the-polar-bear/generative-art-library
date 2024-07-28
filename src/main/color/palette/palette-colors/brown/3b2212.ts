@@ -29,6 +29,18 @@ import {PaletteColor} from 'palette';
 
 import {ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS} from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #3B2212;">
+ *     <a href="https://coolors.co/3b2212" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">délicieux au chocolat (#3B2212)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Brown)
+ *
+ * @source
+ */
 export const _3B2212: PaletteColor = {
     HEX: '#3B2212',
     RGB: {R: 59, G: 34, B: 18},
