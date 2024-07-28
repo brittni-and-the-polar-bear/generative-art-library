@@ -23,8 +23,13 @@
 // luminance: 0.021175342
 // white pass
 
+import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
 
 export const _3B2212: PaletteColor = {
-
+    HEX: '#3B2212',
+    RGB: {R: 59, G: 34, B: 18},
+    HSL: {H: 23, S: 53, L: 15},
+    NAME: 'délicieux au chocolat',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
