@@ -27,6 +27,8 @@ Colors are ordered by luminance on the [Pink Colors by Luminance](./pink-colors-
 Color block links redirect to
 <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer">Coolors</a> color pages.
 
+[All Colors](./all-colors.md)
+
 ----
 
 # Table of Contents
@@ -136,3 +138,7 @@ let name: string = _FF6BB5.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
+
+----
+
+Fin.

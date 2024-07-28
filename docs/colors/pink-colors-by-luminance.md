@@ -21,13 +21,15 @@
 
 # Pink Colors by Luminance
 
-Colors are in numeric order by luminance value. Luminance values were calculated on the
+Colors are in numeric order by luminance value. Luminance values were calculated with the
 <a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
 
 Colors are ordered by hex value on the [Pink Colors by Hex](./pink-colors-by-hex.md) page.
 This page also contains code usage examples.
 
 Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entries.
+
+[All Colors](./all-colors.md)
 
 ----
 
@@ -72,3 +74,7 @@ Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entr
     <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
   </a>
 </div>
+
+----
+
+Fin.

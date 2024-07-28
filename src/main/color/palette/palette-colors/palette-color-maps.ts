@@ -20,7 +20,6 @@ import {PaletteColor} from 'palette';
 
 // TODO - update all file structures
 // TODO - update links
-
 /**
  * A map of hex values to {@link PaletteColor} objects for all palette colors.
  *
@@ -31,6 +30,8 @@ import {PaletteColor} from 'palette';
  */
 export const ALL_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - update all file structures
+// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * black palette colors.
@@ -42,6 +43,8 @@ export const ALL_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palette
  */
 export const BLACK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - update all file structures
+// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * blue palette colors.
@@ -53,6 +56,8 @@ export const BLACK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
  */
 export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - update all file structures
+// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * green palette colors.
@@ -64,6 +69,8 @@ export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palett
  */
 export const GREEN_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - update all file structures
+// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * pink palette colors.
@@ -75,6 +82,8 @@ export const GREEN_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
  */
 export const PINK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - update all file structures
+// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * purple palette colors.
@@ -86,6 +95,8 @@ export const PINK_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palett
  */
 export const PURPLE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
+// TODO - update all file structures
+// TODO - update links
 /**
  * A map of hex values to {@link PaletteColor} objects for all
  * red palette colors.
@@ -101,7 +112,7 @@ export const RED_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palette
  * A map of hex values to {@link PaletteColor} objects for all
  * white palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/white-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/white-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (White)
