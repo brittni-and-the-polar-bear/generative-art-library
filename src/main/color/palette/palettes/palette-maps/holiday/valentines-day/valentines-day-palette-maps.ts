@@ -18,7 +18,6 @@
 import {StringMap} from 'map';
 import {Palette} from 'palette';
 
-// TODO - add to release notes
 // TODO - add unit tests
 /**
  * A map of palette names to {@link Palette} objects for all Valentine's Day palettes.
