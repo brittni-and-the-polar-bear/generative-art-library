@@ -15,6 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './flower-maps';
+import {Palette} from 'palette';
+import {GLITTER, VALENTINES_PALETTES} from 'palettes';
 
-export * from './nature-palette-maps';
+import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
+
+const EXPECTED_PALETTES: {palette: Palette}[] = [
+    {palette: GLITTER}
+]
+
+const MAP_NAME: string = 'VALENTINES_PALETTES';
+
+describe("valentine's day palette maps test", (): void => {
+    test(`valid string map: ${MAP_NAME}`, (): void => {
+        checkForValidStringMap(VALENTINES_PALETTES, EXPECTED_PALETTES.length);
+    });
+
+    test.each(
+        EXPECTED_PALETTES
+    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+        ({palette}): void => {
+            checkForPaletteInMap(palette, VALENTINES_PALETTES);
+        }
+    );
+});
