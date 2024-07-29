@@ -35,24 +35,25 @@ Color block links redirect to [Blue Colors by Hex](./blue-colors-by-hex.md) entr
 
 <!-- luminance: 0.091090623 -->
 <div class="color-block" style="background: #0437F1;">
-  <a href="./blue-colors.html#blue-bouquet-0437f1">
+  <a href="./blue-colors-by-hex.html#blue-bouquet-0437f1">
     <h2 class="color-block white-pass">blue bouquet (#0437F1)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.2330287385 -->
 <div class="color-block" style="background: #1D90AF;">
-  <a href="https://coolors.co/1d90af" target="_blank" rel="noopener noreferrer">
+  <a href="./blue-colors-by-hex.html#mediterranean-sea-1d90af">
     <h2 class="color-block black-pass">mediterranean sea (#1D90AF)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.5346045524 -->
 <div class="color-block" style="background: #7DCED8;">
-  <a href="./blue-colors.html#spray-7dced8">
+  <a href="./blue-colors-by-hex.html#spray-7dced8">
     <h2 class="color-block black-pass">spray (#7DCED8)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

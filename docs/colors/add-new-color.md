@@ -178,6 +178,7 @@ Be sure to add the new markdown section to the Table of Contents.
     <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
   </a>
 </div>
+<br/>
 
 ```typescript
 import {_BC010A} from 'palette-colors';
@@ -224,6 +225,7 @@ Add the color as a new constant to the release notes draft markdown file.
     <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
   </a>
 </div>
+<br/>
 
 ```typescript
 /**

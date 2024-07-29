@@ -301,6 +301,7 @@ add an entry for the new palette to the gradient palettes markdown page.
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+<br/>
 
 ```typescript
 import {BRITTNI} from 'palettes';
@@ -325,6 +326,7 @@ Add the palette as a new constant to the release notes draft markdown file.
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+<br/>
 
 ```typescript
 /**

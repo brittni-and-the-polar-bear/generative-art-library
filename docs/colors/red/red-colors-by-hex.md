@@ -46,6 +46,7 @@ Color block links redirect to
     <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_BC010A} from 'palette-colors';
@@ -62,6 +63,7 @@ let name: string = _BC010A.NAME;
     <h2 class="color-block white-pass">cartoon violence (#D01625)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_D01625} from 'palette-colors';

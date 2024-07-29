@@ -44,6 +44,7 @@ Color block links redirect to
     <h2 class="color-block white-pass">délicieux au chocolat (#3B2212)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_3B2212} from 'palette-colors';

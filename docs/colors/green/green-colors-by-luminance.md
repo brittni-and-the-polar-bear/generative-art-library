@@ -35,24 +35,25 @@ Color block links redirect to [Green Colors by Hex](./green-colors-by-hex.md) en
 
 <!-- luminance: 0.1229292159 -->
 <div class="color-block" style="background: #007058;">
-  <a href="./green-colors.html#teal-dark-green-007058">
+  <a href="./green-colors-by-hex.html#teal-dark-green-007058">
     <h2 class="color-block white-pass">teal dark green (#007058)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.1823650926 -->
 <div class="color-block" style="background: #23856D;">
-  <a href="./green-colors.html#accent-green-blue-23856d">
+  <a href="./green-colors-by-hex.html#accent-green-blue-23856d">
     <h2 class="color-block black-pass">accent green blue (#23856D)</h2>
   </a>
 </div>
 
 <!-- luminance: 0.7218607122 -->
 <div class="color-block" style="background: #0FFF4F;">
-  <a href="./green-colors.html#cathode-green-0fff4f">
+  <a href="./green-colors-by-hex.html#cathode-green-0fff4f">
     <h2 class="color-block black-pass">cathode green (#0FFF4F)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

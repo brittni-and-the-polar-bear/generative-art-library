@@ -39,6 +39,7 @@ Color block links redirect to [Black Colors by Hex](./black-colors-by-hex.md) en
     <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

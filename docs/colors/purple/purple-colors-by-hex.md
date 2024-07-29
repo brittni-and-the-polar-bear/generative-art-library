@@ -44,6 +44,7 @@ Color block links redirect to
     <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_7A00F5} from 'palette-colors';

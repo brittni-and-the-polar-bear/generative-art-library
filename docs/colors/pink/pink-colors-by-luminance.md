@@ -74,6 +74,7 @@ Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entr
     <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 
