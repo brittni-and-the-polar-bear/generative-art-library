@@ -14,6 +14,9 @@
 
 ## [Miscellaneous Palettes](./miscellaneous/miscellaneous-palettes.md)
 
+## [Nature Palettes](./nature/nature-palettes.md)
+  * ### [Flower Palettes](./nature/flower/flower-palettes.md)
+
 ----
 
 Fin.
