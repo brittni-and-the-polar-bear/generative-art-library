@@ -34,5 +34,15 @@ export const BLUE_LILY: Palette = {
         _3B2212
     ],
 
+    CONTRAST_MAP: {
+        '#000000': [],
+        '#FFFFFF': [],
+        '#F0F3F4': [],
+        '#FAFEFF': [],
+        '#7DCED8': [],
+        '#1D90AF': [],
+        '#3B2212': []
+    },
+
     DISCRIMINATOR: Discriminators.PALETTE
 };
