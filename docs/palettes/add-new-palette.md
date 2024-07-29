@@ -11,12 +11,12 @@
 [Step 4: Create the `Palette` Object](#step-4-create-the-palette-object)
   * [Step 4, Part A: Set Palette Name](#step-4-part-a-set-palette-name)
   * [Step 4, Part B: Set Palette Source](#step-4-part-b-set-palette-source)
-  * [Step 4, Part C: Set the `isGradient` Flag](#step-4-part-c-set-the-isgradient-flag)
+  * [Step 4, Part C: Set the `IS_GRADIENT` Flag](#step-4-part-c-set-the-is_gradient-flag)
   * [Step 4, Part D: Set the `DISCRIMINATOR` Property](#step-4-part-d-set-the-discriminator-property)
   * [Step 4, Part E: Set the Colors](#step-4-part-e-set-the-colors)
   * [Step 4, Part F: Create the Contrast Map](#step-4-part-f-create-the-contrast-map)
 
-[Step 5: Export the Color from the `index.ts` File](#step-5-export-the-color-from-the-indexts-file)
+[Step 5: Export the Palette from the `index.ts` File](#step-5-export-the-palette-from-the-indexts-file)
 
 [Step 6: Add the Palette to the `Palette` Maps](#step-6-add-the-palette-to-the-palette-maps)
 
@@ -153,7 +153,7 @@ const CONTRAST_MAP: ContrastMap = {
 
 [Table of Contents](#table-of-contents)
 
-# Step 5: Export the Color from the `index.ts` File
+# Step 5: Export the Palette from the `index.ts` File
 
 In the `index.ts` file in the same category directory, add a statement to export the palette.<br/>
 **Example:** `export * from './brittni';`

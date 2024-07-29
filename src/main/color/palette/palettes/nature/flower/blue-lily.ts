@@ -18,6 +18,8 @@
 import {Palette} from 'palette';
 import {Discriminators} from "discriminator";
 import {_1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF} from "palette-colors";
+import {FLOWER_PALETTES} from "../../palette-maps/nature-maps/flower-maps";
+import {ALL_PALETTES, NATURE_PALETTES} from "../../palette-maps";
 
 export const BLUE_LILY: Palette = {
     NAME: 'blue lily',
@@ -46,3 +48,7 @@ export const BLUE_LILY: Palette = {
 
     DISCRIMINATOR: Discriminators.PALETTE
 };
+
+FLOWER_PALETTES.setUndefinedKey(BLUE_LILY.NAME, BLUE_LILY);
+NATURE_PALETTES.setUndefinedKey(BLUE_LILY.NAME, BLUE_LILY);
+ALL_PALETTES.setUndefinedKey(BLUE_LILY.NAME, BLUE_LILY);

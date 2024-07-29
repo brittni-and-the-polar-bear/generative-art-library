@@ -15,8 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday-maps';
-export * from './miscellaneous-maps';
-export * from './nature-maps';
+import {StringMap} from 'map';
+import {Palette} from 'palette';
 
-export * from './palette-maps';
+/**
+ * A map of palette names to {@link Palette} objects for all nature palettes.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/nature/nature-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ *
+ * @category Palette Collections
+ * @category Palettes (Nature)
+ */
+export const NATURE_PALETTES: StringMap<Palette> = new StringMap<Palette>();
