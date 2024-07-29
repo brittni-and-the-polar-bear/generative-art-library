@@ -35,10 +35,11 @@ Color block links redirect to [Brown Colors by Hex](./brown-colors-by-hex.md) en
 
 <!-- luminance: 0.021175342 -->
 <div class="color-block" style="background: #3B2212;">
-  <a href="./brown-colors.html#délicieux-au-chocolat-3b2212">
+  <a href="./brown-colors-by-hex.html#délicieux-au-chocolat-3b2212">
     <h2 class="color-block white-pass">délicieux au chocolat (#3B2212)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

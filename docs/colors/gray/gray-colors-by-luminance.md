@@ -35,10 +35,11 @@ Color block links redirect to [Gray Colors by Hex](./gray-colors-by-hex.md) entr
 
 <!-- luminance: 0.8915810279 -->
 <div class="color-block" style="background: #F0F3F4;">
-  <a href="./gray-colors.html#zappy-zebra-f0f3f4">
+  <a href="./gray-colors-by-hex.html#zappy-zebra-f0f3f4">
     <h2 class="color-block black-pass">zappy zebra (#F0F3F4)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

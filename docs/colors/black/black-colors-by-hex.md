@@ -44,6 +44,7 @@ Color block links redirect to
     <h2 class="color-block white-pass">dark tone ink (#121212)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_121212} from 'palette-colors';

@@ -45,4 +45,8 @@ The full text of the license can be found in the package
 
 ## [development resources](./resources.md)
 
-## [development tasks](./progress-tracking/progress.md)
+----
+
+## [colors](./colors/all-colors.md)
+
+## [palettes](./palettes/all-palettes.md)

@@ -46,6 +46,7 @@ Color block links redirect to [Red Colors by Hex](./red-colors-by-hex.md) entrie
     <h2 class="color-block white-pass">cartoon violence (#D01625)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

@@ -54,6 +54,7 @@ Color block links redirect to
     <h2 class="color-block black-pass">radishical (#EC417A)</h2>
   </a>
 </div>
+<br/>
 
 ```typescript
 import {_EC417A} from 'palette-colors';
@@ -69,6 +70,7 @@ let name: string = _EC417A.NAME;
     <h2 class="color-block black-pass">medium pink (#F06090)</h2>
   </a>
 </div>
+<br/>
 
 ```typescript
 import {_F06090} from 'palette-colors';
@@ -84,6 +86,7 @@ let name: string = _F06090.NAME;
     <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
   </a>
 </div>
+<br/>
 
 ```typescript
 import {_F490B1} from 'palette-colors';
@@ -99,6 +102,7 @@ let name: string = _F490B1.NAME;
     <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
   </a>
 </div>
+<br/>
 
 ```typescript
 import {_F8B9CE} from 'palette-colors';
@@ -114,6 +118,7 @@ let name: string = _F8B9CE.NAME;
     <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_FCE3EC} from 'palette-colors';
@@ -130,6 +135,7 @@ let name: string = _FCE3EC.NAME;
     <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_FF6BB5} from 'palette-colors';

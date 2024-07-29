@@ -21,6 +21,7 @@ Palettes are in alphabetic order by object name.
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 <script data-id="05684644562469574">new CoolorsPaletteWidget("05684644562469574", ["f0f3f4","fafeff","7dced8","1d90af","3b2212"],"blue lily"); </script>
+<br/>
 
 ````typescript
 import {BLUE_LILY} from 'palettes';

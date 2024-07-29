@@ -46,6 +46,7 @@ Color block links redirect to
     <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_FAFEFF} from 'palette-colors';
@@ -62,6 +63,7 @@ let name: string = _FAFEFF.NAME;
     <h2 class="color-block black-pass">doctor white (#FBF9F9)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_FBF9F9} from 'palette-colors';

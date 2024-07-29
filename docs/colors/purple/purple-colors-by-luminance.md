@@ -39,6 +39,7 @@ Color block links redirect to [Purple Colors by Hex](./purple-colors-by-hex.md) 
     <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
   </a>
 </div>
+<br/> <!-- only after last entry -->
 
 ----
 

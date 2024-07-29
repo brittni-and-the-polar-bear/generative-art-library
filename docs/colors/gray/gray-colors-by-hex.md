@@ -44,6 +44,7 @@ Color block links redirect to
     <h2 class="color-block black-pass">zappy zebra (#F0F3F4)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_F0F3F4} from 'palette-colors';

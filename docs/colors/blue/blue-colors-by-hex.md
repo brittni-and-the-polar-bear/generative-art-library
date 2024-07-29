@@ -48,6 +48,7 @@ Color block links redirect to
     <h2 class="color-block white-pass">blue bouquet (#0437F1)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_0437F1} from 'palette-colors';
@@ -64,6 +65,7 @@ let name: string = _0437F1.NAME;
     <h2 class="color-block black-pass">mediterranean sea (#1D90AF)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_1D90AF} from 'palette-colors';
@@ -80,6 +82,7 @@ let name: string = _1D90AF.NAME;
     <h2 class="color-block black-pass">spray (#7DCED8)</h2>
   </a>
 </div>
+<br/>
 
 ````typescript
 import {_7DCED8} from 'palette-colors';
