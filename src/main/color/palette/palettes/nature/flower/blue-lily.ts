@@ -16,9 +16,23 @@
  */
 
 import {Palette} from 'palette';
+import {Discriminators} from "discriminator";
+import {_1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF} from "palette-colors";
 
 export const BLUE_LILY: Palette = {
     NAME: 'blue lily',
 
+    SOURCE: 'https://www.color-hex.com/color-palette/1040636',
 
+    IS_GRADIENT: false,
+
+    COLORS: [
+        _F0F3F4,
+        _FAFEFF,
+        _7DCED8,
+        _1D90AF,
+        _3B2212
+    ],
+
+    DISCRIMINATOR: Discriminators.PALETTE
 };

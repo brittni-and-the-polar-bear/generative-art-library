@@ -93,9 +93,9 @@ If the palette was inspired by or taken from a website, the `SOURCE` property sh
 
 [Table of Contents](#table-of-contents)
 
-## Step 4, Part C: Set the `isGradient` Flag
+## Step 4, Part C: Set the `IS_GRADIENT` Flag
 
-If the palette is a gradient, the `isGradient` flag should be set to `true`.
+If the palette is a gradient, the `IS_GRADIENT` flag should be set to `true`.
 Otherwise, it should be set to `false`.
 
 [Table of Contents](#table-of-contents)
