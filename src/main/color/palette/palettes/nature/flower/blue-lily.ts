@@ -35,13 +35,13 @@ export const BLUE_LILY: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': [],
-        '#FFFFFF': [],
-        '#F0F3F4': [],
-        '#FAFEFF': [],
-        '#7DCED8': [],
-        '#1D90AF': [],
-        '#3B2212': []
+        '#000000': ['#F0F3F4', '#FAFEFF', '#7DCED8', '#1D90AF'],
+        '#FFFFFF': ['#3B2212'],
+        '#F0F3F4': ['#000000', '#3B2212'],
+        '#FAFEFF': ['#000000', '#3B2212'],
+        '#7DCED8': ['#000000', '#3B2212'],
+        '#1D90AF': ['#000000'],
+        '#3B2212': ['#FFFFFF', '#F0F3F4', '#FAFEFF', '#7DCED8']
     },
 
     DISCRIMINATOR: Discriminators.PALETTE
