@@ -18,9 +18,23 @@
 import {Palette} from 'palette';
 import {Discriminators} from "discriminator";
 import {_1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF} from "palette-colors";
-import {FLOWER_PALETTES} from "../../palette-maps/nature-maps/flower-maps";
-import {ALL_PALETTES, NATURE_PALETTES} from "../../palette-maps";
+import {ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES} from "../../palette-maps";
 
+/**
+ * <!-- Coolors Palette Widget -->
+ * <script src="https://coolors.co/palette-widget/widget.js"></script>
+ * <script data-id="05684644562469574">new CoolorsPaletteWidget("05684644562469574", ["f0f3f4","fafeff","7dced8","1d90af","3b2212"],"blue lily"); </script>
+ *
+ * @see {@link _F0F3F4}
+ * @see {@link _FAFEFF}
+ * @see {@link _7DCED8}
+ * @see {@link _1D90AF}
+ * @see {@link _3B2212}
+ *
+ * @category Palettes (Nature/Flower)
+ * @category Palettes (Nature)
+ * @category Palettes (All)
+ */
 export const BLUE_LILY: Palette = {
     NAME: 'blue lily',
 
