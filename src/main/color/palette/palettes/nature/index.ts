@@ -15,8 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday'
-export * from './miscellaneous';
-export * from './nature';
-
-export * from './palette-maps';
+export * from './flower';

@@ -54,6 +54,8 @@ Valid Categories:
   * christmas
   * valentines-day
 * miscellaneous
+* nature
+  * flower
 
 [Table of Contents](#table-of-contents)
 

@@ -15,8 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday'
-export * from './miscellaneous';
-export * from './nature';
+import {Palette} from 'palette';
 
-export * from './palette-maps';
+export const BLUE_LILY: Palette = {
+    NAME: 'blue lily',
+
+
+};
