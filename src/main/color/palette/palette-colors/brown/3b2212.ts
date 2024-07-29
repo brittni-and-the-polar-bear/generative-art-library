@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #3b2212
-// #3B2212
-// 23°, 53%, 15%
-// 59, 34, 18
-// délicieux au chocolat
-// luminance: 0.021175342
-// white pass
-
 import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
