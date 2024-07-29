@@ -22,6 +22,7 @@
       "random": ["./src/main/random"],
       "unit-test/shared": ["./src/test/shared"]
     },
+
     /* JSON Modules */
     "resolveJsonModule": true,
     "resolvePackageJsonExports": false,

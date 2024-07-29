@@ -1,18 +1,1 @@
-/*
- * Copyright (C) 2024 brittni and the polar bear LLC.
- *
- * This file is a part of brittni and the polar bear's Generative Art Library,
- * which is released under the GNU Affero General Public License, Version 3.0.
- * You may not use this file except in compliance with the license.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program. See LICENSE or go to
- * https://www.gnu.org/licenses/agpl-3.0.en.html for full license details.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU Affero General Public License for more details.
- */
-
-window.navigationData = "data:application/octet-stream;base64,H4sIAAAAAAAAE5WRMWvDMBCF/8vNpqahCcVr0qGDl7jQIWQQ0lkSkU7GOkNK6X8vyVDbsWXTUbr3vnt3d/oGxitDAfvgQgsZSGOdapGgOI1rFTqUHNpSkNB4kzaCDRQgnYgRYz6nejLsHWRwsaSgeN68/mTz1I+vBnskUucfgDfBmJZkrURbynTAWnSOV3BzqtVJE6mmvvPAWYomJo5ScWtJl6KZgv9Ka3A2CbhGrixphwfrkaIN9E4Kr32ruiPJNlDME9Jx693LoO9RkMZp6vv3cuKjIBV8IvP/sDPQqVEFv+T8RKsNo3pz6JG4R1hibGshMeYPmjFus92N5mu2qWNfkKXZB7q/pwcfludWeP4F/OBnl+kDAAA="
+window.navigationData = "data:application/octet-stream;base64,H4sIAAAAAAAAE9VaW2+jOBT+KxUvuytVG3Jt0zcCpkVLLgI6UTUaVd7gJlaJicDZmdnV/vdVQjpJ4PiEXJh2NU+d78LxOcY+2Pn8jybZN6ndaWYcxYl2rU1mPAoTJrS7z/uYzyI2kXESfF8w7VpbUDnT7jQmlvO0ViD8PpPzSLvWXrkItbvbf68Lz9noJxFNU7Zx2FfVGwWdGQuZ0FQaK02q9MnTDvoO6Jz1qaBTprLcYRx0e0uEwuoNLu2DR5ZjYa4We6HLSB4IEmIVXb/ko716y7pyEmWwHQvp87+BObSPY1MoY/qSipAmocrpDT8wGS82qYop2UnywffqjNlyybpuXUc0YlKyA64QC0+NxdNJwudcUHVm9jhpvsD7qLq8+SflE7IL4zH36UIRqS8TLqYZnvP/AR3yljOFuUfFlBWN1/+NlW7KpM/FNGIWnzOR8lg4ImTftk4vSzGRPBZpTUHdd++09iLe1FwR9CXnDfTMjREXkiUvdLL12pc32h3FZMY8gH1oZQSM/sqMo1XYqywqMmG47vPIcEkQEH/70L9owumfEUtru/j+M5uN3bXkwXP8oG/4qFmRhVja7nBMPNQvR0HM7j3DcsggQO0KJMTwYeg6lvGE+uU5iF3f8U3iusaADB/xHMJMxHpgBI8eQT1zFMTsk+GSQeAMCB4kQCuYKubrepc+YtY+m0N36B2auxsWMrKea5h/lDCFeKjtIynlWqBhpt5wPCjjCvDwl+SphCtAQ00JKRMrxENsR86gTLUAGmb66I3cMuUCiYixR6wSrkUWYjl+cIIyoUK88u9ievWrEUW//bzX8FnXb/T2LeSzgVBxq3lj12HxGkLFtm23bFi8hjBxvbH6B4ozCBVbXd2An5xBmLjRvG13LFCcQZi42Wuows4gTHxj6LrdBsUZhIotk1hwnTMIE/dMva4boDiDMLGl1zsNOOwMwsTEbNVv4CdnECa29Y7e1UFxBuFiu2m3FOIVhIpbXb0HvxgZhIpve12TwOI1hIoNm9jw3M4gVNyzu3YXFq8hVGySJjFh8RpCxXan14MnSQYdtYb2Ijp5Va2iFXUeJyxJ+BCWTD2CCpqc8xbzs5bU49cmNHNJ/FUoU1dNK3fCwo4N4T6h31UjqKRrPGG1w+NnTFmCijrUMzuZc5qR41sCLHkjLpRrVyVt+Htusu+3T36c3Wq0TBaRcrGv7CPphH4SG4XHQtUQKvgc+9ktKTby8YxLZfku+t34fn0eMP7S36rnHHSuexjXcZ+UDc4KRM9unCAYOPAev4awY1bX8H3HfP5xkAqesuZJ2OmM6wQB8cDtLoNKZv4+oSFnQio32eMfdPHTWzjyhzjiobq9qeBk+yNUsbKT7GpPiLf1qpmzhKdyTtP/X+XwgX2iEROSC/ZLemUhffc5Ra+8Sn2eTlgUUcHipbJCZ62FF78ygQcyoHKZ4F++52wHF73lusBVD5aEmh3FX1nykXOxG75HRRjP1dfWGVi8tw7jOXbLmzHUt8b7+AGnk67Ox4xPZ5KFJGJzJiR4V5zj4NfFi7bqlwOvTE5mq5+VrP4u/npgF4Z+QfDlPxsCNYC9JQAA"
