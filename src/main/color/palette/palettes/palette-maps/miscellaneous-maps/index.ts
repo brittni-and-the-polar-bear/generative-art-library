@@ -15,6 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import module from 'p5';
-export = module;
-export as namespace P5Lib;
+export * from './miscellaneous-pallete-maps';

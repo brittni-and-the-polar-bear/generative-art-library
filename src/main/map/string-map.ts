@@ -17,7 +17,7 @@
 
 /**
  * A map of string keys to some ValueType.
- * @category Maps
+ * @category Map
  */
 class StringMap<ValueType> {
     /**
@@ -57,6 +57,15 @@ class StringMap<ValueType> {
      */
     public get(key: string): ValueType | undefined {
         return this._map.get(key);
+    }
+
+    /**
+     * Returns `true` if the map contains the given {@link key},
+     * returns `false` if it does not.
+     * @param key -
+     */
+    public hasKey(key: string): boolean {
+        return this._map.has(key);
     }
 
     /**

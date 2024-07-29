@@ -15,8 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './math';
-export * from './random';
-export * from './map';
-export * from './p5';
-export * from './color'
+import {StringMap} from 'map';
+import {Palette} from 'palette';
+
+/**
+ * A map of palette names to {@link Palette} objects for all miscellaneous palettes.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/miscellaneous/miscellaneous-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ *
+ * @category Palette Collections
+ * @category Palettes (Miscellaneous)
+ */
+export const MISCELLANEOUS_PALETTES: StringMap<Palette> = new StringMap<Palette>();

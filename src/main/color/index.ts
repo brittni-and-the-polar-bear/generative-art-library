@@ -15,6 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
+export * from './color-name';
 export * from './color';
+export * from './color-selector-type';
 export * from './color-selector';
+export * from './default-color-selector';
 export * from './color-selector-manager';

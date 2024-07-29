@@ -20,15 +20,21 @@ import type {JestConfigWithTsJest} from 'ts-jest';
 const config: JestConfigWithTsJest = {
     collectCoverage: true,
     coverageDirectory: './out/tests-coverage',
-    coverageReporters: ['text', 'lcov'],
+    coverageReporters: ['text', 'lcov', 'json', 'json-summary'],
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
         '^color$': '<rootDir>/src/main/color',
+        '^color-contrast$': '<rootDir>/src/main/color/color-contrast',
         '^context$': '<rootDir>/src/main/p5',
+        '^discriminator$': '<rootDir>/src/main/discriminator',
         '^map$': '<rootDir>/src/main/map',
         '^math$': '<rootDir>/src/main/math',
-        '^random$': '<rootDir>/src/main/random'
+        '^palette$': '<rootDir>/src/main/color/palette',
+        '^palettes$': '<rootDir>/src/main/color/palette/palettes',
+        '^palette-colors$': '<rootDir>/src/main/color/palette/palette-colors',
+        '^random$': '<rootDir>/src/main/random',
+        '^unit-test/shared$': '<rootDir>/src/test/shared'
     },
     testEnvironment: 'jsdom',
     testRegex: './src/test/.*\\.(test|spec)?\\.(ts|tsx)$',

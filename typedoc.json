@@ -1,7 +1,10 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": ["./src/main/index.ts"],
+  "entryPoints": [
+    "./src/main/batpb-genart.ts"
+  ],
   "out": "./out/doc",
+  "customCss": "./typedoc/typedoc.css",
 
   "plugin": [
     "typedoc-plugin-extra-footer",
@@ -34,7 +37,7 @@
     "@deprecated": true
   },
 
-  "sort": ["source-order"],
+  "sort": ["kind", "visibility", "static-first", "alphabetical", "enum-value-ascending"],
 
   "validation": {
     "notExported": true,
