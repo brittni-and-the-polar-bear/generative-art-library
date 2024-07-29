@@ -81,6 +81,6 @@
     "typedoc": "^0.26.5",
     "typedoc-plugin-coverage": "^3.3.0",
     "typedoc-plugin-mdn-links": "^3.2.6",
-    "typescript": "^5.5.4"
+    "typescript": "~5.4.5"
   }
 }
