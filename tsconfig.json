@@ -11,13 +11,19 @@
     ],
     "paths": {
       "color": ["./src/main/color"],
+      "color-contrast": ["./src/main/color/color-contrast"],
       "context": ["./src/main/p5"],
+      "discriminator": ["./src/main/discriminator"],
       "map": ["./src/main/map"],
       "math": ["./src/main/math"],
-      "random": ["./src/main/random"]
+      "palette": ["./src/main/color/palette"],
+      "palettes": ["./src/main/color/palette/palettes"],
+      "palette-colors": ["./src/main/color/palette/palette-colors"],
+      "random": ["./src/main/random"],
+      "unit-test/shared": ["./src/test/shared"]
     },
     /* JSON Modules */
-    "resolveJsonModule": false,
+    "resolveJsonModule": true,
     "resolvePackageJsonExports": false,
     "resolvePackageJsonImports": false,
 

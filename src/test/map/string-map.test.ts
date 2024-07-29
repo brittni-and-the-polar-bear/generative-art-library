@@ -77,6 +77,15 @@ describe('string-map tests', (): void => {
         expect(map.get('harry')).toBeUndefined();
     });
 
+    test('has key', (): void => {
+        const map: StringMap<number> = new StringMap<number>();
+        expect(map.hasKey('molly')).toBeFalsy();
+        map.setKey('molly', 10);
+        expect(map.hasKey('molly')).toBeTruthy();
+        map.setKey('molly', 20);
+        expect(map.hasKey('harry')).toBeFalsy();
+    });
+
     test('set undefined key', (): void => {
         const map: StringMap<number> = new StringMap<number>();
         const logSpy = jest.spyOn(global.console, 'warn');

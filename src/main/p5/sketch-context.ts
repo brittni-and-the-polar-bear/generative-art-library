@@ -26,23 +26,20 @@ const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
 /**
  * The SketchContext provides static access to the p5.js sketch context.
  * This context allows access to all methods and variables of the p5.js library.
- * @public
+ *
  * @category p5
  */
 class SketchContext {
     /**
      * The underlying p5.js sketch context object.
-     * @private
-     * @static
      */
     private static _p5?: P5Lib;
 
     /**
      * Initializes the sketch context to allow other accessors to have
      * accurate canvas, environment, and runtime information.
+     *
      * @param p5 - The sketch context of the running p5.js script.
-     * @public
-     * @static
      */
     public static initialize(p5: P5Lib): void {
         if (!this._p5) {

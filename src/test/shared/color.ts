@@ -20,7 +20,12 @@ import P5Lib from 'p5';
 import {Color, ColorSelector, ColorSelectorType} from 'color';
 import {SketchContext} from 'context';
 
+import {checkNumberWithinAmount} from './math';
+
 const p5: P5Lib = SketchContext.p5;
+
+const hexPattern: RegExp = /^#[A-F|0-9]{6}$/;
+const hexWithAlphaPattern: RegExp = /^#[A-F|0-9]{8}$/;
 
 export const red: Color = new Color(p5.color(255, 0, 0));
 export const green: Color = new Color(p5.color(0, 255, 0));
@@ -32,35 +37,56 @@ export const yellow: Color = new Color(p5.color(255, 255, 0));
 export interface ColorComponents {
     readonly r: number,
     readonly g: number,
-    readonly b: number
+    readonly b: number,
+    readonly a?: number,
 }
 
 export class SampleSelector extends ColorSelector {
     constructor(colors: Color[], randomOrder?: boolean) {
-        super(randomOrder);
+        super('sample color selector', randomOrder);
         for (const c of colors) {
             this.addColorChoice(c);
         }
-    }
 
-    get colorNames(): string[] {
-        // TODO - get names of colors from system
-        return ['name1', 'name2', 'name3'];
+        this.COLOR_NAMES.add('name1');
+        this.COLOR_NAMES.add('name2');
+        this.COLOR_NAMES.add('name3');
     }
 
     getColor(): Color {
         return this.selectColorFromChoices();
     }
 
-    get name(): string {
-        return 'sample color selector';
-    }
-
     get type(): ColorSelectorType {
-        return ColorSelectorType.Palette;
+        return ColorSelectorType.PALETTE;
     }
 }
 
 export function colorToColorComponents(c: Color): ColorComponents {
-    return {r: c.red, g: c.green, b: c.blue};
+    return {r: c.red, g: c.green, b: c.blue, a: c.alpha};
+}
+
+export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
+    return {
+        r: Math.floor(p5.red(color)),
+        g: Math.floor(p5.green(color)),
+        b: Math.floor(p5.blue(color)),
+        a: Math.floor(p5.alpha(color))
+    };
+}
+
+export function checkForValidHexColorString(hex: string): void {
+    const isValid: boolean = hexPattern.test(hex);
+    expect(isValid).toBeTruthy();
+}
+
+export function checkForValidHexColorStringWithAlpha(hex: string): void {
+    const isValid: boolean = hexWithAlphaPattern.test(hex);
+    expect(isValid).toBeTruthy();
+}
+
+export function checkForEquivalentComponents(actual: ColorComponents, expected: ColorComponents): void {
+    checkNumberWithinAmount(actual.r, expected.r, 1);
+    checkNumberWithinAmount(actual.g, expected.g, 1);
+    checkNumberWithinAmount(actual.b, expected.b, 1);
 }

@@ -16,24 +16,31 @@
  */
 
 import eslint from '@rollup/plugin-eslint';
+import json from '@rollup/plugin-json';
 
 import analyzer from 'rollup-plugin-analyzer';
 import ts from 'rollup-plugin-ts';
 
 export default {
-    input: './src/main/index.ts',
+    input: './src/main/batpb-genart.ts',
     output: {
         dir: './out',
-        format: 'umd',
-        name: 'genart',
-        sourcemap: true,
+        format: 'es',
+        name: 'batpb-genart',
+        sourcemap: false,
         preserveModules: false,
         globals: {
-            p5: 'p5'
+            p5: 'p5',
+            cococh: 'cococh',
+            'nearest-color': 'nearest-color',
+            'color-name-list': 'color-name-list/dist/colornames.json'
         }
     },
     external: [
-        'p5'
+        'p5',
+        'cococh',
+        'nearest-color',
+        'color-name-list/dist/colornames.json'
     ],
     plugins: [
         eslint({
@@ -42,8 +49,9 @@ export default {
             throwOnWarning: true
         }),
         analyzer({
-            summaryOnly: false
+            summaryOnly: true
         }),
+        json(),
         ts()
     ]
 };

@@ -17,7 +17,8 @@
 
 import {Random} from 'random';
 
-import {ColorSelector, DefaultColorSelector} from './color-selector';
+import {ColorSelector} from './color-selector';
+import {DefaultColorSelector} from './default-color-selector';
 
 /**
  * Manager to select a random {@link ColorSelector} from a {@link !Set}.
@@ -26,34 +27,39 @@ import {ColorSelector, DefaultColorSelector} from './color-selector';
 class ColorSelectorManager {
     /**
      * Underlying {@link !Set} of {@link ColorSelector} objects.
+     * @private
+     * @readonly
      */
-    private readonly _colorSelectors: Set<ColorSelector> = new Set<ColorSelector>();
+    private readonly _COLOR_SELECTORS: Set<ColorSelector> = new Set<ColorSelector>();
 
     /**
-     * Select a random {@link ColorSelector} from the {@link _colorSelectors} set.
+     * Select a random {@link ColorSelector} from the {@link _COLOR_SELECTORS} set.
      * @returns A random {@link ColorSelector}. If a selector cannot be chosen,
      * a {@link DefaultColorSelector} object will be returned.
+     * @public
      */
     public getRandomColorSelector(): ColorSelector {
-        const selectors: ColorSelector[] = Array.from(this._colorSelectors);
+        const selectors: ColorSelector[] = Array.from(this._COLOR_SELECTORS);
         return Random.randomElement(selectors) ?? (new DefaultColorSelector());
     }
 
     /**
-     * Add a {@link ColorSelector} to the {@link _colorSelectors} set.
+     * Add a {@link ColorSelector} to the {@link _COLOR_SELECTORS} set.
      * @param selector -
+     * @public
      */
     public addColorSelector(selector: ColorSelector): void {
-        this._colorSelectors.add(selector);
+        this._COLOR_SELECTORS.add(selector);
     }
 
     /**
-     * Add multiple {@link ColorSelector} objects to the {@link _colorSelectors} set.
+     * Add multiple {@link ColorSelector} objects to the {@link _COLOR_SELECTORS} set.
      * @param selectors -
+     * @public
      */
     public addColorSelectors(selectors: Iterable<ColorSelector>): void {
         for (const selector of selectors) {
-            this._colorSelectors.add(selector);
+            this._COLOR_SELECTORS.add(selector);
         }
     }
 }
