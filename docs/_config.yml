@@ -7,3 +7,6 @@ title: "@batpb/genart - generative art library"
 description: A TypeScript compatible library built on p5.js for creating responsive generative art projects.
 logo: "https://brittni-and-the-polar-bear.github.io/assets/img/logo.png"
 show_downloads: true
+
+include:
+  - "doc/**"
