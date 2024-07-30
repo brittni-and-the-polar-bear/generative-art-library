@@ -8,36 +8,6 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: daily
-    target-branch: "development-main"
-    allow:
-      - dependency-type: "direct"
-    versioning-strategy: increase
-    commit-message:
-      prefix: "dependabot npm security update"
-      include: "scope"
-    groups:
-      development-dependencies-security:
-        applies-to: security-updates
-        dependency-type: "development"
-        update-types:
-          - "major"
-          - "minor"
-          - "patch"
-      production-dependencies-security:
-        applies-to: security-updates
-        dependency-type: "production"
-        update-types:
-          - "major"
-          - "minor"
-          - "patch"
-    reviewers:
-      - "blwatkins"
-      - "azurepolarbear"
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
       interval: weekly
     target-branch: "development-main"
     allow:
@@ -54,8 +24,22 @@ updates:
           - "major"
           - "minor"
           - "patch"
+      development-dependencies-security:
+        applies-to: security-updates
+        dependency-type: "development"
+        update-types:
+          - "major"
+          - "minor"
+          - "patch"
       production-dependencies:
         applies-to: version-updates
+        dependency-type: "production"
+        update-types:
+          - "major"
+          - "minor"
+          - "patch"
+      production-dependencies-security:
+        applies-to: security-updates
         dependency-type: "production"
         update-types:
           - "major"
