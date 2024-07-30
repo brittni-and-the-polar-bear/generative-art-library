@@ -9,7 +9,7 @@ logo: "https://brittni-and-the-polar-bear.github.io/assets/img/logo.png"
 show_downloads: true
 
 include:
-  - "*.html"
-  - "**.html"
-  - "_*.html"
+  #- "*.html"
+  #- "**.html"
+  #- "_*.html"
   - "doc/**/*.html"
