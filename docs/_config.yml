@@ -25,3 +25,7 @@ include:
   - "/doc/variables/*"
   - "/doc/variables/_*_.html"
   - "_*_.html"
+  - "*.html"
+  - "**.html"
+  - "_*.html"
+  - "doc/**/*.html"
