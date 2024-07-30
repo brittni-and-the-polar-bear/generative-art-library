@@ -19,6 +19,7 @@ import {Color, ColorSelector} from 'color';
 import {StringMap} from 'map';
 
 import {ColorComponents, colorToColorComponents} from './color';
+import {RANDOM_TEST_TRIES} from './random';
 
 export function checkForValidColorSelector(selector: ColorSelector): void {
     expect(selector.type).toBeTruthy();
@@ -35,7 +36,7 @@ export function checkForValidRandomSelector(selector: ColorSelector,
     const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
     const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
 
-    for (let i: number = 0; i < 25; i++) {
+    for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
         const components: ColorComponents = colorToColorComponents(selector.getColor());
         const key: string = components.r.toString() + '' + components.g.toString() + '' + components.b.toString();
         colorMap.setUndefinedKey(key, components);

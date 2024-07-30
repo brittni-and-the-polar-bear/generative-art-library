@@ -23,7 +23,7 @@ import {
     checkForValidColorSelector,
     checkForValidInOrderSelector,
     checkForValidRandomSelector,
-    getColorsArray
+    getColorsArray, RANDOM_TEST_TRIES
 } from 'unit-test/shared';
 import {ColorSelectorType} from "color";
 
@@ -75,14 +75,14 @@ describe('palette color selector tests', (): void => {
         const selectorA: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_A);
         expect(selectorA).toBeTruthy();
 
-        for (let i: number = 0; i < 10; i++) {
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
             expect(selectorA.getColor()).toBeTruthy();
         }
 
         const selectorB: PaletteColorSelector = new PaletteColorSelector(TEST_PALETTE_B);
         expect(selectorB).toBeTruthy();
 
-        for (let i: number = 0; i < 10; i++) {
+        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
             expect(selectorB.getColor()).toBeTruthy();
         }
     });
