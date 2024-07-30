@@ -9,5 +9,16 @@ logo: "https://brittni-and-the-polar-bear.github.io/assets/img/logo.png"
 show_downloads: true
 
 include:
-  - "/doc/**/_*.html"
+  - "variables/_*.html"
+  - "variables/*.html"
+  - "variables/*"
+  - "variables/_*_.html"
+  - "./doc/variables/_*.html"
+  - "./doc/variables/*.html"
+  - "./doc/variables/*"
+  - "./doc/variables/_*_.html"
+  - "/doc/variables/_*.html"
+  - "/doc/variables/*.html"
+  - "/doc/variables/*"
+  - "/doc/variables/_*_.html"
   - "_*_.html"
