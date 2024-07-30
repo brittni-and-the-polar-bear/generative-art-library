@@ -11,5 +11,4 @@ show_downloads: true
 include:
   #- "*.html"
   #- "**.html"
-  #- "_*.html"
-  - "doc/**/*.html"
+  - "_*.html"
