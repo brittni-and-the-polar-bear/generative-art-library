@@ -17,7 +17,7 @@
 
 // Color names derived from https://colornamer.robertcooper.me/
 
-import {Discriminators} from 'discriminator';
+import { Discriminators } from 'discriminator';
 
 /**
  * A color to be used in a {@link Palette}.

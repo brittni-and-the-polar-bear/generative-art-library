@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminators} from 'discriminator';
-import {Palette} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import { Discriminators } from 'discriminator';
+import { Palette } from 'palette';
+import { _0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 
-import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
+import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->

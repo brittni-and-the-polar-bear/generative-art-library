@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Random} from './random';
+import { Random } from './random';
 
 /**
  * A class for randomly selecting elements from a given list.

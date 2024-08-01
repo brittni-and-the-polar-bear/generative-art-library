@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminators} from 'discriminator';
+import { Discriminators } from 'discriminator';
 
-import {PaletteColor} from './palette-color';
+import { PaletteColor } from './palette-color';
 
 /**
  * A collection of {@link PaletteColor} objects.

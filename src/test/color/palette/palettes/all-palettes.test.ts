@@ -15,15 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {StringMap} from 'map';
-import {Palette, PaletteColor} from 'palette';
-import {ALL_PALETTES, HOLIDAY_PALETTES, MISCELLANEOUS_PALETTES, NATURE_PALETTES} from 'palettes';
+import { StringMap } from 'map';
+import { Palette, PaletteColor } from 'palette';
+import { ALL_PALETTES, HOLIDAY_PALETTES, MISCELLANEOUS_PALETTES, NATURE_PALETTES } from 'palettes';
 
-import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
+import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 function getPaletteArray(map: StringMap<Palette>): { palette: Palette }[] {
     const palettes: Palette[] = Array.from(map.values);
-    return palettes.map((p: Palette): { palette: Palette } => ({palette: p}));
+    return palettes.map((p: Palette): { palette: Palette } => ({ palette: p }));
 }
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [];
@@ -40,7 +40,7 @@ describe('all palettes tests', (): void => {
 
     test.each(EXPECTED_PALETTES)(
         '$# palette successfully added to ALL_PALETTES map: $palette.NAME',
-        ({palette}): void => {
+        ({ palette }): void => {
             checkForPaletteInMap(palette, ALL_PALETTES);
         }
     );

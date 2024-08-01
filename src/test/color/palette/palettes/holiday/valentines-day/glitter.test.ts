@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
-import {_EC417A, _F06090, _F490B1, _F8B9CE, _FCE3EC} from 'palette-colors';
-import {GLITTER} from 'palettes';
+import { PaletteColor } from 'palette';
+import { _EC417A, _F06090, _F490B1, _F8B9CE, _FCE3EC } from 'palette-colors';
+import { GLITTER } from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'GLITTER';
 

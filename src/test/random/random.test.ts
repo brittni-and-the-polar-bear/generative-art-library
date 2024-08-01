@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Random, WeightedElement} from 'random';
-import {Range} from 'math';
-import {RANDOM_TEST_TRIES} from '../shared/random';
+import { Random, WeightedElement } from 'random';
+import { Range } from 'math';
+import { RANDOM_TEST_TRIES } from '../shared/random';
 
 describe('random tests', (): void => {
     test.each([
@@ -89,7 +89,7 @@ describe('random tests', (): void => {
         }
     ])(
         '$# random float test: randomFloat($min, $max)',
-        ({min, max, expectMin, expectMax}): void => {
+        ({ min, max, expectMin, expectMax }): void => {
             for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
                 const r: number = Random.randomFloat(min, max);
                 expect(r).toBeGreaterThanOrEqual(expectMin);
@@ -161,7 +161,7 @@ describe('random tests', (): void => {
         }
     ])(
         '$# random float in range test: randomFloatInRange(new Range($min, $max))',
-        ({min, max, expectMin, expectMax}): void => {
+        ({ min, max, expectMin, expectMax }): void => {
             const range: Range = new Range(min, max);
             for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
                 const r: number = Random.randomFloatInRange(range);
@@ -234,7 +234,7 @@ describe('random tests', (): void => {
         }
     ])(
         '$# random int test: randomInt($min, $max)',
-        ({min, max, expectMin, expectMax}): void => {
+        ({ min, max, expectMin, expectMax }): void => {
             for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
                 const r: number = Random.randomInt(min, max);
                 expect(r).toBeGreaterThanOrEqual(expectMin);
@@ -307,7 +307,7 @@ describe('random tests', (): void => {
         }
     ])(
         '$# random int in range test: randomIntInRange(new Range($min, $max))',
-        ({min, max, expectMin, expectMax}): void => {
+        ({ min, max, expectMin, expectMax }): void => {
             const range: Range = new Range(min, max);
             for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
                 const r: number = Random.randomIntInRange(range);

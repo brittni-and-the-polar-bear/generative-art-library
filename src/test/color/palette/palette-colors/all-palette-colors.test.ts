@@ -17,10 +17,10 @@
 
 import P5Lib from 'p5';
 
-import {Color} from 'color';
-import {SketchContext} from 'context';
-import {PaletteColor} from 'palette';
-import {ALL_PALETTE_COLORS} from 'palette-colors';
+import { Color } from 'color';
+import { SketchContext } from 'context';
+import { PaletteColor } from 'palette';
+import { ALL_PALETTE_COLORS } from 'palette-colors';
 
 import {
     BLACK_HEXES,
@@ -40,7 +40,7 @@ import {
     checkForValidStringMap, p5ColorToColorComponents
 } from 'unit-test/shared';
 
-const {p5} = SketchContext;
+const { p5 } = SketchContext;
 
 const ALL_HEXES: { hexString: string }[] = [];
 ALL_HEXES.push(
@@ -86,7 +86,7 @@ describe('all palette colors', (): void => {
 
     test.each(ALL_HEXES)(
         '$# - successful addition of color: $hexString',
-        ({hexString}): void => {
+        ({ hexString }): void => {
             expect(hexString).toBeTruthy();
             checkForValidHexColorString(hexString);
 
@@ -101,7 +101,7 @@ describe('all palette colors', (): void => {
 
     test.each(ALL_HEXES)(
         '$# - valid color: $hexString',
-        ({hexString}): void => {
+        ({ hexString }): void => {
             expect(hexString).toBeTruthy();
             checkForValidHexColorString(hexString);
 
@@ -141,7 +141,7 @@ describe('all palette colors', (): void => {
 
     test.each(ALL_HEXES)(
         '$# - consistent color: $hexString',
-        ({hexString}): void => {
+        ({ hexString }): void => {
             const c: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
             expect(c).toBeTruthy();
 

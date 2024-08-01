@@ -35,4 +35,4 @@ interface WeightedElement<Type> {
     readonly weight: number
 }
 
-export {type WeightedElement};
+export { type WeightedElement };

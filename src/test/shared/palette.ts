@@ -15,14 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorComponents, checkForValidHexColorString} from './color';
-import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
-import {Palette, PaletteColor} from 'palette';
-import {Color} from 'color';
-import {Discriminators} from 'discriminator';
-import {StringMap} from 'map';
-import {checkForValidStringMap} from './map';
-import {checkNumberWithinAmount} from './math';
+import { ColorComponents, checkForValidHexColorString } from './color';
+import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
+import { Palette, PaletteColor } from 'palette';
+import { Color } from 'color';
+import { Discriminators } from 'discriminator';
+import { StringMap } from 'map';
+import { checkForValidStringMap } from './map';
+import { checkNumberWithinAmount } from './math';
 
 export const getColorsArray = (colors: PaletteColor[]): Color[] => {
     'use strict';

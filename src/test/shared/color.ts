@@ -17,12 +17,12 @@
 
 import P5Lib from 'p5';
 
-import {Color, ColorSelector, ColorSelectorType} from 'color';
-import {SketchContext} from 'context';
+import { Color, ColorSelector, ColorSelectorType } from 'color';
+import { SketchContext } from 'context';
 
-import {checkNumberWithinAmount} from './math';
+import { checkNumberWithinAmount } from './math';
 
-const {p5} = SketchContext;
+const { p5 } = SketchContext;
 
 const hexPattern: RegExp = /^#[A-F|0-9]{6}$/;
 const hexWithAlphaPattern: RegExp = /^#[A-F|0-9]{8}$/;

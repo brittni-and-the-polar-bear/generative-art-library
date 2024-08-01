@@ -58,4 +58,4 @@ class SketchContext {
     }
 }
 
-export {SketchContext};
+export { SketchContext };

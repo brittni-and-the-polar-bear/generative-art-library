@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminator, Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
-import {_0FFF4F} from 'palette-colors';
+import { Discriminator, Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+import { _0FFF4F } from 'palette-colors';
 
 describe('discriminator tests', (): void => {
     describe('discriminator tests: isPaletteColor', (): void => {

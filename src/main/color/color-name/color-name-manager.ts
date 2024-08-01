@@ -18,8 +18,8 @@
 import colorNames from 'color-name-list/dist/colornames.json';
 import nearestColor from 'nearest-color';
 
-import {StringMap} from 'map';
-import {PaletteColor} from 'palette';
+import { StringMap } from 'map';
+import { PaletteColor } from 'palette';
 
 interface NearestColorMatch {
     name: string
@@ -32,7 +32,7 @@ interface NearestColorMatch {
     distance: number
 }
 
-const _COLORS = colorNames.reduce((o, {name, hex}) => Object.assign(o, {[name]: hex}), {});
+const _COLORS = colorNames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
 const _NEAREST_COLOR = nearestColor.from(_COLORS);
 
 /**
@@ -62,7 +62,8 @@ export class ColorNameManager {
 
         if (ColorNameManager.hasMatch(colorHex)) {
             match = ColorNameManager._MATCHED_COLORS.get(colorHex);
-        } else {
+        }
+        else {
             try {
                 const result: NearestColorMatch | null = _NEAREST_COLOR(colorHex);
 
@@ -73,7 +74,8 @@ export class ColorNameManager {
                 if (match) {
                     ColorNameManager._MATCHED_COLORS.setUndefinedKey(colorHex, match);
                 }
-            } catch {
+            }
+            catch {
                 match = undefined;
             }
         }

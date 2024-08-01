@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminators} from 'discriminator';
+import { Discriminators } from 'discriminator';
 
 describe('discriminators tests', (): void => {
     test('all discriminators are unique', (): void => {

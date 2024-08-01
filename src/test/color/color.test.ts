@@ -17,9 +17,9 @@
 
 import P5Lib from 'p5';
 
-import {Color} from 'color';
-import {SketchContext} from 'context';
-import {_0437F1, _0FFF4F, _7A00F5, _FF6BB5} from 'palette-colors';
+import { Color } from 'color';
+import { SketchContext } from 'context';
+import { _0437F1, _0FFF4F, _7A00F5, _FF6BB5 } from 'palette-colors';
 
 import {
     ColorComponents,
@@ -29,7 +29,7 @@ import {
     p5ColorToColorComponents
 } from 'unit-test/shared';
 
-const {p5} = SketchContext;
+const { p5 } = SketchContext;
 
 const defaultColorName: string = 'black';
 
@@ -92,13 +92,13 @@ describe('color tests', (): void => {
     });
 
     test.each([
-        {paletteColor: _0437F1},
-        {paletteColor: _0FFF4F},
-        {paletteColor: _7A00F5},
-        {paletteColor: _FF6BB5}
+        { paletteColor: _0437F1 },
+        { paletteColor: _0FFF4F },
+        { paletteColor: _7A00F5 },
+        { paletteColor: _FF6BB5 }
     ])(
         '$# color built with PaletteColor object: $paletteColor.HEX',
-        ({paletteColor}): void => {
+        ({ paletteColor }): void => {
             const expected: ColorComponents = {
                 r: paletteColor.RGB.R,
                 g: paletteColor.RGB.G,
@@ -644,12 +644,13 @@ describe('color tests', (): void => {
         }
     ])(
         '$# get hex: rgba($r, $g, $b, $a)',
-        ({r, g, b, a, hex}): void => {
+        ({ r, g, b, a, hex }): void => {
             let c: Color;
 
             if (a !== undefined) {
                 c = new Color(p5.color(r, g, b, a));
-            } else {
+            }
+            else {
                 c = new Color(p5.color(r, g, b));
             }
 
@@ -776,12 +777,13 @@ describe('color tests', (): void => {
         }
     ])(
         '$# get hex with alpha: rgba($r, $g, $b, $a)',
-        ({r, g, b, a, hex}): void => {
+        ({ r, g, b, a, hex }): void => {
             let c: Color;
 
             if (a !== undefined) {
                 c = new Color(p5.color(r, g, b, a));
-            } else {
+            }
+            else {
                 c = new Color(p5.color(r, g, b));
             }
 

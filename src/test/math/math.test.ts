@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {getSingleDimensionIndex} from 'math';
+import { getSingleDimensionIndex } from 'math';
 
 describe('math tests', (): void => {
     test.each([
@@ -106,12 +106,12 @@ describe('math tests', (): void => {
     ])(
         '$# getSingleDimensionIndex($row, $column, $totalRows, $totalColumns)',
         ({
-             row,
-             column,
-             totalRows,
-             totalColumns,
-             expected
-         }): void => {
+            row,
+            column,
+            totalRows,
+            totalColumns,
+            expected
+        }): void => {
             expect(getSingleDimensionIndex(row, column, totalRows, totalColumns)).toBe(expected);
         }
     );

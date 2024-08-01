@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector} from 'color';
-import {StringMap} from 'map';
+import { Color, ColorSelector } from 'color';
+import { StringMap } from 'map';
 
-import {ColorComponents, colorToColorComponents} from './color';
-import {RANDOM_TEST_TRIES} from './random';
+import { ColorComponents, colorToColorComponents } from './color';
+import { RANDOM_TEST_TRIES } from './random';
 
 export function checkForValidColorSelector(selector: ColorSelector): void {
     expect(selector.type).toBeTruthy();
@@ -46,7 +46,8 @@ export function checkForValidRandomSelector(
 
     if (picksAllColors) {
         expect(colorMap.size).toEqual(expectedComponents.length);
-    } else if (colorCount) {
+    }
+    else if (colorCount) {
         expect(colorMap.size).toEqual(colorCount);
     }
 
@@ -95,7 +96,8 @@ export function checkForValidInOrderSelector(
             const expectedSelectionComponents: ColorComponents = colorToColorComponents(expectedSelection);
             expect(components).toEqual(expectedSelectionComponents);
         }
-    } else {
+    }
+    else {
         for (let i: number = 0; i < colors.length * 2; i++) {
             const selectedColor: Color = selector.getColor();
             const selectedComps: ColorComponents = colorToColorComponents(selectedColor);
@@ -109,7 +111,8 @@ export function checkForValidInOrderSelector(
 
     if (picksAllColors) {
         expect(colorMap.size).toEqual(expectedComponents.length);
-    } else if (colorCount) {
+    }
+    else if (colorCount) {
         expect(colorMap.size).toEqual(colorCount);
     }
 

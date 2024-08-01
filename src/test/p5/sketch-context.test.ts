@@ -16,7 +16,7 @@
  */
 
 import P5Lib from 'p5';
-import {SketchContext} from 'context';
+import { SketchContext } from 'context';
 
 describe('SketchContext tests', (): void => {
     test('test default context', (): void => {

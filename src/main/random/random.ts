@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Range} from 'math';
+import { Range } from 'math';
 
-import {WeightedElement} from './weighted-element';
+import { WeightedElement } from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
@@ -99,13 +99,14 @@ class Random {
         let value: boolean = true;
 
         if (chanceOfTrue
-            && (chanceOfTrue > 0 && chanceOfTrue < 1)) {
+          && (chanceOfTrue > 0 && chanceOfTrue < 1)) {
             const r: number = Random.randomFloat(0, 1);
 
             if (r > chanceOfTrue) {
                 value = false;
             }
-        } else {
+        }
+        else {
             const r: number = Random.randomInt(0, 2);
             value = r % 2 === 0;
         }
@@ -165,11 +166,13 @@ class Random {
                     if (r < sum + e.weight) {
                         element = e.value;
                         break;
-                    } else {
+                    }
+                    else {
                         sum += e.weight;
                     }
                 }
-            } else {
+            }
+            else {
                 console.warn('Sum of element weights is less than 1.0. Random element cannot be retrieved.');
             }
         }
@@ -178,4 +181,4 @@ class Random {
     }
 }
 
-export {Random};
+export { Random };

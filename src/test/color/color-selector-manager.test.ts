@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector, ColorSelectorManager, DefaultColorSelector} from 'color';
+import { Color, ColorSelector, ColorSelectorManager, DefaultColorSelector } from 'color';
 
 import {
     ColorComponents,

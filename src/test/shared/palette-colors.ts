@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {checkForValidHexColorString} from './color';
+import { checkForValidHexColorString } from './color';
 
 export type HexCollection = { hexString: string }[];
 
@@ -36,41 +36,41 @@ export function checkForValidPaletteColor(pc: PaletteColor): void {
     expect(pc.DISCRIMINATOR).toBe(Discriminators.PALETTE_COLOR);
 }
 
-export const BLACK_HEXES: HexCollection = [{hexString: '#121212'}];
+export const BLACK_HEXES: HexCollection = [{ hexString: '#121212' }];
 
 export const BLUE_HEXES: HexCollection = [
-    {hexString: '#0437F1'},
-    {hexString: '#1D90AF'},
-    {hexString: '#7DCED8'}
+    { hexString: '#0437F1' },
+    { hexString: '#1D90AF' },
+    { hexString: '#7DCED8' }
 ];
 
-export const BROWN_HEXES: HexCollection = [{hexString: '#3B2212'}];
+export const BROWN_HEXES: HexCollection = [{ hexString: '#3B2212' }];
 
-export const GRAY_HEXES: HexCollection = [{hexString: '#F0F3F4'}];
+export const GRAY_HEXES: HexCollection = [{ hexString: '#F0F3F4' }];
 
 export const GREEN_HEXES: HexCollection = [
-    {hexString: '#007058'},
-    {hexString: '#0FFF4F'},
-    {hexString: '#23856D'}
+    { hexString: '#007058' },
+    { hexString: '#0FFF4F' },
+    { hexString: '#23856D' }
 ];
 
 export const PINK_HEXES: HexCollection = [
-    {hexString: '#EC417A'},
-    {hexString: '#F06090'},
-    {hexString: '#F490B1'},
-    {hexString: '#F8B9CE'},
-    {hexString: '#FCE3EC'},
-    {hexString: '#FF6BB5'}
+    { hexString: '#EC417A' },
+    { hexString: '#F06090' },
+    { hexString: '#F490B1' },
+    { hexString: '#F8B9CE' },
+    { hexString: '#FCE3EC' },
+    { hexString: '#FF6BB5' }
 ];
 
-export const PURPLE_HEXES: HexCollection = [{hexString: '#7A00F5'}];
+export const PURPLE_HEXES: HexCollection = [{ hexString: '#7A00F5' }];
 
 export const RED_HEXES: HexCollection = [
-    {hexString: '#BC010A'},
-    {hexString: '#D01625'}
+    { hexString: '#BC010A' },
+    { hexString: '#D01625' }
 ];
 
 export const WHITE_HEXES: HexCollection = [
-    {hexString: '#FAFEFF'},
-    {hexString: '#FBF9F9'}
+    { hexString: '#FAFEFF' },
+    { hexString: '#FBF9F9' }
 ];

@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Random} from 'random';
+import { Random } from 'random';
 
-import {ColorSelector} from './color-selector';
-import {DefaultColorSelector} from './default-color-selector';
+import { ColorSelector } from './color-selector';
+import { DefaultColorSelector } from './default-color-selector';
 
 /**
  * Manager to select a random {@link ColorSelector} from a {@link !Set}.
@@ -64,4 +64,4 @@ class ColorSelectorManager {
     }
 }
 
-export {ColorSelectorManager};
+export { ColorSelectorManager };

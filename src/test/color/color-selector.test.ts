@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, DefaultColorSelector} from 'color';
+import { Color, DefaultColorSelector } from 'color';
 
 import {
     ColorComponents,
@@ -30,7 +30,7 @@ import {
     green,
     red
 } from 'unit-test/shared';
-import {SketchContext} from 'context';
+import { SketchContext } from 'context';
 
 describe('color selector tests', (): void => {
     test('test default color selector', (): void => {

@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color} from './color';
-import {ColorSelector} from './color-selector';
-import {ColorSelectorType} from './color-selector-type';
+import { Color } from './color';
+import { ColorSelector } from './color-selector';
+import { ColorSelectorType } from './color-selector-type';
 
 /**
  * Default color selector.

@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Range} from 'math';
+import { Range } from 'math';
 
 describe('range tests', (): void => {
     test('test basic range', (): void => {

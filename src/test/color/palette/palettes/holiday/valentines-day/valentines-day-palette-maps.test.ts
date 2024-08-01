@@ -15,12 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from 'palette';
-import {GLITTER, VALENTINES_PALETTES} from 'palettes';
+import { Palette } from 'palette';
+import { GLITTER, VALENTINES_PALETTES } from 'palettes';
 
-import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
+import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
-const EXPECTED_PALETTES: { palette: Palette }[] = [{palette: GLITTER}];
+const EXPECTED_PALETTES: { palette: Palette }[] = [{ palette: GLITTER }];
 
 const MAP_NAME: string = 'VALENTINES_PALETTES';
 
@@ -31,7 +31,7 @@ describe('valentine\'s day palette maps test', (): void => {
 
     test.each(EXPECTED_PALETTES)(
         `$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
-        ({palette}): void => {
+        ({ palette }): void => {
             checkForPaletteInMap(palette, VALENTINES_PALETTES);
         }
     );

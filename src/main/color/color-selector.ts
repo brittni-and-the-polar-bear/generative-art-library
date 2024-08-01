@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {SketchContext} from 'context';
-import {Random, WeightedElement} from 'random';
+import { SketchContext } from 'context';
+import { Random, WeightedElement } from 'random';
 
-import {Color} from './color';
-import {ColorSelectorType} from './color-selector-type';
+import { Color } from './color';
+import { ColorSelectorType } from './color-selector-type';
 
 /**
  * ColorSelectors choose and return colors from some set list or criteria.
@@ -107,7 +107,8 @@ export abstract class ColorSelector {
 
         if (this._RANDOM_ORDER) {
             col = Random.randomElement(this._COLOR_CHOICES) ?? (new Color());
-        } else if (this._currentIndex < this._COLOR_CHOICES.length) {
+        }
+        else if (this._currentIndex < this._COLOR_CHOICES.length) {
             col = this._COLOR_CHOICES[this._currentIndex];
             this.incrementCurrentIndex();
         }
@@ -177,7 +178,7 @@ export abstract class ColorSelector {
      * @see {@link _RANDOM_ORDER}
      */
     private incrementCurrentIndex(): void {
-        const {length} = this._COLOR_CHOICES;
+        const { length } = this._COLOR_CHOICES;
 
         if (length > 0) {
             this._currentIndex = (this._currentIndex + 1) % length;

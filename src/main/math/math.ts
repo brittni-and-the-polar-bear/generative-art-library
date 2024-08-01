@@ -37,12 +37,12 @@ function getSingleDimensionIndex(
     let index: number | undefined;
 
     if (row >= 0 && column >= 0
-        && row < totalRows
-        && column < totalColumns) {
+      && row < totalRows
+      && column < totalColumns) {
         index = (row * totalColumns) + column;
     }
 
     return index;
 }
 
-export {getSingleDimensionIndex};
+export { getSingleDimensionIndex };

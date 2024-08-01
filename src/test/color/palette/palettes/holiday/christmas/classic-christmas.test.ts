@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
-import {_007058, _23856D, _BC010A, _D01625, _FBF9F9} from 'palette-colors';
-import {CLASSIC_CHRISTMAS} from 'palettes';
+import { PaletteColor } from 'palette';
+import { _007058, _23856D, _BC010A, _D01625, _FBF9F9 } from 'palette-colors';
+import { CLASSIC_CHRISTMAS } from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'CLASSIC_CHRISTMAS';
 

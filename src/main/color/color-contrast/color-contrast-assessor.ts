@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ResponseObject, getContrastRatios} from 'cococh';
+import { ResponseObject, getContrastRatios } from 'cococh';
 
-import {Color} from 'color';
-import {Discriminator} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { Color } from 'color';
+import { Discriminator } from 'discriminator';
+import { PaletteColor } from 'palette';
 
 /**
  * Web Content Accessibility Guidelines (WCAG) color contrast categories.<br/>
@@ -70,23 +70,23 @@ export enum ContrastFontSize {
  */
 export class ColorContrastAssessor {
     public static meetsContrastStandard(colorA: Color,
-                                        colorB: Color): boolean;
+        colorB: Color): boolean;
     public static meetsContrastStandard(colorA: PaletteColor,
-                                        colorB: PaletteColor): boolean;
+        colorB: PaletteColor): boolean;
     public static meetsContrastStandard(colorA: string,
-                                        colorB: string): boolean;
+        colorB: string): boolean;
     public static meetsContrastStandard(colorA: Color,
-                                        colorB: Color,
-                                        standard: ContrastStandard,
-                                        fontSize: ContrastFontSize): boolean;
+        colorB: Color,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
     public static meetsContrastStandard(colorA: PaletteColor,
-                                        colorB: PaletteColor,
-                                        standard: ContrastStandard,
-                                        fontSize: ContrastFontSize): boolean;
+        colorB: PaletteColor,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
     public static meetsContrastStandard(colorA: string,
-                                        colorB: string,
-                                        standard: ContrastStandard,
-                                        fontSize: ContrastFontSize): boolean;
+        colorB: string,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
 
     /**
      * Evaluates if two colors have an appropriate contrast ratio
@@ -109,10 +109,12 @@ export class ColorContrastAssessor {
         if (colorA instanceof Color && colorB instanceof Color) {
             hexA = colorA.hex;
             hexB = colorB.hex;
-        } else if (Discriminator.isPaletteColor(colorA) && Discriminator.isPaletteColor(colorB)) {
+        }
+        else if (Discriminator.isPaletteColor(colorA) && Discriminator.isPaletteColor(colorB)) {
             hexA = colorA.HEX;
             hexB = colorB.HEX;
-        } else if (typeof colorA === 'string' && typeof colorB === 'string') {
+        }
+        else if (typeof colorA === 'string' && typeof colorB === 'string') {
             hexA = colorA;
             hexB = colorB;
         }

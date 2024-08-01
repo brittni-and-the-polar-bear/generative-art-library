@@ -17,10 +17,10 @@
 
 import nearestColor from 'nearest-color';
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {StringMap} from 'map';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { StringMap } from 'map';
+import { PaletteColor } from 'palette';
 
 describe('color name manager test', (): void => {
     const nearestColorSpy = jest.spyOn(nearestColor, 'from');
@@ -85,7 +85,7 @@ describe('color name manager test', (): void => {
         }
     ])(
         '$# get color name: $hex ($expectedName)',
-        ({hex, expectedName}): void => {
+        ({ hex, expectedName }): void => {
             const name: string | undefined = ColorNameManager.getColorName(hex);
             expect(name).toBe(expectedName);
         }
