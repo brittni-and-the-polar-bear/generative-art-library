@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Black)
- *
- * @source
  */
 export const _121212: PaletteColor = {
     HEX: '#121212',

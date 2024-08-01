@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
- *
- * @source
  */
 export const _FF6BB5: PaletteColor = {
     HEX: '#FF6BB5',

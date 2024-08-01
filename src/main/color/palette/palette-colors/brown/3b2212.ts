@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Brown)
- *
- * @source
  */
 export const _3B2212: PaletteColor = {
     HEX: '#3B2212',

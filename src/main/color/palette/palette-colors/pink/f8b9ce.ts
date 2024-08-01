@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
- *
- * @source
  */
 export const _F8B9CE: PaletteColor = {
     HEX: '#F8B9CE',
