@@ -52,11 +52,21 @@ export default tsEslint.config(
             '@stylistic': stylistic
         },
         rules: {
-            'one-var': ['error', 'never'],
+            'id-length': 'off',
 
             'max-statements': 'off',
 
+            'no-plusplus': 'off',
+
+            'one-var': ['error', 'never'],
+
+            'prefer-destructuring': 'off',
+
             'prefer-object-has-own': 'off',
+
+            'sort-keys': 'off',
+
+            'sort-imports': 'off',
 
             "class-methods-use-this": "off",
             "@typescript-eslint/class-methods-use-this": "off",
