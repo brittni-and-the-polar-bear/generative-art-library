@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Blue)
- *
- * @source
  */
 export const _7DCED8: PaletteColor = {
     HEX: '#7DCED8',

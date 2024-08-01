@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
- *
- * @source
  */
 export const _D01625: PaletteColor = {
     HEX: '#D01625',

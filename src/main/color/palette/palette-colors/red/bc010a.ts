@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
- *
- * @source
  */
 export const _BC010A: PaletteColor = {
     HEX: '#BC010A',

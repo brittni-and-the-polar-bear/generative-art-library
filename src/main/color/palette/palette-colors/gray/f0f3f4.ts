@@ -32,8 +32,6 @@ import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Gray)
- *
- * @source
  */
 export const _F0F3F4: PaletteColor = {
     HEX: '#F0F3F4',
