@@ -15,10 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import path from "node:path";
-import {fileURLToPath} from "node:url";
-
-import {FlatCompat} from "@eslint/eslintrc";
 import js from "@eslint/js";
 
 import stylistic from '@stylistic/eslint-plugin'
@@ -26,97 +22,120 @@ import stylistic from '@stylistic/eslint-plugin'
 import typescript from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
+import tsEslint from 'typescript-eslint';
 
-export default [{
-    ignores: ["**/*.js"],
-}, ...compat.extends(
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/strict",
-    "plugin:@typescript-eslint/strict-type-checked",
-    "plugin:@typescript-eslint/stylistic",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-), {
-    plugins: {
-        "@typescript-eslint": typescript,
-        '@stylistic': stylistic
-    },
+export default tsEslint.config(
+    js.configs.recommended,
+    js.configs.all,
+    ...tsEslint.configs.recommended,
+    ...tsEslint.configs.recommendedTypeChecked,
+    ...tsEslint.configs.strict,
+    ...tsEslint.configs.strictTypeChecked,
+    ...tsEslint.configs.stylistic,
+    ...tsEslint.configs.strictTypeChecked,
+    stylistic.configs["recommended-flat"],
+    stylistic.configs["all-flat"],
+    {
+        languageOptions: {
+            parser: tsParser,
+            ecmaVersion: 5,
+            sourceType: "script",
 
-    languageOptions: {
-        parser: tsParser,
-        ecmaVersion: 5,
-        sourceType: "script",
-
-        parserOptions: {
-            projectService: {
-                defaultProject: "./tsconfig.json"
-            },
+            parserOptions: {
+                projectService: {
+                    defaultProject: "./tsconfig.json"
+                },
+            }
         },
-    },
+        plugins: {
+            "@typescript-eslint": typescript,
+            '@stylistic': stylistic
+        },
+        rules: {
+            'one-var': ['error', 'never'],
 
-    rules: {
-        "class-methods-use-this": "off",
-        "@typescript-eslint/class-methods-use-this": "off",
+            'max-statements': 'off',
 
-        "dot-notation": "off",
-        "@typescript-eslint/dot-notation": "error",
+            'prefer-object-has-own': 'off',
 
-        "no-array-constructor": "off",
-        "@typescript-eslint/no-array-constructor": "error",
+            "class-methods-use-this": "off",
+            "@typescript-eslint/class-methods-use-this": "off",
 
-        "no-empty-function": "off",
-        "@typescript-eslint/no-empty-function": "error",
+            "dot-notation": "off",
+            "@typescript-eslint/dot-notation": "error",
 
-        "no-loop-func": "off",
-        "@typescript-eslint/no-loop-func": "error",
+            "no-array-constructor": "off",
+            "@typescript-eslint/no-array-constructor": "error",
 
-        "no-loss-of-precision": "off",
-        "@typescript-eslint/no-loss-of-precision": "error",
+            "no-empty-function": "off",
+            "@typescript-eslint/no-empty-function": "error",
 
-        "no-magic-numbers": "off",
-        "@typescript-eslint/no-magic-numbers": "off",
+            "no-loop-func": "off",
+            "@typescript-eslint/no-loop-func": "error",
 
-        "no-shadow": "off",
-        "@typescript-eslint/no-shadow": "error",
+            "no-loss-of-precision": "off",
+            "@typescript-eslint/no-loss-of-precision": "error",
 
-        "no-unused-expressions": "off",
-        "@typescript-eslint/no-unused-expressions": "error",
+            "no-magic-numbers": "off",
+            "@typescript-eslint/no-magic-numbers": "off",
 
-        "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": "error",
+            "no-shadow": "off",
+            "@typescript-eslint/no-shadow": "error",
 
-        "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": "error",
+            "no-unused-expressions": "off",
+            "@typescript-eslint/no-unused-expressions": "error",
 
-        "no-useless-constructor": "off",
-        "@typescript-eslint/no-useless-constructor": "error",
+            "no-unused-vars": "off",
+            "@typescript-eslint/no-unused-vars": "error",
 
-        "@typescript-eslint/class-literal-property-style": ["error", "getters"],
+            "no-use-before-define": "off",
+            "@typescript-eslint/no-use-before-define": "error",
 
-        "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+            "no-useless-constructor": "off",
+            "@typescript-eslint/no-useless-constructor": "error",
 
-        "@typescript-eslint/no-explicit-any": "off",
+            "@typescript-eslint/class-literal-property-style": ["error", "getters"],
 
-        "@typescript-eslint/no-extraneous-class": ["error", {
-            allowStaticOnly: true,
-        }],
+            "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
 
-        "@typescript-eslint/no-inferrable-types": "off",
+            "@typescript-eslint/no-explicit-any": "off",
 
-        "@typescript-eslint/prefer-for-of": "off",
+            "@typescript-eslint/no-extraneous-class": ["error", {
+                allowStaticOnly: true,
+            }],
 
-        "@stylistic/no-extra-semi": "error",
+            "@typescript-eslint/no-inferrable-types": "off",
 
-        "@stylistic/function-call-spacing": ['error', 'never'],
+            "@typescript-eslint/prefer-for-of": "off",
 
-        "@stylistic/comma-dangle": ["error", "never"]
+            "@stylistic/no-extra-semi": "error",
+
+            '@stylistic/function-call-argument-newline': ['error', 'consistent'],
+
+            "@stylistic/function-call-spacing": ['error', 'never'],
+
+            "@stylistic/comma-dangle": ["error", "never"],
+
+            '@stylistic/indent': ['error', 4],
+
+            '@stylistic/semi': ['error', 'always']
+        }
     }
-}];
+);
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+// const compat = new FlatCompat({
+//     baseDirectory: __dirname,
+//     recommendedConfig: js.configs.recommended,
+//     allConfig: js.configs.all
+// });
+
+// export default [{
+//     ignores: ["**/*.js"],
+// }, ...compat.extends(
+//     "plugin:@typescript-eslint/stylistic-type-checked",
+// ), {
+//
+
+// }];
