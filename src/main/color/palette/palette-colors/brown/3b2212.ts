@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _3B2212: PaletteColor = {
     HEX: '#3B2212',
-    RGB: {R: 59, G: 34, B: 18},
-    HSL: {H: 23, S: 53, L: 15},
+    RGB: {
+        R: 59,
+        G: 34,
+        B: 18
+    },
+    HSL: {
+        H: 23,
+        S: 53,
+        L: 15
+    },
     NAME: 'délicieux au chocolat',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

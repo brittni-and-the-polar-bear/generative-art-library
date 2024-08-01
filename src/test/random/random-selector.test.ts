@@ -15,12 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {RandomSelector} from "random";
-import {RANDOM_TEST_TRIES} from "../shared/random";
+import {RandomSelector} from 'random';
+import {RANDOM_TEST_TRIES} from '../shared/random';
 
 describe('random selector tests', (): void => {
     test('get random element and remove with number type', (): void => {
-        const list: number[] = [10, 68, 24.5, -3];
+        const list: number[] = [
+            10,
+            68,
+            24.5,
+            -3
+        ];
         const selector: RandomSelector<number> = new RandomSelector<number>(list);
         const actualSelections: Set<number> = new Set<number>();
         let expectedSize: number = list.length;
@@ -47,7 +52,14 @@ describe('random selector tests', (): void => {
     });
 
     test('get random element and remove with string type', (): void => {
-        const list: string[] = ['happy', 'sad', 'all time low', 'candy', 'kentucky', 'beeline'];
+        const list: string[] = [
+            'happy',
+            'sad',
+            'all time low',
+            'candy',
+            'kentucky',
+            'beeline'
+        ];
         const selector: RandomSelector<string> = new RandomSelector<string>(list);
         const actualSelections: Set<string> = new Set<string>();
         let expectedSize: number = list.length;
@@ -96,7 +108,12 @@ describe('random selector tests', (): void => {
     });
 
     test('get random element with number type', (): void => {
-        const list: number[] = [10, 68, 24.5, -3];
+        const list: number[] = [
+            10,
+            68,
+            24.5,
+            -3
+        ];
         const selector: RandomSelector<number> = new RandomSelector<number>(list);
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
@@ -107,7 +124,13 @@ describe('random selector tests', (): void => {
     });
 
     test('get random element with string type', (): void => {
-        const list: string[] = ['hello', 'goodbye', 'jack', 'sally', 'george'];
+        const list: string[] = [
+            'hello',
+            'goodbye',
+            'jack',
+            'sally',
+            'george'
+        ];
         const selector: RandomSelector<string> = new RandomSelector<string>(list);
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {

@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _FBF9F9: PaletteColor = {
     HEX: '#FBF9F9',
-    RGB: {R: 251, G: 249, B: 249},
-    HSL: {H: 0, S: 20, L: 98},
+    RGB: {
+        R: 251,
+        G: 249,
+        B: 249
+    },
+    HSL: {
+        H: 0,
+        S: 20,
+        L: 98
+    },
     NAME: 'doctor white',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _121212: PaletteColor = {
     HEX: '#121212',
-    RGB: {R: 18, G: 18, B: 18},
-    HSL: {H: 0, S: 0, L: 7},
+    RGB: {
+        R: 18,
+        G: 18,
+        B: 18
+    },
+    HSL: {
+        H: 0,
+        S: 0,
+        L: 7
+    },
     NAME: 'dark tone ink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

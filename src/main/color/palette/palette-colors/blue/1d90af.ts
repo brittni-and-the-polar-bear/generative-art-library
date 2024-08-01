@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _1D90AF: PaletteColor = {
     HEX: '#1D90AF',
-    RGB: {R: 29, G: 144, B: 175},
-    HSL: {H: 193, S: 72, L: 40},
+    RGB: {
+        R: 29,
+        G: 144,
+        B: 175
+    },
+    HSL: {
+        H: 193,
+        S: 72,
+        L: 40
+    },
     NAME: 'mediterranean sea',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

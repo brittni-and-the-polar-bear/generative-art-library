@@ -46,10 +46,12 @@ export class PaletteColorSelector extends ColorSelector {
      * When `false`, colors will be chosen in the order they were selected
      * in {@link choosePaletteColors}.
      */
-    constructor(palette: Palette,
-                buildWithPaletteOrder?: boolean,
-                colorCount?: number,
-                randomOrder?: boolean) {
+    constructor(
+        palette: Palette,
+        buildWithPaletteOrder?: boolean,
+        colorCount?: number,
+        randomOrder?: boolean
+    ) {
         super(PaletteColorSelector.buildName(palette), randomOrder);
 
         let count: number = colorCount ?? Random.randomInt(PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length + 1);

@@ -30,7 +30,7 @@ describe('GLITTER palette tests', (): void => {
         _F490B1,
         _F06090,
         _EC417A
-    ]
+    ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
         checkForValidPalette(GLITTER, expectedColors);

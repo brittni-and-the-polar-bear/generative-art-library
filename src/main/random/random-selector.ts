@@ -56,7 +56,7 @@ export class RandomSelector<Type> {
      * If {@link _elements} is empty, the function will return {@link !undefined}.
      */
     public getRandomElementAndRemove(): Type | undefined {
-        let element: Type | undefined = undefined;
+        let element: Type | undefined;
         const size: number = this._elements.length;
 
         if (size > 0) {

@@ -30,7 +30,7 @@ describe('BRITTNI palette tests', (): void => {
         _0FFF4F,
         _7A00F5,
         _FF6BB5
-    ]
+    ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
         checkForValidPalette(BRITTNI, expectedColors);

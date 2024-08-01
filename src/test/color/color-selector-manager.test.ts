@@ -18,21 +18,23 @@
 import {Color, ColorSelector, ColorSelectorManager, DefaultColorSelector} from 'color';
 
 import {
-    blue,
     ColorComponents,
+    SampleSelector,
+    blue,
     colorToColorComponents,
     cyan,
     green,
     magenta,
     red,
-    SampleSelector,
     yellow
 } from '../shared/color';
 
 describe('color selector manager tests', (): void => {
-    function checkForValidColorSelectorManager(manager: ColorSelectorManager,
-                                               selectors: ColorSelector[],
-                                               colorComponents: ColorComponents[][]): void {
+    function checkForValidColorSelectorManager(
+        manager: ColorSelectorManager,
+        selectors: ColorSelector[],
+        colorComponents: ColorComponents[][]
+    ): void {
         const chosenSelector: ColorSelector = manager.getRandomColorSelector();
         expect(selectors).toContain(chosenSelector);
         const index: number = selectors.indexOf(chosenSelector);
@@ -54,10 +56,14 @@ describe('color selector manager tests', (): void => {
 
     test('color selector manager; 1 selector', (): void => {
         const manager: ColorSelectorManager = new ColorSelectorManager();
-        const colors: Color[][] = [[red, green, blue]];
-        const expectedComponents: ColorComponents[][] = colors.map((colorList: Color[]) => {
-            return colorList.map((color: Color) => colorToColorComponents(color));
-        });
+        const colors: Color[][] = [
+            [
+                red,
+                green,
+                blue
+            ]
+        ];
+        const expectedComponents: ColorComponents[][] = colors.map((colorList: Color[]) => colorList.map((color: Color) => colorToColorComponents(color)));
         const selectors: ColorSelector[] = colors.map((colorList: Color[]) => new SampleSelector(colorList));
         manager.addColorSelector(selectors[0]);
         checkForValidColorSelectorManager(manager, selectors, expectedComponents);
@@ -65,10 +71,19 @@ describe('color selector manager tests', (): void => {
 
     test('color selector manager; 2 selectors', (): void => {
         const manager: ColorSelectorManager = new ColorSelectorManager();
-        const colors: Color[][] = [[red, green, blue], [cyan, magenta, yellow]];
-        const expectedComponents: ColorComponents[][] = colors.map((colorList: Color[]) => {
-            return colorList.map((color: Color) => colorToColorComponents(color));
-        });
+        const colors: Color[][] = [
+            [
+                red,
+                green,
+                blue
+            ],
+            [
+                cyan,
+                magenta,
+                yellow
+            ]
+        ];
+        const expectedComponents: ColorComponents[][] = colors.map((colorList: Color[]) => colorList.map((color: Color) => colorToColorComponents(color)));
         const selectors: ColorSelector[] = colors.map((colorList: Color[]) => new SampleSelector(colorList));
         manager.addColorSelectors(selectors);
         checkForValidColorSelectorManager(manager, selectors, expectedComponents);
@@ -76,10 +91,21 @@ describe('color selector manager tests', (): void => {
 
     test('color selector manager; >2 selectors', (): void => {
         const manager: ColorSelectorManager = new ColorSelectorManager();
-        const colors: Color[][] = [[red, green, blue], [cyan, magenta, yellow], [red], [yellow]];
-        const expectedComponents: ColorComponents[][] = colors.map((colorList: Color[]) => {
-            return colorList.map((color: Color) => colorToColorComponents(color));
-        });
+        const colors: Color[][] = [
+            [
+                red,
+                green,
+                blue
+            ],
+            [
+                cyan,
+                magenta,
+                yellow
+            ],
+            [red],
+            [yellow]
+        ];
+        const expectedComponents: ColorComponents[][] = colors.map((colorList: Color[]) => colorList.map((color: Color) => colorToColorComponents(color)));
         const selectors: ColorSelector[] = colors.map((colorList: Color[]) => new SampleSelector(colorList));
         manager.addColorSelectors(selectors);
         checkForValidColorSelectorManager(manager, selectors, expectedComponents);

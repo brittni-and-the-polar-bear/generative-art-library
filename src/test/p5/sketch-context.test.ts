@@ -32,7 +32,7 @@ describe('SketchContext tests', (): void => {
         SketchContext.initialize(new P5Lib((p: P5Lib) => {
             p.setup = (): void => {
                 p.createCanvas(canvasSize, canvasSize);
-            }
+            };
         }));
         expect(SketchContext.p5.width).toBe(canvasSize);
         expect(SketchContext.p5.height).toBe(canvasSize);
@@ -43,7 +43,7 @@ describe('SketchContext tests', (): void => {
         SketchContext.initialize(new P5Lib((p: P5Lib) => {
             p.setup = (): void => {
                 p.createCanvas(newCanvasSize, newCanvasSize);
-            }
+            };
         }));
         expect(SketchContext.p5.width).toBe(canvasSize);
         expect(SketchContext.p5.height).toBe(canvasSize);

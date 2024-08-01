@@ -19,9 +19,9 @@ import P5Lib from 'p5';
 
 import {SketchContext} from 'context';
 import {PaletteColor} from 'palette';
-import {ColorNameManager} from "./color-name";
+import {ColorNameManager} from './color-name';
 
-const p5: P5Lib = SketchContext.p5;
+const {p5} = SketchContext;
 
 /**
  * Color information and functionality.
@@ -248,12 +248,12 @@ export class Color {
      */
     public getRGBHex(withAlpha: boolean): string {
         let hex: string = '#';
-        hex = hex + this.red.toString(16).padStart(2, '0');
-        hex = hex + this.green.toString(16).padStart(2, '0');
-        hex = hex + this.blue.toString(16).padStart(2, '0');
+        hex += this.red.toString(16).padStart(2, '0');
+        hex += this.green.toString(16).padStart(2, '0');
+        hex += this.blue.toString(16).padStart(2, '0');
 
         if (withAlpha) {
-            hex = hex + this.alpha.toString(16).padStart(2, '0');
+            hex += this.alpha.toString(16).padStart(2, '0');
         }
 
         return hex.toUpperCase();

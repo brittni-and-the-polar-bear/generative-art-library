@@ -30,7 +30,7 @@ describe('CLASSIC_CHRISTMAS palette tests', (): void => {
         _007058,
         _23856D,
         _FBF9F9
-    ]
+    ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
         checkForValidPalette(CLASSIC_CHRISTMAS, expectedColors);

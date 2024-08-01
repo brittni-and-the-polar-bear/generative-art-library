@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _F0F3F4: PaletteColor = {
     HEX: '#F0F3F4',
-    RGB: {R: 240, G: 243, B: 244},
-    HSL: {H: 195, S: 15, L: 95},
+    RGB: {
+        R: 240,
+        G: 243,
+        B: 244
+    },
+    HSL: {
+        H: 195,
+        S: 15,
+        L: 95
+    },
     NAME: 'zappy zebra',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

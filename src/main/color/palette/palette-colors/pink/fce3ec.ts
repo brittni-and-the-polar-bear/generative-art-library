@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _FCE3EC: PaletteColor = {
     HEX: '#FCE3EC',
-    RGB: {R: 252, G: 227, B: 236},
-    HSL: {H: 338, S: 81, L: 94},
+    RGB: {
+        R: 252,
+        G: 227,
+        B: 236
+    },
+    HSL: {
+        H: 338,
+        S: 81,
+        L: 94
+    },
     NAME: 'spun sugar',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

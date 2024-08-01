@@ -20,9 +20,7 @@ import {BLUE_LILY, NATURE_PALETTES} from 'palettes';
 
 import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
-const EXPECTED_PALETTES: {palette: Palette}[] = [
-    {palette: BLUE_LILY}
-]
+const EXPECTED_PALETTES: { palette: Palette }[] = [{palette: BLUE_LILY}];
 
 const MAP_NAME: string = 'NATURE_PALETTES';
 
@@ -31,9 +29,8 @@ describe('nature palette maps test', (): void => {
         checkForValidStringMap(NATURE_PALETTES, EXPECTED_PALETTES.length);
     });
 
-    test.each(
-        EXPECTED_PALETTES
-    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+    test.each(EXPECTED_PALETTES)(
+        `$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({palette}): void => {
             checkForPaletteInMap(palette, NATURE_PALETTES);
         }

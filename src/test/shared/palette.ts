@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {checkForValidHexColorString, ColorComponents} from './color';
+import {ColorComponents, checkForValidHexColorString} from './color';
 import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
 import {Palette, PaletteColor} from 'palette';
 import {Color} from 'color';

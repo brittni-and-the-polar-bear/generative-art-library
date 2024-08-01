@@ -20,20 +20,17 @@ import {BRITTNI, MISCELLANEOUS_PALETTES} from 'palettes';
 
 import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
-const EXPECTED_PALETTES: {palette: Palette}[] = [
-    {palette: BRITTNI}
-]
+const EXPECTED_PALETTES: { palette: Palette }[] = [{palette: BRITTNI}];
 
 const MAP_NAME: string = 'MISCELLANEOUS_PALETTES';
 
 describe('miscellaneous palette maps test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-       checkForValidStringMap(MISCELLANEOUS_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(MISCELLANEOUS_PALETTES, EXPECTED_PALETTES.length);
     });
 
-    test.each(
-        EXPECTED_PALETTES
-    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+    test.each(EXPECTED_PALETTES)(
+        `$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({palette}): void => {
             checkForPaletteInMap(palette, MISCELLANEOUS_PALETTES);
         }

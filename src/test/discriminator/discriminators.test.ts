@@ -19,7 +19,7 @@ import {Discriminators} from 'discriminator';
 
 describe('discriminators tests', (): void => {
     test('all discriminators are unique', (): void => {
-        const valuesSet: Set<string> = new Set<string>(Object.values(Discriminators))
+        const valuesSet: Set<string> = new Set<string>(Object.values(Discriminators));
         expect(valuesSet.size).toBe(Object.values(Discriminators).length);
-    })
+    });
 });

@@ -49,13 +49,38 @@ export const BRITTNI: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': ['#0FFF4F', '#FF6BB5'],
-        '#FFFFFF': ['#121212', '#0437F1', '#7A00F5'],
-        '#121212': ['#FFFFFF', '#0FFF4F', '#FF6BB5'],
-        '#0437F1': ['#FFFFFF', '#0FFF4F'],
-        '#0FFF4F': ['#000000', '#121212', '#0437F1', '#7A00F5'],
-        '#7A00F5': ['#FFFFFF', '#0FFF4F'],
-        '#FF6BB5': ['#000000', '#121212']
+        '#000000': [
+            '#0FFF4F',
+            '#FF6BB5'
+        ],
+        '#FFFFFF': [
+            '#121212',
+            '#0437F1',
+            '#7A00F5'
+        ],
+        '#121212': [
+            '#FFFFFF',
+            '#0FFF4F',
+            '#FF6BB5'
+        ],
+        '#0437F1': [
+            '#FFFFFF',
+            '#0FFF4F'
+        ],
+        '#0FFF4F': [
+            '#000000',
+            '#121212',
+            '#0437F1',
+            '#7A00F5'
+        ],
+        '#7A00F5': [
+            '#FFFFFF',
+            '#0FFF4F'
+        ],
+        '#FF6BB5': [
+            '#000000',
+            '#121212'
+        ]
     },
 
     DISCRIMINATOR: Discriminators.PALETTE

@@ -30,7 +30,7 @@ describe('BLUE_LILY palette tests', (): void => {
         _7DCED8,
         _1D90AF,
         _3B2212
-    ]
+    ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
         checkForValidPalette(BLUE_LILY, expectedColors);

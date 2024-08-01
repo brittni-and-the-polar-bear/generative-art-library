@@ -21,14 +21,12 @@ import {ALL_PALETTES, HOLIDAY_PALETTES, MISCELLANEOUS_PALETTES, NATURE_PALETTES}
 
 import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
-function getPaletteArray(map: StringMap<Palette>): {palette: Palette}[] {
+function getPaletteArray(map: StringMap<Palette>): { palette: Palette }[] {
     const palettes: Palette[] = Array.from(map.values);
-    return palettes.map((p: Palette): {palette: Palette} => {
-        return {palette: p}
-    });
+    return palettes.map((p: Palette): { palette: Palette } => ({palette: p}));
 }
 
-const EXPECTED_PALETTES: {palette: Palette}[] = [];
+const EXPECTED_PALETTES: { palette: Palette }[] = [];
 EXPECTED_PALETTES.push(
     ...(getPaletteArray(HOLIDAY_PALETTES)),
     ...(getPaletteArray(MISCELLANEOUS_PALETTES)),
@@ -40,9 +38,8 @@ describe('all palettes tests', (): void => {
         checkForValidStringMap(ALL_PALETTES, EXPECTED_PALETTES.length);
     });
 
-    test.each(
-        EXPECTED_PALETTES
-    )('$# palette successfully added to ALL_PALETTES map: $palette.NAME',
+    test.each(EXPECTED_PALETTES)(
+        '$# palette successfully added to ALL_PALETTES map: $palette.NAME',
         ({palette}): void => {
             checkForPaletteInMap(palette, ALL_PALETTES);
         }
@@ -53,9 +50,7 @@ describe('all palettes tests', (): void => {
         const names: Set<string> = new Set<string>();
 
         for (const palette of ALL_PALETTES.values) {
-            const hexStrings: string[] = palette.COLORS.map((color: PaletteColor): string => {
-                return color.HEX;
-            });
+            const hexStrings: string[] = palette.COLORS.map((color: PaletteColor): string => color.HEX);
             const hexSet: Set<string> = new Set<string>(hexStrings);
 
             expect(colorSets).not.toContainEqual(hexSet);

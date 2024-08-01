@@ -48,6 +48,6 @@ export class DefaultColorSelector extends ColorSelector {
      * @returns {@link ColorSelectorType.DEFAULT}
      */
     public get type(): ColorSelectorType {
-        return ColorSelectorType.DEFAULT
+        return ColorSelectorType.DEFAULT;
     }
 }

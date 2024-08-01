@@ -18,7 +18,7 @@
 import {StringMap} from 'map';
 
 interface KeyValuePair {
-    readonly key: string,
+    readonly key: string
     readonly value: number
 }
 
@@ -31,9 +31,18 @@ describe('string-map tests', (): void => {
     test('keys iterator', (): void => {
         const map: StringMap<number> = new StringMap<number>();
         const pairs: KeyValuePair[] = [
-            {key: 'carl', value: 10},
-            {key: 'bobby', value: 10},
-            {key: 'harold', value: 10}
+            {
+                key: 'carl',
+                value: 10
+            },
+            {
+                key: 'bobby',
+                value: 10
+            },
+            {
+                key: 'harold',
+                value: 10
+            }
         ];
 
         for (const pair of pairs) {
@@ -50,9 +59,18 @@ describe('string-map tests', (): void => {
     test('values iterator', (): void => {
         const map: StringMap<number> = new StringMap<number>();
         const pairs: KeyValuePair[] = [
-            {key: 'carl', value: 10},
-            {key: 'bobby', value: 20},
-            {key: 'harold', value: 20}
+            {
+                key: 'carl',
+                value: 10
+            },
+            {
+                key: 'bobby',
+                value: 20
+            },
+            {
+                key: 'harold',
+                value: 20
+            }
         ];
 
         for (const pair of pairs) {

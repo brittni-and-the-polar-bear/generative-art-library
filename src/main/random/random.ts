@@ -121,7 +121,7 @@ class Random {
      * If an empty list is provided, the function will return {@link !undefined}.
      */
     public static randomElement<Type>(list: Type[]): Type | undefined {
-        let element: Type | undefined = undefined;
+        let element: Type | undefined;
         const size: number = list.length;
 
         if (size > 0) {
@@ -146,12 +146,10 @@ class Random {
      * If the sum of weights in the list is less than 1.0, the function will return `undefined`.
      */
     public static randomWeightedElement<Type>(list: WeightedElement<Type>[]): Type | undefined {
-        let element: Type | undefined = undefined;
+        let element: Type | undefined;
 
         if (list.length > 0) {
-            let weightSum: number = list.reduce((total: number, e: WeightedElement<Type>): number => {
-                return total + e.weight;
-            }, 0);
+            let weightSum: number = list.reduce((total: number, e: WeightedElement<Type>): number => total + e.weight, 0);
 
             weightSum = parseFloat(weightSum.toFixed(4));
 

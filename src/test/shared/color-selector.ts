@@ -28,17 +28,19 @@ export function checkForValidColorSelector(selector: ColorSelector): void {
     expect(selector.colorNames.length).toBeGreaterThan(0);
 }
 
-export function checkForValidRandomSelector(selector: ColorSelector,
-                                            colors: Color[],
-                                            picksAllColors: boolean,
-                                            colorCount?: number): void {
+export function checkForValidRandomSelector(
+    selector: ColorSelector,
+    colors: Color[],
+    picksAllColors: boolean,
+    colorCount?: number
+): void {
     checkForValidColorSelector(selector);
     const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
     const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
 
     for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
         const components: ColorComponents = colorToColorComponents(selector.getColor());
-        const key: string = components.r.toString() + '' + components.g.toString() + '' + components.b.toString();
+        const key: string = `${components.r.toString()}${components.g.toString()}${components.b.toString()}`;
         colorMap.setUndefinedKey(key, components);
     }
 
@@ -53,11 +55,13 @@ export function checkForValidRandomSelector(selector: ColorSelector,
     }
 }
 
-export function checkForValidInOrderSelector(selector: ColorSelector,
-                                             colors: Color[],
-                                             matchColorOrder: boolean,
-                                             picksAllColors: boolean,
-                                             colorCount?: number): void {
+export function checkForValidInOrderSelector(
+    selector: ColorSelector,
+    colors: Color[],
+    matchColorOrder: boolean,
+    picksAllColors: boolean,
+    colorCount?: number
+): void {
     checkForValidColorSelector(selector);
 
     if (!colorCount || colorCount < 0) {
@@ -80,7 +84,7 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
             expect(expectedComponents).toContainEqual(components);
             inOrderColors.push(c);
 
-            const key: string = components.r.toString() + '' + components.g.toString() + '' + components.b.toString();
+            const key: string = `${components.r.toString()}${components.g.toString()}${components.b.toString()}`;
             colorMap.setUndefinedKey(key, components);
         }
 
@@ -98,7 +102,7 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
             const expectedComps: ColorComponents = colorToColorComponents(colors[i % colors.length]);
             expect(selectedComps).toEqual(expectedComps);
 
-            const key: string = selectedComps.r.toString() + '' + selectedComps.g.toString() + '' + selectedComps.b.toString();
+            const key: string = `${selectedComps.r.toString()}${selectedComps.g.toString()}${selectedComps.b.toString()}`;
             colorMap.setUndefinedKey(key, selectedComps);
         }
     }

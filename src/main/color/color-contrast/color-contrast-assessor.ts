@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {getContrastRatios, ResponseObject} from 'cococh';
+import {ResponseObject, getContrastRatios} from 'cococh';
 
 import {Color} from 'color';
 import {Discriminator} from 'discriminator';
@@ -29,6 +29,7 @@ import {PaletteColor} from 'palette';
  * @category Color Contrast
  */
 export enum ContrastStandard {
+
     /**
      * WCAG AA Standard (color contrast >= 4.5)
      */
@@ -46,6 +47,7 @@ export enum ContrastStandard {
  * @category Color Contrast
  */
 export enum ContrastFontSize {
+
     /**
      * Normal font size.
      */
@@ -85,6 +87,7 @@ export class ColorContrastAssessor {
                                         colorB: string,
                                         standard: ContrastStandard,
                                         fontSize: ContrastFontSize): boolean;
+
     /**
      * Evaluates if two colors have an appropriate contrast ratio
      * for the given {@link ContrastStandard} and {@link ContrastFontSize}.
@@ -94,10 +97,12 @@ export class ColorContrastAssessor {
      * @param standard - If no standard is provided, {@link ContrastStandard.AA} will be used.
      * @param fontSize - If no font size is provided, {@link ContrastFontSize.NORMAL} will be used.
      */
-    public static meetsContrastStandard(colorA: Color | PaletteColor | string,
-                                        colorB: Color | PaletteColor | string,
-                                        standard?: ContrastStandard,
-                                        fontSize?: ContrastFontSize): boolean {
+    public static meetsContrastStandard(
+        colorA: Color | PaletteColor | string,
+        colorB: Color | PaletteColor | string,
+        standard?: ContrastStandard,
+        fontSize?: ContrastFontSize
+    ): boolean {
         let hexA: string = '#000000';
         let hexB: string = '#000000';
 
@@ -132,10 +137,12 @@ export class ColorContrastAssessor {
      * for the given {@link ContrastStandard} and {@link ContrastFontSize},
      * `false` if they do not have an acceptable ratio.
      */
-    private static haveAppropriateContrastRatio(hexA: string,
-                                                hexB: string,
-                                                standard: ContrastStandard,
-                                                fontSize: ContrastFontSize): boolean {
+    private static haveAppropriateContrastRatio(
+        hexA: string,
+        hexB: string,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize
+    ): boolean {
         const ratioResults: ResponseObject = getContrastRatios(hexA, hexB);
         return ratioResults[fontSize][standard];
     }

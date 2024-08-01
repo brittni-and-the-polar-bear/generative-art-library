@@ -20,7 +20,7 @@ import {PaletteColor} from 'palette';
 
 import {checkForValidHexColorString} from './color';
 
-export type HexCollection = {hexString: string}[];
+export type HexCollection = { hexString: string }[];
 
 export function checkForValidPaletteColor(pc: PaletteColor): void {
     expect(pc.RGB).toBeTruthy();
@@ -36,9 +36,7 @@ export function checkForValidPaletteColor(pc: PaletteColor): void {
     expect(pc.DISCRIMINATOR).toBe(Discriminators.PALETTE_COLOR);
 }
 
-export const BLACK_HEXES: HexCollection = [
-    {hexString: '#121212'}
-];
+export const BLACK_HEXES: HexCollection = [{hexString: '#121212'}];
 
 export const BLUE_HEXES: HexCollection = [
     {hexString: '#0437F1'},
@@ -46,13 +44,9 @@ export const BLUE_HEXES: HexCollection = [
     {hexString: '#7DCED8'}
 ];
 
-export const BROWN_HEXES: HexCollection = [
-    {hexString: '#3B2212'}
-];
+export const BROWN_HEXES: HexCollection = [{hexString: '#3B2212'}];
 
-export const GRAY_HEXES: HexCollection = [
-    {hexString: '#F0F3F4'}
-];
+export const GRAY_HEXES: HexCollection = [{hexString: '#F0F3F4'}];
 
 export const GREEN_HEXES: HexCollection = [
     {hexString: '#007058'},
@@ -69,9 +63,7 @@ export const PINK_HEXES: HexCollection = [
     {hexString: '#FF6BB5'}
 ];
 
-export const PURPLE_HEXES: HexCollection = [
-    {hexString: '#7A00F5'}
-];
+export const PURPLE_HEXES: HexCollection = [{hexString: '#7A00F5'}];
 
 export const RED_HEXES: HexCollection = [
     {hexString: '#BC010A'},

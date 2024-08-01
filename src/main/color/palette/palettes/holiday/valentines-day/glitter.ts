@@ -53,7 +53,13 @@ export const GLITTER: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': ['#FCE3EC', '#F8B9CE', '#F490B1', '#F06090', '#EC417A'],
+        '#000000': [
+            '#FCE3EC',
+            '#F8B9CE',
+            '#F490B1',
+            '#F06090',
+            '#EC417A'
+        ],
         '#FFFFFF': [],
         '#FCE3EC': ['#000000'],
         '#F8B9CE': ['#000000'],

@@ -19,7 +19,7 @@ import {ColorNameManager} from 'color';
 import {Discriminators} from 'discriminator';
 import {PaletteColor} from 'palette';
 
-import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from "../palette-color-maps";
+import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #007058;">
@@ -35,8 +35,16 @@ import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from "../palette-color-maps";
  */
 export const _007058: PaletteColor = {
     HEX: '#007058',
-    RGB: {R: 0, G: 112, B: 88},
-    HSL: {H: 167, S: 100, L: 22},
+    RGB: {
+        R: 0,
+        G: 112,
+        B: 88
+    },
+    HSL: {
+        H: 167,
+        S: 100,
+        L: 22
+    },
     NAME: 'teal dark green',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
