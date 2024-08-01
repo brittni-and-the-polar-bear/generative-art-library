@@ -44,6 +44,7 @@ class SketchContext {
     public static initialize(p5: P5Lib): void {
         if (!this._p5) {
             this._p5 = p5;
+            noP5.noCanvas();
         }
     }
 
