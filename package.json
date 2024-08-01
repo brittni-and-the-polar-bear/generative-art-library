@@ -2,20 +2,35 @@
   "name": "@batpb/genart",
   "version": "1.0.0",
   "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
-  "main": "./out/batpb-genart.js",
-  "types": "./out/batpb-genart.d.ts",
+  "main": "./out/dist/batpb-genart.js",
+  "module": "./out/dist/batpb-genart.mjs",
+  "types": "./out/dist/batpb-genart.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./out/dist/batpb-genart.d.mts",
+        "default": "./out/dist/batpb-genart.mjs"
+      },
+      "require": {
+        "types": "./out/dist/batpb-genart.d.ts",
+        "default": "./out/dist/batpb-genart.js"
+      }
+    }
+  },
   "files": [
-    "./out/batpb-genart.d.ts",
-    "./out/batpb-genart.d.ts.map",
-    "./out/batpb-genart.js",
-    "./out/batpb-genart.js.map",
+    "./out/dist/batpb-genart.js",
+    "./out/dist/batpb-genart.js.map",
+    "./out/dist/batpb-genart.d.ts",
+    "./out/dist/batpb-genart.mjs",
+    "./out/dist/batpb-genart.mjs.map",
+    "./out/dist/batpb-genart.d.mts",
     "./.node-version",
     "./LICENSE",
     "./package.json",
     "./README.md"
   ],
   "scripts": {
-    "build": "rm -r ./out; rollup --config",
+    "build": "rm -r ./out; tsup",
     "test": "rm -r ./out/tests-coverage; jest",
     "lint": "eslint ./src",
     "docs": "typedoc",
@@ -72,6 +87,7 @@
     "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
+    "tsup": "^8.2.3",
     "typedoc": "^0.26.5",
     "typedoc-plugin-coverage": "^3.3.0",
     "typedoc-plugin-mdn-links": "^3.2.6",
