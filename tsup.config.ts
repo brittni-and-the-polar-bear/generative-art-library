@@ -15,8 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - test docs
-// TODO - update npm github actions to include lint
 // TODO - add changelog library (new issue?)
 // TODO - rerun tests
 
