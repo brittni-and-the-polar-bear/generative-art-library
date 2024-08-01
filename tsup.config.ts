@@ -15,9 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - add changelog library (new issue?)
-// TODO - rerun tests
-
 import {defineConfig} from 'tsup'
 
 export default defineConfig({
