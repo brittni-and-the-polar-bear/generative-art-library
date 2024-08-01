@@ -15,32 +15,30 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color} from 'color';
+import {checkForValidHexColorString, ColorComponents} from './color';
 import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
+import {Palette, PaletteColor} from 'palette';
+import {Color} from 'color';
 import {Discriminators} from 'discriminator';
 import {StringMap} from 'map';
-import {Palette, PaletteColor} from 'palette';
-
-import {checkForValidHexColorString, ColorComponents} from './color';
 import {checkForValidStringMap} from './map';
 import {checkNumberWithinAmount} from './math';
 
-export function getColorsArray(colors: PaletteColor[]): Color[] {
-    return colors.map((color: PaletteColor) => {
-        return new Color(color);
-    });
-}
+export const getColorsArray = (colors: PaletteColor[]): Color[] => {
+    'use strict';
+    return colors.map((color: PaletteColor) => new Color(color));
+};
 
-export function checkComponents(components: ColorComponents, paletteColor: PaletteColor): void {
+export const checkComponents = (components: ColorComponents, paletteColor: PaletteColor): void => {
+    'use strict';
     checkNumberWithinAmount(components.r, paletteColor.RGB.R, 1);
     checkNumberWithinAmount(components.g, paletteColor.RGB.G, 1);
     checkNumberWithinAmount(components.b, paletteColor.RGB.B, 1);
-}
+};
 
-function checkForValidContrastMap(palette: Palette): void {
-    const validHexes: string[] = palette.COLORS.map((color: PaletteColor): string => {
-        return color.HEX;
-    });
+const checkForValidContrastMap = (palette: Palette): void => {
+    'use strict';
+    const validHexes: string[] = palette.COLORS.map((color: PaletteColor): string => color.HEX);
 
     expect(palette.CONTRAST_MAP).toBeTruthy();
 
@@ -56,37 +54,39 @@ function checkForValidContrastMap(palette: Palette): void {
         }
 
         for (const key in palette.CONTRAST_MAP) {
-            checkForValidHexColorString(key);
-            expect(validHexes).toContain(key);
+            if (Object.prototype.hasOwnProperty.call(palette.CONTRAST_MAP, key)) {
+                checkForValidHexColorString(key);
+                expect(validHexes).toContain(key);
 
-            for (const hex of palette.CONTRAST_MAP[key]) {
-                checkForValidHexColorString(hex);
-                expect(validHexes).toContain(hex);
+                for (const hex of palette.CONTRAST_MAP[key]) {
+                    checkForValidHexColorString(hex);
+                    expect(validHexes).toContain(hex);
 
-                const meetsNormalRatio: boolean =
-                    ColorContrastAssessor.meetsContrastStandard(
+                    const meetsNormalRatio: boolean = ColorContrastAssessor.meetsContrastStandard(
                         key,
                         hex,
                         ContrastStandard.AA,
                         ContrastFontSize.NORMAL
                     );
-                const meetsLargeRatio: boolean =
-                    ColorContrastAssessor.meetsContrastStandard(
+                    const meetsLargeRatio: boolean = ColorContrastAssessor.meetsContrastStandard(
                         key,
                         hex,
                         ContrastStandard.AA,
                         ContrastFontSize.LARGE
                     );
-                expect(meetsNormalRatio && meetsLargeRatio).toBeTruthy();
+
+                    expect(meetsNormalRatio && meetsLargeRatio).toBeTruthy();
+                }
             }
         }
     }
-}
+};
 
-export function checkForValidPalette(palette: Palette, expectedColors?: PaletteColor[]): void {
+export const checkForValidPalette = (palette: Palette, expectedColors?: PaletteColor[]): void => {
+    'use strict';
     expect(palette).toBeTruthy();
     expect(palette.NAME).toBeTruthy();
-    expect(palette.NAME.toLowerCase()).toBe(palette.NAME)
+    expect(palette.NAME.toLowerCase()).toBe(palette.NAME);
     expect(palette.COLORS).toBeTruthy();
     expect(palette.COLORS.length).toBeGreaterThanOrEqual(2);
     expect(palette.DISCRIMINATOR).toBe(Discriminators.PALETTE);
@@ -98,12 +98,13 @@ export function checkForValidPalette(palette: Palette, expectedColors?: PaletteC
     if (palette.CONTRAST_MAP) {
         checkForValidContrastMap(palette);
     }
-}
+};
 
-export function checkForPaletteInMap(palette: Palette, map: StringMap<Palette>): void {
+export const checkForPaletteInMap = (palette: Palette, map: StringMap<Palette>): void => {
+    'use strict';
     checkForValidStringMap(map);
     checkForValidPalette(palette);
     const actualPalette: Palette | undefined = map.get(palette.NAME);
     expect(actualPalette).toBeTruthy();
     expect(actualPalette).toEqual(palette);
-}
+};
