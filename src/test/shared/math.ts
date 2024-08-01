@@ -15,7 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export function checkNumberWithinAmount(value: number, expected: number, range: number): void {
+export const checkNumberWithinAmount = (value: number, expected: number, range: number): void => {
+    'use strict';
     expect(value).toBeGreaterThanOrEqual(expected - range);
     expect(value).toBeLessThanOrEqual(expected + range);
-}
+};

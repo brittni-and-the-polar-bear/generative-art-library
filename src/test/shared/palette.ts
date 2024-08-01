@@ -15,12 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { ColorComponents, checkForValidHexColorString } from './color';
-import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
-import { Palette, PaletteColor } from 'palette';
 import { Color } from 'color';
+import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
 import { Discriminators } from 'discriminator';
 import { StringMap } from 'map';
+import { Palette, PaletteColor } from 'palette';
+
+import { ColorComponents, checkForValidHexColorString } from './color';
 import { checkForValidStringMap } from './map';
 import { checkNumberWithinAmount } from './math';
 

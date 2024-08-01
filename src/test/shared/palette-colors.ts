@@ -22,7 +22,8 @@ import { checkForValidHexColorString } from './color';
 
 export type HexCollection = { hexString: string }[];
 
-export function checkForValidPaletteColor(pc: PaletteColor): void {
+export const checkForValidPaletteColor = (pc: PaletteColor): void => {
+    'use strict';
     expect(pc.RGB).toBeTruthy();
     expect(pc.HSL).toBeTruthy();
 
@@ -34,7 +35,7 @@ export function checkForValidPaletteColor(pc: PaletteColor): void {
     expect(pc.NAME.toLowerCase()).toBe(pc.NAME);
 
     expect(pc.DISCRIMINATOR).toBe(Discriminators.PALETTE_COLOR);
-}
+};
 
 export const BLACK_HEXES: HexCollection = [{ hexString: '#121212' }];
 

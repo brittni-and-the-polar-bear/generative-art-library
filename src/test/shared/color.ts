@@ -22,10 +22,10 @@ import { SketchContext } from 'context';
 
 import { checkNumberWithinAmount } from './math';
 
-const { p5 } = SketchContext;
+const p5: P5Lib = SketchContext.p5;
 
-const hexPattern: RegExp = /^#[A-F|0-9]{6}$/;
-const hexWithAlphaPattern: RegExp = /^#[A-F|0-9]{8}$/;
+const hexPattern: RegExp = /^#[A-F|0-9]{6}$/u;
+const hexWithAlphaPattern: RegExp = /^#[A-F|0-9]{8}$/u;
 
 export const red: Color = new Color(p5.color(255, 0, 0));
 export const green: Color = new Color(p5.color(0, 255, 0));
@@ -62,36 +62,41 @@ export class SampleSelector extends ColorSelector {
     }
 }
 
-export function colorToColorComponents(c: Color): ColorComponents {
+export const colorToColorComponents = (c: Color): ColorComponents => {
+    'use strict';
     return {
         r: c.red,
         g: c.green,
         b: c.blue,
         a: c.alpha
     };
-}
+};
 
-export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
+export const p5ColorToColorComponents = (color: P5Lib.Color): ColorComponents => {
+    'use strict';
     return {
         r: Math.floor(p5.red(color)),
         g: Math.floor(p5.green(color)),
         b: Math.floor(p5.blue(color)),
         a: Math.floor(p5.alpha(color))
     };
-}
+};
 
-export function checkForValidHexColorString(hex: string): void {
+export const checkForValidHexColorString = (hex: string): void => {
+    'use strict';
     const isValid: boolean = hexPattern.test(hex);
     expect(isValid).toBeTruthy();
-}
+};
 
-export function checkForValidHexColorStringWithAlpha(hex: string): void {
+export const checkForValidHexColorStringWithAlpha = (hex: string): void => {
+    'use strict';
     const isValid: boolean = hexWithAlphaPattern.test(hex);
     expect(isValid).toBeTruthy();
-}
+};
 
-export function checkForEquivalentComponents(actual: ColorComponents, expected: ColorComponents): void {
+export const checkForEquivalentComponents = (actual: ColorComponents, expected: ColorComponents): void => {
+    'use strict';
     checkNumberWithinAmount(actual.r, expected.r, 1);
     checkNumberWithinAmount(actual.g, expected.g, 1);
     checkNumberWithinAmount(actual.b, expected.b, 1);
-}
+};
