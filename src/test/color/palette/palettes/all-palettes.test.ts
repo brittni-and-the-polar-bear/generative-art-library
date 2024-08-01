@@ -17,17 +17,9 @@
 
 import {StringMap} from 'map';
 import {Palette, PaletteColor} from 'palette';
-import {
-    ALL_PALETTES,
-    HOLIDAY_PALETTES,
-    MISCELLANEOUS_PALETTES,
-    NATURE_PALETTES
-} from 'palettes';
+import {ALL_PALETTES, HOLIDAY_PALETTES, MISCELLANEOUS_PALETTES, NATURE_PALETTES} from 'palettes';
 
-import {
-    checkForPaletteInMap,
-    checkForValidStringMap,
-} from 'unit-test/shared';
+import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
 
 function getPaletteArray(map: StringMap<Palette>): {palette: Palette}[] {
     const palettes: Palette[] = Array.from(map.values);

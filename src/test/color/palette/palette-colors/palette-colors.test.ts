@@ -30,19 +30,19 @@ import {
 } from 'palette-colors';
 
 import {
-    HexCollection,
-    checkForValidHexColorString,
-    checkForValidPaletteColor,
-    checkForValidStringMap,
     BLACK_HEXES,
     BLUE_HEXES,
     BROWN_HEXES,
+    checkForValidHexColorString,
+    checkForValidPaletteColor,
+    checkForValidStringMap,
     GRAY_HEXES,
     GREEN_HEXES,
+    HexCollection,
     PINK_HEXES,
     PURPLE_HEXES,
     RED_HEXES,
-    WHITE_HEXES,
+    WHITE_HEXES
 } from 'unit-test/shared';
 
 const COLOR_CATEGORIES:
@@ -56,7 +56,7 @@ const COLOR_CATEGORIES:
         {category: 'pink', colorsMap: PINK_PALETTE_COLORS, hexes: PINK_HEXES},
         {category: 'purple', colorsMap: PURPLE_PALETTE_COLORS, hexes: PURPLE_HEXES},
         {category: 'red', colorsMap: RED_PALETTE_COLORS, hexes: RED_HEXES},
-        {category: 'white', colorsMap: WHITE_PALETTE_COLORS, hexes: WHITE_HEXES},
+        {category: 'white', colorsMap: WHITE_PALETTE_COLORS, hexes: WHITE_HEXES}
     ];
 
 describe.each(
