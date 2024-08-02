@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
-import {_1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF} from 'palette-colors';
-import {BLUE_LILY} from 'palettes';
+import { PaletteColor } from 'palette';
+import { _1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
+import { BLUE_LILY } from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'BLUE_LILY';
 
@@ -30,7 +30,7 @@ describe('BLUE_LILY palette tests', (): void => {
         _7DCED8,
         _1D90AF,
         _3B2212
-    ]
+    ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
         checkForValidPalette(BLUE_LILY, expectedColors);
