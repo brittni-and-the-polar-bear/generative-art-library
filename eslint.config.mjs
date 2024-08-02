@@ -50,22 +50,19 @@ export default tsEslint.config(
             '@stylistic': stylistic
         },
         rules: {
-            'id-length': 'off',
-
-            'max-statements': 'off',
-
-            'no-plusplus': 'off',
-
             'one-var': ['error', 'never'],
 
-            'prefer-destructuring': 'off',
+            '@stylistic/no-extra-semi': 'error',
 
-            'sort-keys': 'off',
+            '@stylistic/function-call-argument-newline': ['error', 'consistent'],
 
-            'sort-imports': 'off',
+            '@stylistic/function-call-spacing': ['error', 'never'],
 
-            'class-methods-use-this': 'off',
-            '@typescript-eslint/class-methods-use-this': 'off',
+            '@stylistic/comma-dangle': ['error', 'never'],
+
+            '@stylistic/indent': ['error', 4],
+
+            '@stylistic/semi': ['error', 'always'],
 
             'dot-notation': 'off',
             '@typescript-eslint/dot-notation': 'error',
@@ -81,9 +78,6 @@ export default tsEslint.config(
 
             'no-loss-of-precision': 'off',
             '@typescript-eslint/no-loss-of-precision': 'error',
-
-            'no-magic-numbers': 'off',
-            '@typescript-eslint/no-magic-numbers': 'off',
 
             'no-shadow': 'off',
             '@typescript-eslint/no-shadow': 'error',
@@ -112,19 +106,7 @@ export default tsEslint.config(
 
             '@typescript-eslint/no-inferrable-types': 'off',
 
-            '@typescript-eslint/prefer-for-of': 'off',
-
-            '@stylistic/no-extra-semi': 'error',
-
-            '@stylistic/function-call-argument-newline': ['error', 'consistent'],
-
-            '@stylistic/function-call-spacing': ['error', 'never'],
-
-            '@stylistic/comma-dangle': ['error', 'never'],
-
-            '@stylistic/indent': ['error', 4],
-
-            '@stylistic/semi': ['error', 'always']
+            '@typescript-eslint/prefer-for-of': 'off'
         }
     }
 );
