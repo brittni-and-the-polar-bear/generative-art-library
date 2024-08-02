@@ -62,6 +62,8 @@ export default tsEslint.config(
 
             '@stylistic/indent': ['error', 4],
 
+            '@stylistic/operator-linebreak': ['error', 'after'],
+
             '@stylistic/semi': ['error', 'always'],
 
             'dot-notation': 'off',
