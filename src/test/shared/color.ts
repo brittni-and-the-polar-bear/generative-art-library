@@ -17,10 +17,10 @@
 
 import P5Lib from 'p5';
 
-import {Color, ColorSelector, ColorSelectorType} from 'color';
-import {SketchContext} from 'context';
+import { Color, ColorSelector, ColorSelectorType } from 'color';
+import { SketchContext } from 'context';
 
-import {checkNumberWithinAmount} from './math';
+import { checkNumberWithinAmount } from './math';
 
 const p5: P5Lib = SketchContext.p5;
 
@@ -38,7 +38,7 @@ export interface ColorComponents {
     readonly r: number,
     readonly g: number,
     readonly b: number,
-    readonly a?: number,
+    readonly a?: number
 }
 
 export class SampleSelector extends ColorSelector {
@@ -63,7 +63,7 @@ export class SampleSelector extends ColorSelector {
 }
 
 export function colorToColorComponents(c: Color): ColorComponents {
-    return {r: c.red, g: c.green, b: c.blue, a: c.alpha};
+    return { r: c.red, g: c.green, b: c.blue, a: c.alpha };
 }
 
 export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {

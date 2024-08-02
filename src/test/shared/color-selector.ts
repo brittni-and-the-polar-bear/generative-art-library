@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector} from 'color';
-import {StringMap} from 'map';
+import { Color, ColorSelector } from 'color';
+import { StringMap } from 'map';
 
-import {ColorComponents, colorToColorComponents} from './color';
-import {RANDOM_TEST_TRIES} from './random';
+import { ColorComponents, colorToColorComponents } from './color';
+import { RANDOM_TEST_TRIES } from './random';
 
 export function checkForValidColorSelector(selector: ColorSelector): void {
     expect(selector.type).toBeTruthy();
@@ -28,10 +28,12 @@ export function checkForValidColorSelector(selector: ColorSelector): void {
     expect(selector.colorNames.length).toBeGreaterThan(0);
 }
 
-export function checkForValidRandomSelector(selector: ColorSelector,
-                                            colors: Color[],
-                                            picksAllColors: boolean,
-                                            colorCount?: number): void {
+export function checkForValidRandomSelector(
+    selector: ColorSelector,
+    colors: Color[],
+    picksAllColors: boolean,
+    colorCount?: number): void
+{
     checkForValidColorSelector(selector);
     const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
     const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
@@ -53,11 +55,13 @@ export function checkForValidRandomSelector(selector: ColorSelector,
     }
 }
 
-export function checkForValidInOrderSelector(selector: ColorSelector,
-                                             colors: Color[],
-                                             matchColorOrder: boolean,
-                                             picksAllColors: boolean,
-                                             colorCount?: number): void {
+export function checkForValidInOrderSelector(
+    selector: ColorSelector,
+    colors: Color[],
+    matchColorOrder: boolean,
+    picksAllColors: boolean,
+    colorCount?: number): void
+{
     checkForValidColorSelector(selector);
 
     if (!colorCount || colorCount < 0) {
