@@ -26,7 +26,6 @@ import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
     js.configs.recommended,
-    js.configs.all,
     ...tsEslint.configs.recommended,
     ...tsEslint.configs.recommendedTypeChecked,
     ...tsEslint.configs.strict,
@@ -34,7 +33,6 @@ export default tsEslint.config(
     ...tsEslint.configs.stylistic,
     ...tsEslint.configs.strictTypeChecked,
     stylistic.configs["recommended-flat"],
-    stylistic.configs["all-flat"],
     {
         languageOptions: {
             parser: tsParser,
