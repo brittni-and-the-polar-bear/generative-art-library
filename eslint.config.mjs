@@ -17,6 +17,7 @@
 
 import js from '@eslint/js';
 
+import es_x from 'eslint-plugin-es-x';
 import node from 'eslint-plugin-n';
 import security from 'eslint-plugin-security';
 
@@ -29,6 +30,7 @@ import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
     js.configs.recommended,
+    es_x.configs['flat/restrict-to-es2022'],
     node.configs["flat/recommended"],
     security.configs.recommended,
     stylistic.configs['recommended-flat'],
@@ -41,7 +43,7 @@ export default tsEslint.config(
     {
         languageOptions: {
             parser: tsParser,
-            ecmaVersion: 5,
+            ecmaVersion: 6,
             sourceType: 'script',
 
             parserOptions: {
@@ -51,8 +53,9 @@ export default tsEslint.config(
             }
         },
         plugins: {
-            '@typescript-eslint': typescript,
-            '@stylistic': stylistic
+            'es-x': es_x,
+            '@stylistic': stylistic,
+            '@typescript-eslint': typescript
         },
         rules: {
             'one-var': ['error', 'never'],
