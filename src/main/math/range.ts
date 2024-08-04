@@ -83,4 +83,4 @@ class Range {
     }
 }
 
-export {Range};
+export { Range };
