@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import type {JestConfigWithTsJest} from 'ts-jest';
+import type { JestConfigWithTsJest } from 'ts-jest';
 
 const config: JestConfigWithTsJest = {
     collectCoverage: true,
@@ -38,8 +38,8 @@ const config: JestConfigWithTsJest = {
     },
     testEnvironment: 'jsdom',
     testRegex: './src/test/.*\\.(test|spec)?\\.(ts|tsx)$',
-    transform: {'^.+\\.(ts|tsx)$': 'ts-jest'},
-    verbose: true,
+    transform: { '^.+\\.(ts|tsx)$': 'ts-jest' },
+    verbose: true
 };
 
 export default config;
