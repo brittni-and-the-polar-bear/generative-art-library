@@ -75,6 +75,8 @@ export default tsEslint.config(
                 }
             ],
 
+            '@stylistic/indent-binary-ops': 'off',
+
             '@stylistic/member-delimiter-style': ['error', {
                 multiline: {
                     delimiter: 'semi',
