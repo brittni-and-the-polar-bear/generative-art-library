@@ -25,7 +25,7 @@ interface WeightedElement<Type> {
     /**
      * The value returned if this element is selected.
      */
-    readonly value: Type,
+    readonly value: Type;
 
     /**
      * The weight associated with this element.
@@ -34,4 +34,4 @@ interface WeightedElement<Type> {
     readonly weight: number
 }
 
-export {type WeightedElement};
+export { type WeightedElement };

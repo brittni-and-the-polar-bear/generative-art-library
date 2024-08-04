@@ -18,17 +18,17 @@
 import colorNames from 'color-name-list/dist/colornames.json';
 import nearestColor from 'nearest-color';
 
-import {StringMap} from 'map';
-import {PaletteColor} from 'palette';
+import { StringMap } from 'map';
+import { PaletteColor } from 'palette';
 
 interface NearestColorMatch {
-    name: string,
-    value: string,
-    rgb: { r: number, g: number, b: number },
+    name: string;
+    value: string;
+    rgb: { r: number; g: number; b: number };
     distance: number
 }
 
-const _COLORS = colorNames.reduce((o, {name, hex}) => Object.assign(o, {[name]: hex}), {});
+const _COLORS = colorNames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
 const _NEAREST_COLOR = nearestColor.from(_COLORS);
 
 /**

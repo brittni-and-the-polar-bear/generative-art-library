@@ -17,9 +17,9 @@
 
 import P5Lib from 'p5';
 
-import {Color} from 'color';
-import {SketchContext} from 'context';
-import {_0437F1, _0FFF4F, _7A00F5, _FF6BB5} from 'palette-colors';
+import { Color } from 'color';
+import { SketchContext } from 'context';
+import { _0437F1, _0FFF4F, _7A00F5, _FF6BB5 } from 'palette-colors';
 
 import {
     ColorComponents,
@@ -38,7 +38,7 @@ describe('color tests', (): void => {
         const h: number = 238;
         const s: number = 65;
         const l: number = 39;
-        const expectedComponents: ColorComponents = {r: 34, g: 39, b: 164, a: 255};
+        const expectedComponents: ColorComponents = { r: 34, g: 39, b: 164, a: 255 };
         const c: P5Lib.Color = Color.getHSLColor(h, s, l);
         const cComponents: ColorComponents = p5ColorToColorComponents(c);
 
@@ -55,7 +55,7 @@ describe('color tests', (): void => {
         const s: number = 82;
         const l: number = 15;
         const a: number = 0.25;
-        const expectedComponents: ColorComponents = {r: 6, g: 69, b: 21, a: Math.floor(255 * a)};
+        const expectedComponents: ColorComponents = { r: 6, g: 69, b: 21, a: Math.floor(255 * a) };
         const c: P5Lib.Color = Color.getHSLAColor(h, s, l, a);
         const cComponents: ColorComponents = p5ColorToColorComponents(c);
 
@@ -70,7 +70,7 @@ describe('color tests', (): void => {
     test('default color', (): void => {
         const expected: ColorComponents = {
             r: 0, g: 0, b: 0, a: 255
-        }
+        };
 
         const defaultColor: Color = new Color();
         expect(colorToColorComponents(defaultColor)).toEqual(expected);
@@ -80,16 +80,16 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            {paletteColor: _0437F1},
-            {paletteColor: _0FFF4F},
-            {paletteColor: _7A00F5},
-            {paletteColor: _FF6BB5}
+            { paletteColor: _0437F1 },
+            { paletteColor: _0FFF4F },
+            { paletteColor: _7A00F5 },
+            { paletteColor: _FF6BB5 }
         ]
     )('$# color built with PaletteColor object: $paletteColor.HEX',
-        ({paletteColor}): void => {
+        ({ paletteColor }): void => {
             const expected: ColorComponents = {
                 r: paletteColor.RGB.R, g: paletteColor.RGB.G, b: paletteColor.RGB.B, a: 255
-            }
+            };
 
             const expectedName: string = paletteColor.NAME;
 
@@ -105,7 +105,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(w);
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: 255
-        }
+        };
         const expectedName: string = 'million grey';
 
         const color: Color = new Color(c);
@@ -120,7 +120,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(w, a);
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: a
-        }
+        };
         const expectedName: string = 'million grey';
 
         const color: Color = new Color(c);
@@ -136,7 +136,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(r, g, b);
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
-        }
+        };
         const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color(c);
@@ -153,7 +153,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(r, g, b, a);
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: a
-        }
+        };
         const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color(c);
@@ -169,7 +169,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = Color.getHSLColor(h, s, l);
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: 255
-        }
+        };
         const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color(c);
@@ -186,7 +186,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = Color.getHSLColor(h, s, l, a);
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: Math.floor(255 * a)
-        }
+        };
         const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color(c);
@@ -202,7 +202,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color('#FF3DB5');
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
-        }
+        };
         const expectedName: string = '';
 
         const color: Color = new Color(c);
@@ -216,7 +216,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(w);
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: 255
-        }
+        };
         const expectedName: string = 'million grey';
 
         const color: Color = new Color();
@@ -233,7 +233,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(w, a);
         const expected: ColorComponents = {
             r: w, g: w, b: w, a: a
-        }
+        };
         const expectedName: string = 'million grey';
 
         const color: Color = new Color();
@@ -251,7 +251,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(r, g, b);
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
-        }
+        };
         const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color();
@@ -269,7 +269,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color(r, g, b);
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
-        }
+        };
         const expectedName: string = 'vivid cerise';
 
         const color: Color = new Color();
@@ -287,7 +287,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = Color.getHSLColor(h, s, l);
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: 255
-        }
+        };
         const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color();
@@ -306,7 +306,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = Color.getHSLColor(h, s, l, a);
         const expected: ColorComponents = {
             r: 16, g: 104, b: 116, a: Math.floor(255 * a)
-        }
+        };
         const expectedName: string = 'blue enchantment';
 
         const color: Color = new Color();
@@ -324,7 +324,7 @@ describe('color tests', (): void => {
         const c: P5Lib.Color = p5.color('#7182B9');
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
-        }
+        };
         const expectedName: string = 'orbital';
 
         const color: Color = new Color();
@@ -473,24 +473,24 @@ describe('color tests', (): void => {
     });
 
     test.each([
-        {r: 0, g: 0, b: 0, a: undefined, hex: '#000000'},
-        {r: 0, g: 0, b: 0, a: 0, hex: '#000000'},
-        {r: 0, g: 0, b: 0, a: 255, hex: '#000000'},
-        {r: 0, g: 0, b: 0, a: 100, hex: '#000000'},
-        {r: 255, g: 0, b: 0, a: undefined, hex: '#FF0000'},
-        {r: 255, g: 0, b: 0, a: 0, hex: '#FF0000'},
-        {r: 255, g: 0, b: 0, a: 255, hex: '#FF0000'},
-        {r: 255, g: 0, b: 0, a: 100, hex: '#FF0000'},
-        {r: 132, g: 30, b: 228, a: undefined, hex: '#841EE4'},
-        {r: 132, g: 30, b: 228, a: 0, hex: '#841EE4'},
-        {r: 132, g: 30, b: 228, a: 255, hex: '#841EE4'},
-        {r: 132, g: 30, b: 228, a: 100, hex: '#841EE4'},
-        {r: 128, g: 43, b: 78, a: undefined, hex: '#802B4E'},
-        {r: 128, g: 43, b: 78, a: 0, hex: '#802B4E'},
-        {r: 128, g: 43, b: 78, a: 255, hex: '#802B4E'},
-        {r: 128, g: 43, b: 78, a: 100, hex: '#802B4E'}
+        { r: 0, g: 0, b: 0, a: undefined, hex: '#000000' },
+        { r: 0, g: 0, b: 0, a: 0, hex: '#000000' },
+        { r: 0, g: 0, b: 0, a: 255, hex: '#000000' },
+        { r: 0, g: 0, b: 0, a: 100, hex: '#000000' },
+        { r: 255, g: 0, b: 0, a: undefined, hex: '#FF0000' },
+        { r: 255, g: 0, b: 0, a: 0, hex: '#FF0000' },
+        { r: 255, g: 0, b: 0, a: 255, hex: '#FF0000' },
+        { r: 255, g: 0, b: 0, a: 100, hex: '#FF0000' },
+        { r: 132, g: 30, b: 228, a: undefined, hex: '#841EE4' },
+        { r: 132, g: 30, b: 228, a: 0, hex: '#841EE4' },
+        { r: 132, g: 30, b: 228, a: 255, hex: '#841EE4' },
+        { r: 132, g: 30, b: 228, a: 100, hex: '#841EE4' },
+        { r: 128, g: 43, b: 78, a: undefined, hex: '#802B4E' },
+        { r: 128, g: 43, b: 78, a: 0, hex: '#802B4E' },
+        { r: 128, g: 43, b: 78, a: 255, hex: '#802B4E' },
+        { r: 128, g: 43, b: 78, a: 100, hex: '#802B4E' }
     ])('$# get hex: rgba($r, $g, $b, $a)',
-        ({r, g, b, a, hex}): void => {
+        ({ r, g, b, a, hex }): void => {
             let c: Color;
 
             if (a !== undefined) {
@@ -508,24 +508,24 @@ describe('color tests', (): void => {
     );
 
     test.each([
-        {r: 0, g: 0, b: 0, a: undefined, hex: '#000000FF'},
-        {r: 0, g: 0, b: 0, a: 0, hex: '#00000000'},
-        {r: 0, g: 0, b: 0, a: 255, hex: '#000000FF'},
-        {r: 0, g: 0, b: 0, a: 100, hex: '#00000064'},
-        {r: 255, g: 0, b: 0, a: undefined, hex: '#FF0000FF'},
-        {r: 255, g: 0, b: 0, a: 0, hex: '#FF000000'},
-        {r: 255, g: 0, b: 0, a: 255, hex: '#FF0000FF'},
-        {r: 255, g: 0, b: 0, a: 100, hex: '#FF000064'},
-        {r: 132, g: 30, b: 228, a: undefined, hex: '#841EE4FF'},
-        {r: 132, g: 30, b: 228, a: 0, hex: '#841EE400'},
-        {r: 132, g: 30, b: 228, a: 255, hex: '#841EE4FF'},
-        {r: 132, g: 30, b: 228, a: 100, hex: '#841EE464'},
-        {r: 128, g: 43, b: 78, a: undefined, hex: '#802B4EFF'},
-        {r: 128, g: 43, b: 78, a: 0, hex: '#802B4E00'},
-        {r: 128, g: 43, b: 78, a: 255, hex: '#802B4EFF'},
-        {r: 128, g: 43, b: 78, a: 100, hex: '#802B4E64'}
+        { r: 0, g: 0, b: 0, a: undefined, hex: '#000000FF' },
+        { r: 0, g: 0, b: 0, a: 0, hex: '#00000000' },
+        { r: 0, g: 0, b: 0, a: 255, hex: '#000000FF' },
+        { r: 0, g: 0, b: 0, a: 100, hex: '#00000064' },
+        { r: 255, g: 0, b: 0, a: undefined, hex: '#FF0000FF' },
+        { r: 255, g: 0, b: 0, a: 0, hex: '#FF000000' },
+        { r: 255, g: 0, b: 0, a: 255, hex: '#FF0000FF' },
+        { r: 255, g: 0, b: 0, a: 100, hex: '#FF000064' },
+        { r: 132, g: 30, b: 228, a: undefined, hex: '#841EE4FF' },
+        { r: 132, g: 30, b: 228, a: 0, hex: '#841EE400' },
+        { r: 132, g: 30, b: 228, a: 255, hex: '#841EE4FF' },
+        { r: 132, g: 30, b: 228, a: 100, hex: '#841EE464' },
+        { r: 128, g: 43, b: 78, a: undefined, hex: '#802B4EFF' },
+        { r: 128, g: 43, b: 78, a: 0, hex: '#802B4E00' },
+        { r: 128, g: 43, b: 78, a: 255, hex: '#802B4EFF' },
+        { r: 128, g: 43, b: 78, a: 100, hex: '#802B4E64' }
     ])('$# get hex with alpha: rgba($r, $g, $b, $a)',
-        ({r, g, b, a, hex}): void => {
+        ({ r, g, b, a, hex }): void => {
             let c: Color;
 
             if (a !== undefined) {

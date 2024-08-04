@@ -34,13 +34,14 @@ function getSingleDimensionIndex(row: number,
                                  totalColumns: number): number | undefined {
     let index: number | undefined = undefined;
 
-    if (row >= 0 && column >= 0
-        && row < totalRows
-        && column < totalColumns) {
+    if ((row >= 0) &&
+        (column >= 0) &&
+        (row < totalRows) &&
+        (column < totalColumns)) {
         index = (row * totalColumns) + column;
     }
 
     return index;
 }
 
-export {getSingleDimensionIndex};
+export { getSingleDimensionIndex };

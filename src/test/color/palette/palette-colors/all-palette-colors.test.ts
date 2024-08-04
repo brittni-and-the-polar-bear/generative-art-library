@@ -17,10 +17,10 @@
 
 import P5Lib from 'p5';
 
-import {Color} from 'color';
-import {SketchContext} from 'context';
-import {PaletteColor} from 'palette';
-import {ALL_PALETTE_COLORS} from 'palette-colors';
+import { Color } from 'color';
+import { SketchContext } from 'context';
+import { PaletteColor } from 'palette';
+import { ALL_PALETTE_COLORS } from 'palette-colors';
 
 import {
     ColorComponents,
@@ -42,7 +42,7 @@ import {
 
 const p5: P5Lib = SketchContext.p5;
 
-const ALL_HEXES: {hexString: string}[] = [];
+const ALL_HEXES: { hexString: string }[] = [];
 ALL_HEXES.push(
     ...BLACK_HEXES,
     ...BLUE_HEXES,
@@ -55,7 +55,7 @@ ALL_HEXES.push(
     ...WHITE_HEXES
 );
 
-function makeHSLKey(HSL: {H: number, S: number, L: number}): string {
+function makeHSLKey(HSL: { H: number; S: number; L: number }): string {
     let key: string = '';
     key += HSL.H.toString() + '.';
     key += HSL.S.toString() + '.';
@@ -63,7 +63,7 @@ function makeHSLKey(HSL: {H: number, S: number, L: number}): string {
     return key;
 }
 
-function makeRGBKey(RGB: {R: number, G: number, B: number}): string {
+function makeRGBKey(RGB: { R: number; G: number; B: number }): string {
     let key: string = '';
     key += RGB.R.toString() + '.';
     key += RGB.G.toString() + '.';
@@ -79,7 +79,7 @@ describe('all palette colors', (): void => {
     test.each(
         ALL_HEXES
     )('$# - successful addition of color: $hexString',
-        ({hexString}): void => {
+        ({ hexString }): void => {
             expect(hexString).toBeTruthy();
             checkForValidHexColorString(hexString);
 
@@ -95,7 +95,7 @@ describe('all palette colors', (): void => {
     test.each(
         ALL_HEXES
     )('$# - valid color: $hexString',
-        ({hexString}): void => {
+        ({ hexString }): void => {
             expect(hexString).toBeTruthy();
             checkForValidHexColorString(hexString);
 
@@ -136,7 +136,7 @@ describe('all palette colors', (): void => {
     test.each(
         ALL_HEXES
     )('$# - consistent color: $hexString',
-        ({hexString}): void => {
+        ({ hexString }): void => {
             const c: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
             expect(c).toBeTruthy();
 

@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
-import {BRITTNI} from 'palettes';
+import { PaletteColor } from 'palette';
+import { _0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { BRITTNI } from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'BRITTNI';
 
@@ -30,7 +30,7 @@ describe('BRITTNI palette tests', (): void => {
         _0FFF4F,
         _7A00F5,
         _FF6BB5
-    ]
+    ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
         checkForValidPalette(BRITTNI, expectedColors);

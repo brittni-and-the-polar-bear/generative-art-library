@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {defineConfig} from 'tsup'
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
     entry: ['src/main/batpb-genart.ts'],

@@ -15,9 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {StringMap} from 'map';
+import { StringMap } from 'map';
 
-export function checkForValidStringMap<Type>(map: StringMap<Type>, expectedSize?: number): void {
+export const checkForValidStringMap = <Type>(map: StringMap<Type>, expectedSize?: number): void => {
+    'use strict';
     expect(map).toBeTruthy();
     expect(map.size).toBeGreaterThan(0);
 
@@ -32,4 +33,4 @@ export function checkForValidStringMap<Type>(map: StringMap<Type>, expectedSize?
     if (expectedSize) {
         expect(map.size).toBe(expectedSize);
     }
-}
+};

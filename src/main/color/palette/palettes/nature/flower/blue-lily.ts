@@ -15,10 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from 'palette';
-import {Discriminators} from "discriminator";
-import {_1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF} from "palette-colors";
-import {ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES} from "../../palette-maps";
+import { Palette } from 'palette';
+import { Discriminators } from 'discriminator';
+import { _1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
+
+import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->

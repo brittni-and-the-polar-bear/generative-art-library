@@ -20,7 +20,7 @@ import P5Lib from 'p5';
 const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
     p.setup = (): void => {
         p.createCanvas(0, 0);
-    }
+    };
 });
 
 /**
@@ -58,4 +58,4 @@ class SketchContext {
     }
 }
 
-export {SketchContext};
+export { SketchContext };

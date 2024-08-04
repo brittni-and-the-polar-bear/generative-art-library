@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from 'palette';
+import { PaletteColor } from 'palette';
 
-import {Discriminators} from './discriminators';
+import { Discriminators } from './discriminators';
 
 interface CompatibleObject {
     DISCRIMINATOR?: string

@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, RED_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #D01625;">
@@ -35,11 +35,11 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _D01625: PaletteColor = {
     HEX: '#D01625',
-    RGB: {R: 208, G: 22, B: 37},
-    HSL: {H: 355, S: 81, L: 45},
+    RGB: { R: 208, G: 22, B: 37 },
+    HSL: { H: 355, S: 81, L: 45 },
     NAME: 'cartoon violence',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
-}
+};
 
 RED_PALETTE_COLORS.setUndefinedKey(_D01625.HEX, _D01625);
 ALL_PALETTE_COLORS.setUndefinedKey(_D01625.HEX, _D01625);

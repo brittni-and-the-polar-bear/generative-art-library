@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #23856D;">
@@ -35,8 +35,8 @@ import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _23856D: PaletteColor = {
     HEX: '#23856D',
-    RGB: {R: 35, G: 133, B: 109},
-    HSL: {H: 165, S: 58, L: 33},
+    RGB: { R: 35, G: 133, B: 109 },
+    HSL: { H: 165, S: 58, L: 33 },
     NAME: 'accent green blue',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

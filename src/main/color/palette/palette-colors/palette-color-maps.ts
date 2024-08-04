@@ -15,8 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {StringMap} from 'map';
-import {PaletteColor} from 'palette';
+import { StringMap } from 'map';
+import { PaletteColor } from 'palette';
 
 /**
  * A map of hex values to {@link PaletteColor} objects for all palette colors.

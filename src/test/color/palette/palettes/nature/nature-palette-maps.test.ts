@@ -15,14 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from 'palette';
-import {BLUE_LILY, NATURE_PALETTES} from 'palettes';
+import { Palette } from 'palette';
+import { BLUE_LILY, NATURE_PALETTES } from 'palettes';
 
-import {checkForPaletteInMap, checkForValidStringMap} from 'unit-test/shared';
+import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
-const EXPECTED_PALETTES: {palette: Palette}[] = [
-    {palette: BLUE_LILY}
-]
+const EXPECTED_PALETTES: { palette: Palette }[] = [
+    { palette: BLUE_LILY }
+];
 
 const MAP_NAME: string = 'NATURE_PALETTES';
 
@@ -34,7 +34,7 @@ describe('nature palette maps test', (): void => {
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
-        ({palette}): void => {
+        ({ palette }): void => {
             checkForPaletteInMap(palette, NATURE_PALETTES);
         }
     );

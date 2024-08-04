@@ -17,4 +17,4 @@
 
 export * from './weighted-element';
 export * from './random';
-export * from './random-selector'
+export * from './random-selector';

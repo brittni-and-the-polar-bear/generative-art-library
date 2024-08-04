@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, RED_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #BC010A;">
@@ -35,11 +35,11 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _BC010A: PaletteColor = {
     HEX: '#BC010A',
-    RGB: {R: 188, G: 1, B: 10},
-    HSL: {H: 357, S: 99, L: 37},
+    RGB: { R: 188, G: 1, B: 10 },
+    HSL: { H: 357, S: 99, L: 37 },
     NAME: "bird's eye",
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
-}
+};
 
 RED_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
 ALL_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
