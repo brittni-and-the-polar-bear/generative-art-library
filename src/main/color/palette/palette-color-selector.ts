@@ -15,12 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector, ColorSelectorType} from 'color';
-import {SketchContext} from 'context';
-import {Random, RandomSelector} from 'random';
+import { Color, ColorSelector, ColorSelectorType } from 'color';
+import { SketchContext } from 'context';
+import { Random, RandomSelector } from 'random';
 
-import {Palette} from './palette';
-import {PaletteColor} from './palette-color';
+import { Palette } from './palette';
+import { PaletteColor } from './palette-color';
 
 /**
  * A basic {@link ColorSelector} that chooses colors from a given {@link Palette}.

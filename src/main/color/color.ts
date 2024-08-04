@@ -17,9 +17,10 @@
 
 import P5Lib from 'p5';
 
-import {SketchContext} from 'context';
-import {PaletteColor} from 'palette';
-import {ColorNameManager} from "./color-name";
+import { SketchContext } from 'context';
+import { PaletteColor } from 'palette';
+
+import { ColorNameManager } from './color-name';
 
 const p5: P5Lib = SketchContext.p5;
 

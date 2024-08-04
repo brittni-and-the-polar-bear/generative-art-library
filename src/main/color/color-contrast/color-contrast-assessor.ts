@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {getContrastRatios, ResponseObject} from 'cococh';
+import { getContrastRatios, ResponseObject } from 'cococh';
 
-import {Color} from 'color';
-import {Discriminator} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { Color } from 'color';
+import { Discriminator } from 'discriminator';
+import { PaletteColor } from 'palette';
 
 /**
  * Web Content Accessibility Guidelines (WCAG) color contrast categories.<br/>
@@ -67,24 +67,30 @@ export enum ContrastFontSize {
  * @category Color Contrast
  */
 export class ColorContrastAssessor {
-    public static meetsContrastStandard(colorA: Color,
-                                        colorB: Color): boolean;
-    public static meetsContrastStandard(colorA: PaletteColor,
-                                        colorB: PaletteColor): boolean;
-    public static meetsContrastStandard(colorA: string,
-                                        colorB: string): boolean;
-    public static meetsContrastStandard(colorA: Color,
-                                        colorB: Color,
-                                        standard: ContrastStandard,
-                                        fontSize: ContrastFontSize): boolean;
-    public static meetsContrastStandard(colorA: PaletteColor,
-                                        colorB: PaletteColor,
-                                        standard: ContrastStandard,
-                                        fontSize: ContrastFontSize): boolean;
-    public static meetsContrastStandard(colorA: string,
-                                        colorB: string,
-                                        standard: ContrastStandard,
-                                        fontSize: ContrastFontSize): boolean;
+    public static meetsContrastStandard(
+        colorA: Color,
+        colorB: Color): boolean;
+    public static meetsContrastStandard(
+        colorA: PaletteColor,
+        colorB: PaletteColor): boolean;
+    public static meetsContrastStandard(
+        colorA: string,
+        colorB: string): boolean;
+    public static meetsContrastStandard(
+        colorA: Color,
+        colorB: Color,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
+    public static meetsContrastStandard(
+        colorA: PaletteColor,
+        colorB: PaletteColor,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
+    public static meetsContrastStandard(
+        colorA: string,
+        colorB: string,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
     /**
      * Evaluates if two colors have an appropriate contrast ratio
      * for the given {@link ContrastStandard} and {@link ContrastFontSize}.
