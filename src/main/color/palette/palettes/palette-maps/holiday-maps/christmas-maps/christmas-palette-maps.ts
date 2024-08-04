@@ -15,8 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {StringMap} from 'map';
-import {Palette} from 'palette';
+import { StringMap } from 'map';
+import { Palette } from 'palette';
 
 /**
  * A map of palette names to {@link Palette} objects for all Christmas palettes.
