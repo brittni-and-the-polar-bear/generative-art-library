@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Range} from 'math';
+import { Range } from 'math';
 
-import {WeightedElement} from './weighted-element';
+import { WeightedElement } from './weighted-element';
 
 /**
  * A collection of static methods for retrieving random values.
@@ -98,8 +98,8 @@ class Random {
     public static randomBoolean(chanceOfTrue?: number): boolean {
         let value: boolean = true;
 
-        if (chanceOfTrue
-            && (chanceOfTrue > 0 && chanceOfTrue < 1)) {
+        if (chanceOfTrue &&
+            (chanceOfTrue > 0 && chanceOfTrue < 1)) {
             const r: number = Random.randomFloat(0, 1);
 
             if (r > chanceOfTrue) {
@@ -180,4 +180,4 @@ class Random {
     }
 }
 
-export {Random};
+export { Random };
