@@ -19,9 +19,10 @@ import P5Lib from 'p5';
 
 import { SketchContext } from 'context';
 import { PaletteColor } from 'palette';
+
 import { ColorNameManager } from './color-name';
 
-const { p5 } = SketchContext;
+const p5: P5Lib = SketchContext.p5;
 
 /**
  * Color information and functionality.
@@ -74,8 +75,7 @@ export class Color {
             if (color instanceof P5Lib.Color) {
                 this.setColorValues(color);
                 this._name = null;
-            }
-            else {
+            } else {
                 const c: P5Lib.Color = p5.color(color.RGB.R, color.RGB.G, color.RGB.B);
                 this.setColorValues(c);
                 this._name = color.NAME;
@@ -101,8 +101,7 @@ export class Color {
         if (a) {
             a = p5.constrain(a, 0, 1);
             color = p5.color(`hsla(${h.toString()}, ${s.toString()}%, ${l.toString()}%, ${a.toString()})`);
-        }
-        else {
+        } else {
             color = p5.color(`hsl(${h.toString()}, ${s.toString()}%, ${l.toString()}%)`);
         }
 
@@ -250,12 +249,12 @@ export class Color {
      */
     public getRGBHex(withAlpha: boolean): string {
         let hex: string = '#';
-        hex += this.red.toString(16).padStart(2, '0');
-        hex += this.green.toString(16).padStart(2, '0');
-        hex += this.blue.toString(16).padStart(2, '0');
+        hex = hex + this.red.toString(16).padStart(2, '0');
+        hex = hex + this.green.toString(16).padStart(2, '0');
+        hex = hex + this.blue.toString(16).padStart(2, '0');
 
         if (withAlpha) {
-            hex += this.alpha.toString(16).padStart(2, '0');
+            hex = hex + this.alpha.toString(16).padStart(2, '0');
         }
 
         return hex.toUpperCase();

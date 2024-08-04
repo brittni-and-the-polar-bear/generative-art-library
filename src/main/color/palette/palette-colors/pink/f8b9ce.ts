@@ -35,17 +35,9 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  */
 export const _F8B9CE: PaletteColor = {
     HEX: '#F8B9CE',
-    RGB: {
-        R: 248,
-        G: 185,
-        B: 206
-    },
-    HSL: {
-        H: 340,
-        S: 82,
-        L: 85
-    },
-    NAME: 'christy\'s smile',
+    RGB: { R: 248, G: 185, B: 206 },
+    HSL: { H: 340, S: 82, L: 85 },
+    NAME: "christy's smile",
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 

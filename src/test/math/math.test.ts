@@ -19,100 +19,24 @@ import { getSingleDimensionIndex } from 'math';
 
 describe('math tests', (): void => {
     test.each([
-        {
-            row: 0,
-            column: 0,
-            totalRows: 1,
-            totalColumns: 1,
-            expected: 0
-        },
-        {
-            row: 0,
-            column: 0,
-            totalRows: 0,
-            totalColumns: 1,
-            expected: undefined
-        },
-        {
-            row: 0,
-            column: 0,
-            totalRows: 1,
-            totalColumns: 0,
-            expected: undefined
-        },
-        {
-            row: 1,
-            column: 2,
-            totalRows: 4,
-            totalColumns: 3,
-            expected: 5
-        },
-        {
-            row: -3,
-            column: 2,
-            totalRows: 4,
-            totalColumns: 3,
-            expected: undefined
-        },
-        {
-            row: 1,
-            column: -4,
-            totalRows: 4,
-            totalColumns: 3,
-            expected: undefined
-        },
-        {
-            row: 1,
-            column: 2,
-            totalRows: -5,
-            totalColumns: 3,
-            expected: undefined
-        },
-        {
-            row: 1,
-            column: 2,
-            totalRows: 4,
-            totalColumns: -10,
-            expected: undefined
-        },
-        {
-            row: 1,
-            column: 2,
-            totalRows: 1,
-            totalColumns: 3,
-            expected: undefined
-        },
-        {
-            row: 1,
-            column: 5,
-            totalRows: 4,
-            totalColumns: 3,
-            expected: undefined
-        },
-        {
-            row: 5,
-            column: 5,
-            totalRows: 4,
-            totalColumns: 3,
-            expected: undefined
-        },
-        {
-            row: 3,
-            column: 2,
-            totalRows: 4,
-            totalColumns: 3,
-            expected: 11
-        }
-    ])(
-        '$# getSingleDimensionIndex($row, $column, $totalRows, $totalColumns)',
-        ({
-            row,
+        { row: 0, column: 0, totalRows: 1, totalColumns: 1, expected: 0 },
+        { row: 0, column: 0, totalRows: 0, totalColumns: 1, expected: undefined },
+        { row: 0, column: 0, totalRows: 1, totalColumns: 0, expected: undefined },
+        { row: 1, column: 2, totalRows: 4, totalColumns: 3, expected: 5 },
+        { row: -3, column: 2, totalRows: 4, totalColumns: 3, expected: undefined },
+        { row: 1, column: -4, totalRows: 4, totalColumns: 3, expected: undefined },
+        { row: 1, column: 2, totalRows: -5, totalColumns: 3, expected: undefined },
+        { row: 1, column: 2, totalRows: 4, totalColumns: -10, expected: undefined },
+        { row: 1, column: 2, totalRows: 1, totalColumns: 3, expected: undefined },
+        { row: 1, column: 5, totalRows: 4, totalColumns: 3, expected: undefined },
+        { row: 5, column: 5, totalRows: 4, totalColumns: 3, expected: undefined },
+        { row: 3, column: 2, totalRows: 4, totalColumns: 3, expected: 11 }
+    ])('$# getSingleDimensionIndex($row, $column, $totalRows, $totalColumns)',
+        ({ row,
             column,
             totalRows,
             totalColumns,
-            expected
-        }): void => {
+            expected }): void => {
             expect(getSingleDimensionIndex(row, column, totalRows, totalColumns)).toBe(expected);
-        }
-    );
+        });
 });

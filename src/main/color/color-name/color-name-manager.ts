@@ -22,13 +22,9 @@ import { StringMap } from 'map';
 import { PaletteColor } from 'palette';
 
 interface NearestColorMatch {
-    name: string
-    value: string
-    rgb: {
-        r: number
-        g: number
-        b: number
-    }
+    name: string;
+    value: string;
+    rgb: { r: number; g: number; b: number };
     distance: number
 }
 
@@ -58,12 +54,11 @@ export class ColorNameManager {
      */
     public static getColorName(colorHex: string): string | undefined {
         colorHex = ColorNameManager.formatHex(colorHex);
-        let match: string | undefined;
+        let match: string | undefined = undefined;
 
         if (ColorNameManager.hasMatch(colorHex)) {
             match = ColorNameManager._MATCHED_COLORS.get(colorHex);
-        }
-        else {
+        } else {
             try {
                 const result: NearestColorMatch | null = _NEAREST_COLOR(colorHex);
 
@@ -74,8 +69,7 @@ export class ColorNameManager {
                 if (match) {
                     ColorNameManager._MATCHED_COLORS.setUndefinedKey(colorHex, match);
                 }
-            }
-            catch {
+            } catch {
                 match = undefined;
             }
         }
@@ -121,7 +115,7 @@ export class ColorNameManager {
         let hex: string = original;
 
         if (!hex.startsWith('#')) {
-            hex = `#${hex}`;
+            hex = '#' + hex;
         }
 
         return hex.toUpperCase();

@@ -16,13 +16,13 @@
  */
 
 import { Palette } from 'palette';
-import { CLASSIC_CHRISTMAS, GLITTER, HOLIDAY_PALETTES } from 'palettes';
+import { HOLIDAY_PALETTES, CLASSIC_CHRISTMAS, GLITTER } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: CLASSIC_CHRISTMAS }, // Christmas
-    { palette: GLITTER } // Valentines-day
+    { palette: CLASSIC_CHRISTMAS }, // christmas
+    { palette: GLITTER } // valentines-day
 ];
 
 const MAP_NAME: string = 'HOLIDAY_PALETTES';
@@ -32,8 +32,9 @@ describe('holiday palette maps test', (): void => {
         checkForValidStringMap(HOLIDAY_PALETTES, EXPECTED_PALETTES.length);
     });
 
-    test.each(EXPECTED_PALETTES)(
-        `$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+    test.each(
+        EXPECTED_PALETTES
+    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
             checkForPaletteInMap(palette, HOLIDAY_PALETTES);
         }

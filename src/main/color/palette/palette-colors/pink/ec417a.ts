@@ -35,16 +35,8 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  */
 export const _EC417A: PaletteColor = {
     HEX: '#EC417A',
-    RGB: {
-        R: 236,
-        G: 65,
-        B: 122
-    },
-    HSL: {
-        H: 340,
-        S: 82,
-        L: 59
-    },
+    RGB: { R: 236, G: 65, B: 122 },
+    HSL: { H: 340, S: 82, L: 59 },
     NAME: 'radishical',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

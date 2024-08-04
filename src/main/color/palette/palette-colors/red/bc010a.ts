@@ -35,17 +35,9 @@ import { ALL_PALETTE_COLORS, RED_PALETTE_COLORS } from '../palette-color-maps';
  */
 export const _BC010A: PaletteColor = {
     HEX: '#BC010A',
-    RGB: {
-        R: 188,
-        G: 1,
-        B: 10
-    },
-    HSL: {
-        H: 357,
-        S: 99,
-        L: 37
-    },
-    NAME: 'bird\'s eye',
+    RGB: { R: 188, G: 1, B: 10 },
+    HSL: { H: 357, S: 99, L: 37 },
+    NAME: "bird's eye",
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 

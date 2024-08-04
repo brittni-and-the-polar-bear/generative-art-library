@@ -28,17 +28,16 @@
  * If {@link column} is greater than or equal to {@link totalColumns}, the function will return {@link !undefined}.
  * @category Math
  */
-function getSingleDimensionIndex(
-    row: number,
-    column: number,
-    totalRows: number,
-    totalColumns: number
-): number | undefined {
-    let index: number | undefined;
+function getSingleDimensionIndex(row: number,
+                                 column: number,
+                                 totalRows: number,
+                                 totalColumns: number): number | undefined {
+    let index: number | undefined = undefined;
 
-    if (row >= 0 && column >= 0
-      && row < totalRows
-      && column < totalColumns) {
+    if ((row >= 0) &&
+        (column >= 0) &&
+        (row < totalRows) &&
+        (column < totalColumns)) {
         index = (row * totalColumns) + column;
     }
 

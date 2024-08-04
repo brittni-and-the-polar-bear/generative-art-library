@@ -20,10 +20,10 @@ import { Palette, PaletteColorSelector } from 'palette';
 import { _0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 
 import {
-    RANDOM_TEST_TRIES,
     checkForValidColorSelector,
     checkForValidInOrderSelector,
-    checkForValidRandomSelector, getColorsArray
+    checkForValidRandomSelector,
+    getColorsArray, RANDOM_TEST_TRIES
 } from 'unit-test/shared';
 import { ColorSelectorType } from 'color';
 
@@ -115,8 +115,8 @@ describe('palette color selector tests', (): void => {
     });
 
     test('test palette color selector: palette order build, all colors, not random order', (): void => {
-        const selector: PaletteColorSelector
-            = new PaletteColorSelector(
+        const selector: PaletteColorSelector =
+            new PaletteColorSelector(
                 TEST_PALETTE_A,
                 true,
                 TEST_PALETTE_A.COLORS.length,
@@ -134,8 +134,8 @@ describe('palette color selector tests', (): void => {
     });
 
     test('test palette color selector: palette order build, all colors, random order', (): void => {
-        const selector: PaletteColorSelector
-            = new PaletteColorSelector(
+        const selector: PaletteColorSelector =
+            new PaletteColorSelector(
                 TEST_PALETTE_A,
                 true,
                 TEST_PALETTE_A.COLORS.length,
@@ -155,20 +155,18 @@ describe('palette color selector tests', (): void => {
         { count: 2 },
         { count: 1 },
         { count: -10 }
-    ])(
-        '$# test palette color selector: palette order build, $count color(s), not random order',
+    ])('$# test palette color selector: palette order build, $count color(s), not random order',
         ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
                 expectedColorCount = MIN_COLOR_COUNT;
-            }
-            else if (expectedColorCount > MAX_COLOR_COUNT_A) {
+            } else if (expectedColorCount > MAX_COLOR_COUNT_A) {
                 expectedColorCount = MAX_COLOR_COUNT_A;
             }
 
-            const selector: PaletteColorSelector
-                = new PaletteColorSelector(
+            const selector: PaletteColorSelector =
+                new PaletteColorSelector(
                     TEST_PALETTE_A,
                     true,
                     count,
@@ -195,20 +193,18 @@ describe('palette color selector tests', (): void => {
         { count: 2 },
         { count: 1 },
         { count: -10 }
-    ])(
-        '$# test palette color selector: palette order build, $count color(s), random order',
+    ])('$# test palette color selector: palette order build, $count color(s), random order',
         ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
                 expectedColorCount = MIN_COLOR_COUNT;
-            }
-            else if (expectedColorCount > MAX_COLOR_COUNT_A) {
+            } else if (expectedColorCount > MAX_COLOR_COUNT_A) {
                 expectedColorCount = MAX_COLOR_COUNT_A;
             }
 
-            const selector: PaletteColorSelector
-                = new PaletteColorSelector(
+            const selector: PaletteColorSelector =
+                new PaletteColorSelector(
                     TEST_PALETTE_A,
                     true,
                     count,
@@ -221,14 +217,13 @@ describe('palette color selector tests', (): void => {
                 selector,
                 getColorsArray(TEST_PALETTE_A.COLORS),
                 false,
-                expectedColorCount
-            );
+                expectedColorCount);
         }
     );
 
     test('test palette color selector: random build, all colors, not random order', (): void => {
-        const selector: PaletteColorSelector
-            = new PaletteColorSelector(
+        const selector: PaletteColorSelector =
+            new PaletteColorSelector(
                 TEST_PALETTE_A,
                 false,
                 TEST_PALETTE_A.COLORS.length,
@@ -246,8 +241,8 @@ describe('palette color selector tests', (): void => {
     });
 
     test('test palette color selector: random build, all colors, random order', (): void => {
-        const selector: PaletteColorSelector
-            = new PaletteColorSelector(
+        const selector: PaletteColorSelector =
+            new PaletteColorSelector(
                 TEST_PALETTE_A,
                 false,
                 TEST_PALETTE_A.COLORS.length,
@@ -267,20 +262,18 @@ describe('palette color selector tests', (): void => {
         { count: 2 },
         { count: 1 },
         { count: -10 }
-    ])(
-        '$# test palette color selector: random build, $count color(s), not random order',
+    ])('$# test palette color selector: random build, $count color(s), not random order',
         ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
                 expectedColorCount = MIN_COLOR_COUNT;
-            }
-            else if (expectedColorCount > MAX_COLOR_COUNT_A) {
+            } else if (expectedColorCount > MAX_COLOR_COUNT_A) {
                 expectedColorCount = MAX_COLOR_COUNT_A;
             }
 
-            const selector: PaletteColorSelector
-                = new PaletteColorSelector(
+            const selector: PaletteColorSelector =
+                new PaletteColorSelector(
                     TEST_PALETTE_A,
                     false,
                     count,
@@ -307,20 +300,18 @@ describe('palette color selector tests', (): void => {
         { count: 2 },
         { count: 1 },
         { count: -10 }
-    ])(
-        '$# test palette color selector: random build, $count color(s), random order',
+    ])('$# test palette color selector: random build, $count color(s), random order',
         ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
                 expectedColorCount = MIN_COLOR_COUNT;
-            }
-            else if (expectedColorCount > MAX_COLOR_COUNT_A) {
+            } else if (expectedColorCount > MAX_COLOR_COUNT_A) {
                 expectedColorCount = MAX_COLOR_COUNT_A;
             }
 
-            const selector: PaletteColorSelector
-                = new PaletteColorSelector(
+            const selector: PaletteColorSelector =
+                new PaletteColorSelector(
                     TEST_PALETTE_A,
                     false,
                     count,
@@ -329,12 +320,10 @@ describe('palette color selector tests', (): void => {
 
             expect(selector).toBeTruthy();
             checkForValidColorSelector(selector);
-            checkForValidRandomSelector(
-                selector,
+            checkForValidRandomSelector(selector,
                 getColorsArray(TEST_PALETTE_A.COLORS),
                 false,
-                expectedColorCount
-            );
+                expectedColorCount);
         }
     );
 });

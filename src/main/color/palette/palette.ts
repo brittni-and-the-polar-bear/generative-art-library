@@ -24,26 +24,25 @@ import { PaletteColor } from './palette-color';
  * @category Palette
  */
 export interface Palette {
-
     /**
      * The name of the palette.
      */
-    readonly NAME: string
+    readonly NAME: string;
 
     /**
      * The source of the palette. May be the URL where the palette can be found.
      */
-    readonly SOURCE?: string
+    readonly SOURCE?: string;
 
     /**
      * A flag indicating if the palette is a gradient.
      */
-    readonly IS_GRADIENT: boolean
+    readonly IS_GRADIENT: boolean;
 
     /**
      * The list of {@link PaletteColor} objects that compose the palette.
      */
-    readonly COLORS: PaletteColor[]
+    readonly COLORS: PaletteColor[];
 
     /**
      * A map of hex color strings to arrays of hex colors,
@@ -53,23 +52,22 @@ export interface Palette {
      * palette, black (#000000), and white (#FFFFFF).
      */
     readonly CONTRAST_MAP?: {
-
         /**
          * The colors in the palette that pass the WCAG AA standard when
          * compared to black (#000000). This list should NOT contain
          * white (#FFFFFF) unless it is a color listed in the palette.
          */
-        readonly '#000000': string[]
+        readonly '#000000': string[];
 
         /**
          * The colors in the palette that pass the WCAG AA standard when
          * compared to white (#FFFFFF). This list should NOT contain
          * black (#000000) unless it is a color listed in the palette.
          */
-        readonly '#FFFFFF': string[]
+        readonly '#FFFFFF': string[];
 
         readonly [HEX: string]: string[]
-    }
+    };
 
     /**
      * Discriminator for determining if an object is a Palette.

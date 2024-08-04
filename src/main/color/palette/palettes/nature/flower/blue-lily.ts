@@ -18,6 +18,7 @@
 import { Palette } from 'palette';
 import { Discriminators } from 'discriminator';
 import { _1D90AF, _3B2212, _7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
+
 import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
 
 /**
@@ -51,32 +52,13 @@ export const BLUE_LILY: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': [
-            '#F0F3F4',
-            '#FAFEFF',
-            '#7DCED8',
-            '#1D90AF'
-        ],
+        '#000000': ['#F0F3F4', '#FAFEFF', '#7DCED8', '#1D90AF'],
         '#FFFFFF': ['#3B2212'],
-        '#F0F3F4': [
-            '#000000',
-            '#3B2212'
-        ],
-        '#FAFEFF': [
-            '#000000',
-            '#3B2212'
-        ],
-        '#7DCED8': [
-            '#000000',
-            '#3B2212'
-        ],
+        '#F0F3F4': ['#000000', '#3B2212'],
+        '#FAFEFF': ['#000000', '#3B2212'],
+        '#7DCED8': ['#000000', '#3B2212'],
         '#1D90AF': ['#000000'],
-        '#3B2212': [
-            '#FFFFFF',
-            '#F0F3F4',
-            '#FAFEFF',
-            '#7DCED8'
-        ]
+        '#3B2212': ['#FFFFFF', '#F0F3F4', '#FAFEFF', '#7DCED8']
     },
 
     DISCRIMINATOR: Discriminators.PALETTE

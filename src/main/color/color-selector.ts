@@ -107,10 +107,11 @@ export abstract class ColorSelector {
 
         if (this._RANDOM_ORDER) {
             col = Random.randomElement(this._COLOR_CHOICES) ?? (new Color());
-        }
-        else if (this._currentIndex < this._COLOR_CHOICES.length) {
-            col = this._COLOR_CHOICES[this._currentIndex];
-            this.incrementCurrentIndex();
+        } else {
+            if (this._currentIndex < this._COLOR_CHOICES.length) {
+                col = this._COLOR_CHOICES[this._currentIndex];
+                this.incrementCurrentIndex();
+            }
         }
 
         return col;
@@ -133,24 +134,13 @@ export abstract class ColorSelector {
      * will be a color from the selector ({@link getColor}).
      * The sum of all percentages should be equal to 1.0.
      */
-    public getBackgroundColor(
-        chanceOfBlack: number,
-        chanceOfWhite: number,
-        chanceOfColor: number
-    ): Color {
+    public getBackgroundColor(chanceOfBlack: number,
+                              chanceOfWhite: number,
+                              chanceOfColor: number): Color {
         const weightedColors: WeightedElement<Color>[] = [
-            {
-                value: new Color(SketchContext.p5.color(0)),
-                weight: chanceOfBlack
-            },
-            {
-                value: new Color(SketchContext.p5.color(255)),
-                weight: chanceOfWhite
-            },
-            {
-                value: this.getColor(),
-                weight: chanceOfColor
-            }
+            { value: new Color(SketchContext.p5.color(0)), weight: chanceOfBlack },
+            { value: new Color(SketchContext.p5.color(255)), weight: chanceOfWhite },
+            { value: this.getColor(), weight: chanceOfColor }
         ];
 
         return Random.randomWeightedElement(weightedColors) ?? (new Color());
@@ -178,7 +168,7 @@ export abstract class ColorSelector {
      * @see {@link _RANDOM_ORDER}
      */
     private incrementCurrentIndex(): void {
-        const { length } = this._COLOR_CHOICES;
+        const length: number = this._COLOR_CHOICES.length;
 
         if (length > 0) {
             this._currentIndex = (this._currentIndex + 1) % length;

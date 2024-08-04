@@ -35,16 +35,8 @@ import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
  */
 export const _7DCED8: PaletteColor = {
     HEX: '#7DCED8',
-    RGB: {
-        R: 125,
-        G: 206,
-        B: 216
-    },
-    HSL: {
-        H: 187,
-        S: 54,
-        L: 67
-    },
+    RGB: { R: 125, G: 206, B: 216 },
+    HSL: { H: 187, S: 54, L: 67 },
     NAME: 'spray',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

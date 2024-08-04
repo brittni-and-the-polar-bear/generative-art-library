@@ -20,7 +20,9 @@ import { GLITTER, GRADIENT_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
-const EXPECTED_PALETTES: { palette: Palette }[] = [{ palette: GLITTER }];
+const EXPECTED_PALETTES: { palette: Palette }[] = [
+    { palette: GLITTER }
+];
 
 const MAP_NAME: string = 'GRADIENT_PALETTES';
 
@@ -29,8 +31,9 @@ describe('gradient palettes map test', (): void => {
         checkForValidStringMap(GRADIENT_PALETTES, EXPECTED_PALETTES.length);
     });
 
-    test.each(EXPECTED_PALETTES)(
-        `$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+    test.each(
+        EXPECTED_PALETTES
+    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
             checkForPaletteInMap(palette, GRADIENT_PALETTES);
             expect(palette.IS_GRADIENT).toBeTruthy();

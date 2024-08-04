@@ -35,16 +35,8 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  */
 export const _FF6BB5: PaletteColor = {
     HEX: '#FF6BB5',
-    RGB: {
-        R: 255,
-        G: 107,
-        B: 181
-    },
-    HSL: {
-        H: 330,
-        S: 100,
-        L: 71
-    },
+    RGB: { R: 255, G: 107, B: 181 },
+    HSL: { H: 330, S: 100, L: 71 },
     NAME: 'fen hong pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

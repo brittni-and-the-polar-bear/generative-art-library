@@ -31,60 +31,20 @@ describe('color name manager test', (): void => {
     });
 
     test.each([
-        {
-            hex: 'this is not a hex',
-            expectedName: undefined
-        },
-        {
-            hex: '#FF0000FF',
-            expectedName: undefined
-        },
-        {
-            hex: '#FF000000',
-            expectedName: undefined
-        },
-        {
-            hex: '000000',
-            expectedName: 'black'
-        },
-        {
-            hex: '#000000',
-            expectedName: 'black'
-        },
-        {
-            hex: 'A32B2A',
-            expectedName: 'harissa red'
-        },
-        {
-            hex: '#A32B2A',
-            expectedName: 'harissa red'
-        },
-        {
-            hex: 'a32b2a',
-            expectedName: 'harissa red'
-        },
-        {
-            hex: '#a32b2a',
-            expectedName: 'harissa red'
-        },
-        {
-            hex: '6E47C5',
-            expectedName: 'purple rain'
-        },
-        {
-            hex: '#6E47C5',
-            expectedName: 'purple rain'
-        },
-        {
-            hex: '6e47c5',
-            expectedName: 'purple rain'
-        },
-        {
-            hex: '#6e47c5',
-            expectedName: 'purple rain'
-        }
-    ])(
-        '$# get color name: $hex ($expectedName)',
+        { hex: 'this is not a hex', expectedName: undefined },
+        { hex: '#FF0000FF', expectedName: undefined },
+        { hex: '#FF000000', expectedName: undefined },
+        { hex: '000000', expectedName: 'black' },
+        { hex: '#000000', expectedName: 'black' },
+        { hex: 'A32B2A', expectedName: 'harissa red' },
+        { hex: '#A32B2A', expectedName: 'harissa red' },
+        { hex: 'a32b2a', expectedName: 'harissa red' },
+        { hex: '#a32b2a', expectedName: 'harissa red' },
+        { hex: '6E47C5', expectedName: 'purple rain' },
+        { hex: '#6E47C5', expectedName: 'purple rain' },
+        { hex: '6e47c5', expectedName: 'purple rain' },
+        { hex: '#6e47c5', expectedName: 'purple rain' }
+    ])('$# get color name: $hex ($expectedName)',
         ({ hex, expectedName }): void => {
             const name: string | undefined = ColorNameManager.getColorName(hex);
             expect(name).toBe(expectedName);
@@ -112,16 +72,8 @@ describe('color name manager test', (): void => {
 
     test('addColor(PaletteColor) method', (): void => {
         const fakeColor: PaletteColor = {
-            RGB: {
-                R: 0,
-                G: 0,
-                B: 0
-            },
-            HSL: {
-                H: 0,
-                S: 0,
-                L: 0
-            },
+            RGB: { R: 0, G: 0, B: 0 },
+            HSL: { H: 0, S: 0, L: 0 },
             HEX: '#000000',
             NAME: 'test fake color',
             DISCRIMINATOR: Discriminators.PALETTE_COLOR

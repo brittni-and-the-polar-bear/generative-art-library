@@ -35,16 +35,8 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  */
 export const _F490B1: PaletteColor = {
     HEX: '#F490B1',
-    RGB: {
-        R: 244,
-        G: 144,
-        B: 177
-    },
-    HSL: {
-        H: 340,
-        S: 82,
-        L: 76
-    },
+    RGB: { R: 244, G: 144, B: 177 },
+    HSL: { H: 340, S: 82, L: 76 },
     NAME: 'sachet pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

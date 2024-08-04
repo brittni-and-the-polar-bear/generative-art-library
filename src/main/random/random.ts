@@ -98,15 +98,14 @@ class Random {
     public static randomBoolean(chanceOfTrue?: number): boolean {
         let value: boolean = true;
 
-        if (chanceOfTrue
-          && (chanceOfTrue > 0 && chanceOfTrue < 1)) {
+        if (chanceOfTrue &&
+            (chanceOfTrue > 0 && chanceOfTrue < 1)) {
             const r: number = Random.randomFloat(0, 1);
 
             if (r > chanceOfTrue) {
                 value = false;
             }
-        }
-        else {
+        } else {
             const r: number = Random.randomInt(0, 2);
             value = r % 2 === 0;
         }
@@ -122,7 +121,7 @@ class Random {
      * If an empty list is provided, the function will return {@link !undefined}.
      */
     public static randomElement<Type>(list: Type[]): Type | undefined {
-        let element: Type | undefined;
+        let element: Type | undefined = undefined;
         const size: number = list.length;
 
         if (size > 0) {
@@ -147,10 +146,12 @@ class Random {
      * If the sum of weights in the list is less than 1.0, the function will return `undefined`.
      */
     public static randomWeightedElement<Type>(list: WeightedElement<Type>[]): Type | undefined {
-        let element: Type | undefined;
+        let element: Type | undefined = undefined;
 
         if (list.length > 0) {
-            let weightSum: number = list.reduce((total: number, e: WeightedElement<Type>): number => total + e.weight, 0);
+            let weightSum: number = list.reduce((total: number, e: WeightedElement<Type>): number => {
+                return total + e.weight;
+            }, 0);
 
             weightSum = parseFloat(weightSum.toFixed(4));
 
@@ -166,13 +167,11 @@ class Random {
                     if (r < sum + e.weight) {
                         element = e.value;
                         break;
-                    }
-                    else {
+                    } else {
                         sum += e.weight;
                     }
                 }
-            }
-            else {
+            } else {
                 console.warn('Sum of element weights is less than 1.0. Random element cannot be retrieved.');
             }
         }

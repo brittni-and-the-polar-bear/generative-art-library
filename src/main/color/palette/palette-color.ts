@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// Color names derived from https://colornamer.robertcooper.me/
+// color names derived from https://colornamer.robertcooper.me/
 
 import { Discriminators } from 'discriminator';
 
@@ -25,58 +25,55 @@ import { Discriminators } from 'discriminator';
  * @category Palette
  */
 export interface PaletteColor {
-
     /**
      * The RGB (red, green, blue) components of the color.
      */
     readonly RGB: {
-
         /**
          * The red component (0-255).
          */
-        readonly R: number
+        readonly R: number;
 
         /**
          * The green component (0-255).
          */
-        readonly G: number
+        readonly G: number;
 
         /**
          * The blue component (0-255).
          */
         readonly B: number
-    }
+    };
 
     /**
      * The HSL (hue, saturation, lightness) components of the color.
      */
     readonly HSL: {
-
         /**
          * The hue component (0-360).
          */
-        readonly H: number
+        readonly H: number;
 
         /**
          * The saturation component (0-100).
          */
-        readonly S: number
+        readonly S: number;
 
         /**
          * The lightness component (0-100).
          */
         readonly L: number
-    }
+    };
 
     /**
      * The hex string representation of the color (format: `#RRGGBB`).
      */
-    readonly HEX: string
+    readonly HEX: string;
 
     /**
      * The name of the color.
      */
-    readonly NAME: string
+    readonly NAME: string;
 
     /**
      * Discriminator for determining if an object is a PaletteColor.

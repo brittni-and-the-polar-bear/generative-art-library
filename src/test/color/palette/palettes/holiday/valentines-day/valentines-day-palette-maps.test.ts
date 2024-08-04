@@ -20,17 +20,20 @@ import { GLITTER, VALENTINES_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
-const EXPECTED_PALETTES: { palette: Palette }[] = [{ palette: GLITTER }];
+const EXPECTED_PALETTES: { palette: Palette }[] = [
+    { palette: GLITTER }
+];
 
 const MAP_NAME: string = 'VALENTINES_PALETTES';
 
-describe('valentine\'s day palette maps test', (): void => {
+describe("valentine's day palette maps test", (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
         checkForValidStringMap(VALENTINES_PALETTES, EXPECTED_PALETTES.length);
     });
 
-    test.each(EXPECTED_PALETTES)(
-        `$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+    test.each(
+        EXPECTED_PALETTES
+    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
             checkForPaletteInMap(palette, VALENTINES_PALETTES);
         }

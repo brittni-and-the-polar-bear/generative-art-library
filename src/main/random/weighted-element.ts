@@ -22,11 +22,10 @@
  * @category Random
  */
 interface WeightedElement<Type> {
-
     /**
      * The value returned if this element is selected.
      */
-    readonly value: Type
+    readonly value: Type;
 
     /**
      * The weight associated with this element.

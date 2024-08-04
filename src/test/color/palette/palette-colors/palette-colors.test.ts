@@ -33,84 +33,46 @@ import {
     BLACK_HEXES,
     BLUE_HEXES,
     BROWN_HEXES,
+    checkForValidHexColorString,
+    checkForValidPaletteColor,
+    checkForValidStringMap,
     GRAY_HEXES,
     GREEN_HEXES,
     HexCollection,
     PINK_HEXES,
     PURPLE_HEXES,
     RED_HEXES,
-    WHITE_HEXES,
-    checkForValidHexColorString,
-    checkForValidPaletteColor,
-    checkForValidStringMap
+    WHITE_HEXES
 } from 'unit-test/shared';
 
 const COLOR_CATEGORIES:
-{
-    category: string
-    colorsMap: StringMap<PaletteColor>
-    hexes: HexCollection
-}[]
-    = [
-        {
-            category: 'black',
-            colorsMap: BLACK_PALETTE_COLORS,
-            hexes: BLACK_HEXES
-        },
-        {
-            category: 'blue',
-            colorsMap: BLUE_PALETTE_COLORS,
-            hexes: BLUE_HEXES
-        },
-        {
-            category: 'brown',
-            colorsMap: BROWN_PALETTE_COLORS,
-            hexes: BROWN_HEXES
-        },
-        {
-            category: 'gray',
-            colorsMap: GRAY_PALETTE_COLORS,
-            hexes: GRAY_HEXES
-        },
-        {
-            category: 'green',
-            colorsMap: GREEN_PALETTE_COLORS,
-            hexes: GREEN_HEXES
-        },
-        {
-            category: 'pink',
-            colorsMap: PINK_PALETTE_COLORS,
-            hexes: PINK_HEXES
-        },
-        {
-            category: 'purple',
-            colorsMap: PURPLE_PALETTE_COLORS,
-            hexes: PURPLE_HEXES
-        },
-        {
-            category: 'red',
-            colorsMap: RED_PALETTE_COLORS,
-            hexes: RED_HEXES
-        },
-        {
-            category: 'white',
-            colorsMap: WHITE_PALETTE_COLORS,
-            hexes: WHITE_HEXES
-        }
+{ category: string; colorsMap: StringMap<PaletteColor>; hexes: HexCollection }[] =
+    [
+        { category: 'black', colorsMap: BLACK_PALETTE_COLORS, hexes: BLACK_HEXES },
+        { category: 'blue', colorsMap: BLUE_PALETTE_COLORS, hexes: BLUE_HEXES },
+        { category: 'brown', colorsMap: BROWN_PALETTE_COLORS, hexes: BROWN_HEXES },
+        { category: 'gray', colorsMap: GRAY_PALETTE_COLORS, hexes: GRAY_HEXES },
+        { category: 'green', colorsMap: GREEN_PALETTE_COLORS, hexes: GREEN_HEXES },
+        { category: 'pink', colorsMap: PINK_PALETTE_COLORS, hexes: PINK_HEXES },
+        { category: 'purple', colorsMap: PURPLE_PALETTE_COLORS, hexes: PURPLE_HEXES },
+        { category: 'red', colorsMap: RED_PALETTE_COLORS, hexes: RED_HEXES },
+        { category: 'white', colorsMap: WHITE_PALETTE_COLORS, hexes: WHITE_HEXES }
     ];
 
-describe.each(COLOR_CATEGORIES)(
-    '$# - $category palette colors',
+describe.each(
+    COLOR_CATEGORIES
+)('$# - $category palette colors',
     ({ category, colorsMap, hexes }): void => {
-        const PALETTE_MAP_NAME: string = `${category.toUpperCase()}_PALETTE_COLORS`;
+        const PALETTE_MAP_NAME: string = category.toUpperCase() + '_PALETTE_COLORS';
         const CATEGORY_HEXES: { hexString: string }[] = hexes;
 
         test(`valid string map: ${PALETTE_MAP_NAME}`, (): void => {
             checkForValidStringMap(colorsMap, hexes.length);
         });
 
-        test.each(CATEGORY_HEXES)(
-            `$# - successful addition of ${category} color: $hexString`,
+        test.each(
+            CATEGORY_HEXES
+        )(`$# - successful addition of ${category} color: $hexString`,
             ({ hexString }): void => {
                 expect(hexString).toBeTruthy();
                 checkForValidHexColorString(hexString);
@@ -124,8 +86,9 @@ describe.each(COLOR_CATEGORIES)(
             }
         );
 
-        test.each(CATEGORY_HEXES)(
-            `$# - valid ${category} color: $hexString`,
+        test.each(
+            CATEGORY_HEXES
+        )(`$# - valid ${category} color: $hexString`,
             ({ hexString }): void => {
                 expect(hexString).toBeTruthy();
                 checkForValidHexColorString(hexString);

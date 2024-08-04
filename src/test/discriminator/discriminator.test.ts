@@ -50,10 +50,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('PaletteColor discriminator method: other object with discriminator', (): void => {
-            const myObject: {
-                KEY: string
-                DISCRIMINATOR: 'other'
-            } = {
+            const myObject: { KEY: string; DISCRIMINATOR: 'other' } = {
                 KEY: 'the key',
                 DISCRIMINATOR: 'other'
             };
@@ -67,16 +64,8 @@ describe('discriminator tests', (): void => {
 
         test('PaletteColor discriminator method: Fake PaletteColor', (): void => {
             const fakeColor: PaletteColor = {
-                RGB: {
-                    R: 0,
-                    G: 0,
-                    B: 0
-                },
-                HSL: {
-                    H: 0,
-                    S: 0,
-                    L: 0
-                },
+                RGB: { R: 0, G: 0, B: 0 },
+                HSL: { H: 0, S: 0, L: 0 },
                 HEX: '#000000',
                 NAME: 'test fake color',
                 DISCRIMINATOR: Discriminators.PALETTE_COLOR
