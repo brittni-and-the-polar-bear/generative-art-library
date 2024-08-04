@@ -52,6 +52,8 @@ export default tsEslint.config(
         rules: {
             'one-var': ['error', 'never'],
 
+            '@stylistic/brace-style': ['error', '1tbs'],
+
             '@stylistic/no-extra-semi': 'error',
 
             '@stylistic/function-call-argument-newline': ['error', 'consistent'],
@@ -61,6 +63,17 @@ export default tsEslint.config(
             '@stylistic/comma-dangle': ['error', 'never'],
 
             '@stylistic/indent': ['error', 4],
+
+            '@stylistic/member-delimiter-style': ['error', {
+                multiline: {
+                    delimiter: 'semi',
+                    requireLast: false
+                },
+                singleline: {
+                    delimiter: 'semi',
+                    requireLast: false
+                }
+            }],
 
             '@stylistic/operator-linebreak': ['error', 'after'],
 
