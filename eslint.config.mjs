@@ -17,6 +17,8 @@
 
 import js from '@eslint/js';
 
+import security from 'eslint-plugin-security';
+
 import stylistic from '@stylistic/eslint-plugin'
 
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -26,13 +28,14 @@ import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
     js.configs.recommended,
+    security.configs.recommended,
+    stylistic.configs['recommended-flat'],
     ...tsEslint.configs.recommended,
     ...tsEslint.configs.recommendedTypeChecked,
     ...tsEslint.configs.strict,
     ...tsEslint.configs.strictTypeChecked,
     ...tsEslint.configs.stylistic,
     ...tsEslint.configs.strictTypeChecked,
-    stylistic.configs['recommended-flat'],
     {
         languageOptions: {
             parser: tsParser,
@@ -51,6 +54,8 @@ export default tsEslint.config(
         },
         rules: {
             'one-var': ['error', 'never'],
+
+            'security/detect-object-injection': 'off',
 
             '@stylistic/brace-style': ['error', '1tbs'],
 
