@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #7DCED8;">
@@ -35,8 +35,8 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _7DCED8: PaletteColor = {
     HEX: '#7DCED8',
-    RGB: {R: 125, G: 206, B: 216},
-    HSL: {H: 187, S: 54, L: 67},
+    RGB: { R: 125, G: 206, B: 216 },
+    HSL: { H: 187, S: 54, L: 67 },
     NAME: 'spray',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

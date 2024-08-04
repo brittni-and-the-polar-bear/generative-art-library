@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #FAFEFF;">
@@ -35,8 +35,8 @@ import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _FAFEFF: PaletteColor = {
     HEX: '#FAFEFF',
-    RGB: {R: 250, G: 254, B: 255},
-    HSL: {H: 192, S: 100, L: 99},
+    RGB: { R: 250, G: 254, B: 255 },
+    HSL: { H: 192, S: 100, L: 99 },
     NAME: 'polar bear in a blizzard',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

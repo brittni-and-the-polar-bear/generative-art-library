@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #7A00F5;">
@@ -35,8 +35,8 @@ import {ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _7A00F5: PaletteColor = {
     HEX: '#7A00F5',
-    RGB: {R: 122, G: 0, B: 245},
-    HSL: {H: 270, S: 100, L: 48},
+    RGB: { R: 122, G: 0, B: 245 },
+    HSL: { H: 270, S: 100, L: 48 },
     NAME: 'poison purple',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

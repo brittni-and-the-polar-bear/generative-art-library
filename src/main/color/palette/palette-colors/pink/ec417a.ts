@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #EC417A;">
@@ -35,8 +35,8 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  */
 export const _EC417A: PaletteColor = {
     HEX: '#EC417A',
-    RGB: {R: 236, G: 65, B: 122},
-    HSL: {H: 340, S: 82, L: 59},
+    RGB: { R: 236, G: 65, B: 122 },
+    HSL: { H: 340, S: 82, L: 59 },
     NAME: 'radishical',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
