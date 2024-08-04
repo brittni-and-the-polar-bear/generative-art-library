@@ -65,12 +65,12 @@ export default tsEslint.config(
             '@stylistic/indent': ['error',
                 4,
                 {
-                    "SwitchCase": 1,
-                    "FunctionDeclaration": {
-                        "parameters": "first"
+                    SwitchCase: 1,
+                    FunctionDeclaration: {
+                        parameters: 'first'
                     },
-                    "FunctionExpression": {
-                        "parameters": "first"
+                    FunctionExpression: {
+                        parameters: 'first'
                     }
                 }
             ],
@@ -87,6 +87,14 @@ export default tsEslint.config(
             }],
 
             '@stylistic/operator-linebreak': ['error', 'after'],
+
+            '@stylistic/quotes': ['error',
+                'single',
+                {
+                    avoidEscape: true,
+                    allowTemplateLiterals: true
+                }
+            ],
 
             '@stylistic/semi': ['error', 'always'],
 
