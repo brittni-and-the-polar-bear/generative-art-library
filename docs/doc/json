@@ -57,7 +57,7 @@
 					"sources": [
 						{
 							"fileName": "color/color-selector-type.ts",
-							"line": 37,
+							"line": 38,
 							"character": 4
 						}
 					],
@@ -83,7 +83,7 @@
 					"sources": [
 						{
 							"fileName": "color/color-selector-type.ts",
-							"line": 27,
+							"line": 28,
 							"character": 4
 						}
 					],
@@ -109,7 +109,7 @@
 					"sources": [
 						{
 							"fileName": "color/color-selector-type.ts",
-							"line": 32,
+							"line": 33,
 							"character": 4
 						}
 					],
@@ -349,7 +349,7 @@
 					"sources": [
 						{
 							"fileName": "discriminator/discriminators.ts",
-							"line": 28,
+							"line": 29,
 							"character": 4
 						}
 					],
@@ -385,7 +385,7 @@
 					"sources": [
 						{
 							"fileName": "discriminator/discriminators.ts",
-							"line": 33,
+							"line": 34,
 							"character": 4
 						}
 					],
@@ -421,7 +421,7 @@
 					"sources": [
 						{
 							"fileName": "discriminator/discriminators.ts",
-							"line": 38,
+							"line": 39,
 							"character": 4
 						}
 					],
@@ -475,7 +475,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 66,
+							"line": 67,
 							"character": 4
 						}
 					],
@@ -489,7 +489,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 66,
+									"line": 67,
 									"character": 4
 								}
 							],
@@ -650,12 +650,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 202,
+							"line": 203,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 211,
+							"line": 212,
 							"character": 15
 						}
 					],
@@ -682,7 +682,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 202,
+								"line": 203,
 								"character": 15
 							}
 						],
@@ -719,7 +719,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 211,
+								"line": 212,
 								"character": 15
 							}
 						],
@@ -753,12 +753,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 184,
+							"line": 185,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 194,
+							"line": 195,
 							"character": 15
 						}
 					],
@@ -785,7 +785,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 184,
+								"line": 185,
 								"character": 15
 							}
 						],
@@ -844,7 +844,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 194,
+								"line": 195,
 								"character": 15
 							}
 						],
@@ -878,12 +878,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 127,
+							"line": 128,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 140,
+							"line": 141,
 							"character": 15
 						}
 					],
@@ -964,7 +964,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 127,
+								"line": 128,
 								"character": 15
 							}
 						],
@@ -1018,7 +1018,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 140,
+								"line": 141,
 								"character": 15
 							}
 						],
@@ -1120,12 +1120,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 166,
+							"line": 167,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 176,
+							"line": 177,
 							"character": 15
 						}
 					],
@@ -1152,7 +1152,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 166,
+								"line": 167,
 								"character": 15
 							}
 						],
@@ -1211,7 +1211,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 176,
+								"line": 177,
 								"character": 15
 							}
 						],
@@ -1245,7 +1245,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 236,
+							"line": 237,
 							"character": 15
 						}
 					],
@@ -1305,7 +1305,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 236,
+								"line": 237,
 								"character": 15
 							}
 						],
@@ -1326,7 +1326,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 218,
+							"line": 219,
 							"character": 15
 						}
 					],
@@ -1353,7 +1353,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 218,
+								"line": 219,
 								"character": 15
 							}
 						],
@@ -1374,12 +1374,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 148,
+							"line": 149,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 158,
+							"line": 159,
 							"character": 15
 						}
 					],
@@ -1406,7 +1406,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 148,
+								"line": 149,
 								"character": 15
 							}
 						],
@@ -1465,7 +1465,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 158,
+								"line": 159,
 								"character": 15
 							}
 						],
@@ -1500,7 +1500,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 119,
+							"line": 120,
 							"character": 18
 						}
 					],
@@ -1570,7 +1570,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 119,
+									"line": 120,
 									"character": 18
 								}
 							],
@@ -1677,7 +1677,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 94,
+							"line": 95,
 							"character": 18
 						}
 					],
@@ -1747,7 +1747,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 94,
+									"line": 95,
 									"character": 18
 								}
 							],
@@ -1855,7 +1855,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 267,
+							"line": 268,
 							"character": 11
 						}
 					],
@@ -1921,7 +1921,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 267,
+									"line": 268,
 									"character": 11
 								}
 							],
@@ -1943,7 +1943,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 249,
+							"line": 250,
 							"character": 11
 						}
 					],
@@ -2009,7 +2009,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 249,
+									"line": 250,
 									"character": 11
 								}
 							],
@@ -2090,7 +2090,7 @@
 			"sources": [
 				{
 					"fileName": "color/color.ts",
-					"line": 32,
+					"line": 33,
 					"character": 13
 				}
 			]
@@ -2233,12 +2233,7 @@
 						},
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 72,
-							"character": 18
-						},
-						{
-							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 74,
+							"line": 73,
 							"character": 18
 						},
 						{
@@ -2248,7 +2243,7 @@
 						},
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 80,
+							"line": 79,
 							"character": 18
 						},
 						{
@@ -2258,7 +2253,12 @@
 						},
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 97,
+							"line": 89,
+							"character": 18
+						},
+						{
+							"fileName": "color/color-contrast/color-contrast-assessor.ts",
+							"line": 103,
 							"character": 18
 						}
 					],
@@ -2318,7 +2318,7 @@
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 72,
+									"line": 73,
 									"character": 18
 								}
 							],
@@ -2364,7 +2364,7 @@
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 74,
+									"line": 76,
 									"character": 18
 								}
 							],
@@ -2406,7 +2406,7 @@
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 76,
+									"line": 79,
 									"character": 18
 								}
 							],
@@ -2478,7 +2478,7 @@
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 80,
+									"line": 84,
 									"character": 18
 								}
 							],
@@ -2550,7 +2550,7 @@
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 84,
+									"line": 89,
 									"character": 18
 								}
 							],
@@ -4171,7 +4171,7 @@
 				{
 					"fileName": "color/color-selector-manager.ts",
 					"line": 27,
-					"character": 6
+					"character": 13
 				}
 			]
 		},
@@ -5611,7 +5611,7 @@
 					"sources": [
 						{
 							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 70,
+							"line": 72,
 							"character": 24
 						}
 					],
@@ -5640,7 +5640,7 @@
 						"sources": [
 							{
 								"fileName": "color/palette/palette-color-selector.ts",
-								"line": 70,
+								"line": 72,
 								"character": 24
 							}
 						],
@@ -5911,7 +5911,7 @@
 					"sources": [
 						{
 							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 77,
+							"line": 79,
 							"character": 20
 						}
 					],
@@ -5944,7 +5944,7 @@
 							"sources": [
 								{
 									"fileName": "color/palette/palette-color-selector.ts",
-									"line": 77,
+									"line": 79,
 									"character": 20
 								}
 							],
@@ -10003,7 +10003,7 @@
 			"sources": [
 				{
 					"fileName": "color/palette/palettes/nature/flower/blue-lily.ts",
-					"line": 38,
+					"line": 39,
 					"character": 13
 				}
 			],
@@ -12575,7 +12575,7 @@
 		}
 	],
 	"packageName": "@batpb/genart",
-	"packageVersion": "1.0.0",
+	"packageVersion": "1.0.1",
 	"readme": [
 		{
 			"kind": "text",
