@@ -131,8 +131,7 @@ export class PaletteColorSelector extends ColorSelector {
                     this.addColorChoice(new Color(pc));
                     this.COLOR_NAMES.add(pc.NAME);
                 }
-            }
-            else {
+            } else {
                 const selector: RandomSelector<PaletteColor> = new RandomSelector<PaletteColor>(palette.COLORS);
 
                 for (let i: number = 0; i < colorCount; i++) {

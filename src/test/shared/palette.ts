@@ -55,11 +55,11 @@ function checkForValidContrastMap(palette: Palette): void {
             validHexes.push('#FFFFFF');
         }
 
-        for (const key in palette.CONTRAST_MAP) {
+        for (const [key, contrasts] of Object.entries(palette.CONTRAST_MAP)) {
             checkForValidHexColorString(key);
             expect(validHexes).toContain(key);
 
-            for (const hex of palette.CONTRAST_MAP[key]) {
+            for (const hex of contrasts) {
                 checkForValidHexColorString(hex);
                 expect(validHexes).toContain(hex);
 

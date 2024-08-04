@@ -47,8 +47,7 @@ export const checkForValidRandomSelector = (
 
     if (picksAllColors) {
         expect(colorMap.size).toEqual(expectedComponents.length);
-    }
-    else if (colorCount) {
+    } else if (colorCount) {
         expect(colorMap.size).toEqual(colorCount);
     }
 
@@ -88,8 +87,7 @@ export const checkForValidInOrderSelector = (
             const key: string = `${selectedComps.r.toString()}${selectedComps.g.toString()}${selectedComps.b.toString()}`;
             colorMap.setUndefinedKey(key, selectedComps);
         }
-    }
-    else {
+    } else {
         const inOrderColors: Color[] = [];
 
         for (let i: number = 0; i < colorCount; i++) {
@@ -113,8 +111,7 @@ export const checkForValidInOrderSelector = (
 
     if (picksAllColors) {
         expect(colorMap.size).toEqual(expectedComponents.length);
-    }
-    else if (colorCount) {
+    } else if (colorCount) {
         expect(colorMap.size).toEqual(colorCount);
     }
 

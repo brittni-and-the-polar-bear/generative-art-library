@@ -54,8 +54,7 @@ class Range {
             console.warn(`max (${newMax.toString()}) is less than current min (${this._min.toString()}). object fields will be set so that min is less than max.`);
             this._max = this._min;
             this._min = newMax;
-        }
-        else {
+        } else {
             this._max = newMax;
         }
     }
@@ -78,8 +77,7 @@ class Range {
             console.warn(`min (${newMin.toString()}) is greater than current max (${this._max.toString()}). object fields will be set so that min is less than max.`);
             this._min = this._max;
             this._max = newMin;
-        }
-        else {
+        } else {
             this._min = newMin;
         }
     }

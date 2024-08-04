@@ -96,8 +96,7 @@ class StringMap<ValueType> {
             }
 
             isSet = false;
-        }
-        else {
+        } else {
             this.setKey(key, value);
             isSet = true;
         }
