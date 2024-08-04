@@ -71,9 +71,6 @@ export default tsEslint.config(
                     },
                     "FunctionExpression": {
                         "parameters": "first"
-                    },
-                    "CallExpression": {
-                        "arguments": "first"
                     }
                 }
             ],
