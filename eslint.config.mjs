@@ -17,6 +17,7 @@
 
 import js from '@eslint/js';
 
+import node from 'eslint-plugin-n';
 import security from 'eslint-plugin-security';
 
 import stylistic from '@stylistic/eslint-plugin'
@@ -28,6 +29,7 @@ import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
     js.configs.recommended,
+    node.configs["flat/recommended"],
     security.configs.recommended,
     stylistic.configs['recommended-flat'],
     ...tsEslint.configs.recommended,
@@ -54,6 +56,8 @@ export default tsEslint.config(
         },
         rules: {
             'one-var': ['error', 'never'],
+
+            'n/no-missing-import': 'off',
 
             'security/detect-object-injection': 'off',
 
