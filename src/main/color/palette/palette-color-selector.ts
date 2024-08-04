@@ -15,12 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector, ColorSelectorType} from 'color';
-import {SketchContext} from 'context';
-import {Random, RandomSelector} from 'random';
+import { Color, ColorSelector, ColorSelectorType } from 'color';
+import { SketchContext } from 'context';
+import { Random, RandomSelector } from 'random';
 
-import {Palette} from './palette';
-import {PaletteColor} from './palette-color';
+import { Palette } from './palette';
+import { PaletteColor } from './palette-color';
 
 /**
  * A basic {@link ColorSelector} that chooses colors from a given {@link Palette}.
@@ -46,10 +46,12 @@ export class PaletteColorSelector extends ColorSelector {
      * When `false`, colors will be chosen in the order they were selected
      * in {@link choosePaletteColors}.
      */
-    constructor(palette: Palette,
-                buildWithPaletteOrder?: boolean,
-                colorCount?: number,
-                randomOrder?: boolean) {
+    constructor(
+        palette: Palette,
+        buildWithPaletteOrder?: boolean,
+        colorCount?: number,
+        randomOrder?: boolean
+    ) {
         super(PaletteColorSelector.buildName(palette), randomOrder);
 
         let count: number = colorCount ?? Random.randomInt(PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length + 1);

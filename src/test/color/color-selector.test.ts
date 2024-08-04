@@ -15,22 +15,22 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, DefaultColorSelector} from 'color';
+import { Color, DefaultColorSelector } from 'color';
 
 import {
     ColorComponents,
-    SampleSelector,
     RANDOM_TEST_TRIES,
+    SampleSelector,
     blue,
-    cyan,
-    green,
-    red,
     checkForValidColorSelector,
     checkForValidInOrderSelector,
     checkForValidRandomSelector,
-    colorToColorComponents
+    colorToColorComponents,
+    cyan,
+    green,
+    red
 } from 'unit-test/shared';
-import {SketchContext} from "context";
+import { SketchContext } from 'context';
 
 describe('color selector tests', (): void => {
     test('test default color selector', (): void => {
@@ -58,42 +58,66 @@ describe('color selector tests', (): void => {
     });
 
     test('color selector test: >2 colors; in order', (): void => {
-        const colors: Color[] = [red, green, blue, cyan];
+        const colors: Color[] = [
+            red,
+            green,
+            blue,
+            cyan
+        ];
         const selector: SampleSelector = new SampleSelector(colors, false);
         checkForValidColorSelector(selector);
         checkForValidInOrderSelector(selector, colors, true, true);
     });
 
     test('color selector test: >2 colors; random order', (): void => {
-        const colors: Color[] = [red, green, blue, cyan];
+        const colors: Color[] = [
+            red,
+            green,
+            blue,
+            cyan
+        ];
         const selector: SampleSelector = new SampleSelector(colors, true);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors, true);
     });
 
     test('color selector test: >2 colors; no order provided', (): void => {
-        const colors: Color[] = [red, green, blue, cyan];
+        const colors: Color[] = [
+            red,
+            green,
+            blue,
+            cyan
+        ];
         const selector: SampleSelector = new SampleSelector(colors);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors, true);
     });
 
     test('color selector test: 2 colors; in order', (): void => {
-        const colors: Color[] = [red, green];
+        const colors: Color[] = [
+            red,
+            green
+        ];
         const selector: SampleSelector = new SampleSelector(colors, false);
         checkForValidColorSelector(selector);
         checkForValidInOrderSelector(selector, colors, true, true);
     });
 
     test('color selector test: 2 colors; random order', (): void => {
-        const colors: Color[] = [red, green];
+        const colors: Color[] = [
+            red,
+            green
+        ];
         const selector: SampleSelector = new SampleSelector(colors, true);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors, true);
     });
 
     test('color selector test: 2 colors; no order provided', (): void => {
-        const colors: Color[] = [red, green];
+        const colors: Color[] = [
+            red,
+            green
+        ];
         const selector: SampleSelector = new SampleSelector(colors);
         checkForValidColorSelector(selector);
         checkForValidRandomSelector(selector, colors, true);
@@ -147,7 +171,7 @@ describe('color selector tests', (): void => {
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
             const background: Color = selector.getBackgroundColor(1, 0, 0);
-            const bgComponents: ColorComponents = colorToColorComponents(background)
+            const bgComponents: ColorComponents = colorToColorComponents(background);
             expect(bgComponents).toStrictEqual(expectedComponents);
         }
     });
@@ -155,13 +179,11 @@ describe('color selector tests', (): void => {
     test('test background color selection: white only', (): void => {
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
-        const expectedComponents: ColorComponents = colorToColorComponents(
-            new Color(SketchContext.p5.color(255))
-        );
+        const expectedComponents: ColorComponents = colorToColorComponents(new Color(SketchContext.p5.color(255)));
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
             const background: Color = selector.getBackgroundColor(0, 1, 0);
-            const bgComponents: ColorComponents = colorToColorComponents(background)
+            const bgComponents: ColorComponents = colorToColorComponents(background);
             expect(bgComponents).toStrictEqual(expectedComponents);
         }
     });
@@ -173,7 +195,7 @@ describe('color selector tests', (): void => {
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
             const background: Color = selector.getBackgroundColor(0, 0, 1);
-            const bgComponents: ColorComponents = colorToColorComponents(background)
+            const bgComponents: ColorComponents = colorToColorComponents(background);
             expect(bgComponents).toStrictEqual(expectedComponents);
         }
     });

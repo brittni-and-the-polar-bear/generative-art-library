@@ -15,30 +15,33 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector} from 'color';
-import {StringMap} from 'map';
+import { Color, ColorSelector } from 'color';
+import { StringMap } from 'map';
 
-import {ColorComponents, colorToColorComponents} from './color';
-import {RANDOM_TEST_TRIES} from './random';
+import { ColorComponents, colorToColorComponents } from './color';
+import { RANDOM_TEST_TRIES } from './random';
 
-export function checkForValidColorSelector(selector: ColorSelector): void {
+export const checkForValidColorSelector = (selector: ColorSelector): void => {
     expect(selector.type).toBeTruthy();
     expect(selector.name).toBeTruthy();
     expect(selector.colorNames).toBeTruthy();
     expect(selector.colorNames.length).toBeGreaterThan(0);
-}
+};
 
-export function checkForValidRandomSelector(selector: ColorSelector,
-                                            colors: Color[],
-                                            picksAllColors: boolean,
-                                            colorCount?: number): void {
+export const checkForValidRandomSelector = (
+    selector: ColorSelector,
+    colors: Color[],
+    picksAllColors: boolean,
+    colorCount?: number
+): void => {
+    'use strict';
     checkForValidColorSelector(selector);
     const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
     const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
 
     for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
         const components: ColorComponents = colorToColorComponents(selector.getColor());
-        const key: string = components.r.toString() + '' + components.g.toString() + '' + components.b.toString();
+        const key: string = `${components.r.toString()}${components.g.toString()}${components.b.toString()}`;
         colorMap.setUndefinedKey(key, components);
     }
 
@@ -51,13 +54,16 @@ export function checkForValidRandomSelector(selector: ColorSelector,
     for (const components of colorMap.values) {
         expect(expectedComponents).toContainEqual(components);
     }
-}
+};
 
-export function checkForValidInOrderSelector(selector: ColorSelector,
-                                             colors: Color[],
-                                             matchColorOrder: boolean,
-                                             picksAllColors: boolean,
-                                             colorCount?: number): void {
+export const checkForValidInOrderSelector = (
+    selector: ColorSelector,
+    colors: Color[],
+    matchColorOrder: boolean,
+    picksAllColors: boolean,
+    colorCount?: number
+): void => {
+    'use strict';
     checkForValidColorSelector(selector);
 
     if (!colorCount || colorCount < 0) {
@@ -71,7 +77,17 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
     const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
     const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
 
-    if (!matchColorOrder) {
+    if (matchColorOrder) {
+        for (let i: number = 0; i < colors.length * 2; i++) {
+            const selectedColor: Color = selector.getColor();
+            const selectedComps: ColorComponents = colorToColorComponents(selectedColor);
+            const expectedComps: ColorComponents = colorToColorComponents(colors[i % colors.length]);
+            expect(selectedComps).toEqual(expectedComps);
+
+            const key: string = `${selectedComps.r.toString()}${selectedComps.g.toString()}${selectedComps.b.toString()}`;
+            colorMap.setUndefinedKey(key, selectedComps);
+        }
+    } else {
         const inOrderColors: Color[] = [];
 
         for (let i: number = 0; i < colorCount; i++) {
@@ -80,7 +96,7 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
             expect(expectedComponents).toContainEqual(components);
             inOrderColors.push(c);
 
-            const key: string = components.r.toString() + '' + components.g.toString() + '' + components.b.toString();
+            const key: string = `${components.r.toString()}${components.g.toString()}${components.b.toString()}`;
             colorMap.setUndefinedKey(key, components);
         }
 
@@ -90,16 +106,6 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
             const expectedSelection: Color = inOrderColors[i];
             const expectedSelectionComponents: ColorComponents = colorToColorComponents(expectedSelection);
             expect(components).toEqual(expectedSelectionComponents);
-        }
-    } else {
-        for (let i: number = 0; i < colors.length * 2; i++) {
-            const selectedColor: Color = selector.getColor();
-            const selectedComps: ColorComponents = colorToColorComponents(selectedColor);
-            const expectedComps: ColorComponents = colorToColorComponents(colors[i % colors.length]);
-            expect(selectedComps).toEqual(expectedComps);
-
-            const key: string = selectedComps.r.toString() + '' + selectedComps.g.toString() + '' + selectedComps.b.toString();
-            colorMap.setUndefinedKey(key, selectedComps);
         }
     }
 
@@ -112,4 +118,4 @@ export function checkForValidInOrderSelector(selector: ColorSelector,
     for (const components of colorMap.values) {
         expect(expectedComponents).toContainEqual(components);
     }
-}
+};

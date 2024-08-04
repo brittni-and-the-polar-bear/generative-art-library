@@ -14,11 +14,11 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Affero General Public License for more details.
  */
-import {Discriminators} from 'discriminator';
-import {Palette} from 'palette';
-import {_007058, _23856D, _BC010A, _D01625, _FBF9F9} from 'palette-colors';
+import { Discriminators } from 'discriminator';
+import { Palette } from 'palette';
+import { _007058, _23856D, _BC010A, _D01625, _FBF9F9 } from 'palette-colors';
 
-import {ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES} from '../../palette-maps';
+import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -51,17 +51,42 @@ export const CLASSIC_CHRISTMAS: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': ['#23856D', '#FBF9F9'],
-        '#FFFFFF': ['#BC010A', '#D01625', '#007058', '#23856D'],
-        '#007058': ['#FBF9F9', '#FFFFFF'],
-        '#23856D': ['#FFFFFF', '#000000'],
-        '#BC010A': ['#FBF9F9', '#FFFFFF'],
-        '#D01625': ['#FBF9F9', '#FFFFFF'],
-        '#FBF9F9': ['#BC010A', '#D01625', '#007058', '#000000']
+        '#000000': [
+            '#23856D',
+            '#FBF9F9'
+        ],
+        '#FFFFFF': [
+            '#BC010A',
+            '#D01625',
+            '#007058',
+            '#23856D'
+        ],
+        '#007058': [
+            '#FBF9F9',
+            '#FFFFFF'
+        ],
+        '#23856D': [
+            '#FFFFFF',
+            '#000000'
+        ],
+        '#BC010A': [
+            '#FBF9F9',
+            '#FFFFFF'
+        ],
+        '#D01625': [
+            '#FBF9F9',
+            '#FFFFFF'
+        ],
+        '#FBF9F9': [
+            '#BC010A',
+            '#D01625',
+            '#007058',
+            '#000000'
+        ]
     },
 
     DISCRIMINATOR: Discriminators.PALETTE
-}
+};
 
 CHRISTMAS_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS.NAME, CLASSIC_CHRISTMAS);
 HOLIDAY_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS.NAME, CLASSIC_CHRISTMAS);

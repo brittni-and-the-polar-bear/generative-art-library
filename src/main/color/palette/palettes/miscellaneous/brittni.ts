@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminators} from 'discriminator';
-import {Palette} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import { Discriminators } from 'discriminator';
+import { Palette } from 'palette';
+import { _0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 
-import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
+import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -49,13 +49,38 @@ export const BRITTNI: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': ['#0FFF4F', '#FF6BB5'],
-        '#FFFFFF': ['#121212', '#0437F1', '#7A00F5'],
-        '#121212': ['#FFFFFF', '#0FFF4F', '#FF6BB5'],
-        '#0437F1': ['#FFFFFF', '#0FFF4F'],
-        '#0FFF4F': ['#000000', '#121212', '#0437F1', '#7A00F5'],
-        '#7A00F5': ['#FFFFFF', '#0FFF4F'],
-        '#FF6BB5': ['#000000', '#121212']
+        '#000000': [
+            '#0FFF4F',
+            '#FF6BB5'
+        ],
+        '#FFFFFF': [
+            '#121212',
+            '#0437F1',
+            '#7A00F5'
+        ],
+        '#121212': [
+            '#FFFFFF',
+            '#0FFF4F',
+            '#FF6BB5'
+        ],
+        '#0437F1': [
+            '#FFFFFF',
+            '#0FFF4F'
+        ],
+        '#0FFF4F': [
+            '#000000',
+            '#121212',
+            '#0437F1',
+            '#7A00F5'
+        ],
+        '#7A00F5': [
+            '#FFFFFF',
+            '#0FFF4F'
+        ],
+        '#FF6BB5': [
+            '#000000',
+            '#121212'
+        ]
     },
 
     DISCRIMINATOR: Discriminators.PALETTE

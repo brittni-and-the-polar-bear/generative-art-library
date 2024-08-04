@@ -57,7 +57,7 @@
 					"sources": [
 						{
 							"fileName": "color/color-selector-type.ts",
-							"line": 37,
+							"line": 38,
 							"character": 4
 						}
 					],
@@ -83,7 +83,7 @@
 					"sources": [
 						{
 							"fileName": "color/color-selector-type.ts",
-							"line": 27,
+							"line": 28,
 							"character": 4
 						}
 					],
@@ -109,7 +109,7 @@
 					"sources": [
 						{
 							"fileName": "color/color-selector-type.ts",
-							"line": 32,
+							"line": 33,
 							"character": 4
 						}
 					],
@@ -349,7 +349,7 @@
 					"sources": [
 						{
 							"fileName": "discriminator/discriminators.ts",
-							"line": 28,
+							"line": 29,
 							"character": 4
 						}
 					],
@@ -385,7 +385,7 @@
 					"sources": [
 						{
 							"fileName": "discriminator/discriminators.ts",
-							"line": 33,
+							"line": 34,
 							"character": 4
 						}
 					],
@@ -421,7 +421,7 @@
 					"sources": [
 						{
 							"fileName": "discriminator/discriminators.ts",
-							"line": 38,
+							"line": 39,
 							"character": 4
 						}
 					],
@@ -475,7 +475,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 66,
+							"line": 67,
 							"character": 4
 						}
 					],
@@ -489,7 +489,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 66,
+									"line": 67,
 									"character": 4
 								}
 							],
@@ -512,7 +512,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "p5.js Color",
-												"target": "https://p5js.org/reference/#/p5.Color"
+												"target": "https://p5js.org/reference/p5/p5.Color/"
 											},
 											{
 												"kind": "text",
@@ -533,7 +533,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "p5.js Color",
-												"target": "https://p5js.org/reference/#/p5.Color"
+												"target": "https://p5js.org/reference/p5/p5.Color/"
 											},
 											{
 												"kind": "text",
@@ -640,177 +640,6 @@
 					]
 				},
 				{
-					"id": 36,
-					"name": "_alpha",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The color's alpha component. Ranges in value from 0-255."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color.ts",
-							"line": 51,
-							"character": 12
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					}
-				},
-				{
-					"id": 35,
-					"name": "_blue",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The color's blue component. Ranges in value from 0-255."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color.ts",
-							"line": 46,
-							"character": 12
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					}
-				},
-				{
-					"id": 34,
-					"name": "_green",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The color's green component. Ranges in value from 0-255."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color.ts",
-							"line": 41,
-							"character": 12
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					}
-				},
-				{
-					"id": 37,
-					"name": "_name",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The color's name. Retrieved from a "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "PaletteColor",
-								"target": 260,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " or the\n"
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "ColorNameManager",
-								"target": 1,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": "."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color.ts",
-							"line": 57,
-							"character": 12
-						}
-					],
-					"type": {
-						"type": "union",
-						"types": [
-							{
-								"type": "literal",
-								"value": null
-							},
-							{
-								"type": "intrinsic",
-								"name": "string"
-							}
-						]
-					}
-				},
-				{
-					"id": 33,
-					"name": "_red",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The color's red component. Ranges in value from 0-255."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color.ts",
-							"line": 36,
-							"character": 12
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					}
-				},
-				{
 					"id": 54,
 					"name": "alpha",
 					"variant": "declaration",
@@ -821,12 +650,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 202,
+							"line": 203,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 211,
+							"line": 212,
 							"character": 15
 						}
 					],
@@ -853,7 +682,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 202,
+								"line": 203,
 								"character": 15
 							}
 						],
@@ -890,7 +719,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 211,
+								"line": 212,
 								"character": 15
 							}
 						],
@@ -924,12 +753,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 184,
+							"line": 185,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 194,
+							"line": 195,
 							"character": 15
 						}
 					],
@@ -956,7 +785,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 184,
+								"line": 185,
 								"character": 15
 							}
 						],
@@ -992,7 +821,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_name",
-									"target": 37,
+									"target": {
+										"sourceFileName": "src/main/color/color.ts",
+										"qualifiedName": "Color._name"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -1012,7 +844,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 194,
+								"line": 195,
 								"character": 15
 							}
 						],
@@ -1046,12 +878,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 127,
+							"line": 128,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 140,
+							"line": 141,
 							"character": 15
 						}
 					],
@@ -1075,7 +907,7 @@
 											"kind": "inline-tag",
 											"tag": "@link",
 											"text": "p5.js Color",
-											"target": "https://p5js.org/reference/#/p5.Color"
+											"target": "https://p5js.org/reference/p5/p5.Color/"
 										},
 										{
 											"kind": "text",
@@ -1132,7 +964,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 127,
+								"line": 128,
 								"character": 15
 							}
 						],
@@ -1163,7 +995,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_name",
-									"target": 37,
+									"target": {
+										"sourceFileName": "src/main/color/color.ts",
+										"qualifiedName": "Color._name"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -1183,7 +1018,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 140,
+								"line": 141,
 								"character": 15
 							}
 						],
@@ -1204,7 +1039,7 @@
 											"kind": "inline-tag",
 											"tag": "@link",
 											"text": "p5.js Color",
-											"target": "https://p5js.org/reference/#/p5.Color"
+											"target": "https://p5js.org/reference/p5/p5.Color/"
 										},
 										{
 											"kind": "text",
@@ -1285,12 +1120,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 166,
+							"line": 167,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 176,
+							"line": 177,
 							"character": 15
 						}
 					],
@@ -1317,7 +1152,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 166,
+								"line": 167,
 								"character": 15
 							}
 						],
@@ -1353,7 +1188,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_name",
-									"target": 37,
+									"target": {
+										"sourceFileName": "src/main/color/color.ts",
+										"qualifiedName": "Color._name"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -1373,7 +1211,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 176,
+								"line": 177,
 								"character": 15
 							}
 						],
@@ -1407,7 +1245,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 236,
+							"line": 237,
 							"character": 15
 						}
 					],
@@ -1467,7 +1305,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 236,
+								"line": 237,
 								"character": 15
 							}
 						],
@@ -1488,7 +1326,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 218,
+							"line": 219,
 							"character": 15
 						}
 					],
@@ -1515,7 +1353,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 218,
+								"line": 219,
 								"character": 15
 							}
 						],
@@ -1536,12 +1374,12 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 148,
+							"line": 149,
 							"character": 15
 						},
 						{
 							"fileName": "color/color.ts",
-							"line": 158,
+							"line": 159,
 							"character": 15
 						}
 					],
@@ -1568,7 +1406,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 148,
+								"line": 149,
 								"character": 15
 							}
 						],
@@ -1604,7 +1442,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_name",
-									"target": 37,
+									"target": {
+										"sourceFileName": "src/main/color/color.ts",
+										"qualifiedName": "Color._name"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -1624,7 +1465,7 @@
 						"sources": [
 							{
 								"fileName": "color/color.ts",
-								"line": 158,
+								"line": 159,
 								"character": 15
 							}
 						],
@@ -1659,7 +1500,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 119,
+							"line": 120,
 							"character": 18
 						}
 					],
@@ -1684,7 +1525,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "p5.js Color",
-												"target": "https://p5js.org/reference/#/p5.Color"
+												"target": "https://p5js.org/reference/p5/p5.Color/"
 											},
 											{
 												"kind": "text",
@@ -1729,7 +1570,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 119,
+									"line": 120,
 									"character": 18
 								}
 							],
@@ -1836,7 +1677,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 94,
+							"line": 95,
 							"character": 18
 						}
 					],
@@ -1861,7 +1702,7 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "p5.js Color",
-												"target": "https://p5js.org/reference/#/p5.Color"
+												"target": "https://p5js.org/reference/p5/p5.Color/"
 											},
 											{
 												"kind": "text",
@@ -1906,7 +1747,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 94,
+									"line": 95,
 									"character": 18
 								}
 							],
@@ -2014,7 +1855,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 267,
+							"line": 268,
 							"character": 11
 						}
 					],
@@ -2080,7 +1921,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 267,
+									"line": 268,
 									"character": 11
 								}
 							],
@@ -2102,7 +1943,7 @@
 					"sources": [
 						{
 							"fileName": "color/color.ts",
-							"line": 249,
+							"line": 250,
 							"character": 11
 						}
 					],
@@ -2168,7 +2009,7 @@
 							"sources": [
 								{
 									"fileName": "color/color.ts",
-									"line": 249,
+									"line": 250,
 									"character": 11
 								}
 							],
@@ -2215,150 +2056,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 67,
-					"name": "setColorValues",
-					"variant": "declaration",
-					"kind": 2048,
-					"flags": {
-						"isPrivate": true
-					},
-					"sources": [
-						{
-							"fileName": "color/color.ts",
-							"line": 279,
-							"character": 12
-						}
-					],
-					"signatures": [
-						{
-							"id": 68,
-							"name": "setColorValues",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Set the color values.<br/>\n<b>IMPORTANT: This method will set "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "_name",
-										"target": 37,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " to "
-									},
-									{
-										"kind": "code",
-										"text": "`null`"
-									},
-									{
-										"kind": "text",
-										"text": ".</b>"
-									}
-								]
-							},
-							"sources": [
-								{
-									"fileName": "color/color.ts",
-									"line": 279,
-									"character": 12
-								}
-							],
-							"parameters": [
-								{
-									"id": 69,
-									"name": "color",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "A "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "p5.js Color",
-												"target": "https://p5js.org/reference/#/p5.Color"
-											},
-											{
-												"kind": "text",
-												"text": " object.\nThe color's RGBA components will become the new values of\n"
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "red",
-												"target": 42,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": ", "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "green",
-												"target": 46,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": ", "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "blue",
-												"target": 50,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": ", and "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "alpha",
-												"target": 54,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": "."
-											}
-										]
-									},
-									"type": {
-										"type": "reference",
-										"target": {
-											"sourceFileName": "node_modules/@types/p5/src/color/p5.Color.d.ts",
-											"qualifiedName": "\"../../index\".Color"
-										},
-										"name": "Color",
-										"package": "@types/p5",
-										"qualifiedName": "\"../../index\".Color"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "void"
-							}
-						}
-					]
 				}
 			],
 			"groups": [
@@ -2366,16 +2063,6 @@
 					"title": "Constructors",
 					"children": [
 						30
-					]
-				},
-				{
-					"title": "Properties",
-					"children": [
-						36,
-						35,
-						34,
-						37,
-						33
 					]
 				},
 				{
@@ -2396,15 +2083,14 @@
 						24,
 						18,
 						65,
-						62,
-						67
+						62
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "color/color.ts",
-					"line": 32,
+					"line": 33,
 					"character": 13
 				}
 			]
@@ -2455,6 +2141,90 @@
 						"isPublic": true,
 						"isStatic": true
 					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "ContrastStandard",
+								"target": 141,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": " and "
+							},
+							{
+								"kind": "inline-tag",
+								"tag": "@link",
+								"text": "ContrastFontSize",
+								"target": 144,
+								"tsLinkText": ""
+							},
+							{
+								"kind": "text",
+								"text": "."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@param",
+								"name": "colorA",
+								"content": []
+							},
+							{
+								"tag": "@param",
+								"name": "colorB",
+								"content": []
+							},
+							{
+								"tag": "@param",
+								"name": "standard",
+								"content": [
+									{
+										"kind": "text",
+										"text": "If no standard is provided, "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "ContrastStandard.AA",
+										"target": 142,
+										"tsLinkText": ""
+									},
+									{
+										"kind": "text",
+										"text": " will be used."
+									}
+								]
+							},
+							{
+								"tag": "@param",
+								"name": "fontSize",
+								"content": [
+									{
+										"kind": "text",
+										"text": "If no font size is provided, "
+									},
+									{
+										"kind": "inline-tag",
+										"tag": "@link",
+										"text": "ContrastFontSize.NORMAL",
+										"target": 145,
+										"tsLinkText": ""
+									},
+									{
+										"kind": "text",
+										"text": " will be used."
+									}
+								]
+							}
+						]
+					},
 					"sources": [
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
@@ -2463,12 +2233,7 @@
 						},
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 72,
-							"character": 18
-						},
-						{
-							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 74,
+							"line": 73,
 							"character": 18
 						},
 						{
@@ -2478,7 +2243,7 @@
 						},
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 80,
+							"line": 79,
 							"character": 18
 						},
 						{
@@ -2488,7 +2253,12 @@
 						},
 						{
 							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 97,
+							"line": 89,
+							"character": 18
+						},
+						{
+							"fileName": "color/color-contrast/color-contrast-assessor.ts",
+							"line": 103,
 							"character": 18
 						}
 					],
@@ -2499,36 +2269,6 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastStandard",
-										"target": 141,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " and "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastFontSize",
-										"target": 144,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
@@ -2575,40 +2315,10 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastStandard",
-										"target": 141,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " and "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastFontSize",
-										"target": 144,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 72,
+									"line": 73,
 									"character": 18
 								}
 							],
@@ -2651,40 +2361,10 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastStandard",
-										"target": 141,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " and "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastFontSize",
-										"target": 144,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 74,
+									"line": 76,
 									"character": 18
 								}
 							],
@@ -2723,40 +2403,10 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastStandard",
-										"target": 141,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " and "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastFontSize",
-										"target": 144,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 76,
+									"line": 79,
 									"character": 18
 								}
 							],
@@ -2793,25 +2443,6 @@
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "If no standard is provided, "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastStandard.AA",
-												"target": 142,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " will be used."
-											}
-										]
-									},
 									"type": {
 										"type": "reference",
 										"target": 141,
@@ -2825,25 +2456,6 @@
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "If no font size is provided, "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastFontSize.NORMAL",
-												"target": 145,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " will be used."
-											}
-										]
-									},
 									"type": {
 										"type": "reference",
 										"target": 144,
@@ -2863,40 +2475,10 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastStandard",
-										"target": 141,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " and "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastFontSize",
-										"target": 144,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 80,
+									"line": 84,
 									"character": 18
 								}
 							],
@@ -2933,25 +2515,6 @@
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "If no standard is provided, "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastStandard.AA",
-												"target": 142,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " will be used."
-											}
-										]
-									},
 									"type": {
 										"type": "reference",
 										"target": 141,
@@ -2965,25 +2528,6 @@
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "If no font size is provided, "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastFontSize.NORMAL",
-												"target": 145,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " will be used."
-											}
-										]
-									},
 									"type": {
 										"type": "reference",
 										"target": 144,
@@ -3003,40 +2547,10 @@
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Evaluates if two colors have an appropriate contrast ratio\nfor the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastStandard",
-										"target": 141,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " and "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "ContrastFontSize",
-										"target": 144,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 84,
+									"line": 89,
 									"character": 18
 								}
 							],
@@ -3069,25 +2583,6 @@
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "If no standard is provided, "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastStandard.AA",
-												"target": 142,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " will be used."
-											}
-										]
-									},
 									"type": {
 										"type": "reference",
 										"target": 141,
@@ -3097,165 +2592,6 @@
 								},
 								{
 									"id": 172,
-									"name": "fontSize",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "If no font size is provided, "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastFontSize.NORMAL",
-												"target": 145,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " will be used."
-											}
-										]
-									},
-									"type": {
-										"type": "reference",
-										"target": 144,
-										"name": "ContrastFontSize",
-										"package": "@batpb/genart"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "boolean"
-							}
-						}
-					]
-				},
-				{
-					"id": 173,
-					"name": "haveAppropriateContrastRatio",
-					"variant": "declaration",
-					"kind": 2048,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true
-					},
-					"sources": [
-						{
-							"fileName": "color/color-contrast/color-contrast-assessor.ts",
-							"line": 135,
-							"character": 19
-						}
-					],
-					"signatures": [
-						{
-							"id": 174,
-							"name": "haveAppropriateContrastRatio",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Do the given colors conform to guidelines for the given standard and font size?"
-									}
-								],
-								"blockTags": [
-									{
-										"tag": "@returns",
-										"content": [
-											{
-												"kind": "code",
-												"text": "`true`"
-											},
-											{
-												"kind": "text",
-												"text": " if the two colors have an acceptable contrast ratio\nfor the given "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastStandard",
-												"target": 141,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " and "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "ContrastFontSize",
-												"target": 144,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": ",\n"
-											},
-											{
-												"kind": "code",
-												"text": "`false`"
-											},
-											{
-												"kind": "text",
-												"text": " if they do not have an acceptable ratio."
-											}
-										]
-									}
-								]
-							},
-							"sources": [
-								{
-									"fileName": "color/color-contrast/color-contrast-assessor.ts",
-									"line": 135,
-									"character": 19
-								}
-							],
-							"parameters": [
-								{
-									"id": 175,
-									"name": "hexA",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 176,
-									"name": "hexB",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								},
-								{
-									"id": 177,
-									"name": "standard",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"target": 141,
-										"name": "ContrastStandard",
-										"package": "@batpb/genart"
-									}
-								},
-								{
-									"id": 178,
 									"name": "fontSize",
 									"variant": "param",
 									"kind": 32768,
@@ -3286,8 +2622,7 @@
 				{
 					"title": "Methods",
 					"children": [
-						148,
-						173
+						148
 					]
 				}
 			],
@@ -3335,45 +2670,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 2,
-					"name": "_MATCHED_COLORS",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "A map of colors whose names have already been retrieved from the\nnearest color method."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-name/color-name-manager.ts",
-							"line": 45,
-							"character": 28
-						}
-					],
-					"type": {
-						"type": "reference",
-						"target": 200,
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							}
-						],
-						"name": "StringMap",
-						"package": "@batpb/genart"
-					},
-					"defaultValue": "..."
 				},
 				{
 					"id": 9,
@@ -3430,7 +2726,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_MATCHED_COLORS",
-										"target": 2,
+										"target": {
+											"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
+											"qualifiedName": "ColorNameManager._MATCHED_COLORS"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -3685,64 +2984,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 12,
-					"name": "formatHex",
-					"variant": "declaration",
-					"kind": 2048,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true
-					},
-					"sources": [
-						{
-							"fileName": "color/color-name/color-name-manager.ts",
-							"line": 114,
-							"character": 19
-						}
-					],
-					"signatures": [
-						{
-							"id": 13,
-							"name": "formatHex",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Adds a hash symbol (#) to the beginning of the given string\nif one is missing and returns the result with all uppercase\ncharacters."
-									}
-								]
-							},
-							"sources": [
-								{
-									"fileName": "color/color-name/color-name-manager.ts",
-									"line": 114,
-									"character": 19
-								}
-							],
-							"parameters": [
-								{
-									"id": 14,
-									"name": "original",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						}
-					]
 				}
 			],
 			"groups": [
@@ -3753,18 +2994,11 @@
 					]
 				},
 				{
-					"title": "Properties",
-					"children": [
-						2
-					]
-				},
-				{
 					"title": "Methods",
 					"children": [
 						9,
 						3,
-						6,
-						12
+						6
 					]
 				}
 			],
@@ -3825,7 +3059,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_RANDOM_ORDER",
-												"target": 82,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._RANDOM_ORDER"
+												},
 												"tsLinkText": ""
 											}
 										]
@@ -3900,271 +3137,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 79,
-					"name": "_COLOR_CHOICES",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "A list of "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "Color",
-								"target": 17,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " objects that the selector can choose from."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector.ts",
-							"line": 34,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "array",
-						"elementType": {
-							"type": "reference",
-							"target": 17,
-							"name": "Color",
-							"package": "@batpb/genart"
-						}
-					},
-					"defaultValue": "[]"
-				},
-				{
-					"id": 80,
-					"name": "_COLOR_NAMES",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "A set of the names of the colors that can be\nor have been chosen by the color selector."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector.ts",
-							"line": 40,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "reference",
-						"target": {
-							"sourceFileName": "node_modules/typescript/lib/lib.es2015.collection.d.ts",
-							"qualifiedName": "Set"
-						},
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							}
-						],
-						"name": "Set",
-						"package": "typescript",
-						"externalUrl": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set"
-					},
-					"defaultValue": "..."
-				},
-				{
-					"id": 81,
-					"name": "_NAME",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The name of the color selector."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector.ts",
-							"line": 45,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "string"
-					}
-				},
-				{
-					"id": 82,
-					"name": "_RANDOM_ORDER",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "A flag that determines the color selection order\nof "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "selectColorFromChoices",
-								"target": 92,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": ".<br/>\nWhen "
-							},
-							{
-								"kind": "code",
-								"text": "`true`"
-							},
-							{
-								"kind": "text",
-								"text": ", "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "selectColorFromChoices",
-								"target": 92,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " will select colors\nfrom "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "_COLOR_CHOICES",
-								"target": 79,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " in a random order.<br/>\nWhen "
-							},
-							{
-								"kind": "code",
-								"text": "`false`"
-							},
-							{
-								"kind": "text",
-								"text": ", "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "selectColorFromChoices",
-								"target": 92,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " will select colors\nlist order."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector.ts",
-							"line": 55,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "boolean"
-					}
-				},
-				{
-					"id": 83,
-					"name": "_currentIndex",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The current index of "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "_COLOR_CHOICES",
-								"target": 79,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " being chosen\nwhen colors are selected in list order (i.e. "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "_RANDOM_ORDER",
-								"target": 82,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " is "
-							},
-							{
-								"kind": "code",
-								"text": "`false`"
-							},
-							{
-								"kind": "text",
-								"text": ")."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector.ts",
-							"line": 61,
-							"character": 12
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					},
-					"defaultValue": "0"
 				},
 				{
 					"id": 88,
@@ -4362,7 +3334,10 @@
 											"kind": "inline-tag",
 											"tag": "@link",
 											"text": "_COLOR_NAMES",
-											"target": 80,
+											"target": {
+												"sourceFileName": "src/main/color/color-selector.ts",
+												"qualifiedName": "ColorSelector._COLOR_NAMES"
+											},
 											"tsLinkText": ""
 										},
 										{
@@ -4641,7 +3616,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_COLOR_CHOICES",
-												"target": 79,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._COLOR_CHOICES"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -4652,7 +3630,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_COLOR_CHOICES",
-												"target": 79,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._COLOR_CHOICES"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -4733,7 +3714,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_COLOR_CHOICES",
-										"target": 79,
+										"target": {
+											"sourceFileName": "src/main/color/color-selector.ts",
+											"qualifiedName": "ColorSelector._COLOR_CHOICES"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -4770,97 +3754,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 104,
-					"name": "incrementCurrentIndex",
-					"variant": "declaration",
-					"kind": 2048,
-					"flags": {
-						"isPrivate": true
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector.ts",
-							"line": 170,
-							"character": 12
-						}
-					],
-					"signatures": [
-						{
-							"id": 105,
-							"name": "incrementCurrentIndex",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Increment "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "_currentIndex",
-										"target": 83,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " to select the next\n"
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "Color",
-										"target": 17,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " element in the "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "_COLOR_CHOICES",
-										"target": 79,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " list."
-									}
-								],
-								"blockTags": [
-									{
-										"tag": "@see",
-										"content": [
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "_RANDOM_ORDER",
-												"target": 82,
-												"tsLinkText": ""
-											}
-										]
-									}
-								]
-							},
-							"sources": [
-								{
-									"fileName": "color/color-selector.ts",
-									"line": 170,
-									"character": 12
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "void"
-							}
-						}
-					]
 				}
 			],
 			"groups": [
@@ -4868,16 +3761,6 @@
 					"title": "Constructors",
 					"children": [
 						75
-					]
-				},
-				{
-					"title": "Properties",
-					"children": [
-						79,
-						80,
-						81,
-						82,
-						83
 					]
 				},
 				{
@@ -4895,8 +3778,7 @@
 						94,
 						86,
 						92,
-						101,
-						104
+						101
 					]
 				}
 			],
@@ -4979,71 +3861,6 @@
 					]
 				},
 				{
-					"id": 132,
-					"name": "_COLOR_SELECTORS",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "Underlying "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "Set",
-								"target": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set"
-							},
-							{
-								"kind": "text",
-								"text": " of "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "ColorSelector",
-								"target": 74,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " objects."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "color/color-selector-manager.ts",
-							"line": 33,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "reference",
-						"target": {
-							"sourceFileName": "node_modules/typescript/lib/lib.es2015.collection.d.ts",
-							"qualifiedName": "Set"
-						},
-						"typeArguments": [
-							{
-								"type": "reference",
-								"target": 74,
-								"name": "ColorSelector",
-								"package": "@batpb/genart"
-							}
-						],
-						"name": "Set",
-						"package": "typescript",
-						"externalUrl": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set"
-					},
-					"defaultValue": "..."
-				},
-				{
 					"id": 135,
 					"name": "addColorSelector",
 					"variant": "declaration",
@@ -5088,7 +3905,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_COLOR_SELECTORS",
-										"target": 132,
+										"target": {
+											"sourceFileName": "src/main/color/color-selector-manager.ts",
+											"qualifiedName": "ColorSelectorManager._COLOR_SELECTORS"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -5171,7 +3991,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_COLOR_SELECTORS",
-										"target": 132,
+										"target": {
+											"sourceFileName": "src/main/color/color-selector-manager.ts",
+											"qualifiedName": "ColorSelectorManager._COLOR_SELECTORS"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -5266,7 +4089,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_COLOR_SELECTORS",
-										"target": 132,
+										"target": {
+											"sourceFileName": "src/main/color/color-selector-manager.ts",
+											"qualifiedName": "ColorSelectorManager._COLOR_SELECTORS"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -5333,12 +4159,6 @@
 					]
 				},
 				{
-					"title": "Properties",
-					"children": [
-						132
-					]
-				},
-				{
 					"title": "Methods",
 					"children": [
 						135,
@@ -5351,7 +4171,7 @@
 				{
 					"fileName": "color/color-selector-manager.ts",
 					"line": 27,
-					"character": 6
+					"character": 13
 				}
 			]
 		},
@@ -5424,7 +4244,8 @@
 					"variant": "declaration",
 					"kind": 262144,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -5438,7 +4259,9 @@
 						"name": "colorNames",
 						"variant": "signature",
 						"kind": 524288,
-						"flags": {},
+						"flags": {
+							"isInherited": true
+						},
 						"comment": {
 							"summary": [],
 							"blockTags": [
@@ -5485,7 +4308,8 @@
 					"variant": "declaration",
 					"kind": 262144,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -5499,7 +4323,9 @@
 						"name": "name",
 						"variant": "signature",
 						"kind": 524288,
-						"flags": {},
+						"flags": {
+							"isInherited": true
+						},
 						"comment": {
 							"summary": [],
 							"blockTags": [
@@ -5605,7 +4431,8 @@
 					"variant": "declaration",
 					"kind": 262144,
 					"flags": {
-						"isProtected": true
+						"isProtected": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -5619,7 +4446,9 @@
 						"name": "COLOR_NAMES",
 						"variant": "signature",
 						"kind": 524288,
-						"flags": {},
+						"flags": {
+							"isInherited": true
+						},
 						"comment": {
 							"summary": [],
 							"blockTags": [
@@ -5634,7 +4463,10 @@
 											"kind": "inline-tag",
 											"tag": "@link",
 											"text": "_COLOR_NAMES",
-											"target": 80,
+											"target": {
+												"sourceFileName": "src/main/color/color-selector.ts",
+												"qualifiedName": "ColorSelector._COLOR_NAMES"
+											},
 											"tsLinkText": ""
 										},
 										{
@@ -5686,7 +4518,8 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -5701,7 +4534,9 @@
 							"name": "getBackgroundColor",
 							"variant": "signature",
 							"kind": 4096,
-							"flags": {},
+							"flags": {
+								"isInherited": true
+							},
 							"comment": {
 								"summary": [
 									{
@@ -5904,7 +4739,8 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -5919,7 +4755,9 @@
 							"name": "selectColorFromChoices",
 							"variant": "signature",
 							"kind": 4096,
-							"flags": {},
+							"flags": {
+								"isInherited": true
+							},
 							"comment": {
 								"summary": [],
 								"blockTags": [
@@ -5945,7 +4783,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_COLOR_CHOICES",
-												"target": 79,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._COLOR_CHOICES"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -5956,7 +4797,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_COLOR_CHOICES",
-												"target": 79,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._COLOR_CHOICES"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -6010,7 +4854,8 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {
-						"isProtected": true
+						"isProtected": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -6025,7 +4870,9 @@
 							"name": "addColorChoice",
 							"variant": "signature",
 							"kind": 4096,
-							"flags": {},
+							"flags": {
+								"isInherited": true
+							},
 							"comment": {
 								"summary": [
 									{
@@ -6047,7 +4894,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_COLOR_CHOICES",
-										"target": 79,
+										"target": {
+											"sourceFileName": "src/main/color/color-selector.ts",
+											"qualifiedName": "ColorSelector._COLOR_CHOICES"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -6431,7 +5281,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "choosePaletteColors",
-												"target": 290,
+												"target": {
+													"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
+													"qualifiedName": "PaletteColorSelector.choosePaletteColors"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -6512,7 +5365,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "MIN_COLOR_COUNT",
-												"target": 275,
+												"target": {
+													"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
+													"qualifiedName": "PaletteColorSelector.MIN_COLOR_COUNT"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -6582,7 +5438,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "choosePaletteColors",
-												"target": 290,
+												"target": {
+													"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
+													"qualifiedName": "PaletteColorSelector.choosePaletteColors"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -6622,7 +5481,8 @@
 					"variant": "declaration",
 					"kind": 262144,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -6636,7 +5496,9 @@
 						"name": "colorNames",
 						"variant": "signature",
 						"kind": 524288,
-						"flags": {},
+						"flags": {
+							"isInherited": true
+						},
 						"comment": {
 							"summary": [],
 							"blockTags": [
@@ -6683,7 +5545,8 @@
 					"variant": "declaration",
 					"kind": 262144,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -6697,7 +5560,9 @@
 						"name": "name",
 						"variant": "signature",
 						"kind": 524288,
-						"flags": {},
+						"flags": {
+							"isInherited": true
+						},
 						"comment": {
 							"summary": [],
 							"blockTags": [
@@ -6746,7 +5611,7 @@
 					"sources": [
 						{
 							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 70,
+							"line": 72,
 							"character": 24
 						}
 					],
@@ -6775,7 +5640,7 @@
 						"sources": [
 							{
 								"fileName": "color/palette/palette-color-selector.ts",
-								"line": 70,
+								"line": 72,
 								"character": 24
 							}
 						],
@@ -6803,7 +5668,8 @@
 					"variant": "declaration",
 					"kind": 262144,
 					"flags": {
-						"isProtected": true
+						"isProtected": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -6817,7 +5683,9 @@
 						"name": "COLOR_NAMES",
 						"variant": "signature",
 						"kind": 524288,
-						"flags": {},
+						"flags": {
+							"isInherited": true
+						},
 						"comment": {
 							"summary": [],
 							"blockTags": [
@@ -6832,7 +5700,10 @@
 											"kind": "inline-tag",
 											"tag": "@link",
 											"text": "_COLOR_NAMES",
-											"target": 80,
+											"target": {
+												"sourceFileName": "src/main/color/color-selector.ts",
+												"qualifiedName": "ColorSelector._COLOR_NAMES"
+											},
 											"tsLinkText": ""
 										},
 										{
@@ -6879,61 +5750,13 @@
 					}
 				},
 				{
-					"id": 275,
-					"name": "MIN_COLOR_COUNT",
-					"variant": "declaration",
-					"kind": 262144,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true
-					},
-					"sources": [
-						{
-							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 84,
-							"character": 23
-						}
-					],
-					"getSignature": {
-						"id": 276,
-						"name": "MIN_COLOR_COUNT",
-						"variant": "signature",
-						"kind": 524288,
-						"flags": {},
-						"comment": {
-							"summary": [],
-							"blockTags": [
-								{
-									"tag": "@returns",
-									"content": [
-										{
-											"kind": "text",
-											"text": "2"
-										}
-									]
-								}
-							]
-						},
-						"sources": [
-							{
-								"fileName": "color/palette/palette-color-selector.ts",
-								"line": 84,
-								"character": 23
-							}
-						],
-						"type": {
-							"type": "intrinsic",
-							"name": "number"
-						}
-					}
-				},
-				{
 					"id": 301,
 					"name": "getBackgroundColor",
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -6948,7 +5771,9 @@
 							"name": "getBackgroundColor",
 							"variant": "signature",
 							"kind": 4096,
-							"flags": {},
+							"flags": {
+								"isInherited": true
+							},
 							"comment": {
 								"summary": [
 									{
@@ -7086,7 +5911,7 @@
 					"sources": [
 						{
 							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 77,
+							"line": 79,
 							"character": 20
 						}
 					],
@@ -7119,7 +5944,7 @@
 							"sources": [
 								{
 									"fileName": "color/palette/palette-color-selector.ts",
-									"line": 77,
+									"line": 79,
 									"character": 20
 								}
 							],
@@ -7148,7 +5973,8 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {
-						"isPublic": true
+						"isPublic": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -7163,7 +5989,9 @@
 							"name": "selectColorFromChoices",
 							"variant": "signature",
 							"kind": 4096,
-							"flags": {},
+							"flags": {
+								"isInherited": true
+							},
 							"comment": {
 								"summary": [],
 								"blockTags": [
@@ -7189,7 +6017,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_COLOR_CHOICES",
-												"target": 79,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._COLOR_CHOICES"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -7200,7 +6031,10 @@
 												"kind": "inline-tag",
 												"tag": "@link",
 												"text": "_COLOR_CHOICES",
-												"target": 79,
+												"target": {
+													"sourceFileName": "src/main/color/color-selector.ts",
+													"qualifiedName": "ColorSelector._COLOR_CHOICES"
+												},
 												"tsLinkText": ""
 											},
 											{
@@ -7254,7 +6088,8 @@
 					"variant": "declaration",
 					"kind": 2048,
 					"flags": {
-						"isProtected": true
+						"isProtected": true,
+						"isInherited": true
 					},
 					"sources": [
 						{
@@ -7269,7 +6104,9 @@
 							"name": "addColorChoice",
 							"variant": "signature",
 							"kind": 4096,
-							"flags": {},
+							"flags": {
+								"isInherited": true
+							},
 							"comment": {
 								"summary": [
 									{
@@ -7291,7 +6128,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_COLOR_CHOICES",
-										"target": 79,
+										"target": {
+											"sourceFileName": "src/main/color/color-selector.ts",
+											"qualifiedName": "ColorSelector._COLOR_CHOICES"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -7338,223 +6178,6 @@
 						"target": 101,
 						"name": "ColorSelector.addColorChoice"
 					}
-				},
-				{
-					"id": 277,
-					"name": "buildName",
-					"variant": "declaration",
-					"kind": 2048,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true
-					},
-					"sources": [
-						{
-							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 94,
-							"character": 19
-						}
-					],
-					"signatures": [
-						{
-							"id": 278,
-							"name": "buildName",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Build the name of the selector from the name\nof the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "Palette",
-										"target": 248,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": "."
-									}
-								]
-							},
-							"sources": [
-								{
-									"fileName": "color/palette/palette-color-selector.ts",
-									"line": 94,
-									"character": 19
-								}
-							],
-							"parameters": [
-								{
-									"id": 279,
-									"name": "palette",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"target": 248,
-										"name": "Palette",
-										"package": "@batpb/genart"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						}
-					]
-				},
-				{
-					"id": 290,
-					"name": "choosePaletteColors",
-					"variant": "declaration",
-					"kind": 2048,
-					"flags": {
-						"isPrivate": true
-					},
-					"sources": [
-						{
-							"fileName": "color/palette/palette-color-selector.ts",
-							"line": 118,
-							"character": 12
-						}
-					],
-					"signatures": [
-						{
-							"id": 291,
-							"name": "choosePaletteColors",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Choose the colors from the given "
-									},
-									{
-										"kind": "inline-tag",
-										"tag": "@link",
-										"text": "Palette",
-										"target": 248,
-										"tsLinkText": ""
-									},
-									{
-										"kind": "text",
-										"text": " that will be available in the selector."
-									}
-								]
-							},
-							"sources": [
-								{
-									"fileName": "color/palette/palette-color-selector.ts",
-									"line": 118,
-									"character": 12
-								}
-							],
-							"parameters": [
-								{
-									"id": 292,
-									"name": "palette",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"type": {
-										"type": "reference",
-										"target": 248,
-										"name": "Palette",
-										"package": "@batpb/genart"
-									}
-								},
-								{
-									"id": 293,
-									"name": "buildWithPaletteOrder",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "When "
-											},
-											{
-												"kind": "code",
-												"text": "`true`"
-											},
-											{
-												"kind": "text",
-												"text": ", colors will be chosen from the palette\nin the order they appear in the "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "Palette.COLORS",
-												"target": 252,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " list. When "
-											},
-											{
-												"kind": "code",
-												"text": "`false`"
-											},
-											{
-												"kind": "text",
-												"text": ", colors will\nbe chosen from the palette in random order."
-											}
-										]
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								},
-								{
-									"id": 294,
-									"name": "colorCount",
-									"variant": "param",
-									"kind": 32768,
-									"flags": {},
-									"comment": {
-										"summary": [
-											{
-												"kind": "text",
-												"text": "The number of colors to choose from the palette. This number\nshould be greater than or equal to "
-											},
-											{
-												"kind": "inline-tag",
-												"tag": "@link",
-												"text": "MIN_COLOR_COUNT",
-												"target": 275,
-												"tsLinkText": ""
-											},
-											{
-												"kind": "text",
-												"text": " and less than or\nequal to the number of colors in the given palette."
-											}
-										]
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "number"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "void"
-							}
-						}
-					]
 				}
 			],
 			"groups": [
@@ -7570,8 +6193,7 @@
 						295,
 						297,
 						286,
-						306,
-						275
+						306
 					]
 				},
 				{
@@ -7580,9 +6202,7 @@
 						301,
 						288,
 						299,
-						308,
-						277,
-						290
+						308
 					]
 				}
 			],
@@ -7638,79 +6258,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 358,
-					"name": "_randomMethod",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The primary function to be called when generating any random numbers.\nSet to "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "Math.random",
-								"target": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random"
-							},
-							{
-								"kind": "text",
-								"text": " by default."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "random/random.ts",
-							"line": 32,
-							"character": 19
-						}
-					],
-					"type": {
-						"type": "reflection",
-						"declaration": {
-							"id": 359,
-							"name": "__type",
-							"variant": "declaration",
-							"kind": 65536,
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "random/random.ts",
-									"line": 32,
-									"character": 35
-								}
-							],
-							"signatures": [
-								{
-									"id": 360,
-									"name": "__type",
-									"variant": "signature",
-									"kind": 4096,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "random/random.ts",
-											"line": 32,
-											"character": 35
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "number"
-									}
-								}
-							]
-						}
-					},
-					"defaultValue": "Math.random"
 				},
 				{
 					"id": 361,
@@ -7939,7 +6486,7 @@
 									"character": 18
 								}
 							],
-							"typeParameter": [
+							"typeParameters": [
 								{
 									"id": 385,
 									"name": "Type",
@@ -8450,7 +6997,7 @@
 									"character": 18
 								}
 							],
-							"typeParameter": [
+							"typeParameters": [
 								{
 									"id": 389,
 									"name": "Type",
@@ -8519,12 +7066,6 @@
 					"title": "Constructors",
 					"children": [
 						391
-					]
-				},
-				{
-					"title": "Properties",
-					"children": [
-						358
 					]
 				},
 				{
@@ -8598,7 +7139,7 @@
 									"character": 4
 								}
 							],
-							"typeParameter": [
+							"typeParameters": [
 								{
 									"id": 396,
 									"name": "Type",
@@ -8647,64 +7188,6 @@
 					]
 				},
 				{
-					"id": 398,
-					"name": "_elements",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The elements that "
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "getRandomElement",
-								"target": 401,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " and\n"
-							},
-							{
-								"kind": "inline-tag",
-								"tag": "@link",
-								"text": "getRandomElementAndRemove",
-								"target": 403,
-								"tsLinkText": ""
-							},
-							{
-								"kind": "text",
-								"text": " can select from."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "random/random-selector.ts",
-							"line": 31,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "array",
-						"elementType": {
-							"type": "reference",
-							"target": 396,
-							"name": "Type",
-							"package": "@batpb/genart",
-							"qualifiedName": "RandomSelector.Type",
-							"refersToTypeParameter": true
-						}
-					}
-				},
-				{
 					"id": 399,
 					"name": "size",
 					"variant": "declaration",
@@ -8735,7 +7218,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_elements",
-									"target": 398,
+									"target": {
+										"sourceFileName": "src/main/random/random-selector.ts",
+										"qualifiedName": "RandomSelector._elements"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -8789,7 +7275,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_elements",
-										"target": 398,
+										"target": {
+											"sourceFileName": "src/main/random/random-selector.ts",
+											"qualifiedName": "RandomSelector._elements"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -8800,7 +7289,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_elements",
-										"target": 398,
+										"target": {
+											"sourceFileName": "src/main/random/random-selector.ts",
+											"qualifiedName": "RandomSelector._elements"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -8878,7 +7370,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_elements",
-										"target": 398,
+										"target": {
+											"sourceFileName": "src/main/random/random-selector.ts",
+											"qualifiedName": "RandomSelector._elements"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -8889,7 +7384,10 @@
 										"kind": "inline-tag",
 										"tag": "@link",
 										"text": "_elements",
-										"target": 398,
+										"target": {
+											"sourceFileName": "src/main/random/random-selector.ts",
+											"qualifiedName": "RandomSelector._elements"
+										},
 										"tsLinkText": ""
 									},
 									{
@@ -8941,12 +7439,6 @@
 					"title": "Constructors",
 					"children": [
 						394
-					]
-				},
-				{
-					"title": "Properties",
-					"children": [
-						398
 					]
 				},
 				{
@@ -9078,62 +7570,6 @@
 					]
 				},
 				{
-					"id": 239,
-					"name": "_max",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The maximum value of the Range."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "math/range.ts",
-							"line": 31,
-							"character": 53
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					}
-				},
-				{
-					"id": 238,
-					"name": "_min",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The minimum value of the Range."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "math/range.ts",
-							"line": 31,
-							"character": 31
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "number"
-					}
-				},
-				{
 					"id": 240,
 					"name": "max",
 					"variant": "declaration",
@@ -9214,7 +7650,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_min",
-									"target": 238,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._min"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9225,7 +7664,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_min",
-									"target": 238,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._min"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9236,7 +7678,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_max",
-									"target": 239,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._max"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9247,7 +7692,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_min",
-									"target": 238,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._min"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9258,7 +7706,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_max",
-									"target": 239,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._max"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9382,7 +7833,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_max",
-									"target": 239,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._max"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9393,7 +7847,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_min",
-									"target": 238,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._min"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9404,7 +7861,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_max",
-									"target": 239,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._max"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9415,7 +7875,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_min",
-									"target": 238,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._min"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9426,7 +7889,10 @@
 									"kind": "inline-tag",
 									"tag": "@link",
 									"text": "_max",
-									"target": 239,
+									"target": {
+										"sourceFileName": "src/main/math/range.ts",
+										"qualifiedName": "Range._max"
+									},
 									"tsLinkText": ""
 								},
 								{
@@ -9475,13 +7941,6 @@
 					"title": "Constructors",
 					"children": [
 						234
-					]
-				},
-				{
-					"title": "Properties",
-					"children": [
-						239,
-						238
 					]
 				},
 				{
@@ -9538,43 +7997,6 @@
 					]
 				},
 				{
-					"id": 182,
-					"name": "_p5",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isStatic": true,
-						"isOptional": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The underlying p5.js sketch context object."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "p5/sketch-context.ts",
-							"line": 36,
-							"character": 19
-						}
-					],
-					"type": {
-						"type": "reference",
-						"target": {
-							"sourceFileName": "node_modules/@types/p5/index.d.ts",
-							"qualifiedName": "p5"
-						},
-						"name": "__module",
-						"package": "@types/p5",
-						"externalUrl": "https://p5js.org/reference/#/p5/p5",
-						"qualifiedName": "p5"
-					}
-				},
-				{
 					"id": 186,
 					"name": "p5",
 					"variant": "declaration",
@@ -9586,7 +8008,7 @@
 					"sources": [
 						{
 							"fileName": "p5/sketch-context.ts",
-							"line": 55,
+							"line": 56,
 							"character": 22
 						}
 					],
@@ -9613,7 +8035,7 @@
 						"sources": [
 							{
 								"fileName": "p5/sketch-context.ts",
-								"line": 55,
+								"line": 56,
 								"character": 22
 							}
 						],
@@ -9625,7 +8047,7 @@
 							},
 							"name": "__module",
 							"package": "@types/p5",
-							"externalUrl": "https://p5js.org/reference/#/p5/p5",
+							"externalUrl": "https://p5js.org/reference/",
 							"qualifiedName": "p5"
 						}
 					}
@@ -9691,7 +8113,7 @@
 										},
 										"name": "__module",
 										"package": "@types/p5",
-										"externalUrl": "https://p5js.org/reference/#/p5/p5",
+										"externalUrl": "https://p5js.org/reference/",
 										"qualifiedName": "p5"
 									}
 								}
@@ -9709,12 +8131,6 @@
 					"title": "Constructors",
 					"children": [
 						188
-					]
-				},
-				{
-					"title": "Properties",
-					"children": [
-						182
 					]
 				},
 				{
@@ -9782,7 +8198,7 @@
 									"character": 4
 								}
 							],
-							"typeParameter": [
+							"typeParameters": [
 								{
 									"id": 203,
 									"name": "ValueType",
@@ -9809,55 +8225,6 @@
 							}
 						}
 					]
-				},
-				{
-					"id": 204,
-					"name": "_map",
-					"variant": "declaration",
-					"kind": 1024,
-					"flags": {
-						"isPrivate": true,
-						"isReadonly": true
-					},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "The underlying map object."
-							}
-						]
-					},
-					"sources": [
-						{
-							"fileName": "map/string-map.ts",
-							"line": 26,
-							"character": 21
-						}
-					],
-					"type": {
-						"type": "reference",
-						"target": {
-							"sourceFileName": "node_modules/typescript/lib/lib.es2015.collection.d.ts",
-							"qualifiedName": "Map"
-						},
-						"typeArguments": [
-							{
-								"type": "intrinsic",
-								"name": "string"
-							},
-							{
-								"type": "reference",
-								"target": 203,
-								"name": "ValueType",
-								"package": "@batpb/genart",
-								"qualifiedName": "StringMap.ValueType",
-								"refersToTypeParameter": true
-							}
-						],
-						"name": "Map",
-						"package": "typescript",
-						"externalUrl": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map"
-					}
 				},
 				{
 					"id": 205,
@@ -10475,12 +8842,6 @@
 					]
 				},
 				{
-					"title": "Properties",
-					"children": [
-						204
-					]
-				},
-				{
 					"title": "Accessors",
 					"children": [
 						205,
@@ -10697,40 +9058,42 @@
 									"character": 28
 								}
 							],
-							"indexSignature": {
-								"id": 257,
-								"name": "__index",
-								"variant": "signature",
-								"kind": 8192,
-								"flags": {},
-								"sources": [
-									{
-										"fileName": "color/palette/palette.ts",
-										"line": 69,
-										"character": 8
-									}
-								],
-								"parameters": [
-									{
-										"id": 258,
-										"name": "HEX",
-										"variant": "param",
-										"kind": 32768,
-										"flags": {},
-										"type": {
+							"indexSignatures": [
+								{
+									"id": 257,
+									"name": "__index",
+									"variant": "signature",
+									"kind": 8192,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "color/palette/palette.ts",
+											"line": 69,
+											"character": 8
+										}
+									],
+									"parameters": [
+										{
+											"id": 258,
+											"name": "HEX",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
 											"type": "intrinsic",
 											"name": "string"
 										}
 									}
-								],
-								"type": {
-									"type": "array",
-									"elementType": {
-										"type": "intrinsic",
-										"name": "string"
-									}
 								}
-							}
+							]
 						}
 					}
 				},
@@ -11640,7 +10003,7 @@
 			"sources": [
 				{
 					"fileName": "color/palette/palettes/nature/flower/blue-lily.ts",
-					"line": 38,
+					"line": 39,
 					"character": 13
 				}
 			],
@@ -12767,22 +11130,13 @@
 								"target": 311
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _007058: PaletteColor = {\n    HEX: '#007058',\n    RGB: {R: 0, G: 112, B: 88},\n    HSL: {H: 167, S: 100, L: 22},\n    NAME: 'teal dark green',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/green/007058.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -12820,22 +11174,13 @@
 								"target": 313
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _0437F1: PaletteColor = {\n    HEX: '#0437F1',\n    RGB: {R: 4, G: 55, B: 241},\n    HSL: {H: 227, S: 97, L: 48},\n    NAME: 'blue bouquet',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/blue/0437f1.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -12873,22 +11218,13 @@
 								"target": 313
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _0FFF4F: PaletteColor = {\n    HEX: '#0FFF4F',\n    RGB: {R: 15, G: 255, B: 79},\n    HSL: {H: 136, S: 100, L: 53},\n    NAME: 'cathode green',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/green/0fff4f.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -12926,22 +11262,13 @@
 								"target": 313
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _121212: PaletteColor = {\n    HEX: '#121212',\n    RGB: {R: 18, G: 18, B: 18},\n    HSL: {H: 0, S: 0, L: 7},\n    NAME: 'dark tone ink',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/black/121212.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -12979,22 +11306,13 @@
 								"target": 314
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _1D90AF: PaletteColor = {\n    HEX: '#1D90AF',\n    RGB: {R: 29, G: 144, B: 175},\n    HSL: {H: 193, S: 72, L: 40},\n    NAME: 'mediterranean sea',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/blue/1d90af.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13032,22 +11350,13 @@
 								"target": 311
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _23856D: PaletteColor = {\n    HEX: '#23856D',\n    RGB: {R: 35, G: 133, B: 109},\n    HSL: {H: 165, S: 58, L: 33},\n    NAME: 'accent green blue',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/green/23856d.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13085,22 +11394,13 @@
 								"target": 314
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _3B2212: PaletteColor = {\n    HEX: '#3B2212',\n    RGB: {R: 59, G: 34, B: 18},\n    HSL: {H: 23, S: 53, L: 15},\n    NAME: 'délicieux au chocolat',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/brown/3b2212.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13138,22 +11438,13 @@
 								"target": 313
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _7A00F5: PaletteColor = {\n    HEX: '#7A00F5',\n    RGB: {R: 122, G: 0, B: 245},\n    HSL: {H: 270, S: 100, L: 48},\n    NAME: 'poison purple',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/purple/7a00f5.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13191,22 +11482,13 @@
 								"target": 314
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _7DCED8: PaletteColor = {\n    HEX: '#7DCED8',\n    RGB: {R: 125, G: 206, B: 216},\n    HSL: {H: 187, S: 54, L: 67},\n    NAME: 'spray',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/blue/7dced8.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13244,22 +11526,13 @@
 								"target": 311
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _BC010A: PaletteColor = {\n    HEX: '#BC010A',\n    RGB: {R: 188, G: 1, B: 10},\n    HSL: {H: 357, S: 99, L: 37},\n    NAME: \"bird's eye\",\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/red/bc010a.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13297,22 +11570,13 @@
 								"target": 311
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _D01625: PaletteColor = {\n    HEX: '#D01625',\n    RGB: {R: 208, G: 22, B: 37},\n    HSL: {H: 355, S: 81, L: 45},\n    NAME: 'cartoon violence',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/red/d01625.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13350,22 +11614,13 @@
 								"target": 312
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _EC417A: PaletteColor = {\n    HEX: '#EC417A',\n    RGB: {R: 236, G: 65, B: 122},\n    HSL: {H: 340, S: 82, L: 59},\n    NAME: 'radishical',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/pink/ec417a.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13403,22 +11658,13 @@
 								"target": 312
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _F06090: PaletteColor = {\n    HEX: '#F06090',\n    RGB: {R: 240, G: 96, B: 144},\n    HSL: {H: 340, S: 83, L: 66},\n    NAME: 'medium pink',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/pink/f06090.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13456,22 +11702,13 @@
 								"target": 314
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _F0F3F4: PaletteColor = {\n    HEX: '#F0F3F4',\n    RGB: {R: 240, G: 243, B: 244},\n    HSL: {H: 195, S: 15, L: 95},\n    NAME: 'zappy zebra',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/gray/f0f3f4.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13509,22 +11746,13 @@
 								"target": 312
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _F490B1: PaletteColor = {\n    HEX: '#F490B1',\n    RGB: {R: 244, G: 144, B: 177},\n    HSL: {H: 340, S: 82, L: 76},\n    NAME: 'sachet pink',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/pink/f490b1.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13562,22 +11790,13 @@
 								"target": 312
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _F8B9CE: PaletteColor = {\n    HEX: '#F8B9CE',\n    RGB: {R: 248, G: 185, B: 206},\n    HSL: {H: 340, S: 82, L: 85},\n    NAME: \"christy's smile\",\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/pink/f8b9ce.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13615,22 +11834,13 @@
 								"target": 314
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _FAFEFF: PaletteColor = {\n    HEX: '#FAFEFF',\n    RGB: {R: 250, G: 254, B: 255},\n    HSL: {H: 192, S: 100, L: 99},\n    NAME: 'polar bear in a blizzard',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/white/fafeff.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13668,22 +11878,13 @@
 								"target": 311
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _FBF9F9: PaletteColor = {\n    HEX: '#FBF9F9',\n    RGB: {R: 251, G: 249, B: 249},\n    HSL: {H: 0, S: 20, L: 98},\n    NAME: 'doctor white',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/white/fbf9f9.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13721,22 +11922,13 @@
 								"target": 312
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _FCE3EC: PaletteColor = {\n    HEX: '#FCE3EC',\n    RGB: {R: 252, G: 227, B: 236},\n    HSL: {H: 338, S: 81, L: 94},\n    NAME: 'spun sugar',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/pink/fce3ec.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -13774,22 +11966,13 @@
 								"target": 313
 							}
 						]
-					},
-					{
-						"tag": "@source",
-						"content": [
-							{
-								"kind": "code",
-								"text": "\n```typescript\nconst _FF6BB5: PaletteColor = {\n    HEX: '#FF6BB5',\n    RGB: {R: 255, G: 107, B: 181},\n    HSL: {H: 330, S: 100, L: 71},\n    NAME: 'fen hong pink',\n    DISCRIMINATOR: Discriminators.PALETTE_COLOR\n}\n```\n\n"
-							}
-						]
 					}
 				]
 			},
 			"sources": [
 				{
 					"fileName": "color/palette/palette-colors/pink/ff6bb5.ts",
-					"line": 38,
+					"line": 36,
 					"character": 13
 				}
 			],
@@ -14392,11 +12575,11 @@
 		}
 	],
 	"packageName": "@batpb/genart",
-	"packageVersion": "1.0.0",
+	"packageVersion": "1.0.1",
 	"readme": [
 		{
 			"kind": "text",
-			"text": "# [@batpb/genart](https://www.npmjs.com/package/@batpb/genart) - generative art library\n\nCopyright (C) 2023-2024 brittni and the polar bear LLC.\n\nA [TypeScript](https://www.typescriptlang.org/) compatible library built on [p5.js](https://p5js.org/) \nfor creating responsive generative art projects.\n\n## [see the project's GitHub Pages blog](https://brittni-and-the-polar-bear.github.io/generative-art-library/)\n\n## important notice\n\nThis project is currently in active development.\nLarge changes may be made to the API between minor versions.\n\n## package stats\n\n### actions\n\n[![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)\n[![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml)\n\n----\n\n### npm\n\n[![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart)\n![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library)\n![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)\n![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)](https://www.npmjs.com/package/@batpb/genart)\n\n![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40batpb%2Fgenart)\n\n\n----\n\n### security\n\n[![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart)](https://socket.dev/npm/package/@batpb/genart)\n\n----\n\n### github\n\n![GitHub followers](https://img.shields.io/github/followers/brittni-and-the-polar-bear)\n![GitHub Repo stars](https://img.shields.io/github/stars/brittni-and-the-polar-bear/generative-art-library)\n![GitHub watchers](https://img.shields.io/github/watchers/brittni-and-the-polar-bear/generative-art-library)\n\n![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library)\n![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/brittni-and-the-polar-bear/generative-art-library)\n\n![GitHub issues by-label (bug)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library/bug?color=red)\n![GitHub issues by-label (security)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library/security?color=red)\n\n![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-library/latest)\n\n![GitHub contributors](https://img.shields.io/github/contributors-anon/brittni-and-the-polar-bear/generative-art-library)\n\n![GitHub repo size](https://img.shields.io/github/repo-size/brittni-and-the-polar-bear/generative-art-library)\n\n----\n\n### docs coverage\n\n![Documentation Coverage](https://brittni-and-the-polar-bear.github.io/generative-art-library/doc/coverage.svg)\n\n----\n\n# getting started\n\n## install with [npm](https://www.npmjs.com/)\n\n"
+			"text": "# [@batpb/genart](https://www.npmjs.com/package/@batpb/genart) - generative art library\n\nCopyright (C) 2023-2024 brittni and the polar bear LLC.\n\nA [TypeScript](https://www.typescriptlang.org/) compatible library built on [p5.js](https://p5js.org/) \nfor creating responsive generative art projects.\n\n## [see the project's GitHub Pages blog](https://brittni-and-the-polar-bear.github.io/generative-art-library/)\n\n## important notice\n\nThis project is currently in active development.\n\n## package stats\n\n### actions\n\n[![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)\n[![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml)\n\n----\n\n### npm\n\n[![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart)\n![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library)\n![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library)\n![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart)](https://www.npmjs.com/package/@batpb/genart)\n\n![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40batpb%2Fgenart)\n\n\n----\n\n### security\n\n[![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart)](https://socket.dev/npm/package/@batpb/genart)\n\n----\n\n### github\n\n![GitHub followers](https://img.shields.io/github/followers/brittni-and-the-polar-bear)\n![GitHub Repo stars](https://img.shields.io/github/stars/brittni-and-the-polar-bear/generative-art-library)\n![GitHub watchers](https://img.shields.io/github/watchers/brittni-and-the-polar-bear/generative-art-library)\n\n![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library)\n![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/brittni-and-the-polar-bear/generative-art-library)\n\n![GitHub issues by-label (bug)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library/bug?color=red)\n![GitHub issues by-label (security)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library/security?color=red)\n\n![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-library/latest)\n\n![GitHub contributors](https://img.shields.io/github/contributors-anon/brittni-and-the-polar-bear/generative-art-library)\n\n![GitHub repo size](https://img.shields.io/github/repo-size/brittni-and-the-polar-bear/generative-art-library)\n\n----\n\n### docs coverage\n\n![Documentation Coverage](https://brittni-and-the-polar-bear.github.io/generative-art-library/doc/coverage.svg)\n\n----\n\n# getting started\n\n## install with [npm](https://www.npmjs.com/)\n\n"
 		},
 		{
 			"kind": "code",
@@ -14404,7 +12587,7 @@
 		},
 		{
 			"kind": "text",
-			"text": "\n\n----\n\n# [documentation](https://brittni-and-the-polar-bear.github.io/generative-art-library/doc/index.html)\n\n----\n\n# [experiments](https://brittni-and-the-polar-bear.github.io/generative-art-library/experiments/)\n\n----\n\n# meet the team (coming soon!)\n\n----\n\n# LICENSE information\n\nThe source code of this project is licensed under the \n[GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html). \nThe full text of the license can be found in the \n[LICENSE file](https://github.com/brittni-and-the-polar-bear/generative-art-library/blob/main/LICENSE) \nof the root directory.\n\n----\n\n# [development resources](https://brittni-and-the-polar-bear.github.io/generative-art-library/resources.html)\n\n## color names\n\n[Color Namer](https://colornamer.robertcooper.me/)\n\n## color palettes\n\n[color-hex](https://www.color-hex.com/)\n\n[coolors](https://coolors.co/)\n\n[culrs](https://culrs.com/)"
+			"text": "\n\n----\n\n# [documentation](https://brittni-and-the-polar-bear.github.io/generative-art-library/doc/index.html)\n\n## [v1.0.0 release notes](https://brittni-and-the-polar-bear.github.io/generative-art-library//release-notes/v1.x/v1.0.x/v1.0.0-notes.html)\n\n----\n\n# experiments (coming soon!)\n\n----\n\n# meet the team (coming soon!)\n\n----\n\n# LICENSE information\n\nThe source code of this project is licensed under the \n[GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html). \nThe full text of the license can be found in the \n[LICENSE file](https://github.com/brittni-and-the-polar-bear/generative-art-library/blob/main/LICENSE) \nof the root directory.\n\n----\n\n# [development resources](https://brittni-and-the-polar-bear.github.io/generative-art-library/resources.html)\n\n----\n\n## [colors](https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html)\n\n## [palettes](https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/all-palettes.html)"
 		}
 	],
 	"symbolIdMap": {
@@ -14415,10 +12598,6 @@
 		"1": {
 			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
 			"qualifiedName": "ColorNameManager"
-		},
-		"2": {
-			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
-			"qualifiedName": "ColorNameManager._MATCHED_COLORS"
 		},
 		"3": {
 			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
@@ -14455,18 +12634,6 @@
 		"11": {
 			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
 			"qualifiedName": "color"
-		},
-		"12": {
-			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
-			"qualifiedName": "ColorNameManager.formatHex"
-		},
-		"13": {
-			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
-			"qualifiedName": "ColorNameManager.formatHex"
-		},
-		"14": {
-			"sourceFileName": "src/main/color/color-name/color-name-manager.ts",
-			"qualifiedName": "original"
 		},
 		"17": {
 			"sourceFileName": "src/main/color/color.ts",
@@ -14531,26 +12698,6 @@
 		"32": {
 			"sourceFileName": "src/main/color/color.ts",
 			"qualifiedName": "color"
-		},
-		"33": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color._red"
-		},
-		"34": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color._green"
-		},
-		"35": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color._blue"
-		},
-		"36": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color._alpha"
-		},
-		"37": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color._name"
 		},
 		"38": {
 			"sourceFileName": "src/main/color/color.ts",
@@ -14668,18 +12815,6 @@
 			"sourceFileName": "src/main/color/color.ts",
 			"qualifiedName": "Color.getRGBAHex"
 		},
-		"67": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color.setColorValues"
-		},
-		"68": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "Color.setColorValues"
-		},
-		"69": {
-			"sourceFileName": "src/main/color/color.ts",
-			"qualifiedName": "color"
-		},
 		"70": {
 			"sourceFileName": "src/main/color/color-selector-type.ts",
 			"qualifiedName": "ColorSelectorType"
@@ -14715,26 +12850,6 @@
 		"78": {
 			"sourceFileName": "src/main/color/color-selector.ts",
 			"qualifiedName": "randomOrder"
-		},
-		"79": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector._COLOR_CHOICES"
-		},
-		"80": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector._COLOR_NAMES"
-		},
-		"81": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector._NAME"
-		},
-		"82": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector._RANDOM_ORDER"
-		},
-		"83": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector._currentIndex"
 		},
 		"84": {
 			"sourceFileName": "src/main/color/color-selector.ts",
@@ -14815,14 +12930,6 @@
 		"103": {
 			"sourceFileName": "src/main/color/color-selector.ts",
 			"qualifiedName": "color"
-		},
-		"104": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector.incrementCurrentIndex"
-		},
-		"105": {
-			"sourceFileName": "src/main/color/color-selector.ts",
-			"qualifiedName": "ColorSelector.incrementCurrentIndex"
 		},
 		"106": {
 			"sourceFileName": "src/main/color/default-color-selector.ts",
@@ -14919,10 +13026,6 @@
 		"129": {
 			"sourceFileName": "src/main/color/color-selector-manager.ts",
 			"qualifiedName": "ColorSelectorManager"
-		},
-		"132": {
-			"sourceFileName": "src/main/color/color-selector-manager.ts",
-			"qualifiedName": "ColorSelectorManager._COLOR_SELECTORS"
 		},
 		"133": {
 			"sourceFileName": "src/main/color/color-selector-manager.ts",
@@ -15084,37 +13187,9 @@
 			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
 			"qualifiedName": "fontSize"
 		},
-		"173": {
-			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
-			"qualifiedName": "ColorContrastAssessor.haveAppropriateContrastRatio"
-		},
-		"174": {
-			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
-			"qualifiedName": "ColorContrastAssessor.haveAppropriateContrastRatio"
-		},
-		"175": {
-			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
-			"qualifiedName": "hexA"
-		},
-		"176": {
-			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
-			"qualifiedName": "hexB"
-		},
-		"177": {
-			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
-			"qualifiedName": "standard"
-		},
-		"178": {
-			"sourceFileName": "src/main/color/color-contrast/color-contrast-assessor.ts",
-			"qualifiedName": "fontSize"
-		},
 		"181": {
 			"sourceFileName": "src/main/p5/sketch-context.ts",
 			"qualifiedName": "SketchContext"
-		},
-		"182": {
-			"sourceFileName": "src/main/p5/sketch-context.ts",
-			"qualifiedName": "SketchContext._p5"
 		},
 		"183": {
 			"sourceFileName": "src/main/p5/sketch-context.ts",
@@ -15183,10 +13258,6 @@
 		"203": {
 			"sourceFileName": "src/main/map/string-map.ts",
 			"qualifiedName": "StringMap.ValueType"
-		},
-		"204": {
-			"sourceFileName": "src/main/map/string-map.ts",
-			"qualifiedName": "StringMap._map"
 		},
 		"205": {
 			"sourceFileName": "src/main/map/string-map.ts",
@@ -15319,14 +13390,6 @@
 		"237": {
 			"sourceFileName": "src/main/math/range.ts",
 			"qualifiedName": "_max"
-		},
-		"238": {
-			"sourceFileName": "src/main/math/range.ts",
-			"qualifiedName": "Range._min"
-		},
-		"239": {
-			"sourceFileName": "src/main/math/range.ts",
-			"qualifiedName": "Range._max"
 		},
 		"240": {
 			"sourceFileName": "src/main/math/range.ts",
@@ -15464,26 +13527,6 @@
 			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
 			"qualifiedName": "PaletteColorSelector"
 		},
-		"275": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "PaletteColorSelector.MIN_COLOR_COUNT"
-		},
-		"276": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "PaletteColorSelector.MIN_COLOR_COUNT"
-		},
-		"277": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "PaletteColorSelector.buildName"
-		},
-		"278": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "PaletteColorSelector.buildName"
-		},
-		"279": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "palette"
-		},
 		"280": {
 			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
 			"qualifiedName": "PaletteColorSelector.__constructor"
@@ -15523,26 +13566,6 @@
 		"289": {
 			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
 			"qualifiedName": "PaletteColorSelector.getColor"
-		},
-		"290": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "PaletteColorSelector.choosePaletteColors"
-		},
-		"291": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "PaletteColorSelector.choosePaletteColors"
-		},
-		"292": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "palette"
-		},
-		"293": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "buildWithPaletteOrder"
-		},
-		"294": {
-			"sourceFileName": "src/main/color/palette/palette-color-selector.ts",
-			"qualifiedName": "colorCount"
 		},
 		"295": {
 			"sourceFileName": "src/main/color/color-selector.ts",
@@ -15796,18 +13819,6 @@
 			"sourceFileName": "src/main/random/random.ts",
 			"qualifiedName": "Random"
 		},
-		"358": {
-			"sourceFileName": "src/main/random/random.ts",
-			"qualifiedName": "Random._randomMethod"
-		},
-		"359": {
-			"sourceFileName": "src/main/random/random.ts",
-			"qualifiedName": "__type"
-		},
-		"360": {
-			"sourceFileName": "src/main/random/random.ts",
-			"qualifiedName": "__type"
-		},
 		"361": {
 			"sourceFileName": "src/main/random/random.ts",
 			"qualifiedName": "Random.randomMethod"
@@ -15948,10 +13959,6 @@
 			"sourceFileName": "src/main/random/random-selector.ts",
 			"qualifiedName": "elements"
 		},
-		"398": {
-			"sourceFileName": "src/main/random/random-selector.ts",
-			"qualifiedName": "RandomSelector._elements"
-		},
 		"399": {
 			"sourceFileName": "src/main/random/random-selector.ts",
 			"qualifiedName": "RandomSelector.size"
@@ -15979,6 +13986,14 @@
 		"405": {
 			"sourceFileName": "src/main/random/random-selector.ts",
 			"qualifiedName": "RandomSelector.Type"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "src/main/batpb-genart.ts"
+		},
+		"reflections": {
+			"1": 0
 		}
 	}
 }

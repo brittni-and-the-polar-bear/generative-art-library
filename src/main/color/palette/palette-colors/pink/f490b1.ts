@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #F490B1;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
- *
- * @source
  */
 export const _F490B1: PaletteColor = {
     HEX: '#F490B1',
-    RGB: {R: 244, G: 144, B: 177},
-    HSL: {H: 340, S: 82, L: 76},
+    RGB: { R: 244, G: 144, B: 177 },
+    HSL: { H: 340, S: 82, L: 76 },
     NAME: 'sachet pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #3B2212;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Brown)
- *
- * @source
  */
 export const _3B2212: PaletteColor = {
     HEX: '#3B2212',
-    RGB: {R: 59, G: 34, B: 18},
-    HSL: {H: 23, S: 53, L: 15},
+    RGB: { R: 59, G: 34, B: 18 },
+    HSL: { H: 23, S: 53, L: 15 },
     NAME: 'délicieux au chocolat',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

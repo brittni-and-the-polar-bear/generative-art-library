@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #FCE3EC;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
- *
- * @source
  */
 export const _FCE3EC: PaletteColor = {
     HEX: '#FCE3EC',
-    RGB: {R: 252, G: 227, B: 236},
-    HSL: {H: 338, S: 81, L: 94},
+    RGB: { R: 252, G: 227, B: 236 },
+    HSL: { H: 338, S: 81, L: 94 },
     NAME: 'spun sugar',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

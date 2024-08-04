@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {SketchContext} from 'context';
-import {Random, WeightedElement} from 'random';
+import { SketchContext } from 'context';
+import { Random, WeightedElement } from 'random';
 
-import {Color} from './color';
-import {ColorSelectorType} from './color-selector-type';
+import { Color } from './color';
+import { ColorSelectorType } from './color-selector-type';
 
 /**
  * ColorSelectors choose and return colors from some set list or criteria.
@@ -138,9 +138,9 @@ export abstract class ColorSelector {
                               chanceOfWhite: number,
                               chanceOfColor: number): Color {
         const weightedColors: WeightedElement<Color>[] = [
-            {value: new Color(SketchContext.p5.color(0)), weight: chanceOfBlack},
-            {value: new Color(SketchContext.p5.color(255)), weight: chanceOfWhite},
-            {value: this.getColor(), weight: chanceOfColor}
+            { value: new Color(SketchContext.p5.color(0)), weight: chanceOfBlack },
+            { value: new Color(SketchContext.p5.color(255)), weight: chanceOfWhite },
+            { value: this.getColor(), weight: chanceOfColor }
         ];
 
         return Random.randomWeightedElement(weightedColors) ?? (new Color());

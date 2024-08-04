@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #F06090;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, PINK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
- *
- * @source
  */
 export const _F06090: PaletteColor = {
     HEX: '#F06090',
-    RGB: {R: 240, G: 96, B: 144},
-    HSL: {H: 340, S: 83, L: 66},
+    RGB: { R: 240, G: 96, B: 144 },
+    HSL: { H: 340, S: 83, L: 66 },
     NAME: 'medium pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

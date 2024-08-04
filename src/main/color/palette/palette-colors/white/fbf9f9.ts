@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #FBF9F9;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (White)
- *
- * @source
  */
 export const _FBF9F9: PaletteColor = {
     HEX: '#FBF9F9',
-    RGB: {R: 251, G: 249, B: 249},
-    HSL: {H: 0, S: 20, L: 98},
+    RGB: { R: 251, G: 249, B: 249 },
+    HSL: { H: 0, S: 20, L: 98 },
     NAME: 'doctor white',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

@@ -15,8 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday';
-export * from './miscellaneous';
-export * from './nature';
+import { defineConfig } from 'tsup';
 
-export * from './palette-maps';
+export default defineConfig({
+    entry: ['src/main/batpb-genart.ts'],
+    outDir: './out/dist',
+    splitting: false,
+    sourcemap: true,
+    clean: true,
+    dts: true,
+    format: ['cjs', 'esm'],
+    minifySyntax: true
+});

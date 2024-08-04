@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #121212;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Black)
- *
- * @source
  */
 export const _121212: PaletteColor = {
     HEX: '#121212',
-    RGB: {R: 18, G: 18, B: 18},
-    HSL: {H: 0, S: 0, L: 7},
+    RGB: { R: 18, G: 18, B: 18 },
+    HSL: { H: 0, S: 0, L: 7 },
     NAME: 'dark tone ink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

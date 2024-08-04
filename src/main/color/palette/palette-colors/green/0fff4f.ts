@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #0FFF4F;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Green)
- *
- * @source
  */
 export const _0FFF4F: PaletteColor = {
     HEX: '#0FFF4F',
-    RGB: {R: 15, G: 255, B: 79},
-    HSL: {H: 136, S: 100, L: 53},
+    RGB: { R: 15, G: 255, B: 79 },
+    HSL: { H: 136, S: 100, L: 53 },
     NAME: 'cathode green',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

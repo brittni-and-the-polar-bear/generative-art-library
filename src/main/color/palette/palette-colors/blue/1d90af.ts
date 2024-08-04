@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #1D90AF;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Blue)
- *
- * @source
  */
 export const _1D90AF: PaletteColor = {
     HEX: '#1D90AF',
-    RGB: {R: 29, G: 144, B: 175},
-    HSL: {H: 193, S: 72, L: 40},
+    RGB: { R: 29, G: 144, B: 175 },
+    HSL: { H: 193, S: 72, L: 40 },
     NAME: 'mediterranean sea',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

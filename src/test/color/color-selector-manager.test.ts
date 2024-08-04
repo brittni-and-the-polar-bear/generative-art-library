@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color, ColorSelector, ColorSelectorManager, DefaultColorSelector} from 'color';
+import { Color, ColorSelector, ColorSelectorManager, DefaultColorSelector } from 'color';
 
 import {
     blue,
@@ -30,9 +30,10 @@ import {
 } from '../shared/color';
 
 describe('color selector manager tests', (): void => {
-    function checkForValidColorSelectorManager(manager: ColorSelectorManager,
-                                               selectors: ColorSelector[],
-                                               colorComponents: ColorComponents[][]): void {
+    function checkForValidColorSelectorManager(
+        manager: ColorSelectorManager,
+        selectors: ColorSelector[],
+        colorComponents: ColorComponents[][]): void {
         const chosenSelector: ColorSelector = manager.getRandomColorSelector();
         expect(selectors).toContain(chosenSelector);
         const index: number = selectors.indexOf(chosenSelector);

@@ -21,6 +21,7 @@
  * @category Color
  */
 export enum ColorSelectorType {
+
     /**
      * Color selector that chooses colors from a pre-selected palette.
      */

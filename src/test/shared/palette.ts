@@ -15,15 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color} from 'color';
-import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
-import {Discriminators} from 'discriminator';
-import {StringMap} from 'map';
-import {Palette, PaletteColor} from 'palette';
+import { Color } from 'color';
+import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
+import { Discriminators } from 'discriminator';
+import { StringMap } from 'map';
+import { Palette, PaletteColor } from 'palette';
 
-import {checkForValidHexColorString, ColorComponents} from './color';
-import {checkForValidStringMap} from './map';
-import {checkNumberWithinAmount} from './math';
+import { checkForValidHexColorString, ColorComponents } from './color';
+import { checkForValidStringMap } from './map';
+import { checkNumberWithinAmount } from './math';
 
 export function getColorsArray(colors: PaletteColor[]): Color[] {
     return colors.map((color: PaletteColor) => {
@@ -55,11 +55,11 @@ function checkForValidContrastMap(palette: Palette): void {
             validHexes.push('#FFFFFF');
         }
 
-        for (const key in palette.CONTRAST_MAP) {
+        for (const [key, contrasts] of Object.entries(palette.CONTRAST_MAP)) {
             checkForValidHexColorString(key);
             expect(validHexes).toContain(key);
 
-            for (const hex of palette.CONTRAST_MAP[key]) {
+            for (const hex of contrasts) {
                 checkForValidHexColorString(hex);
                 expect(validHexes).toContain(hex);
 
@@ -86,7 +86,7 @@ function checkForValidContrastMap(palette: Palette): void {
 export function checkForValidPalette(palette: Palette, expectedColors?: PaletteColor[]): void {
     expect(palette).toBeTruthy();
     expect(palette.NAME).toBeTruthy();
-    expect(palette.NAME.toLowerCase()).toBe(palette.NAME)
+    expect(palette.NAME.toLowerCase()).toBe(palette.NAME);
     expect(palette.COLORS).toBeTruthy();
     expect(palette.COLORS.length).toBeGreaterThanOrEqual(2);
     expect(palette.DISCRIMINATOR).toBe(Discriminators.PALETTE);

@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color} from 'color';
-import {ColorContrastAssessor, ContrastFontSize, ContrastStandard} from 'color-contrast';
-import {SketchContext} from 'context';
-import {_0437F1, _0FFF4F, _121212, _FF6BB5} from 'palette-colors';
+import { Color } from 'color';
+import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
+import { SketchContext } from 'context';
+import { _0437F1, _0FFF4F, _121212, _FF6BB5 } from 'palette-colors';
 import P5Lib from 'p5';
 
 const p5: P5Lib = SketchContext.p5;
@@ -66,12 +66,12 @@ describe('color contrast assessor tests', (): void => {
             AAA_large: false
         }
     ])('$# contrast: Colors - $colorA._name and $colorB._name',
-        ({colorA,
-             colorB,
-             AA_normal,
-             AA_large,
-             AAA_normal,
-             AAA_large}): void => {
+        ({ colorA,
+            colorB,
+            AA_normal,
+            AA_large,
+            AAA_normal,
+            AAA_large }): void => {
             // AB Contrasts
             const contrast_ab_default: boolean =
                 ColorContrastAssessor.meetsContrastStandard(
@@ -193,12 +193,12 @@ describe('color contrast assessor tests', (): void => {
             AAA_large: true
         }
     ])('$# contrast: PaletteColors - $colorA.HEX and $colorB.HEX',
-        ({colorA,
-             colorB,
-             AA_normal,
-             AA_large,
-             AAA_normal,
-             AAA_large}): void => {
+        ({ colorA,
+            colorB,
+            AA_normal,
+            AA_large,
+            AAA_normal,
+            AAA_large }): void => {
             // AB Contrasts
             const contrast_ab_default: boolean =
                 ColorContrastAssessor.meetsContrastStandard(
@@ -328,12 +328,12 @@ describe('color contrast assessor tests', (): void => {
             AAA_large: false
         }
     ])('$# contrast: hex strings - $colorA and $colorB',
-        ({colorA,
-             colorB,
-             AA_normal,
-             AA_large,
-             AAA_normal,
-             AAA_large}): void => {
+        ({ colorA,
+            colorB,
+            AA_normal,
+            AA_large,
+            AAA_normal,
+            AAA_large }): void => {
             // AB Contrasts
             const contrast_ab_default: boolean =
                 ColorContrastAssessor.meetsContrastStandard(

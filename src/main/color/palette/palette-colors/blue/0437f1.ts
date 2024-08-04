@@ -15,11 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ColorNameManager} from 'color';
-import {Discriminators} from 'discriminator';
-import {PaletteColor} from 'palette';
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #0437F1;">
@@ -32,13 +32,11 @@ import {ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Blue)
- *
- * @source
  */
 export const _0437F1: PaletteColor = {
     HEX: '#0437F1',
-    RGB: {R: 4, G: 55, B: 241},
-    HSL: {H: 227, S: 97, L: 48},
+    RGB: { R: 4, G: 55, B: 241 },
+    HSL: { H: 227, S: 97, L: 48 },
     NAME: 'blue bouquet',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };

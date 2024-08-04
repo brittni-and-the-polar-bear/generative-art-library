@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Discriminators} from 'discriminator';
-import {Palette, PaletteColorSelector} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import { Discriminators } from 'discriminator';
+import { Palette, PaletteColorSelector } from 'palette';
+import { _0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 
 import {
     checkForValidColorSelector,
@@ -25,7 +25,7 @@ import {
     checkForValidRandomSelector,
     getColorsArray, RANDOM_TEST_TRIES
 } from 'unit-test/shared';
-import {ColorSelectorType} from "color";
+import { ColorSelectorType } from 'color';
 
 const TEST_PALETTE_A: Palette = {
     NAME: 'test A palette',
@@ -144,19 +144,19 @@ describe('palette color selector tests', (): void => {
 
         expect(selector).toBeTruthy();
         checkForValidColorSelector(selector);
-        checkForValidRandomSelector(selector,getColorsArray(TEST_PALETTE_A.COLORS), true);
+        checkForValidRandomSelector(selector, getColorsArray(TEST_PALETTE_A.COLORS), true);
     });
 
     test.each([
-        {count: 10},
-        {count: 5},
-        {count: 4},
-        {count: 3},
-        {count: 2},
-        {count: 1},
-        {count: -10}
+        { count: 10 },
+        { count: 5 },
+        { count: 4 },
+        { count: 3 },
+        { count: 2 },
+        { count: 1 },
+        { count: -10 }
     ])('$# test palette color selector: palette order build, $count color(s), not random order',
-        ({count}): void => {
+        ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
@@ -186,15 +186,15 @@ describe('palette color selector tests', (): void => {
     );
 
     test.each([
-        {count: 10},
-        {count: 5},
-        {count: 4},
-        {count: 3},
-        {count: 2},
-        {count: 1},
-        {count: -10}
+        { count: 10 },
+        { count: 5 },
+        { count: 4 },
+        { count: 3 },
+        { count: 2 },
+        { count: 1 },
+        { count: -10 }
     ])('$# test palette color selector: palette order build, $count color(s), random order',
-        ({count}): void => {
+        ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
@@ -251,19 +251,19 @@ describe('palette color selector tests', (): void => {
 
         expect(selector).toBeTruthy();
         checkForValidColorSelector(selector);
-        checkForValidRandomSelector(selector,getColorsArray(TEST_PALETTE_A.COLORS), true);
+        checkForValidRandomSelector(selector, getColorsArray(TEST_PALETTE_A.COLORS), true);
     });
 
     test.each([
-        {count: 10},
-        {count: 5},
-        {count: 4},
-        {count: 3},
-        {count: 2},
-        {count: 1},
-        {count: -10}
+        { count: 10 },
+        { count: 5 },
+        { count: 4 },
+        { count: 3 },
+        { count: 2 },
+        { count: 1 },
+        { count: -10 }
     ])('$# test palette color selector: random build, $count color(s), not random order',
-        ({count}): void => {
+        ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {
@@ -293,15 +293,15 @@ describe('palette color selector tests', (): void => {
     );
 
     test.each([
-        {count: 10},
-        {count: 5},
-        {count: 4},
-        {count: 3},
-        {count: 2},
-        {count: 1},
-        {count: -10}
+        { count: 10 },
+        { count: 5 },
+        { count: 4 },
+        { count: 3 },
+        { count: 2 },
+        { count: 1 },
+        { count: -10 }
     ])('$# test palette color selector: random build, $count color(s), random order',
-        ({count}): void => {
+        ({ count }): void => {
             let expectedColorCount: number = count;
 
             if (expectedColorCount < MIN_COLOR_COUNT) {

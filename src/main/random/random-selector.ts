@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Random} from './random';
+import { Random } from './random';
 
 /**
  * A class for randomly selecting elements from a given list.
@@ -56,7 +56,7 @@ export class RandomSelector<Type> {
      * If {@link _elements} is empty, the function will return {@link !undefined}.
      */
     public getRandomElementAndRemove(): Type | undefined {
-        let element: Type | undefined = undefined;
+        let element: Type | undefined;
         const size: number = this._elements.length;
 
         if (size > 0) {

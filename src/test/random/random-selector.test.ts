@@ -15,8 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {RandomSelector} from "random";
-import {RANDOM_TEST_TRIES} from "../shared/random";
+import { RandomSelector } from 'random';
+
+import { RANDOM_TEST_TRIES } from 'unit-test/shared';
 
 describe('random selector tests', (): void => {
     test('get random element and remove with number type', (): void => {

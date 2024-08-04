@@ -22,6 +22,7 @@
  * @category Discriminator
  */
 export enum Discriminators {
+
     /**
      * Discriminator for the {@link Palette} interface.
      */
