@@ -105,4 +105,4 @@ class StringMap<ValueType> {
     }
 }
 
-export {StringMap};
+export { StringMap };
