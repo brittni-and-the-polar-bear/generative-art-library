@@ -62,7 +62,21 @@ export default tsEslint.config(
 
             '@stylistic/comma-dangle': ['error', 'never'],
 
-            '@stylistic/indent': ['error', 4],
+            '@stylistic/indent': ['error',
+                4,
+                {
+                    "SwitchCase": 1,
+                    "FunctionDeclaration": {
+                        "parameters": "first"
+                    },
+                    "FunctionExpression": {
+                        "parameters": "first"
+                    },
+                    "CallExpression": {
+                        "arguments": "first"
+                    }
+                }
+            ],
 
             '@stylistic/member-delimiter-style': ['error', {
                 multiline: {
