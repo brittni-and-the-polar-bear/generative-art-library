@@ -28,12 +28,10 @@ export function checkForValidColorSelector(selector: ColorSelector): void {
     expect(selector.colorNames.length).toBeGreaterThan(0);
 }
 
-export function checkForValidRandomSelector(
-    selector: ColorSelector,
-    colors: Color[],
-    picksAllColors: boolean,
-    colorCount?: number): void
-{
+export function checkForValidRandomSelector(selector: ColorSelector,
+                                            colors: Color[],
+                                            picksAllColors: boolean,
+                                            colorCount?: number): void {
     checkForValidColorSelector(selector);
     const expectedComponents: ColorComponents[] = colors.map((c: Color): ColorComponents => colorToColorComponents(c));
     const colorMap: StringMap<ColorComponents> = new StringMap<ColorComponents>();
@@ -55,13 +53,11 @@ export function checkForValidRandomSelector(
     }
 }
 
-export function checkForValidInOrderSelector(
-    selector: ColorSelector,
-    colors: Color[],
-    matchColorOrder: boolean,
-    picksAllColors: boolean,
-    colorCount?: number): void
-{
+export function checkForValidInOrderSelector(selector: ColorSelector,
+                                             colors: Color[],
+                                             matchColorOrder: boolean,
+                                             picksAllColors: boolean,
+                                             colorCount?: number): void {
     checkForValidColorSelector(selector);
 
     if (!colorCount || colorCount < 0) {
