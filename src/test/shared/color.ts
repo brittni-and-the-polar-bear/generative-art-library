@@ -35,9 +35,9 @@ export const magenta: Color = new Color(p5.color(255, 0, 255));
 export const yellow: Color = new Color(p5.color(255, 255, 0));
 
 export interface ColorComponents {
-    readonly r: number,
-    readonly g: number,
-    readonly b: number,
+    readonly r: number;
+    readonly g: number;
+    readonly b: number;
     readonly a?: number
 }
 
