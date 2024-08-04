@@ -46,7 +46,7 @@ import {
 } from 'unit-test/shared';
 
 const COLOR_CATEGORIES:
-{ category: string, colorsMap: StringMap<PaletteColor>, hexes: HexCollection }[] =
+{ category: string; colorsMap: StringMap<PaletteColor>; hexes: HexCollection }[] =
     [
         { category: 'black', colorsMap: BLACK_PALETTE_COLORS, hexes: BLACK_HEXES },
         { category: 'blue', colorsMap: BLUE_PALETTE_COLORS, hexes: BLUE_HEXES },

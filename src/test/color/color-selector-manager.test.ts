@@ -33,8 +33,7 @@ describe('color selector manager tests', (): void => {
     function checkForValidColorSelectorManager(
         manager: ColorSelectorManager,
         selectors: ColorSelector[],
-        colorComponents: ColorComponents[][]): void
-    {
+        colorComponents: ColorComponents[][]): void {
         const chosenSelector: ColorSelector = manager.getRandomColorSelector();
         expect(selectors).toContain(chosenSelector);
         const index: number = selectors.indexOf(chosenSelector);

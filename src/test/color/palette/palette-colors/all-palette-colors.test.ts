@@ -55,7 +55,7 @@ ALL_HEXES.push(
     ...WHITE_HEXES
 );
 
-function makeHSLKey(HSL: { H: number, S: number, L: number }): string {
+function makeHSLKey(HSL: { H: number; S: number; L: number }): string {
     let key: string = '';
     key += HSL.H.toString() + '.';
     key += HSL.S.toString() + '.';
@@ -63,7 +63,7 @@ function makeHSLKey(HSL: { H: number, S: number, L: number }): string {
     return key;
 }
 
-function makeRGBKey(RGB: { R: number, G: number, B: number }): string {
+function makeRGBKey(RGB: { R: number; G: number; B: number }): string {
     let key: string = '';
     key += RGB.R.toString() + '.';
     key += RGB.G.toString() + '.';
