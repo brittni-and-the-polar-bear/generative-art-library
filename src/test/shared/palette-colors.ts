@@ -58,6 +58,7 @@ export const GREEN_HEXES: HexCollection = [
     { hexString: '#007058' },
     { hexString: '#0FFF4F' },
     { hexString: '#23856D' }
+
 ];
 
 export const PINK_HEXES: HexCollection = [
@@ -79,6 +80,7 @@ export const RED_HEXES: HexCollection = [
 ];
 
 export const WHITE_HEXES: HexCollection = [
+    { hexString: '#FAFBEF' },
     { hexString: '#FAFEFF' },
     { hexString: '#FBF9F9' }
 ];
