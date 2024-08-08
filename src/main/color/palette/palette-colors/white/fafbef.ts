@@ -15,6 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './007058';
-export * from './0fff4f';
-export * from './23856d';
+// #fafbef
+// #FAFBEF
+// 65°, 60%, 96%
+// 250, 251, 239
+// enoki
+// black pass
+// luminance: 0.9555034902
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
+
+export const _FAFBEF: PaletteColor = {
+    HEX: '#FAFBEF',
+    RGB: { R: 250, G: 251, B: 239 },
+    HSL: { H: 65, S: 60, L: 96 },
+    NAME: 'enoki',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+WHITE_PALETTE_COLORS.setUndefinedKey(_FAFBEF.HEX, _FAFBEF);
+ALL_PALETTE_COLORS.setUndefinedKey(_FAFBEF.HEX, _FAFBEF);
+ColorNameManager.addColor(_FAFBEF);
