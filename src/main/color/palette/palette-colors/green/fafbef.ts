@@ -25,6 +25,8 @@
 
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
+import {ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS} from "../palette-color-maps";
+import {ColorNameManager} from "color";
 
 export const _FAFBEF: PaletteColor = {
     HEX: '#FAFBEF',
@@ -33,3 +35,7 @@ export const _FAFBEF: PaletteColor = {
     NAME: 'enoki',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+GREEN_PALETTE_COLORS.setUndefinedKey(_FAFBEF.HEX, _FAFBEF);
+ALL_PALETTE_COLORS.setUndefinedKey(_FAFBEF.HEX, _FAFBEF);
+ColorNameManager.addColor(_FAFBEF);

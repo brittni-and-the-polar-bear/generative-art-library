@@ -41,6 +41,6 @@ export const _007058: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-ALL_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
 GREEN_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
+ALL_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
 ColorNameManager.addColor(_007058);
