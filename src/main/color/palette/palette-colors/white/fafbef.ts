@@ -15,6 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './fafbef';
-export * from './fafeff';
-export * from './fbf9f9';
+// #fafbef
+// #FAFBEF
+// 65°, 60%, 96%
+// 250, 251, 239
+// enoki
+// black pass
+// luminance: 0.9555034902
+
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+export const _FAFBEF: PaletteColor = {
+    HEX: '#FAFBEF',
+    RGB: { R: 250, G: 251, B: 239 },
+    HSL: { H: 65, S: 60, L: 96 },
+    NAME: 'enoki',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
