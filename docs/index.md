@@ -23,7 +23,7 @@ This project is currently in active development.
 
 # [documentation](./doc/index.html)
 
-## [v1.0.0 release notes](./release-notes/v1.x/v1.0.x/v1.0.0-notes.md)
+## [v1.0.1 release notes](./release-notes/v1.x/v1.0.x/v1.0.1-notes.md)
 
 ----
 

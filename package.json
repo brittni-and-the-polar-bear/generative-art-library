@@ -78,7 +78,6 @@
     "p5": "^1.10.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.8.0",
     "@stylistic/eslint-plugin": "^2.6.1",
     "@types/eslint__js": "^8.42.3",

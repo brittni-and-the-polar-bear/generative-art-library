@@ -29,7 +29,6 @@ This project is currently in active development.
 
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40batpb%2Fgenart)
 
-
 ----
 
 ### security
@@ -76,7 +75,7 @@ npm install @batpb/genart
 
 # [documentation](https://brittni-and-the-polar-bear.github.io/generative-art-library/doc/index.html)
 
-## [v1.0.0 release notes](https://brittni-and-the-polar-bear.github.io/generative-art-library//release-notes/v1.x/v1.0.x/v1.0.0-notes.html)
+## [v1.0.1 release notes](https://brittni-and-the-polar-bear.github.io/generative-art-library//release-notes/v1.x/v1.0.x/v1.0.1-notes.html)
 
 ----
 
