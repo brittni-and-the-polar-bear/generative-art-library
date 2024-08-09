@@ -40,6 +40,13 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
   </a>
 </div>
 
+<!-- luminance: 0.9555034902 -->
+<div class="color-block" style="background: #FAFBEF;">
+  <a href="./white-colors-by-hex.html#enoki-fafbef">
+    <h2 class="color-block black-pass">enoki (#FAFBEF)</h2>
+  </a>
+</div>
+
 <!-- luminance: 0.9842761548 -->
 <div class="color-block" style="background: #FAFEFF;">
   <a href="./white-colors-by-hex.html#polar-bear-in-a-blizzard-fafeff">

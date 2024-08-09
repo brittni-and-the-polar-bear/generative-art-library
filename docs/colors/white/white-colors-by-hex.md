@@ -33,11 +33,32 @@ Color block links redirect to
 
 # Table of Contents
 
+[enoki (#FAFBEF)](#enoki-fafbef)
+
 [polar bear in a blizzard (#FAFEFF)](#polar-bear-in-a-blizzard-fafeff)
 
 [doctor white (#FBF9F9)](#doctor-white-fbf9f9)
 
+[Fin.](#fin)
+
 ----
+
+# enoki (#FAFBEF)
+
+<div class="color-block" style="background: #FAFBEF;">
+  <a href="https://coolors.co/fafbef" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">enoki (#FAFBEF)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import {_FAFBEF} from 'palette-colors';
+
+let name: string = _FAFBEF.NAME;
+````
+
+[Table of Contents](#table-of-contents)
 
 # polar bear in a blizzard (#FAFEFF)
 
@@ -75,4 +96,4 @@ let name: string = _FBF9F9.NAME;
 
 ----
 
-Fin.
+### Fin.

@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #fafbef
-// #FAFBEF
-// 65°, 60%, 96%
-// 250, 251, 239
-// enoki
-// black pass
-// luminance: 0.9555034902
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
