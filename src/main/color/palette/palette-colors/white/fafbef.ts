@@ -29,6 +29,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #FAFBEF;">
+ *     <a href="https://coolors.co/fafbef" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">enoki (#FAFBEF)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (White)
+ * @category Palette Colors (All)
+ */
 export const _FAFBEF: PaletteColor = {
     HEX: '#FAFBEF',
     RGB: { R: 250, G: 251, B: 239 },
