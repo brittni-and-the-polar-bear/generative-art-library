@@ -1,4 +1,4 @@
-# How to Add a New Color
+# How to Add a New Color to the Library (Developer Instructions)
 
 # Table of Contents
 
