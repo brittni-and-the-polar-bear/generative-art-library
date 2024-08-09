@@ -31,6 +31,8 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.9510014633 -->
@@ -57,4 +59,6 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#white-colors-by-luminance)
