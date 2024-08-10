@@ -31,6 +31,8 @@ Color block links redirect to [Green Colors by Hex](./green-colors-by-hex.md) en
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.1229292159 -->
@@ -47,6 +49,13 @@ Color block links redirect to [Green Colors by Hex](./green-colors-by-hex.md) en
   </a>
 </div>
 
+<!-- luminance: 0.5223848169 -->
+<div class="color-block" style="background: #B1C69F;">
+  <a href="/green-colors-by-hex.html#wasabi-peanut-b1c69f">
+    <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
+  </a>
+</div>
+
 <!-- luminance: 0.7218607122 -->
 <div class="color-block" style="background: #0FFF4F;">
   <a href="./green-colors-by-hex.html#cathode-green-0fff4f">
@@ -57,4 +66,6 @@ Color block links redirect to [Green Colors by Hex](./green-colors-by-hex.md) en
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#green-colors-by-luminance)

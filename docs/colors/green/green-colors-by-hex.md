@@ -39,6 +39,10 @@ Color block links redirect to
 
 [accent green blue (#23856D)](#accent-green-blue-23856d)
 
+[wasabi peanut (#B1C69F)](#wasabi-peanut-b1c69f)
+
+[Fin.](#fin)
+
 ----
 
 # teal dark green (#007058)
@@ -92,6 +96,25 @@ let name: string = _23856D.NAME;
 
 [Table of Contents](#table-of-contents)
 
+# wasabi peanut (#B1C69F)
+
+<div class="color-block" style="background: #B1C69F;">
+  <a href="https://coolors.co/b1c69f" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import {_B1C69F} from 'palette-colors';
+
+let name: string = _B1C69F.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)
