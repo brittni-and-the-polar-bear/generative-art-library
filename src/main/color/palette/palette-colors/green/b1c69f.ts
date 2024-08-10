@@ -29,6 +29,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #B1C69F;">
+ *     <a href="https://coolors.co/b1c69f" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Green)
+ * @category Palette Colors (All)
+ */
 export const _B1C69F: PaletteColor = {
     HEX: '#B1C69F',
     RGB: { R: 177, G: 198, B: 159 },

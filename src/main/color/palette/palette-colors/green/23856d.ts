@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps'
  *
  * @see {@link CLASSIC_CHRISTMAS}
  *
- * @category Palette Colors (All)
  * @category Palette Colors (Green)
+ * @category Palette Colors (All)
  */
 export const _23856D: PaletteColor = {
     HEX: '#23856D',
