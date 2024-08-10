@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #b1c69f
-// #B1C69F
-// 92°, 25%, 70%
-// 177, 198, 159
-// wasabi peanut
-// black-pass
-// luminance - 0.5223848169
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';

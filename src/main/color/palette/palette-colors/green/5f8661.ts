@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// https://www.color-hex.com/color-palette/1039504
-// #fafbf0 --> #FAFBEF
-// #b0c59f --> #B1C69F
-// #5e855f
-// #d7d7ff
-// #afafd7
-// gradient - false
+// #5f8661
+// #5F8661
+// 123°, 17%, 45%
+// 95, 134, 97
+// tuscan herbs
+// black-pass
+// luminance - 0.2034615798
