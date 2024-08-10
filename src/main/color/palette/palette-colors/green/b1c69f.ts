@@ -15,10 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// https://www.color-hex.com/color-palette/1039504
-// #fafbf0 --> #fafbef
-// #b0c59f --> #B1C69F
-// #5e855f
-// #d7d7ff
-// #afafd7
-// gradient - false
+// #b1c69f
+// #B1C69F
+// 92°, 25%, 70%
+// 177, 198, 159
+// wasabi peanut
+// black-pass
+// luminance - 0.5223848169
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
+
+export const _B1C69F: PaletteColor = {
+    HEX: '#B1C69F',
+    RGB: { R: 177, G: 198, B: 159 },
+    HSL: { H: 92, S: 25, L: 70 },
+    NAME: 'wasabi peanut',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+GREEN_PALETTE_COLORS.setUndefinedKey(_B1C69F.HEX, _B1C69F);
+ALL_PALETTE_COLORS.setUndefinedKey(_B1C69F.HEX, _B1C69F);
+ColorNameManager.addColor(_B1C69F);
