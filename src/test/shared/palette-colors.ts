@@ -58,6 +58,7 @@ export const GREEN_HEXES: HexCollection = [
     { hexString: '#007058' },
     { hexString: '#0FFF4F' },
     { hexString: '#23856D' },
+    { hexString: '#5F8661' },
     { hexString: '#B1C69F' }
 
 ];
