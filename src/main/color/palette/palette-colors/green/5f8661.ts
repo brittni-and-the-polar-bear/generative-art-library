@@ -23,8 +23,11 @@
 // black-pass
 // luminance - 0.2034615798
 
+import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 export const _5F8661: PaletteColor = {
     HEX: '#5F8661',
@@ -33,3 +36,7 @@ export const _5F8661: PaletteColor = {
     NAME: 'tuscan herbs',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+GREEN_PALETTE_COLORS.setUndefinedKey(_5F8661.HEX, _5F8661);
+ALL_PALETTE_COLORS.setUndefinedKey(_5F8661.HEX, _5F8661);
+ColorNameManager.addColor(_5F8661);
