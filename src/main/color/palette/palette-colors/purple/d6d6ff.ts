@@ -15,10 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// https://www.color-hex.com/color-palette/1039504
-// #fafbf0 --> #FAFBEF
-// #b0c59f --> #B1C69F
-// #5e855f --> #5F8661
-// #d7d7ff --> in progress
-// #afafd7
-// gradient - false
+// #d6d6ff
+// #D6D6FF
+// 240°, 100%, 92%
+// 214, 214, 255
+// pale lavender
+// black-pass
+// luminance: 0.696092761
+
+// TODO - Implement color
