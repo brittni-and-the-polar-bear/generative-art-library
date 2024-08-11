@@ -22,3 +22,14 @@
 // tuscan herbs
 // black-pass
 // luminance - 0.2034615798
+
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+export const _5F8661: PaletteColor = {
+    HEX: '#5F8661',
+    RGB: { R: 95, G: 134, B: 97 },
+    HSL: { H: 123, S: 17, L: 45 },
+    NAME: 'tuscan herbs',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
