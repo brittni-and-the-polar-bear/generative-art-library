@@ -29,6 +29,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #5F8661;">
+ *     <a href="https://coolors.co/5f8661" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">tuscan herbs (#5F8661)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Green)
+ * @category Palette Colors (All)
+ */
 export const _5F8661: PaletteColor = {
     HEX: '#5F8661',
     RGB: { R: 95, G: 134, B: 97 },
