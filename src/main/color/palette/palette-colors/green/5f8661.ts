@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #5f8661
-// #5F8661
-// 123°, 17%, 45%
-// 95, 134, 97
-// tuscan herbs
-// black-pass
-// luminance - 0.2034615798
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
