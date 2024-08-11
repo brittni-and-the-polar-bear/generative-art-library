@@ -49,6 +49,13 @@ Color block links redirect to [Green Colors by Hex](./green-colors-by-hex.md) en
   </a>
 </div>
 
+<!-- luminance: 0.2034615798 -->
+<div class="color-block" style="background: #5F8661;">
+  <a href="./green-colors-by-hex.html#tuscan-herbs-5f8661">
+    <h2 class="color-block black-pass">tuscan herbs (#5F8661)</h2>
+  </a>
+</div>
+
 <!-- luminance: 0.5223848169 -->
 <div class="color-block" style="background: #B1C69F;">
   <a href="/green-colors-by-hex.html#wasabi-peanut-b1c69f">
