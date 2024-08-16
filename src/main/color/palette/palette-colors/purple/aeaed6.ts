@@ -15,6 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './7a00f5';
-export * from './aeaed6';
-export * from './d6d6ff';
+// #aeaed6
+// #AEAED6
+// 240°, 33%, 76%
+// 174, 174, 214
+// pixie violet
+// black-pass
+// luminance: 0.4412581401
+
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+export const _AEAED6: PaletteColor = {
+    HEX: '#AEAED6',
+    RGB: { R: 174, G: 174, B: 214 },
+    HSL: { H: 240, S: 33, L: 76 },
+    NAME: 'pixie violet',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+}

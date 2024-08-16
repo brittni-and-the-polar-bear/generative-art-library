@@ -19,6 +19,6 @@
 // #fafbf0 --> #FAFBEF
 // #b0c59f --> #B1C69F
 // #5e855f --> #5F8661
-// #d7d7ff --> in progress
+// #d7d7ff --> #D6D6FF
 // #afafd7
 // gradient - false
