@@ -30,6 +30,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #D6D6FF;">
+ *     <a href="https://coolors.co/d6d6ff" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">pale lavender (#D6D6FF)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Purple)
+ * @category Palette Colors (All)
+ */
 export const _D6D6FF: PaletteColor = {
     HEX: '#D6D6FF',
     RGB: { R: 214, G: 214, B: 255 },
