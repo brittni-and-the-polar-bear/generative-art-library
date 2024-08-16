@@ -24,3 +24,20 @@
 // luminance: 0.696092761
 
 // TODO - Implement color
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
+
+export const _D6D6FF: PaletteColor = {
+    HEX: '#D6D6FF',
+    RGB: { R: 214, G: 214, B: 255 },
+    HSL: { H: 240, S: 100, L: 92 },
+    NAME: 'pale lavender',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+PURPLE_PALETTE_COLORS.setUndefinedKey(_D6D6FF.HEX, _D6D6FF);
+ALL_PALETTE_COLORS.setUndefinedKey(_D6D6FF.HEX, _D6D6FF);
+ColorNameManager.addColor(_D6D6FF);
