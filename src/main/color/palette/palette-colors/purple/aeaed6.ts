@@ -26,10 +26,25 @@
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
+import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
+
+/**
+ * <div class="color-block" style="background: #AEAED6;">
+ *     <a href="https://coolors.co/aeaed6" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">pixie violet (#AEAED6)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Purple)
+ * @category Palette Colors (All)
+ */
 export const _AEAED6: PaletteColor = {
     HEX: '#AEAED6',
     RGB: { R: 174, G: 174, B: 214 },
     HSL: { H: 240, S: 33, L: 76 },
     NAME: 'pixie violet',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
-}
+};
+
+PURPLE_PALETTE_COLORS.setUndefinedKey(_AEAED6.HEX, _AEAED6);
+ALL_PALETTE_COLORS.setUndefinedKey(_AEAED6.HEX, _AEAED6);

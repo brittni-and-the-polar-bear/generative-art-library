@@ -11,6 +11,8 @@ for creating responsive generative art projects.
 
 This project is currently in active development.
 
+----
+
 ## package stats
 
 ### actions
