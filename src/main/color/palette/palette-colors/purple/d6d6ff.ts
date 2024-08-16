@@ -15,15 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #d6d6ff
-// #D6D6FF
-// 240°, 100%, 92%
-// 214, 214, 255
-// pale lavender
-// black-pass
-// luminance: 0.696092761
-
-// TODO - Implement color
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
