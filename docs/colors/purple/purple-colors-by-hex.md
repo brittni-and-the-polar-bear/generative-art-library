@@ -33,7 +33,11 @@ Color block links redirect to
 
 # Table of Contents
 
-[poison purple](#poison-purple-7a00f5)
+[poison purple (#7A00F5)](#poison-purple-7a00f5)
+
+[pale lavender (#D6D6FF)](#pale-lavender-d6d6ff)
+
+[Fin](#fin)
 
 ----
 
@@ -54,6 +58,25 @@ let name: string = _7A00F5.NAME;
 
 [Table of Contents](#table-of-contents)
 
+# pale lavender (#D6D6FF)
+
+<div class="color-block" style="background: #D6D6FF;">
+  <a href="https://coolors.co/d6d6ff" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">pale lavender (#D6D6FF)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import {_D6D6FF} from 'palette-colors';
+
+let name: string = _D6D6FF.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)
