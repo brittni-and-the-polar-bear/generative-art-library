@@ -55,6 +55,9 @@ export class Color {
      */
     private _name: string | null;
 
+    // TODO - update documentation
+    // TODO - release notes
+    // TODO - unit tests --> color object created is NOT color object passed in
     /**
      * @param color - A p5.js Color or {@link PaletteColor} object.
      * If given a p5.js Color, the color's RGBA components
@@ -62,7 +65,7 @@ export class Color {
      * If given a {@link PaletteColor}, the color's {@link PaletteColor.HEX} value will be
      * used to build the color.
      */
-    public constructor(color?: P5Lib.Color | PaletteColor) {
+    public constructor(color?: P5Lib.Color | Color | PaletteColor) {
         const p5: P5Lib = SketchContext.p5;
 
         this._red = 0;
@@ -75,12 +78,22 @@ export class Color {
             if (color instanceof P5Lib.Color) {
                 this.setColorValues(color);
                 this._name = null;
+            } else if (color instanceof Color) {
+                this.setColorValues(color.color);
+                this._name = color.name;
             } else {
                 const c: P5Lib.Color = p5.color(color.RGB.R, color.RGB.G, color.RGB.B);
                 this.setColorValues(c);
                 this._name = color.NAME;
             }
         }
+    }
+
+    // TODO - unit tests --> color object returned is NOT color object passed in.
+    // TODO - release notes
+    // TODO - documentation
+    public static copy(color: Color): Color {
+        return new Color(color);
     }
 
     /**
