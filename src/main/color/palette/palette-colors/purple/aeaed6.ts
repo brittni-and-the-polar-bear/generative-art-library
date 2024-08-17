@@ -27,6 +27,8 @@ import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps
  *     </a>
  * </div>
  *
+ * @see {@link WHITE_LILY}
+ *
  * @category Palette Colors (Purple)
  * @category Palette Colors (All)
  */

@@ -31,6 +31,10 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-ma
  * @see {@link _5F8661}
  * @see {@link _D6D6FF}
  * @see {@link _AEAED6}
+ *
+ * @category Palettes (Nature/Flower)
+ * @category Palettes (Nature)
+ * @category Palettes (All)
  */
 export const WHITE_LILY: Palette = {
     NAME: 'white lily',
