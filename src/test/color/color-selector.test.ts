@@ -18,7 +18,7 @@
 import P5Lib from 'p5';
 
 import { Color, DefaultColorSelector } from 'color';
-import {SketchContext} from 'context';
+import { SketchContext } from 'context';
 
 import {
     ColorComponents,
