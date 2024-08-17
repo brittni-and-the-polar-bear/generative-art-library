@@ -37,6 +37,8 @@ Color block links redirect to
 
 [pale lavender (#D6D6FF)](#pale-lavender-d6d6ff)
 
+[pixie violet (#AEAED6)](#pixie-violet-aeaed6)
+
 [Fin](#fin)
 
 ----
@@ -54,6 +56,23 @@ Color block links redirect to
 import {_7A00F5} from 'palette-colors';
 
 let name: string = _7A00F5.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# pixie violet (#AEAED6)
+
+<div class="color-block" style="background: #AEAED6;">
+   <a href="https://coolors.co/aeaed6" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">pixie violet (#AEAED6)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import {_AEAED6} from 'palette-colors';
+
+let name: string = _AEAED6.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
