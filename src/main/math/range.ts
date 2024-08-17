@@ -18,13 +18,12 @@
 /**
  * Structure to handle a range of values,
  * where the range has a minimum value and a maximum value.
- * @public
+ *
  * @category Math
  * @category Random
  */
-class Range {
+export class Range {
     /**
-     * @public
      * @param _min - The minimum value of the Range.
      * @param _max - The maximum value of the Range.
      */
@@ -37,7 +36,6 @@ class Range {
     }
 
     /**
-     * @public
      * @returns The maximum value of the Range.
      */
     public get max(): number {
@@ -45,8 +43,9 @@ class Range {
     }
 
     /**
-     * If the given {@link newMax} is less than the current {@link _min},
-     * the fields {@link _min} and {@link _max} will be set so that {@link _min} is less than {@link _max}.
+     * If the given {@link newMax} is less than the current {@link min},
+     * the fields {@link min} and {@link max} will be set so that {@link min} is less than {@link max}.
+     *
      * @param newMax - The new maximum value of the Range.
      */
     public set max(newMax: number) {
@@ -60,7 +59,6 @@ class Range {
     }
 
     /**
-     * @public
      * @returns The minimum value of the Range.
      */
     public get min(): number {
@@ -68,8 +66,9 @@ class Range {
     }
 
     /**
-     * If the given {@link newMin} is greater than the current {@link _max},
-     * the fields {@link _min} and {@link _max} will be set so that {@link _min} is less than {@link _max}.
+     * If the given {@link newMin} is greater than the current {@link max},
+     * the fields {@link min} and {@link max} will be set so that {@link min} is less than {@link max}.
+     *
      * @param newMin - The new minimum value of the Range.
      */
     public set min(newMin: number) {
@@ -82,5 +81,3 @@ class Range {
         }
     }
 }
-
-export { Range };

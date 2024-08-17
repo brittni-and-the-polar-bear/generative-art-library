@@ -15,32 +15,30 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
-import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #FAFEFF;">
- *     <a href="https://coolors.co/fafeff" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
+ * <div class="color-block" style="background: #AEAED6;">
+ *     <a href="https://coolors.co/aeaed6" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">pixie violet (#AEAED6)</h2>
  *     </a>
  * </div>
  *
- * @see {@link BLUE_LILY}
+ * @see {@link WHITE_LILY}
  *
- * @category Palette Colors (White)
+ * @category Palette Colors (Purple)
  * @category Palette Colors (All)
  */
-export const _FAFEFF: PaletteColor = {
-    HEX: '#FAFEFF',
-    RGB: { R: 250, G: 254, B: 255 },
-    HSL: { H: 192, S: 100, L: 99 },
-    NAME: 'polar bear in a blizzard',
+export const _AEAED6: PaletteColor = {
+    HEX: '#AEAED6',
+    RGB: { R: 174, G: 174, B: 214 },
+    HSL: { H: 240, S: 33, L: 76 },
+    NAME: 'pixie violet',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-WHITE_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
-ALL_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
-ColorNameManager.addColor(_FAFEFF);
+PURPLE_PALETTE_COLORS.setUndefinedKey(_AEAED6.HEX, _AEAED6);
+ALL_PALETTE_COLORS.setUndefinedKey(_AEAED6.HEX, _AEAED6);

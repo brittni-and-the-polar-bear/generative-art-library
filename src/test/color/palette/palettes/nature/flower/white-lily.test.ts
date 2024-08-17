@@ -15,6 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './7a00f5';
-export * from './aeaed6';
-export * from './d6d6ff';
+import { PaletteColor } from 'palette';
+import { _5F8661, _AEAED6, _B1C69F, _D6D6FF, _FAFBEF } from 'palette-colors';
+import { WHITE_LILY } from 'palettes';
+
+import { checkForValidPalette } from 'unit-test/shared';
+
+const PALETTE_NAME: string = 'WHITE_LILY';
+
+describe('WHITE_LILY palette tests', (): void => {
+    const expectedColors: PaletteColor[] = [
+        _FAFBEF,
+        _B1C69F,
+        _5F8661,
+        _D6D6FF,
+        _AEAED6
+    ];
+
+    test(`${PALETTE_NAME} palette is valid`, (): void => {
+        checkForValidPalette(WHITE_LILY, expectedColors);
+    });
+});

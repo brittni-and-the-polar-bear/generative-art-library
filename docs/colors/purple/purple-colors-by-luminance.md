@@ -31,6 +31,8 @@ Color block links redirect to [Purple Colors by Hex](./purple-colors-by-hex.md) 
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.1073014734 -->
@@ -39,8 +41,24 @@ Color block links redirect to [Purple Colors by Hex](./purple-colors-by-hex.md) 
     <h2 class="color-block white-pass">poison purple (#7A00F5)</h2>
   </a>
 </div>
+
+<!-- luminance: 0.4412581401 -->
+<div class="color-block" style="background: #AEAED6;">
+   <a href="./purple-colors-by-hex.html#pixie-violet-aeaed6">
+    <h2 class="color-block black-pass">pixie violet (#AEAED6)</h2>
+  </a>
+</div>
+
+<!-- luminance: 0.696092761 -->
+<div class="color-block" style="background: #D6D6FF;">
+  <a href="./purple-colors-by-hex.html#pale-lavender-d6d6ff">
+    <h2 class="color-block black-pass">pale lavender (#D6D6FF)</h2>
+  </a>
+</div>
 <br/> <!-- only after last entry -->
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#purple-colors-by-luminance)

@@ -47,7 +47,7 @@ export class ColorNameManager {
     /**
      * Retrieves the name of the color represented by the given {@link colorHex}.
      * If the {@link colorHex} string is not well formatted or the nearest color function
-     * encounters an error, the method will return {@link !undefined}.
+     * encounters an error, the method will return undefined.
      *
      * @param colorHex - The hex string representation of the color whose
      * name is being retrieved (format: `#RRGGBB`).
@@ -95,7 +95,7 @@ export class ColorNameManager {
 
     /**
      * Add the given {@link PaletteColor.HEX} and {@link PaletteColor.NAME}
-     * to the {@link _MATCHED_COLORS} map.
+     * to the matched colors map.
      *
      * @param color
      */

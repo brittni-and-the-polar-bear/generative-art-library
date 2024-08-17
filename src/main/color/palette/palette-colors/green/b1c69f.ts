@@ -19,28 +19,28 @@ import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
-import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #FAFEFF;">
- *     <a href="https://coolors.co/fafeff" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
+ * <div class="color-block" style="background: #B1C69F;">
+ *     <a href="https://coolors.co/b1c69f" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
  *     </a>
  * </div>
  *
- * @see {@link BLUE_LILY}
+ * @see {@link WHITE_LILY}
  *
- * @category Palette Colors (White)
+ * @category Palette Colors (Green)
  * @category Palette Colors (All)
  */
-export const _FAFEFF: PaletteColor = {
-    HEX: '#FAFEFF',
-    RGB: { R: 250, G: 254, B: 255 },
-    HSL: { H: 192, S: 100, L: 99 },
-    NAME: 'polar bear in a blizzard',
+export const _B1C69F: PaletteColor = {
+    HEX: '#B1C69F',
+    RGB: { R: 177, G: 198, B: 159 },
+    HSL: { H: 92, S: 25, L: 70 },
+    NAME: 'wasabi peanut',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-WHITE_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
-ALL_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
-ColorNameManager.addColor(_FAFEFF);
+GREEN_PALETTE_COLORS.setUndefinedKey(_B1C69F.HEX, _B1C69F);
+ALL_PALETTE_COLORS.setUndefinedKey(_B1C69F.HEX, _B1C69F);
+ColorNameManager.addColor(_B1C69F);

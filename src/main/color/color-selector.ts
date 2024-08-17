@@ -22,7 +22,7 @@ import { Color } from './color';
 import { ColorSelectorType } from './color-selector-type';
 
 /**
- * ColorSelectors choose and return colors from some set list or criteria.
+ * ColorSelectors choose and return colors from some list or criteria.
  *
  * @category Color
  * @category Color Selector
@@ -47,25 +47,22 @@ export abstract class ColorSelector {
     /**
      * A flag that determines the color selection order
      * of {@link selectColorFromChoices}.<br/>
-     * When `true`, {@link selectColorFromChoices} will select colors
-     * from {@link _COLOR_CHOICES} in a random order.<br/>
-     * When `false`, {@link selectColorFromChoices} will select colors
-     * list order.
+     * When `true`, {@link selectColorFromChoices} will select colors in a random order.<br/>
+     * When `false`, {@link selectColorFromChoices} will select colors in list order.
      */
     private readonly _RANDOM_ORDER: boolean;
 
     /**
-     * The current index of {@link _COLOR_CHOICES} being chosen
-     * when colors are selected in list order (i.e. {@link _RANDOM_ORDER} is `false`).
+     * The current index of the color being chosen when colors are selected in list order.
      */
     private _currentIndex: number = 0;
 
     /**
      * @param name - The name of the color selector.
      * @param randomOrder - A flag that determines the color selection order
-     * of {@link selectColorFromChoices}.
-     *
-     * @see {@link _RANDOM_ORDER}
+     * of {@link selectColorFromChoices}.<br/>
+     * When `randomOrder` is `true`, {@link selectColorFromChoices} will select colors in a random order.<br/>
+     * When `randomOrder` is `false`, {@link selectColorFromChoices} will select colors in list order.
      */
     protected constructor(name: string, randomOrder?: boolean) {
         this._RANDOM_ORDER = randomOrder ?? Random.randomBoolean();
@@ -98,8 +95,8 @@ export abstract class ColorSelector {
     }
 
     /**
-     * @returns The selected {@link Color} from the {@link _COLOR_CHOICES} list.<br/>
-     * If {@link _COLOR_CHOICES} is empty, a default {@link Color}
+     * @returns The selected {@link Color}.<br/>
+     * If the list of color choices is empty, a default {@link Color}
      * object (black) will be returned.
      */
     public selectColorFromChoices(): Color {
@@ -147,14 +144,15 @@ export abstract class ColorSelector {
     }
 
     /**
-     * @returns The {@link _COLOR_NAMES} set.
+     * @returns A Set of the names of the colors that can be
+     * or have been chosen by the color selector.
      */
     protected get COLOR_NAMES(): Set<string> {
         return this._COLOR_NAMES;
     }
 
     /**
-     * Add a {@link Color} to the {@link _COLOR_CHOICES} list.
+     * Add a {@link Color} to the list of possible color choices.
      * @param color -
      */
     protected addColorChoice(color: Color): void {
@@ -162,10 +160,8 @@ export abstract class ColorSelector {
     }
 
     /**
-     * Increment {@link _currentIndex} to select the next
-     * {@link Color} element in the {@link _COLOR_CHOICES} list.
-     *
-     * @see {@link _RANDOM_ORDER}
+     * Increment the index used to select the next
+     * {@link Color} object when colors are selected in list order.
      */
     private incrementCurrentIndex(): void {
         const length: number = this._COLOR_CHOICES.length;

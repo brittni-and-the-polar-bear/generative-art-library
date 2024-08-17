@@ -39,6 +39,12 @@ Color block links redirect to
 
 [accent green blue (#23856D)](#accent-green-blue-23856d)
 
+[tuscan herbs (#5F8661)](#tuscan-herbs-5f8661)
+
+[wasabi peanut (#B1C69F)](#wasabi-peanut-b1c69f)
+
+[Fin.](#fin)
+
 ----
 
 # teal dark green (#007058)
@@ -51,7 +57,7 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_007058} from 'palette-colors';
+import { _007058 } from 'palette-colors';
 
 let name: string = _007058.NAME;
 ````
@@ -68,7 +74,7 @@ let name: string = _007058.NAME;
 <br/>
 
 ````typescript
-import {_0FFF4F} from 'palette-colors';
+import { _0FFF4F } from 'palette-colors';
 
 let name: string = _0FFF4F.NAME;
 ````
@@ -85,13 +91,48 @@ let name: string = _0FFF4F.NAME;
 <br/>
 
 ````typescript
-import {_23856D} from 'palette-colors';
+import { _23856D } from 'palette-colors';
 
 let name: string = _23856D.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
 
+# tuscan herbs (#5F8661)
+
+<div class="color-block" style="background: #5F8661;">
+  <a href="https://coolors.co/5f8661" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">tuscan herbs (#5F8661)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+import { _5F8661 } from 'palette-colors';
+let name: string = _5F8661.NAME;
+```
+
+[Table of Contents](#table-of-contents)
+
+# wasabi peanut (#B1C69F)
+
+<div class="color-block" style="background: #B1C69F;">
+  <a href="https://coolors.co/b1c69f" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import { _B1C69F } from 'palette-colors';
+
+let name: string = _B1C69F.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

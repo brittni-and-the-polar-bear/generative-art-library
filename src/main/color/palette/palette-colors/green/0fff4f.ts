@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps'
  *
  * @see {@link BRITTNI}
  *
- * @category Palette Colors (All)
  * @category Palette Colors (Green)
+ * @category Palette Colors (All)
  */
 export const _0FFF4F: PaletteColor = {
     HEX: '#0FFF4F',

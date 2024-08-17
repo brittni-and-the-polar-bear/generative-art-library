@@ -1,6 +1,6 @@
 # All Palettes
 
-[How to Add a New Palette](./add-new-palette.md)
+[How to Add a New Palette to the Library (Developer Instructions)](./add-new-palette.md)
 
 ----
 

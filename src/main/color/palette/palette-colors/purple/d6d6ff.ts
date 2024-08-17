@@ -19,28 +19,28 @@ import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
-import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
+import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #FAFEFF;">
- *     <a href="https://coolors.co/fafeff" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
+ * <div class="color-block" style="background: #D6D6FF;">
+ *     <a href="https://coolors.co/d6d6ff" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">pale lavender (#D6D6FF)</h2>
  *     </a>
  * </div>
  *
- * @see {@link BLUE_LILY}
+ * @see {@link WHITE_LILY}
  *
- * @category Palette Colors (White)
+ * @category Palette Colors (Purple)
  * @category Palette Colors (All)
  */
-export const _FAFEFF: PaletteColor = {
-    HEX: '#FAFEFF',
-    RGB: { R: 250, G: 254, B: 255 },
-    HSL: { H: 192, S: 100, L: 99 },
-    NAME: 'polar bear in a blizzard',
+export const _D6D6FF: PaletteColor = {
+    HEX: '#D6D6FF',
+    RGB: { R: 214, G: 214, B: 255 },
+    HSL: { H: 240, S: 100, L: 92 },
+    NAME: 'pale lavender',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-WHITE_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
-ALL_PALETTE_COLORS.setUndefinedKey(_FAFEFF.HEX, _FAFEFF);
-ColorNameManager.addColor(_FAFEFF);
+PURPLE_PALETTE_COLORS.setUndefinedKey(_D6D6FF.HEX, _D6D6FF);
+ALL_PALETTE_COLORS.setUndefinedKey(_D6D6FF.HEX, _D6D6FF);
+ColorNameManager.addColor(_D6D6FF);

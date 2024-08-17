@@ -1,6 +1,6 @@
 # All Colors
 
-[How to Add a New Color](./add-new-color.md)
+[How to Add a New Color to the Library (Developer Instructions)](./add-new-color.md)
 
 ----
 

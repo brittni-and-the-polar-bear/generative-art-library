@@ -1,4 +1,4 @@
-# How to Add a New Palette
+# How to Add a New Palette to the Library (Developer Instructions)
 
 # Table of Contents
 
@@ -38,7 +38,7 @@
 
 [Full `PaletteColor` File Example](#full-palettecolor-file-example)
 
-[Table of Contents](#table-of-contents)
+[Fin.](#fin)
 
 ----
 
@@ -406,4 +406,6 @@ MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

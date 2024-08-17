@@ -58,10 +58,10 @@ export class Color {
     private _name: string | null;
 
     /**
-     * @param color - A {@link !P5Lib.Color | p5.js Color} or {@link PaletteColor} object.
-     * If given a {@link !P5Lib.Color | p5.js Color}, the color's RGBA components
+     * @param color - A p5.js Color or {@link PaletteColor} object.
+     * If given a p5.js Color, the color's RGBA components
      * will become the values of {@link red}, {@link green}, {@link blue}, and {@link alpha}.<br/>
-     * If given a {@link PaletteColor}, the color's {@link PaletteColor.HEX HEX} value will be
+     * If given a {@link PaletteColor}, the color's {@link PaletteColor.HEX} value will be
      * used to build the color.
      */
     public constructor(color?: P5Lib.Color | PaletteColor) {
@@ -89,7 +89,7 @@ export class Color {
      * @param l - Some number between 0 and 100.
      * @param a - Some number between 0 and 1.
      *
-     * @returns A {@link !P5Lib.Color | p5.js Color} object matching the color specified
+     * @returns A p5.js Color object matching the color specified
      * by the given {@link h}{@link s}{@link l}{@link a} values.
      */
     public static getHSLColor(h: number, s: number, l: number, a?: number): P5Lib.Color {
@@ -114,7 +114,7 @@ export class Color {
      * @param l - Some number between 0 and 100.
      * @param a - Some number between 0 and 1.
      *
-     * @returns A {@link !P5Lib.Color | p5.js Color} object matching the color specified
+     * @returns A p5.js Color object matching the color specified
      * by the given {@link h}{@link s}{@link l}{@link a} values.
      */
     public static getHSLAColor(h: number, s: number, l: number, a: number): P5Lib.Color {
@@ -122,7 +122,7 @@ export class Color {
     }
 
     /**
-     * @returns A {@link !P5Lib.Color | p5.js Color} object matching the current
+     * @returns A p5.js Color object matching the current
      * {@link red}, {@link green}, {@link blue}, and {@link alpha} values.
      */
     public get color(): P5Lib.Color {
@@ -131,10 +131,9 @@ export class Color {
     }
 
     /**
-     * Set the current color.<br/>
-     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
+     * Set the current color.
      *
-     * @param c - A {@link !P5Lib.Color | p5.js Color} object.
+     * @param c - A p5.js Color object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
      */
@@ -151,8 +150,7 @@ export class Color {
     }
 
     /**
-     * Set the value of the {@link red} component.<br/>
-     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
+     * Set the value of the {@link red} component.
      *
      * @param r
      */
@@ -170,7 +168,6 @@ export class Color {
 
     /**
      * Set the value of the {@link green} component.<br/>
-     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
      *
      * @param g
      */
@@ -187,8 +184,7 @@ export class Color {
     }
 
     /**
-     * Set the value of the {@link blue} component.<br/>
-     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
+     * Set the value of the {@link blue} component.
      *
      * @param b
      */
@@ -270,10 +266,9 @@ export class Color {
     }
 
     /**
-     * Set the color values.<br/>
-     * <b>IMPORTANT: This method will set {@link _name} to `null`.</b>
+     * Set the color values.
      *
-     * @param color - A {@link !P5Lib.Color | p5.js Color} object.
+     * @param color - A p5.js Color object.
      * The color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
      */

@@ -7,8 +7,7 @@
   "customCss": "./typedoc/typedoc.css",
 
   "plugin": [
-    "typedoc-plugin-coverage",
-    "typedoc-plugin-mdn-links"
+    "typedoc-plugin-coverage"
   ],
 
   "includeVersion": true,
@@ -43,21 +42,5 @@
     "notDocumented": true
   },
   "treatWarningsAsErrors": false,
-  "customFooterHtml": "<br/>Copyright &copy; 2023-2024 <a href=\"https://brittni-and-the-polar-bear.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">brittni and the polar bear LLC</a>",
-
-  "externalSymbolLinkMappings": {
-    "global": {
-      "p5": "https://p5js.org/reference/",
-      "P5Lib": "https://p5js.org/reference/",
-      "P5Lib.Color": "https://p5js.org/reference/p5/p5.Color/"
-    },
-    "p5": {
-      "P5Lib": "https://p5js.org/reference/",
-      "p5": "https://p5js.org/reference/"
-    },
-    "@types/p5": {
-      "P5Lib": "https://p5js.org/reference/",
-      "p5": "https://p5js.org/reference/"
-    }
-  }
+  "customFooterHtml": "<br/>Copyright &copy; 2023-2024 <a href=\"https://brittni-and-the-polar-bear.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">brittni and the polar bear LLC</a>"
 }

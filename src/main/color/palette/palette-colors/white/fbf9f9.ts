@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps'
  *
  * @see {@link CLASSIC_CHRISTMAS}
  *
- * @category Palette Colors (All)
  * @category Palette Colors (White)
+ * @category Palette Colors (All)
  */
 export const _FBF9F9: PaletteColor = {
     HEX: '#FBF9F9',
@@ -41,6 +41,6 @@ export const _FBF9F9: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-ALL_PALETTE_COLORS.setUndefinedKey(_FBF9F9.HEX, _FBF9F9);
 WHITE_PALETTE_COLORS.setUndefinedKey(_FBF9F9.HEX, _FBF9F9);
+ALL_PALETTE_COLORS.setUndefinedKey(_FBF9F9.HEX, _FBF9F9);
 ColorNameManager.addColor(_FBF9F9);
