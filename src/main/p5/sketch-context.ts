@@ -20,6 +20,7 @@ import P5Lib from 'p5';
 const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
     p.setup = (): void => {
         p.createCanvas(0, 0);
+        p.noLoop();
     };
 });
 
@@ -29,11 +30,11 @@ const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
  *
  * @category p5
  */
-class SketchContext {
+export class SketchContext {
     /**
      * The underlying p5.js sketch context object.
      */
-    private static _p5?: P5Lib;
+    private static _p5?: P5Lib | null = null;
 
     /**
      * Initializes the sketch context to allow other accessors to have
@@ -51,11 +52,9 @@ class SketchContext {
     /**
      * @returns The current sketch context.<br/>
      * If no context has been initialized, the method will return
-     * an "empty" sketch context (0x0 canvas).
+     * an "empty" sketch context (0x0 canvas; no loop).
      */
     public static get p5(): P5Lib {
         return this._p5 ?? noP5;
     }
 }
-
-export { SketchContext };

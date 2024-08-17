@@ -15,6 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { Color, ColorSelector, ColorSelectorType } from 'color';
 import { SketchContext } from 'context';
 import { Random, RandomSelector } from 'random';
@@ -53,9 +55,10 @@ export class PaletteColorSelector extends ColorSelector {
         randomOrder?: boolean
     ) {
         super(PaletteColorSelector.buildName(palette), randomOrder);
+        const p5: P5Lib = SketchContext.p5;
 
         let count: number = colorCount ?? Random.randomInt(PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length + 1);
-        count = SketchContext.p5.constrain(
+        count = p5.constrain(
             count,
             PaletteColorSelector.MIN_COLOR_COUNT,
             palette.COLORS.length
@@ -118,7 +121,9 @@ export class PaletteColorSelector extends ColorSelector {
      * equal to the number of colors in the given palette.
      */
     private choosePaletteColors(palette: Palette, buildWithPaletteOrder: boolean, colorCount: number): void {
-        colorCount = SketchContext.p5.constrain(
+        const p5: P5Lib = SketchContext.p5;
+
+        colorCount = p5.constrain(
             colorCount,
             PaletteColorSelector.MIN_COLOR_COUNT,
             palette.COLORS.length
