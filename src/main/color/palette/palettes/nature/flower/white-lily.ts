@@ -15,10 +15,34 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// https://www.color-hex.com/color-palette/1039504
-// #fafbf0 --> #FAFBEF
-// #b0c59f --> #B1C69F
-// #5e855f --> #5F8661
-// #d7d7ff --> #D6D6FF
-// #afafd7 --> #AEAED6
-// gradient - false
+import { Discriminators } from 'discriminator';
+import { Palette } from 'palette';
+import { _5F8661, _AEAED6, _B1C69F, _D6D6FF, _FAFBEF } from 'palette-colors';
+
+export const WHITE_LILY: Palette = {
+    NAME: 'white lily',
+
+    SOURCE: 'https://www.color-hex.com/color-palette/1039504',
+
+    IS_GRADIENT: false,
+
+    COLORS: [
+        _FAFBEF,
+        _B1C69F,
+        _5F8661,
+        _D6D6FF,
+        _AEAED6
+    ],
+
+    CONTRAST_MAP: {
+        '#000000': ['#FAFBEF', '#B1C69F', '#5F8661', '#D6D6FF', '#AEAED6'],
+        '#FFFFFF': [],
+        '#FAFBEF': ['#000000'],
+        '#B1C69F': ['#000000'],
+        '#5F8661': ['#000000'],
+        '#D6D6FF': ['#000000'],
+        '#AEAED6': ['#000000']
+    },
+
+    DISCRIMINATOR: Discriminators.PALETTE
+};
