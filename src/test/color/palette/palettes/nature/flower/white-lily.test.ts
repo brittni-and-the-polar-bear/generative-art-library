@@ -15,28 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Palette } from 'palette';
-import { BLUE_LILY, NATURE_PALETTES, WHITE_LILY } from 'palettes';
+import { PaletteColor } from 'palette';
+import { _5F8661, _AEAED6, _B1C69F, _D6D6FF, _FAFBEF } from 'palette-colors';
+import { WHITE_LILY } from 'palettes';
 
-import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
-const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: BLUE_LILY },
-    { palette: WHITE_LILY }
-];
+const PALETTE_NAME: string = 'WHITE_LILY';
 
-const MAP_NAME: string = 'NATURE_PALETTES';
+describe('WHITE_LILY palette tests', (): void => {
+    const expectedColors: PaletteColor[] = [
+        _FAFBEF,
+        _B1C69F,
+        _5F8661,
+        _D6D6FF,
+        _AEAED6
+    ];
 
-describe('nature palette maps test', (): void => {
-    test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(NATURE_PALETTES, EXPECTED_PALETTES.length);
+    test(`${PALETTE_NAME} palette is valid`, (): void => {
+        checkForValidPalette(WHITE_LILY, expectedColors);
     });
-
-    test.each(
-        EXPECTED_PALETTES
-    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
-        ({ palette }): void => {
-            checkForPaletteInMap(palette, NATURE_PALETTES);
-        }
-    );
 });

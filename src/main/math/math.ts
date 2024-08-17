@@ -16,22 +16,23 @@
  */
 
 /**
- * @public
  * @param row - Current row number. Rows are zero-indexed; the first row is row 0.
  * @param column - Current column number. Columns are zero-indexed; the first column is column 0.
  * @param totalRows - Total number of rows.
  * @param totalColumns - Total number of columns.
+ *
  * @return The index in a single-dimension structure of the
  * given row and column in a two-dimensional structure.<br/>
- * If {@link row} or {@link column} are negative, the function will return {@link !undefined}.<br/>
- * If {@link row} is greater than or equal to {@link totalRows}, the function will return {@link !undefined}.<br/>
- * If {@link column} is greater than or equal to {@link totalColumns}, the function will return {@link !undefined}.
+ * If {@link row} or {@link column} are negative, the function will return undefined.<br/>
+ * If {@link row} is greater than or equal to {@link totalRows}, the function will return undefined.<br/>
+ * If {@link column} is greater than or equal to {@link totalColumns}, the function will return undefined.
+ *
  * @category Math
  */
-function getSingleDimensionIndex(row: number,
-                                 column: number,
-                                 totalRows: number,
-                                 totalColumns: number): number | undefined {
+export function getSingleDimensionIndex(row: number,
+                                        column: number,
+                                        totalRows: number,
+                                        totalColumns: number): number | undefined {
     let index: number | undefined = undefined;
 
     if ((row >= 0) &&
@@ -43,5 +44,3 @@ function getSingleDimensionIndex(row: number,
 
     return index;
 }
-
-export { getSingleDimensionIndex };

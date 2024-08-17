@@ -35,25 +35,25 @@ export class RandomSelector<Type> {
     }
 
     /**
-     * Get the number of elements in the {@link _elements} list.
+     * Get the number of elements in the list.
      */
     public get size(): number {
         return this._elements.length;
     }
 
     /**
-     * Selects random element from {@link _elements}.<br/>
+     * Selects random element from the list.<br/>
      * This method assumes an equal distribution for all elements of the list.<br/>
-     * If {@link _elements} is empty, the function will return {@link !undefined}.
+     * If the list is empty, the function will return undefined.
      */
     public getRandomElement(): Type | undefined {
         return Random.randomElement(this._elements);
     }
 
     /**
-     * Selects random element from {@link _elements}, then removes that element from the list.<br/>
+     * Selects random element from the list, then removes that element from the list.<br/>
      * This method assumes an equal distribution for all elements of the list.<br/>
-     * If {@link _elements} is empty, the function will return {@link !undefined}.
+     * If the list is empty, the function will return undefined.
      */
     public getRandomElementAndRemove(): Type | undefined {
         let element: Type | undefined;

@@ -16,3 +16,4 @@
  */
 
 export * from './blue-lily';
+export * from './white-lily';
