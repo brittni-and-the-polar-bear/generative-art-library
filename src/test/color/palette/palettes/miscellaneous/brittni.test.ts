@@ -27,9 +27,9 @@ describe('BRITTNI palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         _121212,
         _0437F1,
+        _FF6BB5,
         _0FFF4F,
-        _7A00F5,
-        _FF6BB5
+        _7A00F5
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
