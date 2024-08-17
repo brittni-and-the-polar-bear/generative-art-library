@@ -40,8 +40,6 @@ import {
     checkForValidPaletteColor, WHITE_HEXES
 } from 'unit-test/shared';
 
-const p5: P5Lib = SketchContext.p5;
-
 const ALL_HEXES: { hexString: string }[] = [];
 ALL_HEXES.push(
     ...BLACK_HEXES,
@@ -137,6 +135,7 @@ describe('all palette colors', (): void => {
         ALL_HEXES
     )('$# - consistent color: $hexString',
         ({ hexString }): void => {
+            const p5: P5Lib = SketchContext.p5;
             const c: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
             expect(c).toBeTruthy();
 

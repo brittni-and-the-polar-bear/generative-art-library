@@ -15,15 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { Color } from 'color';
 import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
 import { SketchContext } from 'context';
 import { _0437F1, _0FFF4F, _121212, _FF6BB5 } from 'palette-colors';
-import P5Lib from 'p5';
-
-const p5: P5Lib = SketchContext.p5;
 
 describe('color contrast assessor tests', (): void => {
+    const p5: P5Lib = SketchContext.p5;
+
     test.each([
         {
             colorA: new Color(_0437F1),

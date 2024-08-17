@@ -22,8 +22,6 @@ import { PaletteColor } from 'palette';
 
 import { ColorNameManager } from './color-name';
 
-const p5: P5Lib = SketchContext.p5;
-
 /**
  * Color information and functionality.
  * Colors are stored in RGBA format.
@@ -65,6 +63,8 @@ export class Color {
      * used to build the color.
      */
     public constructor(color?: P5Lib.Color | PaletteColor) {
+        const p5: P5Lib = SketchContext.p5;
+
         this._red = 0;
         this._green = 0;
         this._blue = 0;
@@ -93,6 +93,7 @@ export class Color {
      * by the given {@link h}{@link s}{@link l}{@link a} values.
      */
     public static getHSLColor(h: number, s: number, l: number, a?: number): P5Lib.Color {
+        const p5: P5Lib = SketchContext.p5;
         let color: P5Lib.Color;
         h = Math.floor(p5.constrain(h, 0, 360));
         s = Math.floor(p5.constrain(s, 0, 100));
@@ -126,6 +127,7 @@ export class Color {
      * {@link red}, {@link green}, {@link blue}, and {@link alpha} values.
      */
     public get color(): P5Lib.Color {
+        const p5: P5Lib = SketchContext.p5;
         p5.colorMode(p5.RGB);
         return p5.color(this.red, this.green, this.blue, this.alpha);
     }
@@ -155,6 +157,7 @@ export class Color {
      * @param r
      */
     public set red(r: number) {
+        const p5: P5Lib = SketchContext.p5;
         this._red = Math.floor(p5.constrain(r, 0, 255));
         this._name = null;
     }
@@ -172,6 +175,7 @@ export class Color {
      * @param g
      */
     public set green(g: number) {
+        const p5: P5Lib = SketchContext.p5;
         this._green = Math.floor(p5.constrain(g, 0, 255));
         this._name = null;
     }
@@ -189,6 +193,7 @@ export class Color {
      * @param b
      */
     public set blue(b: number) {
+        const p5: P5Lib = SketchContext.p5;
         this._blue = Math.floor(p5.constrain(b, 0, 255));
         this._name = null;
     }
@@ -206,6 +211,7 @@ export class Color {
      * @param a
      */
     public set alpha(a: number) {
+        const p5: P5Lib = SketchContext.p5;
         this._alpha = Math.floor(p5.constrain(a, 0, 255));
     }
 
@@ -273,6 +279,7 @@ export class Color {
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
      */
     private setColorValues(color: P5Lib.Color): void {
+        const p5: P5Lib = SketchContext.p5;
         this.red = p5.red(color);
         this.green = p5.green(color);
         this.blue = p5.blue(color);

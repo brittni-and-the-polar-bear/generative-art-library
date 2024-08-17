@@ -29,12 +29,11 @@ import {
     p5ColorToColorComponents
 } from 'unit-test/shared';
 
-const p5: P5Lib = SketchContext.p5;
-
 const defaultColorName: string = 'black';
 
 describe('color tests', (): void => {
     test('get hsl color', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const h: number = 238;
         const s: number = 65;
         const l: number = 39;
@@ -51,6 +50,7 @@ describe('color tests', (): void => {
     });
 
     test('get hsla color', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const h: number = 134;
         const s: number = 82;
         const l: number = 15;
@@ -101,6 +101,7 @@ describe('color tests', (): void => {
     );
 
     test('color built with (c) parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const c: P5Lib.Color = p5.color(w);
         const expected: ColorComponents = {
@@ -115,6 +116,7 @@ describe('color tests', (): void => {
     });
 
     test('color built with (c,a) parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const a: number = 83;
         const c: P5Lib.Color = p5.color(w, a);
@@ -130,6 +132,7 @@ describe('color tests', (): void => {
     });
 
     test('color built with (r,g,b) parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -146,6 +149,7 @@ describe('color tests', (): void => {
     });
 
     test('color built with (r,g,b,a) parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -196,6 +200,7 @@ describe('color tests', (): void => {
     });
 
     test('color built with hex color code parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const r: number = 255;
         const g: number = 61;
         const b: number = 181;
@@ -212,6 +217,7 @@ describe('color tests', (): void => {
     });
 
     test('color set with (c) parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const c: P5Lib.Color = p5.color(w);
         const expected: ColorComponents = {
@@ -228,6 +234,7 @@ describe('color tests', (): void => {
     });
 
     test('color set with (c,a) parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const a: number = 83;
         const c: P5Lib.Color = p5.color(w, a);
@@ -245,6 +252,7 @@ describe('color tests', (): void => {
     });
 
     test('color set with (r,g,b) color', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -263,6 +271,7 @@ describe('color tests', (): void => {
     });
 
     test('color set with (r,g,b,a) color', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -318,6 +327,7 @@ describe('color tests', (): void => {
     });
 
     test('color set with hex color code parameter', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const r: number = 113;
         const g: number = 130;
         const b: number = 185;
@@ -491,6 +501,7 @@ describe('color tests', (): void => {
         { r: 128, g: 43, b: 78, a: 100, hex: '#802B4E' }
     ])('$# get hex: rgba($r, $g, $b, $a)',
         ({ r, g, b, a, hex }): void => {
+            const p5: P5Lib = SketchContext.p5;
             let c: Color;
 
             if (a !== undefined) {
@@ -526,6 +537,7 @@ describe('color tests', (): void => {
         { r: 128, g: 43, b: 78, a: 100, hex: '#802B4E64' }
     ])('$# get hex with alpha: rgba($r, $g, $b, $a)',
         ({ r, g, b, a, hex }): void => {
+            const p5: P5Lib = SketchContext.p5;
             let c: Color;
 
             if (a !== undefined) {

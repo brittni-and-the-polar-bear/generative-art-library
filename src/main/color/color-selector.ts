@@ -15,6 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { SketchContext } from 'context';
 import { Random, WeightedElement } from 'random';
 
@@ -134,9 +136,10 @@ export abstract class ColorSelector {
     public getBackgroundColor(chanceOfBlack: number,
                               chanceOfWhite: number,
                               chanceOfColor: number): Color {
+        const p5: P5Lib = SketchContext.p5;
         const weightedColors: WeightedElement<Color>[] = [
-            { value: new Color(SketchContext.p5.color(0)), weight: chanceOfBlack },
-            { value: new Color(SketchContext.p5.color(255)), weight: chanceOfWhite },
+            { value: new Color(p5.color(0)), weight: chanceOfBlack },
+            { value: new Color(p5.color(255)), weight: chanceOfWhite },
             { value: this.getColor(), weight: chanceOfColor }
         ];
 

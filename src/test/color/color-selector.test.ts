@@ -15,7 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { Color, DefaultColorSelector } from 'color';
+import {SketchContext} from 'context';
 
 import {
     ColorComponents,
@@ -30,7 +33,6 @@ import {
     green,
     red
 } from 'unit-test/shared';
-import { SketchContext } from 'context';
 
 describe('color selector tests', (): void => {
     test('test default color selector', (): void => {
@@ -145,11 +147,12 @@ describe('color selector tests', (): void => {
     });
 
     test('test background color selection: all options', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents[] = [
             colorToColorComponents(new Color()),
-            colorToColorComponents(new Color(SketchContext.p5.color(255))),
+            colorToColorComponents(new Color(p5.color(255))),
             colorToColorComponents(red)
         ];
         const colorNames: Set<string> = new Set<string>();
@@ -177,9 +180,10 @@ describe('color selector tests', (): void => {
     });
 
     test('test background color selection: white only', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
-        const expectedComponents: ColorComponents = colorToColorComponents(new Color(SketchContext.p5.color(255)));
+        const expectedComponents: ColorComponents = colorToColorComponents(new Color(p5.color(255)));
 
         for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
             const background: Color = selector.getBackgroundColor(0, 1, 0);
@@ -201,11 +205,12 @@ describe('color selector tests', (): void => {
     });
 
     test('test background color selection: black or white only', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents[] = [
             colorToColorComponents(new Color()),
-            colorToColorComponents(new Color(SketchContext.p5.color(255)))
+            colorToColorComponents(new Color(p5.color(255)))
         ];
         const colorNames: Set<string> = new Set<string>();
 
@@ -239,10 +244,11 @@ describe('color selector tests', (): void => {
     });
 
     test('test background color selection: white or color only', (): void => {
+        const p5: P5Lib = SketchContext.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents[] = [
-            colorToColorComponents(new Color(SketchContext.p5.color(255))),
+            colorToColorComponents(new Color(p5.color(255))),
             colorToColorComponents(red)
         ];
         const colorNames: Set<string> = new Set<string>();
