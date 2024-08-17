@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #aeaed6
-// #AEAED6
-// 240°, 33%, 76%
-// 174, 174, 214
-// pixie violet
-// black-pass
-// luminance: 0.4412581401
-
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
