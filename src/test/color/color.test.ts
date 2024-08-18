@@ -32,7 +32,7 @@ import {
 const defaultColorName: string = 'black';
 
 describe('color tests', (): void => {
-    test('get hsl color', (): void => {
+    test('Color.getHSLColor() method', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const h: number = 238;
         const s: number = 65;
@@ -49,7 +49,7 @@ describe('color tests', (): void => {
         expect(hslComponents).toEqual(expectedComponents);
     });
 
-    test('get hsla color', (): void => {
+    test('Color.getHSLAColor() method', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const h: number = 134;
         const s: number = 82;
@@ -67,7 +67,25 @@ describe('color tests', (): void => {
         expect(hslComponents).toEqual(expectedComponents);
     });
 
-    test('default color', (): void => {
+    test.each(
+        [
+            { color: new Color(SketchContext.p5.color(0)) },
+            { color: new Color(SketchContext.p5.color(200)) },
+            { color: new Color(SketchContext.p5.color(100, 0, 0)) },
+            { color: new Color(SketchContext.p5.color(0, 100, 0)) },
+            { color: new Color(SketchContext.p5.color(0, 0, 100)) },
+            { color: new Color(SketchContext.p5.color(100, 0, 100)) },
+            { color: new Color(SketchContext.p5.color(100, 0, 100, 50)) }
+        ]
+    )('$# Color.copy() method',
+        ({ color }): void => {
+            const built: Color = Color.copy(color);
+            expect(built).toEqual(color);
+            expect(built).not.toBe(color);
+        }
+    );
+
+    test('default Color constructor', (): void => {
         const expected: ColorComponents = {
             r: 0, g: 0, b: 0, a: 255
         };
@@ -85,7 +103,7 @@ describe('color tests', (): void => {
             { paletteColor: _7A00F5 },
             { paletteColor: _FF6BB5 }
         ]
-    )('$# color built with PaletteColor object: $paletteColor.HEX',
+    )('$# Color constructor with PaletteColor object: $paletteColor.HEX',
         ({ paletteColor }): void => {
             const expected: ColorComponents = {
                 r: paletteColor.RGB.R, g: paletteColor.RGB.G, b: paletteColor.RGB.B, a: 255
@@ -100,7 +118,7 @@ describe('color tests', (): void => {
         }
     );
 
-    test('color built with (c) parameter', (): void => {
+    test('Color constructor with grayscale (c) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const c: P5Lib.Color = p5.color(w);
@@ -115,7 +133,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color built with (c,a) parameter', (): void => {
+    test('Color constructor with grayscale (c,a) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const a: number = 83;
@@ -131,7 +149,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color built with (r,g,b) parameter', (): void => {
+    test('Color constructor with rgb (r,g,b) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
@@ -148,7 +166,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color built with (r,g,b,a) parameter', (): void => {
+    test('Color constructor with rgb (r,g,b,a) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
@@ -166,7 +184,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color built with (h, s, l) parameter', (): void => {
+    test('Color constructor with hsl (h,s,l) color', (): void => {
         const h: number = 187;
         const s: number = 75;
         const l: number = 26;
@@ -182,7 +200,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color built with (h, s, l, a) parameter', (): void => {
+    test('Color constructor with hsl (h,s,l,a) color', (): void => {
         const h: number = 187;
         const s: number = 75;
         const l: number = 26;
@@ -199,7 +217,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color built with hex color code parameter', (): void => {
+    test('Color constructor with hex color code', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 255;
         const g: number = 61;
@@ -216,7 +234,25 @@ describe('color tests', (): void => {
         expect(expectedName).toBe(expectedName);
     });
 
-    test('color set with (c) parameter', (): void => {
+    test.each(
+        [
+            { color: new Color(SketchContext.p5.color(0)) },
+            { color: new Color(SketchContext.p5.color(200)) },
+            { color: new Color(SketchContext.p5.color(100, 0, 0)) },
+            { color: new Color(SketchContext.p5.color(0, 100, 0)) },
+            { color: new Color(SketchContext.p5.color(0, 0, 100)) },
+            { color: new Color(SketchContext.p5.color(100, 0, 100)) },
+            { color: new Color(SketchContext.p5.color(100, 0, 100, 50)) }
+        ]
+    )('$# Color constructor with Color object: $color',
+        ({ color }): void => {
+            const built: Color = new Color(color);
+            expect(built).toEqual(color);
+            expect(built).not.toBe(color);
+        }
+    );
+
+    test('color setter with with grayscale (c) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const c: P5Lib.Color = p5.color(w);
@@ -233,7 +269,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color set with (c,a) parameter', (): void => {
+    test('color setter with with grayscale (c,a) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
         const a: number = 83;
@@ -251,7 +287,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color set with (r,g,b) color', (): void => {
+    test('color setter with with rgb (r,g,b) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
@@ -270,7 +306,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color set with (r,g,b,a) color', (): void => {
+    test('color setter with with rgb (r,g,b,a) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 212;
         const g: number = 28;
@@ -289,7 +325,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color set with (h, s, l) parameter', (): void => {
+    test('color setter with with hsl (h,s,l) color', (): void => {
         const h: number = 187;
         const s: number = 75;
         const l: number = 26;
@@ -307,7 +343,7 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color set with (h, s, l, a) parameter', (): void => {
+    test('color setter with with hsl (h,s,l,a) color', (): void => {
         const h: number = 187;
         const s: number = 75;
         const l: number = 26;
@@ -326,12 +362,13 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
-    test('color set with hex color code parameter', (): void => {
+    test('color setter with with hex color code', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 113;
         const g: number = 130;
         const b: number = 185;
-        const c: P5Lib.Color = p5.color('#7182B9');
+        const expectedHex: string = '#7182B9';
+        const c: P5Lib.Color = p5.color(expectedHex);
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: 255
         };
@@ -343,6 +380,7 @@ describe('color tests', (): void => {
         expect(colorToColorComponents(color)).toEqual(expected);
         expect(p5ColorToColorComponents(color.color)).toEqual(expected);
         expect(color.name).toBe(expectedName);
+        expect(color.hex).toBe(expectedHex);
     });
 
     test('set red to value > 255', (): void => {

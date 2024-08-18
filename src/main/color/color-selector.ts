@@ -97,26 +97,6 @@ export abstract class ColorSelector {
     }
 
     /**
-     * @returns The selected {@link Color}.<br/>
-     * If the list of color choices is empty, a default {@link Color}
-     * object (black) will be returned.
-     */
-    public selectColorFromChoices(): Color {
-        let col: Color = new Color();
-
-        if (this._RANDOM_ORDER) {
-            col = Random.randomElement(this._COLOR_CHOICES) ?? (new Color());
-        } else {
-            if (this._currentIndex < this._COLOR_CHOICES.length) {
-                col = this._COLOR_CHOICES[this._currentIndex];
-                this.incrementCurrentIndex();
-            }
-        }
-
-        return col;
-    }
-
-    /**
      * Select and return a {@link Color} object to be used as a background.
      * The color will either be black (#000000), white (#FFFFFF), or a color
      * from the selector, chosen by the {@link getColor} method.<br/>
@@ -143,7 +123,8 @@ export abstract class ColorSelector {
             { value: this.getColor(), weight: chanceOfColor }
         ];
 
-        return Random.randomWeightedElement(weightedColors) ?? (new Color());
+        const selection = Random.randomWeightedElement(weightedColors) ?? (new Color());
+        return Color.copy(selection);
     }
 
     /**
@@ -159,7 +140,31 @@ export abstract class ColorSelector {
      * @param color -
      */
     protected addColorChoice(color: Color): void {
-        this._COLOR_CHOICES.push(color);
+        this._COLOR_CHOICES.push(Color.copy(color));
+    }
+
+    /**
+     * @returns The selected {@link Color}.<br/>
+     * If the list of color choices is empty, a default {@link Color}
+     * object (black) will be returned.
+     */
+    protected selectColorFromChoices(): Color {
+        let selection: Color | undefined = new Color();
+
+        if (this._RANDOM_ORDER) {
+            selection = Random.randomElement(this._COLOR_CHOICES);
+        } else {
+            if (this._currentIndex < this._COLOR_CHOICES.length) {
+                selection = this._COLOR_CHOICES[this._currentIndex];
+                this.incrementCurrentIndex();
+            }
+        }
+
+        if (!selection) {
+            selection = new Color();
+        }
+
+        return Color.copy(selection);
     }
 
     /**

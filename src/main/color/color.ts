@@ -56,15 +56,19 @@ export class Color {
     private _name: string | null;
 
     /**
-     * @param color - A p5.js Color or {@link PaletteColor} object.
+     * @param color - A p5.js Color, {@link Color}, or {@link PaletteColor} object.<br/>
+     *
      * If given a p5.js Color, the color's RGBA components
      * will become the values of {@link red}, {@link green}, {@link blue}, and {@link alpha}.<br/>
-     * If given a {@link PaletteColor}, the color's {@link PaletteColor.HEX} value will be
-     * used to build the color.
+     *
+     * If given a {@link Color}, the given color's
+     * {@link red}, {@link green}, {@link blue}, {@link alpha}, and {@link name}
+     * properties will become the new values of this color's respective properties.<br/>
+     *
+     * If given a {@link PaletteColor}, the color's
+     * {@link PaletteColor.RGB | RGB} values will be used to build the color.
      */
-    public constructor(color?: P5Lib.Color | PaletteColor) {
-        const p5: P5Lib = SketchContext.p5;
-
+    public constructor(color?: P5Lib.Color | Color | PaletteColor) {
         this._red = 0;
         this._green = 0;
         this._blue = 0;
@@ -75,12 +79,24 @@ export class Color {
             if (color instanceof P5Lib.Color) {
                 this.setColorValues(color);
                 this._name = null;
+            } else if (color instanceof Color) {
+                this.setColorValues(color);
             } else {
-                const c: P5Lib.Color = p5.color(color.RGB.R, color.RGB.G, color.RGB.B);
-                this.setColorValues(c);
+                this.red = color.RGB.R;
+                this.green = color.RGB.G;
+                this.blue = color.RGB.B;
                 this._name = color.NAME;
             }
         }
+    }
+
+    /**
+     * Copy the given {@link Color} object and return a new, distinct object.
+     *
+     * @param color -
+     */
+    public static copy(color: Color): Color {
+        return new Color(color);
     }
 
     /**
@@ -154,7 +170,7 @@ export class Color {
     /**
      * Set the value of the {@link red} component.
      *
-     * @param r
+     * @param r -
      */
     public set red(r: number) {
         const p5: P5Lib = SketchContext.p5;
@@ -172,7 +188,7 @@ export class Color {
     /**
      * Set the value of the {@link green} component.<br/>
      *
-     * @param g
+     * @param g -
      */
     public set green(g: number) {
         const p5: P5Lib = SketchContext.p5;
@@ -190,7 +206,7 @@ export class Color {
     /**
      * Set the value of the {@link blue} component.
      *
-     * @param b
+     * @param b -
      */
     public set blue(b: number) {
         const p5: P5Lib = SketchContext.p5;
@@ -208,7 +224,7 @@ export class Color {
     /**
      * Set the value of the {@link alpha} component.
      *
-     * @param a
+     * @param a -
      */
     public set alpha(a: number) {
         const p5: P5Lib = SketchContext.p5;
@@ -274,16 +290,30 @@ export class Color {
     /**
      * Set the color values.
      *
-     * @param color - A p5.js Color object.
-     * The color's RGBA components will become the new values of
-     * {@link red}, {@link green}, {@link blue}, and {@link alpha}.
+     * @param color - A p5.js Color or {@link Color} object.<br/>
+     *
+     * If given a p5.js Color, the color's RGBA components will become the new values of
+     * {@link red}, {@link green}, {@link blue}, and {@link alpha}.<br/>
+     *
+     * If given a {@link Color} object, the given color's
+     * {@link red}, {@link green}, {@link blue}, {@link alpha}, and {@link name}
+     * properties will become the new values of this color's respective
+     * properties.
      */
-    private setColorValues(color: P5Lib.Color): void {
-        const p5: P5Lib = SketchContext.p5;
-        this.red = p5.red(color);
-        this.green = p5.green(color);
-        this.blue = p5.blue(color);
-        this.alpha = p5.alpha(color);
-        this._name = null;
+    private setColorValues(color: P5Lib.Color | Color): void {
+        if (color instanceof P5Lib.Color) {
+            const p5: P5Lib = SketchContext.p5;
+            this.red = p5.red(color);
+            this.green = p5.green(color);
+            this.blue = p5.blue(color);
+            this.alpha = p5.alpha(color);
+            this._name = null;
+        } else {
+            this.red = color.red;
+            this.green = color.green;
+            this.blue = color.blue;
+            this.alpha = color.alpha;
+            this._name = color.name;
+        }
     }
 }
