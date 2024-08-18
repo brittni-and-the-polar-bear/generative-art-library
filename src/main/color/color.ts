@@ -55,14 +55,16 @@ export class Color {
      */
     private _name: string | null;
 
-    // TODO - release notes
     /**
      * @param color - A p5.js Color, {@link Color}, or {@link PaletteColor} object.<br/>
+     *
      * If given a p5.js Color, the color's RGBA components
      * will become the values of {@link red}, {@link green}, {@link blue}, and {@link alpha}.<br/>
+     *
      * If given a {@link Color}, the given color's
      * {@link red}, {@link green}, {@link blue}, {@link alpha}, and {@link name}
      * properties will become the new values of this color's respective properties.<br/>
+     *
      * If given a {@link PaletteColor}, the color's
      * {@link PaletteColor.RGB | RGB} values will be used to build the color.
      */
@@ -88,7 +90,6 @@ export class Color {
         }
     }
 
-    // TODO - release notes
     /**
      * Copy the given {@link Color} object and return a new, distinct object.
      *
@@ -286,13 +287,14 @@ export class Color {
         return this.getRGBHex(true);
     }
 
-    // TODO - release notes
     /**
      * Set the color values.
      *
      * @param color - A p5.js Color or {@link Color} object.<br/>
+     *
      * If given a p5.js Color, the color's RGBA components will become the new values of
      * {@link red}, {@link green}, {@link blue}, and {@link alpha}.<br/>
+     *
      * If given a {@link Color} object, the given color's
      * {@link red}, {@link green}, {@link blue}, {@link alpha}, and {@link name}
      * properties will become the new values of this color's respective
