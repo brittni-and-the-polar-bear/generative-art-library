@@ -270,12 +270,103 @@ describe('color tests', (): void => {
         expect(color.name).toBe(expectedName);
     });
 
+    test('Color constructor with rgb (r,g,b) arguments; r = 0', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 0;
+        const g: number = 168;
+        const b: number = 82;
+        const c: P5Lib.Color = p5.color(r, g, b);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: 255
+        };
+        const expectedName: string = 'green pigment';
+
+        const color: Color = new Color(r, g, b);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
+    test('Color constructor with rgb (r,g,b) arguments; g = 0', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 50;
+        const g: number = 0;
+        const b: number = 82;
+        const c: P5Lib.Color = p5.color(r, g, b);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: 255
+        };
+        const expectedName: string = 'hollow knight';
+
+        const color: Color = new Color(r, g, b);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
+    test('Color constructor with rgb (r,g,b) arguments; b = 0', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 50;
+        const g: number = 168;
+        const b: number = 0;
+        const c: P5Lib.Color = p5.color(r, g, b);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: 255
+        };
+        const expectedName: string = 'candy grass';
+
+        const color: Color = new Color(r, g, b);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
+    test('Color constructor with rgb (r,g,b) arguments; all = 0', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 0;
+        const g: number = 0;
+        const b: number = 0;
+        const c: P5Lib.Color = p5.color(r, g, b);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: 255
+        };
+        const expectedName: string = 'black';
+
+        const color: Color = new Color(r, g, b);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
     test('Color constructor with rgb (r,g,b,a) arguments', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const r: number = 50;
         const g: number = 168;
         const b: number = 82;
         const a: number = 150;
+        const c: P5Lib.Color = p5.color(r, g, b, a);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: a
+        };
+        const expectedName: string = 'spandex green';
+
+        const color: Color = new Color(r, g, b, a);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
+    test('Color constructor with rgb (r,g,b,a) arguments; a = 0', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 50;
+        const g: number = 168;
+        const b: number = 82;
+        const a: number = 0;
         const c: P5Lib.Color = p5.color(r, g, b, a);
         const expected: ColorComponents = {
             r: r, g: g, b: b, a: a

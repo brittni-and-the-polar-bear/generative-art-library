@@ -91,17 +91,18 @@ export class Color {
         this._alpha = 255;
         this._name = 'black';
 
-        if (comp1 && (typeof comp1 === 'number') &&
-            comp2 &&
-            comp3) {
-            this._red = comp1;
-            this._green = comp2;
-            this._blue = comp3;
-            this._name = null;
+        if (((comp1 && (typeof comp1 === 'number')) || (comp1 === 0)) &&
+            (comp2 || (comp2 === 0)) &&
+            (comp3 || (comp3 === 0))) {
+            this.red = comp1;
+            this.green = comp2;
+            this.blue = comp3;
 
-            if (comp4) {
-                this._alpha = comp4;
+            if (comp4 || comp4 === 0) {
+                this.alpha = comp4;
             }
+
+            this._name = null;
         } else if (comp1) {
             if (comp1 instanceof P5Lib.Color) {
                 this.setColorValues(comp1);
