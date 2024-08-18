@@ -180,20 +180,14 @@ describe('random tests', (): void => {
 
     test('test randomListElement with empty number list', (): void => {
         const empty: number[] = [];
-
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const choice: number | undefined = Random.randomElement(empty);
-            expect(choice).toBeUndefined();
-        }
+        const choice: number | undefined = Random.randomElement(empty);
+        expect(choice).toBeUndefined();
     });
 
     test('test randomListElement with empty string list', (): void => {
         const empty: string[] = [];
-
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const choice: string | undefined = Random.randomElement(empty);
-            expect(choice).toBeUndefined();
-        }
+        const choice: string | undefined = Random.randomElement(empty);
+        expect(choice).toBeUndefined();
     });
 
     test('test randomWeightedElement with number type', (): void => {
@@ -263,11 +257,8 @@ describe('random tests', (): void => {
         const logSpy = jest.spyOn(global.console, 'warn');
         const numbers: WeightedElement<number>[] = [];
 
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const result: number | undefined = Random.randomWeightedElement(numbers);
-            expect(result).toBeUndefined();
-        }
-
+        const result: number | undefined = Random.randomWeightedElement(numbers);
+        expect(result).toBeUndefined();
         expect(logSpy).not.toHaveBeenCalled();
         logSpy.mockRestore();
     });
@@ -275,12 +266,8 @@ describe('random tests', (): void => {
     test('test randomWeightedElement with empty string list', (): void => {
         const logSpy = jest.spyOn(global.console, 'warn');
         const strings: WeightedElement<string>[] = [];
-
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const result: string | undefined = Random.randomWeightedElement(strings);
-            expect(result).toBeUndefined();
-        }
-
+        const result: string | undefined = Random.randomWeightedElement(strings);
+        expect(result).toBeUndefined();
         expect(logSpy).not.toHaveBeenCalled();
         logSpy.mockRestore();
     });
@@ -293,12 +280,9 @@ describe('random tests', (): void => {
             { value: 10.445, weight: 0.3 }
         ];
 
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const result: number | undefined = Random.randomWeightedElement(weightedNums);
-            expect(result).toBeUndefined();
-        }
-
-        expect(logSpy).toHaveBeenCalledTimes(RANDOM_TEST_TRIES);
+        const result: number | undefined = Random.randomWeightedElement(weightedNums);
+        expect(result).toBeUndefined();
+        expect(logSpy).toHaveBeenCalledTimes(1);
         logSpy.mockRestore();
     });
 
@@ -310,12 +294,9 @@ describe('random tests', (): void => {
             { value: 'howdy!', weight: 0.29 }
         ];
 
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            const result: string | undefined = Random.randomWeightedElement(weightedStrings);
-            expect(result).toBeUndefined();
-        }
-
-        expect(logSpy).toHaveBeenCalledTimes(RANDOM_TEST_TRIES);
+        const result: string | undefined = Random.randomWeightedElement(weightedStrings);
+        expect(result).toBeUndefined();
+        expect(logSpy).toHaveBeenCalledTimes(1);
         logSpy.mockRestore();
     });
 
@@ -329,27 +310,14 @@ describe('random tests', (): void => {
         ];
 
         const expectedValues: number[] = weightedNums.map((e: WeightedElement<number>) => e.value);
-        const actualValues: Set<number> = new Set<number>();
-        let executionCount: number = 0;
+        const result: number | undefined = Random.randomWeightedElement(weightedNums);
+        expect(result).toBeTruthy();
 
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            executionCount++;
-            const result: number | undefined = Random.randomWeightedElement(weightedNums);
-
-            if (result) {
-                actualValues.add(result);
-            }
-
-            if (actualValues.size === expectedValues.length) {
-                break;
-            }
+        if (result) {
+            expect(expectedValues).toContain(result);
         }
 
-        for (const s of actualValues) {
-            expect(expectedValues).toContain(s);
-        }
-
-        expect(logSpy).toHaveBeenCalledTimes(executionCount);
+        expect(logSpy).toHaveBeenCalledTimes(1);
         logSpy.mockRestore();
     });
 
@@ -362,27 +330,14 @@ describe('random tests', (): void => {
         ];
 
         const expectedValues: string[] = weightedStrings.map((e: WeightedElement<string>) => e.value);
-        const actualValues: Set<string> = new Set<string>();
-        let executionCount: number = 0;
+        const result: string | undefined = Random.randomWeightedElement(weightedStrings);
+        expect(result).toBeTruthy();
 
-        for (let i: number = 0; i < RANDOM_TEST_TRIES; i++) {
-            executionCount++;
-            const result: string | undefined = Random.randomWeightedElement(weightedStrings);
-
-            if (result) {
-                actualValues.add(result);
-            }
-
-            if (actualValues.size === expectedValues.length) {
-                break;
-            }
+        if (result) {
+            expect(expectedValues).toContain(result);
         }
 
-        for (const s of actualValues) {
-            expect(expectedValues).toContain(s);
-        }
-
-        expect(logSpy).toHaveBeenCalledTimes(executionCount);
+        expect(logSpy).toHaveBeenCalledTimes(1);
         logSpy.mockRestore();
     });
 

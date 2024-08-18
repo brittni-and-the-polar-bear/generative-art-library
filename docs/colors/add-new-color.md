@@ -1,4 +1,4 @@
-# How to Add a New Color
+# How to Add a New Color to the Library (Developer Instructions)
 
 # Table of Contents
 
@@ -19,11 +19,10 @@
 [Step 8: Add Documentation](#step-8-add-documentation)
   * [Step 8, Part A: Add The Color Block `div`](#step-8-part-a-add-the-color-block-div)
   * [Step 8, Part B: Add the `@category` Annotations](#step-8-part-b-add-the-category-annotations)
-  * [Step 8, Part C: Add the `@source` Annotation](#step-8-part-c-add-the-source-annotation)
 
-[Step 9: Add the New Color to the Color Category Markdown Page](#step-9-add-the-new-color-to-the-color-category-markdown-page)
+[Step 9: Add the New Color to the Color Category by Hex Markdown Page](#step-9-add-the-new-color-to-the-color-category-by-hex-markdown-page)
 
-[Step 10: Add the New Color to the Color Category by Shade Markdown Page](#step-10-add-the-new-color-to-the-color-category-by-shade-markdown-page)
+[Step 10: Add the New Color to the Color Category by Luminance Markdown Page](#step-10-add-the-new-color-to-the-color-category-by-luminance-markdown-page)
 
 [Step 11: Add Color to the Release Notes](#step-11-add-color-to-the-release-notes)
 
@@ -155,12 +154,6 @@ Add `@category` annotations for the `Palette Colors (All)` category and the Pale
 
 [Table of Contents](#table-of-contents)
 
-## Step 8, Part C: Add the `@source` Annotation
-
-Add a `@source` annotation to the documentation. This will allow the source code to be shown in the typedoc documentation page for the new color.
-
-[Table of Contents](#table-of-contents)
-
 # Step 9: Add the New Color to the Color Category by Hex Markdown Page
 
 Add an entry for the new color to the correct color category by hex markdown page.
@@ -181,7 +174,7 @@ Be sure to add the new markdown section to the Table of Contents.
 <br/>
 
 ```typescript
-import {_BC010A} from 'palette-colors';
+import { _BC010A } from 'palette-colors';
 let name: string = _BC010A.NAME;
 ```
 

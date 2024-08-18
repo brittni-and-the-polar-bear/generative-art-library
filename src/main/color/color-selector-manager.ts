@@ -21,22 +21,21 @@ import { ColorSelector } from './color-selector';
 import { DefaultColorSelector } from './default-color-selector';
 
 /**
- * Manager to select a random {@link ColorSelector} from a {@link !Set}.
+ * Manager to select a random {@link ColorSelector} from a {@link Set}.
+ *
  * @category Color
  */
 export class ColorSelectorManager {
     /**
-     * Underlying {@link !Set} of {@link ColorSelector} objects.
-     * @private
-     * @readonly
+     * Underlying {@link Set} of {@link ColorSelector} objects.
      */
     private readonly _COLOR_SELECTORS: Set<ColorSelector> = new Set<ColorSelector>();
 
     /**
-     * Select a random {@link ColorSelector} from the {@link _COLOR_SELECTORS} set.
+     * Select a random {@link ColorSelector}.
+     *
      * @returns A random {@link ColorSelector}. If a selector cannot be chosen,
      * a {@link DefaultColorSelector} object will be returned.
-     * @public
      */
     public getRandomColorSelector(): ColorSelector {
         const selectors: ColorSelector[] = Array.from(this._COLOR_SELECTORS);
@@ -44,18 +43,18 @@ export class ColorSelectorManager {
     }
 
     /**
-     * Add a {@link ColorSelector} to the {@link _COLOR_SELECTORS} set.
+     * Add a {@link ColorSelector}.
+     *
      * @param selector -
-     * @public
      */
     public addColorSelector(selector: ColorSelector): void {
         this._COLOR_SELECTORS.add(selector);
     }
 
     /**
-     * Add multiple {@link ColorSelector} objects to the {@link _COLOR_SELECTORS} set.
+     * Add multiple {@link ColorSelector} objects.
+     *
      * @param selectors -
-     * @public
      */
     public addColorSelectors(selectors: Iterable<ColorSelector>): void {
         for (const selector of selectors) {

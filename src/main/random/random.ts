@@ -24,16 +24,16 @@ import { WeightedElement } from './weighted-element';
  *
  * @category Random
  */
-class Random {
+export class Random {
     /**
      * The primary function to be called when generating any random numbers.
-     * Set to {@link !Math.random} by default.
+     * Set to {@link Math.random} by default.
      */
     private static _randomMethod: (() => number) = Math.random;
 
     /**
      * Set the primary function to be called when generating any random numbers.<br/>
-     * Set to {@link !Math.random} by default.
+     * Set to {@link Math.random} by default.
      *
      * @param method
      */
@@ -118,7 +118,7 @@ class Random {
      *
      * @returns A random element from the given list.
      * This method assumes an equal distribution for all elements of the list.<br/>
-     * If an empty list is provided, the function will return {@link !undefined}.
+     * If an empty list is provided, the function will return undefined.
      */
     public static randomElement<Type>(list: Type[]): Type | undefined {
         let element: Type | undefined = undefined;
@@ -179,5 +179,3 @@ class Random {
         return element;
     }
 }
-
-export { Random };

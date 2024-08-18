@@ -15,5 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
+export * from './fafbef';
 export * from './fafeff';
 export * from './fbf9f9';

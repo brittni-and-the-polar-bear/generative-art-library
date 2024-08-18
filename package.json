@@ -1,6 +1,6 @@
 {
   "name": "@batpb/genart",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
   "main": "./out/dist/batpb-genart.js",
   "module": "./out/dist/batpb-genart.mjs",
@@ -78,16 +78,16 @@
     "p5": "^1.10.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
-    "@stylistic/eslint-plugin": "^2.6.1",
+    "@eslint/js": "^9.9.0",
+    "@stylistic/eslint-plugin": "^2.6.4",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
     "canvas": "^2.11.2",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "eslint-plugin-es-x": "^8.0.0",
-    "eslint-plugin-n": "^17.10.1",
+    "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-security": "^3.0.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
@@ -95,10 +95,9 @@
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
     "tsup": "^8.2.3",
-    "typedoc": "^0.26.5",
+    "typedoc": "^0.26.6",
     "typedoc-plugin-coverage": "^3.3.0",
-    "typedoc-plugin-mdn-links": "^3.2.7",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.1.0"
   }
 }

@@ -24,13 +24,13 @@ import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
 /**
  * <!-- Coolors Palette Widget -->
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
- * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"],"brittni"); </script>
+ * <script data-id="03724492652337519">new CoolorsPaletteWidget("03724492652337519", ["121212","0437f1","ff6bb5","0fff4f","7a00f5"],"brittni"); </script>
  *
  * @see {@link _121212}
  * @see {@link _0437F1}
+ * @see {@link _FF6BB5}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
- * @see {@link _FF6BB5}
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
@@ -43,9 +43,9 @@ export const BRITTNI: Palette = {
     COLORS: [
         _121212,
         _0437F1,
+        _FF6BB5,
         _0FFF4F,
-        _7A00F5,
-        _FF6BB5
+        _7A00F5
     ],
 
     CONTRAST_MAP: {
@@ -67,6 +67,10 @@ export const BRITTNI: Palette = {
             '#FFFFFF',
             '#0FFF4F'
         ],
+        '#FF6BB5': [
+            '#000000',
+            '#121212'
+        ],
         '#0FFF4F': [
             '#000000',
             '#121212',
@@ -76,10 +80,6 @@ export const BRITTNI: Palette = {
         '#7A00F5': [
             '#FFFFFF',
             '#0FFF4F'
-        ],
-        '#FF6BB5': [
-            '#000000',
-            '#121212'
         ]
     },
 

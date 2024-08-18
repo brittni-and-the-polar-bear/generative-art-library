@@ -15,6 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { SketchContext } from 'context';
 import { Random, WeightedElement } from 'random';
 
@@ -22,7 +24,7 @@ import { Color } from './color';
 import { ColorSelectorType } from './color-selector-type';
 
 /**
- * ColorSelectors choose and return colors from some set list or criteria.
+ * ColorSelectors choose and return colors from some list or criteria.
  *
  * @category Color
  * @category Color Selector
@@ -47,25 +49,22 @@ export abstract class ColorSelector {
     /**
      * A flag that determines the color selection order
      * of {@link selectColorFromChoices}.<br/>
-     * When `true`, {@link selectColorFromChoices} will select colors
-     * from {@link _COLOR_CHOICES} in a random order.<br/>
-     * When `false`, {@link selectColorFromChoices} will select colors
-     * list order.
+     * When `true`, {@link selectColorFromChoices} will select colors in a random order.<br/>
+     * When `false`, {@link selectColorFromChoices} will select colors in list order.
      */
     private readonly _RANDOM_ORDER: boolean;
 
     /**
-     * The current index of {@link _COLOR_CHOICES} being chosen
-     * when colors are selected in list order (i.e. {@link _RANDOM_ORDER} is `false`).
+     * The current index of the color being chosen when colors are selected in list order.
      */
     private _currentIndex: number = 0;
 
     /**
      * @param name - The name of the color selector.
      * @param randomOrder - A flag that determines the color selection order
-     * of {@link selectColorFromChoices}.
-     *
-     * @see {@link _RANDOM_ORDER}
+     * of {@link selectColorFromChoices}.<br/>
+     * When `randomOrder` is `true`, {@link selectColorFromChoices} will select colors in a random order.<br/>
+     * When `randomOrder` is `false`, {@link selectColorFromChoices} will select colors in list order.
      */
     protected constructor(name: string, randomOrder?: boolean) {
         this._RANDOM_ORDER = randomOrder ?? Random.randomBoolean();
@@ -98,26 +97,6 @@ export abstract class ColorSelector {
     }
 
     /**
-     * @returns The selected {@link Color} from the {@link _COLOR_CHOICES} list.<br/>
-     * If {@link _COLOR_CHOICES} is empty, a default {@link Color}
-     * object (black) will be returned.
-     */
-    public selectColorFromChoices(): Color {
-        let col: Color = new Color();
-
-        if (this._RANDOM_ORDER) {
-            col = Random.randomElement(this._COLOR_CHOICES) ?? (new Color());
-        } else {
-            if (this._currentIndex < this._COLOR_CHOICES.length) {
-                col = this._COLOR_CHOICES[this._currentIndex];
-                this.incrementCurrentIndex();
-            }
-        }
-
-        return col;
-    }
-
-    /**
      * Select and return a {@link Color} object to be used as a background.
      * The color will either be black (#000000), white (#FFFFFF), or a color
      * from the selector, chosen by the {@link getColor} method.<br/>
@@ -137,35 +116,60 @@ export abstract class ColorSelector {
     public getBackgroundColor(chanceOfBlack: number,
                               chanceOfWhite: number,
                               chanceOfColor: number): Color {
+        const p5: P5Lib = SketchContext.p5;
         const weightedColors: WeightedElement<Color>[] = [
-            { value: new Color(SketchContext.p5.color(0)), weight: chanceOfBlack },
-            { value: new Color(SketchContext.p5.color(255)), weight: chanceOfWhite },
+            { value: new Color(p5.color(0)), weight: chanceOfBlack },
+            { value: new Color(p5.color(255)), weight: chanceOfWhite },
             { value: this.getColor(), weight: chanceOfColor }
         ];
 
-        return Random.randomWeightedElement(weightedColors) ?? (new Color());
+        const selection = Random.randomWeightedElement(weightedColors) ?? (new Color());
+        return Color.copy(selection);
     }
 
     /**
-     * @returns The {@link _COLOR_NAMES} set.
+     * @returns A Set of the names of the colors that can be
+     * or have been chosen by the color selector.
      */
     protected get COLOR_NAMES(): Set<string> {
         return this._COLOR_NAMES;
     }
 
     /**
-     * Add a {@link Color} to the {@link _COLOR_CHOICES} list.
+     * Add a {@link Color} to the list of possible color choices.
      * @param color -
      */
     protected addColorChoice(color: Color): void {
-        this._COLOR_CHOICES.push(color);
+        this._COLOR_CHOICES.push(Color.copy(color));
     }
 
     /**
-     * Increment {@link _currentIndex} to select the next
-     * {@link Color} element in the {@link _COLOR_CHOICES} list.
-     *
-     * @see {@link _RANDOM_ORDER}
+     * @returns The selected {@link Color}.<br/>
+     * If the list of color choices is empty, a default {@link Color}
+     * object (black) will be returned.
+     */
+    protected selectColorFromChoices(): Color {
+        let selection: Color | undefined = new Color();
+
+        if (this._RANDOM_ORDER) {
+            selection = Random.randomElement(this._COLOR_CHOICES);
+        } else {
+            if (this._currentIndex < this._COLOR_CHOICES.length) {
+                selection = this._COLOR_CHOICES[this._currentIndex];
+                this.incrementCurrentIndex();
+            }
+        }
+
+        if (!selection) {
+            selection = new Color();
+        }
+
+        return Color.copy(selection);
+    }
+
+    /**
+     * Increment the index used to select the next
+     * {@link Color} object when colors are selected in list order.
      */
     private incrementCurrentIndex(): void {
         const length: number = this._COLOR_CHOICES.length;

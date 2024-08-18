@@ -31,12 +31,21 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.9510014633 -->
 <div class="color-block" style="background: #FBF9F9;">
   <a href="./white-colors-by-hex.html#doctor-white-fbf9f9">
     <h2 class="color-block black-pass">doctor white (#FBF9F9)</h2>
+  </a>
+</div>
+
+<!-- luminance: 0.9555034902 -->
+<div class="color-block" style="background: #FAFBEF;">
+  <a href="./white-colors-by-hex.html#enoki-fafbef">
+    <h2 class="color-block black-pass">enoki (#FAFBEF)</h2>
   </a>
 </div>
 
@@ -50,4 +59,6 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#white-colors-by-luminance)
