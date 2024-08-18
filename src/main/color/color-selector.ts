@@ -96,31 +96,6 @@ export abstract class ColorSelector {
         return this._NAME;
     }
 
-    // TODO - unit test - color returned is not any of the color choices OR any of the original colors
-    /**
-     * @returns The selected {@link Color}.<br/>
-     * If the list of color choices is empty, a default {@link Color}
-     * object (black) will be returned.
-     */
-    public selectColorFromChoices(): Color {
-        let selection: Color | undefined = new Color();
-
-        if (this._RANDOM_ORDER) {
-            selection = Random.randomElement(this._COLOR_CHOICES);
-        } else {
-            if (this._currentIndex < this._COLOR_CHOICES.length) {
-                selection = this._COLOR_CHOICES[this._currentIndex];
-                this.incrementCurrentIndex();
-            }
-        }
-
-        if (!selection) {
-            selection = new Color();
-        }
-
-        return Color.copy(selection);
-    }
-
     /**
      * Select and return a {@link Color} object to be used as a background.
      * The color will either be black (#000000), white (#FFFFFF), or a color
@@ -166,6 +141,30 @@ export abstract class ColorSelector {
      */
     protected addColorChoice(color: Color): void {
         this._COLOR_CHOICES.push(Color.copy(color));
+    }
+
+    /**
+     * @returns The selected {@link Color}.<br/>
+     * If the list of color choices is empty, a default {@link Color}
+     * object (black) will be returned.
+     */
+    protected selectColorFromChoices(): Color {
+        let selection: Color | undefined = new Color();
+
+        if (this._RANDOM_ORDER) {
+            selection = Random.randomElement(this._COLOR_CHOICES);
+        } else {
+            if (this._currentIndex < this._COLOR_CHOICES.length) {
+                selection = this._COLOR_CHOICES[this._currentIndex];
+                this.incrementCurrentIndex();
+            }
+        }
+
+        if (!selection) {
+            selection = new Color();
+        }
+
+        return Color.copy(selection);
     }
 
     /**
