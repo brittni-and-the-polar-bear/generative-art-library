@@ -252,6 +252,43 @@ describe('color tests', (): void => {
         }
     );
 
+    test('Color constructor with rgb (r,g,b) arguments', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 50;
+        const g: number = 168;
+        const b: number = 82;
+        const c: P5Lib.Color = p5.color(r, g, b);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: 255
+        };
+        const expectedName: string = 'spandex green';
+
+        const color: Color = new Color(r, g, b);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
+    test('Color constructor with rgb (r,g,b,a) arguments', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        const r: number = 50;
+        const g: number = 168;
+        const b: number = 82;
+        const a: number = 150;
+        const c: P5Lib.Color = p5.color(r, g, b, a);
+        const expected: ColorComponents = {
+            r: r, g: g, b: b, a: a
+        };
+        const expectedName: string = 'spandex green';
+
+        const color: Color = new Color(r, g, b, a);
+        expect(colorToColorComponents(color)).toEqual(expected);
+        expect(colorToColorComponents(color)).toEqual(p5ColorToColorComponents(c));
+        expect(p5ColorToColorComponents(color.color)).toEqual(p5ColorToColorComponents(c));
+        expect(color.name).toBe(expectedName);
+    });
+
     test('color setter with with grayscale (c) color', (): void => {
         const p5: P5Lib = SketchContext.p5;
         const w: number = 153;
