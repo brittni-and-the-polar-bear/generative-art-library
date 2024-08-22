@@ -29,6 +29,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #041E43;">
+ *     <a href="https://coolors.co/041e43" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">midnight mirage (#041E43)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Blue)
+ * @category Palette Colors (All)
+ */
 export const _041E43: PaletteColor = {
     HEX: '#041E43',
     RGB: { R: 4, G: 30, B: 67 },
