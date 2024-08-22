@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #041e43
-// #041E43
-// 215°, 89%, 14%
-// 4, 30, 67
-// midnight mirage
-// white-pass
-// luminance: 0.0135960611
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
