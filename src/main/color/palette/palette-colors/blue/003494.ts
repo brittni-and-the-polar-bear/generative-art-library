@@ -15,13 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #003494
-// 219°, 100%, 29%
-// 0, 52, 148
-// smalt
-// white-pass
-// luminance: 0.045941013
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';

@@ -235,6 +235,8 @@ Add the color as a new constant to the release notes draft markdown file.
  */
 declare const _BC010A: PaletteColor;
 ```
+
+[Table of Contents](#table-of-contents)
 ````
 
 [Table of Contents](#table-of-contents)
