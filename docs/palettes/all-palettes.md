@@ -19,4 +19,8 @@
 
 ----
 
+### [Potential Palettes](./potential-palettes.md)
+
+----
+
 Fin.
