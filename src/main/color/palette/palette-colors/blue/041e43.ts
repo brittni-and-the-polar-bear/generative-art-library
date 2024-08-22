@@ -15,8 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './003494';
-export * from './041e43';
-export * from './0437f1';
-export * from './1d90af';
-export * from './7dced8';
+// #041e43
+// #041E43
+// 215°, 89%, 14%
+// 4, 30, 67
+// midnight mirage
+// white-pass
+// luminance: 0.0135960611
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
+
+export const _041E43: PaletteColor = {
+    HEX: '#041E43',
+    RGB: { R: 4, G: 30, B: 67 },
+    HSL: { H: 215, S: 89, L: 14 },
+    NAME: 'midnight mirage',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+BLUE_PALETTE_COLORS.setUndefinedKey(_041E43.HEX, _041E43);
+ALL_PALETTE_COLORS.setUndefinedKey(_041E43.HEX, _041E43);
+ColorNameManager.addColor(_041E43);
