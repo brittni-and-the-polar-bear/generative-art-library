@@ -42,6 +42,7 @@ export const BLACK_HEXES: HexCollection = [
 
 export const BLUE_HEXES: HexCollection = [
     { hexString: '#003494' },
+    { hexString: '#041E43' },
     { hexString: '#0437F1' },
     { hexString: '#1D90AF' },
     { hexString: '#7DCED8' }
