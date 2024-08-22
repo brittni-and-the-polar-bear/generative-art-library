@@ -15,7 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './003494';
-export * from './0437f1';
-export * from './1d90af';
-export * from './7dced8';
+// #003494
+// 219°, 100%, 29%
+// 0, 52, 148
+// smalt
+// white-pass
+// luminance: 0.045941013
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
+
+export const _003494: PaletteColor = {
+    HEX: '#003494',
+    RGB: { R: 0, G: 52, B: 148 },
+    HSL: { H: 219, S: 100, L: 29 },
+    NAME: 'smalt',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+BLUE_PALETTE_COLORS.setUndefinedKey(_003494.HEX, _003494);
+ALL_PALETTE_COLORS.setUndefinedKey(_003494.HEX, _003494);
+ColorNameManager.addColor(_003494);
