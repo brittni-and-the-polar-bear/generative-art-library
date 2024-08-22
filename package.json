@@ -82,8 +82,8 @@
     "@stylistic/eslint-plugin": "^2.6.4",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^8.1.0",
-    "@typescript-eslint/parser": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
     "canvas": "^2.11.2",
     "eslint": "^9.9.0",
     "eslint-plugin-es-x": "^8.0.0",
@@ -98,6 +98,6 @@
     "typedoc": "^0.26.6",
     "typedoc-plugin-coverage": "^3.3.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.1.0"
+    "typescript-eslint": "^8.2.0"
   }
 }
