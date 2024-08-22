@@ -33,13 +33,34 @@ Color block links redirect to
 
 # Table of Contents
 
+[smalt (#003494)](#smalt-003494)
+
 [blue bouquet (#0437F1)](#blue-bouquet-0437f1)
 
 [mediterranean sea (#1D90AF)](#mediterranean-sea-1d90af)
 
 [spray (#7DCED8)](#spray-7dced8)
 
+[Fin.](#fin)
+
 ----
+
+# smalt (#003494)
+
+<div class="color-block" style="background: #003494;">
+  <a href="https://coolors.co/003494" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">smalt (#003494)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import {_003494} from 'palette-colors';
+
+let name: string = _003494.NAME;
+````
+
+[Table of Contents](#table-of-contents)
 
 # blue bouquet (#0437F1)
 
@@ -94,4 +115,6 @@ let name: string = _7DCED8.NAME;
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)
