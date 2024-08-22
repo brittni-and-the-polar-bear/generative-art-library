@@ -35,7 +35,14 @@ Color block links redirect to [Blue Colors by Hex](./blue-colors-by-hex.md) entr
 
 ----
 
-<!--luminance: 0.045941013 -->
+<!-- luminance: 0.0135960611 -->
+<div class="color-block" style="background: #041E43;">
+  <a href="./blue-colors-by-hex.html#midnight-mirage-041e43">
+    <h2 class="color-block white-pass">midnight mirage (#041E43)</h2>
+  </a>
+</div>
+
+<!-- luminance: 0.045941013 -->
 <div class="color-block" style="background: #003494;">
     <a href="./blue-colors-by-hex.html#smalt-003494">
         <h2 class="color-block white-pass">smalt (#003494)</h2>

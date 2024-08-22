@@ -35,6 +35,8 @@ Color block links redirect to
 
 [smalt (#003494)](#smalt-003494)
 
+[midnight mirage (#041E43)](#midnight-mirage-041e43)
+
 [blue bouquet (#0437F1)](#blue-bouquet-0437f1)
 
 [mediterranean sea (#1D90AF)](#mediterranean-sea-1d90af)
@@ -58,6 +60,23 @@ Color block links redirect to
 import {_003494} from 'palette-colors';
 
 let name: string = _003494.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# midnight mirage (#041E43)
+
+<div class="color-block" style="background: #041E43;">
+  <a href="https://coolors.co/041e43" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">midnight mirage (#041E43)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import {_041E43} from 'palette-colors';
+
+let name: string = _041E43.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
