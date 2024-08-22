@@ -28,6 +28,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #003494;">
+ *     <a href="https://coolors.co/003494" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">smalt (#003494)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Blue)
+ * @category Palette Colors (All)
+ */
 export const _003494: PaletteColor = {
     HEX: '#003494',
     RGB: { R: 0, G: 52, B: 148 },
