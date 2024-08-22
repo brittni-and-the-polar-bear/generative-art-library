@@ -29,6 +29,7 @@ export interface Palette {
      */
     readonly NAME: string;
 
+    // TODO - Add source URL field
     /**
      * The source of the palette. May be the URL where the palette can be found.
      */

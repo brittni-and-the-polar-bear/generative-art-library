@@ -284,7 +284,8 @@ add a `@category` annotation for the `Palettes (Gradient)` category.
 # Step 11: Add the New Palette to the Palette Category Markdown Page
 
 Add an entry to the correct palette category markdown page for the new palette.
-This entry will include the Coolors Palette Widget and TypeScript example.
+This entry will include the Coolors Palette Widget, TypeScript example,
+and a link to the palette's source.
 
 Be sure to add the new markdown section to the Table of Contents.
 
@@ -296,23 +297,29 @@ add an entry for the new palette to the gradient palettes markdown page.
 ## Palette Category Entry Example
 
 ````markdown
-# brittni
+# classic christmas
+
+<a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">palette source: coolors</a>
 
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
-<script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+<script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"],"classic christmas"); </script>
 <br/>
 
 ```typescript
-import {BRITTNI} from 'palettes';
+import {CLASSIC_CHRISTMAS} from 'palettes';
 
-let name: string = BRITTNI.NAME;
+let name: string = CLASSIC_CHRISTMAS.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
 ````
 
 [Table of Contents](#table-of-contents)
+
+# Step 12: Add Palette to the All Palettes on One Page Markdown Page
+
+<!-- TODO: Put in instructions -->
 
 # Step 12: Add Palette to the Release Notes
 

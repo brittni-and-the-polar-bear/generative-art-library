@@ -8,15 +8,21 @@ Palettes are in alphabetic order by object name.
 
 [All Palettes](../../all-palettes.md)
 
+[All Palettes on One Page](../../all-palettes_one-page.md)
+
 ----
 
 # Table of Contents
 
 [glitter](#glitter)
 
+[Fin.](#fin)
+
 ----
 
 # glitter
+
+<a href="https://culrs.com/palette/fce4ecf8bbd0f48fb1f06292ec407a" target="_blank" rel="noopener noreferrer">palette source: culrs</a>
 
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
@@ -33,4 +39,6 @@ let name: string = GLITTER.NAME;
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)
