@@ -20,22 +20,22 @@ import P5Lib from 'p5';
 import { Color } from 'color';
 import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
 import { SketchContext } from 'context';
-import { _0437F1, _0FFF4F, PC_121212, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, _0FFF4F, PC_121212, _FF6BB5 } from 'palette-colors';
 
 describe('color contrast assessor tests', (): void => {
     const p5: P5Lib = SketchContext.p5;
 
     test.each([
         {
-            colorA: new Color(_0437F1),
-            colorB: new Color(_0437F1),
+            colorA: new Color(PC_0437F1),
+            colorB: new Color(PC_0437F1),
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
             AAA_large: false
         },
         {
-            colorA: new Color(_0437F1),
+            colorA: new Color(PC_0437F1),
             colorB: new Color(_0FFF4F),
             AA_normal: true,
             AA_large: true,
@@ -43,7 +43,7 @@ describe('color contrast assessor tests', (): void => {
             AAA_large: true
         },
         {
-            colorA: new Color(_0437F1),
+            colorA: new Color(PC_0437F1),
             colorB: new Color(PC_121212),
             AA_normal: false,
             AA_large: false,
@@ -162,15 +162,15 @@ describe('color contrast assessor tests', (): void => {
 
     test.each([
         {
-            colorA: _0437F1,
-            colorB: _0437F1,
+            colorA: PC_0437F1,
+            colorB: PC_0437F1,
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
             AAA_large: false
         },
         {
-            colorA: _0437F1,
+            colorA: PC_0437F1,
             colorB: _0FFF4F,
             AA_normal: true,
             AA_large: true,
@@ -178,7 +178,7 @@ describe('color contrast assessor tests', (): void => {
             AAA_large: true
         },
         {
-            colorA: _0437F1,
+            colorA: PC_0437F1,
             colorB: PC_121212,
             AA_normal: false,
             AA_large: false,

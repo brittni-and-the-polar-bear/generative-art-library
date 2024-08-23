@@ -22,25 +22,23 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #0437F1;">
- *     <a href="https://coolors.co/0437f1" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block white-pass">blue bouquet (#0437F1)</h2>
+ * <div class="color-block" style="background: #041E43;">
+ *     <a href="https://coolors.co/041e43" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">midnight mirage (#041E43)</h2>
  *     </a>
  * </div>
- *
- * @see {@link BRITTNI}
  *
  * @category Palette Colors (Blue)
  * @category Palette Colors (All)
  */
-export const _0437F1: PaletteColor = {
-    HEX: '#0437F1',
-    RGB: { R: 4, G: 55, B: 241 },
-    HSL: { H: 227, S: 97, L: 48 },
-    NAME: 'blue bouquet',
+export const PC_041E43: PaletteColor = {
+    HEX: '#041E43',
+    RGB: { R: 4, G: 30, B: 67 },
+    HSL: { H: 215, S: 89, L: 14 },
+    NAME: 'midnight mirage',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLUE_PALETTE_COLORS.setUndefinedKey(_0437F1.HEX, _0437F1);
-ALL_PALETTE_COLORS.setUndefinedKey(_0437F1.HEX, _0437F1);
-ColorNameManager.addColor(_0437F1);
+BLUE_PALETTE_COLORS.setUndefinedKey(PC_041E43.HEX, PC_041E43);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_041E43.HEX, PC_041E43);
+ColorNameManager.addColor(PC_041E43);

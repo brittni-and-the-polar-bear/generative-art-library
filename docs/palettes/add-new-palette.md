@@ -186,7 +186,7 @@ Run the unit test to ensure that it passes.
 
 ```typescript
 import {PaletteColor} from 'palette';
-import {_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
 import {BRITTNI} from 'palettes';
 
 import {checkForValidPalette} from 'unit-test/shared';
@@ -196,7 +196,7 @@ const PALETTE_NAME: string = 'BRITTNI';
 describe('BRITTNI palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_121212,
-        _0437F1,
+        PC_0437F1,
         _0FFF4F,
         _7A00F5,
         _FF6BB5
@@ -342,7 +342,7 @@ Add the palette as a new constant to the release notes draft markdown file.
  * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
  * @see {@link PC_121212}
- * @see {@link _0437F1}
+ * @see {@link PC_0437F1}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
  * @see {@link _FF6BB5}
@@ -361,7 +361,7 @@ declare const BRITTNI: Palette;
 ```typescript
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
-import {_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
 
 import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 
@@ -371,7 +371,7 @@ import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
  * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
  * @see {@link PC_121212}
- * @see {@link _0437F1}
+ * @see {@link PC_0437F1}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
  * @see {@link _FF6BB5}
@@ -386,7 +386,7 @@ export const BRITTNI: Palette = {
 
     COLORS: [
         PC_121212,
-        _0437F1,
+        PC_0437F1,
         _0FFF4F,
         _7A00F5,
         _FF6BB5

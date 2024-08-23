@@ -31,7 +31,7 @@ import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (Blue)
  * @category Palette Colors (All)
  */
-export const _003494: PaletteColor = {
+export const PC_003494: PaletteColor = {
     HEX: '#003494',
     RGB: { R: 0, G: 52, B: 148 },
     HSL: { H: 219, S: 100, L: 29 },
@@ -39,6 +39,6 @@ export const _003494: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLUE_PALETTE_COLORS.setUndefinedKey(_003494.HEX, _003494);
-ALL_PALETTE_COLORS.setUndefinedKey(_003494.HEX, _003494);
-ColorNameManager.addColor(_003494);
+BLUE_PALETTE_COLORS.setUndefinedKey(PC_003494.HEX, PC_003494);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_003494.HEX, PC_003494);
+ColorNameManager.addColor(PC_003494);

@@ -16,7 +16,7 @@
  */
 
 import { PaletteColor } from 'palette';
-import { _0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 import { BRITTNI } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
@@ -26,7 +26,7 @@ const PALETTE_NAME: string = 'BRITTNI';
 describe('BRITTNI palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_121212,
-        _0437F1,
+        PC_0437F1,
         _FF6BB5,
         _0FFF4F,
         _7A00F5

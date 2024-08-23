@@ -17,7 +17,7 @@
 
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
-import { _0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 
 import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
 
@@ -27,7 +27,7 @@ import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
  * <script data-id="03724492652337519">new CoolorsPaletteWidget("03724492652337519", ["121212","0437f1","ff6bb5","0fff4f","7a00f5"],"brittni"); </script>
  *
  * @see {@link PC_121212}
- * @see {@link _0437F1}
+ * @see {@link PC_0437F1}
  * @see {@link _FF6BB5}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
@@ -42,7 +42,7 @@ export const BRITTNI: Palette = {
 
     COLORS: [
         PC_121212,
-        _0437F1,
+        PC_0437F1,
         _FF6BB5,
         _0FFF4F,
         _7A00F5
