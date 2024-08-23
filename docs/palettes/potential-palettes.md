@@ -31,6 +31,12 @@
 <script data-id="03263698766506269">new CoolorsPaletteWidget("03263698766506269", ["e52222","981a1a","184e07","0c8228","fffefe"]); </script>
 <br/>
 
+### [christmas snow](https://www.color-hex.com/color-palette/78520)
+
+<!-- Coolors Palette Widget -->
+<script data-id="06571731362505122">new CoolorsPaletteWidget("06571731362505122", ["db0404","169f48","8cd4ff","c6efff","ffffff"]); </script>
+<br/>
+
 [Table of Contents](#table-of-contents)
 
 ----
@@ -45,6 +51,8 @@
 <script data-id="06060137348021699">new CoolorsPaletteWidget("06060137348021699", ["00b3b8","dcfafb","041e43","e30069","f0f1f3"]); </script>
 <br/>
 
+[Table of Contents](#table-of-contents)
+
 ----
 
 # palette collections
@@ -52,6 +60,12 @@
 ## Alex Cristache (@AlexCristache)
 
 ### mindful palettes
+
+#### [mindful palette no. 100](https://x.com/AlexCristache/status/1822997661219197238)
+
+<!-- Coolors Palette Widget -->
+<script data-id="03202451848717327">new CoolorsPaletteWidget("03202451848717327", ["010203","011c39","00aac1","f1d96e","e3dcca","ffffff"]); </script>
+<br/>
 
 #### [mindful palette no. 101](https://x.com/AlexCristache/status/1825903114144378953)
 
