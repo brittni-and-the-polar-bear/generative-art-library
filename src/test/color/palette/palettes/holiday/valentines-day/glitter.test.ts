@@ -17,13 +17,13 @@
 
 import { PaletteColor } from 'palette';
 import { PC_EC417A, PC_F06090, PC_F490B1, PC_F8B9CE, PC_FCE3EC } from 'palette-colors';
-import { GLITTER } from 'palettes';
+import { GLITTER_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'GLITTER';
 
-describe('GLITTER palette tests', (): void => {
+describe('GLITTER_PALETTE palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_FCE3EC,
         PC_F8B9CE,
@@ -33,6 +33,6 @@ describe('GLITTER palette tests', (): void => {
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(GLITTER, expectedColors);
+        checkForValidPalette(GLITTER_PALETTE, expectedColors);
     });
 });

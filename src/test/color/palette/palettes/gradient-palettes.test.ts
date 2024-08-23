@@ -16,12 +16,12 @@
  */
 
 import { Palette } from 'palette';
-import { GLITTER, GRADIENT_PALETTES } from 'palettes';
+import { GLITTER_PALETTE, GRADIENT_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: GLITTER }
+    { palette: GLITTER_PALETTE }
 ];
 
 const MAP_NAME: string = 'GRADIENT_PALETTES';
