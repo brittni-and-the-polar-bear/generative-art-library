@@ -20,7 +20,7 @@ import P5Lib from 'p5';
 import { Color } from 'color';
 import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
 import { SketchContext } from 'context';
-import { _0437F1, _0FFF4F, _121212, _FF6BB5 } from 'palette-colors';
+import { _0437F1, _0FFF4F, PC_121212, _FF6BB5 } from 'palette-colors';
 
 describe('color contrast assessor tests', (): void => {
     const p5: P5Lib = SketchContext.p5;
@@ -44,7 +44,7 @@ describe('color contrast assessor tests', (): void => {
         },
         {
             colorA: new Color(_0437F1),
-            colorB: new Color(_121212),
+            colorB: new Color(PC_121212),
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
@@ -52,7 +52,7 @@ describe('color contrast assessor tests', (): void => {
         },
         {
             colorA: new Color(_FF6BB5),
-            colorB: new Color(_121212),
+            colorB: new Color(PC_121212),
             AA_normal: true,
             AA_large: true,
             AAA_normal: true,
@@ -179,7 +179,7 @@ describe('color contrast assessor tests', (): void => {
         },
         {
             colorA: _0437F1,
-            colorB: _121212,
+            colorB: PC_121212,
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
@@ -187,7 +187,7 @@ describe('color contrast assessor tests', (): void => {
         },
         {
             colorA: _FF6BB5,
-            colorB: _121212,
+            colorB: PC_121212,
             AA_normal: true,
             AA_large: true,
             AAA_normal: true,

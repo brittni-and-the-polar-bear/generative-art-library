@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS } from '../palette-color-maps'
  * @category Palette Colors (All)
  * @category Palette Colors (Black)
  */
-export const _121212: PaletteColor = {
+export const PC_121212: PaletteColor = {
     HEX: '#121212',
     RGB: { R: 18, G: 18, B: 18 },
     HSL: { H: 0, S: 0, L: 7 },
@@ -41,6 +41,6 @@ export const _121212: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLACK_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
-ALL_PALETTE_COLORS.setUndefinedKey(_121212.HEX, _121212);
-ColorNameManager.addColor(_121212);
+BLACK_PALETTE_COLORS.setUndefinedKey(PC_121212.HEX, PC_121212);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_121212.HEX, PC_121212);
+ColorNameManager.addColor(PC_121212);

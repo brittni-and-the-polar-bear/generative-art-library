@@ -186,7 +186,7 @@ Run the unit test to ensure that it passes.
 
 ```typescript
 import {PaletteColor} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
 import {BRITTNI} from 'palettes';
 
 import {checkForValidPalette} from 'unit-test/shared';
@@ -195,7 +195,7 @@ const PALETTE_NAME: string = 'BRITTNI';
 
 describe('BRITTNI palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
-        _121212,
+        PC_121212,
         _0437F1,
         _0FFF4F,
         _7A00F5,
@@ -260,7 +260,7 @@ Paste the HTML at the top of the palette documentation.
 
 Add a `@see` annotation with a `@link` for every `PaletteColor` object in the palette.
 
-**Example:** `@see {@link _121212}`
+**Example:** `@see {@link PC_121212}`
 
 [Table of Contents](#table-of-contents)
 
@@ -341,7 +341,7 @@ Add the palette as a new constant to the release notes draft markdown file.
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
  * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
- * @see {@link _121212}
+ * @see {@link PC_121212}
  * @see {@link _0437F1}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
@@ -361,7 +361,7 @@ declare const BRITTNI: Palette;
 ```typescript
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
 
 import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 
@@ -370,7 +370,7 @@ import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
  * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
- * @see {@link _121212}
+ * @see {@link PC_121212}
  * @see {@link _0437F1}
  * @see {@link _0FFF4F}
  * @see {@link _7A00F5}
@@ -385,7 +385,7 @@ export const BRITTNI: Palette = {
     IS_GRADIENT: false,
 
     COLORS: [
-        _121212,
+        PC_121212,
         _0437F1,
         _0FFF4F,
         _7A00F5,
