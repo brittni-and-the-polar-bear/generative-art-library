@@ -15,6 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './7a00f5';
-export * from './aeaed6';
-export * from './d6d6ff';
+export * from './pc-7a00f5';
+export * from './pc-aeaed6';
+export * from './pc-d6d6ff';

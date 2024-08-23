@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps
  * @category Palette Colors (Purple)
  * @category Palette Colors (All)
  */
-export const _D6D6FF: PaletteColor = {
+export const PC_D6D6FF: PaletteColor = {
     HEX: '#D6D6FF',
     RGB: { R: 214, G: 214, B: 255 },
     HSL: { H: 240, S: 100, L: 92 },
@@ -41,6 +41,6 @@ export const _D6D6FF: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PURPLE_PALETTE_COLORS.setUndefinedKey(_D6D6FF.HEX, _D6D6FF);
-ALL_PALETTE_COLORS.setUndefinedKey(_D6D6FF.HEX, _D6D6FF);
-ColorNameManager.addColor(_D6D6FF);
+PURPLE_PALETTE_COLORS.setUndefinedKey(PC_D6D6FF.HEX, PC_D6D6FF);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_D6D6FF.HEX, PC_D6D6FF);
+ColorNameManager.addColor(PC_D6D6FF);

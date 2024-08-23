@@ -17,7 +17,7 @@
 
 import { Discriminators } from 'discriminator';
 import { Palette, PaletteColorSelector } from 'palette';
-import { PC_0437F1, PC_0FFF4F, PC_121212, _7A00F5, PC_FF6BB5 } from 'palette-colors';
+import { PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
 
 import {
     checkForValidColorSelector,
@@ -31,7 +31,7 @@ const TEST_PALETTE_A: Palette = {
     NAME: 'test A palette',
     SOURCE: 'test a source',
     COLORS: [
-        _7A00F5,
+        PC_7A00F5,
         PC_121212,
         PC_0437F1,
         PC_FF6BB5,
