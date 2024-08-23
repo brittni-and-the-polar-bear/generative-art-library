@@ -16,7 +16,7 @@
  */
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
-import { PC_007058, PC_23856D, _BC010A, _D01625, _FBF9F9 } from 'palette-colors';
+import { PC_007058, PC_23856D, PC_BC010A, PC_D01625, _FBF9F9 } from 'palette-colors';
 
 import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../palette-maps';
 
@@ -25,8 +25,8 @@ import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../palett
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
  * <script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"],"classic christmas"); </script>
  *
- * @see {@link _BC010A}
- * @see {@link _D01625}
+ * @see {@link PC_BC010A}
+ * @see {@link PC_D01625}
  * @see {@link PC_007058}
  * @see {@link PC_23856D}
  * @see {@link _FBF9F9}
@@ -43,8 +43,8 @@ export const CLASSIC_CHRISTMAS: Palette = {
     IS_GRADIENT: false,
 
     COLORS: [
-        _BC010A,
-        _D01625,
+        PC_BC010A,
+        PC_D01625,
         PC_007058,
         PC_23856D,
         _FBF9F9

@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, RED_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
  */
-export const _D01625: PaletteColor = {
+export const PC_D01625: PaletteColor = {
     HEX: '#D01625',
     RGB: { R: 208, G: 22, B: 37 },
     HSL: { H: 355, S: 81, L: 45 },
@@ -41,6 +41,6 @@ export const _D01625: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-RED_PALETTE_COLORS.setUndefinedKey(_D01625.HEX, _D01625);
-ALL_PALETTE_COLORS.setUndefinedKey(_D01625.HEX, _D01625);
-ColorNameManager.addColor(_D01625);
+RED_PALETTE_COLORS.setUndefinedKey(PC_D01625.HEX, PC_D01625);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_D01625.HEX, PC_D01625);
+ColorNameManager.addColor(PC_D01625);

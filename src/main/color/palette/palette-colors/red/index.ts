@@ -15,5 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './bc010a';
-export * from './d01625';
+export * from './pc-bc010a';
+export * from './pc-d01625';

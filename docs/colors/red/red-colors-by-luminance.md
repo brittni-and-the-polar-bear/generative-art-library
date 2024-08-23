@@ -31,6 +31,8 @@ Color block links redirect to [Red Colors by Hex](./red-colors-by-hex.md) entrie
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.10734989 -->
@@ -40,7 +42,7 @@ Color block links redirect to [Red Colors by Hex](./red-colors-by-hex.md) entrie
   </a>
 </div>
 
-<!-- luminance: 0.1411728707  -->
+<!-- luminance: 0.1411728707 -->
 <div class="color-block" style="background: #D01625;">
   <a href="./red-colors-by-hex.html#cartoon-violence-d01625">
     <h2 class="color-block white-pass">cartoon violence (#D01625)</h2>
@@ -50,4 +52,6 @@ Color block links redirect to [Red Colors by Hex](./red-colors-by-hex.md) entrie
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#red-colors-by-luminance)

@@ -16,7 +16,7 @@
  */
 
 import { PaletteColor } from 'palette';
-import { PC_007058, PC_23856D, _BC010A, _D01625, _FBF9F9 } from 'palette-colors';
+import { PC_007058, PC_23856D, PC_BC010A, PC_D01625, _FBF9F9 } from 'palette-colors';
 import { CLASSIC_CHRISTMAS } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
@@ -25,8 +25,8 @@ const PALETTE_NAME: string = 'CLASSIC_CHRISTMAS';
 
 describe('CLASSIC_CHRISTMAS palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
-        _BC010A,
-        _D01625,
+        PC_BC010A,
+        PC_D01625,
         PC_007058,
         PC_23856D,
         _FBF9F9

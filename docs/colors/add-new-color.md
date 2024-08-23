@@ -174,9 +174,9 @@ Be sure to add the new markdown section to the Table of Contents.
 <br/>
 
 ```typescript
-import { _BC010A } from 'palette-colors';
+import { PC_BC010A } from 'palette-colors';
 
-let name: string = _BC010A.NAME;
+let name: string = PC_BC010A.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -212,7 +212,7 @@ Add the color as a new constant to the release notes draft markdown file.
 ## Release Notes Entry Example
 
 ````markdown
-## `_BC010A` (bird's eye)
+## `PC_BC010A` (bird's eye)
 
 <div class="color-block" style="background: #BC010A;">
   <a href="https://coolors.co/bc010a" target="_blank" rel="noopener noreferrer">
@@ -234,7 +234,7 @@ Add the color as a new constant to the release notes draft markdown file.
  *
  * @source
  */
-declare const _BC010A: PaletteColor;
+declare const PC_BC010A: PaletteColor;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -263,7 +263,7 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @source
  */
-export const _BC010A: PaletteColor = {
+export const PC_BC010A: PaletteColor = {
     HEX: '#BC010A',
     RGB: {R: 188, G: 1, B: 10},
     HSL: {H: 357, S: 99, L: 37},
@@ -271,9 +271,9 @@ export const _BC010A: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 }
 
-RED_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
-ALL_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
-ColorNameManager.addColor(_BC010A);
+RED_PALETTE_COLORS.setUndefinedKey(PC_BC010A.HEX, PC_BC010A);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_BC010A.HEX, PC_BC010A);
+ColorNameManager.addColor(PC_BC010A);
 ```
 
 [Table of Contents](#table-of-contents)
