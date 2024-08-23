@@ -9,6 +9,7 @@
 
 [holiday](#holiday)
   - [christmas](#christmas)
+  - [valentine's day](#valentines-day)
 
 [miscellaneous](#miscellaneous)
   - [coolors](#coolors)
@@ -35,6 +36,16 @@
 
 <!-- Coolors Palette Widget -->
 <script data-id="06571731362505122">new CoolorsPaletteWidget("06571731362505122", ["db0404","169f48","8cd4ff","c6efff","ffffff"]); </script>
+<br/>
+
+[Table of Contents](#table-of-contents)
+
+## valentine's day
+
+### [shine](https://culrs.com/palette/f4357bd81b60c2185bad1457880e4f)
+
+<!-- Coolors Palette Widget -->
+<script data-id="026368151644127313">new CoolorsPaletteWidget("026368151644127313", ["f4357b","d81b60","c2185b","ad1457","880e4f"]); </script>
 <br/>
 
 [Table of Contents](#table-of-contents)
@@ -78,6 +89,12 @@
 ## Eva Silvertant (@EvaSilvertant)
 
 ### butterfly palettes
+
+#### [butterfly palette no. 6](https://x.com/EvaSilvertant/status/1824376835435549151)
+
+<!-- Coolors Palette Widget -->
+<script data-id="06529982865585635">new CoolorsPaletteWidget("06529982865585635", ["59315f","c1a7e2","1d3c34","407b5f","b9dcd2","ccae4e"]); </script>
+<br/>
 
 #### [butterfly palette no. 9](https://x.com/EvaSilvertant/status/1825468825648697618)
 
