@@ -33,6 +33,8 @@ Color block links redirect to
 
 # Table of Contents
 
+[green granite (#7E9594)](#green-granite-7e9594)
+
 [carrier pigeon blue (#869498)](#carrier-pigeon-blue-869498)
 
 [zappy zebra (#F0F3F4))](#zappy-zebra-f0f3f4)
@@ -40,6 +42,22 @@ Color block links redirect to
 [Fin.](#fin)
 
 ----
+
+# green granite (#7E9594)
+
+<div class="color-block" style="background: #7E9594;">
+  <a href="https://coolors.co/7e9594" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">green granite (#7E9594)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+import { _7E9594 } from 'palette-colors';
+let name: string = _7E9594.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # carrier pigeon blue (#869498)
 
