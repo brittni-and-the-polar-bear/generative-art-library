@@ -15,5 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './869498';
-export * from './f0f3f4';
+// #869498
+// 193°, 8%, 56%
+// 134, 148, 152
+// carrier pigeon blue
+// black-pass
+// luminance: 0.2851514006
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
+
+export const _869498: PaletteColor = {
+    HEX: '#869498',
+    RGB: { R: 134, G: 148, B: 152 },
+    HSL: { H: 193, S: 8, L: 56 },
+    NAME: 'carrier pigeon blue',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+GRAY_PALETTE_COLORS.setUndefinedKey(_869498.HEX, _869498);
+ALL_PALETTE_COLORS.setUndefinedKey(_869498.HEX, _869498);
+ColorNameManager.addColor(_869498);
