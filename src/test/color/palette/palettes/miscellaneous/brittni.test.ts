@@ -17,13 +17,13 @@
 
 import { PaletteColor } from 'palette';
 import { PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
-import { BRITTNI } from 'palettes';
+import { BRITTNI_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'BRITTNI';
 
-describe('BRITTNI palette tests', (): void => {
+describe('BRITTNI_PALETTE palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_121212,
         PC_0437F1,
@@ -33,6 +33,6 @@ describe('BRITTNI palette tests', (): void => {
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(BRITTNI, expectedColors);
+        checkForValidPalette(BRITTNI_PALETTE, expectedColors);
     });
 });

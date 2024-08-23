@@ -35,7 +35,7 @@ import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
  */
-export const BRITTNI: Palette = {
+export const BRITTNI_PALETTE: Palette = {
     NAME: 'brittni',
 
     IS_GRADIENT: false,
@@ -86,5 +86,5 @@ export const BRITTNI: Palette = {
     DISCRIMINATOR: Discriminators.PALETTE
 };
 
-ALL_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
-MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
+ALL_PALETTES.setUndefinedKey(BRITTNI_PALETTE.NAME, BRITTNI_PALETTE);
+MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI_PALETTE.NAME, BRITTNI_PALETTE);

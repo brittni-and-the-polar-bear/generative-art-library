@@ -191,13 +191,13 @@ Run the unit test to ensure that it passes.
 ```typescript
 import {PaletteColor} from 'palette';
 import {PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5} from 'palette-colors';
-import {BRITTNI} from 'palettes';
+import {BRITTNI_PALETTE} from 'palettes';
 
 import {checkForValidPalette} from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'BRITTNI';
+const PALETTE_NAME: string = 'BRITTNI_PALETTE';
 
-describe('BRITTNI palette tests', (): void => {
+describe('BRITTNI_PALETTE palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_121212,
         PC_0437F1,
@@ -207,7 +207,7 @@ describe('BRITTNI palette tests', (): void => {
     ]
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(BRITTNI, expectedColors);
+        checkForValidPalette(BRITTNI_PALETTE, expectedColors);
     });
 });
 ```
@@ -272,7 +272,7 @@ Add a `@see` annotation with a `@link` for every `PaletteColor` object in the pa
 
 Add a `@see` annotation with a `@link` to the palette in documentation of every `PaletteColor` object in the palette.
 
-**Example:** `@see {@link BRITTNI}`
+**Example:** `@see {@link BRITTNI_PALETTE}`
 
 [Table of Contents](#table-of-contents)
 
@@ -332,7 +332,7 @@ Add the palette as a new constant to the release notes draft markdown file.
 ## Release Notes Entry Example
 
 ````markdown
-## `BRITTNI`
+## `BRITTNI_PALETTE`
 
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
@@ -354,7 +354,7 @@ Add the palette as a new constant to the release notes draft markdown file.
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
  */
-declare const BRITTNI: Palette;
+declare const BRITTNI_PALETTE: Palette;
 ```
 ````
 
@@ -383,7 +383,7 @@ import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
  */
-export const BRITTNI: Palette = {
+export const BRITTNI_PALETTE: Palette = {
     NAME: 'brittni',
 
     IS_GRADIENT: false,
@@ -409,8 +409,8 @@ export const BRITTNI: Palette = {
     DISCRIMINATOR: Discriminators.PALETTE
 };
 
-ALL_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
-MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
+ALL_PALETTES.setUndefinedKey(BRITTNI_PALETTE.NAME, BRITTNI_PALETTE);
+MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI_PALETTE.NAME, BRITTNI_PALETTE);
 ```
 
 [Table of Contents](#table-of-contents)

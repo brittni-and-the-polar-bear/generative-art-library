@@ -16,12 +16,12 @@
  */
 
 import { Palette } from 'palette';
-import { BRITTNI, MISCELLANEOUS_PALETTES } from 'palettes';
+import { BRITTNI_PALETTE, MISCELLANEOUS_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: BRITTNI }
+    { palette: BRITTNI_PALETTE }
 ];
 
 const MAP_NAME: string = 'MISCELLANEOUS_PALETTES';

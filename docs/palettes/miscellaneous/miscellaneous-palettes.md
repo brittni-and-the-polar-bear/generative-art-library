@@ -29,9 +29,9 @@ Palettes are in alphabetic order by object name.
 <br/>
 
 ````typescript
-import {BRITTNI} from 'palettes';
+import {BRITTNI_PALETTE} from 'palettes';
 
-let name: string = BRITTNI.NAME;
+let name: string = BRITTNI_PALETTE.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
