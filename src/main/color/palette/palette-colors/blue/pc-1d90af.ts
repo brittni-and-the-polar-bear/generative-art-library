@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (Blue)
  * @category Palette Colors (All)
  */
-export const _1D90AF: PaletteColor = {
+export const PC_1D90AF: PaletteColor = {
     HEX: '#1D90AF',
     RGB: { R: 29, G: 144, B: 175 },
     HSL: { H: 193, S: 72, L: 40 },
@@ -41,6 +41,6 @@ export const _1D90AF: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLUE_PALETTE_COLORS.setUndefinedKey(_1D90AF.HEX, _1D90AF);
-ALL_PALETTE_COLORS.setUndefinedKey(_1D90AF.HEX, _1D90AF);
-ColorNameManager.addColor(_1D90AF);
+BLUE_PALETTE_COLORS.setUndefinedKey(PC_1D90AF.HEX, PC_1D90AF);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_1D90AF.HEX, PC_1D90AF);
+ColorNameManager.addColor(PC_1D90AF);

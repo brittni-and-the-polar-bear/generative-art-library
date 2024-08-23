@@ -108,9 +108,9 @@ let name: string = _0437F1.NAME;
 <br/>
 
 ````typescript
-import {_1D90AF} from 'palette-colors';
+import {PC_1D90AF} from 'palette-colors';
 
-let name: string = _1D90AF.NAME;
+let name: string = PC_1D90AF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

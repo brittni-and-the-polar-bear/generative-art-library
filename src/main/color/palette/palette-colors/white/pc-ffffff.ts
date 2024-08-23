@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #ffffff
-// #FFFFFF
-// 0°, 0%, 100%
-// 255, 255, 255
-// white
-// black-pass
-// luminance: 1.0
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
