@@ -22,25 +22,25 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #FF6BB5;">
- *     <a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
+ * <div class="color-block" style="background: #F490B1;">
+ *     <a href="https://coolors.co/f490b1" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
  *     </a>
  * </div>
  *
- * @see {@link BRITTNI}
+ * @see {@link GLITTER}
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
  */
-export const _FF6BB5: PaletteColor = {
-    HEX: '#FF6BB5',
-    RGB: { R: 255, G: 107, B: 181 },
-    HSL: { H: 330, S: 100, L: 71 },
-    NAME: 'fen hong pink',
+export const PC_F490B1: PaletteColor = {
+    HEX: '#F490B1',
+    RGB: { R: 244, G: 144, B: 177 },
+    HSL: { H: 340, S: 82, L: 76 },
+    NAME: 'sachet pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PINK_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
-ALL_PALETTE_COLORS.setUndefinedKey(_FF6BB5.HEX, _FF6BB5);
-ColorNameManager.addColor(_FF6BB5);
+PINK_PALETTE_COLORS.setUndefinedKey(PC_F490B1.HEX, PC_F490B1);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_F490B1.HEX, PC_F490B1);
+ColorNameManager.addColor(PC_F490B1);

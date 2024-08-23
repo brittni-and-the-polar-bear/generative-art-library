@@ -22,9 +22,9 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #F8B9CE;">
- *     <a href="https://coolors.co/f8b9ce" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
+ * <div class="color-block" style="background: #EC417A;">
+ *     <a href="https://coolors.co/ec417a" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">radishical (#EC417A)</h2>
  *     </a>
  * </div>
  *
@@ -33,14 +33,14 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
  */
-export const _F8B9CE: PaletteColor = {
-    HEX: '#F8B9CE',
-    RGB: { R: 248, G: 185, B: 206 },
-    HSL: { H: 340, S: 82, L: 85 },
-    NAME: "christy's smile",
+export const PC_EC417A: PaletteColor = {
+    HEX: '#EC417A',
+    RGB: { R: 236, G: 65, B: 122 },
+    HSL: { H: 340, S: 82, L: 59 },
+    NAME: 'radishical',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PINK_PALETTE_COLORS.setUndefinedKey(_F8B9CE.HEX, _F8B9CE);
-ALL_PALETTE_COLORS.setUndefinedKey(_F8B9CE.HEX, _F8B9CE);
-ColorNameManager.addColor(_F8B9CE);
+PINK_PALETTE_COLORS.setUndefinedKey(PC_EC417A.HEX, PC_EC417A);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_EC417A.HEX, PC_EC417A);
+ColorNameManager.addColor(PC_EC417A);

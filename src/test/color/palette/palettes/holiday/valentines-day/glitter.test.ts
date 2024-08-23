@@ -16,7 +16,7 @@
  */
 
 import { PaletteColor } from 'palette';
-import { _EC417A, _F06090, _F490B1, _F8B9CE, _FCE3EC } from 'palette-colors';
+import { PC_EC417A, PC_F06090, PC_F490B1, PC_F8B9CE, PC_FCE3EC } from 'palette-colors';
 import { GLITTER } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
@@ -25,11 +25,11 @@ const PALETTE_NAME: string = 'GLITTER';
 
 describe('GLITTER palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
-        _FCE3EC,
-        _F8B9CE,
-        _F490B1,
-        _F06090,
-        _EC417A
+        PC_FCE3EC,
+        PC_F8B9CE,
+        PC_F490B1,
+        PC_F06090,
+        PC_EC417A
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {

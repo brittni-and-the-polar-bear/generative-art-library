@@ -22,9 +22,9 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #F490B1;">
- *     <a href="https://coolors.co/f490b1" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">sachet pink (#F490B1)</h2>
+ * <div class="color-block" style="background: #F8B9CE;">
+ *     <a href="https://coolors.co/f8b9ce" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">christy's smile (#F8B9CE)</h2>
  *     </a>
  * </div>
  *
@@ -33,14 +33,14 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
  */
-export const _F490B1: PaletteColor = {
-    HEX: '#F490B1',
-    RGB: { R: 244, G: 144, B: 177 },
-    HSL: { H: 340, S: 82, L: 76 },
-    NAME: 'sachet pink',
+export const PC_F8B9CE: PaletteColor = {
+    HEX: '#F8B9CE',
+    RGB: { R: 248, G: 185, B: 206 },
+    HSL: { H: 340, S: 82, L: 85 },
+    NAME: "christy's smile",
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PINK_PALETTE_COLORS.setUndefinedKey(_F490B1.HEX, _F490B1);
-ALL_PALETTE_COLORS.setUndefinedKey(_F490B1.HEX, _F490B1);
-ColorNameManager.addColor(_F490B1);
+PINK_PALETTE_COLORS.setUndefinedKey(PC_F8B9CE.HEX, PC_F8B9CE);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_F8B9CE.HEX, PC_F8B9CE);
+ColorNameManager.addColor(PC_F8B9CE);

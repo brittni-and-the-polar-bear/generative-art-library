@@ -49,11 +49,11 @@ Valid Categories:
 
 The directory of the color file will be `/src/main/color/palette/palette-colors/<category>`.
 
-The filename of the color file will be the hex value of the color with all lowercase letters.
+The filename of the color file will be `pc-` followed by the hex value of the color, with all lowercase letters.
 
 If there is already a file with that hex value name, the color already exists in the library and does not need to be added.
 
-**Example:** `/src/main/color/palette/palette-colors/red/bc010a.ts`
+**Example:** `/src/main/color/palette/palette-colors/red/pc-bc010a.ts`
 
 [Table of Contents](#table-of-contents)
 

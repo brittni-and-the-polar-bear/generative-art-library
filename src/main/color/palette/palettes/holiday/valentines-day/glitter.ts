@@ -17,7 +17,7 @@
 
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
-import { _EC417A, _F06090, _F490B1, _F8B9CE, _FCE3EC } from 'palette-colors';
+import { PC_EC417A, PC_F06090, PC_F490B1, PC_F8B9CE, PC_FCE3EC } from 'palette-colors';
 
 import { ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES } from '../../palette-maps';
 
@@ -26,11 +26,11 @@ import { ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES 
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
  * <script data-id="09635237276120507">new CoolorsPaletteWidget("09635237276120507", ["fce3ec","f8b9ce","f490b1","f06090","ec417a"],"glitter"); </script>
  *
- * @see {@link _FCE3EC}
- * @see {@link _F8B9CE}
- * @see {@link _F490B1}
- * @see {@link _F06090}
- * @see {@link _EC417A}
+ * @see {@link PC_FCE3EC}
+ * @see {@link PC_F8B9CE}
+ * @see {@link PC_F490B1}
+ * @see {@link PC_F06090}
+ * @see {@link PC_EC417A}
  *
  * @category Palettes (Holiday/Valentine's Day)
  * @category Palettes (Holiday)
@@ -45,11 +45,11 @@ export const GLITTER: Palette = {
     IS_GRADIENT: true,
 
     COLORS: [
-        _FCE3EC,
-        _F8B9CE,
-        _F490B1,
-        _F06090,
-        _EC417A
+        PC_FCE3EC,
+        PC_F8B9CE,
+        PC_F490B1,
+        PC_F06090,
+        PC_EC417A
     ],
 
     CONTRAST_MAP: {

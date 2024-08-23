@@ -22,9 +22,9 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #EC417A;">
- *     <a href="https://coolors.co/ec417a" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">radishical (#EC417A)</h2>
+ * <div class="color-block" style="background: #FCE3EC;">
+ *     <a href="https://coolors.co/fce3ec" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
  *     </a>
  * </div>
  *
@@ -33,14 +33,14 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
  */
-export const _EC417A: PaletteColor = {
-    HEX: '#EC417A',
-    RGB: { R: 236, G: 65, B: 122 },
-    HSL: { H: 340, S: 82, L: 59 },
-    NAME: 'radishical',
+export const PC_FCE3EC: PaletteColor = {
+    HEX: '#FCE3EC',
+    RGB: { R: 252, G: 227, B: 236 },
+    HSL: { H: 338, S: 81, L: 94 },
+    NAME: 'spun sugar',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PINK_PALETTE_COLORS.setUndefinedKey(_EC417A.HEX, _EC417A);
-ALL_PALETTE_COLORS.setUndefinedKey(_EC417A.HEX, _EC417A);
-ColorNameManager.addColor(_EC417A);
+PINK_PALETTE_COLORS.setUndefinedKey(PC_FCE3EC.HEX, PC_FCE3EC);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_FCE3EC.HEX, PC_FCE3EC);
+ColorNameManager.addColor(PC_FCE3EC);

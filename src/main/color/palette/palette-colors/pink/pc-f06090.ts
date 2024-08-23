@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
  */
-export const _F06090: PaletteColor = {
+export const PC_F06090: PaletteColor = {
     HEX: '#F06090',
     RGB: { R: 240, G: 96, B: 144 },
     HSL: { H: 340, S: 83, L: 66 },
@@ -41,6 +41,6 @@ export const _F06090: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PINK_PALETTE_COLORS.setUndefinedKey(_F06090.HEX, _F06090);
-ALL_PALETTE_COLORS.setUndefinedKey(_F06090.HEX, _F06090);
-ColorNameManager.addColor(_F06090);
+PINK_PALETTE_COLORS.setUndefinedKey(PC_F06090.HEX, PC_F06090);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_F06090.HEX, PC_F06090);
+ColorNameManager.addColor(PC_F06090);

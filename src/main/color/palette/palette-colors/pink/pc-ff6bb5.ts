@@ -22,25 +22,25 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, PINK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #FCE3EC;">
- *     <a href="https://coolors.co/fce3ec" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">spun sugar (#FCE3EC)</h2>
+ * <div class="color-block" style="background: #FF6BB5;">
+ *     <a href="https://coolors.co/ff6bb5" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">fen hong pink (#FF6BB5)</h2>
  *     </a>
  * </div>
  *
- * @see {@link GLITTER}
+ * @see {@link BRITTNI}
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Pink)
  */
-export const _FCE3EC: PaletteColor = {
-    HEX: '#FCE3EC',
-    RGB: { R: 252, G: 227, B: 236 },
-    HSL: { H: 338, S: 81, L: 94 },
-    NAME: 'spun sugar',
+export const PC_FF6BB5: PaletteColor = {
+    HEX: '#FF6BB5',
+    RGB: { R: 255, G: 107, B: 181 },
+    HSL: { H: 330, S: 100, L: 71 },
+    NAME: 'fen hong pink',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PINK_PALETTE_COLORS.setUndefinedKey(_FCE3EC.HEX, _FCE3EC);
-ALL_PALETTE_COLORS.setUndefinedKey(_FCE3EC.HEX, _FCE3EC);
-ColorNameManager.addColor(_FCE3EC);
+PINK_PALETTE_COLORS.setUndefinedKey(PC_FF6BB5.HEX, PC_FF6BB5);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_FF6BB5.HEX, PC_FF6BB5);
+ColorNameManager.addColor(PC_FF6BB5);

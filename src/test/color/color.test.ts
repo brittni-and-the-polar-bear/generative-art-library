@@ -19,7 +19,7 @@ import P5Lib from 'p5';
 
 import { Color } from 'color';
 import { SketchContext } from 'context';
-import { PC_0437F1, PC_0FFF4F, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, PC_0FFF4F, _7A00F5, PC_FF6BB5 } from 'palette-colors';
 
 import {
     ColorComponents,
@@ -101,7 +101,7 @@ describe('color tests', (): void => {
             { paletteColor: PC_0437F1 },
             { paletteColor: PC_0FFF4F },
             { paletteColor: _7A00F5 },
-            { paletteColor: _FF6BB5 }
+            { paletteColor: PC_FF6BB5 }
         ]
     )('$# Color constructor with PaletteColor object: $paletteColor.HEX',
         ({ paletteColor }): void => {
