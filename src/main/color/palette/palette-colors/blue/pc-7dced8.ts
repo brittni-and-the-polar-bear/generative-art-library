@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
  * @category Palette Colors (Blue)
  * @category Palette Colors (All)
  */
-export const _7DCED8: PaletteColor = {
+export const PC_7DCED8: PaletteColor = {
     HEX: '#7DCED8',
     RGB: { R: 125, G: 206, B: 216 },
     HSL: { H: 187, S: 54, L: 67 },
@@ -41,6 +41,6 @@ export const _7DCED8: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLUE_PALETTE_COLORS.setUndefinedKey(_7DCED8.HEX, _7DCED8);
-ALL_PALETTE_COLORS.setUndefinedKey(_7DCED8.HEX, _7DCED8);
-ColorNameManager.addColor(_7DCED8);
+BLUE_PALETTE_COLORS.setUndefinedKey(PC_7DCED8.HEX, PC_7DCED8);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_7DCED8.HEX, PC_7DCED8);
+ColorNameManager.addColor(PC_7DCED8);
