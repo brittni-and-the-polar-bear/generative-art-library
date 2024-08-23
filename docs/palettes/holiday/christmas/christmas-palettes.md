@@ -30,9 +30,9 @@ Palettes are in alphabetic order by object name.
 <br/>
 
 ```typescript
-import {CLASSIC_CHRISTMAS} from 'palettes';
+import {CLASSIC_CHRISTMAS_PALETTE} from 'palettes';
 
-let name: string = CLASSIC_CHRISTMAS.NAME;
+let name: string = CLASSIC_CHRISTMAS_PALETTE.NAME;
 ```
 
 [Table of Contents](#table-of-contents)

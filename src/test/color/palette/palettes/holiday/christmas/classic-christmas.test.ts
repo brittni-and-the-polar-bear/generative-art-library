@@ -17,13 +17,13 @@
 
 import { PaletteColor } from 'palette';
 import { PC_007058, PC_23856D, PC_BC010A, PC_D01625, PC_FBF9F9 } from 'palette-colors';
-import { CLASSIC_CHRISTMAS } from 'palettes';
+import { CLASSIC_CHRISTMAS_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'CLASSIC_CHRISTMAS';
 
-describe('CLASSIC_CHRISTMAS palette tests', (): void => {
+describe('CLASSIC_CHRISTMAS_PALETTE palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_BC010A,
         PC_D01625,
@@ -33,6 +33,6 @@ describe('CLASSIC_CHRISTMAS palette tests', (): void => {
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(CLASSIC_CHRISTMAS, expectedColors);
+        checkForValidPalette(CLASSIC_CHRISTMAS_PALETTE, expectedColors);
     });
 });

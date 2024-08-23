@@ -16,12 +16,12 @@
  */
 
 import { Palette } from 'palette';
-import { HOLIDAY_PALETTES, CLASSIC_CHRISTMAS, GLITTER } from 'palettes';
+import { HOLIDAY_PALETTES, CLASSIC_CHRISTMAS_PALETTE, GLITTER } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: CLASSIC_CHRISTMAS }, // christmas
+    { palette: CLASSIC_CHRISTMAS_PALETTE }, // christmas
     { palette: GLITTER } // valentines-day
 ];
 

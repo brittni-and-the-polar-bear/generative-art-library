@@ -64,17 +64,21 @@ Valid Categories:
 The directory of the color file will be `/src/main/color/palette/palettes/<category>`.
 Each nested category will be its own directory (e.g. `holiday/christmas`).
 
-The filename of the palette file will be the name of the palette with all lowercase letters.
+The filename of the palette file will be the name of the palette with all lowercase letters, followed by `-palette`.
 Separate words using a dash (`-`) character.
 
 If there is already a file with that name, a palette with that name already exists in the library.
 Verify that the palette does not already exist in the library, and use a new name for the new palette if it does not exist.
 
-**Example:** `/src/main/color/palette/palettes/miscellaneous/brittni.ts`
+**Example:** `/src/main/color/palette/palettes/miscellaneous/brittni-palette.ts`
 
 [Table of Contents](#table-of-contents)
 
 # Step 4: Create the `Palette` Object
+
+The object name of the palette should have all capital letters and end with `_PALETTE`.
+
+**Example:** `BRITTNI_PALETTE`
 
 ## Step 4, Part A: Set Palette Name
 
@@ -307,9 +311,9 @@ add an entry for the new palette to the gradient palettes markdown page.
 <br/>
 
 ```typescript
-import {CLASSIC_CHRISTMAS} from 'palettes';
+import {CLASSIC_CHRISTMAS_PALETTE} from 'palettes';
 
-let name: string = CLASSIC_CHRISTMAS.NAME;
+let name: string = CLASSIC_CHRISTMAS_PALETTE.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
