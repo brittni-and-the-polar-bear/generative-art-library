@@ -22,9 +22,9 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #5F8661;">
- *     <a href="https://coolors.co/5f8661" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">tuscan herbs (#5F8661)</h2>
+ * <div class="color-block" style="background: #B1C69F;">
+ *     <a href="https://coolors.co/b1c69f" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
  *     </a>
  * </div>
  *
@@ -33,14 +33,14 @@ import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps'
  * @category Palette Colors (Green)
  * @category Palette Colors (All)
  */
-export const _5F8661: PaletteColor = {
-    HEX: '#5F8661',
-    RGB: { R: 95, G: 134, B: 97 },
-    HSL: { H: 123, S: 17, L: 45 },
-    NAME: 'tuscan herbs',
+export const PC_B1C69F: PaletteColor = {
+    HEX: '#B1C69F',
+    RGB: { R: 177, G: 198, B: 159 },
+    HSL: { H: 92, S: 25, L: 70 },
+    NAME: 'wasabi peanut',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GREEN_PALETTE_COLORS.setUndefinedKey(_5F8661.HEX, _5F8661);
-ALL_PALETTE_COLORS.setUndefinedKey(_5F8661.HEX, _5F8661);
-ColorNameManager.addColor(_5F8661);
+GREEN_PALETTE_COLORS.setUndefinedKey(PC_B1C69F.HEX, PC_B1C69F);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_B1C69F.HEX, PC_B1C69F);
+ColorNameManager.addColor(PC_B1C69F);

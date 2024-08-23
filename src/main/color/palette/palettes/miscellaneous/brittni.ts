@@ -17,7 +17,7 @@
 
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
-import { PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, PC_0FFF4F, PC_121212, _7A00F5, _FF6BB5 } from 'palette-colors';
 
 import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
 
@@ -29,7 +29,7 @@ import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../palette-maps';
  * @see {@link PC_121212}
  * @see {@link PC_0437F1}
  * @see {@link _FF6BB5}
- * @see {@link _0FFF4F}
+ * @see {@link PC_0FFF4F}
  * @see {@link _7A00F5}
  *
  * @category Palettes (All)
@@ -44,7 +44,7 @@ export const BRITTNI: Palette = {
         PC_121212,
         PC_0437F1,
         _FF6BB5,
-        _0FFF4F,
+        PC_0FFF4F,
         _7A00F5
     ],
 

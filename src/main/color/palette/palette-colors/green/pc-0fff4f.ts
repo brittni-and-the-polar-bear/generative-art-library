@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps'
  * @category Palette Colors (Green)
  * @category Palette Colors (All)
  */
-export const _0FFF4F: PaletteColor = {
+export const PC_0FFF4F: PaletteColor = {
     HEX: '#0FFF4F',
     RGB: { R: 15, G: 255, B: 79 },
     HSL: { H: 136, S: 100, L: 53 },
@@ -41,6 +41,6 @@ export const _0FFF4F: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GREEN_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
-ALL_PALETTE_COLORS.setUndefinedKey(_0FFF4F.HEX, _0FFF4F);
-ColorNameManager.addColor(_0FFF4F);
+GREEN_PALETTE_COLORS.setUndefinedKey(PC_0FFF4F.HEX, PC_0FFF4F);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_0FFF4F.HEX, PC_0FFF4F);
+ColorNameManager.addColor(PC_0FFF4F);

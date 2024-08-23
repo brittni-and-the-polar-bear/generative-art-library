@@ -22,25 +22,25 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #23856D;">
- *     <a href="https://coolors.co/23856d" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">accent green blue (#23856D)</h2>
+ * <div class="color-block" style="background: #5F8661;">
+ *     <a href="https://coolors.co/5f8661" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">tuscan herbs (#5F8661)</h2>
  *     </a>
  * </div>
  *
- * @see {@link CLASSIC_CHRISTMAS}
+ * @see {@link WHITE_LILY}
  *
  * @category Palette Colors (Green)
  * @category Palette Colors (All)
  */
-export const _23856D: PaletteColor = {
-    HEX: '#23856D',
-    RGB: { R: 35, G: 133, B: 109 },
-    HSL: { H: 165, S: 58, L: 33 },
-    NAME: 'accent green blue',
+export const PC_5F8661: PaletteColor = {
+    HEX: '#5F8661',
+    RGB: { R: 95, G: 134, B: 97 },
+    HSL: { H: 123, S: 17, L: 45 },
+    NAME: 'tuscan herbs',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GREEN_PALETTE_COLORS.setUndefinedKey(_23856D.HEX, _23856D);
-ALL_PALETTE_COLORS.setUndefinedKey(_23856D.HEX, _23856D);
-ColorNameManager.addColor(_23856D);
+GREEN_PALETTE_COLORS.setUndefinedKey(PC_5F8661.HEX, PC_5F8661);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_5F8661.HEX, PC_5F8661);
+ColorNameManager.addColor(PC_5F8661);

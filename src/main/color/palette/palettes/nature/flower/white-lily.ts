@@ -17,7 +17,7 @@
 
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
-import { _5F8661, _AEAED6, _B1C69F, _D6D6FF, _FAFBEF } from 'palette-colors';
+import { PC_5F8661, _AEAED6, PC_B1C69F, _D6D6FF, _FAFBEF } from 'palette-colors';
 
 import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
 
@@ -27,8 +27,8 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-ma
  * <script data-id="08679171490640973">new CoolorsPaletteWidget("08679171490640973", ["fafbef","b1c69f","5f8661","d6d6ff","aeaed6"],"white lily"); </script>
  *
  * @see {@link _FAFBEF}
- * @see {@link _B1C69F}
- * @see {@link _5F8661}
+ * @see {@link PC_B1C69F}
+ * @see {@link PC_5F8661}
  * @see {@link _D6D6FF}
  * @see {@link _AEAED6}
  *
@@ -45,8 +45,8 @@ export const WHITE_LILY: Palette = {
 
     COLORS: [
         _FAFBEF,
-        _B1C69F,
-        _5F8661,
+        PC_B1C69F,
+        PC_5F8661,
         _D6D6FF,
         _AEAED6
     ],

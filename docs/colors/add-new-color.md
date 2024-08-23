@@ -175,6 +175,7 @@ Be sure to add the new markdown section to the Table of Contents.
 
 ```typescript
 import { _BC010A } from 'palette-colors';
+
 let name: string = _BC010A.NAME;
 ```
 

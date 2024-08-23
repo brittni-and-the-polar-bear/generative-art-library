@@ -16,7 +16,7 @@
  */
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
-import { _007058, _23856D, _BC010A, _D01625, _FBF9F9 } from 'palette-colors';
+import { PC_007058, PC_23856D, _BC010A, _D01625, _FBF9F9 } from 'palette-colors';
 
 import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../palette-maps';
 
@@ -27,8 +27,8 @@ import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../palett
  *
  * @see {@link _BC010A}
  * @see {@link _D01625}
- * @see {@link _007058}
- * @see {@link _23856D}
+ * @see {@link PC_007058}
+ * @see {@link PC_23856D}
  * @see {@link _FBF9F9}
  *
  * @category Palettes (Holiday/Christmas)
@@ -45,8 +45,8 @@ export const CLASSIC_CHRISTMAS: Palette = {
     COLORS: [
         _BC010A,
         _D01625,
-        _007058,
-        _23856D,
+        PC_007058,
+        PC_23856D,
         _FBF9F9
     ],
 

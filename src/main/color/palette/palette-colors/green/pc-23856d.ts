@@ -22,9 +22,9 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #007058;">
- *     <a href="https://coolors.co/007058" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block white-pass">teal dark green (#007058)</h2>
+ * <div class="color-block" style="background: #23856D;">
+ *     <a href="https://coolors.co/23856d" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">accent green blue (#23856D)</h2>
  *     </a>
  * </div>
  *
@@ -33,14 +33,14 @@ import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps'
  * @category Palette Colors (Green)
  * @category Palette Colors (All)
  */
-export const _007058: PaletteColor = {
-    HEX: '#007058',
-    RGB: { R: 0, G: 112, B: 88 },
-    HSL: { H: 167, S: 100, L: 22 },
-    NAME: 'teal dark green',
+export const PC_23856D: PaletteColor = {
+    HEX: '#23856D',
+    RGB: { R: 35, G: 133, B: 109 },
+    HSL: { H: 165, S: 58, L: 33 },
+    NAME: 'accent green blue',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GREEN_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
-ALL_PALETTE_COLORS.setUndefinedKey(_007058.HEX, _007058);
-ColorNameManager.addColor(_007058);
+GREEN_PALETTE_COLORS.setUndefinedKey(PC_23856D.HEX, PC_23856D);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_23856D.HEX, PC_23856D);
+ColorNameManager.addColor(PC_23856D);

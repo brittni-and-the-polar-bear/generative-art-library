@@ -186,7 +186,7 @@ Run the unit test to ensure that it passes.
 
 ```typescript
 import {PaletteColor} from 'palette';
-import {PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {PC_0437F1, PC_0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
 import {BRITTNI} from 'palettes';
 
 import {checkForValidPalette} from 'unit-test/shared';
@@ -197,7 +197,7 @@ describe('BRITTNI palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_121212,
         PC_0437F1,
-        _0FFF4F,
+        PC_0FFF4F,
         _7A00F5,
         _FF6BB5
     ]
@@ -343,7 +343,7 @@ Add the palette as a new constant to the release notes draft markdown file.
  *
  * @see {@link PC_121212}
  * @see {@link PC_0437F1}
- * @see {@link _0FFF4F}
+ * @see {@link PC_0FFF4F}
  * @see {@link _7A00F5}
  * @see {@link _FF6BB5}
  *
@@ -361,7 +361,7 @@ declare const BRITTNI: Palette;
 ```typescript
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
-import {PC_0437F1, _0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {PC_0437F1, PC_0FFF4F, PC_121212, _7A00F5, _FF6BB5} from 'palette-colors';
 
 import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 
@@ -372,7 +372,7 @@ import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
  *
  * @see {@link PC_121212}
  * @see {@link PC_0437F1}
- * @see {@link _0FFF4F}
+ * @see {@link PC_0FFF4F}
  * @see {@link _7A00F5}
  * @see {@link _FF6BB5}
  *
@@ -387,7 +387,7 @@ export const BRITTNI: Palette = {
     COLORS: [
         PC_121212,
         PC_0437F1,
-        _0FFF4F,
+        PC_0FFF4F,
         _7A00F5,
         _FF6BB5
     ],

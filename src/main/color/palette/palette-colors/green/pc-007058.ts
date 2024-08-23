@@ -22,25 +22,25 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #B1C69F;">
- *     <a href="https://coolors.co/b1c69f" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">wasabi peanut (#B1C69F)</h2>
+ * <div class="color-block" style="background: #007058;">
+ *     <a href="https://coolors.co/007058" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">teal dark green (#007058)</h2>
  *     </a>
  * </div>
  *
- * @see {@link WHITE_LILY}
+ * @see {@link CLASSIC_CHRISTMAS}
  *
  * @category Palette Colors (Green)
  * @category Palette Colors (All)
  */
-export const _B1C69F: PaletteColor = {
-    HEX: '#B1C69F',
-    RGB: { R: 177, G: 198, B: 159 },
-    HSL: { H: 92, S: 25, L: 70 },
-    NAME: 'wasabi peanut',
+export const PC_007058: PaletteColor = {
+    HEX: '#007058',
+    RGB: { R: 0, G: 112, B: 88 },
+    HSL: { H: 167, S: 100, L: 22 },
+    NAME: 'teal dark green',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GREEN_PALETTE_COLORS.setUndefinedKey(_B1C69F.HEX, _B1C69F);
-ALL_PALETTE_COLORS.setUndefinedKey(_B1C69F.HEX, _B1C69F);
-ColorNameManager.addColor(_B1C69F);
+GREEN_PALETTE_COLORS.setUndefinedKey(PC_007058.HEX, PC_007058);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_007058.HEX, PC_007058);
+ColorNameManager.addColor(PC_007058);
