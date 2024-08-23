@@ -53,6 +53,7 @@ export const BROWN_HEXES: HexCollection = [
 ];
 
 export const GRAY_HEXES: HexCollection = [
+    { hexString: '#869498' },
     { hexString: '#F0F3F4' }
 ];
 
