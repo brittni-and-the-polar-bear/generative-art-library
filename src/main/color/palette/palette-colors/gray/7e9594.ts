@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #7e9594
-// #7E9594
-// 177°, 10%, 54%
-// 126, 149, 148
-// green granite
-// black-pass
-// luminance: 0.2806863035
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
