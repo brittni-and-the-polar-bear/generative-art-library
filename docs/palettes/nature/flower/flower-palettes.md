@@ -33,9 +33,9 @@ Palettes are in alphabetic order by object name.
 <br/>
 
 ````typescript
-import {BLUE_LILY} from 'palettes';
+import {BLUE_LILY_PALETTE} from 'palettes';
 
-let name: string = BLUE_LILY.NAME;
+let name: string = BLUE_LILY_PALETTE.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -49,9 +49,9 @@ let name: string = BLUE_LILY.NAME;
 <br/>
 
 ````typescript
-import {WHITE_LILY} from 'palettes';
+import {WHITE_LILY_PALETTE} from 'palettes';
 
-let name: string = WHITE_LILY.NAME;
+let name: string = WHITE_LILY_PALETTE.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

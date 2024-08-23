@@ -15,55 +15,61 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Palette } from 'palette';
 import { Discriminators } from 'discriminator';
-import { PC_1D90AF, PC_3B2212, PC_7DCED8, PC_F0F3F4, PC_FAFEFF } from 'palette-colors';
+import { Palette } from 'palette';
+import { PC_5F8661, PC_AEAED6, PC_B1C69F, PC_D6D6FF, PC_FAFBEF } from 'palette-colors';
 
 import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
- * <script data-id="05684644562469574">new CoolorsPaletteWidget("05684644562469574", ["f0f3f4","fafeff","7dced8","1d90af","3b2212"],"blue lily"); </script>
+ * <script data-id="08679171490640973">new CoolorsPaletteWidget("08679171490640973", ["fafbef","b1c69f","5f8661","d6d6ff","aeaed6"],"white lily"); </script>
  *
- * @see {@link PC_F0F3F4}
- * @see {@link PC_FAFEFF}
- * @see {@link PC_7DCED8}
- * @see {@link PC_1D90AF}
- * @see {@link PC_3B2212}
+ * @see {@link PC_FAFBEF}
+ * @see {@link PC_B1C69F}
+ * @see {@link PC_5F8661}
+ * @see {@link PC_D6D6FF}
+ * @see {@link PC_AEAED6}
  *
  * @category Palettes (Nature/Flower)
  * @category Palettes (Nature)
  * @category Palettes (All)
  */
-export const BLUE_LILY: Palette = {
-    NAME: 'blue lily',
+export const WHITE_LILY_PALETTE: Palette = {
+    NAME: 'white lily',
 
-    SOURCE: 'https://www.color-hex.com/color-palette/1040636',
+    SOURCE: 'https://www.color-hex.com/color-palette/1039504',
 
     IS_GRADIENT: false,
 
     COLORS: [
-        PC_F0F3F4,
-        PC_FAFEFF,
-        PC_7DCED8,
-        PC_1D90AF,
-        PC_3B2212
+        PC_FAFBEF,
+        PC_B1C69F,
+        PC_5F8661,
+        PC_D6D6FF,
+        PC_AEAED6
     ],
 
     CONTRAST_MAP: {
-        '#000000': ['#F0F3F4', '#FAFEFF', '#7DCED8', '#1D90AF'],
-        '#FFFFFF': ['#3B2212'],
-        '#F0F3F4': ['#000000', '#3B2212'],
-        '#FAFEFF': ['#000000', '#3B2212'],
-        '#7DCED8': ['#000000', '#3B2212'],
-        '#1D90AF': ['#000000'],
-        '#3B2212': ['#FFFFFF', '#F0F3F4', '#FAFEFF', '#7DCED8']
+        '#000000': [
+            '#FAFBEF',
+            '#B1C69F',
+            '#5F8661',
+            '#D6D6FF',
+            '#AEAED6'
+        ],
+        '#FFFFFF': [],
+        '#FAFBEF': ['#000000'],
+        '#B1C69F': ['#000000'],
+        '#5F8661': ['#000000'],
+        '#D6D6FF': ['#000000'],
+        '#AEAED6': ['#000000']
     },
 
     DISCRIMINATOR: Discriminators.PALETTE
 };
 
-FLOWER_PALETTES.setUndefinedKey(BLUE_LILY.NAME, BLUE_LILY);
-NATURE_PALETTES.setUndefinedKey(BLUE_LILY.NAME, BLUE_LILY);
-ALL_PALETTES.setUndefinedKey(BLUE_LILY.NAME, BLUE_LILY);
+FLOWER_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);
+NATURE_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);
+ALL_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);

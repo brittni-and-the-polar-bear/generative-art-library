@@ -16,13 +16,13 @@
  */
 
 import { Palette } from 'palette';
-import { BLUE_LILY, NATURE_PALETTES, WHITE_LILY } from 'palettes';
+import { BLUE_LILY_PALETTE, NATURE_PALETTES, WHITE_LILY_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: BLUE_LILY },
-    { palette: WHITE_LILY }
+    { palette: BLUE_LILY_PALETTE },
+    { palette: WHITE_LILY_PALETTE }
 ];
 
 const MAP_NAME: string = 'NATURE_PALETTES';

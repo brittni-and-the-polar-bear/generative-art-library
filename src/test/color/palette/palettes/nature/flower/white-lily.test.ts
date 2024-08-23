@@ -17,13 +17,13 @@
 
 import { PaletteColor } from 'palette';
 import { PC_5F8661, PC_AEAED6, PC_B1C69F, PC_D6D6FF, PC_FAFBEF } from 'palette-colors';
-import { WHITE_LILY } from 'palettes';
+import { WHITE_LILY_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'WHITE_LILY';
 
-describe('WHITE_LILY palette tests', (): void => {
+describe('WHITE_LILY_PALETTE palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_FAFBEF,
         PC_B1C69F,
@@ -33,6 +33,6 @@ describe('WHITE_LILY palette tests', (): void => {
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(WHITE_LILY, expectedColors);
+        checkForValidPalette(WHITE_LILY_PALETTE, expectedColors);
     });
 });

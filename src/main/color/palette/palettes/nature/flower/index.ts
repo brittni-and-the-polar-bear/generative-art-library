@@ -15,5 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './blue-lily';
-export * from './white-lily';
+export * from './blue-lily-palette';
+export * from './white-lily-palette';

@@ -17,13 +17,13 @@
 
 import { PaletteColor } from 'palette';
 import { PC_1D90AF, PC_3B2212, PC_7DCED8, PC_F0F3F4, PC_FAFEFF } from 'palette-colors';
-import { BLUE_LILY } from 'palettes';
+import { BLUE_LILY_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'BLUE_LILY';
 
-describe('BLUE_LILY palette tests', (): void => {
+describe('BLUE_LILY_PALETTE palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_F0F3F4,
         PC_FAFEFF,
@@ -33,6 +33,6 @@ describe('BLUE_LILY palette tests', (): void => {
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(BLUE_LILY, expectedColors);
+        checkForValidPalette(BLUE_LILY_PALETTE, expectedColors);
     });
 });
