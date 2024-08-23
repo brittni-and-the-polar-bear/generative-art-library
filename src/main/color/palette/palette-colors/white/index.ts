@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './fafbef';
-export * from './fafeff';
-export * from './fbf9f9';
+export * from './pc-fafbef';
+export * from './pc-fafeff';
+export * from './pc-fbf9f9';
 export * from './pc-ffffff';

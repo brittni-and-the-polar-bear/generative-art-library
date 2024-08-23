@@ -55,9 +55,9 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import { _FAFBEF } from 'palette-colors';
+import { PC_FAFBEF } from 'palette-colors';
 
-let name: string = _FAFBEF.NAME;
+let name: string = PC_FAFBEF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -72,9 +72,9 @@ let name: string = _FAFBEF.NAME;
 <br/>
 
 ````typescript
-import { _FAFEFF } from 'palette-colors';
+import { PC_FAFEFF } from 'palette-colors';
 
-let name: string = _FAFEFF.NAME;
+let name: string = PC_FAFEFF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -89,9 +89,9 @@ let name: string = _FAFEFF.NAME;
 <br/>
 
 ````typescript
-import { _FBF9F9 } from 'palette-colors';
+import { PC_FBF9F9 } from 'palette-colors';
 
-let name: string = _FBF9F9.NAME;
+let name: string = PC_FBF9F9.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

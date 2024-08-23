@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps'
  * @category Palette Colors (White)
  * @category Palette Colors (All)
  */
-export const _FAFBEF: PaletteColor = {
+export const PC_FAFBEF: PaletteColor = {
     HEX: '#FAFBEF',
     RGB: { R: 250, G: 251, B: 239 },
     HSL: { H: 65, S: 60, L: 96 },
@@ -41,6 +41,6 @@ export const _FAFBEF: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-WHITE_PALETTE_COLORS.setUndefinedKey(_FAFBEF.HEX, _FAFBEF);
-ALL_PALETTE_COLORS.setUndefinedKey(_FAFBEF.HEX, _FAFBEF);
-ColorNameManager.addColor(_FAFBEF);
+WHITE_PALETTE_COLORS.setUndefinedKey(PC_FAFBEF.HEX, PC_FAFBEF);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_FAFBEF.HEX, PC_FAFBEF);
+ColorNameManager.addColor(PC_FAFBEF);

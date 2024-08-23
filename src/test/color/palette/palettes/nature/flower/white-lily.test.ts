@@ -16,7 +16,7 @@
  */
 
 import { PaletteColor } from 'palette';
-import { PC_5F8661, PC_AEAED6, PC_B1C69F, PC_D6D6FF, _FAFBEF } from 'palette-colors';
+import { PC_5F8661, PC_AEAED6, PC_B1C69F, PC_D6D6FF, PC_FAFBEF } from 'palette-colors';
 import { WHITE_LILY } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
@@ -25,7 +25,7 @@ const PALETTE_NAME: string = 'WHITE_LILY';
 
 describe('WHITE_LILY palette tests', (): void => {
     const expectedColors: PaletteColor[] = [
-        _FAFBEF,
+        PC_FAFBEF,
         PC_B1C69F,
         PC_5F8661,
         PC_D6D6FF,

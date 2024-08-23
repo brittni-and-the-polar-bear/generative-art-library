@@ -17,7 +17,7 @@
 
 import { Palette } from 'palette';
 import { Discriminators } from 'discriminator';
-import { PC_1D90AF, PC_3B2212, PC_7DCED8, PC_F0F3F4, _FAFEFF } from 'palette-colors';
+import { PC_1D90AF, PC_3B2212, PC_7DCED8, PC_F0F3F4, PC_FAFEFF } from 'palette-colors';
 
 import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
 
@@ -27,7 +27,7 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-ma
  * <script data-id="05684644562469574">new CoolorsPaletteWidget("05684644562469574", ["f0f3f4","fafeff","7dced8","1d90af","3b2212"],"blue lily"); </script>
  *
  * @see {@link PC_F0F3F4}
- * @see {@link _FAFEFF}
+ * @see {@link PC_FAFEFF}
  * @see {@link PC_7DCED8}
  * @see {@link PC_1D90AF}
  * @see {@link PC_3B2212}
@@ -45,7 +45,7 @@ export const BLUE_LILY: Palette = {
 
     COLORS: [
         PC_F0F3F4,
-        _FAFEFF,
+        PC_FAFEFF,
         PC_7DCED8,
         PC_1D90AF,
         PC_3B2212
