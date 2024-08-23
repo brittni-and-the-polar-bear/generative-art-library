@@ -28,7 +28,7 @@ import { ALL_PALETTE_COLORS, BLUE_PALETTE_COLORS } from '../palette-color-maps';
  *     </a>
  * </div>
  *
- * @see {@link BRITTNI}
+ * @see {@link BRITTNI_PALETTE}
  *
  * @category Palette Colors (Blue)
  * @category Palette Colors (All)

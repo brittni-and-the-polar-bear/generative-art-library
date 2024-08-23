@@ -28,7 +28,7 @@ import { ALL_PALETTE_COLORS, GREEN_PALETTE_COLORS } from '../palette-color-maps'
  *     </a>
  * </div>
  *
- * @see {@link BRITTNI}
+ * @see {@link BRITTNI_PALETTE}
  *
  * @category Palette Colors (Green)
  * @category Palette Colors (All)

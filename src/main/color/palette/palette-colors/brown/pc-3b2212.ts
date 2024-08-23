@@ -28,7 +28,7 @@ import { ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS } from '../palette-color-maps'
  *     </a>
  * </div>
  *
- * @see {@link BLUE_LILY}
+ * @see {@link BLUE_LILY_PALETTE}
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Brown)

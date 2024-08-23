@@ -28,7 +28,7 @@ import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps'
  *     </a>
  * </div>
  *
- * @see {@link CLASSIC_CHRISTMAS}
+ * @see {@link CLASSIC_CHRISTMAS_PALETTE}
  *
  * @category Palette Colors (White)
  * @category Palette Colors (All)
