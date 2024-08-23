@@ -16,7 +16,7 @@
  */
 
 import { PaletteColor } from 'palette';
-import { PC_1D90AF, _3B2212, PC_7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
+import { PC_1D90AF, PC_3B2212, PC_7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
 import { BLUE_LILY } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
@@ -29,7 +29,7 @@ describe('BLUE_LILY palette tests', (): void => {
         _FAFEFF,
         PC_7DCED8,
         PC_1D90AF,
-        _3B2212
+        PC_3B2212
     ];
 
     test(`${PALETTE_NAME} palette is valid`, (): void => {

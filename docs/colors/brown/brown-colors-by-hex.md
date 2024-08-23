@@ -35,6 +35,8 @@ Color block links redirect to
 
 [délicieux au chocolat (#3B2212))](#délicieux-au-chocolat-3b2212)
 
+[Fin.](#fin)
+
 ----
 
 # délicieux au chocolat (#3B2212)
@@ -47,13 +49,15 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_3B2212} from 'palette-colors';
+import { PC_3B2212 } from 'palette-colors';
 
-let name: string = _3B2212.NAME;
+let name: string = PC_3B2212.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

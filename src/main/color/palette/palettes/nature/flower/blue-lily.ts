@@ -17,7 +17,7 @@
 
 import { Palette } from 'palette';
 import { Discriminators } from 'discriminator';
-import { PC_1D90AF, _3B2212, PC_7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
+import { PC_1D90AF, PC_3B2212, PC_7DCED8, _F0F3F4, _FAFEFF } from 'palette-colors';
 
 import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
 
@@ -30,7 +30,7 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-ma
  * @see {@link _FAFEFF}
  * @see {@link PC_7DCED8}
  * @see {@link PC_1D90AF}
- * @see {@link _3B2212}
+ * @see {@link PC_3B2212}
  *
  * @category Palettes (Nature/Flower)
  * @category Palettes (Nature)
@@ -48,7 +48,7 @@ export const BLUE_LILY: Palette = {
         _FAFEFF,
         PC_7DCED8,
         PC_1D90AF,
-        _3B2212
+        PC_3B2212
     ],
 
     CONTRAST_MAP: {

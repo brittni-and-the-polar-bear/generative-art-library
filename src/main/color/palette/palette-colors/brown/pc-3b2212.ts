@@ -33,7 +33,7 @@ import { ALL_PALETTE_COLORS, BROWN_PALETTE_COLORS } from '../palette-color-maps'
  * @category Palette Colors (All)
  * @category Palette Colors (Brown)
  */
-export const _3B2212: PaletteColor = {
+export const PC_3B2212: PaletteColor = {
     HEX: '#3B2212',
     RGB: { R: 59, G: 34, B: 18 },
     HSL: { H: 23, S: 53, L: 15 },
@@ -41,6 +41,6 @@ export const _3B2212: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BROWN_PALETTE_COLORS.setUndefinedKey(_3B2212.HEX, _3B2212);
-ALL_PALETTE_COLORS.setUndefinedKey(_3B2212.HEX, _3B2212);
-ColorNameManager.addColor(_3B2212);
+BROWN_PALETTE_COLORS.setUndefinedKey(PC_3B2212.HEX, PC_3B2212);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_3B2212.HEX, PC_3B2212);
+ColorNameManager.addColor(PC_3B2212);
