@@ -29,6 +29,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #FFFFFF;">
+ *     <a href="https://coolors.co/ffffff" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">white (#FFFFFF)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (White)
+ * @category Palette Colors (All)
+ */
 export const PC_FFFFFF: PaletteColor = {
     HEX: '#FFFFFF',
     RGB: { R: 255, G: 255, B: 255 },

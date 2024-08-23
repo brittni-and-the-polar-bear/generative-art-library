@@ -61,8 +61,8 @@ If there is already a file with that hex value name, the color already exists in
 
 The object will be a `const` object.
 
-The object name will be an underscore followed by the color hex value with all uppercase letters.<br/>
-**Example:** `_BC010A`
+The object name will be `PC_` followed by the color hex value with all uppercase letters.<br/>
+**Example:** `PC_BC010A`
 
 The object type will be `PaletteColor`.
 
