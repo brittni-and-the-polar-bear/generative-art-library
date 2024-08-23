@@ -29,6 +29,16 @@ import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #7E9594;">
+ *     <a href="https://coolors.co/7e9594" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">green granite (#7E9594)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (Gray)
+ * @category Palette Colors (All)
+ */
 export const _7E9594: PaletteColor = {
     HEX: '#7E9594',
     RGB: { R: 126, G: 149, B: 148 },
