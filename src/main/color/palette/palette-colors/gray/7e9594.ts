@@ -23,8 +23,11 @@
 // black-pass
 // luminance: 0.2806863035
 
+import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
 
 export const _7E9594: PaletteColor = {
     HEX: '#7E9594',
@@ -33,3 +36,7 @@ export const _7E9594: PaletteColor = {
     NAME: 'green granite',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+GRAY_PALETTE_COLORS.setUndefinedKey(_7E9594.HEX, _7E9594);
+ALL_PALETTE_COLORS.setUndefinedKey(_7E9594.HEX, _7E9594);
+ColorNameManager.addColor(_7E9594);
