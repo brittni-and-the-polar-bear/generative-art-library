@@ -15,7 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './fafbef';
-export * from './fafeff';
-export * from './fbf9f9';
-export * from './pc-ffffff';
+// #ffffff
+// #FFFFFF
+// 0°, 0%, 100%
+// 255, 255, 255
+// white
+// black-pass
+// luminance: 1.0
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps';
+
+export const PC_FFFFFF: PaletteColor = {
+    HEX: '#FFFFFF',
+    RGB: { R: 255, G: 255, B: 255 },
+    HSL: { H: 0, S: 0, L: 100 },
+    NAME: 'white',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+WHITE_PALETTE_COLORS.setUndefinedKey(PC_FFFFFF.HEX, PC_FFFFFF);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_FFFFFF.HEX, PC_FFFFFF);
+ColorNameManager.addColor(PC_FFFFFF);

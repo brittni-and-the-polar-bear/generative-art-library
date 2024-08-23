@@ -90,5 +90,6 @@ export const RED_HEXES: HexCollection = [
 export const WHITE_HEXES: HexCollection = [
     { hexString: '#FAFBEF' },
     { hexString: '#FAFEFF' },
-    { hexString: '#FBF9F9' }
+    { hexString: '#FBF9F9' },
+    { hexString: '#FFFFFF' }
 ];
