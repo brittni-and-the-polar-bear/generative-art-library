@@ -25,6 +25,10 @@
 
 ----
 
+### [Potential Palettes](./potential-palettes.md)
+
+----
+
 ### Fin.
 
 [Top](#all-palettes)
