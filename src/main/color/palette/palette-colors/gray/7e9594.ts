@@ -15,6 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './7e9594';
-export * from './869498';
-export * from './f0f3f4';
+// #7e9594
+// #7E9594
+// 177°, 10%, 54%
+// 126, 149, 148
+// green granite
+// black-pass
+// luminance: 0.2806863035
+
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+export const _7E9594: PaletteColor = {
+    HEX: '#7E9594',
+    RGB: { R: 126, G: 149, B: 148 },
+    HSL: { H: 177, S: 10, L: 54 },
+    NAME: 'green granite',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
