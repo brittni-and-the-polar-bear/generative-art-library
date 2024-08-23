@@ -53,8 +53,8 @@ Color block links redirect to
 <br/>
 
 ```typescript
-import { _7E9594 } from 'palette-colors';
-let name: string = _7E9594.NAME;
+import { PC_7E9594 } from 'palette-colors';
+let name: string = PC_7E9594.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -69,8 +69,8 @@ let name: string = _7E9594.NAME;
 <br/>
 
 ```typescript
-import { _869498 } from 'palette-colors';
-let name: string = _869498.NAME;
+import { PC_869498 } from 'palette-colors';
+let name: string = PC_869498.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -85,9 +85,9 @@ let name: string = _869498.NAME;
 <br/>
 
 ````typescript
-import {_F0F3F4} from 'palette-colors';
+import { PC_F0F3F4 } from 'palette-colors';
 
-let name: string = _F0F3F4.NAME;
+let name: string = PC_F0F3F4.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

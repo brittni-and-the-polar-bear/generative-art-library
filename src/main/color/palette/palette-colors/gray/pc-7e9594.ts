@@ -22,23 +22,23 @@ import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
- * <div class="color-block" style="background: #869498;">
- *     <a href="https://coolors.co/869498" target="_blank" rel="noopener noreferrer">
- *         <h2 class="color-block black-pass">carrier pigeon blue (#869498)</h2>
+ * <div class="color-block" style="background: #7E9594;">
+ *     <a href="https://coolors.co/7e9594" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">green granite (#7E9594)</h2>
  *     </a>
  * </div>
  *
  * @category Palette Colors (Gray)
  * @category Palette Colors (All)
  */
-export const _869498: PaletteColor = {
-    HEX: '#869498',
-    RGB: { R: 134, G: 148, B: 152 },
-    HSL: { H: 193, S: 8, L: 56 },
-    NAME: 'carrier pigeon blue',
+export const PC_7E9594: PaletteColor = {
+    HEX: '#7E9594',
+    RGB: { R: 126, G: 149, B: 148 },
+    HSL: { H: 177, S: 10, L: 54 },
+    NAME: 'green granite',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GRAY_PALETTE_COLORS.setUndefinedKey(_869498.HEX, _869498);
-ALL_PALETTE_COLORS.setUndefinedKey(_869498.HEX, _869498);
-ColorNameManager.addColor(_869498);
+GRAY_PALETTE_COLORS.setUndefinedKey(PC_7E9594.HEX, PC_7E9594);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_7E9594.HEX, PC_7E9594);
+ColorNameManager.addColor(PC_7E9594);
