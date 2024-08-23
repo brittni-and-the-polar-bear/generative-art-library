@@ -33,9 +33,29 @@ Color block links redirect to
 
 # Table of Contents
 
+[carrier pigeon blue (#869498)](#carrier-pigeon-blue-869498)
+
 [zappy zebra (#F0F3F4))](#zappy-zebra-f0f3f4)
 
+[Fin.](#fin)
+
 ----
+
+# carrier pigeon blue (#869498)
+
+<div class="color-block" style="background: #869498;">
+  <a href="https://coolors.co/869498" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">carrier pigeon blue (#869498)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+import { _869498 } from 'palette-colors';
+let name: string = _869498.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # zappy zebra (#F0F3F4)
 
@@ -56,4 +76,6 @@ let name: string = _F0F3F4.NAME;
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

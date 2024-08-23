@@ -15,13 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #869498
-// 193°, 8%, 56%
-// 134, 148, 152
-// carrier pigeon blue
-// black-pass
-// luminance: 0.2851514006
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
