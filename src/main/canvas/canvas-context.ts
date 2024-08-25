@@ -15,6 +15,22 @@
  * See the GNU Affero General Public License for more details.
  */
 
+/**
+ * The CanvasContext provides static access to information and methods
+ * for the running p5.js sketch canvas.
+ *
+ * @category Canvas Context
+ */
 export class CanvasContext {
+    /**
+     * Is the canvas rendering mode set to WebGL?
+     */
+    private static _isWebGL: boolean = false;
 
+    /**
+     * Is the canvas rendering mode set to WebGL?
+     */
+    public static get isWebGL(): boolean {
+        return CanvasContext._isWebGL;
+    }
 }
