@@ -15,34 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { AspectRatio } from './aspect-ratio';
-
-// TODO - docs
-// TODO - unit tests?
-export const ASPECT_RATIOS: Record<string, AspectRatio> = {
-    MATCH: {
-        NAME: 'match',
-        WIDTH_RATIO: 0,
-        HEIGHT_RATIO: 0
-    },
-    SQUARE: {
-        NAME: 'square',
-        WIDTH_RATIO: 1,
-        HEIGHT_RATIO: 1
-    },
-    TIKTOK_PHOTO: {
-        NAME: '3:4',
-        WIDTH_RATIO: 3,
-        HEIGHT_RATIO: 4
-    },
-    SOCIAL_VIDEO: {
-        NAME: '9:16',
-        WIDTH_RATIO: 9,
-        HEIGHT_RATIO: 16
-    },
-    RATIO_21_9: {
-        NAME: '21:9',
-        WIDTH_RATIO: 64,
-        HEIGHT_RATIO: 27
-    }
-};
+export * from './aspect-ratio';
+export * from './aspect-ratio-handler';
+export * from './aspect-ratios';
