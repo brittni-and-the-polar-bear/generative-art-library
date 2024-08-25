@@ -10,6 +10,7 @@
       "./src"
     ],
     "paths": {
+      "canvas-context": ["./src/main/canvas"],
       "color": ["./src/main/color"],
       "color-contrast": ["./src/main/color/color-contrast"],
       "context": ["./src/main/p5"],

@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -15,14 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'canvas-context';
-export * from 'color';
-export * from 'color-contrast';
-export * from 'context';
-export * from 'discriminator';
-export * from 'map';
-export * from 'math';
-export * from 'palette';
-export * from 'palettes';
-export * from 'palette-colors';
-export * from 'random';
+export * from './aspect-ratio';
+export * from './canvas-context';
