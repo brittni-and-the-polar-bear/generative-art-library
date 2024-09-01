@@ -32,7 +32,7 @@
   * [Step 10, Part C: Add the `@see` Annotation to Each `PaletteColor`](#step-10-part-c-add-the-see-annotation-to-each-palettecolor)
   * [Step 10, Part D: Add the `@category` Annotations](#step-10-part-d-add-the-category-annotations)
 
-[Step 11: Add the New Palette to the Palette Category Markdown Page](#step-11-add-the-new-palette-to-the-palette-category-markdown-page)
+[Step 11: Add the New Palette to the Palette Category Markdown Pages](#step-11-add-the-new-palette-to-the-palette-category-markdown-pages)
 
 [Step 12: Add Palette to the Release Notes](#step-12-add-palette-to-the-release-notes)
 
@@ -288,15 +288,13 @@ add a `@category` annotation for the `Palettes (Gradient)` category.
 
 [Table of Contents](#table-of-contents)
 
-# Step 11: Add the New Palette to the Palette Category Markdown Page
+# Step 11: Add the New Palette to the Palette Category Markdown Pages
 
-Add an entry to the correct palette category markdown page for the new palette.
+Add an entry to each applicable palette category markdown page for the new palette.
 This entry will include the Coolors Palette Widget, TypeScript example,
 and a link to the palette's source.
 
 Be sure to add the new markdown section to the Table of Contents.
-
-The palette should only be added to one category markdown file, preferably the most specific category.
 
 If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
 add an entry for the new palette to the gradient palettes markdown page.
@@ -325,7 +323,7 @@ let name: string = CLASSIC_CHRISTMAS_PALETTE.NAME;
 
 [Table of Contents](#table-of-contents)
 
-# Step 12: Add Palette to the All Palettes on One Page Markdown Page
+# Step 12: Add Palette to the "All Palettes on One Page" Markdown Page
 
 <!-- TODO: Put in instructions -->
 

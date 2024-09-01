@@ -35,6 +35,8 @@ export interface Palette {
      */
     readonly SOURCE?: string;
 
+    // TODO - update release notes
+    // TODO - update palette sources
     /**
      * The source URL of the palette.
      */

@@ -38,7 +38,7 @@ import { ALL_PALETTES, FOOTBALL_PALETTES, SPORTS_PALETTES } from 'palette-maps';
 export const DALLAS_COWBOYS_PALETTE: Palette = {
     NAME: 'dallas cowboys',
 
-    SOURCE: 'Dallas Cowboys football team',
+    SOURCE: 'TEAM COLOR CODES - Dallas Cowboys Color Codes',
 
     SOURCE_URL: 'https://teamcolorcodes.com/dallas-cowboys-color-codes/',
 
