@@ -21,9 +21,9 @@ import { GLITTER_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'GLITTER';
+const PALETTE_NAME: string = 'GLITTER_PALETTE';
 
-describe('GLITTER_PALETTE palette tests', (): void => {
+describe('GLITTER_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_FCE3EC,
         PC_F8B9CE,
@@ -32,7 +32,7 @@ describe('GLITTER_PALETTE palette tests', (): void => {
         PC_EC417A
     ];
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
+    test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(GLITTER_PALETTE, expectedColors);
     });
 });
