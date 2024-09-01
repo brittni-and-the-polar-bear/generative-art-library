@@ -37,6 +37,10 @@ import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from 'palette-maps';
 export const BRITTNI_PALETTE: Palette = {
     NAME: 'brittni',
 
+    SOURCE: 'brittni watkins',
+
+    SOURCE_URL: 'https://github.com/blwatkins',
+
     IS_GRADIENT: false,
 
     COLORS: [
