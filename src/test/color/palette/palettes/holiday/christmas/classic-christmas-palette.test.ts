@@ -21,9 +21,9 @@ import { CLASSIC_CHRISTMAS_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'CLASSIC_CHRISTMAS';
+const PALETTE_NAME: string = 'CLASSIC_CHRISTMAS_PALETTE';
 
-describe('CLASSIC_CHRISTMAS_PALETTE palette tests', (): void => {
+describe('CLASSIC_CHRISTMAS_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_BC010A,
         PC_D01625,
@@ -32,7 +32,7 @@ describe('CLASSIC_CHRISTMAS_PALETTE palette tests', (): void => {
         PC_FBF9F9
     ];
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
+    test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(CLASSIC_CHRISTMAS_PALETTE, expectedColors);
     });
 });
