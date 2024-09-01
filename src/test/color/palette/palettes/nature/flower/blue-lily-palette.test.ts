@@ -21,9 +21,9 @@ import { BLUE_LILY_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'BLUE_LILY';
+const PALETTE_NAME: string = 'BLUE_LILY_PALETTE';
 
-describe('BLUE_LILY_PALETTE palette tests', (): void => {
+describe('BLUE_LILY_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_F0F3F4,
         PC_FAFEFF,
@@ -32,7 +32,7 @@ describe('BLUE_LILY_PALETTE palette tests', (): void => {
         PC_3B2212
     ];
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
+    test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(BLUE_LILY_PALETTE, expectedColors);
     });
 });

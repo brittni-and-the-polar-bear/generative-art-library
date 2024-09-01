@@ -19,7 +19,7 @@ import { Palette } from 'palette';
 import { Discriminators } from 'discriminator';
 import { PC_1D90AF, PC_3B2212, PC_7DCED8, PC_F0F3F4, PC_FAFEFF } from 'palette-colors';
 
-import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../palette-maps';
+import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -52,13 +52,34 @@ export const BLUE_LILY_PALETTE: Palette = {
     ],
 
     CONTRAST_MAP: {
-        '#000000': ['#F0F3F4', '#FAFEFF', '#7DCED8', '#1D90AF'],
+        '#000000': [
+            '#F0F3F4',
+            '#FAFEFF',
+            '#7DCED8',
+            '#1D90AF'
+        ],
         '#FFFFFF': ['#3B2212'],
-        '#F0F3F4': ['#000000', '#3B2212'],
-        '#FAFEFF': ['#000000', '#3B2212'],
-        '#7DCED8': ['#000000', '#3B2212'],
-        '#1D90AF': ['#000000'],
-        '#3B2212': ['#FFFFFF', '#F0F3F4', '#FAFEFF', '#7DCED8']
+        '#F0F3F4': [
+            '#000000',
+            '#3B2212'
+        ],
+        '#FAFEFF': [
+            '#000000',
+            '#3B2212'
+        ],
+        '#7DCED8': [
+            '#000000',
+            '#3B2212'
+        ],
+        '#1D90AF': [
+            '#000000'
+        ],
+        '#3B2212': [
+            '#FFFFFF',
+            '#F0F3F4',
+            '#FAFEFF',
+            '#7DCED8'
+        ]
     },
 
     DISCRIMINATOR: Discriminators.PALETTE
