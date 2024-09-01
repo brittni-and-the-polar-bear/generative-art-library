@@ -18,6 +18,8 @@ Palettes are in alphabetic order by object name.
 
 [dallas cowboys](#dallas-cowboys)
 
+[Fin.](#fin)
+
 ----
 
 # dallas cowboys

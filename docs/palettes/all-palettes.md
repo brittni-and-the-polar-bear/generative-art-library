@@ -2,8 +2,6 @@
 
 [How to Add a New Palette to the Library (Developer Instructions)](./add-new-palette.md)
 
-[Fin.](#fin)
-
 ----
 
 ## [All Palettes on One Page](./all-palettes_one-page.md)
@@ -22,6 +20,9 @@
 
 ## [Nature Palettes](./nature/nature-palettes.md)
   * ### [Flower Palettes](./nature/flower/flower-palettes.md)
+
+## [Sports Palettes](./sports/sports-palettes.md)
+  * ### [Football Palettes](./sports/football/football-palettes.md)
 
 ----
 

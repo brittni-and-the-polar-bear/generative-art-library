@@ -9,13 +9,13 @@
 # Table of Contents
 
 [Holiday](#holiday)
-  - [Christmas](#christmas)
-  - [Valentine's Day](#valentines-day)
+  * [Christmas](#christmas)
+  * [Valentine's Day](#valentines-day)
 
 [Miscellaneous](#miscellaneous)
 
 [Nature](#nature)
-  - [Flower](#flower)
+  * [Flower](#flower)
 
 [Fin.](#fin)
 
