@@ -64,9 +64,11 @@ export const DALLAS_COWBOYS_PALETTE: Palette = {
             '#7E9594'
         ],
         '#869498': [
+            '#000000',
             '#041E43'
         ],
         '#FFFFFF': [
+            '#000000',
             '#041E43',
             '#003494'
         ],
