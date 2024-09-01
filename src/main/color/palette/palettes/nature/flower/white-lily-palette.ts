@@ -38,7 +38,9 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from 'palette-maps';
 export const WHITE_LILY_PALETTE: Palette = {
     NAME: 'white lily',
 
-    SOURCE: 'https://www.color-hex.com/color-palette/1039504',
+    SOURCE: 'color-hex (user: adamcesco)',
+
+    SOURCE_URL: 'https://www.color-hex.com/color-palette/1039504',
 
     IS_GRADIENT: false,
 

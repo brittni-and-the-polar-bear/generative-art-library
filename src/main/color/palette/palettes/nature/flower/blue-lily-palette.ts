@@ -38,7 +38,9 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from 'palette-maps';
 export const BLUE_LILY_PALETTE: Palette = {
     NAME: 'blue lily',
 
-    SOURCE: 'https://www.color-hex.com/color-palette/1040636',
+    SOURCE: 'color-hex (user: winxxed)',
+
+    SOURCE_URL: 'https://www.color-hex.com/color-palette/1040636',
 
     IS_GRADIENT: false,
 
