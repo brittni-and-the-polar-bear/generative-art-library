@@ -19,5 +19,3 @@ export * from './holiday';
 export * from './miscellaneous';
 export * from './nature';
 export * from './sports';
-
-export * from './palette-maps';

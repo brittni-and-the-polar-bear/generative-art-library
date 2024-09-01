@@ -22,6 +22,7 @@ export * from 'discriminator';
 export * from 'map';
 export * from 'math';
 export * from 'palette';
-export * from 'palettes';
 export * from 'palette-colors';
+export * from 'palette-maps';
+export * from 'palettes';
 export * from 'random';
