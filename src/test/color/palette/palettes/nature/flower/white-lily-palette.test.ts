@@ -23,7 +23,6 @@ import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'WHITE_LILY_PALETTE';
 
-// TODO - rename files
 describe('WHITE_LILY_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_FAFBEF,
