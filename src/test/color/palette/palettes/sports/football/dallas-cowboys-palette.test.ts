@@ -15,9 +15,30 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday';
-export * from './miscellaneous';
-export * from './nature';
-export * from './sports';
+import { PaletteColor } from 'palette';
+import {
+    PC_003494,
+    PC_041E43,
+    PC_7E9594,
+    PC_869498,
+    PC_FFFFFF
+} from 'palette-colors';
+import { DALLAS_COWBOYS_PALETTE } from 'palettes';
 
-export * from './palette-maps';
+import { checkForValidPalette } from 'unit-test/shared';
+
+const PALETTE_NAME: string = 'DALLAS_COWBOYS_PALETTE';
+
+describe('DALLAS_COWBOYS_PALETTE palette tests', (): void => {
+    const expectedColors: PaletteColor[] = [
+        PC_041E43,
+        PC_869498,
+        PC_FFFFFF,
+        PC_7E9594,
+        PC_003494
+    ];
+
+    test(`${PALETTE_NAME} palette is valid`, (): void => {
+        checkForValidPalette(DALLAS_COWBOYS_PALETTE, expectedColors);
+    });
+});

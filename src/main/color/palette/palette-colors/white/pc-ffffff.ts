@@ -28,6 +28,8 @@ import { ALL_PALETTE_COLORS, WHITE_PALETTE_COLORS } from '../palette-color-maps'
  *     </a>
  * </div>
  *
+ * @see {@link DALLAS_COWBOYS_PALETTE}
+ *
  * @category Palette Colors (White)
  * @category Palette Colors (All)
  */

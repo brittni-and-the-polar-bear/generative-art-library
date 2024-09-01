@@ -21,6 +21,7 @@ import { PaletteColor } from './palette-color';
 
 /**
  * A collection of {@link PaletteColor} objects.
+ *
  * @category Palette
  */
 export interface Palette {
@@ -29,11 +30,15 @@ export interface Palette {
      */
     readonly NAME: string;
 
-    // TODO - Add source URL field
     /**
-     * The source of the palette. May be the URL where the palette can be found.
+     * The source of the palette.
      */
     readonly SOURCE?: string;
+
+    /**
+     * The source URL of the palette.
+     */
+    readonly SOURCE_URL?: string;
 
     /**
      * A flag indicating if the palette is a gradient.

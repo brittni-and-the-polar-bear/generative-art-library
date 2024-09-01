@@ -15,9 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday';
-export * from './miscellaneous';
-export * from './nature';
-export * from './sports';
+export * from './football-maps';
 
-export * from './palette-maps';
+export * from './sports-palette-maps';

@@ -15,25 +15,30 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { PaletteColor } from 'palette';
-import { PC_5F8661, PC_AEAED6, PC_B1C69F, PC_D6D6FF, PC_FAFBEF } from 'palette-colors';
-import { WHITE_LILY_PALETTE } from 'palettes';
+import { Palette } from 'palette';
+import {
+    DALLAS_COWBOYS_PALETTE,
+    SPORTS_PALETTES
+} from 'palettes';
 
-import { checkForValidPalette } from 'unit-test/shared';
+import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'WHITE_LILY';
+const EXPECTED_PALETTES: { palette: Palette }[] = [
+    { palette: DALLAS_COWBOYS_PALETTE }
+];
 
-// TODO - rename files
-describe('WHITE_LILY_PALETTE palette tests', (): void => {
-    const expectedColors: PaletteColor[] = [
-        PC_FAFBEF,
-        PC_B1C69F,
-        PC_5F8661,
-        PC_D6D6FF,
-        PC_AEAED6
-    ];
+const MAP_NAME: string = 'SPORTS_PALETTES';
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(WHITE_LILY_PALETTE, expectedColors);
+describe('sports palette maps test', (): void => {
+    test(`valid string map: ${MAP_NAME}`, (): void => {
+        checkForValidStringMap(SPORTS_PALETTES, EXPECTED_PALETTES.length);
     });
+
+    test.each(
+        EXPECTED_PALETTES
+    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+        ({ palette }): void => {
+            checkForPaletteInMap(palette, SPORTS_PALETTES);
+        }
+    );
 });

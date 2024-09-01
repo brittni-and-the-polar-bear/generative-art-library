@@ -10,7 +10,7 @@
 
 [Step 4: Create the `Palette` Object](#step-4-create-the-palette-object)
   * [Step 4, Part A: Set Palette Name](#step-4-part-a-set-palette-name)
-  * [Step 4, Part B: Set Palette Source](#step-4-part-b-set-palette-source)
+  * [Step 4, Part B: Set Palette Sources](#step-4-part-b-set-palette-sources)
   * [Step 4, Part C: Set the `IS_GRADIENT` Flag](#step-4-part-c-set-the-is_gradient-flag)
   * [Step 4, Part D: Set the `DISCRIMINATOR` Property](#step-4-part-d-set-the-discriminator-property)
   * [Step 4, Part E: Set the Colors](#step-4-part-e-set-the-colors)
@@ -56,6 +56,8 @@ Valid Categories:
 * miscellaneous
 * nature
   * flower
+* sports
+  * football
 
 [Table of Contents](#table-of-contents)
 
@@ -87,13 +89,13 @@ The `NAME` property should be in all lowercase letters.<br/>
 
 [Table of Contents](#table-of-contents)
 
-## Step 4, Part B: Set Palette Source
+## Step 4, Part B: Set Palette Sources
 
-The `SOURCE` property is an optional property.
+The `SOURCE` and `SOURCE_URL` properties are an optional properties.
 
 The palette source should be a string describing the original source of the palette colors.
 
-If the palette was inspired by or taken from a website, the `SOURCE` property should be the URL of the website.
+If the palette was inspired by or taken from a website, the `SOURCE_URL` property should be the URL of the website.
 
 [Table of Contents](#table-of-contents)
 
@@ -189,11 +191,11 @@ Run the unit test to ensure that it passes.
 ## Individual Palette Unit Test Example
 
 ```typescript
-import {PaletteColor} from 'palette';
-import {PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5} from 'palette-colors';
-import {BRITTNI_PALETTE} from 'palettes';
+import { PaletteColor } from 'palette';
+import { PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
+import { BRITTNI_PALETTE } from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'BRITTNI_PALETTE';
 
@@ -253,6 +255,7 @@ Paste the HTML at the top of the palette documentation.
 ### Coolors Palette Widget Example
 
 ```html
+<!--suppress JSUnresolvedLibraryURL -->
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
@@ -301,6 +304,7 @@ add an entry for the new palette to the gradient palettes markdown page.
 ## Palette Category Entry Example
 
 ````markdown
+<!--suppress JSUnresolvedLibraryURL -->
 # classic christmas
 
 <a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">palette source: coolors</a>
@@ -332,6 +336,7 @@ Add the palette as a new constant to the release notes draft markdown file.
 ## Release Notes Entry Example
 
 ````markdown
+<!--suppress JSUnresolvedLibraryURL -->
 ## `BRITTNI_PALETTE`
 
 <!-- Coolors Palette Widget -->

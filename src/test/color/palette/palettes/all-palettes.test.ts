@@ -17,7 +17,13 @@
 
 import { StringMap } from 'map';
 import { Palette, PaletteColor } from 'palette';
-import { ALL_PALETTES, HOLIDAY_PALETTES, MISCELLANEOUS_PALETTES, NATURE_PALETTES } from 'palettes';
+import {
+    ALL_PALETTES,
+    HOLIDAY_PALETTES,
+    MISCELLANEOUS_PALETTES,
+    NATURE_PALETTES,
+    SPORTS_PALETTES
+} from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
@@ -32,7 +38,8 @@ const EXPECTED_PALETTES: { palette: Palette }[] = [];
 EXPECTED_PALETTES.push(
     ...(getPaletteArray(HOLIDAY_PALETTES)),
     ...(getPaletteArray(MISCELLANEOUS_PALETTES)),
-    ...(getPaletteArray(NATURE_PALETTES))
+    ...(getPaletteArray(NATURE_PALETTES)),
+    ...(getPaletteArray(SPORTS_PALETTES))
 );
 
 describe('all palettes tests', (): void => {

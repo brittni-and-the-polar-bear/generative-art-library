@@ -15,9 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holiday';
-export * from './miscellaneous';
-export * from './nature';
-export * from './sports';
+// TODO - release notes
 
-export * from './palette-maps';
+import { StringMap } from 'map';
+import { Palette } from 'palette';
+
+/**
+ * A map of palette names to {@link Palette} objects for all sports palettes.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/sports/sports-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ *
+ * @category Palettes (Sports)
+ * @category Palette Collections
+ */
+export const SPORTS_PALETTES: StringMap<Palette> = new StringMap<Palette>();
