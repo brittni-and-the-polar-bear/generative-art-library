@@ -21,10 +21,10 @@ import { WHITE_LILY_PALETTE } from 'palettes';
 
 import { checkForValidPalette } from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'WHITE_LILY';
+const PALETTE_NAME: string = 'WHITE_LILY_PALETTE';
 
 // TODO - rename files
-describe('WHITE_LILY_PALETTE palette tests', (): void => {
+describe('WHITE_LILY_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_FAFBEF,
         PC_B1C69F,
@@ -33,7 +33,7 @@ describe('WHITE_LILY_PALETTE palette tests', (): void => {
         PC_AEAED6
     ];
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
+    test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(WHITE_LILY_PALETTE, expectedColors);
     });
 });
