@@ -39,7 +39,9 @@ import { ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES 
 export const GLITTER_PALETTE: Palette = {
     NAME: 'glitter',
 
-    SOURCE: 'https://culrs.com/palette/fce4ecf8bbd0f48fb1f06292ec407a',
+    SOURCE: 'culrs',
+
+    SOURCE_URL: 'https://culrs.com/palette/fce4ecf8bbd0f48fb1f06292ec407a',
 
     IS_GRADIENT: true,
 
