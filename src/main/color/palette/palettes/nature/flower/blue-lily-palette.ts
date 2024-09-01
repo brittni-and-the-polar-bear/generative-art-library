@@ -18,8 +18,7 @@
 import { Palette } from 'palette';
 import { Discriminators } from 'discriminator';
 import { PC_1D90AF, PC_3B2212, PC_7DCED8, PC_F0F3F4, PC_FAFEFF } from 'palette-colors';
-
-import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from '../../../palette-maps';
+import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from 'palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
