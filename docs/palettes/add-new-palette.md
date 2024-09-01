@@ -199,7 +199,7 @@ import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'BRITTNI_PALETTE';
 
-describe('BRITTNI_PALETTE palette tests', (): void => {
+describe('BRITTNI_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_121212,
         PC_0437F1,
@@ -208,7 +208,7 @@ describe('BRITTNI_PALETTE palette tests', (): void => {
         PC_FF6BB5
     ]
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
+    test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(BRITTNI_PALETTE, expectedColors);
     });
 });
