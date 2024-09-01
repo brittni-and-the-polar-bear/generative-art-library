@@ -29,7 +29,7 @@ import { checkForValidPalette } from 'unit-test/shared';
 
 const PALETTE_NAME: string = 'DALLAS_COWBOYS_PALETTE';
 
-describe('DALLAS_COWBOYS_PALETTE palette tests', (): void => {
+describe('DALLAS_COWBOYS_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
         PC_041E43,
         PC_869498,
@@ -38,7 +38,7 @@ describe('DALLAS_COWBOYS_PALETTE palette tests', (): void => {
         PC_003494
     ];
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
+    test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(DALLAS_COWBOYS_PALETTE, expectedColors);
     });
 });
