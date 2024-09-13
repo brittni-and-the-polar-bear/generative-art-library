@@ -21,10 +21,10 @@ import { Palette } from 'palette';
 /**
  * A map of palette names to {@link Palette} objects for all flowers palettes.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/nature/flower/flower-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/nature/flowers/flowers-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
  *
  * @category Palette Collections
- * @category Palettes (Nature/Flower)
+ * @category Palettes (Nature/Flowers)
  * @category Palettes (Nature)
  */
 export const FLOWER_PALETTES: StringMap<Palette> = new StringMap<Palette>();

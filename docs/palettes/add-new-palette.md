@@ -34,7 +34,9 @@
 
 [Step 11: Add the New Palette to the Palette Category Markdown Pages](#step-11-add-the-new-palette-to-the-palette-category-markdown-pages)
 
-[Step 12: Add Palette to the Release Notes](#step-12-add-palette-to-the-release-notes)
+[Step 12: Add Palette to the "All Palettes on One Page" Markdown Page](#step-12-add-palette-to-the-all-palettes-on-one-page-markdown-page)
+
+[Step 13: Add Palette to the Release Notes](#step-13-add-palette-to-the-release-notes)
 
 [Full `PaletteColor` File Example](#full-palettecolor-file-example)
 
@@ -290,9 +292,9 @@ add a `@category` annotation for the `Palettes (Gradient)` category.
 
 # Step 11: Add the New Palette to the Palette Category Markdown Pages
 
-Add an entry to each applicable palette category markdown page for the new palette.
-This entry will include the Coolors Palette Widget, TypeScript example,
-and a link to the palette's source.
+Add an entry for the new palette to each applicable palette category markdown page.
+This entry should include the Coolors Palette Widget and a link to the palette's source.
+The TypeScript use example is optional.
 
 Be sure to add the new markdown section to the Table of Contents.
 
@@ -325,9 +327,27 @@ let name: string = CLASSIC_CHRISTMAS_PALETTE.NAME;
 
 # Step 12: Add Palette to the "All Palettes on One Page" Markdown Page
 
-<!-- TODO: Put in instructions -->
+Add an entry for the new palette to the "All Palettes on One Page" markdown page.
+This entry should include the Coolors Palette Widget and a link to the palette's source.
 
-# Step 12: Add Palette to the Release Notes
+## All Palettes Entry Example
+
+```markdown
+### [classic christmas](./holiday/christmas/christmas-palettes.md#classic-christmas)
+
+palette source:
+<a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">coolors</a>
+
+<!-- Coolors Palette Widget -->
+<script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"],"classic christmas"); </script>
+<br/>
+
+[Table of Contents](#table-of-contents)
+```
+
+[Table of Contents](#table-of-contents)
+
+# Step 13: Add Palette to the Release Notes
 
 Add the palette as a new constant to the release notes draft markdown file.
 

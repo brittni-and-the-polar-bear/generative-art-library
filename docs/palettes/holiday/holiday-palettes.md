@@ -14,17 +14,17 @@ Palettes are in alphabetic order by category, then object name.
 
 # Table of Contents
 
-[Christmas Palettes](#christmas-palettes)
+[Christmas](#christmas)
   * [classic christmas](#classic-christmas)
 
-[Valentine's Day Palettes](#valentines-day-palettes)
+[Valentine's Day](#valentines-day)
   * [glitter](#glitter)
 
 [Fin.](#fin)
 
 ----
 
-# [Christmas Palettes](./christmas/christmas-palettes.md)
+# [Christmas](./christmas/christmas-palettes.md)
 
 ## [classic christmas](./christmas/christmas-palettes.md#classic-christmas)
 
@@ -39,7 +39,7 @@ palette source:
 
 ----
 
-# [Valentine's Day Palettes](./valentines-day/valentines-day-palettes.md)
+# [Valentine's Day](./valentines-day/valentines-day-palettes.md)
 
 ## [glitter](./valentines-day/valentines-day-palettes.md#glitter)
 

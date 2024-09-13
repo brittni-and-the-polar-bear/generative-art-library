@@ -31,7 +31,7 @@ import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from 'palette-maps';
  * @see {@link PC_1D90AF}
  * @see {@link PC_3B2212}
  *
- * @category Palettes (Nature/Flower)
+ * @category Palettes (Nature/Flowers)
  * @category Palettes (Nature)
  * @category Palettes (All)
  */
