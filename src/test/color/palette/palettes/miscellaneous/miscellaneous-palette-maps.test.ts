@@ -16,7 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import { BRITTNI_PALETTE, MISCELLANEOUS_PALETTES } from 'palettes';
+import { MISCELLANEOUS_PALETTES } from 'palette-maps';
+import { BRITTNI_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 

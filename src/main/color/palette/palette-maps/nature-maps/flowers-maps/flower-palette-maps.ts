@@ -27,4 +27,4 @@ import { Palette } from 'palette';
  * @category Palettes (Nature/Flowers)
  * @category Palettes (Nature)
  */
-export const FLOWER_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+export const FLOWERS_PALETTES: StringMap<Palette> = new StringMap<Palette>();

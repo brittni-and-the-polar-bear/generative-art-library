@@ -23,7 +23,7 @@ import {
     MISCELLANEOUS_PALETTES,
     NATURE_PALETTES,
     SPORTS_PALETTES
-} from 'palettes';
+} from 'palette-maps';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 

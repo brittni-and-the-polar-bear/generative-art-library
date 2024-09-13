@@ -16,7 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import { GLITTER_PALETTE, GRADIENT_PALETTES } from 'palettes';
+import { GRADIENT_PALETTES } from 'palette-maps';
+import { GLITTER_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 

@@ -16,7 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import { HOLIDAY_PALETTES, CLASSIC_CHRISTMAS_PALETTE, GLITTER_PALETTE } from 'palettes';
+import { HOLIDAY_PALETTES } from 'palette-maps';
+import { CLASSIC_CHRISTMAS_PALETTE, GLITTER_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 

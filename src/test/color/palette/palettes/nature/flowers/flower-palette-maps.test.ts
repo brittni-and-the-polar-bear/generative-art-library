@@ -16,7 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import { BLUE_LILY_PALETTE, FLOWER_PALETTES, WHITE_LILY_PALETTE } from 'palettes';
+import { FLOWERS_PALETTES } from 'palette-maps';
+import { BLUE_LILY_PALETTE, WHITE_LILY_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
@@ -29,14 +30,14 @@ const MAP_NAME: string = 'FLOWER_PALETTES';
 
 describe('flowers palette maps test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(FLOWER_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(FLOWERS_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
-            checkForPaletteInMap(palette, FLOWER_PALETTES);
+            checkForPaletteInMap(palette, FLOWERS_PALETTES);
         }
     );
 });

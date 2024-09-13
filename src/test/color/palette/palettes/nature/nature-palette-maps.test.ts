@@ -16,7 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import { BLUE_LILY_PALETTE, NATURE_PALETTES, WHITE_LILY_PALETTE } from 'palettes';
+import { NATURE_PALETTES } from 'palette-maps';
+import { BLUE_LILY_PALETTE, WHITE_LILY_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 

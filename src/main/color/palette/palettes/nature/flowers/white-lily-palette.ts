@@ -18,7 +18,7 @@
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
 import { PC_5F8661, PC_AEAED6, PC_B1C69F, PC_D6D6FF, PC_FAFBEF } from 'palette-colors';
-import { ALL_PALETTES, FLOWER_PALETTES, NATURE_PALETTES } from 'palette-maps';
+import { ALL_PALETTES, FLOWERS_PALETTES, NATURE_PALETTES } from 'palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -71,6 +71,6 @@ export const WHITE_LILY_PALETTE: Palette = {
     DISCRIMINATOR: Discriminators.PALETTE
 };
 
-FLOWER_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);
+FLOWERS_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);
 NATURE_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);
 ALL_PALETTES.setUndefinedKey(WHITE_LILY_PALETTE.NAME, WHITE_LILY_PALETTE);

@@ -16,10 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import {
-    DALLAS_COWBOYS_PALETTE,
-    SPORTS_PALETTES
-} from 'palettes';
+import { SPORTS_PALETTES } from 'palette-maps';
+import { DALLAS_COWBOYS_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 

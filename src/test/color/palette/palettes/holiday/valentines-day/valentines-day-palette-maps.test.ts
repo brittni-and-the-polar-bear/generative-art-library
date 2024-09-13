@@ -16,7 +16,8 @@
  */
 
 import { Palette } from 'palette';
-import { GLITTER_PALETTE, VALENTINES_PALETTES } from 'palettes';
+import { VALENTINES_PALETTES } from 'palette-maps';
+import { GLITTER_PALETTE } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
