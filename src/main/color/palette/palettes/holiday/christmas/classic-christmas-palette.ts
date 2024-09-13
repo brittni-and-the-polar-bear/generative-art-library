@@ -38,7 +38,9 @@ import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from 'palette-maps
 export const CLASSIC_CHRISTMAS_PALETTE: Palette = {
     NAME: 'classic christmas',
 
-    SOURCE: 'https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8',
+    SOURCE: 'coolors',
+
+    SOURCE_URL: 'https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8',
 
     IS_GRADIENT: false,
 
