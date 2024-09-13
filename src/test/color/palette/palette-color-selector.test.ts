@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -17,7 +17,7 @@
 
 import { Discriminators } from 'discriminator';
 import { Palette, PaletteColorSelector } from 'palette';
-import { _0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
 
 import {
     checkForValidColorSelector,
@@ -31,11 +31,11 @@ const TEST_PALETTE_A: Palette = {
     NAME: 'test A palette',
     SOURCE: 'test a source',
     COLORS: [
-        _7A00F5,
-        _121212,
-        _0437F1,
-        _FF6BB5,
-        _0FFF4F
+        PC_7A00F5,
+        PC_121212,
+        PC_0437F1,
+        PC_FF6BB5,
+        PC_0FFF4F
     ],
     CONTRAST_MAP: {
         '#000000': [],

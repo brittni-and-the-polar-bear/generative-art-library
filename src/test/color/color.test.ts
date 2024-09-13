@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2023-2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -19,7 +19,7 @@ import P5Lib from 'p5';
 
 import { Color } from 'color';
 import { SketchContext } from 'context';
-import { _0437F1, _0FFF4F, _7A00F5, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, PC_0FFF4F, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
 
 import {
     ColorComponents,
@@ -98,10 +98,10 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            { paletteColor: _0437F1 },
-            { paletteColor: _0FFF4F },
-            { paletteColor: _7A00F5 },
-            { paletteColor: _FF6BB5 }
+            { paletteColor: PC_0437F1 },
+            { paletteColor: PC_0FFF4F },
+            { paletteColor: PC_7A00F5 },
+            { paletteColor: PC_FF6BB5 }
         ]
     )('$# Color constructor with PaletteColor object: $paletteColor.HEX',
         ({ paletteColor }): void => {

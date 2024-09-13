@@ -17,8 +17,8 @@
       "map": ["./src/main/map"],
       "math": ["./src/main/math"],
       "palette": ["./src/main/color/palette"],
-      "palettes": ["./src/main/color/palette/palettes"],
       "palette-colors": ["./src/main/color/palette/palette-colors"],
+      "palettes": ["./src/main/color/palette/palettes"],
       "random": ["./src/main/random"],
       "unit-test/shared": ["./src/test/shared"]
     },

@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -41,6 +41,8 @@ export const BLACK_HEXES: HexCollection = [
 ];
 
 export const BLUE_HEXES: HexCollection = [
+    { hexString: '#003494' },
+    { hexString: '#041E43' },
     { hexString: '#0437F1' },
     { hexString: '#1D90AF' },
     { hexString: '#7DCED8' }
@@ -51,6 +53,8 @@ export const BROWN_HEXES: HexCollection = [
 ];
 
 export const GRAY_HEXES: HexCollection = [
+    { hexString: '#7E9594' },
+    { hexString: '#869498' },
     { hexString: '#F0F3F4' }
 ];
 
@@ -86,5 +90,6 @@ export const RED_HEXES: HexCollection = [
 export const WHITE_HEXES: HexCollection = [
     { hexString: '#FAFBEF' },
     { hexString: '#FAFEFF' },
-    { hexString: '#FBF9F9' }
+    { hexString: '#FBF9F9' },
+    { hexString: '#FFFFFF' }
 ];

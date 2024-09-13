@@ -4,19 +4,32 @@
 
 ----
 
+## [All Palettes on One Page](./all-palettes_one-page.md)
+
+----
+
 ## [Gradient Palettes](./gradient-palettes.md)
 
 ----
 
-## [Holiday Palettes](./holiday/holiday-palettes.md)
-  * ### [Christmas Palettes](./holiday/christmas/christmas-palettes.md)
-  * ### [Valentine's Day Palettes](./holiday/valentines-day/valentines-day-palettes.md)
+## [Holidays Palettes](./holidays/holidays-palettes.md)
+  * ### [Christmas Palettes](./holidays/christmas/christmas-palettes.md)
+  * ### [Valentine's Day Palettes](./holidays/valentines-day/valentines-day-palettes.md)
 
 ## [Miscellaneous Palettes](./miscellaneous/miscellaneous-palettes.md)
 
 ## [Nature Palettes](./nature/nature-palettes.md)
-  * ### [Flower Palettes](./nature/flower/flower-palettes.md)
+  * ### [Flowers Palettes](nature/flowers/flowers-palettes.md)
+
+## [Sports Palettes](./sports/sports-palettes.md)
+  * ### [Football Palettes](./sports/football/football-palettes.md)
 
 ----
 
-Fin.
+### [Potential Palettes](./potential-palettes.md)
+
+----
+
+### Fin.
+
+[Top](#all-palettes)

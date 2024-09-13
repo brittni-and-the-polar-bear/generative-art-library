@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -45,13 +45,16 @@ function checkForValidContrastMap(palette: Palette): void {
     expect(palette.CONTRAST_MAP).toBeTruthy();
 
     if (palette.CONTRAST_MAP) {
-        if (!validHexes.includes('#000000')) {
+        if (!validHexes.includes('#000000') && !validHexes.includes('#FFFFFF')) {
             expect(palette.CONTRAST_MAP['#FFFFFF']).not.toContain('#000000');
+            expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
+        }
+
+        if (!validHexes.includes('#000000')) {
             validHexes.push('#000000');
         }
 
         if (!validHexes.includes('#FFFFFF')) {
-            expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
             validHexes.push('#FFFFFF');
         }
 

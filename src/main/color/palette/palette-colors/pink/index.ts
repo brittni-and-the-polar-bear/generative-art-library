@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -15,9 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './ec417a';
-export * from './f06090';
-export * from './f490b1';
-export * from './f8b9ce';
-export * from './fce3ec';
-export * from './ff6bb5';
+export * from './pc-ec417a';
+export * from './pc-f06090';
+export * from './pc-f490b1';
+export * from './pc-f8b9ce';
+export * from './pc-fce3ec';
+export * from './pc-ff6bb5';

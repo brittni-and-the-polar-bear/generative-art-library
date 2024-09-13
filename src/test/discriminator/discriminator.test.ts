@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -17,7 +17,7 @@
 
 import { Discriminator, Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
-import { _0FFF4F } from 'palette-colors';
+import { PC_0FFF4F } from 'palette-colors';
 
 describe('discriminator tests', (): void => {
     describe('discriminator tests: isPaletteColor', (): void => {
@@ -59,7 +59,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('PaletteColor discriminator method: PaletteColor', (): void => {
-            expect(Discriminator.isPaletteColor(_0FFF4F)).toBeTruthy();
+            expect(Discriminator.isPaletteColor(PC_0FFF4F)).toBeTruthy();
         });
 
         test('PaletteColor discriminator method: Fake PaletteColor', (): void => {

@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -21,6 +21,7 @@ import { PaletteColor } from './palette-color';
 
 /**
  * A collection of {@link PaletteColor} objects.
+ *
  * @category Palette
  */
 export interface Palette {
@@ -30,9 +31,14 @@ export interface Palette {
     readonly NAME: string;
 
     /**
-     * The source of the palette. May be the URL where the palette can be found.
+     * The source of the palette.
      */
     readonly SOURCE?: string;
+
+    /**
+     * The source URL of the palette.
+     */
+    readonly SOURCE_URL?: string;
 
     /**
      * A flag indicating if the palette is a gradient.

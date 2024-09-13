@@ -55,6 +55,13 @@ Color block links redirect to [White Colors by Hex](./white-colors-by-hex.md) en
     <h2 class="color-block black-pass">polar bear in a blizzard (#FAFEFF)</h2>
   </a>
 </div>
+
+<!-- luminance: 1.0 -->
+<div class="color-block" style="background: #FFFFFF;">
+  <a href="./white-colors-by-hex.html#white-ffffff">
+    <h2 class="color-block black-pass">white (#FFFFFF)</h2>
+  </a>
+</div>
 <br/> <!-- only after last entry -->
 
 ----
