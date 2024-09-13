@@ -47,9 +47,9 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_121212} from 'palette-colors';
+import { PC_121212 } from 'palette-colors';
 
-let name: string = _121212.NAME;
+let name: string = PC_121212.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

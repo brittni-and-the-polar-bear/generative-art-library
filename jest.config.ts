@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2023-2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -31,8 +31,8 @@ const config: JestConfigWithTsJest = {
         '^map$': '<rootDir>/src/main/map',
         '^math$': '<rootDir>/src/main/math',
         '^palette$': '<rootDir>/src/main/color/palette',
-        '^palettes$': '<rootDir>/src/main/color/palette/palettes',
         '^palette-colors$': '<rootDir>/src/main/color/palette/palette-colors',
+        '^palettes$': '<rootDir>/src/main/color/palette/palettes',
         '^random$': '<rootDir>/src/main/random',
         '^unit-test/shared$': '<rootDir>/src/test/shared'
     },

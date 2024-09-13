@@ -37,6 +37,8 @@ Color block links redirect to
 
 [cartoon violence (#D01625)](#cartoon-violence-d01625)
 
+[Fin.](#fin)
+
 ----
 
 # bird's eye (#BC010A)
@@ -49,9 +51,9 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_BC010A} from 'palette-colors';
+import { PC_BC010A } from 'palette-colors';
 
-let name: string = _BC010A.NAME;
+let name: string = PC_BC010A.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -66,13 +68,15 @@ let name: string = _BC010A.NAME;
 <br/>
 
 ````typescript
-import {_D01625} from 'palette-colors';
+import { PC_D01625 } from 'palette-colors';
 
-let name: string = _D01625.NAME;
+let name: string = PC_D01625.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

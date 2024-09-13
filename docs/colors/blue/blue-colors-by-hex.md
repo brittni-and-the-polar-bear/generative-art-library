@@ -33,13 +33,53 @@ Color block links redirect to
 
 # Table of Contents
 
+[smalt (#003494)](#smalt-003494)
+
+[midnight mirage (#041E43)](#midnight-mirage-041e43)
+
 [blue bouquet (#0437F1)](#blue-bouquet-0437f1)
 
 [mediterranean sea (#1D90AF)](#mediterranean-sea-1d90af)
 
 [spray (#7DCED8)](#spray-7dced8)
 
+[Fin.](#fin)
+
 ----
+
+# smalt (#003494)
+
+<div class="color-block" style="background: #003494;">
+  <a href="https://coolors.co/003494" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">smalt (#003494)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import { PC_003494 } from 'palette-colors';
+
+let name: string = PC_003494.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# midnight mirage (#041E43)
+
+<div class="color-block" style="background: #041E43;">
+  <a href="https://coolors.co/041e43" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">midnight mirage (#041E43)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import { PC_041E43 } from 'palette-colors';
+
+let name: string = PC_041E43.NAME;
+````
+
+[Table of Contents](#table-of-contents)
 
 # blue bouquet (#0437F1)
 
@@ -51,9 +91,9 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_0437F1} from 'palette-colors';
+import { PC_0437F1 } from 'palette-colors';
 
-let name: string = _0437F1.NAME;
+let name: string = PC_0437F1.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -68,9 +108,9 @@ let name: string = _0437F1.NAME;
 <br/>
 
 ````typescript
-import {_1D90AF} from 'palette-colors';
+import { PC_1D90AF } from 'palette-colors';
 
-let name: string = _1D90AF.NAME;
+let name: string = PC_1D90AF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -85,13 +125,15 @@ let name: string = _1D90AF.NAME;
 <br/>
 
 ````typescript
-import {_7DCED8} from 'palette-colors';
+import { PC_7DCED8 } from 'palette-colors';
 
-let name: string = _7DCED8.NAME;
+let name: string = PC_7DCED8.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

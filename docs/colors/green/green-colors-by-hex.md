@@ -57,9 +57,9 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import { _007058 } from 'palette-colors';
+import { PC_007058 } from 'palette-colors';
 
-let name: string = _007058.NAME;
+let name: string = PC_007058.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -74,9 +74,9 @@ let name: string = _007058.NAME;
 <br/>
 
 ````typescript
-import { _0FFF4F } from 'palette-colors';
+import { PC_0FFF4F } from 'palette-colors';
 
-let name: string = _0FFF4F.NAME;
+let name: string = PC_0FFF4F.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -91,9 +91,9 @@ let name: string = _0FFF4F.NAME;
 <br/>
 
 ````typescript
-import { _23856D } from 'palette-colors';
+import { PC_23856D } from 'palette-colors';
 
-let name: string = _23856D.NAME;
+let name: string = PC_23856D.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -108,8 +108,9 @@ let name: string = _23856D.NAME;
 <br/>
 
 ```typescript
-import { _5F8661 } from 'palette-colors';
-let name: string = _5F8661.NAME;
+import { PC_5F8661 } from 'palette-colors';
+
+let name: string = PC_5F8661.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -124,9 +125,9 @@ let name: string = _5F8661.NAME;
 <br/>
 
 ````typescript
-import { _B1C69F } from 'palette-colors';
+import { PC_B1C69F } from 'palette-colors';
 
-let name: string = _B1C69F.NAME;
+let name: string = PC_B1C69F.NAME;
 ````
 
 [Table of Contents](#table-of-contents)

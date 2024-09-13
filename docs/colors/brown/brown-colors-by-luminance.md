@@ -31,6 +31,8 @@ Color block links redirect to [Brown Colors by Hex](./brown-colors-by-hex.md) en
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.021175342 -->
@@ -43,4 +45,6 @@ Color block links redirect to [Brown Colors by Hex](./brown-colors-by-hex.md) en
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#brown-colors-by-luminance)

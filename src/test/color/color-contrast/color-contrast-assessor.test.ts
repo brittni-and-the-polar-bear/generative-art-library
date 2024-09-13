@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -20,39 +20,39 @@ import P5Lib from 'p5';
 import { Color } from 'color';
 import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
 import { SketchContext } from 'context';
-import { _0437F1, _0FFF4F, _121212, _FF6BB5 } from 'palette-colors';
+import { PC_0437F1, PC_0FFF4F, PC_121212, PC_FF6BB5 } from 'palette-colors';
 
 describe('color contrast assessor tests', (): void => {
     const p5: P5Lib = SketchContext.p5;
 
     test.each([
         {
-            colorA: new Color(_0437F1),
-            colorB: new Color(_0437F1),
+            colorA: new Color(PC_0437F1),
+            colorB: new Color(PC_0437F1),
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
             AAA_large: false
         },
         {
-            colorA: new Color(_0437F1),
-            colorB: new Color(_0FFF4F),
+            colorA: new Color(PC_0437F1),
+            colorB: new Color(PC_0FFF4F),
             AA_normal: true,
             AA_large: true,
             AAA_normal: false,
             AAA_large: true
         },
         {
-            colorA: new Color(_0437F1),
-            colorB: new Color(_121212),
+            colorA: new Color(PC_0437F1),
+            colorB: new Color(PC_121212),
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
             AAA_large: false
         },
         {
-            colorA: new Color(_FF6BB5),
-            colorB: new Color(_121212),
+            colorA: new Color(PC_FF6BB5),
+            colorB: new Color(PC_121212),
             AA_normal: true,
             AA_large: true,
             AAA_normal: true,
@@ -162,32 +162,32 @@ describe('color contrast assessor tests', (): void => {
 
     test.each([
         {
-            colorA: _0437F1,
-            colorB: _0437F1,
+            colorA: PC_0437F1,
+            colorB: PC_0437F1,
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
             AAA_large: false
         },
         {
-            colorA: _0437F1,
-            colorB: _0FFF4F,
+            colorA: PC_0437F1,
+            colorB: PC_0FFF4F,
             AA_normal: true,
             AA_large: true,
             AAA_normal: false,
             AAA_large: true
         },
         {
-            colorA: _0437F1,
-            colorB: _121212,
+            colorA: PC_0437F1,
+            colorB: PC_121212,
             AA_normal: false,
             AA_large: false,
             AAA_normal: false,
             AAA_large: false
         },
         {
-            colorA: _FF6BB5,
-            colorB: _121212,
+            colorA: PC_FF6BB5,
+            colorB: PC_121212,
             AA_normal: true,
             AA_large: true,
             AAA_normal: true,

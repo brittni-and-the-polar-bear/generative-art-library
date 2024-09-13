@@ -10,7 +10,7 @@
 
 [Step 4: Create the `Palette` Object](#step-4-create-the-palette-object)
   * [Step 4, Part A: Set Palette Name](#step-4-part-a-set-palette-name)
-  * [Step 4, Part B: Set Palette Source](#step-4-part-b-set-palette-source)
+  * [Step 4, Part B: Set Palette Sources](#step-4-part-b-set-palette-sources)
   * [Step 4, Part C: Set the `IS_GRADIENT` Flag](#step-4-part-c-set-the-is_gradient-flag)
   * [Step 4, Part D: Set the `DISCRIMINATOR` Property](#step-4-part-d-set-the-discriminator-property)
   * [Step 4, Part E: Set the Colors](#step-4-part-e-set-the-colors)
@@ -22,7 +22,7 @@
 
 [Step 7: Add the New Palette to the Palette Unit Tests](#step-7-add-the-new-palette-to-the-palette-unit-tests)
 
-[Step 8: Add the New Palette to the Palette Category Unit Tests](#step-8-add-the-new-palette-to-the-palette-category-unit-tests)
+[Step 8: Add the New Palette to the Palette Map Unit Tests](#step-8-add-the-new-palette-to-the-palette-map-unit-tests)
 
 [Step 9: Run the ALL_PALETTES Unit Test](#step-9-run-the-all_palettes-unit-test)
 
@@ -32,9 +32,11 @@
   * [Step 10, Part C: Add the `@see` Annotation to Each `PaletteColor`](#step-10-part-c-add-the-see-annotation-to-each-palettecolor)
   * [Step 10, Part D: Add the `@category` Annotations](#step-10-part-d-add-the-category-annotations)
 
-[Step 11: Add the New Palette to the Palette Category Markdown Page](#step-11-add-the-new-palette-to-the-palette-category-markdown-page)
+[Step 11: Add the New Palette to the Palette Category Markdown Pages](#step-11-add-the-new-palette-to-the-palette-category-markdown-pages)
 
-[Step 12: Add Palette to the Release Notes](#step-12-add-palette-to-the-release-notes)
+[Step 12: Add Palette to the "All Palettes on One Page" Markdown Page](#step-12-add-palette-to-the-all-palettes-on-one-page-markdown-page)
+
+[Step 13: Add Palette to the Release Notes](#step-13-add-palette-to-the-release-notes)
 
 [Full `PaletteColor` File Example](#full-palettecolor-file-example)
 
@@ -56,6 +58,8 @@ Valid Categories:
 * miscellaneous
 * nature
   * flower
+* sports
+  * football
 
 [Table of Contents](#table-of-contents)
 
@@ -64,17 +68,21 @@ Valid Categories:
 The directory of the color file will be `/src/main/color/palette/palettes/<category>`.
 Each nested category will be its own directory (e.g. `holiday/christmas`).
 
-The filename of the palette file will be the name of the palette with all lowercase letters.
+The filename of the palette file will be the name of the palette with all lowercase letters, followed by `-palette`.
 Separate words using a dash (`-`) character.
 
 If there is already a file with that name, a palette with that name already exists in the library.
 Verify that the palette does not already exist in the library, and use a new name for the new palette if it does not exist.
 
-**Example:** `/src/main/color/palette/palettes/miscellaneous/brittni.ts`
+**Example:** `/src/main/color/palette/palettes/miscellaneous/brittni-palette.ts`
 
 [Table of Contents](#table-of-contents)
 
 # Step 4: Create the `Palette` Object
+
+The object name of the palette should have all capital letters and end with `_PALETTE`.
+
+**Example:** `BRITTNI_PALETTE`
 
 ## Step 4, Part A: Set Palette Name
 
@@ -83,13 +91,13 @@ The `NAME` property should be in all lowercase letters.<br/>
 
 [Table of Contents](#table-of-contents)
 
-## Step 4, Part B: Set Palette Source
+## Step 4, Part B: Set Palette Sources
 
-The `SOURCE` property is an optional property.
+The `SOURCE` and `SOURCE_URL` properties are an optional properties.
 
 The palette source should be a string describing the original source of the palette colors.
 
-If the palette was inspired by or taken from a website, the `SOURCE` property should be the URL of the website.
+If the palette was inspired by or taken from a website, the `SOURCE_URL` property should be the URL of the website.
 
 [Table of Contents](#table-of-contents)
 
@@ -185,35 +193,35 @@ Run the unit test to ensure that it passes.
 ## Individual Palette Unit Test Example
 
 ```typescript
-import {PaletteColor} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
-import {BRITTNI} from 'palettes';
+import { PaletteColor } from 'palette';
+import { PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
+import { BRITTNI_PALETTE } from 'palettes';
 
-import {checkForValidPalette} from 'unit-test/shared';
+import { checkForValidPalette } from 'unit-test/shared';
 
-const PALETTE_NAME: string = 'BRITTNI';
+const PALETTE_NAME: string = 'BRITTNI_PALETTE';
 
-describe('BRITTNI palette tests', (): void => {
+describe('BRITTNI_PALETTE tests', (): void => {
     const expectedColors: PaletteColor[] = [
-        _121212,
-        _0437F1,
-        _0FFF4F,
-        _7A00F5,
-        _FF6BB5
+        PC_121212,
+        PC_0437F1,
+        PC_0FFF4F,
+        PC_7A00F5,
+        PC_FF6BB5
     ]
 
-    test(`${PALETTE_NAME} palette is valid`, (): void => {
-        checkForValidPalette(BRITTNI, expectedColors);
+    test(`${PALETTE_NAME} is valid`, (): void => {
+        checkForValidPalette(BRITTNI_PALETTE, expectedColors);
     });
 });
 ```
 
 [Table of Contents](#table-of-contents)
 
-# Step 8: Add the New Palette to the Palette Category Unit Tests
+# Step 8: Add the New Palette to the Palette Map Unit Tests
 
-Add the new palette to the `EXPECTED_PALETTES` list in each category unit test.
-Run each category unit test to ensure that they pass.
+Add the new palette to the `EXPECTED_PALETTES` list in each applicable palette map unit test.
+Run each palette map unit test to ensure that they pass.
 
 If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
 add the new palette to the `EXPECTED_PALETTES` list in the gradient palettes unit test.
@@ -223,9 +231,9 @@ Run the unit test to ensure that it passes.
 
 # Step 9: Run the ALL_PALETTES Unit Test
 
-Run the unit test for the `ALL_PALETTES` palette map (`/src/test/color/palette/palettes/all-palettes.test.ts`).
+Run the unit test for the `ALL_PALETTES` palette map (`/src/test/color/palette/palette-maps/all-palettes.test.ts`).
 
-If the "all palettes are unique" test fails, the new palettes color combination already exists in the library or a palette with the same name already exists in the library.
+If the "all palettes are unique" test fails, the new palette's color combination already exists in the library or a palette with the same name already exists in the library.
 
 The colors in your palette may exist in a palette under a different name or in a different category.
 
@@ -249,6 +257,7 @@ Paste the HTML at the top of the palette documentation.
 ### Coolors Palette Widget Example
 
 ```html
+<!--suppress JSUnresolvedLibraryURL -->
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
@@ -260,7 +269,7 @@ Paste the HTML at the top of the palette documentation.
 
 Add a `@see` annotation with a `@link` for every `PaletteColor` object in the palette.
 
-**Example:** `@see {@link _121212}`
+**Example:** `@see {@link PC_121212}`
 
 [Table of Contents](#table-of-contents)
 
@@ -268,7 +277,7 @@ Add a `@see` annotation with a `@link` for every `PaletteColor` object in the pa
 
 Add a `@see` annotation with a `@link` to the palette in documentation of every `PaletteColor` object in the palette.
 
-**Example:** `@see {@link BRITTNI}`
+**Example:** `@see {@link BRITTNI_PALETTE}`
 
 [Table of Contents](#table-of-contents)
 
@@ -281,14 +290,13 @@ add a `@category` annotation for the `Palettes (Gradient)` category.
 
 [Table of Contents](#table-of-contents)
 
-# Step 11: Add the New Palette to the Palette Category Markdown Page
+# Step 11: Add the New Palette to the Palette Category Markdown Pages
 
-Add an entry to the correct palette category markdown page for the new palette.
-This entry will include the Coolors Palette Widget and TypeScript example.
+Add an entry for the new palette to each applicable palette category markdown page.
+This entry should include the Coolors Palette Widget and a link to the palette's source.
+The TypeScript use example is optional.
 
 Be sure to add the new markdown section to the Table of Contents.
-
-The palette should only be added to one category markdown file, preferably the most specific category.
 
 If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
 add an entry for the new palette to the gradient palettes markdown page.
@@ -296,17 +304,20 @@ add an entry for the new palette to the gradient palettes markdown page.
 ## Palette Category Entry Example
 
 ````markdown
-# brittni
+<!--suppress JSUnresolvedLibraryURL -->
+# classic christmas
+
+<a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">palette source: coolors</a>
 
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
-<script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
+<script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"],"classic christmas"); </script>
 <br/>
 
 ```typescript
-import {BRITTNI} from 'palettes';
+import {CLASSIC_CHRISTMAS_PALETTE} from 'palettes';
 
-let name: string = BRITTNI.NAME;
+let name: string = CLASSIC_CHRISTMAS_PALETTE.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -314,14 +325,37 @@ let name: string = BRITTNI.NAME;
 
 [Table of Contents](#table-of-contents)
 
-# Step 12: Add Palette to the Release Notes
+# Step 12: Add Palette to the "All Palettes on One Page" Markdown Page
+
+Add an entry for the new palette to the "All Palettes on One Page" markdown page.
+This entry should include the Coolors Palette Widget and a link to the palette's source.
+
+## All Palettes Entry Example
+
+```markdown
+### [classic christmas](./holidays/christmas/christmas-palettes.md#classic-christmas)
+
+palette source:
+<a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">coolors</a>
+
+<!-- Coolors Palette Widget -->
+<script data-id="048851888975141655">new CoolorsPaletteWidget("048851888975141655", ["bc010a","d01625","007058","23856d","fbf9f9"],"classic christmas"); </script>
+<br/>
+
+[Table of Contents](#table-of-contents)
+```
+
+[Table of Contents](#table-of-contents)
+
+# Step 13: Add Palette to the Release Notes
 
 Add the palette as a new constant to the release notes draft markdown file.
 
 ## Release Notes Entry Example
 
 ````markdown
-## `BRITTNI`
+<!--suppress JSUnresolvedLibraryURL -->
+## `BRITTNI_PALETTE`
 
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
@@ -334,16 +368,16 @@ Add the palette as a new constant to the release notes draft markdown file.
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
  * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
- * @see {@link _121212}
- * @see {@link _0437F1}
- * @see {@link _0FFF4F}
- * @see {@link _7A00F5}
- * @see {@link _FF6BB5}
+ * @see {@link PC_121212}
+ * @see {@link PC_0437F1}
+ * @see {@link PC_0FFF4F}
+ * @see {@link PC_7A00F5}
+ * @see {@link PC_FF6BB5}
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
  */
-declare const BRITTNI: Palette;
+declare const BRITTNI_PALETTE: Palette;
 ```
 ````
 
@@ -354,7 +388,7 @@ declare const BRITTNI: Palette;
 ```typescript
 import {Discriminators} from 'discriminator';
 import {Palette} from 'palette';
-import {_0437F1, _0FFF4F, _121212, _7A00F5, _FF6BB5} from 'palette-colors';
+import {PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5} from 'palette-colors';
 
 import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
 
@@ -363,26 +397,26 @@ import {ALL_PALETTES, MISCELLANEOUS_PALETTES} from '../palette-maps';
  * <script src="https://coolors.co/palette-widget/widget.js"></script>
  * <script data-id="031196377224963245">new CoolorsPaletteWidget("031196377224963245", ["121212","0437f1","0fff4f","7a00f5","ff6bb5"]); </script>
  *
- * @see {@link _121212}
- * @see {@link _0437F1}
- * @see {@link _0FFF4F}
- * @see {@link _7A00F5}
- * @see {@link _FF6BB5}
+ * @see {@link PC_121212}
+ * @see {@link PC_0437F1}
+ * @see {@link PC_0FFF4F}
+ * @see {@link PC_7A00F5}
+ * @see {@link PC_FF6BB5}
  *
  * @category Palettes (All)
  * @category Palettes (Miscellaneous)
  */
-export const BRITTNI: Palette = {
+export const BRITTNI_PALETTE: Palette = {
     NAME: 'brittni',
 
     IS_GRADIENT: false,
 
     COLORS: [
-        _121212,
-        _0437F1,
-        _0FFF4F,
-        _7A00F5,
-        _FF6BB5
+        PC_121212,
+        PC_0437F1,
+        PC_0FFF4F,
+        PC_7A00F5,
+        PC_FF6BB5
     ],
 
     CONTRAST_MAP: {
@@ -398,8 +432,8 @@ export const BRITTNI: Palette = {
     DISCRIMINATOR: Discriminators.PALETTE
 };
 
-ALL_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
-MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI.NAME, BRITTNI);
+ALL_PALETTES.setUndefinedKey(BRITTNI_PALETTE.NAME, BRITTNI_PALETTE);
+MISCELLANEOUS_PALETTES.setUndefinedKey(BRITTNI_PALETTE.NAME, BRITTNI_PALETTE);
 ```
 
 [Table of Contents](#table-of-contents)

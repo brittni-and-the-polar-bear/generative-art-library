@@ -31,6 +31,8 @@ Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entr
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
 
 <!-- luminance: 0.230186012 -->
@@ -78,4 +80,6 @@ Color block links redirect to [Pink Colors by Hex](./pink-colors-by-hex.md) entr
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#pink-colors-by-luminance)

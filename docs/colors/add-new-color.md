@@ -49,11 +49,11 @@ Valid Categories:
 
 The directory of the color file will be `/src/main/color/palette/palette-colors/<category>`.
 
-The filename of the color file will be the hex value of the color with all lowercase letters.
+The filename of the color file will be `pc-` followed by the hex value of the color, with all lowercase letters.
 
 If there is already a file with that hex value name, the color already exists in the library and does not need to be added.
 
-**Example:** `/src/main/color/palette/palette-colors/red/bc010a.ts`
+**Example:** `/src/main/color/palette/palette-colors/red/pc-bc010a.ts`
 
 [Table of Contents](#table-of-contents)
 
@@ -61,8 +61,8 @@ If there is already a file with that hex value name, the color already exists in
 
 The object will be a `const` object.
 
-The object name will be an underscore followed by the color hex value with all uppercase letters.<br/>
-**Example:** `_BC010A`
+The object name will be `PC_` followed by the color hex value with all uppercase letters.<br/>
+**Example:** `PC_BC010A`
 
 The object type will be `PaletteColor`.
 
@@ -174,8 +174,9 @@ Be sure to add the new markdown section to the Table of Contents.
 <br/>
 
 ```typescript
-import { _BC010A } from 'palette-colors';
-let name: string = _BC010A.NAME;
+import { PC_BC010A } from 'palette-colors';
+
+let name: string = PC_BC010A.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -211,7 +212,7 @@ Add the color as a new constant to the release notes draft markdown file.
 ## Release Notes Entry Example
 
 ````markdown
-## `_BC010A` (bird's eye)
+## `PC_BC010A` (bird's eye)
 
 <div class="color-block" style="background: #BC010A;">
   <a href="https://coolors.co/bc010a" target="_blank" rel="noopener noreferrer">
@@ -233,8 +234,10 @@ Add the color as a new constant to the release notes draft markdown file.
  *
  * @source
  */
-declare const _BC010A: PaletteColor;
+declare const PC_BC010A: PaletteColor;
 ```
+
+[Table of Contents](#table-of-contents)
 ````
 
 [Table of Contents](#table-of-contents)
@@ -260,7 +263,7 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @source
  */
-export const _BC010A: PaletteColor = {
+export const PC_BC010A: PaletteColor = {
     HEX: '#BC010A',
     RGB: {R: 188, G: 1, B: 10},
     HSL: {H: 357, S: 99, L: 37},
@@ -268,9 +271,9 @@ export const _BC010A: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 }
 
-RED_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
-ALL_PALETTE_COLORS.setUndefinedKey(_BC010A.HEX, _BC010A);
-ColorNameManager.addColor(_BC010A);
+RED_PALETTE_COLORS.setUndefinedKey(PC_BC010A.HEX, PC_BC010A);
+ALL_PALETTE_COLORS.setUndefinedKey(PC_BC010A.HEX, PC_BC010A);
+ColorNameManager.addColor(PC_BC010A);
 ```
 
 [Table of Contents](#table-of-contents)

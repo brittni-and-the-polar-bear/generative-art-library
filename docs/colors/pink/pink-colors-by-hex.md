@@ -45,6 +45,8 @@ Color block links redirect to
 
 [fen hong pink (#FF6BB5)](#fen-hong-pink-ff6bb5)
 
+[Fin.](#fin)
+
 ----
 
 # radishical (#EC417A)
@@ -57,8 +59,9 @@ Color block links redirect to
 <br/>
 
 ```typescript
-import {_EC417A} from 'palette-colors';
-let name: string = _EC417A.NAME;
+import { PC_EC417A } from 'palette-colors';
+
+let name: string = PC_EC417A.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -73,8 +76,9 @@ let name: string = _EC417A.NAME;
 <br/>
 
 ```typescript
-import {_F06090} from 'palette-colors';
-let name: string = _F06090.NAME;
+import { PC_F06090 } from 'palette-colors';
+
+let name: string = PC_F06090.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -89,8 +93,9 @@ let name: string = _F06090.NAME;
 <br/>
 
 ```typescript
-import {_F490B1} from 'palette-colors';
-let name: string = _F490B1.NAME;
+import { PC_F490B1 } from 'palette-colors';
+
+let name: string = PC_F490B1.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -105,8 +110,9 @@ let name: string = _F490B1.NAME;
 <br/>
 
 ```typescript
-import {_F8B9CE} from 'palette-colors';
-let name: string = _F8B9CE.NAME;
+import { PC_F8B9CE } from 'palette-colors';
+
+let name: string = PC_F8B9CE.NAME;
 ```
 
 [Table of Contents](#table-of-contents)
@@ -121,9 +127,9 @@ let name: string = _F8B9CE.NAME;
 <br/>
 
 ````typescript
-import {_FCE3EC} from 'palette-colors';
+import { PC_FCE3EC } from 'palette-colors';
 
-let name: string = _FCE3EC.NAME;
+let name: string = PC_FCE3EC.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -138,13 +144,15 @@ let name: string = _FCE3EC.NAME;
 <br/>
 
 ````typescript
-import {_FF6BB5} from 'palette-colors';
+import { PC_FF6BB5 } from 'palette-colors';
 
-let name: string = _FF6BB5.NAME;
+let name: string = PC_FF6BB5.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

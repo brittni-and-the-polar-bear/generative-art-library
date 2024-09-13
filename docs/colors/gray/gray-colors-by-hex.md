@@ -33,9 +33,47 @@ Color block links redirect to
 
 # Table of Contents
 
+[green granite (#7E9594)](#green-granite-7e9594)
+
+[carrier pigeon blue (#869498)](#carrier-pigeon-blue-869498)
+
 [zappy zebra (#F0F3F4))](#zappy-zebra-f0f3f4)
 
+[Fin.](#fin)
+
 ----
+
+# green granite (#7E9594)
+
+<div class="color-block" style="background: #7E9594;">
+  <a href="https://coolors.co/7e9594" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">green granite (#7E9594)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+import { PC_7E9594 } from 'palette-colors';
+let name: string = PC_7E9594.NAME;
+```
+
+[Table of Contents](#table-of-contents)
+
+# carrier pigeon blue (#869498)
+
+<div class="color-block" style="background: #869498;">
+  <a href="https://coolors.co/869498" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">carrier pigeon blue (#869498)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+import { PC_869498 } from 'palette-colors';
+let name: string = PC_869498.NAME;
+```
+
+[Table of Contents](#table-of-contents)
 
 # zappy zebra (#F0F3F4)
 
@@ -47,13 +85,15 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_F0F3F4} from 'palette-colors';
+import { PC_F0F3F4 } from 'palette-colors';
 
-let name: string = _F0F3F4.NAME;
+let name: string = PC_F0F3F4.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
 
 ----
 
-Fin.
+### Fin.
+
+[Table of Contents](#table-of-contents)

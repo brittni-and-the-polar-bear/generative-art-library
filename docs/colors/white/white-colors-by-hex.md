@@ -39,6 +39,8 @@ Color block links redirect to
 
 [doctor white (#FBF9F9)](#doctor-white-fbf9f9)
 
+[white (#FFFFFF)](#white-ffffff)
+
 [Fin.](#fin)
 
 ----
@@ -53,9 +55,9 @@ Color block links redirect to
 <br/>
 
 ````typescript
-import {_FAFBEF} from 'palette-colors';
+import { PC_FAFBEF } from 'palette-colors';
 
-let name: string = _FAFBEF.NAME;
+let name: string = PC_FAFBEF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -70,9 +72,9 @@ let name: string = _FAFBEF.NAME;
 <br/>
 
 ````typescript
-import {_FAFEFF} from 'palette-colors';
+import { PC_FAFEFF } from 'palette-colors';
 
-let name: string = _FAFEFF.NAME;
+let name: string = PC_FAFEFF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
@@ -87,9 +89,26 @@ let name: string = _FAFEFF.NAME;
 <br/>
 
 ````typescript
-import {_FBF9F9} from 'palette-colors';
+import { PC_FBF9F9 } from 'palette-colors';
 
-let name: string = _FBF9F9.NAME;
+let name: string = PC_FBF9F9.NAME;
+````
+
+[Table of Contents](#table-of-contents)
+
+# white (#FFFFFF)
+
+<div class="color-block" style="background: #FFFFFF;">
+  <a href="https://coolors.co/ffffff" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">white (#FFFFFF)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import { PC_FFFFFF } from 'palette-colors';
+
+let name: string = PC_FFFFFF.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
