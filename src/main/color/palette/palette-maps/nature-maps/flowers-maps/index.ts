@@ -15,4 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './flower-palette-maps';
+export * from './flowers-palette-maps';

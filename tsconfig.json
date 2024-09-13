@@ -18,7 +18,6 @@
       "math": ["./src/main/math"],
       "palette": ["./src/main/color/palette"],
       "palette-colors": ["./src/main/color/palette/palette-colors"],
-      "palette-maps": ["./src/main/color/palette/palette-maps"],
       "palettes": ["./src/main/color/palette/palettes"],
       "random": ["./src/main/random"],
       "unit-test/shared": ["./src/test/shared"]

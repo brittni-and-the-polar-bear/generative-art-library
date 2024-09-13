@@ -31,8 +31,8 @@ const config: JestConfigWithTsJest = {
         '^map$': '<rootDir>/src/main/map',
         '^math$': '<rootDir>/src/main/math',
         '^palette$': '<rootDir>/src/main/color/palette',
-        '^palettes$': '<rootDir>/src/main/color/palette/palettes',
         '^palette-colors$': '<rootDir>/src/main/color/palette/palette-colors',
+        '^palettes$': '<rootDir>/src/main/color/palette/palettes',
         '^random$': '<rootDir>/src/main/random',
         '^unit-test/shared$': '<rootDir>/src/test/shared'
     },

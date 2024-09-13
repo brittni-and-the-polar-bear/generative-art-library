@@ -18,7 +18,8 @@
 import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
 import { PC_0437F1, PC_0FFF4F, PC_121212, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
-import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from 'palette-maps';
+
+import { ALL_PALETTES, MISCELLANEOUS_PALETTES } from '../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->

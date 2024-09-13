@@ -16,28 +16,27 @@
  */
 
 import { Palette } from 'palette';
-import { GRADIENT_PALETTES } from 'palette-maps';
-import { GLITTER_PALETTE } from 'palettes';
+import { BLUE_LILY_PALETTE, WHITE_LILY_PALETTE, FLOWERS_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: GLITTER_PALETTE }
+    { palette: BLUE_LILY_PALETTE },
+    { palette: WHITE_LILY_PALETTE }
 ];
 
-const MAP_NAME: string = 'GRADIENT_PALETTES';
+const MAP_NAME: string = 'FLOWERS_PALETTES';
 
-describe('gradient palettes map test', (): void => {
+describe('flowers palette maps test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(GRADIENT_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(FLOWERS_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
-            checkForPaletteInMap(palette, GRADIENT_PALETTES);
-            expect(palette.IS_GRADIENT).toBeTruthy();
+            checkForPaletteInMap(palette, FLOWERS_PALETTES);
         }
     );
 });

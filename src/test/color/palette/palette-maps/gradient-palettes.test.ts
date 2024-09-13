@@ -16,27 +16,27 @@
  */
 
 import { Palette } from 'palette';
-import { SPORTS_PALETTES } from 'palette-maps';
-import { DALLAS_COWBOYS_PALETTE } from 'palettes';
+import { GLITTER_PALETTE, GRADIENT_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: DALLAS_COWBOYS_PALETTE }
+    { palette: GLITTER_PALETTE }
 ];
 
-const MAP_NAME: string = 'SPORTS_PALETTES';
+const MAP_NAME: string = 'GRADIENT_PALETTES';
 
-describe('sports palette maps test', (): void => {
+describe('gradient palettes map test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(SPORTS_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(GRADIENT_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
-            checkForPaletteInMap(palette, SPORTS_PALETTES);
+            checkForPaletteInMap(palette, GRADIENT_PALETTES);
+            expect(palette.IS_GRADIENT).toBeTruthy();
         }
     );
 });

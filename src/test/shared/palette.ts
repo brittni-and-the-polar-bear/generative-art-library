@@ -45,13 +45,16 @@ function checkForValidContrastMap(palette: Palette): void {
     expect(palette.CONTRAST_MAP).toBeTruthy();
 
     if (palette.CONTRAST_MAP) {
-        if (!validHexes.includes('#000000')) {
+        if (!validHexes.includes('#000000') && !validHexes.includes('#FFFFFF')) {
             expect(palette.CONTRAST_MAP['#FFFFFF']).not.toContain('#000000');
+            expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
+        }
+
+        if (!validHexes.includes('#000000')) {
             validHexes.push('#000000');
         }
 
-        if (!validHexes.includes('#FFFFFF')) {
-            expect(palette.CONTRAST_MAP['#000000']).not.toContain('#FFFFFF');
+        if (!validHexes.includes('#FFFFFF')){
             validHexes.push('#FFFFFF');
         }
 

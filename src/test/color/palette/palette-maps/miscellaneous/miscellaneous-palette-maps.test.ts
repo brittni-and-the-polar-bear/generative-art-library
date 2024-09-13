@@ -16,28 +16,26 @@
  */
 
 import { Palette } from 'palette';
-import { FLOWERS_PALETTES } from 'palette-maps';
-import { BLUE_LILY_PALETTE, WHITE_LILY_PALETTE } from 'palettes';
+import { BRITTNI_PALETTE, MISCELLANEOUS_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: BLUE_LILY_PALETTE },
-    { palette: WHITE_LILY_PALETTE }
+    { palette: BRITTNI_PALETTE }
 ];
 
-const MAP_NAME: string = 'FLOWER_PALETTES';
+const MAP_NAME: string = 'MISCELLANEOUS_PALETTES';
 
-describe('flowers palette maps test', (): void => {
+describe('miscellaneous palette maps test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(FLOWERS_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(MISCELLANEOUS_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
-            checkForPaletteInMap(palette, FLOWERS_PALETTES);
+            checkForPaletteInMap(palette, MISCELLANEOUS_PALETTES);
         }
     );
 });

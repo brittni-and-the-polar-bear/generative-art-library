@@ -16,27 +16,26 @@
  */
 
 import { Palette } from 'palette';
-import { MISCELLANEOUS_PALETTES } from 'palette-maps';
-import { BRITTNI_PALETTE } from 'palettes';
+import { DALLAS_COWBOYS_PALETTE, SPORTS_PALETTES } from 'palettes';
 
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette: BRITTNI_PALETTE }
+    { palette: DALLAS_COWBOYS_PALETTE }
 ];
 
-const MAP_NAME: string = 'MISCELLANEOUS_PALETTES';
+const MAP_NAME: string = 'SPORTS_PALETTES';
 
-describe('miscellaneous palette maps test', (): void => {
+describe('sports palette maps test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
-        checkForValidStringMap(MISCELLANEOUS_PALETTES, EXPECTED_PALETTES.length);
+        checkForValidStringMap(SPORTS_PALETTES, EXPECTED_PALETTES.length);
     });
 
     test.each(
         EXPECTED_PALETTES
     )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
         ({ palette }): void => {
-            checkForPaletteInMap(palette, MISCELLANEOUS_PALETTES);
+            checkForPaletteInMap(palette, SPORTS_PALETTES);
         }
     );
 });
