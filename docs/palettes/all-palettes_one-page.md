@@ -8,7 +8,7 @@
 
 # Table of Contents
 
-[Holiday](#holiday)
+[Holidays](#holidays)
   * [Christmas](#christmas)
   * [Valentine's Day](#valentines-day)
 
@@ -24,7 +24,7 @@
 
 ----
 
-# Holiday
+# Holidays
 
 ## Christmas
 

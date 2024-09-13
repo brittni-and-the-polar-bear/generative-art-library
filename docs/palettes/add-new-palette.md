@@ -22,7 +22,7 @@
 
 [Step 7: Add the New Palette to the Palette Unit Tests](#step-7-add-the-new-palette-to-the-palette-unit-tests)
 
-[Step 8: Add the New Palette to the Palette Category Unit Tests](#step-8-add-the-new-palette-to-the-palette-category-unit-tests)
+[Step 8: Add the New Palette to the Palette Map Unit Tests](#step-8-add-the-new-palette-to-the-palette-map-unit-tests)
 
 [Step 9: Run the ALL_PALETTES Unit Test](#step-9-run-the-all_palettes-unit-test)
 
@@ -218,10 +218,10 @@ describe('BRITTNI_PALETTE tests', (): void => {
 
 [Table of Contents](#table-of-contents)
 
-# Step 8: Add the New Palette to the Palette Category Unit Tests
+# Step 8: Add the New Palette to the Palette Map Unit Tests
 
-Add the new palette to the `EXPECTED_PALETTES` list in each category unit test.
-Run each category unit test to ensure that they pass.
+Add the new palette to the `EXPECTED_PALETTES` list in each applicable palette map unit test.
+Run each palette map unit test to ensure that they pass.
 
 If the palette is a gradient (i.e. the `IS_GRADIENT` property is set to `true`),
 add the new palette to the `EXPECTED_PALETTES` list in the gradient palettes unit test.
@@ -231,9 +231,9 @@ Run the unit test to ensure that it passes.
 
 # Step 9: Run the ALL_PALETTES Unit Test
 
-Run the unit test for the `ALL_PALETTES` palette map (`/src/test/color/palette/palettes/all-palettes.test.ts`).
+Run the unit test for the `ALL_PALETTES` palette map (`/src/test/color/palette/palette-maps/all-palettes.test.ts`).
 
-If the "all palettes are unique" test fails, the new palettes color combination already exists in the library or a palette with the same name already exists in the library.
+If the "all palettes are unique" test fails, the new palette's color combination already exists in the library or a palette with the same name already exists in the library.
 
 The colors in your palette may exist in a palette under a different name or in a different category.
 
