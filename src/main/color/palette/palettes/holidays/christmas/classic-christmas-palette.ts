@@ -19,7 +19,7 @@ import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
 import { PC_007058, PC_23856D, PC_BC010A, PC_D01625, PC_FBF9F9 } from 'palette-colors';
 
-import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../../palette-maps';
+import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAYS_PALETTES } from '../../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -92,5 +92,5 @@ export const CLASSIC_CHRISTMAS_PALETTE: Palette = {
 };
 
 CHRISTMAS_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS_PALETTE.NAME, CLASSIC_CHRISTMAS_PALETTE);
-HOLIDAY_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS_PALETTE.NAME, CLASSIC_CHRISTMAS_PALETTE);
+HOLIDAYS_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS_PALETTE.NAME, CLASSIC_CHRISTMAS_PALETTE);
 ALL_PALETTES.setUndefinedKey(CLASSIC_CHRISTMAS_PALETTE.NAME, CLASSIC_CHRISTMAS_PALETTE);

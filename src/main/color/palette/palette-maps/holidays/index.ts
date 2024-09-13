@@ -18,4 +18,4 @@
 export * from './christmas';
 export * from './valentines-day';
 
-export * from './holiday-palette-maps';
+export * from './holidays-palette-maps';

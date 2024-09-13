@@ -19,11 +19,11 @@ import { StringMap } from 'map';
 import { Palette } from 'palette';
 
 /**
- * A map of palette names to {@link Palette} objects for all holiday palettes.
+ * A map of palette names to {@link Palette} objects for all holidays palettes.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/holiday/holiday-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/holidays/holidays-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
  *
  * @category Palette Collections
  * @category Palettes (Holidays)
  */
-export const HOLIDAY_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+export const HOLIDAYS_PALETTES: StringMap<Palette> = new StringMap<Palette>();

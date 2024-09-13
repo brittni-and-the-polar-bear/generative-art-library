@@ -19,7 +19,7 @@ import { StringMap } from 'map';
 import { Palette, PaletteColor } from 'palette';
 import {
     ALL_PALETTES,
-    HOLIDAY_PALETTES,
+    HOLIDAYS_PALETTES,
     MISCELLANEOUS_PALETTES,
     NATURE_PALETTES,
     SPORTS_PALETTES
@@ -36,7 +36,7 @@ function getPaletteArray(map: StringMap<Palette>): { palette: Palette }[] {
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [];
 EXPECTED_PALETTES.push(
-    ...(getPaletteArray(HOLIDAY_PALETTES)),
+    ...(getPaletteArray(HOLIDAYS_PALETTES)),
     ...(getPaletteArray(MISCELLANEOUS_PALETTES)),
     ...(getPaletteArray(NATURE_PALETTES)),
     ...(getPaletteArray(SPORTS_PALETTES))

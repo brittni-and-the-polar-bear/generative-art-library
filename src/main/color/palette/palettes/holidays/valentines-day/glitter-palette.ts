@@ -19,7 +19,7 @@ import { Discriminators } from 'discriminator';
 import { Palette } from 'palette';
 import { PC_EC417A, PC_F06090, PC_F490B1, PC_F8B9CE, PC_FCE3EC } from 'palette-colors';
 
-import { ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES } from '../../../palette-maps';
+import { ALL_PALETTES, GRADIENT_PALETTES, HOLIDAYS_PALETTES, VALENTINES_PALETTES } from '../../../palette-maps';
 
 /**
  * <!-- Coolors Palette Widget -->
@@ -74,7 +74,7 @@ export const GLITTER_PALETTE: Palette = {
 };
 
 VALENTINES_PALETTES.setUndefinedKey(GLITTER_PALETTE.NAME, GLITTER_PALETTE);
-HOLIDAY_PALETTES.setUndefinedKey(GLITTER_PALETTE.NAME, GLITTER_PALETTE);
+HOLIDAYS_PALETTES.setUndefinedKey(GLITTER_PALETTE.NAME, GLITTER_PALETTE);
 ALL_PALETTES.setUndefinedKey(GLITTER_PALETTE.NAME, GLITTER_PALETTE);
 
 GRADIENT_PALETTES.setUndefinedKey(GLITTER_PALETTE.NAME, GLITTER_PALETTE);
