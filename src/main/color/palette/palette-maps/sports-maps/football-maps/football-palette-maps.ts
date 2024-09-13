@@ -15,8 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - release notes
-
 import { StringMap } from 'map';
 import { Palette } from 'palette';
 
