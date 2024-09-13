@@ -27,7 +27,7 @@ const EXPECTED_PALETTES: { palette: Palette }[] = [
 
 const MAP_NAME: string = 'FLOWER_PALETTES';
 
-describe('flower palette maps test', (): void => {
+describe('flowers palette maps test', (): void => {
     test(`valid string map: ${MAP_NAME}`, (): void => {
         checkForValidStringMap(FLOWER_PALETTES, EXPECTED_PALETTES.length);
     });

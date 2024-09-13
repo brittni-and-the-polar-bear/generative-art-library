@@ -2,7 +2,7 @@
 <!-- Coolors Palette Widget (Script) -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 
-# Flower Palettes
+# Flowers Palettes
 
 Palettes are in alphabetic order by object name.
 
@@ -40,6 +40,8 @@ let name: string = BLUE_LILY_PALETTE.NAME;
 ````
 
 [Table of Contents](#table-of-contents)
+
+----
 
 # white lily
 

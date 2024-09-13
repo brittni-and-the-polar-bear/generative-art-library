@@ -19,7 +19,7 @@
 ## [Miscellaneous Palettes](./miscellaneous/miscellaneous-palettes.md)
 
 ## [Nature Palettes](./nature/nature-palettes.md)
-  * ### [Flower Palettes](./nature/flower/flower-palettes.md)
+  * ### [Flowers Palettes](nature/flowers/flowers-palettes.md)
 
 ## [Sports Palettes](./sports/sports-palettes.md)
   * ### [Football Palettes](./sports/football/football-palettes.md)

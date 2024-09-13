@@ -20,7 +20,7 @@ Palettes are in alphabetic order by category, then object name.
 
 ----
 
-## brittni
+# brittni
 
 palette source:
 <a href="https://github.com/blwatkins" target="_blank" rel="noopener noreferrer">brittni watkins</a>

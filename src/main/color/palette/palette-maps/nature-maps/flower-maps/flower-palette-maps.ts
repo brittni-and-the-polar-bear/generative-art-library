@@ -19,7 +19,7 @@ import { StringMap } from 'map';
 import { Palette } from 'palette';
 
 /**
- * A map of palette names to {@link Palette} objects for all flower palettes.
+ * A map of palette names to {@link Palette} objects for all flowers palettes.
  *
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/nature/flower/flower-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
  *

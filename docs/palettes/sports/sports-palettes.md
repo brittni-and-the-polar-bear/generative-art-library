@@ -14,16 +14,16 @@ Palettes are in alphabetic order by category, then object name.
 
 # Table of Contents
 
-[Football Palettes](#football-palettes)
+[Football](#football)
   * [dallas cowboys](#dallas-cowboys)
 
 [Fin.](#fin)
 
 ----
 
-# [Football Palettes](./football/football-palettes.md)
+# [Football](./football/football-palettes.md)
 
-## dallas cowboys
+## [dallas cowboys](./football/football-palettes.md#dallas-cowboys)
 
 palette source:
 <a href="https://teamcolorcodes.com/dallas-cowboys-color-codes/" target="_blank" rel="noopener noreferrer">TEAM COLOR CODES - Dallas Cowboys Color Codes</a>

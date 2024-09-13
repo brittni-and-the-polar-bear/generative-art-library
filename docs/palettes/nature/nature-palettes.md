@@ -14,7 +14,7 @@ Palettes are in alphabetic order by category, then object name.
 
 # Table of Contents
 
-[Flower Palettes](#flower-palettes)
+[Flowers](#flowers)
   * [blue lily](#blue-lily)
   * [white lily](#white-lily)
 
@@ -22,9 +22,9 @@ Palettes are in alphabetic order by category, then object name.
 
 ----
 
-# [Flower Palettes](./flower/flower-palettes.md)
+# [Flowers](./flowers/flowers-palettes.md)
 
-## blue lily
+## [blue lily](./flowers/flowers-palettes.md#blue-lily)
 
 palette source:
 <a href="https://www.color-hex.com/color-palette/1040636" target="_blank" rel="noopener noreferrer">color-hex (user: winxxed)</a>
@@ -35,7 +35,7 @@ palette source:
 
 [Table of Contents](#table-of-contents)
 
-## white lily
+## [white lily](./flowers/flowers-palettes.md#white-lily)
 
 palette source:
 <a href="https://www.color-hex.com/color-palette/1039504" target="_blank" rel="noopener noreferrer">color-hex (user: adamcesco)</a>
