@@ -54,7 +54,7 @@ function checkForValidContrastMap(palette: Palette): void {
             validHexes.push('#000000');
         }
 
-        if (!validHexes.includes('#FFFFFF')){
+        if (!validHexes.includes('#FFFFFF')) {
             validHexes.push('#FFFFFF');
         }
 
