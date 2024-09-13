@@ -32,8 +32,8 @@ import { ALL_PALETTES, GRADIENT_PALETTES, HOLIDAY_PALETTES, VALENTINES_PALETTES 
  * @see {@link PC_F06090}
  * @see {@link PC_EC417A}
  *
- * @category Palettes (Holiday/Valentine's Day)
- * @category Palettes (Holiday)
+ * @category Palettes (Holidays/Valentine's Day)
+ * @category Palettes (Holidays)
  * @category Palettes (Gradient)
  * @category Palettes (All)
  */

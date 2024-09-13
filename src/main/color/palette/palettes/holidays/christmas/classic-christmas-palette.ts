@@ -32,8 +32,8 @@ import { ALL_PALETTES, CHRISTMAS_PALETTES, HOLIDAY_PALETTES } from '../../../pal
  * @see {@link PC_23856D}
  * @see {@link PC_FBF9F9}
  *
- * @category Palettes (Holiday/Christmas)
- * @category Palettes (Holiday)
+ * @category Palettes (Holidays/Christmas)
+ * @category Palettes (Holidays)
  * @category Palettes (All)
  */
 export const CLASSIC_CHRISTMAS_PALETTE: Palette = {
