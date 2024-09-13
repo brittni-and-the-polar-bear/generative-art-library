@@ -15,15 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { StringMap } from 'map';
-import { Palette } from 'palette';
+export * from './football';
 
-/**
- * A map of palette names to {@link Palette} objects for all Holiday palettes.
- *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/holiday/holiday-palettes.html" target="_blank" rel="noopener noreferrer">See the Palettes</a>
- *
- * @category Palette Collections
- * @category Palettes (Holiday)
- */
-export const HOLIDAY_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+export * from './sports-palette-maps';

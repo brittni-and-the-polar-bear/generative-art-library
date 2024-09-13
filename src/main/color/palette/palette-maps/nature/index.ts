@@ -15,6 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './flowers-maps';
+export * from './flowers';
 
 export * from './nature-palette-maps';
