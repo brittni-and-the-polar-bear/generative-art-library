@@ -12,9 +12,9 @@
 
 ----
 
-## [Holiday Palettes](./holiday/holiday-palettes.md)
-  * ### [Christmas Palettes](./holiday/christmas/christmas-palettes.md)
-  * ### [Valentine's Day Palettes](./holiday/valentines-day/valentines-day-palettes.md)
+## [Holiday Palettes](./holidays/holidays-palettes.md)
+  * ### [Christmas Palettes](./holidays/christmas/christmas-palettes.md)
+  * ### [Valentine's Day Palettes](./holidays/valentines-day/valentines-day-palettes.md)
 
 ## [Miscellaneous Palettes](./miscellaneous/miscellaneous-palettes.md)
 

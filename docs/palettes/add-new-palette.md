@@ -333,7 +333,7 @@ This entry should include the Coolors Palette Widget and a link to the palette's
 ## All Palettes Entry Example
 
 ```markdown
-### [classic christmas](./holiday/christmas/christmas-palettes.md#classic-christmas)
+### [classic christmas](./holidays/christmas/christmas-palettes.md#classic-christmas)
 
 palette source:
 <a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">coolors</a>

@@ -6,7 +6,7 @@
 
 Palettes are in alphabetic order by object name.
 
-[Holiday Palettes](../holiday-palettes.md)
+[Holidays Palettes](../holidays-palettes.md)
 
 [All Palettes](../../all-palettes.md)
 

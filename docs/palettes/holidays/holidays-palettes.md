@@ -2,7 +2,7 @@
 <!-- Coolors Palette Widget -->
 <script src="https://coolors.co/palette-widget/widget.js"></script>
 
-# Holiday Palettes
+# Holidays Palettes
 
 Palettes are in alphabetic order by category, then object name.
 

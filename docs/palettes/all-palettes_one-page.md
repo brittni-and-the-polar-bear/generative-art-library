@@ -28,7 +28,7 @@
 
 ## Christmas
 
-### [classic christmas](./holiday/christmas/christmas-palettes.md#classic-christmas)
+### [classic christmas](./holidays/christmas/christmas-palettes.md#classic-christmas)
 
 palette source:
 <a href="https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8" target="_blank" rel="noopener noreferrer">coolors</a>
@@ -41,7 +41,7 @@ palette source:
 
 ## Valentine's Day
 
-### [glitter](./holiday/valentines-day/valentines-day-palettes.md#glitter)
+### [glitter](./holidays/valentines-day/valentines-day-palettes.md#glitter)
 
 palette source:
 <a href="https://culrs.com/palette/fce4ecf8bbd0f48fb1f06292ec407a" target="_blank" rel="noopener noreferrer">culrs</a>
