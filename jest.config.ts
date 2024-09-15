@@ -24,6 +24,7 @@ const config: JestConfigWithTsJest = {
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
+        '^canvas-context$': '<rootDir>/src/main/canvas',
         '^color$': '<rootDir>/src/main/color',
         '^color-contrast$': '<rootDir>/src/main/color/color-contrast',
         '^context$': '<rootDir>/src/main/p5',
