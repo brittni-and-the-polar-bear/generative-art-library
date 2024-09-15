@@ -28,20 +28,47 @@ import { ASPECT_RATIOS, AspectRatio, AspectRatioHandler } from './aspect-ratio';
  * @category Canvas Context
  */
 export class CanvasContext {
-    private static _activeCanvas: boolean = false;
+    /**
+     * When true, {@link buildCanvas} will not create a new canvas.
+     * @defaultValue false
+     */
+    private static _lockedCanvas: boolean = false
+
+    /**
+     * Is the canvas rendering mode set to WebGL?
+     * @defaultValue false
+     */
     private static _isWebGL: boolean = false;
+
+    /**
+     * Current {@link AspectRatio} of the canvas.
+     * @defaultValue {@link ASPECT_RATIOS.SQUARE}
+     */
     private static _aspectRatio: AspectRatio = ASPECT_RATIOS.SQUARE;
+
+    /**
+     * Current resolution of the canvas.
+     * @defaultValue 1080
+     */
     private static _resolution: number = 1080;
 
-    // TODO - unit test
-    // TODO - documentation
-    public static buildCanvas(aspectRatio: AspectRatio, resolution: number, canvasType?: string) {
-        if (!CanvasContext._activeCanvas) {
+    /**
+     * Build a p5 canvas with the given aspect ratio, resolution, and canvas type.
+     * If {@link CanvasContext.lockedCanvas} is `true`, no canvas will be built.
+     *
+     * @param aspectRatio
+     * @param resolution
+     * @param lockCanvas - When `true`, the canvas will be locked after it has been created.
+     * @param canvasType - can be WEBGL ("webgl") or P2D ("p2d")
+     */
+    public static buildCanvas(aspectRatio: AspectRatio, resolution: number, lockCanvas?: boolean, canvasType?: string) {
+        if (!CanvasContext.lockedCanvas) {
             CanvasContext._aspectRatio = aspectRatio;
             CanvasContext._resolution = resolution;
 
             const p5: P5Lib = SketchContext.p5;
-            const ratioHandler: AspectRatioHandler = new AspectRatioHandler(CanvasContext._aspectRatio, CanvasContext._resolution);
+            const ratioHandler: AspectRatioHandler =
+                new AspectRatioHandler(CanvasContext._aspectRatio, CanvasContext._resolution);
             const width: number = ratioHandler.width;
             const height: number = ratioHandler.height;
 
@@ -54,7 +81,10 @@ export class CanvasContext {
             }
 
             CanvasContext.decorateCanvas();
-            CanvasContext._activeCanvas = true;
+
+            if (lockCanvas) {
+                CanvasContext.lockedCanvas = true;
+            }
         }
     }
 
@@ -65,8 +95,25 @@ export class CanvasContext {
         return CanvasContext._isWebGL;
     }
 
-    // TODO - docs
+    /**
+     * When true, {@link buildCanvas} will not create a new canvas.
+     */
+    public static get lockedCanvas(): boolean {
+        return CanvasContext._lockedCanvas;
+    }
+
+    /**
+     * When true, {@link buildCanvas} will not create a new canvas.
+     * @param locked
+     */
+    public static set lockedCanvas(locked: boolean) {
+        CanvasContext._lockedCanvas = locked;
+    }
+
     // TODO - unit test
+    /**
+     * The maximum visible height of the sketch.
+     */
     public static get maxHeight(): number {
         const p5: P5Lib = SketchContext.p5;
         let max: number = p5.height;
@@ -78,8 +125,10 @@ export class CanvasContext {
         return max;
     }
 
-    // TODO - docs
     // TODO - unit tests
+    /**
+     * The maximum visible width of the sketch.
+     */
     public static get maxWidth(): number {
         const p5: P5Lib = SketchContext.p5;
         let max: number = p5.width;
@@ -91,8 +140,10 @@ export class CanvasContext {
         return max;
     }
 
-    // TODO - docs
     // TODO - unit tests
+    /**
+     * The minimum visible height of the sketch.
+     */
     public static get minHeight(): number {
         const p5: P5Lib = SketchContext.p5;
         let min: number = 0;
@@ -104,8 +155,10 @@ export class CanvasContext {
         return min;
     }
 
-    // TODO - docs
     // TODO - unit tests
+    /**
+     * The minimum visible width of the sketch.
+     */
     public static get minWidth(): number {
         const p5: P5Lib = SketchContext.p5;
         let min: number = 0;
@@ -118,21 +171,32 @@ export class CanvasContext {
     }
 
     // TODO - unit test
-    // TODO - docs
+    /**
+     * The default stroke of the sketch.
+     * Equivalent to a stroke of 1 in a 500x500 sketch.
+     */
     public static get defaultStroke(): number {
         const { p5 } = SketchContext;
         const maxDimension: number = Math.max(p5.width, p5.height);
         return maxDimension * 0.002;
     }
 
-    // TODO - documentation
-    // TODO - unit test?
+    /**
+     * Resizes the canvas and decorates the canvas with the appropriate
+     * updated attributes.
+     */
     public static resizeCanvas(): void {
         CanvasContext.decorateCanvas();
     }
 
-    // TODO - documentation
     // TODO - unit test
+    /**
+     * Update the current aspect ratio of the canvas to the given aspect ratio.
+     * This method will resize the canvas and decorates it with the appropriate
+     * updated attributes.
+     *
+     * @param aspectRatio
+     */
     public static updateAspectRatio(aspectRatio: AspectRatio): void {
         CanvasContext._aspectRatio = aspectRatio;
 
@@ -149,8 +213,10 @@ export class CanvasContext {
     //     // TODO - implement method
     // }
 
-    // TODO - documentation
-    // TODO - unit test
+    /**
+     * Decorates the canvas with the proper attributes according to current canvas
+     * size and aspect ratio and current browser window size.
+     */
     private static decorateCanvas(): void {
         const { p5 } = SketchContext;
         const canvas: P5Lib.Element | null = p5.select('canvas');

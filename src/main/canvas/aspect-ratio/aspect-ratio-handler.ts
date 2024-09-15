@@ -29,18 +29,7 @@ export class AspectRatioHandler {
         this._height = Math.floor(unit * aspectRatio.HEIGHT_RATIO);
     }
 
-    private calculateUnit(aspectRatio: AspectRatio, baseResolution: number): number {
-        return baseResolution / Math.min(aspectRatio.WIDTH_RATIO, aspectRatio.HEIGHT_RATIO);
-    }
-
-    public get width(): number {
-        return this._width;
-    }
-
-    public get height(): number {
-        return this._height;
-    }
-
+    // TODO - unit test, uses 1 when numbers are < 1
     public static buildAspectRatio(widthRatio: number, heightRatio: number, name?: string): AspectRatio {
         let ratioName: string;
 
@@ -55,5 +44,17 @@ export class AspectRatioHandler {
             WIDTH_RATIO: widthRatio,
             HEIGHT_RATIO: heightRatio
         };
+    }
+
+    private calculateUnit(aspectRatio: AspectRatio, baseResolution: number): number {
+        return baseResolution / Math.min(aspectRatio.WIDTH_RATIO, aspectRatio.HEIGHT_RATIO);
+    }
+
+    public get width(): number {
+        return this._width;
+    }
+
+    public get height(): number {
+        return this._height;
     }
 }
