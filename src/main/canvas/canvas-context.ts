@@ -83,7 +83,7 @@ export class CanvasContext {
             CanvasContext.decorateCanvas();
 
             if (lockCanvas) {
-                CanvasContext.lockedCanvas = true;
+                CanvasContext.lockCanvas();
             }
         }
     }
@@ -103,15 +103,6 @@ export class CanvasContext {
     }
 
     /**
-     * When true, {@link buildCanvas} will not create a new canvas.
-     * @param locked
-     */
-    public static set lockedCanvas(locked: boolean) {
-        CanvasContext._lockedCanvas = locked;
-    }
-
-    // TODO - unit test
-    /**
      * The maximum visible height of the sketch.
      */
     public static get maxHeight(): number {
@@ -125,7 +116,6 @@ export class CanvasContext {
         return max;
     }
 
-    // TODO - unit tests
     /**
      * The maximum visible width of the sketch.
      */
@@ -140,7 +130,6 @@ export class CanvasContext {
         return max;
     }
 
-    // TODO - unit tests
     /**
      * The minimum visible height of the sketch.
      */
@@ -155,7 +144,6 @@ export class CanvasContext {
         return min;
     }
 
-    // TODO - unit tests
     /**
      * The minimum visible width of the sketch.
      */
@@ -179,6 +167,20 @@ export class CanvasContext {
         const { p5 } = SketchContext;
         const maxDimension: number = Math.max(p5.width, p5.height);
         return maxDimension * 0.002;
+    }
+
+    /**
+     * Locks the canvas. After this is called, {@link buildCanvas} will not create a new canvas.
+     */
+    public static lockCanvas(): void {
+        CanvasContext._lockedCanvas = true;
+    }
+
+    /**
+     * Unlocks the canvas. After this is called, {@link buildCanvas} will create a new canvas.
+     */
+    public static unlockCanvas(): void {
+        CanvasContext._lockedCanvas = false;
     }
 
     /**

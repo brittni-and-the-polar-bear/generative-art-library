@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import P5Lib from "p5";
+import P5Lib from 'p5';
 
-import { AspectRatio, AspectRatioHandler, CanvasContext } from "canvas-context";
-import { SketchContext } from "context";
+import { AspectRatio, AspectRatioHandler, CanvasContext } from 'canvas-context';
+import { SketchContext } from 'context';
 
 describe('CanvasContext tests', (): void => {
     test.each(
@@ -46,7 +46,7 @@ describe('CanvasContext tests', (): void => {
         ({ widthRatio, heightRatio, resolution, expectedWidth, expectedHeight }): void => {
             const p5: P5Lib = SketchContext.p5;
             const aspectRatio: AspectRatio = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
-            CanvasContext.lockedCanvas = false;
+            CanvasContext.unlockCanvas()
             CanvasContext.buildCanvas(aspectRatio, resolution);
             expect(p5.width).toBe(expectedWidth);
             expect(p5.height).toBe(expectedHeight);
@@ -62,6 +62,7 @@ describe('CanvasContext tests', (): void => {
         let expectedHeight = 720;
 
         let aspectRatio: AspectRatio = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
+        CanvasContext.unlockCanvas()
         CanvasContext.buildCanvas(aspectRatio, resolution, true);
         expect(p5.width).toBe(expectedWidth);
         expect(p5.height).toBe(expectedHeight);
@@ -72,7 +73,7 @@ describe('CanvasContext tests', (): void => {
         CanvasContext.buildCanvas(aspectRatio, resolution, false);
         expect(p5.width).toBe(expectedWidth);
         expect(p5.height).toBe(expectedHeight);
-        CanvasContext.lockedCanvas = false;
+        CanvasContext.unlockCanvas();
 
         widthRatio = 2;
         heightRatio = 3;
@@ -83,5 +84,41 @@ describe('CanvasContext tests', (): void => {
         CanvasContext.buildCanvas(aspectRatio, resolution, false);
         expect(p5.width).toBe(expectedWidth);
         expect(p5.height).toBe(expectedHeight);
+    });
+
+    test('CanvasContext.maxHeight and CanvasContext.minHeight properties', (): void => {
+        const multiplier: number = 2;
+        let resolution: number = 720;
+        let expectedMaxHeight: number = resolution * multiplier;
+        const expectedMinHeight: number = 0;
+        const aspectRatio = AspectRatioHandler.buildAspectRatio(1, multiplier);
+        CanvasContext.unlockCanvas();
+        CanvasContext.buildCanvas(aspectRatio, resolution);
+        expect(CanvasContext.minHeight).toBe(expectedMinHeight);
+        expect(CanvasContext.maxHeight).toBe(expectedMaxHeight);
+
+        resolution = 1080;
+        expectedMaxHeight = resolution * multiplier;
+        CanvasContext.buildCanvas(aspectRatio, resolution);
+        expect(CanvasContext.minHeight).toBe(expectedMinHeight);
+        expect(CanvasContext.maxHeight).toBe(expectedMaxHeight);
+    });
+
+    test('CanvasContext.maxWidth and CanvasContext.minWidth properties', (): void => {
+        const multiplier: number = 2.5;
+        let resolution: number = 720;
+        let expectedMaxWidth: number = resolution * multiplier;
+        const expectedMinWidth: number = 0;
+        const aspectRatio = AspectRatioHandler.buildAspectRatio(multiplier, 1);
+        CanvasContext.unlockCanvas();
+        CanvasContext.buildCanvas(aspectRatio, resolution);
+        expect(CanvasContext.minWidth).toBe(expectedMinWidth);
+        expect(CanvasContext.maxWidth).toBe(expectedMaxWidth);
+
+        resolution = 1080;
+        expectedMaxWidth = resolution * multiplier;
+        CanvasContext.buildCanvas(aspectRatio, resolution);
+        expect(CanvasContext.minWidth).toBe(expectedMinWidth);
+        expect(CanvasContext.maxWidth).toBe(expectedMaxWidth);
     });
 });
