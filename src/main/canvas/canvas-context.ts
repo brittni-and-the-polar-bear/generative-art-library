@@ -158,7 +158,6 @@ export class CanvasContext {
         return min;
     }
 
-    // TODO - unit test
     /**
      * The default stroke of the sketch.
      * Equivalent to a stroke of 1 in a 500x500 sketch.
@@ -191,7 +190,6 @@ export class CanvasContext {
         CanvasContext.decorateCanvas();
     }
 
-    // TODO - unit test
     /**
      * Update the current aspect ratio of the canvas to the given aspect ratio.
      * This method will resize the canvas and decorates it with the appropriate
