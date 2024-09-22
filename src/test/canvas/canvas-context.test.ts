@@ -63,7 +63,7 @@ describe('CanvasContext tests', (): void => {
         let expectedHeight: number = 720;
 
         let aspectRatio: AspectRatio = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
-        CanvasContext.unlockCanvas()
+        CanvasContext.unlockCanvas();
         CanvasContext.buildCanvas(aspectRatio, resolution, true);
         expect(p5.width).toBe(expectedWidth);
         expect(p5.height).toBe(expectedHeight);
@@ -168,6 +168,44 @@ describe('CanvasContext tests', (): void => {
         expectedHeight = 720;
         aspectRatio = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
         CanvasContext.updateAspectRatio(aspectRatio);
+        expect(p5.width).toBe(expectedWidth);
+        expect(p5.height).toBe(expectedHeight);
+    });
+
+    test('CanvasContext.updateResolution() method', (): void => {
+        const p5: P5Lib = SketchContext.p5;
+        let resolution: number = 720;
+        let widthRatio: number = 1;
+        let heightRatio: number = 1;
+        let expectedWidth: number = 720;
+        let expectedHeight: number = 720;
+        let aspectRatio: AspectRatio = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
+        CanvasContext.unlockCanvas();
+        CanvasContext.buildCanvas(aspectRatio, resolution);
+        expect(p5.width).toBe(expectedWidth);
+        expect(p5.height).toBe(expectedHeight);
+
+        resolution = 1080;
+        expectedWidth = 1080;
+        expectedHeight = 1080;
+        CanvasContext.updateResolution(resolution);
+        expect(p5.width).toBe(expectedWidth);
+        expect(p5.height).toBe(expectedHeight);
+
+        widthRatio = 4;
+        heightRatio = 3;
+        resolution = 720;
+        expectedWidth = 960;
+        expectedHeight = 720;
+        aspectRatio = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
+        CanvasContext.buildCanvas(aspectRatio, resolution);
+        expect(p5.width).toBe(expectedWidth);
+        expect(p5.height).toBe(expectedHeight);
+
+        resolution = 1080;
+        expectedWidth = 1440;
+        expectedHeight = 1080;
+        CanvasContext.updateResolution(resolution);
         expect(p5.width).toBe(expectedWidth);
         expect(p5.height).toBe(expectedHeight);
     });

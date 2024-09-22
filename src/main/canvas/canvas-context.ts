@@ -32,7 +32,7 @@ export class CanvasContext {
      * When true, {@link buildCanvas} will not create a new canvas.
      * @defaultValue false
      */
-    private static _lockedCanvas: boolean = false
+    private static _lockedCanvas: boolean = false;
 
     /**
      * Is the canvas rendering mode set to WebGL?
@@ -201,7 +201,9 @@ export class CanvasContext {
         CanvasContext._aspectRatio = aspectRatio;
 
         const { p5 } = SketchContext;
-        const ratioHandler: AspectRatioHandler = new AspectRatioHandler(CanvasContext._aspectRatio, CanvasContext._resolution);
+        const ratioHandler: AspectRatioHandler =
+            new AspectRatioHandler(CanvasContext._aspectRatio,
+                CanvasContext._resolution);
         const width: number = ratioHandler.width;
         const height: number = ratioHandler.height;
 
@@ -209,9 +211,25 @@ export class CanvasContext {
         CanvasContext.decorateCanvas();
     }
 
-    // public static updateResolution(resolution: number): void {
-    //     // TODO - implement method
-    // }
+    /**
+     * Update the current resolution of the canvas to the given resolution.
+     * This method will resize the canvas and decorates it with the appropriate
+     * updated attributes.
+     *
+     * @param resolution
+     */
+    public static updateResolution(resolution: number): void {
+        CanvasContext._resolution = resolution;
+        const { p5 } = SketchContext;
+        const ratioHandler: AspectRatioHandler =
+            new AspectRatioHandler(CanvasContext._aspectRatio,
+                CanvasContext._resolution);
+        const width: number = ratioHandler.width;
+        const height: number = ratioHandler.height;
+
+        p5.resizeCanvas(width, height);
+        CanvasContext.decorateCanvas();
+    }
 
     /**
      * Decorates the canvas with the proper attributes according to current canvas
