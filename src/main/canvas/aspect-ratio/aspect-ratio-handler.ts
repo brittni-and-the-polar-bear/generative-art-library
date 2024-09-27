@@ -35,10 +35,17 @@ export class AspectRatioHandler {
      */
     private readonly _height: number | undefined;
 
-    // TODO - docs
-    // TODO - unit test
+    /**
+     * @param aspectRatio - If the given {@link AspectRatio} object has a
+     * {@link AspectRatio.WIDTH_RATIO width ratio} less than one or a
+     * {@link AspectRatio.HEIGHT_RATIO height ratio} less than one,
+     * then {@link width} and {@link height} will both return 0.
+     *
+     * @param baseResolution - If this values is less than or equal to 0,
+     * {@link width} and {@link height} will both return 0.
+     */
     public constructor(aspectRatio: AspectRatio, baseResolution: number) {
-        if (aspectRatio.WIDTH_RATIO < 1 || aspectRatio.HEIGHT_RATIO < 1) {
+        if (aspectRatio.WIDTH_RATIO < 1 || aspectRatio.HEIGHT_RATIO < 1 || baseResolution <= 0) {
             this._width = undefined;
             this._height = undefined;
         } else {
@@ -84,7 +91,6 @@ export class AspectRatioHandler {
     }
 
     // TODO - docs
-    // TODO - unit test
     public get width(): number {
         let w: number = 0;
 
@@ -96,7 +102,6 @@ export class AspectRatioHandler {
     }
 
     // TODO - docs
-    // TODO - unit test
     public get height(): number {
         let h: number = 0;
 
