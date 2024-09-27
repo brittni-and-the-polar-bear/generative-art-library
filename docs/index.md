@@ -48,6 +48,6 @@ The full text of the license can be found in the package
 
 ----
 
-## [colors](./colors/all-colors.md)
+## [library colors](./colors/all-colors.md)
 
-## [palettes](./palettes/all-palettes.md)
+## [library palettes](./palettes/all-palettes_one-page.md)

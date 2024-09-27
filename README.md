@@ -15,6 +15,8 @@ This project is currently in active development.
 
 ## package stats
 
+----
+
 ### actions
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)
@@ -94,8 +96,8 @@ npm install @batpb/genart
 The source code of this project is licensed under the 
 [GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html). 
 The full text of the license can be found in the 
-[LICENSE file](https://github.com/brittni-and-the-polar-bear/generative-art-library/blob/main/LICENSE) 
-of the root directory.
+[LICENSE](https://github.com/brittni-and-the-polar-bear/generative-art-library/blob/main/LICENSE) 
+file in the root directory.
 
 ----
 
@@ -103,6 +105,6 @@ of the root directory.
 
 ----
 
-## [colors](https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html)
+## [library colors](https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html)
 
-## [palettes](https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/all-palettes.html)
+## [library palettes](https://brittni-and-the-polar-bear.github.io/generative-art-library/palettes/all-palettes_one-page.html)
