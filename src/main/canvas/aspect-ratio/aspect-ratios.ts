@@ -28,6 +28,11 @@ export const ASPECT_RATIOS: Record<string, AspectRatio> = {
         WIDTH_RATIO: 0,
         HEIGHT_RATIO: 0
     },
+    INITIAL: {
+      NAME: 'initial',
+      WIDTH_RATIO: 0,
+      HEIGHT_RATIO: 0
+    },
     SQUARE: {
         NAME: 'square',
         WIDTH_RATIO: 1,
