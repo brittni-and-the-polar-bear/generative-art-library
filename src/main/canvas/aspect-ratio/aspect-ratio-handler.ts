@@ -85,12 +85,18 @@ export class AspectRatioHandler {
         };
     }
 
-    // TODO - documentation
+    /**
+     * @param aspectRatio
+     * @param baseResolution
+     * @return The base unit for the canvas given the desired resolution.
+     */
     private calculateUnit(aspectRatio: AspectRatio, baseResolution: number): number {
         return baseResolution / Math.min(aspectRatio.WIDTH_RATIO, aspectRatio.HEIGHT_RATIO);
     }
 
-    // TODO - docs
+    /**
+     * The calculated canvas width.
+     */
     public get width(): number {
         let w: number = 0;
 
@@ -101,7 +107,9 @@ export class AspectRatioHandler {
         return w;
     }
 
-    // TODO - docs
+    /**
+     * The calculated canvas height.
+     */
     public get height(): number {
         let h: number = 0;
 
