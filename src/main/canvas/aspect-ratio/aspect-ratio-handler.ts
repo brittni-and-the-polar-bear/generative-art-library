@@ -17,20 +17,44 @@
 
 import { AspectRatio } from './aspect-ratio';
 
-// TODO - documentation
-// TODO - unit tests
+// TODO - add to release notes
+/**
+ * An AspectRatioHandler provides the proper width and height of a canvas
+ * given an {@link AspectRatio} and resolution.
+ *
+ * @category Canvas Context
+ */
 export class AspectRatioHandler {
-    private readonly _width: number;
-    private readonly _height: number;
+    /**
+     * The calculated canvas width.
+     */
+    private readonly _width: number | undefined;
 
+    /**
+     * The calculated canvas height.
+     */
+    private readonly _height: number | undefined;
+
+    // TODO - docs
+    // TODO - unit test
     public constructor(aspectRatio: AspectRatio, baseResolution: number) {
-        const unit: number = this.calculateUnit(aspectRatio, baseResolution);
-        this._width = Math.floor(unit * aspectRatio.WIDTH_RATIO);
-        this._height = Math.floor(unit * aspectRatio.HEIGHT_RATIO);
+        if (aspectRatio.WIDTH_RATIO < 1 || aspectRatio.HEIGHT_RATIO < 1) {
+            this._width = undefined;
+            this._height = undefined;
+        } else {
+            const unit: number = this.calculateUnit(aspectRatio, baseResolution);
+            this._width = Math.floor(unit * aspectRatio.WIDTH_RATIO);
+            this._height = Math.floor(unit * aspectRatio.HEIGHT_RATIO);
+        }
     }
 
-    // TODO - unit test, uses 1 when numbers are < 1
-    public static buildAspectRatio(widthRatio: number, heightRatio: number, name?: string): AspectRatio {
+    // TODO - docs
+    // TODO - unit test
+    public static buildAspectRatio(widthRatio: number, heightRatio: number, name?: string): AspectRatio | undefined {
+        if (widthRatio < 1 || heightRatio < 1) {
+            return undefined;
+        }
+
         let ratioName: string;
 
         if (name) {
@@ -46,15 +70,32 @@ export class AspectRatioHandler {
         };
     }
 
+    // TODO - documentation
     private calculateUnit(aspectRatio: AspectRatio, baseResolution: number): number {
         return baseResolution / Math.min(aspectRatio.WIDTH_RATIO, aspectRatio.HEIGHT_RATIO);
     }
 
+    // TODO - docs
+    // TODO - unit test
     public get width(): number {
-        return this._width;
+        let w: number = 0;
+
+        if (this._width) {
+            w = this._width;
+        }
+
+        return w;
     }
 
+    // TODO - docs
+    // TODO - unit test
     public get height(): number {
-        return this._height;
+        let h: number = 0;
+
+        if (this._height) {
+            h = this._height;
+        }
+
+        return h;
     }
 }
