@@ -48,9 +48,17 @@ export class AspectRatioHandler {
         }
     }
 
-    // TODO - docs
-    // TODO - unit test
-    public static buildAspectRatio(widthRatio: number, heightRatio: number, name?: string): AspectRatio | undefined {
+    /**
+     * Creates an {@link AspectRatio} object with the given width ratio, height ratio, and name.
+     *
+     * @param widthRatio - If this value is less than 1, this method will return `undefined`.
+     * @param heightRatio - If this value is less than 1, this method will return `undefined`.
+     * @param name - If this value is not specified, the name of the AspectRatio object will be
+     * derived from the {@link widthRatio} and {@link heightRatio} parameters.
+     */
+    public static buildAspectRatio(widthRatio: number,
+                                   heightRatio: number,
+                                   name?: string): AspectRatio | undefined {
         if (widthRatio < 1 || heightRatio < 1) {
             return undefined;
         }
