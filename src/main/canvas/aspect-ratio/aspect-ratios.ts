@@ -17,8 +17,12 @@
 
 import { AspectRatio } from './aspect-ratio';
 
-// TODO - docs
-// TODO - unit tests?
+// TODO - release notes
+/**
+ * Pre-set {@link AspectRatio} objects for easy access.
+ *
+ * @category Canvas Context
+ */
 export const ASPECT_RATIOS: Record<string, AspectRatio> = {
     MATCH: {
         NAME: 'match',
