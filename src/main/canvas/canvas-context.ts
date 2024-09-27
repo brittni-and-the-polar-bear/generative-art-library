@@ -105,6 +105,7 @@ export class CanvasContext {
         return CanvasContext._lockedCanvas;
     }
 
+    // TODO - rename maxY
     /**
      * The maximum visible height of the sketch.
      */
@@ -133,6 +134,7 @@ export class CanvasContext {
         return max;
     }
 
+    // TODO - rename minY
     /**
      * The minimum visible height of the sketch.
      */
@@ -246,6 +248,8 @@ export class CanvasContext {
     public static mapXPercentage(percentage: number): number {
         return SketchContext.p5.map(percentage, 0, 1, CanvasContext.minX, CanvasContext.maxX);
     }
+
+    // TODO - implement mapYPercentage method
 
     /**
      * Decorates the canvas with the proper attributes according to current canvas
