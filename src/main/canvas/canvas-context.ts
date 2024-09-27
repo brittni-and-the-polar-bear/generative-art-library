@@ -61,7 +61,10 @@ export class CanvasContext {
      * @param lockCanvas - When `true`, the canvas will be locked after it has been created.
      * @param canvasType - can be WEBGL ("webgl") or P2D ("p2d")
      */
-    public static buildCanvas(aspectRatio: AspectRatio, resolution: number, lockCanvas?: boolean, canvasType?: string) {
+    public static buildCanvas(aspectRatio: AspectRatio,
+                              resolution: number,
+                              lockCanvas?: boolean,
+                              canvasType?: string): void {
         if (!CanvasContext.lockedCanvas) {
             CanvasContext._aspectRatio = aspectRatio;
             CanvasContext._resolution = resolution;
