@@ -54,7 +54,7 @@ export class CanvasContext {
 
     /**
      * Build a p5 canvas with the given aspect ratio, resolution, and canvas type.
-     * If {@link CanvasContext.lockedCanvas} is `true`, no canvas will be built.
+     * If {@link lockedCanvas} is `true`, no canvas will be built.
      *
      * @param aspectRatio
      * @param resolution
@@ -195,7 +195,7 @@ export class CanvasContext {
 
     /**
      * Update the current aspect ratio of the canvas to the given aspect ratio.
-     * This method will resize the canvas and decorates it with the appropriate
+     * This method will resize the canvas and decorate it with the appropriate
      * updated attributes.
      *
      * @param aspectRatio
@@ -216,7 +216,7 @@ export class CanvasContext {
 
     /**
      * Update the current resolution of the canvas to the given resolution.
-     * This method will resize the canvas and decorates it with the appropriate
+     * This method will resize the canvas and decorate it with the appropriate
      * updated attributes.
      *
      * @param resolution
