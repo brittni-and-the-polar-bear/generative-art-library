@@ -36,9 +36,9 @@ export class AspectRatioHandler {
     private readonly _height: number | undefined;
 
     /**
-     * @param aspectRatio - If the given {@link AspectRatio} object has a
-     * {@link AspectRatio.WIDTH_RATIO width ratio} less than one or a
-     * {@link AspectRatio.HEIGHT_RATIO height ratio} less than one,
+     * @param aspectRatio - If this aspect ratio has a
+     * {@link AspectRatio.WIDTH_RATIO width ratio} less than 1 or a
+     * {@link AspectRatio.HEIGHT_RATIO height ratio} less than 1,
      * then {@link width} and {@link height} will both return 0.
      *
      * @param baseResolution - If this values is less than or equal to 0,
