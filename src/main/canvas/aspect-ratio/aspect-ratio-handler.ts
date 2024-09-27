@@ -17,7 +17,6 @@
 
 import { AspectRatio } from './aspect-ratio';
 
-// TODO - add to release notes
 /**
  * An AspectRatioHandler provides the proper width and height of a canvas
  * given an {@link AspectRatio} and resolution.
