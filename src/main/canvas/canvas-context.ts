@@ -120,9 +120,9 @@ export class CanvasContext {
     }
 
     /**
-     * The maximum visible width of the sketch.
+     * The maximum visible x-axis value of the sketch.
      */
-    public static get maxWidth(): number {
+    public static get maxX(): number {
         const p5: P5Lib = SketchContext.p5;
         let max: number = p5.width;
 
@@ -148,9 +148,9 @@ export class CanvasContext {
     }
 
     /**
-     * The minimum visible width of the sketch.
+     * The minimum visible x-axis value of the sketch.
      */
-    public static get minWidth(): number {
+    public static get minX(): number {
         const p5: P5Lib = SketchContext.p5;
         let min: number = 0;
 
@@ -232,6 +232,19 @@ export class CanvasContext {
 
         p5.resizeCanvas(width, height);
         CanvasContext.decorateCanvas();
+    }
+
+    // TODO - unit test
+    // TODO - release notes
+    /**
+     * Map a percentage value to a value on the x-axis of the canvas.
+     * A percentage value of 0.5 will be exactly in the middle of the x-axis,
+     * regardless of canvas resolution or aspect ratio.
+     *
+     * @param percentage - The percentage expressed as a decimal number (e.g. 50% = 0.5)
+     */
+    public static mapXPercentage(percentage: number): number {
+        return SketchContext.p5.map(percentage, 0, 1, CanvasContext.minX, CanvasContext.maxX);
     }
 
     /**

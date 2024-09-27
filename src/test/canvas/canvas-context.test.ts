@@ -134,7 +134,7 @@ describe('CanvasContext tests', (): void => {
         expect(CanvasContext.maxHeight).toBe(expectedMaxHeight);
     });
 
-    test('CanvasContext.maxWidth and CanvasContext.minWidth properties', (): void => {
+    test('CanvasContext.maxX and CanvasContext.minX properties', (): void => {
         const multiplier: number = 2.5;
         let resolution: number = 720;
         let expectedMaxWidth: number = resolution * multiplier;
@@ -147,8 +147,8 @@ describe('CanvasContext tests', (): void => {
             CanvasContext.buildCanvas(aspectRatio, resolution);
         }
 
-        expect(CanvasContext.minWidth).toBe(expectedMinWidth);
-        expect(CanvasContext.maxWidth).toBe(expectedMaxWidth);
+        expect(CanvasContext.minX).toBe(expectedMinWidth);
+        expect(CanvasContext.maxX).toBe(expectedMaxWidth);
 
         resolution = 1080;
         expectedMaxWidth = resolution * multiplier;
@@ -157,8 +157,8 @@ describe('CanvasContext tests', (): void => {
             CanvasContext.buildCanvas(aspectRatio, resolution);
         }
 
-        expect(CanvasContext.minWidth).toBe(expectedMinWidth);
-        expect(CanvasContext.maxWidth).toBe(expectedMaxWidth);
+        expect(CanvasContext.minX).toBe(expectedMinWidth);
+        expect(CanvasContext.maxX).toBe(expectedMaxWidth);
     });
 
     test('CanvasContext.defaultStroke property', (): void => {
