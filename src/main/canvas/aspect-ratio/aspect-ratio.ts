@@ -15,8 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-
-// TODO - release notes
 /**
  * Defines the width to height ratio of a canvas.
  *

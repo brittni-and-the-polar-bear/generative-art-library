@@ -17,7 +17,6 @@
 
 import { AspectRatio } from './aspect-ratio';
 
-// TODO - release notes
 /**
  * Pre-set {@link AspectRatio} objects for easy access.
  *
