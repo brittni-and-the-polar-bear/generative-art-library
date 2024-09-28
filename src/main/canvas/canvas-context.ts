@@ -52,6 +52,7 @@ export class CanvasContext {
      */
     private static _resolution: number = 1080;
 
+    // TODO - update release notes
     /**
      * Build a p5 canvas with the given aspect ratio, resolution, and canvas type.
      * If {@link lockedCanvas} is `true`, no canvas will be built.
@@ -63,8 +64,8 @@ export class CanvasContext {
      */
     public static buildCanvas(aspectRatio: AspectRatio,
                               resolution: number,
-                              lockCanvas?: boolean,
-                              canvasType?: string): void {
+                              canvasType?: string,
+                              lockCanvas?: boolean): void {
         if (!CanvasContext.lockedCanvas) {
             CanvasContext._aspectRatio = aspectRatio;
             CanvasContext._resolution = resolution;
@@ -105,8 +106,26 @@ export class CanvasContext {
         return CanvasContext._lockedCanvas;
     }
 
+    // TODO - unit test
+    // TODO - release notes
     /**
-     * The maximum visible x-axis value of the sketch.
+     * The center x-axis value of the canvas.
+     */
+    public static get centerX(): number {
+        return CanvasContext.mapRatioToCanvasX(0.5);
+    }
+
+    // TODO - unit test
+    // TODO - release notes
+    /**
+     * The center y-axis value of the canvas.
+     */
+    public static get centerY(): number {
+        return CanvasContext.mapRatioToCanvasY(0.5);
+    }
+
+    /**
+     * The maximum visible x-axis value of the canvas.
      */
     public static get maxX(): number {
         const p5: P5Lib = SketchContext.p5;
@@ -120,7 +139,7 @@ export class CanvasContext {
     }
 
     /**
-     * The maximum visible y-axis value of the sketch.
+     * The maximum visible y-axis value of the canvas.
      */
     public static get maxY(): number {
         const p5: P5Lib = SketchContext.p5;
@@ -134,7 +153,7 @@ export class CanvasContext {
     }
 
     /**
-     * The minimum visible x-axis value of the sketch.
+     * The minimum visible x-axis value of the canvas.
      */
     public static get minX(): number {
         const p5: P5Lib = SketchContext.p5;
@@ -148,7 +167,7 @@ export class CanvasContext {
     }
 
     /**
-     * The minimum visible y-axis value of the sketch.
+     * The minimum visible y-axis value of the canvas.
      */
     public static get minY(): number {
         const p5: P5Lib = SketchContext.p5;
@@ -241,13 +260,30 @@ export class CanvasContext {
      * A percentage value of 0.5 will be exactly in the middle of the x-axis,
      * regardless of canvas resolution or aspect ratio.
      *
-     * @param percentage - The percentage expressed as a decimal number (e.g. 50% = 0.5)
+     * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
-    public static mapXPercentage(percentage: number): number {
-        return SketchContext.p5.map(percentage, 0, 1, CanvasContext.minX, CanvasContext.maxX);
+    public static mapRatioToCanvasX(ratio: number): number {
+        return SketchContext.p5.map(ratio, 0, 1, CanvasContext.minX, CanvasContext.maxX);
     }
 
-    // TODO - implement mapYPercentage method
+    // TODO - unit test
+    // TODO - release notes
+    /**
+     * Map a percentage value to a value on the y-axis of the canvas.
+     * A percentage value of 0.5 will be exactly in the middle of the y-axis,
+     * regardless of canvas resolution or aspect ratio.
+     *
+     * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
+     */
+    public static mapRatioToCanvasY(ratio: number): number {
+        return SketchContext.p5.map(ratio, 0, 1, CanvasContext.minY, CanvasContext.maxY);
+    }
+
+    // TODO - map screen position to percentage
+
+    // TODO - map mouse position to screen position
+
+    // TODO - map mouse position to percentage
 
     /**
      * Decorates the canvas with the proper attributes according to current canvas
