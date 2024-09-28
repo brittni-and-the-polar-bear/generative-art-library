@@ -107,7 +107,7 @@ describe('CanvasContext tests', (): void => {
         expect(p5.height).toBe(expectedHeight);
     });
 
-    test('CanvasContext.maxHeight and CanvasContext.minHeight properties', (): void => {
+    test('CanvasContext.maxY and CanvasContext.minY properties', (): void => {
         const multiplier: number = 2;
         let resolution: number = 720;
         let expectedMaxHeight: number = resolution * multiplier;
@@ -120,8 +120,8 @@ describe('CanvasContext tests', (): void => {
             CanvasContext.buildCanvas(aspectRatio, resolution);
         }
 
-        expect(CanvasContext.minHeight).toBe(expectedMinHeight);
-        expect(CanvasContext.maxHeight).toBe(expectedMaxHeight);
+        expect(CanvasContext.minY).toBe(expectedMinHeight);
+        expect(CanvasContext.maxY).toBe(expectedMaxHeight);
 
         resolution = 1080;
         expectedMaxHeight = resolution * multiplier;
@@ -130,8 +130,8 @@ describe('CanvasContext tests', (): void => {
             CanvasContext.buildCanvas(aspectRatio, resolution);
         }
 
-        expect(CanvasContext.minHeight).toBe(expectedMinHeight);
-        expect(CanvasContext.maxHeight).toBe(expectedMaxHeight);
+        expect(CanvasContext.minY).toBe(expectedMinHeight);
+        expect(CanvasContext.maxY).toBe(expectedMaxHeight);
     });
 
     test('CanvasContext.maxX and CanvasContext.minX properties', (): void => {

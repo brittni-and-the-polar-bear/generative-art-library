@@ -105,21 +105,6 @@ export class CanvasContext {
         return CanvasContext._lockedCanvas;
     }
 
-    // TODO - rename maxY
-    /**
-     * The maximum visible height of the sketch.
-     */
-    public static get maxHeight(): number {
-        const p5: P5Lib = SketchContext.p5;
-        let max: number = p5.height;
-
-        if (CanvasContext.isWebGL) {
-            max = (p5.height / 2.0);
-        }
-
-        return max;
-    }
-
     /**
      * The maximum visible x-axis value of the sketch.
      */
@@ -134,19 +119,18 @@ export class CanvasContext {
         return max;
     }
 
-    // TODO - rename minY
     /**
-     * The minimum visible height of the sketch.
+     * The maximum visible y-axis value of the sketch.
      */
-    public static get minHeight(): number {
+    public static get maxY(): number {
         const p5: P5Lib = SketchContext.p5;
-        let min: number = 0;
+        let max: number = p5.height;
 
         if (CanvasContext.isWebGL) {
-            min = (p5.height / 2.0) * -1.0;
+            max = (p5.height / 2.0);
         }
 
-        return min;
+        return max;
     }
 
     /**
@@ -158,6 +142,20 @@ export class CanvasContext {
 
         if (CanvasContext.isWebGL) {
             min = (p5.width / 2.0) * -1.0;
+        }
+
+        return min;
+    }
+
+    /**
+     * The minimum visible y-axis value of the sketch.
+     */
+    public static get minY(): number {
+        const p5: P5Lib = SketchContext.p5;
+        let min: number = 0;
+
+        if (CanvasContext.isWebGL) {
+            min = (p5.height / 2.0) * -1.0;
         }
 
         return min;
