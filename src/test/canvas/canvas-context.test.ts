@@ -72,7 +72,7 @@ describe('CanvasContext tests', (): void => {
         CanvasContext.unlockCanvas();
 
         if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution, true);
+            CanvasContext.buildCanvas(aspectRatio, resolution, p5.P2D, true);
         }
 
         expect(p5.width).toBe(expectedWidth);
@@ -84,7 +84,7 @@ describe('CanvasContext tests', (): void => {
         expect(aspectRatio).toBeTruthy();
 
         if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution, false);
+            CanvasContext.buildCanvas(aspectRatio, resolution, p5.P2D, false);
         }
 
         expect(p5.width).toBe(expectedWidth);
@@ -100,7 +100,7 @@ describe('CanvasContext tests', (): void => {
         expect(aspectRatio).toBeTruthy();
 
         if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution, false);
+            CanvasContext.buildCanvas(aspectRatio, resolution, p5.P2D, false);
         }
 
         expect(p5.width).toBe(expectedWidth);

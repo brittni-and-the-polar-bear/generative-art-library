@@ -20,6 +20,8 @@ import P5Lib from 'p5';
 import { SketchContext } from 'context';
 
 import { ASPECT_RATIOS, AspectRatio, AspectRatioHandler } from './aspect-ratio';
+import { MouseHandler } from './mouse-handler';
+import {PositionHandler} from "./position-handler";
 
 /**
  * The CanvasContext provides static access to information and methods
@@ -112,7 +114,7 @@ export class CanvasContext {
      * The center x-axis value of the canvas.
      */
     public static get centerX(): number {
-        return CanvasContext.mapRatioToCanvasX(0.5);
+        return PositionHandler.centerX;
     }
 
     // TODO - unit test
@@ -121,63 +123,63 @@ export class CanvasContext {
      * The center y-axis value of the canvas.
      */
     public static get centerY(): number {
-        return CanvasContext.mapRatioToCanvasY(0.5);
+        return PositionHandler.centerY;
     }
 
     /**
      * The maximum visible x-axis value of the canvas.
      */
     public static get maxX(): number {
-        const p5: P5Lib = SketchContext.p5;
-        let max: number = p5.width;
-
-        if (CanvasContext.isWebGL) {
-            max = (p5.width / 2.0);
-        }
-
-        return max;
+        return PositionHandler.maxX;
     }
 
     /**
      * The maximum visible y-axis value of the canvas.
      */
     public static get maxY(): number {
-        const p5: P5Lib = SketchContext.p5;
-        let max: number = p5.height;
-
-        if (CanvasContext.isWebGL) {
-            max = (p5.height / 2.0);
-        }
-
-        return max;
+        return PositionHandler.maxY;
     }
 
     /**
      * The minimum visible x-axis value of the canvas.
      */
     public static get minX(): number {
-        const p5: P5Lib = SketchContext.p5;
-        let min: number = 0;
-
-        if (CanvasContext.isWebGL) {
-            min = (p5.width / 2.0) * -1.0;
-        }
-
-        return min;
+        return PositionHandler.minX;
     }
 
     /**
      * The minimum visible y-axis value of the canvas.
      */
     public static get minY(): number {
-        const p5: P5Lib = SketchContext.p5;
-        let min: number = 0;
+        return PositionHandler.minY;
+    }
 
-        if (CanvasContext.isWebGL) {
-            min = (p5.height / 2.0) * -1.0;
-        }
+    // TODO - documentation
+    // TODO - release notes
+    // TODO - unit tests???
+    public static get mouseX(): number {
+        return MouseHandler.mouseX;
+    }
 
-        return min;
+    // TODO - documentation
+    // TODO - release notes
+    // TODO - unit tests???
+    public static get mouseY(): number {
+        return MouseHandler.mouseY;
+    }
+
+    // TODO - documentation
+    // TODO - release notes
+    // TODO - unit tests???
+    public static get mouseXRatio(): number {
+        return MouseHandler.mouseXRatio;
+    }
+
+    // TODO - documentation
+    // TODO - release notes
+    // TODO - unit tests???
+    public static get mouseYRatio(): number {
+        return MouseHandler.mouseYRatio;
     }
 
     /**
@@ -263,7 +265,7 @@ export class CanvasContext {
      * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
     public static mapRatioToCanvasX(ratio: number): number {
-        return SketchContext.p5.map(ratio, 0, 1, CanvasContext.minX, CanvasContext.maxX);
+        return PositionHandler.mapRatioToCanvasX(ratio);
     }
 
     // TODO - unit test
@@ -276,14 +278,22 @@ export class CanvasContext {
      * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
     public static mapRatioToCanvasY(ratio: number): number {
-        return SketchContext.p5.map(ratio, 0, 1, CanvasContext.minY, CanvasContext.maxY);
+        return PositionHandler.mapRatioToCanvasY(ratio);
     }
 
-    // TODO - map screen position to percentage
+    // TODO - documentation
+    // TODO - release notes
+    // TODO - unit tests - are results constrained to 0 and 1?
+    public static mapCanvasXToRatio(canvasX: number): number {
+        return PositionHandler.mapCanvasXToRatio(canvasX);
+    }
 
-    // TODO - map mouse position to screen position
-
-    // TODO - map mouse position to percentage
+    // TODO - documentation
+    // TODO - release notes
+    // TODO - unit tests - are results constrained to 0 and 1?
+    public static mapCanvasYToRatio(canvasY: number): number {
+        return PositionHandler.mapCanvasYToRatio(canvasY);
+    }
 
     /**
      * Decorates the canvas with the proper attributes according to current canvas
