@@ -18,3 +18,5 @@
 export * from './aspect-ratio';
 
 export * from './canvas-context';
+export * from './coordinate-mapper';
+export * from './mouse-mapper';
