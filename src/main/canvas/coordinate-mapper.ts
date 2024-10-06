@@ -21,14 +21,14 @@ import { CanvasContext } from './canvas-context';
 // TODO - remove position functions from CanvasContext
 // TODO - documentation
 // TODO - release notes
-export class PositionHandler {
+export class CoordinateMapper {
     // TODO - unit test
     // TODO - release notes
     /**
      * The center x-axis value of the canvas.
      */
     public static get centerX(): number {
-        return PositionHandler.mapRatioToCanvasX(0.5);
+        return CoordinateMapper.mapRatioToCanvasX(0.5);
     }
 
     // TODO - unit test
@@ -37,7 +37,7 @@ export class PositionHandler {
      * The center y-axis value of the canvas.
      */
     public static get centerY(): number {
-        return PositionHandler.mapRatioToCanvasY(0.5);
+        return CoordinateMapper.mapRatioToCanvasY(0.5);
     }
 
     // TODO - unit test
@@ -114,7 +114,7 @@ export class PositionHandler {
      * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
     public static mapRatioToCanvasX(ratio: number): number {
-        return SketchContext.p5.map(ratio, 0, 1, PositionHandler.minX, PositionHandler.maxX);
+        return SketchContext.p5.map(ratio, 0, 1, CoordinateMapper.minX, CoordinateMapper.maxX);
     }
 
     // TODO - unit test
@@ -127,20 +127,20 @@ export class PositionHandler {
      * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
     public static mapRatioToCanvasY(ratio: number): number {
-        return SketchContext.p5.map(ratio, 0, 1, PositionHandler.minY, PositionHandler.maxY);
+        return SketchContext.p5.map(ratio, 0, 1, CoordinateMapper.minY, CoordinateMapper.maxY);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests - are results constrained to 0 and 1?
     public static mapCanvasXToRatio(canvasX: number): number {
-        return SketchContext.p5.map(canvasX, PositionHandler.minX, PositionHandler.maxX, 0, 1);
+        return SketchContext.p5.map(canvasX, CoordinateMapper.minX, CoordinateMapper.maxX, 0, 1);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests - are results constrained to 0 and 1?
     public static mapCanvasYToRatio(canvasY: number): number {
-        return SketchContext.p5.map(canvasY, PositionHandler.minY, PositionHandler.maxY, 0, 1);
+        return SketchContext.p5.map(canvasY, CoordinateMapper.minY, CoordinateMapper.maxY, 0, 1);
     }
 }
