@@ -21,6 +21,7 @@
       "palette-colors": ["./src/main/color/palette/palette-colors"],
       "palettes": ["./src/main/color/palette/palettes"],
       "random": ["./src/main/random"],
+      "shapes": ["./src/main/shapes"],
       "unit-test/shared": ["./src/test/shared"]
     },
 
