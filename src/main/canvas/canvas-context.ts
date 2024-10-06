@@ -20,9 +20,9 @@ import P5Lib from 'p5';
 import { SketchContext } from 'context';
 
 import { ASPECT_RATIOS, AspectRatio, AspectRatioHandler } from './aspect-ratio';
-import { MouseHandler } from './mouse-handler';
-import {PositionHandler} from "./position-handler";
 
+// TODO - Update release notes
+// TODO - update unit tests
 /**
  * The CanvasContext provides static access to information and methods
  * for the running p5.js sketch canvas.
@@ -108,80 +108,6 @@ export class CanvasContext {
         return CanvasContext._lockedCanvas;
     }
 
-    // TODO - unit test
-    // TODO - release notes
-    /**
-     * The center x-axis value of the canvas.
-     */
-    public static get centerX(): number {
-        return PositionHandler.centerX;
-    }
-
-    // TODO - unit test
-    // TODO - release notes
-    /**
-     * The center y-axis value of the canvas.
-     */
-    public static get centerY(): number {
-        return PositionHandler.centerY;
-    }
-
-    /**
-     * The maximum visible x-axis value of the canvas.
-     */
-    public static get maxX(): number {
-        return PositionHandler.maxX;
-    }
-
-    /**
-     * The maximum visible y-axis value of the canvas.
-     */
-    public static get maxY(): number {
-        return PositionHandler.maxY;
-    }
-
-    /**
-     * The minimum visible x-axis value of the canvas.
-     */
-    public static get minX(): number {
-        return PositionHandler.minX;
-    }
-
-    /**
-     * The minimum visible y-axis value of the canvas.
-     */
-    public static get minY(): number {
-        return PositionHandler.minY;
-    }
-
-    // TODO - documentation
-    // TODO - release notes
-    // TODO - unit tests???
-    public static get mouseX(): number {
-        return MouseHandler.mouseX;
-    }
-
-    // TODO - documentation
-    // TODO - release notes
-    // TODO - unit tests???
-    public static get mouseY(): number {
-        return MouseHandler.mouseY;
-    }
-
-    // TODO - documentation
-    // TODO - release notes
-    // TODO - unit tests???
-    public static get mouseXRatio(): number {
-        return MouseHandler.mouseXRatio;
-    }
-
-    // TODO - documentation
-    // TODO - release notes
-    // TODO - unit tests???
-    public static get mouseYRatio(): number {
-        return MouseHandler.mouseYRatio;
-    }
-
     /**
      * The default stroke of the sketch.
      * Equivalent to a stroke of 1 in a 500x500 sketch.
@@ -253,46 +179,6 @@ export class CanvasContext {
 
         p5.resizeCanvas(width, height);
         CanvasContext.decorateCanvas();
-    }
-
-    // TODO - unit test
-    // TODO - release notes
-    /**
-     * Map a percentage value to a value on the x-axis of the canvas.
-     * A percentage value of 0.5 will be exactly in the middle of the x-axis,
-     * regardless of canvas resolution or aspect ratio.
-     *
-     * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
-     */
-    public static mapRatioToCanvasX(ratio: number): number {
-        return PositionHandler.mapRatioToCanvasX(ratio);
-    }
-
-    // TODO - unit test
-    // TODO - release notes
-    /**
-     * Map a percentage value to a value on the y-axis of the canvas.
-     * A percentage value of 0.5 will be exactly in the middle of the y-axis,
-     * regardless of canvas resolution or aspect ratio.
-     *
-     * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
-     */
-    public static mapRatioToCanvasY(ratio: number): number {
-        return PositionHandler.mapRatioToCanvasY(ratio);
-    }
-
-    // TODO - documentation
-    // TODO - release notes
-    // TODO - unit tests - are results constrained to 0 and 1?
-    public static mapCanvasXToRatio(canvasX: number): number {
-        return PositionHandler.mapCanvasXToRatio(canvasX);
-    }
-
-    // TODO - documentation
-    // TODO - release notes
-    // TODO - unit tests - are results constrained to 0 and 1?
-    public static mapCanvasYToRatio(canvasY: number): number {
-        return PositionHandler.mapCanvasYToRatio(canvasY);
     }
 
     /**
