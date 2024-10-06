@@ -17,38 +17,38 @@
 
 import { SketchContext } from 'context';
 
-import { CanvasContext } from './canvas-context';
+import { CoordinateMapper } from "./coordinate-mapper";
 
 // TODO - remove mouse function from CanvasContext
 // TODO - documentation
 // TODO - release notes
-export class MouseHandler {
+export class MouseMapper {
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseX(): number {
-        return MouseHandler.mapMouseXToCanvas(SketchContext.p5.mouseX);
+        return MouseMapper.mapMouseXToCanvas(SketchContext.p5.mouseX);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseY(): number {
-        return MouseHandler.mapMouseYToCanvas(SketchContext.p5.mouseY);
+        return MouseMapper.mapMouseYToCanvas(SketchContext.p5.mouseY);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseXRatio(): number {
-        return MouseHandler.mapMouseXToRatio(SketchContext.p5.mouseX);
+        return MouseMapper.mapMouseXToRatio(SketchContext.p5.mouseX);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseYRatio(): number {
-        return MouseHandler.mapMouseYToRatio(SketchContext.p5.mouseY);
+        return MouseMapper.mapMouseYToRatio(SketchContext.p5.mouseY);
     }
 
     // TODO - documentation
@@ -56,7 +56,7 @@ export class MouseHandler {
     // TODO - unit tests
     public static mapMouseXToCanvas(mouseX: number): number {
         const p5: P5Lib = SketchContext.p5;
-        return p5.map(mouseX, 0, p5.width, CanvasContext.minX, CanvasContext.maxX);
+        return p5.map(mouseX, 0, p5.width, CoordinateMapper.minX, CoordinateMapper.maxX);
     }
 
     // TODO - documentation
@@ -64,7 +64,7 @@ export class MouseHandler {
     // TODO - unit tests
     public static mapMouseYToCanvas(mouseY: number): number {
         const p5: P5Lib = SketchContext.p5;
-        return p5.map(mouseY, 0, p5.height, CanvasContext.minY, CanvasContext.maxY);
+        return p5.map(mouseY, 0, p5.height, CoordinateMapper.minY, CoordinateMapper.maxY);
     }
 
     // TODO - documentation
