@@ -33,9 +33,9 @@ export class Circle implements CanvasRedrawListener {
     private _posRatio_A: P5Lib.Vector = new P5Lib.Vector();
     private _posRatio_B: P5Lib.Vector = new P5Lib.Vector();
     private _coordinateRatios: P5Lib.Vector[] = [];
+    private _strokeMultiplier: number = 1;
     private _fill: Color | null;
     private _stroke: Color | null;
-    private _strokeWeight: number;
 
     // TODO - docs
     // TODO - unit tests
@@ -45,8 +45,7 @@ export class Circle implements CanvasRedrawListener {
         this.calculateCoordinates();
         this._fill = new Color(p5.color(255, 0, 0));
         this._stroke = new Color(p5.color(0, 0, 255));
-        this._strokeWeight = CanvasContext.defaultStroke;
-        CanvasRedrawEvent.addSubscriber(this);
+        CanvasRedrawEvent.addListener(this);
     }
 
     // TODO - docs
@@ -74,7 +73,7 @@ export class Circle implements CanvasRedrawListener {
 
         if (this._stroke) {
             p5.stroke(this._stroke.color);
-            p5.strokeWeight(this._strokeWeight);
+            p5.strokeWeight(CanvasContext.defaultStroke * this._strokeMultiplier);
         } else {
             p5.noStroke();
         }
@@ -82,9 +81,9 @@ export class Circle implements CanvasRedrawListener {
         p5.beginShape();
 
         for (let i: number = 0; i < this._coordinateRatios.length; i++) {
-            const coordinate: P5Lib.Vector = this._coordinateRatios[i];
-            const x: number = CoordinateMapper.mapRatioToCanvasX(coordinate.x);
-            const y: number = CoordinateMapper.mapRatioToCanvasY(coordinate.y);
+            const ratioCoord: P5Lib.Vector = this._coordinateRatios[i];
+            const x: number = CoordinateMapper.mapRatioToCanvasX(ratioCoord.x);
+            const y: number = CoordinateMapper.mapRatioToCanvasY(ratioCoord.y);
             p5.vertex(x, y);
         }
 
@@ -94,6 +93,7 @@ export class Circle implements CanvasRedrawListener {
     // TODO - docs
     // TODO - unit tests
     public canvasRedraw(): void {
+        console.log('Circle.canvasRedraw');
         this.calculateCoordinates();
     }
 
@@ -105,12 +105,16 @@ export class Circle implements CanvasRedrawListener {
         const yRange: Range = new Range(CoordinateMapper.minY, CoordinateMapper.maxY);
         const x_A: number = Random.randomFloatInRange(xRange);
         const y_A: number = Random.randomFloatInRange(yRange);
-        this._posRatio_A = new P5Lib.Vector(x_A / p5.width, y_A / p5.height);
+        const xRatio_A: number = CoordinateMapper.mapCanvasXToRatio(x_A);
+        const yRatio_A: number = CoordinateMapper.mapCanvasYToRatio(y_A);
+        this._posRatio_A = new P5Lib.Vector(xRatio_A, yRatio_A);
         const theta: number = Random.randomFloatInRange(new Range(0, p5.TWO_PI));
         const diameter: number = Random.randomFloatInRange(new Range(Circle._minDiameter, Circle._maxDiameter));
         const x_B: number = x_A + (diameter * Math.cos(theta));
         const y_B: number = y_A + (diameter * Math.sin(theta));
-        this._posRatio_B = new P5Lib.Vector(x_B / p5.width, y_B / p5.height);
+        const xRatio_B: number = CoordinateMapper.mapCanvasXToRatio(x_B);
+        const yRatio_B: number = CoordinateMapper.mapCanvasYToRatio(y_B);
+        this._posRatio_B = new P5Lib.Vector(xRatio_B, yRatio_B);
     }
 
     // TODO - docs

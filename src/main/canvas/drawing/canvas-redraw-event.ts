@@ -20,18 +20,19 @@ import { CanvasRedrawListener } from './canvas-redraw-listener';
 // TODO - release notes
 // TODO - docs
 export class CanvasRedrawEvent {
-    private static readonly _SUBSCRIBERS: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
+    private static readonly _LISTENERS: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
 
     // TODO - release notes
     // TODO - docs
-    public static addSubscriber(listener: CanvasRedrawListener): void {
-        CanvasRedrawEvent._SUBSCRIBERS.add(listener);
+    public static addListener(listener: CanvasRedrawListener): void {
+        CanvasRedrawEvent._LISTENERS.add(listener);
     }
 
     // TODO - release notes
     // TODO - docs
     public static publishRedraw(): void {
-        CanvasRedrawEvent._SUBSCRIBERS.forEach((listener: CanvasRedrawListener): void => {
+        console.log('CanvasRedrawEvent.publishRedraw');
+        CanvasRedrawEvent._LISTENERS.forEach((listener: CanvasRedrawListener): void => {
             listener.canvasRedraw();
         });
     }
