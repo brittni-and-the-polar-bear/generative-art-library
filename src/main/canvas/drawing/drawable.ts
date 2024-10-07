@@ -15,9 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './aspect-ratio';
-export * from './drawing';
-
-export * from './canvas-context';
-export * from './coordinate-mapper';
-export * from './mouse-mapper';
+// TODO - release notes
+// TODO - docs
+export interface Drawable {
+    // TODO - release notes
+    // TODO - docs
+    readonly draw: () => void;
+}

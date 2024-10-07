@@ -15,9 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './aspect-ratio';
-export * from './drawing';
+import { CanvasRedrawListener } from './canvas-redraw-listener';
 
-export * from './canvas-context';
-export * from './coordinate-mapper';
-export * from './mouse-mapper';
+// TODO - release notes
+// TODO - docs
+export class CanvasRedrawEvent {
+    private static readonly _SUBSCRIBERS: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
+
+    // TODO - release notes
+    // TODO - docs
+    public static addSubscriber(listener: CanvasRedrawListener): void {
+        CanvasRedrawEvent._SUBSCRIBERS.add(listener);
+    }
+
+    // TODO - release notes
+    // TODO - docs
+    public static publishRedraw(): void {
+        CanvasRedrawEvent._SUBSCRIBERS.forEach((listener: CanvasRedrawListener): void => {
+            listener.canvasRedraw();
+        });
+    }
+}

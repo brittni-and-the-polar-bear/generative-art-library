@@ -20,6 +20,7 @@ import P5Lib from 'p5';
 import { SketchContext } from 'context';
 
 import { ASPECT_RATIOS, AspectRatio, AspectRatioHandler } from './aspect-ratio';
+import { CanvasRedrawEvent } from './drawing';
 
 // TODO - Update release notes
 // TODO - update unit tests
@@ -137,7 +138,7 @@ export class CanvasContext {
      * updated attributes.
      */
     public static resizeCanvas(): void {
-        CanvasContext.decorateCanvas();
+        CanvasContext.updateCanvas();
     }
 
     /**
@@ -158,7 +159,7 @@ export class CanvasContext {
         const height: number = ratioHandler.height;
 
         p5.resizeCanvas(width, height);
-        CanvasContext.decorateCanvas();
+        CanvasContext.updateCanvas();
     }
 
     /**
@@ -178,7 +179,7 @@ export class CanvasContext {
         const height: number = ratioHandler.height;
 
         p5.resizeCanvas(width, height);
-        CanvasContext.decorateCanvas();
+        CanvasContext.updateCanvas();
     }
 
     /**
@@ -199,5 +200,12 @@ export class CanvasContext {
                 canvas.attribute('style', 'width: 100vw;');
             }
         }
+    }
+
+    // TODO - docs
+    // TODO - unit test
+    private static updateCanvas(): void {
+        CanvasContext.decorateCanvas();
+        CanvasRedrawEvent.publishRedraw();
     }
 }

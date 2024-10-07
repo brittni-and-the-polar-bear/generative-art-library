@@ -15,9 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './aspect-ratio';
-export * from './drawing';
-
-export * from './canvas-context';
-export * from './coordinate-mapper';
-export * from './mouse-mapper';
+export * from './canvas-redraw-event';
+export * from './canvas-redraw-listener';
+export * from './drawable';

@@ -15,9 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './aspect-ratio';
-export * from './drawing';
+import { Drawable } from './drawable';
 
-export * from './canvas-context';
-export * from './coordinate-mapper';
-export * from './mouse-mapper';
+// TODO - release notes
+// TODO - docs
+export interface CanvasRedrawListener extends Drawable {
+    // TODO - release notes
+    // TODO - docs
+    canvasRedraw: () => void;
+}
