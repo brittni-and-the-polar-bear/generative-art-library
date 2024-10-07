@@ -40,9 +40,9 @@ export class Circle implements CanvasRedrawListener {
     // TODO - docs
     // TODO - unit tests
     public constructor() {
+        const p5: P5Lib = SketchContext.p5;
         this.randomizePosition();
         this.calculateCoordinates();
-        const p5: P5Lib = SketchContext.p5;
         this._fill = new Color(p5.color(255, 0, 0));
         this._stroke = new Color(p5.color(0, 0, 255));
         this._strokeWeight = CanvasContext.defaultStroke;
@@ -123,7 +123,7 @@ export class Circle implements CanvasRedrawListener {
         const radiusRatio: number = this._posRatio_A.dist(this._posRatio_B) / 2.0;
         let theta: number = 0;
 
-        for (let i: number = 0; Circle._pointCount; i++) {
+        for (let i: number = 0; i < Circle._pointCount; i++) {
             const xRatio: number = centerRatio_X + (radiusRatio * Math.cos(theta));
             const yRatio: number = centerRatio_Y + (radiusRatio * Math.sin(theta));
             const ratioCoord: P5Lib.Vector = new P5Lib.Vector(xRatio, yRatio);
