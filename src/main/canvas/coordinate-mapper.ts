@@ -17,6 +17,7 @@
 
 import { SketchContext } from 'context';
 import { CanvasContext } from './canvas-context';
+import P5Lib from "p5";
 
 // TODO - remove position functions from CanvasContext
 // TODO - documentation
@@ -106,6 +107,15 @@ export class CoordinateMapper {
 
     // TODO - unit test
     // TODO - release notes
+    // TODO - docs
+    public static mapRatioToCanvas(ratioVector: P5Lib.Vector): P5Lib.Vector {
+        const canvasX: number = this.mapRatioToCanvasX(ratioVector.x);
+        const canvasY: number = this.mapRatioToCanvasY(ratioVector.y);
+        return new P5Lib.Vector(canvasX, canvasY);
+    }
+
+    // TODO - unit test
+    // TODO - release notes
     /**
      * Map a percentage value to a value on the x-axis of the canvas.
      * A percentage value of 0.5 will be exactly in the middle of the x-axis,
@@ -142,5 +152,14 @@ export class CoordinateMapper {
     // TODO - unit tests - are results constrained to 0 and 1?
     public static mapCanvasYToRatio(canvasY: number): number {
         return SketchContext.p5.map(canvasY, CoordinateMapper.minY, CoordinateMapper.maxY, 0, 1);
+    }
+
+    // TODO - unit test
+    // TODO - release notes
+    // TODO - docs
+    public static mapCanvasToRatio(canvasVector: P5Lib.Vector): P5Lib.Vector {
+        const canvasX: number = this.mapCanvasXToRatio(canvasVector.x);
+        const canvasY: number = this.mapCanvasYToRatio(canvasVector.y);
+        return new P5Lib.Vector(canvasX, canvasY);
     }
 }
