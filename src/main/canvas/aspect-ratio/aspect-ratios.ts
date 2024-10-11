@@ -33,6 +33,21 @@ export const ASPECT_RATIOS: Record<string, AspectRatio> = {
       WIDTH_RATIO: 0,
       HEIGHT_RATIO: 0
     },
+    PINTEREST_PIN: {
+        NAME: '2:3',
+        WIDTH_RATIO: 2,
+        HEIGHT_RATIO: 3
+    },
+    RATIO_21_9: {
+        NAME: '21:9',
+        WIDTH_RATIO: 64,
+        HEIGHT_RATIO: 27
+    },
+    SOCIAL_VIDEO: {
+        NAME: '9:16',
+        WIDTH_RATIO: 9,
+        HEIGHT_RATIO: 16
+    },
     SQUARE: {
         NAME: 'square',
         WIDTH_RATIO: 1,
@@ -42,15 +57,5 @@ export const ASPECT_RATIOS: Record<string, AspectRatio> = {
         NAME: '3:4',
         WIDTH_RATIO: 3,
         HEIGHT_RATIO: 4
-    },
-    SOCIAL_VIDEO: {
-        NAME: '9:16',
-        WIDTH_RATIO: 9,
-        HEIGHT_RATIO: 16
-    },
-    RATIO_21_9: {
-        NAME: '21:9',
-        WIDTH_RATIO: 64,
-        HEIGHT_RATIO: 27
     }
 };
