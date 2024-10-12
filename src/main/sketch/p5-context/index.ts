@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023-2024 brittni and the polar bear LLC.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,6 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './canvas';
-export * from './mouse';
 export * from './p5-context';
