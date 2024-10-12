@@ -18,7 +18,7 @@
 import P5Lib from 'p5';
 import { SketchContext } from 'context';
 
-describe('SketchContext tests', (): void => {
+describe('P5Context tests', (): void => {
     test('test default context', (): void => {
         expect(SketchContext.p5).toBeTruthy();
         expect(SketchContext.p5.width).toBe(0);
