@@ -15,9 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// *** TODO - move files according to keyboard mapper instructions
+// *** TODO - export everything from sketch-context namespace
 // TODO - initial aspect ratio matching
 // TODO - dynamic window matching aspect ratio
+// TODO - Screen with interaction mappers
 // TODO - complete issue #61: create canvas context class
     // TODO - P5Context
     // TODO - MouseMapper

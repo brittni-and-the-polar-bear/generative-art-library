@@ -15,9 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - move canvas directory to sketch directory
-// TODO - export everything from sketch-context namespace
-
 // NOTE: static functions
 export class KeyboardMapper {
     // TODO - map character to void function
