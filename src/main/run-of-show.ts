@@ -25,6 +25,7 @@
     // TODO - AspectRatio
     // TODO - AspectRatioHandler
     // TODO - ASPECT_RATIOS
+    // TODO - CanvasContext
 // TODO - new palette
 // TODO - next version release
 
