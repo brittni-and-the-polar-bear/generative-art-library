@@ -24,10 +24,8 @@ const config: JestConfigWithTsJest = {
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
-        '^canvas-context$': '<rootDir>/src/main/canvas',
         '^color$': '<rootDir>/src/main/color',
         '^color-contrast$': '<rootDir>/src/main/color/color-contrast',
-        '^context$': '<rootDir>/src/main/p5',
         '^discriminator$': '<rootDir>/src/main/discriminator',
         '^map$': '<rootDir>/src/main/map',
         '^math$': '<rootDir>/src/main/math',
@@ -35,6 +33,8 @@ const config: JestConfigWithTsJest = {
         '^palette-colors$': '<rootDir>/src/main/color/palette/palette-colors',
         '^palettes$': '<rootDir>/src/main/color/palette/palettes',
         '^random$': '<rootDir>/src/main/random',
+        '^shapes$': '<rootDir>/src/main/shapes',
+        '^sketch-context$': '<rootDir>/src/main/sketch',
         '^unit-test/shared$': '<rootDir>/src/test/shared'
     },
     testEnvironment: 'jsdom',
