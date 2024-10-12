@@ -205,7 +205,6 @@ export class CanvasContext {
     // TODO - docs
     // TODO - unit test
     private static updateCanvas(): void {
-        console.log('CanvasContext.updateCanvas');
         CanvasContext.decorateCanvas();
         CanvasRedrawEvent.publishRedraw();
     }

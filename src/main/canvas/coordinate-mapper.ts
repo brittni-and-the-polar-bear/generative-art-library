@@ -19,7 +19,6 @@ import { SketchContext } from 'context';
 import { CanvasContext } from './canvas-context';
 import P5Lib from "p5";
 
-// TODO - remove position functions from CanvasContext
 // TODO - documentation
 // TODO - release notes
 export class CoordinateMapper {
