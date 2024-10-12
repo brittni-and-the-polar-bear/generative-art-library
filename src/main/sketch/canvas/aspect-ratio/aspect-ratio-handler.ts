@@ -21,6 +21,7 @@ import { AspectRatio } from './aspect-ratio';
  * An AspectRatioHandler provides the proper width and height of a canvas
  * given an {@link AspectRatio} and resolution.
  *
+ * @category Sketch Context
  * @category Canvas Context
  */
 export class AspectRatioHandler {
@@ -52,6 +53,32 @@ export class AspectRatioHandler {
             this._width = Math.floor(unit * aspectRatio.WIDTH_RATIO);
             this._height = Math.floor(unit * aspectRatio.HEIGHT_RATIO);
         }
+    }
+
+    /**
+     * The calculated canvas width.
+     */
+    public get width(): number {
+        let w: number = 0;
+
+        if (this._width) {
+            w = this._width;
+        }
+
+        return w;
+    }
+
+    /**
+     * The calculated canvas height.
+     */
+    public get height(): number {
+        let h: number = 0;
+
+        if (this._height) {
+            h = this._height;
+        }
+
+        return h;
     }
 
     /**
@@ -91,31 +118,5 @@ export class AspectRatioHandler {
      */
     private calculateUnit(aspectRatio: AspectRatio, baseResolution: number): number {
         return baseResolution / Math.min(aspectRatio.WIDTH_RATIO, aspectRatio.HEIGHT_RATIO);
-    }
-
-    /**
-     * The calculated canvas width.
-     */
-    public get width(): number {
-        let w: number = 0;
-
-        if (this._width) {
-            w = this._width;
-        }
-
-        return w;
-    }
-
-    /**
-     * The calculated canvas height.
-     */
-    public get height(): number {
-        let h: number = 0;
-
-        if (this._height) {
-            h = this._height;
-        }
-
-        return h;
     }
 }
