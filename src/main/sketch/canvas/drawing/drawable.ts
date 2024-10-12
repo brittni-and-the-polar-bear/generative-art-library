@@ -17,8 +17,12 @@
 
 // TODO - release notes
 // TODO - docs
+/**
+ * @category Sketch Context
+ * @category Sketch Context: Drawing
+ */
 export interface Drawable {
     // TODO - release notes
     // TODO - docs
-    readonly draw: () => void;
+    draw(): void;
 }
