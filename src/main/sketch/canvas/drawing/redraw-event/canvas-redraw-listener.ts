@@ -15,10 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Drawable } from './drawable';
+import { Drawable } from '../drawable';
 
 // TODO - release notes
 // TODO - docs
+/**
+ * @category Sketch Context
+ * @category Sketch Context: Drawing
+ * @category Sketch Context: Events
+ */
 export interface CanvasRedrawListener extends Drawable {
     // TODO - release notes
     // TODO - docs
