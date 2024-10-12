@@ -19,6 +19,7 @@
 // TODO - initial aspect ratio matching
 // TODO - dynamic window matching aspect ratio
 // TODO - complete issue #61: create canvas context class
+    // TODO - P5Context
 // TODO - new palette
 // TODO - next version release
 

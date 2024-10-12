@@ -15,7 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - rename sketch-context to p5-context
 // TODO - move canvas directory to sketch directory
 // TODO - export everything from sketch-context namespace
 
