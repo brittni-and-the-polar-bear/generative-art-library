@@ -15,10 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'canvas-context';
 export * from 'color';
 export * from 'color-contrast';
-export * from 'context';
 export * from 'discriminator';
 export * from 'map';
 export * from 'math';
@@ -26,4 +24,5 @@ export * from 'palette';
 export * from 'palette-colors';
 export * from 'palettes';
 export * from 'shapes';
+export * from 'sketch-context';
 export * from 'random';
