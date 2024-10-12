@@ -22,6 +22,9 @@
     // TODO - P5Context
     // TODO - MouseMapper
     // TODO - CoordinateMapper
+    // TODO - AspectRatio
+    // TODO - AspectRatioHandler
+    // TODO - ASPECT_RATIOS
 // TODO - new palette
 // TODO - next version release
 
