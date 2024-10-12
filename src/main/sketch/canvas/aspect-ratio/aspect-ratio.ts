@@ -18,6 +18,7 @@
 /**
  * Defines the width to height ratio of a canvas.
  *
+ * @category Sketch Context
  * @category Canvas Context
  */
 export interface AspectRatio {
