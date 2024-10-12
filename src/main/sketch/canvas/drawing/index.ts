@@ -15,5 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './aspect-ratio';
-export * from './drawing';
+export * from './redraw-event';
+
+export * from './coordinate-mapper';
+export * from './drawable';
