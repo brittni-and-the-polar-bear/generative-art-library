@@ -19,6 +19,11 @@ import { CanvasRedrawListener } from './canvas-redraw-listener';
 
 // TODO - release notes
 // TODO - docs
+/**
+ * @category Sketch Context
+ * @category Sketch Context: Drawing
+ * @category Sketch Context: Events
+ */
 export class CanvasRedrawEvent {
     private static readonly _LISTENERS: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
 
