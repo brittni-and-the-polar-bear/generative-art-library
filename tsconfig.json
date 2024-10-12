@@ -10,10 +10,8 @@
       "./src"
     ],
     "paths": {
-      "canvas-context": ["./src/main/canvas"],
       "color": ["./src/main/color"],
       "color-contrast": ["./src/main/color/color-contrast"],
-      "context": ["./src/main/p5"],
       "discriminator": ["./src/main/discriminator"],
       "map": ["./src/main/map"],
       "math": ["./src/main/math"],
@@ -22,6 +20,7 @@
       "palettes": ["./src/main/color/palette/palettes"],
       "random": ["./src/main/random"],
       "shapes": ["./src/main/shapes"],
+      "sketch-context": ["./src/main/sketch"],
       "unit-test/shared": ["./src/test/shared"]
     },
 
