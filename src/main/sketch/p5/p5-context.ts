@@ -25,12 +25,13 @@ const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
 });
 
 /**
- * The SketchContext provides static access to the p5.js sketch context.
+ * The P5Context provides static access to the p5.js sketch context.
  * This context allows access to all methods and variables of the p5.js library.
  *
  * @category p5
+ * @category Sketch
  */
-export class SketchContext {
+export class P5Context {
     /**
      * The underlying p5.js sketch context object.
      */
@@ -50,7 +51,7 @@ export class SketchContext {
     }
 
     /**
-     * @returns The current sketch context.<br/>
+     * The current sketch context.<br/>
      * If no context has been initialized, the method will return
      * an "empty" sketch context (0x0 canvas; no loop).
      */
