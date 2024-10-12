@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - move files according to keyboard mapper instructions
+// *** TODO - move files according to keyboard mapper instructions
 // TODO - initial aspect ratio matching
 // TODO - dynamic window matching aspect ratio
 // TODO - complete issue #61: create canvas context class
