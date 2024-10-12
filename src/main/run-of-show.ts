@@ -27,6 +27,8 @@
     // TODO - ASPECT_RATIOS
     // TODO - CanvasContext
     // TODO - Drawable
+    // TODO - CanvasRedrawEvent
+    // TODO - CanvasRedrawListener
 // TODO - new palette
 // TODO - next version release
 
