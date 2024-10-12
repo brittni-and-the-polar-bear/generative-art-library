@@ -15,12 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { SketchContext } from 'context';
-import { CanvasContext } from './canvas-context';
-import P5Lib from "p5";
+import P5Lib from 'p5';
+
+import { P5Context } from '../../p5-context';
+import { CanvasContext } from '../canvas-context';
 
 // TODO - documentation
 // TODO - release notes
+/**
+ * @category Sketch Context
+ * @category Sketch Context: Drawing
+ */
 export class CoordinateMapper {
     // TODO - unit test
     // TODO - release notes
@@ -46,7 +51,7 @@ export class CoordinateMapper {
      * The maximum visible x-axis value of the canvas.
      */
     public static get maxX(): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let max: number = p5.width;
 
         if (CanvasContext.isWebGL) {
@@ -62,7 +67,7 @@ export class CoordinateMapper {
      * The maximum visible y-axis value of the canvas.
      */
     public static get maxY(): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let max: number = p5.height;
 
         if (CanvasContext.isWebGL) {
@@ -78,7 +83,7 @@ export class CoordinateMapper {
      * The minimum visible x-axis value of the canvas.
      */
     public static get minX(): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let min: number = 0;
 
         if (CanvasContext.isWebGL) {
@@ -94,7 +99,7 @@ export class CoordinateMapper {
      * The minimum visible y-axis value of the canvas.
      */
     public static get minY(): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let min: number = 0;
 
         if (CanvasContext.isWebGL) {
@@ -123,7 +128,7 @@ export class CoordinateMapper {
      * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
     public static mapRatioToCanvasX(ratio: number): number {
-        return SketchContext.p5.map(ratio, 0, 1, CoordinateMapper.minX, CoordinateMapper.maxX);
+        return P5Context.p5.map(ratio, 0, 1, CoordinateMapper.minX, CoordinateMapper.maxX);
     }
 
     // TODO - unit test
@@ -136,21 +141,21 @@ export class CoordinateMapper {
      * @param ratio - The percentage expressed as a decimal number (e.g. 50% = 0.5)
      */
     public static mapRatioToCanvasY(ratio: number): number {
-        return SketchContext.p5.map(ratio, 0, 1, CoordinateMapper.minY, CoordinateMapper.maxY);
+        return P5Context.p5.map(ratio, 0, 1, CoordinateMapper.minY, CoordinateMapper.maxY);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests - are results constrained to 0 and 1?
     public static mapCanvasXToRatio(canvasX: number): number {
-        return SketchContext.p5.map(canvasX, CoordinateMapper.minX, CoordinateMapper.maxX, 0, 1);
+        return P5Context.p5.map(canvasX, CoordinateMapper.minX, CoordinateMapper.maxX, 0, 1);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests - are results constrained to 0 and 1?
     public static mapCanvasYToRatio(canvasY: number): number {
-        return SketchContext.p5.map(canvasY, CoordinateMapper.minY, CoordinateMapper.maxY, 0, 1);
+        return P5Context.p5.map(canvasY, CoordinateMapper.minY, CoordinateMapper.maxY, 0, 1);
     }
 
     // TODO - unit test
