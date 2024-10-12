@@ -20,7 +20,8 @@ import { AspectRatio } from './aspect-ratio';
 /**
  * Pre-set {@link AspectRatio} objects for easy access.
  *
- * @category Canvas Context
+ * @category Sketch Context
+ * @category Sketch Context: Canvas
  */
 export const ASPECT_RATIOS: Record<string, AspectRatio> = {
     MATCH: {

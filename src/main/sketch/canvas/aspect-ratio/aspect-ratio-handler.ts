@@ -22,7 +22,7 @@ import { AspectRatio } from './aspect-ratio';
  * given an {@link AspectRatio} and resolution.
  *
  * @category Sketch Context
- * @category Canvas Context
+ * @category Sketch Context: Canvas
  */
 export class AspectRatioHandler {
     /**
