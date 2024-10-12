@@ -21,6 +21,7 @@ import { CanvasRedrawListener } from './canvas-redraw-listener';
 // TODO - docs
 /**
  * @category Sketch Context
+ * @category Sketch Context: Canvas
  * @category Sketch Context: Drawing
  * @category Sketch Context: Events
  */

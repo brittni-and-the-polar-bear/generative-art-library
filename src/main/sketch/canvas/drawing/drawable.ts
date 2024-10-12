@@ -19,6 +19,7 @@
 // TODO - docs
 /**
  * @category Sketch Context
+ * @category Sketch Context: Canvas
  * @category Sketch Context: Drawing
  */
 export interface Drawable {

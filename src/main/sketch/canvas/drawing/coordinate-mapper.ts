@@ -24,6 +24,7 @@ import { CanvasContext } from '../canvas-context';
 // TODO - release notes
 /**
  * @category Sketch Context
+ * @category Sketch Context: Canvas
  * @category Sketch Context: Drawing
  */
 export class CoordinateMapper {

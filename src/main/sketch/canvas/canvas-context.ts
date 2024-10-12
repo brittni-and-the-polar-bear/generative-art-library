@@ -17,8 +17,7 @@
 
 import P5Lib from 'p5';
 
-import { SketchContext } from 'context';
-
+import { P5Context } from '../p5-context';
 import { ASPECT_RATIOS, AspectRatio, AspectRatioHandler } from './aspect-ratio';
 import { CanvasRedrawEvent } from './drawing';
 
@@ -28,7 +27,8 @@ import { CanvasRedrawEvent } from './drawing';
  * The CanvasContext provides static access to information and methods
  * for the running p5.js sketch canvas.
  *
- * @category Canvas Context
+ * @category Sketch Context
+ * @category Sketch Context: Canvas
  */
 export class CanvasContext {
     /**
@@ -73,7 +73,7 @@ export class CanvasContext {
             CanvasContext._aspectRatio = aspectRatio;
             CanvasContext._resolution = resolution;
 
-            const p5: P5Lib = SketchContext.p5;
+            const p5: P5Lib = P5Context.p5;
             const ratioHandler: AspectRatioHandler =
                 new AspectRatioHandler(CanvasContext._aspectRatio, CanvasContext._resolution);
             const width: number = ratioHandler.width;
@@ -114,7 +114,7 @@ export class CanvasContext {
      * Equivalent to a stroke of 1 in a 500x500 sketch.
      */
     public static get defaultStroke(): number {
-        const { p5 } = SketchContext;
+        const p5: P5Lib = P5Context.p5;
         const maxDimension: number = Math.max(p5.width, p5.height);
         return maxDimension * 0.002;
     }
@@ -151,7 +151,7 @@ export class CanvasContext {
     public static updateAspectRatio(aspectRatio: AspectRatio): void {
         CanvasContext._aspectRatio = aspectRatio;
 
-        const { p5 } = SketchContext;
+        const p5: P5Lib = P5Context.p5;
         const ratioHandler: AspectRatioHandler =
             new AspectRatioHandler(CanvasContext._aspectRatio,
                 CanvasContext._resolution);
@@ -171,7 +171,8 @@ export class CanvasContext {
      */
     public static updateResolution(resolution: number): void {
         CanvasContext._resolution = resolution;
-        const { p5 } = SketchContext;
+
+        const p5: P5Lib = P5Context.p5;
         const ratioHandler: AspectRatioHandler =
             new AspectRatioHandler(CanvasContext._aspectRatio,
                 CanvasContext._resolution);
@@ -187,7 +188,7 @@ export class CanvasContext {
      * size and aspect ratio and current browser window size.
      */
     private static decorateCanvas(): void {
-        const { p5 } = SketchContext;
+        const p5: P5Lib = P5Context.p5;
         const canvas: P5Lib.Element | null = p5.select('canvas');
 
         if (canvas) {

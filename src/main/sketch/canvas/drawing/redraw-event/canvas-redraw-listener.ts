@@ -21,6 +21,7 @@ import { Drawable } from '../drawable';
 // TODO - docs
 /**
  * @category Sketch Context
+ * @category Sketch Context: Canvas
  * @category Sketch Context: Drawing
  * @category Sketch Context: Events
  */
