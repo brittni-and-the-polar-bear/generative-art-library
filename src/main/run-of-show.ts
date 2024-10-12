@@ -21,6 +21,7 @@
 // TODO - complete issue #61: create canvas context class
     // TODO - P5Context
     // TODO - MouseMapper
+    // TODO - CoordinateMapper
 // TODO - new palette
 // TODO - next version release
 
