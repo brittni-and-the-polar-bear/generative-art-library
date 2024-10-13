@@ -15,47 +15,50 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { SketchContext } from 'context';
-
-import { CoordinateMapper } from "./coordinate-mapper";
+import { P5Context } from '../p5-context';
+import { CoordinateMapper } from '../canvas';
 
 // TODO - remove mouse function from CanvasContext
 // TODO - documentation
 // TODO - release notes
+/**
+ * @category Sketch Context
+ * @category Sketch Context: Mouse
+ */
 export class MouseMapper {
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseX(): number {
-        return MouseMapper.mapMouseXToCanvas(SketchContext.p5.mouseX);
+        return MouseMapper.mapMouseXToCanvas(P5Context.p5.mouseX);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseY(): number {
-        return MouseMapper.mapMouseYToCanvas(SketchContext.p5.mouseY);
+        return MouseMapper.mapMouseYToCanvas(P5Context.p5.mouseY);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseXRatio(): number {
-        return MouseMapper.mapMouseXToRatio(SketchContext.p5.mouseX);
+        return MouseMapper.mapMouseXToRatio(P5Context.p5.mouseX);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests???
     public static get mouseYRatio(): number {
-        return MouseMapper.mapMouseYToRatio(SketchContext.p5.mouseY);
+        return MouseMapper.mapMouseYToRatio(P5Context.p5.mouseY);
     }
 
     // TODO - documentation
     // TODO - release notes
     // TODO - unit tests
     public static mapMouseXToCanvas(mouseX: number): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         return p5.map(mouseX, 0, p5.width, CoordinateMapper.minX, CoordinateMapper.maxX);
     }
 
@@ -63,7 +66,7 @@ export class MouseMapper {
     // TODO - release notes
     // TODO - unit tests
     public static mapMouseYToCanvas(mouseY: number): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         return p5.map(mouseY, 0, p5.height, CoordinateMapper.minY, CoordinateMapper.maxY);
     }
 
@@ -72,7 +75,7 @@ export class MouseMapper {
     // TODO - unit tests
     // TODO - other tests - can you click outside the canvas?
     public static mapMouseXToRatio(mouseX: number): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         return p5.map(mouseX, 0, p5.width, 0, 1);
     }
 
@@ -81,7 +84,7 @@ export class MouseMapper {
     // TODO - unit tests
     // TODO - other tests - can you click outside the canvas?
     public static mapMouseYToRatio(mouseY: number): number {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         return p5.map(mouseY, 0, p5.height, 0, 1);
     }
 }
