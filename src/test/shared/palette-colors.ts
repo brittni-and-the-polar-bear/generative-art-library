@@ -37,6 +37,7 @@ export function checkForValidPaletteColor(pc: PaletteColor): void {
 }
 
 export const BLACK_HEXES: HexCollection = [
+    { hexString: '#000000' },
     { hexString: '#121212' }
 ];
 

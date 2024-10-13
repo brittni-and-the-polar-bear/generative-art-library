@@ -15,3 +15,26 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// #000000
+// 0°, 0%, 0%
+// 0, 0, 0
+// black
+// white-pass
+// luminance - 0
+
+import {PaletteColor} from 'palette';
+import {Discriminators} from 'discriminator';
+import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from "../palette-color-maps";
+import {ColorNameManager} from "color";
+
+export const PC_000000: PaletteColor = {
+    HEX: '#000000',
+    HSL: { H: 0, S: 0, L: 0 },
+    RGB: { R: 0, G: 0, B: 0 },
+    NAME: 'black',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+ALL_PALETTE_COLORS.setUndefinedKey(PC_000000.HEX, PC_000000);
+BLACK_PALETTE_COLORS.setUndefinedKey(PC_000000.HEX, PC_000000);
+ColorNameManager.addColor(PC_000000);
