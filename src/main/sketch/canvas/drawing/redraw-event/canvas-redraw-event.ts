@@ -15,6 +15,34 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export class CanvasRedrawEvent {
+import { CanvasRedrawListener } from './canvas-redraw-listener';
 
+// TODO - release notes
+// TODO - docs
+// TODO - unit tests
+/**
+ * @category Sketch Context
+ * @category Sketch Context: Canvas
+ * @category Sketch Context: Drawing
+ * @category Sketch Context: Events
+ */
+export class CanvasRedrawEvent {
+    // TODO - docs
+    private readonly _listeners: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
+
+    // TODO - release notes
+    // TODO - docs
+    // TODO - unit tests
+    public addListener(listener: CanvasRedrawListener): void {
+        this._listeners.add(listener);
+    }
+
+    // TODO - release notes
+    // TODO - docs
+    // TODO - unit tests
+    public publishRedraw(): void {
+        this._listeners.forEach((listener: CanvasRedrawListener): void => {
+            listener.canvasRedraw();
+        });
+    }
 }
