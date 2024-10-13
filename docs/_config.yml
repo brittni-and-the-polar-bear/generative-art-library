@@ -10,3 +10,9 @@ show_downloads: true
 
 include:
   - "_*.html"
+
+collections_dir: "./collections"
+
+collections:
+  palette_colors:
+    output: true
