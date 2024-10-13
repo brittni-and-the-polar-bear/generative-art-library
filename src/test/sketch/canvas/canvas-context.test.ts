@@ -266,4 +266,11 @@ describe('CanvasContext tests', (): void => {
         expect(p5.width).toBe(expectedWidth);
         expect(p5.height).toBe(expectedHeight);
     });
+
+    test('CanvasContext.buildCanvas() method - initial aspect ratio', (): void => {
+        CanvasContext.unlockCanvas();
+        CanvasContext.buildCanvas(ASPECT_RATIOS.INITIAL, 720);
+        expect(P5Context.p5.width).toBeTruthy();
+        expect(P5Context.p5.height).toBeTruthy();
+    });
 });

@@ -63,15 +63,25 @@ export class CanvasContext {
      * @param aspectRatio
      * @param resolution
      * @param lockCanvas - When `true`, the canvas will be locked after it has been created.
-     * @param canvasType - can be WEBGL ("webgl") or P2D ("p2d")
+     * @param canvasType - Can be WEBGL ("webgl") or P2D ("p2d").
      */
     public static buildCanvas(aspectRatio: AspectRatio,
                               resolution: number,
                               canvasType?: string,
                               lockCanvas?: boolean): void {
         if (!CanvasContext.lockedCanvas) {
-            CanvasContext._aspectRatio = aspectRatio;
             CanvasContext._resolution = resolution;
+
+            if (aspectRatio === ASPECT_RATIOS.INITIAL) {
+                const windowWidth: number = P5Context.p5.windowWidth;
+                const windowHeight: number = P5Context.p5.windowHeight;
+                const initialAspectRatio: AspectRatio | undefined =
+                    AspectRatioHandler.buildAspectRatioFromDimensions(windowWidth, windowHeight, 'initial');
+
+                CanvasContext._aspectRatio = initialAspectRatio ?? ASPECT_RATIOS.SQUARE;
+            } else {
+                CanvasContext._aspectRatio = aspectRatio;
+            }
 
             const p5: P5Lib = P5Context.p5;
             const ratioHandler: AspectRatioHandler =

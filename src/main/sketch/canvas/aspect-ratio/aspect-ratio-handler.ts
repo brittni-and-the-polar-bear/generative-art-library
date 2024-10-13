@@ -111,6 +111,37 @@ export class AspectRatioHandler {
         };
     }
 
+    // TODO - docs
+    // TODO - unit tests
+    // TODO - release notes
+    public static buildAspectRatioFromDimensions(width: number,
+                                                 height: number,
+                                                 name?: string): AspectRatio | undefined {
+        if (width < 1 || height < 1) {
+            return undefined;
+        }
+
+        const minDim: number = Math.min(width, height);
+        const widthRatioCalculated: number = width / minDim;
+        const heightRatioCalculated: number = height / minDim;
+        const widthRatio: number = parseFloat(widthRatioCalculated.toFixed(2));
+        const heightRatio: number = parseFloat(heightRatioCalculated.toFixed(2));
+
+        let ratioName: string;
+
+        if (name) {
+            ratioName = name;
+        } else {
+            ratioName = `${widthRatio}:${heightRatio}`;
+        }
+
+        return {
+            NAME: ratioName,
+            WIDTH_RATIO: widthRatio,
+            HEIGHT_RATIO: heightRatio
+        };
+    }
+
     /**
      * @param aspectRatio
      * @param baseResolution
