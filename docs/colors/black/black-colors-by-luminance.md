@@ -31,7 +31,16 @@ Color block links redirect to [Black Colors by Hex](./black-colors-by-hex.md) en
 
 [All Colors](../all-colors.md)
 
+[Fin.](#fin)
+
 ----
+
+<!-- luminance: 0.0 -->
+<div class="color-block" style="background: #000000;">
+  <a href="./black-colors-by-hex.html#black-000000">
+    <h2 class="color-block white-pass">black (#000000)</h2>
+  </a>
+</div>
 
 <!-- luminance: 0.006048833 -->
 <div class="color-block" style="background: #121212;">
@@ -43,4 +52,6 @@ Color block links redirect to [Black Colors by Hex](./black-colors-by-hex.md) en
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#black-colors-by-luminance)

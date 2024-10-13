@@ -33,9 +33,30 @@ Color block links redirect to
 
 # Table of Contents
 
-[dark tone ink](#dark-tone-ink-121212)
+[black (#000000)](#black-000000)
+
+[dark tone ink (#121212)](#dark-tone-ink-121212)
+
+[Fin.](#fin)
 
 ----
+
+# black (#000000)
+
+<div class="color-block" style="background: #000000;">
+  <a href="https://coolors.co/000000" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">black (#000000)</h2>
+  </a>
+</div>
+<br/>
+
+````typescript
+import { PC_000000 } from 'palette-colors';
+
+let name: string = PC_000000.NAME;
+````
+
+[Table of Contents](#table-of-contents)
 
 # dark tone ink (#121212)
 
@@ -56,4 +77,4 @@ let name: string = PC_121212.NAME;
 
 ----
 
-Fin.
+### Fin.
