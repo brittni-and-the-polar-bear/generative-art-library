@@ -33,27 +33,39 @@ import { CanvasRedrawEvent } from './drawing';
 export class CanvasContext {
     /**
      * When true, {@link buildCanvas} will not create a new canvas.
+     *
      * @defaultValue false
      */
     private static _lockedCanvas: boolean = false;
 
     /**
      * Is the canvas rendering mode set to WebGL?
+     *
      * @defaultValue false
      */
     private static _isWebGL: boolean = false;
 
     /**
      * Current {@link AspectRatio} of the canvas.
+     *
      * @defaultValue {@link ASPECT_RATIOS.SQUARE}
      */
     private static _aspectRatio: AspectRatio = ASPECT_RATIOS.SQUARE;
 
     /**
      * Current resolution of the canvas.
+     *
      * @defaultValue 1080
      */
     private static _resolution: number = 1080;
+
+    /**
+     * Should the {@link AspectRatio} of the canvas always
+     * match the aspect ratio of the browser window?
+     *
+     * @defaultValue false
+     */
+    private static _matchingWindowRatio: boolean = false;
 
     // TODO - update release notes
     /**
@@ -136,7 +148,11 @@ export class CanvasContext {
      * updated attributes.
      */
     public static resizeCanvas(): void {
-        CanvasContext.updateCanvas();
+        if (CanvasContext._matchingWindowRatio) {
+            CanvasContext.updateAspectRatio(ASPECT_RATIOS.MATCH);
+        } else {
+            CanvasContext.updateCanvas();
+        }
     }
 
     // TODO - unit test -> initial aspect ratio
@@ -182,11 +198,13 @@ export class CanvasContext {
     // TODO - documentation
     // TODO - unit test coverage
     private static set aspectRatio(aspectRatio: AspectRatio) {
-        if (aspectRatio === ASPECT_RATIOS.INITIAL) {
+        if (aspectRatio === ASPECT_RATIOS.INITIAL || aspectRatio === ASPECT_RATIOS.MATCH) {
             CanvasContext._aspectRatio = CanvasContext.getWindowAspectRatio();
         } else {
             CanvasContext._aspectRatio = aspectRatio;
         }
+
+        CanvasContext._matchingWindowRatio = (aspectRatio === ASPECT_RATIOS.MATCH);
     }
 
     /**
