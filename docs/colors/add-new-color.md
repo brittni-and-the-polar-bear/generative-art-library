@@ -231,8 +231,6 @@ Add the color as a new constant to the release notes draft markdown file.
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
- *
- * @source
  */
 declare const PC_BC010A: PaletteColor;
 ```
@@ -260,8 +258,6 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
- *
- * @source
  */
 export const PC_BC010A: PaletteColor = {
     HEX: '#BC010A',
