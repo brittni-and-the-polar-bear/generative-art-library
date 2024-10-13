@@ -25,10 +25,8 @@
 {% for color in site.palette_colors %}
   {%- if color.color_category == page_category -%}
     {%- assign lowercase_hex = color.hex | downcase -%}
-    
     <p>
       <a href="{{ color.url }}">Link</a>
     </p>
-    
   {%- endif -%}
 {% endfor %}
