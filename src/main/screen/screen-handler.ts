@@ -16,6 +16,7 @@
  */
 
 import { StringMap } from 'map';
+
 import { CanvasScreen } from './canvas-screen';
 
 // TODO - documentation
@@ -38,23 +39,21 @@ export class ScreenHandler {
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static setupAll(): void {
-        for (const screen of ScreenHandler._SCREENS.values) {
-            screen.setup();
+    public static set currentScreen(name: string) {
+        const screen: CanvasScreen | undefined = ScreenHandler._SCREENS.get(name);
+
+        if (screen) {
+            // ScreenHandler._currentScreen.deactivate();
+            ScreenHandler._currentScreen = screen;
+            ScreenHandler._currentScreen.activate();
         }
     }
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static set currentScreen(name: string) {
-        const screen: CanvasScreen | undefined = ScreenHandler._SCREENS.get(name);
-
-        if (screen && (screen.NAME !== ScreenHandler._currentScreen.NAME)) {
-            // ScreenHandler._currentScreen.deactivate();
-            ScreenHandler._currentScreen = screen;
-            ScreenHandler._currentScreen.activate();
-        }
+    public static addScreen(screen: CanvasScreen): boolean {
+        return ScreenHandler._SCREENS.setUndefinedKey(screen.NAME, screen);
     }
 
     // TODO - documentation

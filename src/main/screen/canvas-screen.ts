@@ -47,11 +47,6 @@ export abstract class CanvasScreen {
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public abstract setup(): void;
-
-    // TODO - documentation
-    // TODO - unit tests
-    // TODO - release notes
     public abstract draw(): void;
 
     // TODO - documentation
