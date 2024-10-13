@@ -18,8 +18,8 @@
 import P5Lib from 'p5';
 
 import { Color, ColorSelector, ColorSelectorType } from 'color';
-import { SketchContext } from 'context';
 import { Random, RandomSelector } from 'random';
+import { P5Context } from 'sketch-context';
 
 import { Palette } from './palette';
 import { PaletteColor } from './palette-color';
@@ -55,7 +55,7 @@ export class PaletteColorSelector extends ColorSelector {
         randomOrder?: boolean
     ) {
         super(PaletteColorSelector.buildName(palette), randomOrder);
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
 
         let count: number = colorCount ?? Random.randomInt(PaletteColorSelector.MIN_COLOR_COUNT, palette.COLORS.length + 1);
         count = p5.constrain(
@@ -121,7 +121,7 @@ export class PaletteColorSelector extends ColorSelector {
      * equal to the number of colors in the given palette.
      */
     private choosePaletteColors(palette: Palette, buildWithPaletteOrder: boolean, colorCount: number): void {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
 
         colorCount = p5.constrain(
             colorCount,
