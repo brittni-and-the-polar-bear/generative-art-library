@@ -21,6 +21,9 @@ import { AspectRatio } from './aspect-ratio';
 /**
  * Valid keys for the {@link ASPECT_RATIOS} record.
  * Each key corresponds to a pre-saved {@link AspectRatio} object.
+ *
+ * @category Sketch Context
+ * @category Sketch Context: Canvas
  */
 export enum AspectRatioName {
     /**
