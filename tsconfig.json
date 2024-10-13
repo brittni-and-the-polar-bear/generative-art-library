@@ -19,6 +19,7 @@
       "palette-colors": ["./src/main/color/palette/palette-colors"],
       "palettes": ["./src/main/color/palette/palettes"],
       "random": ["./src/main/random"],
+      "screen": ["./src/main/screen"],
       "shapes": ["./src/main/shapes"],
       "sketch-context": ["./src/main/sketch"],
       "unit-test/shared": ["./src/test/shared"]

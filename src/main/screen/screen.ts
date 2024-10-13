@@ -23,3 +23,7 @@
 // TODO - activate -> redraw canvas
 // TODO - deactivate
 // TODO - change screen???
+
+export class Screen {
+    private _isActive: boolean = false;
+}

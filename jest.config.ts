@@ -33,6 +33,7 @@ const config: JestConfigWithTsJest = {
         '^palette-colors$': '<rootDir>/src/main/color/palette/palette-colors',
         '^palettes$': '<rootDir>/src/main/color/palette/palettes',
         '^random$': '<rootDir>/src/main/random',
+        '^screen$': '<rootDir>/src/main/screen',
         '^shapes$': '<rootDir>/src/main/shapes',
         '^sketch-context$': '<rootDir>/src/main/sketch',
         '^unit-test/shared$': '<rootDir>/src/test/shared'
