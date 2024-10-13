@@ -37,7 +37,6 @@ export class CanvasRedrawEvent {
     // TODO - release notes
     // TODO - docs
     public static publishRedraw(): void {
-        console.log('CanvasRedrawEvent.publishRedraw');
         CanvasRedrawEvent._LISTENERS.forEach((listener: CanvasRedrawListener): void => {
             listener.canvasRedraw();
         });
