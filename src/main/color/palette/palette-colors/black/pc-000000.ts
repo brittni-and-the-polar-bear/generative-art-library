@@ -15,17 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #000000
-// 0°, 0%, 0%
-// 0, 0, 0
-// black
-// white-pass
-// luminance - 0
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {PaletteColor} from 'palette';
-import {Discriminators} from 'discriminator';
-import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from "../palette-color-maps";
-import {ColorNameManager} from "color";
+import { ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #000000;">
