@@ -18,13 +18,17 @@
   }
 </style>
 
-# Black Colors Collection Test
+<h1>Black Colors Collection Test</h1>
 
 {%- assign page_category = "black" -%}
 
 {% for color in site.palette_colors %}
   {%- if color.color_category == page_category -%}
     {%- assign lowercase_hex = color.hex | downcase -%}
-    <a href="{{ color.url }}">Link</a>
+    
+    <p>
+      <a href="{{ color.url }}">Link</a>
+    </p>
+    
   {%- endif -%}
 {% endfor %}
