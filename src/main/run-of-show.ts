@@ -15,7 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// *** TODO - fix build errors
 // TODO - initial aspect ratio matching
 // TODO - dynamic window matching aspect ratio
 // TODO - Screen with interaction mappers
