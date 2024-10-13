@@ -71,24 +71,17 @@ export class CanvasContext {
                               lockCanvas?: boolean): void {
         if (!CanvasContext.lockedCanvas) {
             CanvasContext._resolution = resolution;
+            CanvasContext.aspectRatio = aspectRatio;
 
-            if (aspectRatio === ASPECT_RATIOS.INITIAL) {
-                CanvasContext._aspectRatio = CanvasContext.getWindowAspectRatio();
-            } else {
-                CanvasContext._aspectRatio = aspectRatio;
-            }
-
-            const p5: P5Lib = P5Context.p5;
             const ratioHandler: AspectRatioHandler =
                 new AspectRatioHandler(CanvasContext._aspectRatio, CanvasContext._resolution);
-            const width: number = ratioHandler.width;
-            const height: number = ratioHandler.height;
+            const p5: P5Lib = P5Context.p5;
 
             if (canvasType && canvasType === p5.WEBGL) {
-                p5.createCanvas(width, height, p5.WEBGL);
+                p5.createCanvas(ratioHandler.width, ratioHandler.height, p5.WEBGL);
                 CanvasContext._isWebGL = true;
             } else {
-                p5.createCanvas(width, height);
+                p5.createCanvas(ratioHandler.width, ratioHandler.height);
                 CanvasContext._isWebGL = false;
             }
 
@@ -146,6 +139,7 @@ export class CanvasContext {
         CanvasContext.updateCanvas();
     }
 
+    // TODO - unit test -> initial aspect ratio
     /**
      * Update the current aspect ratio of the canvas to the given aspect ratio.
      * This method will resize the canvas and decorate it with the appropriate
@@ -154,16 +148,13 @@ export class CanvasContext {
      * @param aspectRatio
      */
     public static updateAspectRatio(aspectRatio: AspectRatio): void {
-        CanvasContext._aspectRatio = aspectRatio;
+        CanvasContext.aspectRatio = aspectRatio;
 
-        const p5: P5Lib = P5Context.p5;
         const ratioHandler: AspectRatioHandler =
-            new AspectRatioHandler(CanvasContext._aspectRatio,
-                CanvasContext._resolution);
-        const width: number = ratioHandler.width;
-        const height: number = ratioHandler.height;
+            new AspectRatioHandler(CanvasContext._aspectRatio, CanvasContext._resolution);
+        const p5: P5Lib = P5Context.p5;
 
-        p5.resizeCanvas(width, height);
+        p5.resizeCanvas(ratioHandler.width, ratioHandler.height);
         CanvasContext.updateCanvas();
     }
 
@@ -186,6 +177,16 @@ export class CanvasContext {
 
         p5.resizeCanvas(width, height);
         CanvasContext.updateCanvas();
+    }
+
+    // TODO - documentation
+    // TODO - unit test coverage
+    private static set aspectRatio(aspectRatio: AspectRatio) {
+        if (aspectRatio === ASPECT_RATIOS.INITIAL) {
+            CanvasContext._aspectRatio = CanvasContext.getWindowAspectRatio();
+        } else {
+            CanvasContext._aspectRatio = aspectRatio;
+        }
     }
 
     /**
