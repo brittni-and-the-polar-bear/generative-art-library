@@ -29,6 +29,8 @@
 // TODO     - CanvasRedrawEvent_Static
 // TODO     - CanvasRedrawListener
 // TODO     - CanvasRedrawEvent
+// TODO     - CanvasScreen
+// TODO     - ScreenHandler
 // TODO - new palette
 // TODO - next version release
 

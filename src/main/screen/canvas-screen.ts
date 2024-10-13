@@ -15,8 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { StringMap } from 'map';
-import { CanvasScreen } from './canvas-screen';
+// TODO - click event handler
+// TODO - hover handler
+// TODO - keyboard event handler
+// TODO - keyboard mapper
+
+import { CanvasRedrawEvent, CanvasRedrawListener } from 'sketch-context';
 
 // TODO - documentation
 // TODO - unit tests
@@ -24,64 +28,82 @@ import { CanvasScreen } from './canvas-screen';
 /**
  * @category Canvas Screen
  */
-export class ScreenHandler {
+export abstract class CanvasScreen {
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    private static readonly _SCREENS: StringMap<CanvasScreen> = new StringMap<CanvasScreen>();
+    private readonly _CANVAS_REDRAW_EVENT: CanvasRedrawEvent = new CanvasRedrawEvent();
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    private static _currentScreen: CanvasScreen;
+    private readonly _NAME: string;
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static setupAll(): void {
-        for (const screen of ScreenHandler._SCREENS.values) {
-            screen.setup();
-        }
+    // private _isActive: boolean = false;
+
+    // TODO - documentation
+    // TODO - unit tests
+    // TODO - release notes
+    public abstract setup(): void;
+
+    // TODO - documentation
+    // TODO - unit tests
+    // TODO - release notes
+    public abstract draw(): void;
+
+    // TODO - documentation
+    // TODO - unit tests
+    // TODO - release notes
+    public abstract mousePressed(): void;
+
+    // TODO - documentation
+    // TODO - unit tests
+    // TODO - release notes
+    public abstract keyPressed(): void;
+
+    // TODO - documentation
+    // TODO - unit tests
+    // TODO - release notes
+    protected constructor(name: string) {
+        this._NAME = name;
     }
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static set currentScreen(name: string) {
-        const screen: CanvasScreen | undefined = ScreenHandler._SCREENS.get(name);
-
-        if (screen && (screen.NAME !== ScreenHandler._currentScreen.NAME)) {
-            // ScreenHandler._currentScreen.deactivate();
-            ScreenHandler._currentScreen = screen;
-            ScreenHandler._currentScreen.activate();
-        }
+    public get NAME(): string {
+        return this._NAME;
     }
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static draw(): void {
-        ScreenHandler._currentScreen.draw();
+    public publishRedraw(): void {
+        this._CANVAS_REDRAW_EVENT.publishRedraw();
     }
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static mousePressed(): void {
-        ScreenHandler._currentScreen.mousePressed();
+    public addRedrawListener(listener: CanvasRedrawListener): void {
+        this._CANVAS_REDRAW_EVENT.addListener(listener);
     }
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static keyPressed(): void {
-        ScreenHandler._currentScreen.keyPressed();
+    public activate(): void {
+        // this._isActive = true;
+        this.publishRedraw();
     }
 
     // TODO - documentation
     // TODO - unit tests
     // TODO - release notes
-    public static publishRedraw(): void {
-        ScreenHandler._currentScreen.publishRedraw();
-    }
+    // public deactivate(): void {
+    //     this._isActive = false;
+    // }
 }

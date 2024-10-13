@@ -28,20 +28,20 @@ import { CanvasRedrawListener } from './canvas-redraw-listener';
  */
 export class CanvasRedrawEvent {
     // TODO - docs
-    private readonly _listeners: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
+    private readonly _LISTENERS: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
 
     // TODO - release notes
     // TODO - docs
     // TODO - unit tests
     public addListener(listener: CanvasRedrawListener): void {
-        this._listeners.add(listener);
+        this._LISTENERS.add(listener);
     }
 
     // TODO - release notes
     // TODO - docs
     // TODO - unit tests
     public publishRedraw(): void {
-        this._listeners.forEach((listener: CanvasRedrawListener): void => {
+        this._LISTENERS.forEach((listener: CanvasRedrawListener): void => {
             listener.canvasRedraw();
         });
     }
