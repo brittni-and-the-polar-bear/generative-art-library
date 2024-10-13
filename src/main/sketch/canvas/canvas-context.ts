@@ -19,7 +19,7 @@ import P5Lib from 'p5';
 
 import { P5Context } from '../p5-context';
 import { ASPECT_RATIOS, AspectRatio, AspectRatioHandler } from './aspect-ratio';
-import { CanvasRedrawEvent } from './drawing';
+import { CanvasRedrawEvent_Static } from './drawing';
 
 // TODO - Update release notes
 // TODO - update unit tests
@@ -231,7 +231,7 @@ export class CanvasContext {
     // TODO - unit test
     private static updateCanvas(): void {
         CanvasContext.decorateCanvas();
-        CanvasRedrawEvent.publishRedraw();
+        CanvasRedrawEvent_Static.publishRedraw();
     }
 
     // TODO - docs

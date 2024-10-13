@@ -25,19 +25,19 @@ import { CanvasRedrawListener } from './canvas-redraw-listener';
  * @category Sketch Context: Drawing
  * @category Sketch Context: Events
  */
-export class CanvasRedrawEvent {
+export class CanvasRedrawEvent_Static {
     private static readonly _LISTENERS: Set<CanvasRedrawListener> = new Set<CanvasRedrawListener>();
 
     // TODO - release notes
     // TODO - docs
     public static addListener(listener: CanvasRedrawListener): void {
-        CanvasRedrawEvent._LISTENERS.add(listener);
+        CanvasRedrawEvent_Static._LISTENERS.add(listener);
     }
 
     // TODO - release notes
     // TODO - docs
     public static publishRedraw(): void {
-        CanvasRedrawEvent._LISTENERS.forEach((listener: CanvasRedrawListener): void => {
+        CanvasRedrawEvent_Static._LISTENERS.forEach((listener: CanvasRedrawListener): void => {
             listener.canvasRedraw();
         });
     }

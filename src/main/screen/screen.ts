@@ -24,6 +24,6 @@
 // TODO - deactivate
 // TODO - change screen???
 
-export class Screen {
+export abstract class Screen {
     private _isActive: boolean = false;
 }

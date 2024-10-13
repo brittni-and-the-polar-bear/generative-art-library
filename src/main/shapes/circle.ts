@@ -20,7 +20,7 @@ import P5Lib from 'p5';
 import { Color } from 'color';
 import { Range } from 'math';
 import { Random } from 'random';
-import { CanvasContext, CanvasRedrawEvent, CanvasRedrawListener, CoordinateMapper, P5Context } from 'sketch-context';
+import { CanvasContext, CanvasRedrawEvent_Static, CanvasRedrawListener, CoordinateMapper, P5Context } from 'sketch-context';
 
 // TODO - release notes
 // TODO - docs
@@ -62,7 +62,7 @@ export class Circle implements CanvasRedrawListener {
         this.calculateCoordinates();
         this._fill = new Color(p5.color(255, 0, 0));
         this._stroke = new Color(p5.color(0, 0, 255));
-        CanvasRedrawEvent.addListener(this);
+        CanvasRedrawEvent_Static.addListener(this);
     }
 
     // TODO - docs
