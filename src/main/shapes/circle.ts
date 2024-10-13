@@ -16,23 +16,26 @@
  */
 
 import P5Lib from 'p5';
-import { Random } from 'random';
-import { CanvasContext, CanvasRedrawEvent, CanvasRedrawListener, CoordinateMapper } from 'canvas-context';
-import { Range } from 'math';
-import { SketchContext } from 'context';
+
 import { Color } from 'color';
+import { Range } from 'math';
+import { Random } from 'random';
+import { CanvasContext, CanvasRedrawEvent, CanvasRedrawListener, CoordinateMapper, P5Context } from 'sketch-context';
 
 // TODO - release notes
 // TODO - docs
 // TODO - unit tests
+/**
+ * @category Shapes
+ */
 export class Circle implements CanvasRedrawListener {
     private static _minDiameter: number = 5;
     private static _maxDiameter: number = 150;
     private static _pointCount: number = 50;
 
-    private _coordRatio_A: P5Lib.Vector = new P5Lib.Vector();
-    private _coordRatio_B: P5Lib.Vector = new P5Lib.Vector();
-    private _centerRatio: P5Lib.Vector = new P5Lib.Vector();
+    private _posA_ratio: P5Lib.Vector = new P5Lib.Vector();
+    private _posB_ratio: P5Lib.Vector = new P5Lib.Vector();
+    private _center_ratio: P5Lib.Vector = new P5Lib.Vector();
     private _coordinates: P5Lib.Vector[] = [];
 
     private _strokeMultiplier: number = 1;
@@ -54,7 +57,7 @@ export class Circle implements CanvasRedrawListener {
     // TODO - docs
     // TODO - unit tests
     public constructor() {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         this.randomizePosition();
         this.calculateCoordinates();
         this._fill = new Color(p5.color(255, 0, 0));
@@ -77,7 +80,7 @@ export class Circle implements CanvasRedrawListener {
     // TODO - docs
     // TODO - unit tests
     public draw(): void {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
 
         if (this._fill) {
             p5.fill(this._fill.color);
@@ -95,8 +98,8 @@ export class Circle implements CanvasRedrawListener {
         p5.beginShape();
 
         for (let i: number = 0; i < this._coordinates.length; i++) {
-            const coord: P5Lib.Vector = this._coordinates[i];
-            p5.vertex(coord.x, coord.y);
+            const vertex: P5Lib.Vector = this._coordinates[i];
+            p5.vertex(vertex.x, vertex.y);
         }
 
         p5.endShape(p5.CLOSE);
@@ -111,7 +114,7 @@ export class Circle implements CanvasRedrawListener {
     // TODO - docs
     // TODO - unit tests
     private randomizePosition(): void {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
 
         const xRange: Range = new Range(CoordinateMapper.minX, CoordinateMapper.maxX);
         const yRange: Range = new Range(CoordinateMapper.minY, CoordinateMapper.maxY);
@@ -119,7 +122,7 @@ export class Circle implements CanvasRedrawListener {
         // calculate coordinate A
         const x_A: number = Random.randomFloatInRange(xRange);
         const y_A: number = Random.randomFloatInRange(yRange);
-        this._coordRatio_A = CoordinateMapper.mapCanvasToRatio(new P5Lib.Vector(x_A, y_A));
+        this._posA_ratio = CoordinateMapper.mapCanvasToRatio(new P5Lib.Vector(x_A, y_A));
 
         // calculate angle and distance
         const theta: number = Random.randomFloatInRange(new Range(0, p5.TWO_PI));
@@ -128,24 +131,24 @@ export class Circle implements CanvasRedrawListener {
         // calculate coordinate B
         const x_B: number = x_A + (diameter * Math.cos(theta));
         const y_B: number = y_A + (diameter * Math.sin(theta));
-        this._coordRatio_B = CoordinateMapper.mapCanvasToRatio(new P5Lib.Vector(x_B, y_B));
+        this._posB_ratio = CoordinateMapper.mapCanvasToRatio(new P5Lib.Vector(x_B, y_B));
 
-        const centerRatio_X: number = (this._coordRatio_A.x + this._coordRatio_B.x) / 2.0;
-        const centerRatio_Y: number = (this._coordRatio_A.y + this._coordRatio_B.y) / 2.0;
-        this._centerRatio = new P5Lib.Vector(centerRatio_X, centerRatio_Y);
+        const centerX_ratio: number = (this._posA_ratio.x + this._posB_ratio.x) / 2.0;
+        const centerY_ratio: number = (this._posA_ratio.y + this._posB_ratio.y) / 2.0;
+        this._center_ratio = new P5Lib.Vector(centerX_ratio, centerY_ratio);
     }
 
     // TODO - docs
     // TODO - unit tests
     private calculateCoordinates(): void {
         this._coordinates = [];
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let theta: number = 0;
 
-        const coordA: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._coordRatio_A);
-        const coordB: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._coordRatio_B);
-        const center: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._centerRatio);
-        const radius: number = coordA.dist(coordB) / 2.0;
+        const posA: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._posA_ratio);
+        const posB: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._posB_ratio);
+        const center: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._center_ratio);
+        const radius: number = posA.dist(posB) / 2.0;
 
 
         for (let i: number = 0; i < Circle._pointCount; i++) {
