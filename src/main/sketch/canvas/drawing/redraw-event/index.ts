@@ -16,5 +16,4 @@
  */
 
 export * from './canvas-redraw-event';
-export * from './canvas-redraw-event_-static';
 export * from './canvas-redraw-listener';

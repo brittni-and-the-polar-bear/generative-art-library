@@ -26,7 +26,6 @@
 // TODO     - AspectRatioName
 // TODO     - CanvasContext
 // TODO     - Drawable
-// TODO     - CanvasRedrawEvent_Static
 // TODO     - CanvasRedrawListener
 // TODO     - CanvasRedrawEvent
 // TODO     - CanvasScreen
