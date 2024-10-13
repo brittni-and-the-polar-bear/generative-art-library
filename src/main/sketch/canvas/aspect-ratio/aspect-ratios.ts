@@ -65,7 +65,7 @@ export enum AspectRatioName {
     /**
      * The ratio for a 16:9 widescreen movie.
      */
-    WIDESCREEN = 'WIDESCREEN',
+    WIDESCREEN = 'WIDESCREEN'
 }
 
 /**
