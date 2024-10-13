@@ -27,6 +27,16 @@ import {Discriminators} from 'discriminator';
 import {ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS} from "../palette-color-maps";
 import {ColorNameManager} from "color";
 
+/**
+ * <div class="color-block" style="background: #000000;">
+ *     <a href="https://coolors.co/000000" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">black (#000000)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Black)
+ */
 export const PC_000000: PaletteColor = {
     HEX: '#000000',
     HSL: { H: 0, S: 0, L: 0 },
