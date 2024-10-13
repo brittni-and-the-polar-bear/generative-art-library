@@ -73,12 +73,7 @@ export class CanvasContext {
             CanvasContext._resolution = resolution;
 
             if (aspectRatio === ASPECT_RATIOS.INITIAL) {
-                const windowWidth: number = P5Context.p5.windowWidth;
-                const windowHeight: number = P5Context.p5.windowHeight;
-                const initialAspectRatio: AspectRatio | undefined =
-                    AspectRatioHandler.buildAspectRatioFromDimensions(windowWidth, windowHeight, 'initial');
-
-                CanvasContext._aspectRatio = initialAspectRatio ?? ASPECT_RATIOS.SQUARE;
+                CanvasContext._aspectRatio = CanvasContext.getWindowAspectRatio();
             } else {
                 CanvasContext._aspectRatio = aspectRatio;
             }
@@ -218,5 +213,16 @@ export class CanvasContext {
     private static updateCanvas(): void {
         CanvasContext.decorateCanvas();
         CanvasRedrawEvent.publishRedraw();
+    }
+
+    // TODO - docs
+    // TODO - check unit tests coverage
+    private static getWindowAspectRatio(): AspectRatio {
+        const windowWidth: number = P5Context.p5.windowWidth;
+        const windowHeight: number = P5Context.p5.windowHeight;
+        const windowAspectRatio: AspectRatio | undefined =
+            AspectRatioHandler.buildAspectRatioFromDimensions(windowWidth, windowHeight, 'window');
+
+        return (windowAspectRatio ?? ASPECT_RATIOS.SQUARE);
     }
 }
