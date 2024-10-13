@@ -19,16 +19,16 @@
 // TODO - dynamic window matching aspect ratio
 // TODO - Screen with interaction mappers
 // TODO - complete issue #61: create canvas context class
-    // TODO - P5Context
-    // TODO - MouseMapper
-    // TODO - CoordinateMapper
-    // TODO - AspectRatio
-    // TODO - AspectRatioHandler
-    // TODO - ASPECT_RATIOS
-    // TODO - CanvasContext
-    // TODO - Drawable
-    // TODO - CanvasRedrawEvent
-    // TODO - CanvasRedrawListener
+// TODO     - P5Context
+// TODO     - MouseMapper
+// TODO     - CoordinateMapper
+// TODO     - AspectRatio
+// TODO     - AspectRatioHandler
+// TODO     - ASPECT_RATIOS
+// TODO     - CanvasContext
+// TODO     - Drawable
+// TODO     - CanvasRedrawEvent
+// TODO     - CanvasRedrawListener
 // TODO - new palette
 // TODO - next version release
 

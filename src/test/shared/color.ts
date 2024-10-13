@@ -18,19 +18,19 @@
 import P5Lib from 'p5';
 
 import { Color, ColorSelector, ColorSelectorType } from 'color';
-import { SketchContext } from 'context';
+import { P5Context } from 'sketch-context';
 
 import { checkNumberWithinAmount } from './math';
 
 const hexPattern: RegExp = /^#[A-F|0-9]{6}$/;
 const hexWithAlphaPattern: RegExp = /^#[A-F|0-9]{8}$/;
 
-export const red: Color = new Color(SketchContext.p5.color(255, 0, 0));
-export const green: Color = new Color(SketchContext.p5.color(0, 255, 0));
-export const blue: Color = new Color(SketchContext.p5.color(0, 0, 255));
-export const cyan: Color = new Color(SketchContext.p5.color(0, 255, 255));
-export const magenta: Color = new Color(SketchContext.p5.color(255, 0, 255));
-export const yellow: Color = new Color(SketchContext.p5.color(255, 255, 0));
+export const red: Color = new Color(P5Context.p5.color(255, 0, 0));
+export const green: Color = new Color(P5Context.p5.color(0, 255, 0));
+export const blue: Color = new Color(P5Context.p5.color(0, 0, 255));
+export const cyan: Color = new Color(P5Context.p5.color(0, 255, 255));
+export const magenta: Color = new Color(P5Context.p5.color(255, 0, 255));
+export const yellow: Color = new Color(P5Context.p5.color(255, 255, 0));
 
 export interface ColorComponents {
     readonly r: number;
@@ -65,7 +65,7 @@ export function colorToColorComponents(c: Color): ColorComponents {
 }
 
 export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
-    const p5: P5Lib = SketchContext.p5;
+    const p5: P5Lib = P5Context.p5;
     return {
         r: Math.floor(p5.red(color)),
         g: Math.floor(p5.green(color)),

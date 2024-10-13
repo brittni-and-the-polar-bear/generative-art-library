@@ -19,11 +19,11 @@ import P5Lib from 'p5';
 
 import { Color } from 'color';
 import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
-import { SketchContext } from 'context';
 import { PC_0437F1, PC_0FFF4F, PC_121212, PC_FF6BB5 } from 'palette-colors';
+import { P5Context } from 'sketch-context';
 
 describe('color contrast assessor tests', (): void => {
-    const p5: P5Lib = SketchContext.p5;
+    const p5: P5Lib = P5Context.p5;
 
     test.each([
         {

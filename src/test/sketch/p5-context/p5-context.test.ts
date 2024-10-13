@@ -16,37 +16,38 @@
  */
 
 import P5Lib from 'p5';
-import { SketchContext } from 'context';
+
+import { P5Context } from 'sketch-context';
 
 describe('P5Context tests', (): void => {
     test('test default context', (): void => {
-        expect(SketchContext.p5).toBeTruthy();
-        expect(SketchContext.p5.width).toBe(0);
-        expect(SketchContext.p5.height).toBe(0);
-        expect(SketchContext.p5.color(255, 0, 0)).toBeTruthy();
+        expect(P5Context.p5).toBeTruthy();
+        expect(P5Context.p5.width).toBe(0);
+        expect(P5Context.p5.height).toBe(0);
+        expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
     });
 
     test('test initializing context', (): void => {
         const canvasSize: number = 100;
-        expect(SketchContext.p5).toBeTruthy();
-        SketchContext.initialize(new P5Lib((p: P5Lib) => {
+        expect(P5Context.p5).toBeTruthy();
+        P5Context.initialize(new P5Lib((p: P5Lib) => {
             p.setup = (): void => {
                 p.createCanvas(canvasSize, canvasSize);
             };
         }));
-        expect(SketchContext.p5.width).toBe(canvasSize);
-        expect(SketchContext.p5.height).toBe(canvasSize);
-        expect(SketchContext.p5.color(255, 0, 0)).toBeTruthy();
+        expect(P5Context.p5.width).toBe(canvasSize);
+        expect(P5Context.p5.height).toBe(canvasSize);
+        expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
 
         const newCanvasSize: number = 500;
-        expect(SketchContext.p5).toBeTruthy();
-        SketchContext.initialize(new P5Lib((p: P5Lib) => {
+        expect(P5Context.p5).toBeTruthy();
+        P5Context.initialize(new P5Lib((p: P5Lib) => {
             p.setup = (): void => {
                 p.createCanvas(newCanvasSize, newCanvasSize);
             };
         }));
-        expect(SketchContext.p5.width).toBe(canvasSize);
-        expect(SketchContext.p5.height).toBe(canvasSize);
-        expect(SketchContext.p5.color(255, 0, 0)).toBeTruthy();
+        expect(P5Context.p5.width).toBe(canvasSize);
+        expect(P5Context.p5.height).toBe(canvasSize);
+        expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
     });
 });

@@ -18,7 +18,7 @@
 import P5Lib from 'p5';
 
 import { Color, DefaultColorSelector } from 'color';
-import { SketchContext } from 'context';
+import { P5Context } from 'sketch-context';
 
 import {
     ColorComponents,
@@ -147,7 +147,7 @@ describe('ColorSelector tests', (): void => {
     });
 
     test('getBackgroundColor() method: all options', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents[] = [
@@ -180,7 +180,7 @@ describe('ColorSelector tests', (): void => {
     });
 
     test('getBackgroundColor() method: white only', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents = colorToColorComponents(new Color(p5.color(255)));
@@ -205,7 +205,7 @@ describe('ColorSelector tests', (): void => {
     });
 
     test('getBackgroundColor() method: black or white only', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents[] = [
@@ -244,7 +244,7 @@ describe('ColorSelector tests', (): void => {
     });
 
     test('getBackgroundColor() method: white or color only', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const colors: Color[] = [red];
         const selector: SampleSelector = new SampleSelector(colors);
         const expectedComponents: ColorComponents[] = [

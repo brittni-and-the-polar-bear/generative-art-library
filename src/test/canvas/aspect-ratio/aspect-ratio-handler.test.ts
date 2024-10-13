@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { AspectRatio, AspectRatioHandler } from 'canvas-context';
+import { AspectRatio, AspectRatioHandler } from 'sketch-context';
 
 describe('AspectRatioHandler tests', (): void => {
     test('AspectRatioHandler.buildAspectRatio', (): void => {

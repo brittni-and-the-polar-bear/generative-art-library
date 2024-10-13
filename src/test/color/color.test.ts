@@ -18,8 +18,8 @@
 import P5Lib from 'p5';
 
 import { Color } from 'color';
-import { SketchContext } from 'context';
 import { PC_0437F1, PC_0FFF4F, PC_7A00F5, PC_FF6BB5 } from 'palette-colors';
+import { P5Context } from 'sketch-context';
 
 import {
     ColorComponents,
@@ -33,7 +33,7 @@ const defaultColorName: string = 'black';
 
 describe('color tests', (): void => {
     test('Color.getHSLColor() method', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const h: number = 238;
         const s: number = 65;
         const l: number = 39;
@@ -50,7 +50,7 @@ describe('color tests', (): void => {
     });
 
     test('Color.getHSLAColor() method', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const h: number = 134;
         const s: number = 82;
         const l: number = 15;
@@ -69,13 +69,13 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            { color: new Color(SketchContext.p5.color(0)) },
-            { color: new Color(SketchContext.p5.color(200)) },
-            { color: new Color(SketchContext.p5.color(100, 0, 0)) },
-            { color: new Color(SketchContext.p5.color(0, 100, 0)) },
-            { color: new Color(SketchContext.p5.color(0, 0, 100)) },
-            { color: new Color(SketchContext.p5.color(100, 0, 100)) },
-            { color: new Color(SketchContext.p5.color(100, 0, 100, 50)) }
+            { color: new Color(P5Context.p5.color(0)) },
+            { color: new Color(P5Context.p5.color(200)) },
+            { color: new Color(P5Context.p5.color(100, 0, 0)) },
+            { color: new Color(P5Context.p5.color(0, 100, 0)) },
+            { color: new Color(P5Context.p5.color(0, 0, 100)) },
+            { color: new Color(P5Context.p5.color(100, 0, 100)) },
+            { color: new Color(P5Context.p5.color(100, 0, 100, 50)) }
         ]
     )('$# Color.copy() method',
         ({ color }): void => {
@@ -119,7 +119,7 @@ describe('color tests', (): void => {
     );
 
     test('Color constructor with grayscale (c) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const w: number = 153;
         const c: P5Lib.Color = p5.color(w);
         const expected: ColorComponents = {
@@ -134,7 +134,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with grayscale (c,a) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const w: number = 153;
         const a: number = 83;
         const c: P5Lib.Color = p5.color(w, a);
@@ -150,7 +150,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -167,7 +167,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b,a) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -218,7 +218,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with hex color code', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 255;
         const g: number = 61;
         const b: number = 181;
@@ -236,13 +236,13 @@ describe('color tests', (): void => {
 
     test.each(
         [
-            { color: new Color(SketchContext.p5.color(0)) },
-            { color: new Color(SketchContext.p5.color(200)) },
-            { color: new Color(SketchContext.p5.color(100, 0, 0)) },
-            { color: new Color(SketchContext.p5.color(0, 100, 0)) },
-            { color: new Color(SketchContext.p5.color(0, 0, 100)) },
-            { color: new Color(SketchContext.p5.color(100, 0, 100)) },
-            { color: new Color(SketchContext.p5.color(100, 0, 100, 50)) }
+            { color: new Color(P5Context.p5.color(0)) },
+            { color: new Color(P5Context.p5.color(200)) },
+            { color: new Color(P5Context.p5.color(100, 0, 0)) },
+            { color: new Color(P5Context.p5.color(0, 100, 0)) },
+            { color: new Color(P5Context.p5.color(0, 0, 100)) },
+            { color: new Color(P5Context.p5.color(100, 0, 100)) },
+            { color: new Color(P5Context.p5.color(100, 0, 100, 50)) }
         ]
     )('$# Color constructor with Color object: $color',
         ({ color }): void => {
@@ -253,7 +253,7 @@ describe('color tests', (): void => {
     );
 
     test('Color constructor with rgb (r,g,b) arguments', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 50;
         const g: number = 168;
         const b: number = 82;
@@ -271,7 +271,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b) arguments; r = 0', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 0;
         const g: number = 168;
         const b: number = 82;
@@ -289,7 +289,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b) arguments; g = 0', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 50;
         const g: number = 0;
         const b: number = 82;
@@ -307,7 +307,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b) arguments; b = 0', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 50;
         const g: number = 168;
         const b: number = 0;
@@ -325,7 +325,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b) arguments; all = 0', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 0;
         const g: number = 0;
         const b: number = 0;
@@ -343,7 +343,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b,a) arguments', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 50;
         const g: number = 168;
         const b: number = 82;
@@ -362,7 +362,7 @@ describe('color tests', (): void => {
     });
 
     test('Color constructor with rgb (r,g,b,a) arguments; a = 0', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 50;
         const g: number = 168;
         const b: number = 82;
@@ -381,7 +381,7 @@ describe('color tests', (): void => {
     });
 
     test('color setter with with grayscale (c) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const w: number = 153;
         const c: P5Lib.Color = p5.color(w);
         const expected: ColorComponents = {
@@ -398,7 +398,7 @@ describe('color tests', (): void => {
     });
 
     test('color setter with with grayscale (c,a) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const w: number = 153;
         const a: number = 83;
         const c: P5Lib.Color = p5.color(w, a);
@@ -416,7 +416,7 @@ describe('color tests', (): void => {
     });
 
     test('color setter with with rgb (r,g,b) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -435,7 +435,7 @@ describe('color tests', (): void => {
     });
 
     test('color setter with with rgb (r,g,b,a) color', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 212;
         const g: number = 28;
         const b: number = 132;
@@ -491,7 +491,7 @@ describe('color tests', (): void => {
     });
 
     test('color setter with with hex color code', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const r: number = 113;
         const g: number = 130;
         const b: number = 185;
@@ -667,7 +667,7 @@ describe('color tests', (): void => {
         { r: 128, g: 43, b: 78, a: 100, hex: '#802B4E' }
     ])('$# get hex: rgba($r, $g, $b, $a)',
         ({ r, g, b, a, hex }): void => {
-            const p5: P5Lib = SketchContext.p5;
+            const p5: P5Lib = P5Context.p5;
             let c: Color;
 
             if (a !== undefined) {
@@ -703,7 +703,7 @@ describe('color tests', (): void => {
         { r: 128, g: 43, b: 78, a: 100, hex: '#802B4E64' }
     ])('$# get hex with alpha: rgba($r, $g, $b, $a)',
         ({ r, g, b, a, hex }): void => {
-            const p5: P5Lib = SketchContext.p5;
+            const p5: P5Lib = P5Context.p5;
             let c: Color;
 
             if (a !== undefined) {

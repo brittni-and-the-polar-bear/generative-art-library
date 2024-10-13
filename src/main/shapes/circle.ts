@@ -150,7 +150,6 @@ export class Circle implements CanvasRedrawListener {
         const center: P5Lib.Vector = CoordinateMapper.mapRatioToCanvas(this._center_ratio);
         const radius: number = posA.dist(posB) / 2.0;
 
-
         for (let i: number = 0; i < Circle._pointCount; i++) {
             const x: number = center.x + (radius * Math.cos(theta));
             const y: number = center.y + (radius * Math.sin(theta));

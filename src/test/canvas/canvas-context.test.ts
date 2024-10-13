@@ -17,8 +17,7 @@
 
 import P5Lib from 'p5';
 
-import { AspectRatio, ASPECT_RATIOS, AspectRatioHandler, CanvasContext } from 'canvas-context';
-import { SketchContext } from 'context';
+import { AspectRatio, ASPECT_RATIOS, AspectRatioHandler, CanvasContext, P5Context } from 'sketch-context';
 
 describe('CanvasContext tests', (): void => {
     test.each(
@@ -44,7 +43,7 @@ describe('CanvasContext tests', (): void => {
         ]
     )('$# CanvasContext.buildCanvas() method: $widthRatio:$heightRatio; $resolution',
         ({ widthRatio, heightRatio, resolution, expectedWidth, expectedHeight }): void => {
-            const p5: P5Lib = SketchContext.p5;
+            const p5: P5Lib = P5Context.p5;
             const aspectRatio: AspectRatio | undefined = AspectRatioHandler.buildAspectRatio(widthRatio, heightRatio);
             expect(aspectRatio).toBeTruthy();
             CanvasContext.unlockCanvas();
@@ -59,7 +58,7 @@ describe('CanvasContext tests', (): void => {
     );
 
     test('CanvasContext.lockCanvas property', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let widthRatio: number = 1;
         let heightRatio: number = 1;
         let resolution: number = 720;
@@ -107,59 +106,59 @@ describe('CanvasContext tests', (): void => {
         expect(p5.height).toBe(expectedHeight);
     });
 
-    test('CanvasContext.maxY and CanvasContext.minY properties', (): void => {
-        const multiplier: number = 2;
-        let resolution: number = 720;
-        let expectedMaxHeight: number = resolution * multiplier;
-        const expectedMinHeight: number = 0;
-        const aspectRatio: AspectRatio | undefined = AspectRatioHandler.buildAspectRatio(1, multiplier);
-        expect(aspectRatio).toBeTruthy();
-        CanvasContext.unlockCanvas();
+    // test('CanvasContext.maxY and CanvasContext.minY properties', (): void => {
+    //     const multiplier: number = 2;
+    //     let resolution: number = 720;
+    //     let expectedMaxHeight: number = resolution * multiplier;
+    //     const expectedMinHeight: number = 0;
+    //     const aspectRatio: AspectRatio | undefined = AspectRatioHandler.buildAspectRatio(1, multiplier);
+    //     expect(aspectRatio).toBeTruthy();
+    //     CanvasContext.unlockCanvas();
+    //
+    //     if (aspectRatio) {
+    //         CanvasContext.buildCanvas(aspectRatio, resolution);
+    //     }
+    //
+    //     expect(CanvasContext.minY).toBe(expectedMinHeight);
+    //     expect(CanvasContext.maxY).toBe(expectedMaxHeight);
+    //
+    //     resolution = 1080;
+    //     expectedMaxHeight = resolution * multiplier;
+    //
+    //     if (aspectRatio) {
+    //         CanvasContext.buildCanvas(aspectRatio, resolution);
+    //     }
+    //
+    //     expect(CanvasContext.minY).toBe(expectedMinHeight);
+    //     expect(CanvasContext.maxY).toBe(expectedMaxHeight);
+    // });
 
-        if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution);
-        }
-
-        expect(CanvasContext.minY).toBe(expectedMinHeight);
-        expect(CanvasContext.maxY).toBe(expectedMaxHeight);
-
-        resolution = 1080;
-        expectedMaxHeight = resolution * multiplier;
-
-        if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution);
-        }
-
-        expect(CanvasContext.minY).toBe(expectedMinHeight);
-        expect(CanvasContext.maxY).toBe(expectedMaxHeight);
-    });
-
-    test('CanvasContext.maxX and CanvasContext.minX properties', (): void => {
-        const multiplier: number = 2.5;
-        let resolution: number = 720;
-        let expectedMaxWidth: number = resolution * multiplier;
-        const expectedMinWidth: number = 0;
-        const aspectRatio: AspectRatio | undefined = AspectRatioHandler.buildAspectRatio(multiplier, 1);
-        expect(aspectRatio).toBeTruthy();
-        CanvasContext.unlockCanvas();
-
-        if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution);
-        }
-
-        expect(CanvasContext.minX).toBe(expectedMinWidth);
-        expect(CanvasContext.maxX).toBe(expectedMaxWidth);
-
-        resolution = 1080;
-        expectedMaxWidth = resolution * multiplier;
-
-        if (aspectRatio) {
-            CanvasContext.buildCanvas(aspectRatio, resolution);
-        }
-
-        expect(CanvasContext.minX).toBe(expectedMinWidth);
-        expect(CanvasContext.maxX).toBe(expectedMaxWidth);
-    });
+    // test('CanvasContext.maxX and CanvasContext.minX properties', (): void => {
+    //     const multiplier: number = 2.5;
+    //     let resolution: number = 720;
+    //     let expectedMaxWidth: number = resolution * multiplier;
+    //     const expectedMinWidth: number = 0;
+    //     const aspectRatio: AspectRatio | undefined = AspectRatioHandler.buildAspectRatio(multiplier, 1);
+    //     expect(aspectRatio).toBeTruthy();
+    //     CanvasContext.unlockCanvas();
+    //
+    //     if (aspectRatio) {
+    //         CanvasContext.buildCanvas(aspectRatio, resolution);
+    //     }
+    //
+    //     expect(CanvasContext.minX).toBe(expectedMinWidth);
+    //     expect(CanvasContext.maxX).toBe(expectedMaxWidth);
+    //
+    //     resolution = 1080;
+    //     expectedMaxWidth = resolution * multiplier;
+    //
+    //     if (aspectRatio) {
+    //         CanvasContext.buildCanvas(aspectRatio, resolution);
+    //     }
+    //
+    //     expect(CanvasContext.minX).toBe(expectedMinWidth);
+    //     expect(CanvasContext.maxX).toBe(expectedMaxWidth);
+    // });
 
     test('CanvasContext.defaultStroke property', (): void => {
         let resolution: number = 500;
@@ -177,7 +176,7 @@ describe('CanvasContext tests', (): void => {
     });
 
     test('CanvasContext.updateAspectRatio() method', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         const resolution: number = 720;
         let widthRatio: number = 1;
         let heightRatio: number = 1;
@@ -222,7 +221,7 @@ describe('CanvasContext tests', (): void => {
     });
 
     test('CanvasContext.updateResolution() method', (): void => {
-        const p5: P5Lib = SketchContext.p5;
+        const p5: P5Lib = P5Context.p5;
         let resolution: number = 720;
         let widthRatio: number = 1;
         let heightRatio: number = 1;

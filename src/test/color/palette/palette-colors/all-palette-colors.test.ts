@@ -18,9 +18,9 @@
 import P5Lib from 'p5';
 
 import { Color } from 'color';
-import { SketchContext } from 'context';
 import { PaletteColor } from 'palette';
 import { ALL_PALETTE_COLORS } from 'palette-colors';
+import { P5Context } from 'sketch-context';
 
 import {
     ColorComponents,
@@ -135,7 +135,7 @@ describe('all palette colors', (): void => {
         ALL_HEXES
     )('$# - consistent color: $hexString',
         ({ hexString }): void => {
-            const p5: P5Lib = SketchContext.p5;
+            const p5: P5Lib = P5Context.p5;
             const c: PaletteColor | undefined = ALL_PALETTE_COLORS.get(hexString);
             expect(c).toBeTruthy();
 

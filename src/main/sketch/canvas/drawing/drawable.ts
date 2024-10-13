@@ -25,5 +25,5 @@
 export interface Drawable {
     // TODO - release notes
     // TODO - docs
-    draw(): void;
+    draw(): void
 }

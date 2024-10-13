@@ -22,5 +22,5 @@
 // TODO - release notes
 // TODO - unit tests
 export interface Clickable {
-    isClicked: (x: number, y: number) => boolean;
+    isClicked(x: number, y: number): boolean
 }

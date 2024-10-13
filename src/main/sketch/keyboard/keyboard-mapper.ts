@@ -16,12 +16,12 @@
  */
 
 // NOTE: static functions
-export class KeyboardMapper {
-    // TODO - map character to void function
-    // TODO - map keycode to void function
-    // TODO - capture key strokes to execute mapped functions
-    // TODO - lock mappings so they cannot be replaced
-    // TODO - method to set multiple mappings at once
-    // TODO - KeyMapping object/type/interface structure - (key/keycode, function, isLocked)
-    // TODO - Retrieve mappings for mobile UI
-}
+// export class KeyboardMapper {
+// TODO - map character to void function
+// TODO - map keycode to void function
+// TODO - capture key strokes to execute mapped functions
+// TODO - lock mappings so they cannot be replaced
+// TODO - method to set multiple mappings at once
+// TODO - KeyMapping object/type/interface structure - (key/keycode, function, isLocked)
+// TODO - Retrieve mappings for mobile UI
+// }

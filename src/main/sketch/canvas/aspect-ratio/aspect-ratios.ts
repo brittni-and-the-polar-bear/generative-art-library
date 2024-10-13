@@ -30,9 +30,9 @@ export const ASPECT_RATIOS: Record<string, AspectRatio> = {
         HEIGHT_RATIO: 0
     },
     INITIAL: {
-      NAME: 'initial',
-      WIDTH_RATIO: 0,
-      HEIGHT_RATIO: 0
+        NAME: 'initial',
+        WIDTH_RATIO: 0,
+        HEIGHT_RATIO: 0
     },
     PINTEREST_PIN: {
         NAME: '2:3',

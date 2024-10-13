@@ -28,5 +28,5 @@ import { Drawable } from '../drawable';
 export interface CanvasRedrawListener extends Drawable {
     // TODO - release notes
     // TODO - docs
-    canvasRedraw(): void;
+    canvasRedraw(): void
 }
