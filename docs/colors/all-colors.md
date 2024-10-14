@@ -8,6 +8,8 @@
 
 ## [Blue Colors](./blue/blue-colors-by-luminance.md)
 
+## [Brown Colors](./brown/brown-colors.md)
+
 ## [Gray Colors](./gray/gray-colors-by-luminance.md)
 
 ## [Green Colors](./green/green-colors-by-luminance.md)
