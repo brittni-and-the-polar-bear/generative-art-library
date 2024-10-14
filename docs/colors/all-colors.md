@@ -4,7 +4,7 @@
 
 ----
 
-## [Black Colors](./black/black-colors-by-luminance.md)
+## [Black Colors](./black/black-colors.md)
 
 ## [Blue Colors](./blue/blue-colors-by-luminance.md)
 
