@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1>{{ page.name }} (#{{ page.hex }})</h1>
+
+{%- assign lowercase_hex = page.hex | downcase -%}
+
+<div class="color-block" style="background: #{{ page.hex }};">
+    <a href="https://coolors.co/{{ lowercase_hex }}" target="_blank" rel="noopener noreferrer">
+        <h2 class="color-block {{ page.contrast }}">{{ page.name }} (#{{ page.hex }})</h2>
+    </a>
+</div>
+
+<div markdown="1">
+````typescript
+import { PC_{{ page.hex }} } from 'palette-colors';
+
+let name: string = PC_{{ page.hex }}.NAME;
+````
+</div>
