@@ -26,7 +26,7 @@
   {%- if color.color_category == page_category -%}
     {%- assign lowercase_hex = color.hex | downcase -%}
     <p>
-      <a href="{{ absolute_url }}/{{ color.url }}">Link</a>
+      <a href="{{ "/" | absolute_url }}/{{ color.url }}">Link</a>
     </p>
   {%- endif -%}
 {% endfor %}
