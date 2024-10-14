@@ -26,9 +26,9 @@
   {%- if color.color_category == page_category -%}
     {%- assign lowercase_hex = color.hex | downcase -%}
     <div class="color-block" style="background: #{{ color.hex }};">
-      <p>
-        <a href="../..{{ color.url }}">Link</a>
-      </p>
+      <a href="https://coolors.co/{{ lowercase_hex }}" target="_blank" rel="noopener noreferrer">
+        <h2 class="color-block {{ color.contrast }}">{{ color.name }} (#{{ color.hex }})</h2>
+      </a>
     </div>
   {%- endif -%}
 {% endfor %}
