@@ -11,11 +11,12 @@ layout: default
         <h2 class="color-block {{ page.contrast }}">{{ page.name }} (#{{ page.hex }})</h2>
     </a>
 </div>
+<br/>
 
 <div markdown="1">
-````typescript
-import { PC_{{ page.hex }} } from 'palette-colors';
+    ```typescript
+    import { PC_{{ page.hex }} } from 'palette-colors';
 
-let name: string = PC_{{ page.hex }}.NAME;
-````
+    let name: string = PC_{{ page.hex }}.NAME;
+    ```
 </div>
