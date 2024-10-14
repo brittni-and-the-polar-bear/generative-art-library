@@ -41,18 +41,26 @@ layout: default
     </a>
 </p>
 
+<p>
+    <a href="#fin">
+        Fin.
+    </a>
+</p>
+
 <hr/>
 
 {% for color in site.palette_colors %}
     {%- if color.color_category == page.color_category -%}
     {%- assign lowercase_hex = color.hex | downcase -%}
     <div class="color-block" style="background: #{{ color.hex }};">
-        <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palette_colors{{ color.url }}">
+        <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library{{ color.url }}">
             <h2 class="color-block {{ color.contrast }}">{{ color.name }} (#{{ color.hex }})</h2>
         </a>
     </div>
     {%- endif -%}
 {% endfor %}
+
+<br/>
 
 <hr/>
 
