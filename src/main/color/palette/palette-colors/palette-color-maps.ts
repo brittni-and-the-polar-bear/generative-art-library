@@ -54,7 +54,7 @@ export const BLUE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palett
  * A map of hex values to {@link PaletteColor} objects for all
  * brown palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/brown/brown-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/brown/brown-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Brown)
