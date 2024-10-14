@@ -13,10 +13,9 @@ layout: default
 </div>
 <br/>
 
-<div markdown="1">
-    ```typescript
-    import { PC_{{ page.hex }} } from 'palette-colors';
+{{
+"```typescript
+import { PC_{{ page.hex }} } from 'palette-colors';
 
-    let name: string = PC_{{ page.hex }}.NAME;
-    ```
-</div>
+let name: string = PC_{{ page.hex }}.NAME;
+```" | markdownify }}
