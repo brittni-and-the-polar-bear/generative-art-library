@@ -35,9 +35,24 @@ layout: default
     Color blocks link to individual color pages.
 </p>
 
-<a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html">All Colors</a>
+<p>
+    <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html">
+        All Colors
+    </a>
+</p>
 
 <hr/>
+
+{% for color in site.palette_colors %}
+    {%- if color.color_category == page.color_category -%}
+    {%- assign lowercase_hex = color.hex | downcase -%}
+    <div class="color-block" style="background: #{{ color.hex }};">
+        <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/palette_colors{{ color.url }}">
+            <h2 class="color-block {{ color.contrast }}">{{ color.name }} (#{{ color.hex }})</h2>
+        </a>
+    </div>
+    {%- endif -%}
+{% endfor %}
 
 <hr/>
 
