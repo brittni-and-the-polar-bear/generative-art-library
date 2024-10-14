@@ -13,9 +13,18 @@ layout: default
 </div>
 <br/>
 
-{{
-"```typescript
-import { PC_{{ page.hex }} } from 'palette-colors';
+{{ content }}
 
-let name: string = PC_{{ page.hex }}.NAME;
-```" | markdownify }}
+<hr/>
+
+<p>
+    <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/{{ page.color_category }}/{{ page.color_category }}-colors.html">
+        {{ page.color_category }} colors
+    </a>
+</p>
+
+<p>
+    <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html">
+        all colors
+    </a>
+</p>
