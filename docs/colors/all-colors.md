@@ -4,9 +4,11 @@
 
 ----
 
-## [Black Colors](./black/black-colors-by-luminance.md)
+## [Black Colors](./black/black-colors.md)
 
 ## [Blue Colors](./blue/blue-colors-by-luminance.md)
+
+## [Brown Colors](./brown/brown-colors.md)
 
 ## [Gray Colors](./gray/gray-colors-by-luminance.md)
 
