@@ -32,7 +32,7 @@ export const ALL_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palette
  * A map of hex values to {@link PaletteColor} objects for all
  * black palette colors.
  *
- * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/black/black-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/black/black-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
  *
  * @category Palette Color Collections
  * @category Palette Colors (Black)
