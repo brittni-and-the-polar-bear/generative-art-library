@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
  *
  * @see {@link BLUE_LILY_PALETTE}
  *
- * @category Palette Colors (Gray)
  * @category Palette Colors (All)
+ * @category Palette Colors (Gray)
  */
 export const PC_F0F3F4: PaletteColor = {
     HEX: '#F0F3F4',
@@ -41,6 +41,6 @@ export const PC_F0F3F4: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GRAY_PALETTE_COLORS.setUndefinedKey(PC_F0F3F4.HEX, PC_F0F3F4);
 ALL_PALETTE_COLORS.setUndefinedKey(PC_F0F3F4.HEX, PC_F0F3F4);
+GRAY_PALETTE_COLORS.setUndefinedKey(PC_F0F3F4.HEX, PC_F0F3F4);
 ColorNameManager.addColor(PC_F0F3F4);
