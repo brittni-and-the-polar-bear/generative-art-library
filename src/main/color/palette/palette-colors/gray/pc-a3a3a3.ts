@@ -25,6 +25,8 @@
 
 import {PaletteColor} from "palette";
 import {Discriminators} from "discriminator";
+import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from "../palette-color-maps";
+import {ColorNameManager} from "color";
 
 export const PC_A3A3A3: PaletteColor = {
     HEX: '#A3A3A3',
@@ -33,3 +35,7 @@ export const PC_A3A3A3: PaletteColor = {
     NAME: 'dark souls',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+ALL_PALETTE_COLORS.setUndefinedKey(PC_A3A3A3.HEX, PC_A3A3A3);
+GRAY_PALETTE_COLORS.setUndefinedKey(PC_A3A3A3.HEX, PC_A3A3A3);
+ColorNameManager.addColor(PC_A3A3A3);
