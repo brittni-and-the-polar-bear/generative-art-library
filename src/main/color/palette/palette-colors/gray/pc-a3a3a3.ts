@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's generative art library,
+ * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -15,7 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './pc-7e9594';
-export * from './pc-869498';
-export * from './pc-a3a3a3';
-export * from './pc-f0f3f4';
+// #a3a3a3
+// #A3A3A3
+// 0°, 0%, 64%
+// 163, 163, 163
+// dark souls
+// black-pass
+// luminance - 0.3662525956
+
+import {PaletteColor} from "palette";
+import {Discriminators} from "discriminator";
+
+export const PC_A3A3A3: PaletteColor = {
+    HEX: '#A3A3A3',
+    RGB: { R: 163, G: 163, B: 163 },
+    HSL: { H: 0, S: 0, L: 64 },
+    NAME: 'dark souls',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
