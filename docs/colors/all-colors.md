@@ -10,7 +10,7 @@
 
 ## [Brown Colors](./brown/brown-colors.md)
 
-## [Gray Colors](./gray/gray-colors-by-luminance.md)
+## [Gray Colors](./gray/gray-colors.md)
 
 ## [Green Colors](./green/green-colors-by-luminance.md)
 
