@@ -28,6 +28,16 @@ import {Discriminators} from "discriminator";
 import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from "../palette-color-maps";
 import {ColorNameManager} from "color";
 
+/**
+ * <div class="color-block" style="background: #A3A3A3;">
+ *     <a href="https://coolors.co/a3a3a3" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">dark souls (#A3A3A3)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Gray)
+ */
 export const PC_A3A3A3: PaletteColor = {
     HEX: '#A3A3A3',
     RGB: { R: 163, G: 163, B: 163 },
