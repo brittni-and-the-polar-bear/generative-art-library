@@ -15,18 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #a3a3a3
-// #A3A3A3
-// 0°, 0%, 64%
-// 163, 163, 163
-// dark souls
-// black-pass
-// luminance - 0.3662525956
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
 
-import {PaletteColor} from "palette";
-import {Discriminators} from "discriminator";
-import {ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS} from "../palette-color-maps";
-import {ColorNameManager} from "color";
+import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
 
 /**
  * <div class="color-block" style="background: #A3A3A3;">

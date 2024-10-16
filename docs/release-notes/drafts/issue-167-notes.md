@@ -63,6 +63,31 @@ declare const PC_000000: PaletteColor;
 
 [Table of Contents](#table-of-contents)
 
+## `PC_A3A3A3` (dark souls)
+
+<div class="color-block" style="background: #A3A3A3;">
+  <a href="https://coolors.co/a3a3a3" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">dark souls (#A3A3A3)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+/**
+ * <div class="color-block" style="background: #A3A3A3;">
+ *     <a href="https://coolors.co/a3a3a3" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">dark souls (#A3A3A3)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Gray)
+ */
+declare const PC_A3A3A3: PaletteColor;
+```
+
+[Table of Contents](#table-of-contents)
+
 ----
 
 # New Palettes
