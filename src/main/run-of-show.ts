@@ -15,9 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - Screen with interaction mappers
 // TODO - complete issue #61: create canvas context class
-// TODO     - P5Context
 // TODO     - MouseMapper
 // TODO     - CoordinateMapper
 // TODO     - AspectRatio
