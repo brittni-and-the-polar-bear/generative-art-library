@@ -18,7 +18,6 @@
 import { P5Context } from '../p5-context';
 import { CoordinateMapper } from '../canvas';
 
-// TODO - remove mouse function from CanvasContext
 // TODO - documentation
 // TODO - release notes
 /**
@@ -28,35 +27,30 @@ import { CoordinateMapper } from '../canvas';
 export class MouseMapper {
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests???
     public static get mouseX(): number {
         return MouseMapper.mapMouseXToCanvas(P5Context.p5.mouseX);
     }
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests???
     public static get mouseY(): number {
         return MouseMapper.mapMouseYToCanvas(P5Context.p5.mouseY);
     }
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests???
     public static get mouseXRatio(): number {
         return MouseMapper.mapMouseXToRatio(P5Context.p5.mouseX);
     }
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests???
     public static get mouseYRatio(): number {
         return MouseMapper.mapMouseYToRatio(P5Context.p5.mouseY);
     }
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests
     public static mapMouseXToCanvas(mouseX: number): number {
         const p5: P5Lib = P5Context.p5;
         return p5.map(mouseX, 0, p5.width, CoordinateMapper.minX, CoordinateMapper.maxX);
@@ -64,7 +58,6 @@ export class MouseMapper {
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests
     public static mapMouseYToCanvas(mouseY: number): number {
         const p5: P5Lib = P5Context.p5;
         return p5.map(mouseY, 0, p5.height, CoordinateMapper.minY, CoordinateMapper.maxY);
@@ -72,8 +65,6 @@ export class MouseMapper {
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests
-    // TODO - other tests - can you click outside the canvas?
     public static mapMouseXToRatio(mouseX: number): number {
         const p5: P5Lib = P5Context.p5;
         return p5.map(mouseX, 0, p5.width, 0, 1);
@@ -81,8 +72,6 @@ export class MouseMapper {
 
     // TODO - documentation
     // TODO - release notes
-    // TODO - unit tests
-    // TODO - other tests - can you click outside the canvas?
     public static mapMouseYToRatio(mouseY: number): number {
         const p5: P5Lib = P5Context.p5;
         return p5.map(mouseY, 0, p5.height, 0, 1);
