@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's generative art library,
+ * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -15,7 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './pc-7a00f5';
-export * from './pc-80007f';
-export * from './pc-aeaed6';
-export * from './pc-d6d6ff';
+// #80007f
+// #80007F
+// 300°, 100%, 25%
+// 128, 0, 127
+// philippine violet
+// white-pass
+// 0.061215003
+
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+export const PC_80007F: PaletteColor = {
+    HEX: '#80007F',
+    HSL: { H: 300, S: 100, L: 25 },
+    RGB: { R: 128, G: 0, B: 127 },
+    NAME: 'philippine violet',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
