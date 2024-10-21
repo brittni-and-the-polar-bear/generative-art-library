@@ -2,6 +2,8 @@
 
 [How to Add a New Color to the Library (Developer Instructions)](./add-new-color.md)
 
+[Fin.](#fin)
+
 ----
 
 ## [Black Colors](./black/black-colors.md)
@@ -20,8 +22,10 @@
 
 ## [Red Colors](./red/red-colors-by-luminance.md)
 
-## [White Colors](./white/white-colors-by-luminance.md)
+## [White Colors](./white/white-colors.md)
 
 ----
 
-Fin.
+### Fin.
+
+[Top](#all-colors)
