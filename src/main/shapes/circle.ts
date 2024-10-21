@@ -43,9 +43,9 @@ export class Circle implements CanvasRedrawListener {
     private _fill: Color | null;
     private _stroke: Color | null;
 
-    // TODO - build circle with center and diameter
-    // TODO - build circle with center (random diameter)
-    // TODO - build circle with coordA and coordB
+    // TODO - build circle with center and diameter (CANVAS and RATIO mode)
+    // TODO - build circle with center (random diameter) (CANVAS and RATIO mode)
+    // TODO - build circle with coordA and coordB (CANVAS and RATIO mode)
 
     // TODO - set fill
     // TODO - set stroke
@@ -54,6 +54,9 @@ export class Circle implements CanvasRedrawListener {
     // TODO - setFill builder method
     // TODO - setStroke builder method
     // TODO - setStrokeMultiplier builder method
+
+    // TODO - coordinates should only be re-calculated on redraw
+    // TODO - circle should be positioned using translate so circle can be easily moved without coordinate recalculations
 
     // TODO - docs
     // TODO - unit tests
