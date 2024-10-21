@@ -23,6 +23,8 @@
 // white-pass
 // 0.061215003
 
+// TODO - next step - documentation
+
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
