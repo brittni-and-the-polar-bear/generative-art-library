@@ -23,8 +23,11 @@
 // white-pass
 // 0.061215003
 
+import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
 
 export const PC_80007F: PaletteColor = {
     HEX: '#80007F',
@@ -33,3 +36,7 @@ export const PC_80007F: PaletteColor = {
     NAME: 'philippine violet',
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
+
+ALL_PALETTE_COLORS.setUndefinedKey(PC_80007F.HEX, PC_80007F);
+PURPLE_PALETTE_COLORS.setUndefinedKey(PC_80007F.HEX, PC_80007F);
+ColorNameManager.addColor(PC_80007F);
