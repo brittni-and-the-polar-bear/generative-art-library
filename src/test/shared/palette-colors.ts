@@ -80,6 +80,7 @@ export const PINK_HEXES: HexCollection = [
 
 export const PURPLE_HEXES: HexCollection = [
     { hexString: '#7A00F5' },
+    { hexString: '#80007F' },
     { hexString: '#AEAED6' },
     { hexString: '#D6D6FF' }
 ];
