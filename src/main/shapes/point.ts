@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's Generative Art Library,
+ * This file is a part of brittni and the polar bear's generative art library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -61,8 +61,8 @@ export class Point extends Shape {
     }
 
     private getPosRatio(x: number, y: number): P5Lib.Vector {
-        let xRatio: number = 0;
-        let yRatio: number = 0;
+        let xRatio: number;
+        let yRatio: number;
 
         if (Shape.coordinateMode == CoordinateMode.CANVAS) {
             xRatio = CoordinateMapper.mapCanvasXToRatio(x);
@@ -76,8 +76,8 @@ export class Point extends Shape {
     }
 
     private getPosRatioFromVector(pos: P5Lib.Vector): P5Lib.Vector {
-        let xRatio: number = 0;
-        let yRatio: number = 0;
+        let xRatio: number;
+        let yRatio: number;
 
         if (Shape.coordinateMode == CoordinateMode.CANVAS) {
             xRatio = CoordinateMapper.mapCanvasXToRatio(pos.x);
