@@ -41,9 +41,17 @@ export class Point extends Shape {
         } else if (arg1 && arg1 instanceof P5Lib.Vector) {
             pos.set(arg1);
         } else {
-            Coordinate.coordinateMode = CoordinateMode.CANVAS;
-            const x: number = Random.randomFloatInRange(new Range(CoordinateMapper.minX, CoordinateMapper.maxX));
-            const y: number = Random.randomFloatInRange(new Range(CoordinateMapper.minY, CoordinateMapper.maxY));
+            let x: number;
+            let y: number;
+
+            if (Coordinate.coordinateMode === CoordinateMode.RATIO) {
+                x = Random.randomFloatInRange(new Range(0, 1));
+                y = Random.randomFloatInRange(new Range(0, 1));
+            } else {
+                x = Random.randomFloatInRange(new Range(CoordinateMapper.minX, CoordinateMapper.maxX));
+                y = Random.randomFloatInRange(new Range(CoordinateMapper.minY, CoordinateMapper.maxY))
+            }
+
             pos.set(x ,y);
         }
 
