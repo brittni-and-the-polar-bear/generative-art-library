@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {ASPECT_RATIOS, CanvasContext, MouseMapper} from "sketch-context";
+import { ASPECT_RATIOS, CanvasContext, MouseMapper } from 'sketch-context';
 
 describe('MouseMapper', (): void => {
     const resolution: number = 720;
@@ -70,5 +70,3 @@ describe('MouseMapper', (): void => {
         expect(MouseMapper.mapMouseYToRatio(height * 2)).toBe(2);
     });
 });
-
-

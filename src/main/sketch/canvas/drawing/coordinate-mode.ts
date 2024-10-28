@@ -15,9 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './redraw-event';
+// TODO - documentation
+// TODO - release notes
+// TODO - unit tests?
+export enum CoordinateMode {
+    RATIO = 'ratio',
 
-export * from './coordinate';
-export * from './coordinate-mapper';
-export * from './coordinate-mode';
-export * from './drawable';
+    CANVAS = 'canvas'
+}

@@ -17,94 +17,57 @@
 
 import P5Lib from 'p5';
 
-import { Range } from 'math';
-import { Random } from 'random';
-import { CoordinateMapper, P5Context } from 'sketch-context';
+import {Range} from 'math';
+import {Random} from 'random';
+import {Coordinate, CoordinateMapper, CoordinateMode, P5Context} from 'sketch-context';
 
-import { CoordinateMode, Shape } from './shape';
+import {Shape} from './shape';
 
 // TODO - documentation
 // TODO - release notes
 // TODO - unit tests?
 export class Point extends Shape {
-    private _posRatio: P5Lib.Vector;
-    private _pos: P5Lib.Vector;
+    #coordinate: Coordinate = new Coordinate();
 
     public constructor(position: P5Lib.Vector);
     public constructor(x: number, y: number);
     public constructor();
     public constructor(arg1?: P5Lib.Vector | number, arg2?: number) {
         super();
+        const pos: P5Lib.Vector = new P5Lib.Vector();
 
         if (typeof arg1 === 'number' && typeof arg2 === 'number') {
-            this._posRatio = this.getPosRatio(arg1, arg2);
+            pos.set(arg1, arg2);
         } else if (arg1 && arg1 instanceof P5Lib.Vector) {
-            this._posRatio = this.getPosRatioFromVector(arg1);
+            pos.set(arg1);
         } else {
+            Coordinate.coordinateMode = CoordinateMode.CANVAS;
             const x: number = Random.randomFloatInRange(new Range(CoordinateMapper.minX, CoordinateMapper.maxX));
             const y: number = Random.randomFloatInRange(new Range(CoordinateMapper.minY, CoordinateMapper.maxY));
-            this._posRatio = new P5Lib.Vector(x ,y);
+            pos.set(x ,y);
         }
 
         this.fill = null;
-        this._pos = CoordinateMapper.mapRatioToCanvas(this._posRatio);
+        this.#coordinate.position = pos;
+    }
+
+    public override get position(): P5Lib.Vector {
+        return this.#coordinate.position;
     }
 
     public override draw(): void {
         const p5: P5Lib = P5Context.p5;
         this.selectStroke();
-        p5.point(this._pos);
+        this.selectFill();
+        Coordinate.coordinateMode = CoordinateMode.CANVAS;
+        p5.point(this.#coordinate.x, this.#coordinate.y);
     }
 
     public override canvasRedraw(): void {
-        this._pos = CoordinateMapper.mapRatioToCanvas(this._posRatio);
+        this.#coordinate.remap();
     }
 
-    private getPosRatio(x: number, y: number): P5Lib.Vector {
-        let xRatio: number = 0;
-        let yRatio: number = 0;
-
-        if (Shape.coordinateMode == CoordinateMode.CANVAS) {
-            xRatio = CoordinateMapper.mapCanvasXToRatio(x);
-            yRatio = CoordinateMapper.mapCanvasYToRatio(y);
-        } else {
-            xRatio = x;
-            yRatio = y;
-        }
-
-        return (new P5Lib.Vector(xRatio, yRatio));
-    }
-
-    private getPosRatioFromVector(pos: P5Lib.Vector): P5Lib.Vector {
-        let xRatio: number = 0;
-        let yRatio: number = 0;
-
-        if (Shape.coordinateMode == CoordinateMode.CANVAS) {
-            xRatio = CoordinateMapper.mapCanvasXToRatio(pos.x);
-            yRatio = CoordinateMapper.mapCanvasYToRatio(pos.y);
-        } else {
-            xRatio = pos.x;
-            yRatio = pos.y;
-        }
-
-        return (new P5Lib.Vector(xRatio, yRatio));
-    }
-
-    protected override get pos(): P5Lib.Vector {
-        return this._pos;
-    }
-
-    protected override get posRatio(): P5Lib.Vector {
-        return this._posRatio;
-    }
-
-    protected override set pos(pos: P5Lib.Vector) {
-        this._pos = pos;
-        this._posRatio = CoordinateMapper.mapCanvasToRatio(this._pos);
-    }
-
-    protected override set posRatio(posRatio: P5Lib.Vector) {
-        this._posRatio = posRatio;
-        this._pos = CoordinateMapper.mapRatioToCanvas(this._posRatio);
+    public override move(delta: P5Lib.Vector): void {
+        this.#coordinate.move(delta);
     }
 }

@@ -18,16 +18,7 @@
 import P5Lib from 'p5';
 
 import { Color } from 'color';
-import {CanvasContext, CanvasRedrawListener, P5Context} from 'sketch-context';
-
-// TODO - documentation
-// TODO - release notes
-// TODO - unit tests?
-export enum CoordinateMode {
-    RATIO = 'ratio',
-
-    CANVAS = 'canvas'
-}
+import { CanvasContext, CanvasRedrawListener, P5Context } from 'sketch-context';
 
 // TODO - documentation
 // TODO - release notes
@@ -42,38 +33,16 @@ export abstract class Shape implements CanvasRedrawListener {
         this._fill = new Color(255, 255, 255);
     }
 
-    private static _coordinateMode: CoordinateMode = CoordinateMode.CANVAS;
+    public abstract get position(): P5Lib.Vector;
 
     public abstract canvasRedraw(): void;
 
     public abstract draw(): void;
 
-    protected abstract get pos(): P5Lib.Vector;
-
-    protected abstract set pos(pos: P5Lib.Vector);
-
-    protected abstract get posRatio(): P5Lib.Vector;
-
-    protected abstract set posRatio(posRatio: P5Lib.Vector);
+    public abstract move(delta: P5Lib.Vector): void;
 
     public set fill(color: Color | null) {
         this._fill = color;
-    }
-
-    public get position(): P5Lib.Vector {
-        if (Shape.coordinateMode === CoordinateMode.CANVAS) {
-            return this.pos;
-        } else {
-            return this.posRatio;
-        }
-    }
-
-    public set position(position: P5Lib.Vector) {
-        if (Shape.coordinateMode === CoordinateMode.CANVAS) {
-            this.pos = position;
-        } else {
-            this.posRatio = position;
-        }
     }
 
     public set stroke(color: Color | null) {
@@ -82,18 +51,10 @@ export abstract class Shape implements CanvasRedrawListener {
 
     public get strokeMultiplier(): number {
         return this._strokeMultiplier;
-    };
+    }
 
     public set strokeMultiplier(stroke: number) {
         this._strokeMultiplier = stroke;
-    }
-
-    public static get coordinateMode(): CoordinateMode {
-        return Shape._coordinateMode;
-    }
-
-    public static set coordinateMode(mode: CoordinateMode) {
-        Shape._coordinateMode = mode;
     }
 
     protected selectFill(): void {
