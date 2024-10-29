@@ -33,9 +33,17 @@ export abstract class Shape implements CanvasRedrawListener {
         this._fill = new Color(255, 255, 255);
     }
 
-    public abstract get position(): P5Lib.Vector;
+    public abstract get x(): number;
+
+    public abstract set x(x: number);
+
+    public abstract get y(): number;
+
+    public abstract set y(y: number);
 
     public abstract set position(position: P5Lib.Vector);
+
+    public abstract get position(): undefined;
 
     public abstract canvasRedraw(): void;
 

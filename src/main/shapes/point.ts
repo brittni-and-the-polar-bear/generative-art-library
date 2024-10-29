@@ -59,8 +59,24 @@ export class Point extends Shape {
         this.#coordinate.position = pos;
     }
 
-    public override get position(): P5Lib.Vector {
-        return this.#coordinate.position;
+    get x(): number {
+        return this.#coordinate.x;
+    }
+
+    get y(): number {
+        return this.#coordinate.y;
+    }
+
+    override set x(x: number) {
+        this.#coordinate.x = x;
+    }
+
+    public override set y(y: number) {
+        this.#coordinate.y = y;
+    }
+
+    public override get position(): undefined {
+        return undefined;
     }
 
     public override set position(position: P5Lib.Vector) {

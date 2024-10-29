@@ -82,6 +82,10 @@ export class Coordinate {
         }
     }
 
+    public get position(): undefined {
+        return undefined;
+    }
+
     private set canvas(position: P5Lib.Vector) {
         this.#CANVAS.set(position);
         this.#RATIO.set(CoordinateMapper.mapCanvasToRatio(this.#CANVAS));
