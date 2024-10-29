@@ -63,6 +63,10 @@ export class Point extends Shape {
         return this.#coordinate.position;
     }
 
+    public override set position(position: P5Lib.Vector) {
+        this.#coordinate.position = position;
+    }
+
     public override draw(): void {
         const p5: P5Lib = P5Context.p5;
         this.selectStroke();

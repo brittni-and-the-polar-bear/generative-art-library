@@ -35,6 +35,8 @@ export abstract class Shape implements CanvasRedrawListener {
 
     public abstract get position(): P5Lib.Vector;
 
+    public abstract set position(position: P5Lib.Vector);
+
     public abstract canvasRedraw(): void;
 
     public abstract draw(): void;
