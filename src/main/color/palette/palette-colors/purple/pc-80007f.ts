@@ -15,14 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #80007f
-// #80007F
-// 300°, 100%, 25%
-// 128, 0, 127
-// philippine violet
-// white-pass
-// 0.061215003
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';

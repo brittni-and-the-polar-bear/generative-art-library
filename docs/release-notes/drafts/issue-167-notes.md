@@ -63,6 +63,31 @@ declare const PC_000000: PaletteColor;
 
 [Table of Contents](#table-of-contents)
 
+## `PC_80007F` (philippine violet)
+
+<div class="color-block" style="background: #80007F;">
+  <a href="https://coolors.co/80007f" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block white-pass">philippine violet (#80007F)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+/**
+ * <div class="color-block" style="background: #80007F;">
+ *     <a href="https://coolors.co/80007f" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">philippine violet (#80007F)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Purple)
+ */
+declare const PC_80007F: PaletteColor;
+```
+
+[Table of Contents](#table-of-contents)
+
 ## `PC_A3A3A3` (dark souls)
 
 <div class="color-block" style="background: #A3A3A3;">
