@@ -23,14 +23,22 @@
 // white-pass
 // 0.061215003
 
-// TODO - next step - documentation
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #80007F;">
+ *     <a href="https://coolors.co/80007f" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block white-pass">philippine violet (#80007F)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Purple)
+ */
 export const PC_80007F: PaletteColor = {
     HEX: '#80007F',
     HSL: { H: 300, S: 100, L: 25 },
