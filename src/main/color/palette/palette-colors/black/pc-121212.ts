@@ -41,6 +41,6 @@ export const PC_121212: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-BLACK_PALETTE_COLORS.setUndefinedKey(PC_121212.HEX, PC_121212);
 ALL_PALETTE_COLORS.setUndefinedKey(PC_121212.HEX, PC_121212);
+BLACK_PALETTE_COLORS.setUndefinedKey(PC_121212.HEX, PC_121212);
 ColorNameManager.addColor(PC_121212);

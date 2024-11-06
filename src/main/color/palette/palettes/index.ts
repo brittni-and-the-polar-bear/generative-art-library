@@ -20,4 +20,5 @@ export * from '../palette-maps';
 export * from './holidays';
 export * from './miscellaneous';
 export * from './nature';
+export * from './pride';
 export * from './sports';

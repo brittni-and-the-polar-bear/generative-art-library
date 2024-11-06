@@ -37,6 +37,7 @@ export function checkForValidPaletteColor(pc: PaletteColor): void {
 }
 
 export const BLACK_HEXES: HexCollection = [
+    { hexString: '#000000' },
     { hexString: '#121212' }
 ];
 
@@ -55,6 +56,7 @@ export const BROWN_HEXES: HexCollection = [
 export const GRAY_HEXES: HexCollection = [
     { hexString: '#7E9594' },
     { hexString: '#869498' },
+    { hexString: '#A3A3A3' },
     { hexString: '#F0F3F4' }
 ];
 
@@ -78,6 +80,7 @@ export const PINK_HEXES: HexCollection = [
 
 export const PURPLE_HEXES: HexCollection = [
     { hexString: '#7A00F5' },
+    { hexString: '#80007F' },
     { hexString: '#AEAED6' },
     { hexString: '#D6D6FF' }
 ];

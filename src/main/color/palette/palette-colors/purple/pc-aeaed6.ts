@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
@@ -29,8 +30,8 @@ import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps
  *
  * @see {@link WHITE_LILY_PALETTE}
  *
- * @category Palette Colors (Purple)
  * @category Palette Colors (All)
+ * @category Palette Colors (Purple)
  */
 export const PC_AEAED6: PaletteColor = {
     HEX: '#AEAED6',
@@ -40,5 +41,6 @@ export const PC_AEAED6: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PURPLE_PALETTE_COLORS.setUndefinedKey(PC_AEAED6.HEX, PC_AEAED6);
 ALL_PALETTE_COLORS.setUndefinedKey(PC_AEAED6.HEX, PC_AEAED6);
+PURPLE_PALETTE_COLORS.setUndefinedKey(PC_AEAED6.HEX, PC_AEAED6);
+ColorNameManager.addColor(PC_AEAED6);

@@ -15,4 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
+export * from './pc-000000';
 export * from './pc-121212';
