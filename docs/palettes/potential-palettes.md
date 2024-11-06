@@ -12,6 +12,7 @@
   - [valentine's day](#valentines-day)
 
 [miscellaneous](#miscellaneous)
+  - [color-hex](#color-hex)
   - [coolors](#coolors)
 
 [palette collections](#palette-collections)
@@ -53,6 +54,32 @@
 ----
 
 # miscellaneous
+
+## color-hex
+
+### [beautiful blues, from user gallifreyja](https://www.color-hex.com/color-palette/1294)
+
+<!-- Coolors Palette Widget -->
+<script data-id="009100981941973174">new CoolorsPaletteWidget("009100981941973174", ["011f4b","03396c","005b96","6497b1","b3cde0"]); </script>
+<br/>
+
+[Table of Contents](#table-of-contents)
+
+### [ice cream, from user live4today97](https://www.color-hex.com/color-palette/660)
+
+<!-- Coolors Palette Widget -->
+<script data-id="07748838413909895">new CoolorsPaletteWidget("07748838413909895", ["6b3e26","ffc5d9","c2f2d0","fdf5c9","ffcb85"]); </script>
+<br/>
+
+[Table of Contents](#table-of-contents)
+
+### [shades of teal, from user rachele2113](https://www.color-hex.com/color-palette/4666)
+
+<!-- Coolors Palette Widget -->
+<script data-id="010715036799882882">new CoolorsPaletteWidget("010715036799882882", ["b2d8d8","66b2b2","008080","006666","004c4c"]); </script>
+<br/>
+
+[Table of Contents](#table-of-contents)
 
 ## coolors
 
