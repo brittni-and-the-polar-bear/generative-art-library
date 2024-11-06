@@ -22,6 +22,7 @@ import {
     HOLIDAYS_PALETTES,
     MISCELLANEOUS_PALETTES,
     NATURE_PALETTES,
+    PRIDE_PALETTES,
     SPORTS_PALETTES
 } from 'palettes';
 
@@ -39,6 +40,7 @@ EXPECTED_PALETTES.push(
     ...(getPaletteArray(HOLIDAYS_PALETTES)),
     ...(getPaletteArray(MISCELLANEOUS_PALETTES)),
     ...(getPaletteArray(NATURE_PALETTES)),
+    ...(getPaletteArray(PRIDE_PALETTES)),
     ...(getPaletteArray(SPORTS_PALETTES))
 );
 

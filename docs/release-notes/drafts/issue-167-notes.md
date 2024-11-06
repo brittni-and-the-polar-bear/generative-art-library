@@ -117,6 +117,29 @@ declare const PC_A3A3A3: PaletteColor;
 
 # New Palettes
 
+## `ASEXUAL_FLAG_PALETTE`
+
+<!-- Coolors Palette Widget -->
+<script src="https://coolors.co/palette-widget/widget.js"></script>
+<script data-id="08264250835324647">new CoolorsPaletteWidget("08264250835324647", ["000000","a3a3a3","ffffff","80007f"],"asexual flag"); </script>
+<br/>
+
+```typescript
+/**
+ * <!-- Coolors Palette Widget -->
+ * <script data-id="08264250835324647">new CoolorsPaletteWidget("08264250835324647", ["000000","a3a3a3","ffffff","80007f"],"asexual flag"); </script>
+ *
+ * @see {@link PC_000000}
+ * @see {@link PC_A3A3A3}
+ * @see {@link PC_FFFFFF}
+ * @see {@link PC_80007F}
+ *
+ * @category Palettes (All)
+ * @category Palettes (Pride)
+ */
+declare const ASEXUAL_FLAG_PALETTE: Palette;
+```
+
 [Table of Contents](#table-of-contents)
 
 ----

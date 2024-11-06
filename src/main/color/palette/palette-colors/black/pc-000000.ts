@@ -28,6 +28,8 @@ import { ALL_PALETTE_COLORS, BLACK_PALETTE_COLORS } from '../palette-color-maps'
  *     </a>
  * </div>
  *
+ * @see {@link ASEXUAL_FLAG_PALETTE}
+ *
  * @category Palette Colors (All)
  * @category Palette Colors (Black)
  */

@@ -15,15 +15,23 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { StringMap } from 'map';
-import { Palette } from 'palette';
+import { PaletteColor } from 'palette';
+import { PC_000000, PC_80007F, PC_A3A3A3, PC_FFFFFF } from 'palette-colors';
+import { ASEXUAL_FLAG_PALETTE } from 'palettes';
 
-// TODO - release notes
-// TODO - documentation - link to GitHub pages
-/**
- * A map of palette names to {@link Palette} objects for all pride palettes.
- *
- * @category Palette Collections
- * @category Palettes (Pride)
- */
-export const PRIDE_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+import { checkForValidPalette } from 'unit-test/shared';
+
+const PALETTE_NAME: string = 'ASEXUAL_FLAG_PALETTE';
+
+describe('ASEXUAL_FLAG_PALETTE tests', (): void => {
+    const expectedColors: PaletteColor[] = [
+        PC_000000,
+        PC_A3A3A3,
+        PC_FFFFFF,
+        PC_80007F
+    ]
+
+    test(`${PALETTE_NAME} is valid`, (): void => {
+        checkForValidPalette(ASEXUAL_FLAG_PALETTE, expectedColors);
+    });
+});

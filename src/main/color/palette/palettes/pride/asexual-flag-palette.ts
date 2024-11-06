@@ -15,10 +15,25 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from "palette";
-import {Discriminators} from "discriminator";
-import {PC_000000, PC_80007F, PC_A3A3A3, PC_FFFFFF} from "palette-colors";
+import { Palette } from 'palette';
+import { Discriminators } from 'discriminator';
+import { PC_000000, PC_80007F, PC_A3A3A3, PC_FFFFFF } from 'palette-colors';
 
+import { ALL_PALETTES, PRIDE_PALETTES } from '../../palette-maps';
+
+/**
+ * <!-- Coolors Palette Widget -->
+ * <script src="https://coolors.co/palette-widget/widget.js"></script>
+ * <script data-id="08264250835324647">new CoolorsPaletteWidget("08264250835324647", ["000000","a3a3a3","ffffff","80007f"],"asexual flag"); </script>
+ *
+ * @see {@link PC_000000}
+ * @see {@link PC_A3A3A3}
+ * @see {@link PC_FFFFFF}
+ * @see {@link PC_80007F}
+ *
+ * @category Palettes (All)
+ * @category Palettes (Pride)
+ */
 export const ASEXUAL_FLAG_PALETTE: Palette = {
     NAME: 'asexual flag',
     SOURCE: 'flagcolorcodes: Asexual Flag Color Codes',
@@ -40,3 +55,6 @@ export const ASEXUAL_FLAG_PALETTE: Palette = {
         '#80007F': ['#FFFFFF']
     }
 };
+
+ALL_PALETTES.setUndefinedKey(ASEXUAL_FLAG_PALETTE.NAME, ASEXUAL_FLAG_PALETTE);
+PRIDE_PALETTES.setUndefinedKey(ASEXUAL_FLAG_PALETTE.NAME, ASEXUAL_FLAG_PALETTE);

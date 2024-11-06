@@ -15,15 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { StringMap } from 'map';
 import { Palette } from 'palette';
+import { ASEXUAL_FLAG_PALETTE, PRIDE_PALETTES } from 'palettes';
 
-// TODO - release notes
-// TODO - documentation - link to GitHub pages
-/**
- * A map of palette names to {@link Palette} objects for all pride palettes.
- *
- * @category Palette Collections
- * @category Palettes (Pride)
- */
-export const PRIDE_PALETTES: StringMap<Palette> = new StringMap<Palette>();
+import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
+
+const EXPECTED_PALETTES: { palette: Palette }[] = [
+    { palette:ASEXUAL_FLAG_PALETTE }
+];
+
+const MAP_NAME: string = 'PRIDE_PALETTES';
+
+describe('pride palette maps test', (): void => {
+    test(`valid string map: ${MAP_NAME}`, (): void => {
+        checkForValidStringMap(PRIDE_PALETTES, EXPECTED_PALETTES.length);
+    });
+
+    test.each(
+        EXPECTED_PALETTES
+    )(`$# palette successfully added to ${MAP_NAME} map: $palette.NAME`,
+        ({ palette }): void => {
+            checkForPaletteInMap(palette, PRIDE_PALETTES);
+        }
+    );
+});
