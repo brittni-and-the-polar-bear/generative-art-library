@@ -15,10 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './holidays';
-export * from './miscellaneous';
-export * from './nature';
-export * from './pride';
-export * from './sports';
+import { StringMap } from 'map';
+import { Palette } from 'palette';
 
-export * from './palette-maps';
+// TODO - unit test
+// TODO - release notes
+/**
+ * A map of palette names to {@link Palette} objects for all pride palettes.
+ *
+ * @category Palette Collections
+ * @category Palettes (Pride)
+ */
+export const PRIDE_PALETTES: StringMap<Palette> = new StringMap<Palette>();
