@@ -21,7 +21,7 @@ import { ASEXUAL_FLAG_PALETTE, PRIDE_PALETTES } from 'palettes';
 import { checkForPaletteInMap, checkForValidStringMap } from 'unit-test/shared';
 
 const EXPECTED_PALETTES: { palette: Palette }[] = [
-    { palette:ASEXUAL_FLAG_PALETTE }
+    { palette: ASEXUAL_FLAG_PALETTE }
 ];
 
 const MAP_NAME: string = 'PRIDE_PALETTES';

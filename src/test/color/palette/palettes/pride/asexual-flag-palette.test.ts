@@ -29,7 +29,7 @@ describe('ASEXUAL_FLAG_PALETTE tests', (): void => {
         PC_A3A3A3,
         PC_FFFFFF,
         PC_80007F
-    ]
+    ];
 
     test(`${PALETTE_NAME} is valid`, (): void => {
         checkForValidPalette(ASEXUAL_FLAG_PALETTE, expectedColors);
