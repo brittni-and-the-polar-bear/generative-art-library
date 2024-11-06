@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps
  *
  * @see {@link WHITE_LILY_PALETTE}
  *
- * @category Palette Colors (Purple)
  * @category Palette Colors (All)
+ * @category Palette Colors (Purple)
  */
 export const PC_D6D6FF: PaletteColor = {
     HEX: '#D6D6FF',
@@ -41,6 +41,6 @@ export const PC_D6D6FF: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PURPLE_PALETTE_COLORS.setUndefinedKey(PC_D6D6FF.HEX, PC_D6D6FF);
 ALL_PALETTE_COLORS.setUndefinedKey(PC_D6D6FF.HEX, PC_D6D6FF);
+PURPLE_PALETTE_COLORS.setUndefinedKey(PC_D6D6FF.HEX, PC_D6D6FF);
 ColorNameManager.addColor(PC_D6D6FF);

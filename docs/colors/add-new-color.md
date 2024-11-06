@@ -20,11 +20,9 @@
   * [Step 8, Part A: Add The Color Block `div`](#step-8-part-a-add-the-color-block-div)
   * [Step 8, Part B: Add the `@category` Annotations](#step-8-part-b-add-the-category-annotations)
 
-[Step 9: Add the New Color to the Color Category by Hex Markdown Page](#step-9-add-the-new-color-to-the-color-category-by-hex-markdown-page)
+[Step 9: Add the New Color to the Palette Colors Jekyll Collection](#step-9-add-the-new-color-to-the-palette-colors-jekyll-collection)
 
-[Step 10: Add the New Color to the Color Category by Luminance Markdown Page](#step-10-add-the-new-color-to-the-color-category-by-luminance-markdown-page)
-
-[Step 11: Add Color to the Release Notes](#step-11-add-color-to-the-release-notes)
+[Step 10: Add Color to the Release Notes](#step-10-add-color-to-the-release-notes)
 
 [Full `PaletteColor` File Example](#full-palettecolor-file-example)
 
@@ -154,58 +152,55 @@ Add `@category` annotations for the `Palette Colors (All)` category and the Pale
 
 [Table of Contents](#table-of-contents)
 
-# Step 9: Add the New Color to the Color Category by Hex Markdown Page
+# Step 9: Add the New Color to the Palette Colors Jekyll Collection
 
-Add an entry for the new color to the correct color category by hex markdown page.
-This entry will include the color block `div` and TypeScript example.
+Add a file for the new color to the correct color category in the `_palette_colors`
+Jekyll collection.  This file will include the name, hex value, and luminance of
+the color.
 
-Be sure to add the new markdown section to the Table of Contents.
-
-## Color Category by Hex Example Entry
+## Palette Colors Collection Example; white-pass contrast
 
 ````markdown
-# bird's eye (#BC010A)
-
-<div class="color-block" style="background: #BC010A;">
-  <a href="https://coolors.co/bc010a" target="_blank" rel="noopener noreferrer">
-    <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
-  </a>
-</div>
-<br/>
+---
+layout: "palette_color"
+title: "dark tone ink (#121212)"
+name: "dark tone ink"
+hex: "121212"
+luminance: 0.006048833
+contrast: "white-pass"
+color_category: "black"
+---
 
 ```typescript
-import { PC_BC010A } from 'palette-colors';
+import { PC_{{ page.hex }} } from 'palette-colors';
 
-let name: string = PC_BC010A.NAME;
+let name: string = PC_{{ page.hex }}.NAME;
 ```
+````
 
-[Table of Contents](#table-of-contents)
+## Palette Colors Collection Example; black-pass contrast
+
+````markdown
+---
+layout: "palette_color"
+title: "enoki (#FAFBEF)"
+name: "enoki"
+hex: "FAFBEF"
+luminance: 0.9555034902
+contrast: "black-pass"
+color_category: "white"
+---
+
+```typescript
+import { PC_{{ page.hex }} } from 'palette-colors';
+
+let name: string = PC_{{ page.hex }}.NAME;
+```
 ````
 
 [Table of Contents](#table-of-contents)
 
-# Step 10: Add the New Color to the Color Category by Luminance Markdown Page
-
-Add an entry for the new color to the correct color category by luminance markdown page.
-Entries should be ordered by luminance value, which can be calculated on
-<a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">Color Relative Luminance Calculator</a>.
-
-This entry will only include the color block `div`.
-
-## Color Category by Luminance Example Entry
-
-```markdown
-<!-- luminance: 0.10734989 -->
-<div class="color-block" style="background: #BC010A;">
-  <a href="./red-colors-by-hex.html#birds-eye-bc010a">
-    <h2 class="color-block white-pass">bird's eye (#BC010A)</h2>
-  </a>
-</div>
-```
-
-[Table of Contents](#table-of-contents)
-
-# Step 11: Add Color to the Release Notes
+# Step 10: Add Color to the Release Notes
 
 Add the color as a new constant to the release notes draft markdown file.
 
@@ -231,8 +226,6 @@ Add the color as a new constant to the release notes draft markdown file.
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
- *
- * @source
  */
 declare const PC_BC010A: PaletteColor;
 ```
@@ -260,8 +253,6 @@ import {ALL_PALETTE_COLORS, RED_PALETTE_COLORS} from '../palette-color-maps';
  *
  * @category Palette Colors (All)
  * @category Palette Colors (Red)
- *
- * @source
  */
 export const PC_BC010A: PaletteColor = {
     HEX: '#BC010A',

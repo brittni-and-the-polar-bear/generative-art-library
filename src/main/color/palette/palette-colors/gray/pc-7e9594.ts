@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, GRAY_PALETTE_COLORS } from '../palette-color-maps';
  *
  * @see {@link DALLAS_COWBOYS_PALETTE}
  *
- * @category Palette Colors (Gray)
  * @category Palette Colors (All)
+ * @category Palette Colors (Gray)
  */
 export const PC_7E9594: PaletteColor = {
     HEX: '#7E9594',
@@ -41,6 +41,6 @@ export const PC_7E9594: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-GRAY_PALETTE_COLORS.setUndefinedKey(PC_7E9594.HEX, PC_7E9594);
 ALL_PALETTE_COLORS.setUndefinedKey(PC_7E9594.HEX, PC_7E9594);
+GRAY_PALETTE_COLORS.setUndefinedKey(PC_7E9594.HEX, PC_7E9594);
 ColorNameManager.addColor(PC_7E9594);

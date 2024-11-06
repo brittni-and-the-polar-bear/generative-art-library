@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<h1 id="top">{{ page.color_category }} colors</h1>
+
+<p>
+    Colors are in numeric order by luminance value. Luminance values were calculated with the
+    <a href="https://contrastchecker.online/color-relative-luminance-calculator" target="_blank" rel="noopener noreferrer">
+        Color Relative Luminance Calculator
+    </a>.
+</p>
+
+<p>
+    Color blocks link to individual color pages.
+</p>
+
+<p>
+    <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html">
+        All Colors
+    </a>
+</p>
+
+<p>
+    <a href="#fin">
+        Fin.
+    </a>
+</p>
+
+<hr/>
+
+{% for color in site.palette_colors %}
+    {%- if color.color_category == page.color_category -%}
+    {%- assign lowercase_hex = color.hex | downcase -%}
+    <div class="color-block" style="background: #{{ color.hex }};">
+        <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library{{ color.url }}">
+            <h2 class="color-block {{ color.contrast }}">{{ color.name }} (#{{ color.hex }})</h2>
+        </a>
+    </div>
+    {%- endif -%}
+{% endfor %}
+
+<br/>
+
+<hr/>
+
+<h3 id="fin">Fin.</h3>
+
+<a href="#top">Top</a>

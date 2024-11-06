@@ -20,7 +20,7 @@ This project is currently in active development.
 ### actions
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/codeql.yml)
-[![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node.js.yml)
+[![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node-js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library/actions/workflows/node-js.yml)
 
 ----
 

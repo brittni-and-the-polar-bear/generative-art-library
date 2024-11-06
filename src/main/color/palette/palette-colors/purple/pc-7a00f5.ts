@@ -30,8 +30,8 @@ import { ALL_PALETTE_COLORS, PURPLE_PALETTE_COLORS } from '../palette-color-maps
  *
  * @see {@link BRITTNI_PALETTE}
  *
- * @category Palette Colors (Purple)
  * @category Palette Colors (All)
+ * @category Palette Colors (Purple)
  */
 export const PC_7A00F5: PaletteColor = {
     HEX: '#7A00F5',
@@ -41,6 +41,6 @@ export const PC_7A00F5: PaletteColor = {
     DISCRIMINATOR: Discriminators.PALETTE_COLOR
 };
 
-PURPLE_PALETTE_COLORS.setUndefinedKey(PC_7A00F5.HEX, PC_7A00F5);
 ALL_PALETTE_COLORS.setUndefinedKey(PC_7A00F5.HEX, PC_7A00F5);
+PURPLE_PALETTE_COLORS.setUndefinedKey(PC_7A00F5.HEX, PC_7A00F5);
 ColorNameManager.addColor(PC_7A00F5);
