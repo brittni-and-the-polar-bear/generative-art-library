@@ -1,6 +1,6 @@
 {
   "name": "@batpb/genart",
-  "version": "2.0.0-rainbow-waves-test-007",
+  "version": "2.0.0-rainbow-waves-test-008",
   "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
   "main": "./out/dist/batpb-genart.js",
   "module": "./out/dist/batpb-genart.mjs",

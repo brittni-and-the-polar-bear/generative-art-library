@@ -76,31 +76,35 @@ export class Coordinate {
 
     public set position(position: P5Lib.Vector) {
         if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
-            this.ratio = position;
+            this.#ratio = position;
         } else {
-            this.canvas = position;
+            this.#canvas = position;
         }
     }
 
-    public get position(): undefined {
-        return undefined;
+    public get position(): P5Lib.Vector {
+        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+            return this.#RATIO.copy();
+        } else {
+            return this.#CANVAS.copy();
+        }
     }
 
-    private set canvas(position: P5Lib.Vector) {
+    set #canvas(position: P5Lib.Vector) {
         this.#CANVAS.set(position);
         this.#RATIO.set(CoordinateMapper.mapCanvasToRatio(this.#CANVAS));
     }
 
-    private set ratio(position: P5Lib.Vector) {
+    set #ratio(position: P5Lib.Vector) {
         this.#RATIO.set(position);
         this.remap();
     }
 
-    public move(delta: P5Lib.Vector) {
+    public move(delta: P5Lib.Vector): void {
         if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
-            this.ratio = P5Lib.Vector.add(this.ratio, delta);
+            this.#ratio = P5Lib.Vector.add(this.#RATIO, delta);
         } else {
-            this.canvas = P5Lib.Vector.add(this.canvas, delta);
+            this.#canvas = P5Lib.Vector.add(this.#CANVAS, delta);
         }
     }
 
