@@ -85,9 +85,9 @@ export class Point extends Shape {
 
     public override draw(): void {
         const p5: P5Lib = P5Context.p5;
+        Coordinate.coordinateMode = CoordinateMode.CANVAS;
         this.selectStroke();
         this.selectFill();
-        Coordinate.coordinateMode = CoordinateMode.CANVAS;
         p5.point(this.#coordinate.x, this.#coordinate.y);
     }
 

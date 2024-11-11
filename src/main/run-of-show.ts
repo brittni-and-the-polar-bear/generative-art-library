@@ -100,3 +100,5 @@
 // TODO - issue #62: Weighted ColorSelectorManager
 // TODO - new palette
 // TODO - next version release
+
+// TODO - issue #187 - clockwise point order
