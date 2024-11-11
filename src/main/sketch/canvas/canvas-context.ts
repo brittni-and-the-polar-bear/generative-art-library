@@ -126,8 +126,8 @@ export class CanvasContext {
      */
     public static get defaultStroke(): number {
         const p5: P5Lib = P5Context.p5;
-        const maxDimension: number = Math.max(p5.width, p5.height);
-        return maxDimension * 0.002;
+        const minDimension: number = Math.min(p5.width, p5.height);
+        return minDimension * 0.002;
     }
 
     /**
