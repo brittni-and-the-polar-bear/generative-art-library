@@ -53,11 +53,11 @@ export class Coordinate {
         this.#RATIO = new P5Lib.Vector();
     }
 
-    public get coordinateMode(): CoordinateMode {
+    public get mode(): CoordinateMode {
         return this.#coordinateMode;
     }
 
-    public set coordinateMode(mode: CoordinateMode) {
+    public set mode(mode: CoordinateMode) {
         this.#coordinateMode = mode;
     }
 

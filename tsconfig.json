@@ -13,6 +13,7 @@
       "color": ["./src/main/color"],
       "color-contrast": ["./src/main/color/color-contrast"],
       "discriminator": ["./src/main/discriminator"],
+      "geometry": ["./src/main/geometry"],
       "map": ["./src/main/map"],
       "math": ["./src/main/math"],
       "palette": ["./src/main/color/palette"],
