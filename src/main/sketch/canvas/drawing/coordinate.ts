@@ -17,20 +17,35 @@
 
 import P5Lib from 'p5';
 
-import {CoordinateMode} from './coordinate-mode';
-import {CoordinateMapper} from './coordinate-mapper';
+import { CoordinateMode } from './coordinate-mode';
+import { CoordinateMapper } from './coordinate-mapper';
 
 // TODO - unit tests
 // TODO - documentation
 // TODO - release notes
 export class Coordinate {
-    static #coordinateMode: CoordinateMode = CoordinateMode.CANVAS;
-
     readonly #CANVAS: P5Lib.Vector;
     readonly #RATIO: P5Lib.Vector;
 
+    #coordinateMode: CoordinateMode = CoordinateMode.CANVAS;
+
+    /**
+     * @deprecated
+     */
+    static #coordinateM: CoordinateMode = CoordinateMode.CANVAS;
+
+    /**
+     * @deprecated
+     */
     public static set coordinateMode(mode: CoordinateMode) {
-        Coordinate.#coordinateMode = mode;
+        Coordinate.#coordinateM = mode;
+    }
+
+    /**
+     * @deprecated
+     */
+    public static get coordinateMode(): CoordinateMode {
+        return Coordinate.#coordinateM;
     }
 
     public constructor() {
@@ -38,8 +53,16 @@ export class Coordinate {
         this.#RATIO = new P5Lib.Vector();
     }
 
+    public get coordinateMode(): CoordinateMode {
+        return this.#coordinateMode;
+    }
+
+    public set coordinateMode(mode: CoordinateMode) {
+        this.#coordinateMode = mode;
+    }
+
     public get x(): number {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
             return this.#RATIO.x;
         } else {
             return this.#CANVAS.x;
@@ -47,7 +70,7 @@ export class Coordinate {
     }
 
     public set x(x: number) {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
             this.#RATIO.x = x;
             this.remap();
         } else {
@@ -57,7 +80,7 @@ export class Coordinate {
     }
 
     public get y(): number {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
             return this.#RATIO.y;
         } else {
             return this.#CANVAS.y;
@@ -65,7 +88,7 @@ export class Coordinate {
     }
 
     public set y(y: number) {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
             this.#RATIO.y = y;
             this.remap();
         } else {
@@ -74,34 +97,24 @@ export class Coordinate {
         }
     }
 
-    public set position(position: P5Lib.Vector) {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
-            this.#ratio = position;
-        } else {
-            this.#canvas = position;
-        }
-    }
-
     public get position(): P5Lib.Vector {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
             return this.#RATIO.copy();
         } else {
             return this.#CANVAS.copy();
         }
     }
 
-    set #canvas(position: P5Lib.Vector) {
-        this.#CANVAS.set(position);
-        this.#RATIO.set(CoordinateMapper.mapCanvasToRatio(this.#CANVAS));
-    }
-
-    set #ratio(position: P5Lib.Vector) {
-        this.#RATIO.set(position);
-        this.remap();
+    public set position(position: P5Lib.Vector) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
+            this.#ratio = position;
+        } else {
+            this.#canvas = position;
+        }
     }
 
     public move(delta: P5Lib.Vector): void {
-        if (Coordinate.#coordinateMode === CoordinateMode.RATIO) {
+        if (this.#coordinateMode === CoordinateMode.RATIO) {
             this.#ratio = P5Lib.Vector.add(this.#RATIO, delta);
         } else {
             this.#canvas = P5Lib.Vector.add(this.#CANVAS, delta);
@@ -110,5 +123,23 @@ export class Coordinate {
 
     public remap(): void {
         this.#CANVAS.set(CoordinateMapper.mapRatioToCanvas(this.#RATIO));
+    }
+
+    get #canvas(): undefined {
+        return undefined;
+    }
+
+    set #canvas(position: P5Lib.Vector) {
+        this.#CANVAS.set(position);
+        this.#RATIO.set(CoordinateMapper.mapCanvasToRatio(this.#CANVAS));
+    }
+
+    get #ratio(): undefined {
+        return undefined;
+    }
+
+    set #ratio(position: P5Lib.Vector) {
+        this.#RATIO.set(position);
+        this.remap();
     }
 }
