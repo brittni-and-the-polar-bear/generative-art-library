@@ -20,15 +20,15 @@ import P5Lib from 'p5';
 import { Random } from 'random';
 import { Coordinate, CoordinateMode } from 'sketch-context';
 
-import { PointDisplay } from '../display';
-import { Shape } from './shape';
+import {PointDisplay} from '../display';
+import {Shape, ShapeConfig} from './shape';
 
 // TODO - unit tests
 // TODO - documentation
 // TODO - release notes
-export interface PointConfig { // should inherit from ShapeConfig!
-    coordinateMode: CoordinateMode;
-    position?: P5Lib.Vector | { x: number, y: number };
+export interface PointConfig extends ShapeConfig {
+    readonly display: PointDisplay; // TODO - should this be optional?
+    readonly position?: P5Lib.Vector | { x: number, y: number };
     // display?: PointDisplay // Point Display Configuration Options
 }
 

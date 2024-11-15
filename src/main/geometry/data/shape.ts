@@ -21,6 +21,11 @@ import { CanvasRedrawListener, CoordinateMode } from 'sketch-context';
 
 import { ShapeDisplay } from '../display';
 
+export interface ShapeConfig {
+    readonly coordinateMode: CoordinateMode;
+    readonly display: ShapeDisplay;
+}
+
 // TODO - unit tests
 // TODO - documentation
 // TODO - release notes
