@@ -25,6 +25,5 @@ export * from 'palette';
 export * from 'palette-colors';
 export * from 'palettes';
 export * from 'screen';
-export { Point as SPoint, Shape as SShape, Circle as SCircle } from 'shapes';
 export * from 'sketch-context';
 export * from 'random';

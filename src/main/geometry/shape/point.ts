@@ -15,49 +15,43 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import P5Lib from 'p5';
-
-import { Random } from 'random';
-import { Coordinate, CoordinateMode } from 'sketch-context';
-
-import {PointDisplay} from '../display';
-import {Shape, ShapeConfig} from './shape';
+import {Geometry, GeometryConfig} from "./geometry";
+import {Coordinate, CoordinateMode, P5Context} from "sketch-context";
+import P5Lib from "p5";
+import {Random} from "random";
 
 // TODO - unit tests
 // TODO - documentation
-// TODO - release notes
-export interface PointConfig extends ShapeConfig {
-    readonly display: PointDisplay; // TODO - should this be optional?
+export interface PointConfig extends GeometryConfig {
     readonly position?: P5Lib.Vector | { x: number, y: number };
-    // display?: PointDisplay // Point Display Configuration Options
 }
 
 // TODO - unit tests
 // TODO - documentation
-// TODO - release notes
-export class Point extends Shape {
+export class Point extends Geometry {
     readonly #COORDINATE: Coordinate = new Coordinate();
 
     public constructor(config: PointConfig) {
-        super();
-
-        this.coordinateMode = config.coordinateMode;
+        super(config);
 
         if (config.position) {
             if (config.position instanceof P5Lib.Vector) {
                 this.#COORDINATE.position = config.position;
             } else {
-                this.#COORDINATE.position.x = config.position.x;
-                this.#COORDINATE.position.y = config.position.y;
+                this.#COORDINATE.x = config.position.x;
+                this.#COORDINATE.y = config.position.y;
             }
         } else {
-            this.coordinateMode = CoordinateMode.RATIO;
-            this.#COORDINATE.position.x = Random.randomFloat(0, 1);
-            this.#COORDINATE.position.y = Random.randomFloat(0, 1);
-            this.coordinateMode = config.coordinateMode;
+            this.#COORDINATE.mode = CoordinateMode.RATIO;
+            this.#COORDINATE.x = Random.randomFloat(0, 1);
+            this.#COORDINATE.y = Random.randomFloat(0, 1);
+            this.#COORDINATE.mode = config.coordinateMode;
         }
+    }
 
-        this.shapeDisplay = new PointDisplay(this.#COORDINATE);
+    public override set coordinateMode(mode: CoordinateMode) {
+        super.coordinateMode = mode;
+        this.#COORDINATE.mode = mode;
     }
 
     public override get position(): undefined {
@@ -77,15 +71,23 @@ export class Point extends Shape {
     }
 
     public override get y(): number {
-        return this.#COORDINATE.y;
+        return this.#COORDINATE.y
     }
 
     public override set y(y: number) {
         this.#COORDINATE.y = y;
     }
 
-    public override set coordinateMode(mode: CoordinateMode) {
-        super.coordinateMode = mode;
-        this.#COORDINATE.mode = mode;
+    public override canvasRedraw(): void {
+        this.#COORDINATE.remap();
+    }
+
+    public override draw(): void {
+        const p5: P5Lib = P5Context.p5;
+        const originalMode: CoordinateMode = this.coordinateMode;
+        this.coordinateMode = CoordinateMode.CANVAS;
+        this.style.applyStyle();
+        p5.point(this.#COORDINATE.x, this.#COORDINATE.y);
+        this.coordinateMode = originalMode;
     }
 }

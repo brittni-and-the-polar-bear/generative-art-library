@@ -15,6 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './data';
-export * from './display';
-export * from './movement';
+export * from './shape';
+export * from './style';

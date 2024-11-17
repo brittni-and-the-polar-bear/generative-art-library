@@ -97,12 +97,8 @@ export class Coordinate {
         }
     }
 
-    public get position(): P5Lib.Vector {
-        if (this.#coordinateMode === CoordinateMode.RATIO) {
-            return this.#RATIO.copy();
-        } else {
-            return this.#CANVAS.copy();
-        }
+    public get position(): undefined {
+        return undefined;
     }
 
     public set position(position: P5Lib.Vector) {

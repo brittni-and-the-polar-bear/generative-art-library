@@ -15,13 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { CanvasRedrawListener } from 'sketch-context';
-
-// TODO - unit tests
-// TODO - documentation
-// TODO - release notes
-export abstract class ShapeDisplay implements CanvasRedrawListener {
-    public abstract canvasRedraw(): void;
-
-    public abstract draw(): void;
-}
+export * from './geometry-style';

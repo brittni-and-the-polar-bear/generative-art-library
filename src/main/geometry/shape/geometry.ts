@@ -15,23 +15,23 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import P5Lib from "p5";
-
 import { CanvasRedrawListener, CoordinateMode } from 'sketch-context';
+import P5Lib from "p5";
+import { GeometryStyle } from "../style";
 
-import { ShapeDisplay } from '../display';
-
-export interface ShapeConfig {
+export interface GeometryConfig {
     readonly coordinateMode: CoordinateMode;
-    readonly display: ShapeDisplay;
+    readonly style?: GeometryStyle;
 }
 
-// TODO - unit tests
-// TODO - documentation
-// TODO - release notes
-export abstract class Shape implements CanvasRedrawListener {
-    #shapeDisplay: ShapeDisplay | null = null;
-    #coordinateMode: CoordinateMode = CoordinateMode.CANVAS;
+export abstract class Geometry implements CanvasRedrawListener {
+    #coordinateMode: CoordinateMode;
+    #style: GeometryStyle;
+
+    protected constructor(config: GeometryConfig) {
+        this.#coordinateMode = config.coordinateMode;
+        this.#style = config.style ?? (new GeometryStyle());
+    }
 
     public abstract get position(): undefined;
 
@@ -45,6 +45,10 @@ export abstract class Shape implements CanvasRedrawListener {
 
     public abstract set y(y: number);
 
+    public abstract canvasRedraw(): void;
+
+    public abstract draw(): void;
+
     public get coordinateMode(): CoordinateMode {
         return this.#coordinateMode;
     }
@@ -53,15 +57,11 @@ export abstract class Shape implements CanvasRedrawListener {
         this.#coordinateMode = mode;
     }
 
-    public canvasRedraw(): void {
-        this.#shapeDisplay?.canvasRedraw();
+    public get style(): GeometryStyle {
+        return this.#style;
     }
 
-    public draw(): void {
-        this.#shapeDisplay?.draw();
-    }
-
-    protected set shapeDisplay(display: ShapeDisplay) {
-        this.#shapeDisplay = display;
+    public set style(style: GeometryStyle) {
+        this.#style = style;
     }
 }

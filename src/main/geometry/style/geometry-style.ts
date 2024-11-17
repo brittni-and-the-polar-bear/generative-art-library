@@ -15,19 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import P5Lib from 'p5';
-
-import { Color } from 'color';
-import { CanvasContext, P5Context } from 'sketch-context';
+import {Color} from "color";
+import {CanvasContext, P5Context} from "sketch-context";
 
 // TODO - documentation
 // TODO - unit tests
-// TODO - release notes
-export class ShapeStyle {
+export class GeometryStyle {
     public fill: Color | null = new Color(255, 255, 255);
     public stroke: Color | null = new Color(0, 0, 0);
 
     #strokeMultiplier: number = 1;
+
+    public constructor(fill?: Color | null, stroke?: Color | null) {
+        this.fill = fill ?? null;
+        this.stroke = stroke ?? null;
+    }
 
     public get strokeMultiplier(): number {
         return this.#strokeMultiplier;
