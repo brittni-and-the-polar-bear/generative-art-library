@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import js from '@eslint/js';
+import eslint from '@eslint/js';
 
 import es_x from 'eslint-plugin-es-x';
 import node from 'eslint-plugin-n';
@@ -23,41 +23,26 @@ import security from 'eslint-plugin-security';
 
 import stylistic from '@stylistic/eslint-plugin'
 
-import typescript from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-
 import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
-    js.configs.recommended,
+    eslint.configs.recommended,
     es_x.configs['flat/restrict-to-es2022'],
     node.configs["flat/recommended"],
     security.configs.recommended,
     stylistic.configs['recommended-flat'],
-    ...tsEslint.configs.recommended,
     ...tsEslint.configs.recommendedTypeChecked,
-    ...tsEslint.configs.strict,
     ...tsEslint.configs.strictTypeChecked,
-    ...tsEslint.configs.stylistic,
     ...tsEslint.configs.strictTypeChecked,
     {
         languageOptions: {
-            parser: tsParser,
-            ecmaVersion: 6,
-            sourceType: 'script',
-
             parserOptions: {
-                projectService: {
-                    defaultProject: './tsconfig.json'
-                },
-            }
-        },
-        plugins: {
-            'es-x': es_x,
-            '@stylistic': stylistic,
-            '@typescript-eslint': typescript
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
+            },
         },
         rules: {
+            /* @eslint/js */
             'array-callback-return': ['error', {
                 checkForEach: true
             }],
@@ -111,9 +96,7 @@ export default tsEslint.config(
 
             'one-var': ['error', 'never'],
 
-            'n/no-missing-import': 'off',
-
-            'security/detect-object-injection': 'off',
+            /* @stylistic/eslint-plugin */
 
             '@stylistic/brace-style': ['error', '1tbs'],
 
@@ -143,11 +126,11 @@ export default tsEslint.config(
             '@stylistic/member-delimiter-style': ['error', {
                 multiline: {
                     delimiter: 'semi',
-                    requireLast: false
+                    requireLast: true
                 },
                 singleline: {
                     delimiter: 'semi',
-                    requireLast: false
+                    requireLast: true
                 }
             }],
 
@@ -163,14 +146,28 @@ export default tsEslint.config(
 
             '@stylistic/semi': ['error', 'always'],
 
+            /* eslint-plugin-security */
+
+            'security/detect-object-injection': 'off',
+
+            /* eslint-plugin-n */
+
+            'n/no-missing-import': 'off',
+
+            /* typescript-eslint */
+
             'dot-notation': 'off',
-            '@typescript-eslint/dot-notation': 'error',
+            '@typescript-eslint/dot-notation': ['error', {
+                allowKeywords: false
+            }],
 
             'no-array-constructor': 'off',
             '@typescript-eslint/no-array-constructor': 'error',
 
             'no-empty-function': 'off',
-            '@typescript-eslint/no-empty-function': 'error',
+            '@typescript-eslint/no-empty-function': ['error', {
+                allow: []
+            }],
 
             'no-loop-func': 'off',
             '@typescript-eslint/no-loop-func': 'error',
@@ -182,7 +179,9 @@ export default tsEslint.config(
             '@typescript-eslint/no-shadow': 'error',
 
             'no-unused-expressions': 'off',
-            '@typescript-eslint/no-unused-expressions': 'error',
+            '@typescript-eslint/no-unused-expressions': ['error', {
+                allowShortCircuit: false
+            }],
 
             'no-unused-vars': 'off',
             '@typescript-eslint/no-unused-vars': 'error',
