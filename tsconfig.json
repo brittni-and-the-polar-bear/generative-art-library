@@ -4,7 +4,7 @@
     "target": "es2022",
 
     /* Modules */
-    "module": "es6",
+    "module": "es2022",
     "moduleResolution": "node",
     "rootDirs": [
       "./src"
