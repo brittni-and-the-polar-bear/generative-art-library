@@ -1,6 +1,6 @@
 {
   "name": "@batpb/genart",
-  "version": "2.0.0-rainbow-waves-test-013",
+  "version": "2.0.0-alpha.0",
   "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
   "main": "./out/dist/batpb-genart.js",
   "module": "./out/dist/batpb-genart.mjs",
@@ -27,11 +27,12 @@
     "./.node-version",
     "./LICENSE",
     "./package.json",
+    "./package-lock.json",
     "./README.md"
   ],
   "scripts": {
     "build": "rm -r ./out; tsup",
-    "test": "rm -r ./out/tests-coverage; jest",
+    "test": "echo \"ERROR: missing 'test' script\" && exit 1",
     "lint": "eslint ./src",
     "docs": "typedoc",
     "prepack": "npm run build"
@@ -73,31 +74,25 @@
     "@types/nearest-color": "^0.4.1",
     "@types/p5": "^1.7.6",
     "cococh": "^1.2.4",
-    "color-name-list": "^10.28.0",
+    "color-name-list": "^11.0.0",
     "nearest-color": "^0.4.4",
     "p5": "^1.11.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.14.0",
+    "@eslint/js": "^9.15.0",
     "@stylistic/eslint-plugin": "^2.10.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/jest": "^29.5.14",
-    "@typescript-eslint/eslint-plugin": "^8.12.2",
-    "@typescript-eslint/parser": "^8.12.2",
-    "canvas": "^2.11.2",
-    "eslint": "^9.14.0",
-    "eslint-plugin-es-x": "^8.1.0",
-    "eslint-plugin-n": "^17.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^9.15.0",
+    "eslint-plugin-es-x": "^8.2.0",
+    "eslint-plugin-n": "^17.13.2",
     "eslint-plugin-security": "^3.0.1",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "ts-jest": "^29.2.5",
-    "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "tsup": "^8.3.5",
     "typedoc": "^0.26.11",
     "typedoc-plugin-coverage": "^3.3.0",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.12.2"
+    "typescript-eslint": "^8.14.0"
   }
 }
