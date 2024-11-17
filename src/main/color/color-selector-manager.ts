@@ -21,13 +21,13 @@ import { ColorSelector } from './color-selector';
 import { DefaultColorSelector } from './default-color-selector';
 
 /**
- * Manager to select a random {@link ColorSelector} from a {@link Set}.
+ * Manager to select a random {@link ColorSelector} from a set of color selectors.
  *
  * @category Color
  */
 export class ColorSelectorManager {
     /**
-     * Underlying {@link Set} of {@link ColorSelector} objects.
+     * Underlying set of {@link ColorSelector} objects.
      */
     private readonly _COLOR_SELECTORS: Set<ColorSelector> = new Set<ColorSelector>();
 

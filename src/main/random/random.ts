@@ -27,13 +27,13 @@ import { WeightedElement } from './weighted-element';
 export class Random {
     /**
      * The primary function to be called when generating any random numbers.
-     * Set to {@link Math.random} by default.
+     * Set to Math.random by default.
      */
     private static _randomMethod: (() => number) = Math.random;
 
     /**
      * Set the primary function to be called when generating any random numbers.<br/>
-     * Set to {@link Math.random} by default.
+     * Set to Math.random by default.
      *
      * @param method
      */

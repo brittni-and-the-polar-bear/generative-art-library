@@ -34,19 +34,17 @@ export class PaletteColorSelector extends ColorSelector {
     /**
      * @param palette - The {@link Palette} from which colors will be selected.
      *
-     * @param buildWithPaletteOrder - When `true`, {@link choosePaletteColors} will choose
-     * colors in the order they appear in the order they appear in the {@link Palette.COLORS}
+     * @param buildWithPaletteOrder - When `true`, colors will be chosen
+     * in the order they appear in the {@link Palette.COLORS}
      * list. If buildWithPaletteOrder is `true` and {@link randomOrder} is `false`, the order
      * of colors from {@link getColor} will match the order of colors in the palette.
      *
      * @param colorCount - The number of colors available in the selector. This number
-     * should be greater than or equal to {@link MIN_COLOR_COUNT} and less than or
-     * equal to the number of colors in the given {@link palette}.
+     * should be less than or equal to the number of colors in the given {@link palette}.
      *
      * @param randomOrder - A flag that determines the color selection order of {@link getColor}.
      * When `true`, colors will be chosen in a random order.
-     * When `false`, colors will be chosen in the order they were selected
-     * in {@link choosePaletteColors}.
+     * When `false`, colors will be chosen in the order they were initially selected.
      */
     constructor(
         palette: Palette,
