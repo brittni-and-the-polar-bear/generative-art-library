@@ -15,15 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Geometry, GeometryConfig} from "./geometry";
-import {Coordinate, CoordinateMode, P5Context} from "sketch-context";
-import P5Lib from "p5";
-import {Random} from "random";
+import P5Lib from 'p5';
+
+import { Random } from 'random';
+import { Coordinate, CoordinateMode, P5Context } from 'sketch-context';
+
+import { Geometry, GeometryConfig } from './geometry';
 
 // TODO - unit tests
 // TODO - documentation
 export interface PointConfig extends GeometryConfig {
-    readonly position?: P5Lib.Vector | { x: number, y: number };
+    readonly position?: P5Lib.Vector | { x: number; y: number; };
 }
 
 // TODO - unit tests

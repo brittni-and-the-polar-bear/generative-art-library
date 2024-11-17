@@ -31,7 +31,7 @@ interface WeightedElement<Type> {
      * The weight associated with this element.
      * The greater the weight, the more likely the element will be selected.
      */
-    readonly weight: number
+    readonly weight: number;
 }
 
 export { type WeightedElement };

@@ -42,7 +42,7 @@ export interface PaletteColor {
         /**
          * The blue component (0-255).
          */
-        readonly B: number
+        readonly B: number;
     };
 
     /**
@@ -62,7 +62,7 @@ export interface PaletteColor {
         /**
          * The lightness component (0-100).
          */
-        readonly L: number
+        readonly L: number;
     };
 
     /**
@@ -78,5 +78,5 @@ export interface PaletteColor {
     /**
      * Discriminator for determining if an object is a PaletteColor.
      */
-    readonly DISCRIMINATOR: Discriminators.PALETTE_COLOR
+    readonly DISCRIMINATOR: Discriminators.PALETTE_COLOR;
 }

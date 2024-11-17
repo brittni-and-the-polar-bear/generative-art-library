@@ -35,5 +35,5 @@ export interface AspectRatio {
     /**
      * The height ratio component.
      */
-    readonly HEIGHT_RATIO: number
+    readonly HEIGHT_RATIO: number;
 }

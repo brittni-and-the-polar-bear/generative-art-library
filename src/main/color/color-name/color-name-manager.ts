@@ -24,8 +24,8 @@ import { PaletteColor } from 'palette';
 interface NearestColorMatch {
     name: string;
     value: string;
-    rgb: { r: number; g: number; b: number };
-    distance: number
+    rgb: { r: number; g: number; b: number; };
+    distance: number;
 }
 
 const _COLORS = colorNames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});

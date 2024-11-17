@@ -72,11 +72,11 @@ export interface Palette {
          */
         readonly '#FFFFFF': string[];
 
-        readonly [HEX: string]: string[]
+        readonly [HEX: string]: string[];
     };
 
     /**
      * Discriminator for determining if an object is a Palette.
      */
-    readonly DISCRIMINATOR: Discriminators.PALETTE
+    readonly DISCRIMINATOR: Discriminators.PALETTE;
 }

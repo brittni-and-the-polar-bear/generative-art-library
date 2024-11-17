@@ -15,9 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { CanvasRedrawListener, CoordinateMode } from 'sketch-context';
-import P5Lib from "p5";
-import { GeometryStyle } from "../style";
+
+import { GeometryStyle } from '../style';
 
 export interface GeometryConfig {
     readonly coordinateMode: CoordinateMode;

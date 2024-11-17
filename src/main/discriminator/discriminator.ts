@@ -20,7 +20,7 @@ import { PaletteColor } from 'palette';
 import { Discriminators } from './discriminators';
 
 interface CompatibleObject {
-    DISCRIMINATOR?: string
+    DISCRIMINATOR?: string;
 }
 
 /**

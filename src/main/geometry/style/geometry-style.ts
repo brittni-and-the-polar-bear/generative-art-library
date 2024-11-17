@@ -15,8 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Color} from "color";
-import {CanvasContext, P5Context} from "sketch-context";
+import { Color } from 'color';
+import { CanvasContext, P5Context } from 'sketch-context';
 
 // TODO - documentation
 // TODO - unit tests
