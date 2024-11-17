@@ -23,8 +23,6 @@ This project is currently in active development.
 
 # [documentation](./doc/index.html)
 
-## [v1.1.0 release notes](./release-notes/v1.x/v1.1.x/v1.1.0-notes.md)
-
 ----
 
 # experiments (coming soon!)
