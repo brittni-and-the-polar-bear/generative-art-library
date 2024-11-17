@@ -2,10 +2,11 @@
   "compilerOptions": {
     /* Language and Environment */
     "target": "es2022",
+    "skipLibCheck": false,
 
     /* Modules */
     "module": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "rootDirs": [
       "./src"
     ],
@@ -28,8 +29,8 @@
 
     /* JSON Modules */
     "resolveJsonModule": true,
-    "resolvePackageJsonExports": false,
-    "resolvePackageJsonImports": false,
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
 
     /* Emit */
     "outDir": "./out/compiled",
@@ -47,12 +48,23 @@
 
     /* Type Checking */
     "strict": true,
-    "noImplicitAny": true,
+    "alwaysStrict": true,
     "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitOverride": true,
+    "noImplicitThis": true,
+
+    "allowUnusedLabels": false,
     "allowUnreachableCode": false
   }
 }

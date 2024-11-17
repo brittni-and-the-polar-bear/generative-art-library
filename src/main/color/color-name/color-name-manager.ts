@@ -15,7 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import colorNames from 'color-name-list/dist/colornames.json';
+import colorNames from './colornames.json';
+
 import nearestColor from 'nearest-color';
 
 import { StringMap } from 'map';
