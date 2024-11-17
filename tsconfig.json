@@ -36,7 +36,7 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "removeComments": true,
+    "removeComments": false,
     "noEmitOnError": true,
     "preserveConstEnums": true,
 

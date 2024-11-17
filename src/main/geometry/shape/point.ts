@@ -36,46 +36,35 @@ export class Point extends Geometry {
 
         if (config.position) {
             if (config.position instanceof P5Lib.Vector) {
-                this.#COORDINATE.position = config.position;
+                this.#COORDINATE.setPosition(config.position, config.coordinateMode);
             } else {
-                this.#COORDINATE.x = config.position.x;
-                this.#COORDINATE.y = config.position.y;
+                this.#COORDINATE.setX(config.position.x, config.coordinateMode);
+                this.#COORDINATE.setY(config.position.y, config.coordinateMode);
             }
         } else {
-            this.#COORDINATE.mode = CoordinateMode.RATIO;
-            this.#COORDINATE.x = Random.randomFloat(0, 1);
-            this.#COORDINATE.y = Random.randomFloat(0, 1);
-            this.#COORDINATE.mode = config.coordinateMode;
+            this.#COORDINATE.setX(Random.randomFloat(0, 1), CoordinateMode.RATIO);
+            this.#COORDINATE.setY(Random.randomFloat(0, 1), CoordinateMode.RATIO);
         }
     }
 
-    public override set coordinateMode(mode: CoordinateMode) {
-        super.coordinateMode = mode;
-        this.#COORDINATE.mode = mode;
+    public override setPosition(position: P5Lib.Vector, mode: CoordinateMode): void {
+        this.#COORDINATE.setPosition(position, mode);
     }
 
-    public override get position(): undefined {
-        return undefined;
+    public override getX(mode: CoordinateMode): number {
+        return this.#COORDINATE.getX(mode);
     }
 
-    public override set position(position: P5Lib.Vector) {
-        this.#COORDINATE.position = position;
+    public override setX(x: number, mode: CoordinateMode): void {
+        this.#COORDINATE.setX(x, mode);
     }
 
-    public override get x(): number {
-        return this.#COORDINATE.x;
+    public override getY(mode: CoordinateMode): number {
+        return this.#COORDINATE.getY(mode);
     }
 
-    public override set x(x: number) {
-        this.#COORDINATE.x = x;
-    }
-
-    public override get y(): number {
-        return this.#COORDINATE.y
-    }
-
-    public override set y(y: number) {
-        this.#COORDINATE.y = y;
+    public override setY(y: number, mode: CoordinateMode): void {
+        this.#COORDINATE.setY(y, mode);
     }
 
     public override canvasRedraw(): void {
@@ -84,10 +73,9 @@ export class Point extends Geometry {
 
     public override draw(): void {
         const p5: P5Lib = P5Context.p5;
-        const originalMode: CoordinateMode = this.coordinateMode;
-        this.coordinateMode = CoordinateMode.CANVAS;
         this.style.applyStyle();
-        p5.point(this.#COORDINATE.x, this.#COORDINATE.y);
-        this.coordinateMode = originalMode;
+        const x = this.#COORDINATE.getX(CoordinateMode.CANVAS);
+        const y: number = this.#COORDINATE.getY(CoordinateMode.CANVAS);
+        p5.point(x, y);
     }
 }

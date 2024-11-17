@@ -25,37 +25,25 @@ export interface GeometryConfig {
 }
 
 export abstract class Geometry implements CanvasRedrawListener {
-    #coordinateMode: CoordinateMode;
     #style: GeometryStyle;
 
     protected constructor(config: GeometryConfig) {
-        this.#coordinateMode = config.coordinateMode;
         this.#style = config.style ?? (new GeometryStyle());
     }
 
-    public abstract get position(): undefined;
+    public abstract setPosition(position: P5Lib.Vector, mode: CoordinateMode): void;
 
-    public abstract set position(position: P5Lib.Vector);
+    public abstract getX(mode: CoordinateMode): number;
 
-    public abstract get x(): number;
+    public abstract setX(x: number, mode: CoordinateMode): void;
 
-    public abstract set x(x: number);
+    public abstract getY(mode: CoordinateMode): number;
 
-    public abstract get y(): number;
-
-    public abstract set y(y: number);
+    public abstract setY(y: number, mode: CoordinateMode): void;
 
     public abstract canvasRedraw(): void;
 
     public abstract draw(): void;
-
-    public get coordinateMode(): CoordinateMode {
-        return this.#coordinateMode;
-    }
-
-    public set coordinateMode(mode: CoordinateMode) {
-        this.#coordinateMode = mode;
-    }
 
     public get style(): GeometryStyle {
         return this.#style;
