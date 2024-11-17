@@ -1,5 +1,10 @@
 {
   "$schema": "https://typedoc.org/schema.json",
+
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+
   "entryPoints": [
     "./src/main/batpb-genart.ts"
   ],
