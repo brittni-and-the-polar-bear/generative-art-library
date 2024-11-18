@@ -54,7 +54,7 @@ export class ColorNameManager {
      * name is being retrieved (format: `#RRGGBB`).
      */
     public static getColorName(colorHex: string): string | undefined {
-        colorHex = ColorNameManager.formatHex(colorHex);
+        colorHex = ColorNameManager.#formatHex(colorHex);
         let match: string | undefined = undefined;
 
         if (ColorNameManager.hasMatch(colorHex)) {
@@ -101,7 +101,7 @@ export class ColorNameManager {
      * @param color
      */
     public static addColor(color: PaletteColor): void {
-        const hex: string = ColorNameManager.formatHex(color.HEX);
+        const hex: string = ColorNameManager.#formatHex(color.HEX);
         ColorNameManager._MATCHED_COLORS.setKey(hex, color.NAME);
     }
 
@@ -112,7 +112,7 @@ export class ColorNameManager {
      *
      * @param original
      */
-    private static formatHex(original: string): string {
+    static #formatHex(original: string): string {
         let hex: string = original;
 
         if (!hex.startsWith('#')) {
