@@ -15,12 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import colorNames from './colornames.json';
-
 import nearestColor from 'nearest-color';
 
 import { StringMap } from 'map';
 import { PaletteColor } from 'palette';
+
+import colorNames from './colornames.json';
 
 interface NearestColorMatch {
     name: string;
