@@ -67,39 +67,81 @@ export enum ContrastFontSize {
  * @category Color Contrast
  */
 export class ColorContrastAssessor {
+    /**
+     * Evaluates if two {@link Color} objects have an appropriate contrast ratio
+     * for the {@link ContrastStandard.AA AA} contrast standard  and
+     * {@link ContrastFontSize.NORMAL normal} font size.
+     *
+     * @param colorA
+     * @param colorB
+     */
     public static meetsContrastStandard(
         colorA: Color,
         colorB: Color): boolean;
+    /**
+     * Evaluates if two {@link PaletteColor} objects have an appropriate contrast ratio
+     * for the {@link ContrastStandard.AA AA} contrast standard  and
+     * {@link ContrastFontSize.NORMAL normal} font size.
+     *
+     * @param colorA
+     * @param colorB
+     */
     public static meetsContrastStandard(
         colorA: PaletteColor,
         colorB: PaletteColor): boolean;
+    /**
+     * Evaluates if two colors have an appropriate contrast ratio
+     * for the {@link ContrastStandard.AA AA} contrast standard  and
+     * {@link ContrastFontSize.NORMAL normal} font size.
+     *
+     * @param hexA
+     * @param hexB
+     */
     public static meetsContrastStandard(
-        colorA: string,
-        colorB: string): boolean;
+        hexA: string,
+        hexB: string): boolean;
+    /**
+     * Evaluates if two {@link Color} objects have an appropriate contrast ratio
+     * for the given {@link ContrastStandard} and {@link ContrastFontSize}.
+     *
+     * @param colorA
+     * @param colorB
+     * @param standard
+     * @param fontSize
+     */
     public static meetsContrastStandard(
         colorA: Color,
         colorB: Color,
         standard: ContrastStandard,
         fontSize: ContrastFontSize): boolean;
+    /**
+     * Evaluates if two {@link PaletteColor} objects have an appropriate contrast ratio
+     * for the given {@link ContrastStandard} and {@link ContrastFontSize}.
+     *
+     * @param colorA
+     * @param colorB
+     * @param standard
+     * @param fontSize
+     */
     public static meetsContrastStandard(
         colorA: PaletteColor,
         colorB: PaletteColor,
-        standard: ContrastStandard,
-        fontSize: ContrastFontSize): boolean;
-    public static meetsContrastStandard(
-        colorA: string,
-        colorB: string,
         standard: ContrastStandard,
         fontSize: ContrastFontSize): boolean;
     /**
      * Evaluates if two colors have an appropriate contrast ratio
      * for the given {@link ContrastStandard} and {@link ContrastFontSize}.
      *
-     * @param colorA
-     * @param colorB
-     * @param standard - If no standard is provided, {@link ContrastStandard.AA} will be used.
-     * @param fontSize - If no font size is provided, {@link ContrastFontSize.NORMAL} will be used.
+     * @param hexA
+     * @param hexB
+     * @param standard
+     * @param fontSize
      */
+    public static meetsContrastStandard(
+        hexA: string,
+        hexB: string,
+        standard: ContrastStandard,
+        fontSize: ContrastFontSize): boolean;
     public static meetsContrastStandard(colorA: Color | PaletteColor | string,
                                         colorB: Color | PaletteColor | string,
                                         standard?: ContrastStandard,
@@ -118,7 +160,7 @@ export class ColorContrastAssessor {
             hexB = colorB;
         }
 
-        return ColorContrastAssessor.haveAppropriateContrastRatio(
+        return ColorContrastAssessor.#haveAppropriateContrastRatio(
             hexA,
             hexB,
             standard ?? ContrastStandard.AA,
@@ -138,7 +180,7 @@ export class ColorContrastAssessor {
      * for the given {@link ContrastStandard} and {@link ContrastFontSize},
      * `false` if they do not have an acceptable ratio.
      */
-    private static haveAppropriateContrastRatio(hexA: string,
+    static #haveAppropriateContrastRatio(hexA: string,
                                                 hexB: string,
                                                 standard: ContrastStandard,
                                                 fontSize: ContrastFontSize): boolean {
