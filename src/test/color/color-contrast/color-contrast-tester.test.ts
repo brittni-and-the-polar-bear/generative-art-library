@@ -18,11 +18,11 @@
 import P5Lib from 'p5';
 
 import { Color } from 'color';
-import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
+import { ColorContrastTester, ContrastFontSize, ContrastStandard } from 'color-contrast';
 import { PC_0437F1, PC_0FFF4F, PC_121212, PC_FF6BB5 } from 'palette-colors';
 import { P5Context } from 'sketch-context';
 
-describe('color contrast assessor tests', (): void => {
+describe('ColorContrastTester tests', (): void => {
     const p5: P5Lib = P5Context.p5;
 
     test.each([
@@ -66,7 +66,7 @@ describe('color contrast assessor tests', (): void => {
             AAA_normal: false,
             AAA_large: false
         }
-    ])('$# contrast: Colors - $colorA._name and $colorB._name',
+    ])('$# ColorContrastTester.meetsContrastStandard()',
         ({ colorA,
             colorB,
             AA_normal,
@@ -75,33 +75,33 @@ describe('color contrast assessor tests', (): void => {
             AAA_large }): void => {
             // AB Contrasts
             const contrast_ab_default: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB
                 );
             const contrast_ab_AA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ab_AA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AA,
                     ContrastFontSize.LARGE
                 );
             const contrast_ab_AAA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AAA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ab_AAA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AAA,
@@ -110,33 +110,33 @@ describe('color contrast assessor tests', (): void => {
 
             // BA Contrasts
             const contrast_ba_default: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA
                 );
             const contrast_ba_AA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ba_AA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AA,
                     ContrastFontSize.LARGE
                 );
             const contrast_ba_AAA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AAA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ba_AAA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AAA,
@@ -193,7 +193,7 @@ describe('color contrast assessor tests', (): void => {
             AAA_normal: true,
             AAA_large: true
         }
-    ])('$# contrast: PaletteColors - $colorA.HEX and $colorB.HEX',
+    ])('$# ColorContrastTester.meetsContrastStandard() - PaletteColors: $colorA.HEX and $colorB.HEX',
         ({ colorA,
             colorB,
             AA_normal,
@@ -202,33 +202,33 @@ describe('color contrast assessor tests', (): void => {
             AAA_large }): void => {
             // AB Contrasts
             const contrast_ab_default: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB
                 );
             const contrast_ab_AA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ab_AA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AA,
                     ContrastFontSize.LARGE
                 );
             const contrast_ab_AAA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AAA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ab_AAA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AAA,
@@ -237,33 +237,33 @@ describe('color contrast assessor tests', (): void => {
 
             // BA Contrasts
             const contrast_ba_default: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA
                 );
             const contrast_ba_AA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ba_AA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AA,
                     ContrastFontSize.LARGE
                 );
             const contrast_ba_AAA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AAA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ba_AAA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AAA,
@@ -328,7 +328,7 @@ describe('color contrast assessor tests', (): void => {
             AAA_normal: false,
             AAA_large: false
         }
-    ])('$# contrast: hex strings - $colorA and $colorB',
+    ])('$# ColorContrastTester.meetsContrastStandard($colorA, $colorB)',
         ({ colorA,
             colorB,
             AA_normal,
@@ -337,33 +337,33 @@ describe('color contrast assessor tests', (): void => {
             AAA_large }): void => {
             // AB Contrasts
             const contrast_ab_default: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB
                 );
             const contrast_ab_AA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ab_AA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AA,
                     ContrastFontSize.LARGE
                 );
             const contrast_ab_AAA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AAA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ab_AAA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorA,
                     colorB,
                     ContrastStandard.AAA,
@@ -372,33 +372,33 @@ describe('color contrast assessor tests', (): void => {
 
             // BA Contrasts
             const contrast_ba_default: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA
                 );
             const contrast_ba_AA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ba_AA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AA,
                     ContrastFontSize.LARGE
                 );
             const contrast_ba_AAA_normal: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AAA,
                     ContrastFontSize.NORMAL
                 );
             const contrast_ba_AAA_large: boolean =
-                ColorContrastAssessor.meetsContrastStandard(
+                ColorContrastTester.meetsContrastStandard(
                     colorB,
                     colorA,
                     ContrastStandard.AAA,

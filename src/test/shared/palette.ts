@@ -16,7 +16,7 @@
 //  */
 //
 // import { Color } from 'color';
-// import { ColorContrastAssessor, ContrastFontSize, ContrastStandard } from 'color-contrast';
+// import { ColorContrastTester, ContrastFontSize, ContrastStandard } from 'color-contrast';
 // import { Discriminators } from 'discriminator';
 // import { StringMap } from 'map';
 // import { Palette, PaletteColor } from 'palette';
@@ -67,14 +67,14 @@
 //                 expect(validHexes).toContain(hex);
 //
 //                 const meetsNormalRatio: boolean =
-//                     ColorContrastAssessor.meetsContrastStandard(
+//                     ColorContrastTester.meetsContrastStandard(
 //                         key,
 //                         hex,
 //                         ContrastStandard.AA,
 //                         ContrastFontSize.NORMAL
 //                     );
 //                 const meetsLargeRatio: boolean =
-//                     ColorContrastAssessor.meetsContrastStandard(
+//                     ColorContrastTester.meetsContrastStandard(
 //                         key,
 //                         hex,
 //                         ContrastStandard.AA,

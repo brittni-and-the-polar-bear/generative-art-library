@@ -66,7 +66,7 @@ export enum ContrastFontSize {
  * @category Color
  * @category Color Contrast
  */
-export class ColorContrastAssessor {
+export class ColorContrastTester {
     /**
      * Evaluates if two {@link Color} objects have an appropriate contrast ratio
      * for the {@link ContrastStandard.AA AA} contrast standard  and
@@ -160,7 +160,7 @@ export class ColorContrastAssessor {
             hexB = colorB;
         }
 
-        return ColorContrastAssessor.#haveAppropriateContrastRatio(
+        return ColorContrastTester.#haveAppropriateContrastRatio(
             hexA,
             hexB,
             standard ?? ContrastStandard.AA,
