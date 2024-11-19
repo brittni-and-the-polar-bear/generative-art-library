@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// TODO - types using Discriminators should extend common interface
 /**
  * The collection of discriminator values for library interfaces.
  * All values should be unique.

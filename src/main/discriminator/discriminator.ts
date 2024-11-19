@@ -38,6 +38,9 @@ export class Discriminator {
      * @returns `true` if the given object implements
      * the {@link PaletteColor} interface, `false` if it does not.
      */
+    // TODO - use unknown type instead of any
+    // TODO - test with unit tests
+    // TODO - re-activate lint check for no explicit any
     public static isPaletteColor(object: any): object is PaletteColor {
         let hasMatch: boolean = false;
 
