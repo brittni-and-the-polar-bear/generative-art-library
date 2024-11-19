@@ -181,9 +181,9 @@ export class ColorContrastTester {
      * `false` if they do not have an acceptable ratio.
      */
     static #haveAppropriateContrastRatio(hexA: string,
-                                                hexB: string,
-                                                standard: ContrastStandard,
-                                                fontSize: ContrastFontSize): boolean {
+                                         hexB: string,
+                                         standard: ContrastStandard,
+                                         fontSize: ContrastFontSize): boolean {
         const ratioResults: ResponseObject = getContrastRatios(hexA, hexB);
         return ratioResults[fontSize][standard];
     }
