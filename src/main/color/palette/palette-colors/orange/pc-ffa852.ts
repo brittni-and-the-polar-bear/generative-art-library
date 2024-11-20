@@ -21,6 +21,8 @@
 // black-pass
 // luminance: 0.4987445986
 
+// TODO - current step: Step 5: Add the Color to the `PaletteColor` Maps
+
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
