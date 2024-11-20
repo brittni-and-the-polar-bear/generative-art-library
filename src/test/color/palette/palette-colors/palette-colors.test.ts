@@ -23,12 +23,14 @@
 //     BROWN_PALETTE_COLORS,
 //     GRAY_PALETTE_COLORS,
 //     GREEN_PALETTE_COLORS,
+//     ORANGE_PALETTE_COLORS,
 //     PINK_PALETTE_COLORS,
 //     PURPLE_PALETTE_COLORS,
 //     RED_PALETTE_COLORS,
 //     WHITE_PALETTE_COLORS
 // } from 'palette-colors';
 //
+// // TODO - Create ORANGE_HEXES
 // import {
 //     BLACK_HEXES,
 //     BLUE_HEXES,

@@ -85,6 +85,17 @@ export const GREEN_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<Palet
 
 /**
  * A map of hex values to {@link PaletteColor} objects for all
+ * orange palette colors.
+ *
+ * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/green/orange-colors.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
+ *
+ * @category Palette Color Collections
+ * @category Palette Colors (Orange)
+ */
+export const ORANGE_PALETTE_COLORS: StringMap<PaletteColor> = new StringMap<PaletteColor>();
+
+/**
+ * A map of hex values to {@link PaletteColor} objects for all
  * pink palette colors.
  *
  * <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/pink/pink-colors-by-luminance.html" target="_blank" rel="noopener noreferrer">See the Colors</a>
