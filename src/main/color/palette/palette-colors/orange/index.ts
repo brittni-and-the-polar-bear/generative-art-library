@@ -15,19 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #ffa852
-// #FFA852
-// pumpkin vapour
-// black-pass
-// luminance: 0.4987445986
-
-import { Discriminators } from 'discriminator';
-import { PaletteColor } from 'palette';
-
-export const PC_FFA852: PaletteColor = {
-    HEX: '#FFA852',
-    RGB: { R: 255, G: 168, B: 82 },
-    HSL: { H: 30, S: 100, L: 66 },
-    NAME: 'pumpkin vapour',
-    DISCRIMINATOR: Discriminators.PALETTE_COLOR
-};
+export * from './pc-ffa852';
