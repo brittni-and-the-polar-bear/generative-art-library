@@ -17,8 +17,7 @@
 
 import P5Lib from 'p5';
 
-import { Color } from 'color';
-import { ColorContrastTester, ContrastFontSize, ContrastStandard } from 'color-contrast';
+import { Color, ColorContrastTester, ContrastFontSize, ContrastStandard } from 'color';
 import { PC_0437F1, PC_0FFF4F, PC_121212, PC_FF6BB5 } from 'palette-colors';
 import { P5Context } from 'sketch-context';
 
