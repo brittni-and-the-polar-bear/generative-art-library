@@ -20,3 +20,23 @@
 // pumpkin vapour
 // black-pass
 // luminance: 0.4987445986
+
+// TODO - current step: Step 8: Add Documentation
+
+import { ColorNameManager } from 'color';
+import { Discriminators } from 'discriminator';
+import { PaletteColor } from 'palette';
+
+import { ALL_PALETTE_COLORS, ORANGE_PALETTE_COLORS } from '../palette-color-maps';
+
+export const PC_FFA852: PaletteColor = {
+    HEX: '#FFA852',
+    RGB: { R: 255, G: 168, B: 82 },
+    HSL: { H: 30, S: 100, L: 66 },
+    NAME: 'pumpkin vapour',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
+
+ALL_PALETTE_COLORS.setUndefinedKey(PC_FFA852.HEX, PC_FFA852);
+ORANGE_PALETTE_COLORS.setUndefinedKey(PC_FFA852.HEX, PC_FFA852);
+ColorNameManager.addColor(PC_FFA852);

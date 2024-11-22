@@ -15,22 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { StringMap } from 'map';
-
-export const checkForValidStringMap = <Type>(map: StringMap<Type>, expectedSize?: number): void => {
-    'use strict';
-    expect(map).toBeTruthy();
-    expect(map.size).toBeGreaterThan(0);
-
-    const keys: string[] = Array.from(map.keys);
-    const values: Type[] = Array.from(map.values);
-    expect(keys.length).toBeGreaterThan(0);
-    expect(values.length).toBeGreaterThan(0);
-    expect(values.length).toBe(keys.length);
-
-    expect(keys.length).toBe(map.size);
-
-    if (expectedSize) {
-        expect(map.size).toBe(expectedSize);
-    }
-};
+export * from './pc-ffa852';
