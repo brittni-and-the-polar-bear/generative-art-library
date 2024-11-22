@@ -15,16 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'color';
-export * from 'color-contrast';
-export * from 'discriminator';
-export * from 'geometry';
-export * from 'map';
-export * from 'math';
-export * from 'palette';
-export * from 'palette-colors';
-export * from 'palettes';
-export * from 'screen';
-export * from 'sketch-context';
-export * from 'random';
-export * from 'string';
+export * from './string-validator';

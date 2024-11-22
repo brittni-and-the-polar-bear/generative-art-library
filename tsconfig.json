@@ -24,6 +24,7 @@
       "screen": ["./src/main/screen"],
       "shapes": ["./src/main/shapes"],
       "sketch-context": ["./src/main/sketch"],
+      "string": ["./src/main/string"],
       "unit-test/shared": ["./src/test/shared"]
     },
 

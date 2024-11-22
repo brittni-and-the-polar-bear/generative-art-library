@@ -22,13 +22,11 @@
   }
 </style>
 
-# v2.0.0 Release Notes
-
-Released on TBD.
+# Sketch Context Change Notes
 
 > [!CAUTION]
 > This release contains breaking changes from v1.1.0.
-> 
+>
 > Breaking Changes:
 >   - [`PaletteColor` Naming Update](#palettecolor-naming-update)
 >   - [`Palette` Naming Update](#palette-naming-update)

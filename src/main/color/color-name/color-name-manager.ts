@@ -17,8 +17,10 @@
 
 import nearestColor from 'nearest-color';
 
+import { Discriminator } from 'discriminator';
 import { StringMap } from 'map';
 import { PaletteColor } from 'palette';
+import { StringValidator } from 'string';
 
 import colorNames from './colornames.json';
 
@@ -43,22 +45,21 @@ export class ColorNameManager {
      * A map of colors whose names have already been retrieved from the
      * nearest color method.
      */
-    private static readonly _MATCHED_COLORS: StringMap<string> = new StringMap<string>();
+    static readonly #MATCHED_COLORS: StringMap<string> = new StringMap<string>();
 
     /**
      * Retrieves the name of the color represented by the given {@link colorHex}.
      * If the {@link colorHex} string is not well formatted or the nearest color function
      * encounters an error, the method will return undefined.
      *
-     * @param colorHex - The hex string representation of the color whose
-     * name is being retrieved (format: `#RRGGBB`).
+     * @param colorHex - The hex string representation of the color (format: `#RRGGBB`).
      */
     public static getColorName(colorHex: string): string | undefined {
-        colorHex = ColorNameManager.formatHex(colorHex);
+        colorHex = ColorNameManager.#formatHex(colorHex);
         let match: string | undefined = undefined;
 
         if (ColorNameManager.hasMatch(colorHex)) {
-            match = ColorNameManager._MATCHED_COLORS.get(colorHex);
+            match = ColorNameManager.#MATCHED_COLORS.get(colorHex);
         } else {
             try {
                 const result: NearestColorMatch | null = _NEAREST_COLOR(colorHex);
@@ -68,7 +69,7 @@ export class ColorNameManager {
                 }
 
                 if (match) {
-                    ColorNameManager._MATCHED_COLORS.setUndefinedKey(colorHex, match);
+                    ColorNameManager.#MATCHED_COLORS.setUndefinedKey(colorHex, match);
                 }
             } catch {
                 match = undefined;
@@ -91,18 +92,35 @@ export class ColorNameManager {
      * `false` if it does not.
      */
     public static hasMatch(hex: string): boolean {
-        return ColorNameManager._MATCHED_COLORS.hasKey(hex);
+        return ColorNameManager.#MATCHED_COLORS.hasKey(hex);
     }
 
+    // TODO - release notes
+    // TODO - unit tests
     /**
-     * Add the given {@link PaletteColor.HEX} and {@link PaletteColor.NAME}
-     * to the matched colors map.
+     * Map the given hex to the given name.
+     *
+     * @param hex
+     * @param name
+     */
+    public static addColor(hex: string, name: string): void;
+    /**
+     * Map the given {@link PaletteColor.HEX} to the given {@link PaletteColor.NAME}.
      *
      * @param color
      */
-    public static addColor(color: PaletteColor): void {
-        const hex: string = ColorNameManager.formatHex(color.HEX);
-        ColorNameManager._MATCHED_COLORS.setKey(hex, color.NAME);
+    public static addColor(color: PaletteColor): void;
+    public static addColor(color: PaletteColor | string, name?: string): void {
+        if (typeof color === 'string' && name) {
+            const hexColor: string = ColorNameManager.#formatHex(color);
+
+            if (StringValidator.isHex(hexColor) && name) {
+                ColorNameManager.#MATCHED_COLORS.setKey(hexColor, name);
+            }
+        } else if (Discriminator.isPaletteColor(color)) {
+            const hex: string = ColorNameManager.#formatHex(color.HEX);
+            ColorNameManager.#MATCHED_COLORS.setKey(hex, color.NAME);
+        }
     }
 
     /**
@@ -112,7 +130,7 @@ export class ColorNameManager {
      *
      * @param original
      */
-    private static formatHex(original: string): string {
+    static #formatHex(original: string): string {
         let hex: string = original;
 
         if (!hex.startsWith('#')) {
