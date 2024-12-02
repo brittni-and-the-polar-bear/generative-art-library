@@ -63,6 +63,31 @@ declare const ORANGE_PALETTE_COLORS: StringMap<PaletteColor>;
 
 [Table of Contents](#table-of-contents)
 
+## `PC_FFA852` (pumpkin vapour) [orange]
+
+<div class="color-block" style="background: #FFA852;">
+  <a href="https://coolors.co/ffa852" target="_blank" rel="noopener noreferrer">
+    <h2 class="color-block black-pass">pumpkin vapour (#FFA852)</h2>
+  </a>
+</div>
+<br/>
+
+```typescript
+/**
+ * <div class="color-block" style="background: #FFA852;">
+ *     <a href="https://coolors.co/ffa852" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">pumpkin vapour (#FFA852)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Orange)
+ */
+declare const PC_FFA852: PaletteColor;
+```
+
+[Table of Contents](#table-of-contents)
+
 ----
 
 # New Palettes

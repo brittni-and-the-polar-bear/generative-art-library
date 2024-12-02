@@ -207,7 +207,7 @@ Add the color as a new constant to the release notes draft markdown file.
 ## Release Notes Entry Example
 
 ````markdown
-## `PC_BC010A` (bird's eye)
+## `PC_BC010A` (bird's eye) [red]
 
 <div class="color-block" style="background: #BC010A;">
   <a href="https://coolors.co/bc010a" target="_blank" rel="noopener noreferrer">

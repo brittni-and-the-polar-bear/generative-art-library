@@ -15,20 +15,22 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// #ffa852
-// #FFA852
-// pumpkin vapour
-// black-pass
-// luminance: 0.4987445986
-
-// TODO - current step: Step 8: Add Documentation
-
 import { ColorNameManager } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 
 import { ALL_PALETTE_COLORS, ORANGE_PALETTE_COLORS } from '../palette-color-maps';
 
+/**
+ * <div class="color-block" style="background: #FFA852;">
+ *     <a href="https://coolors.co/ffa852" target="_blank" rel="noopener noreferrer">
+ *         <h2 class="color-block black-pass">pumpkin vapour (#FFA852)</h2>
+ *     </a>
+ * </div>
+ *
+ * @category Palette Colors (All)
+ * @category Palette Colors (Orange)
+ */
 export const PC_FFA852: PaletteColor = {
     HEX: '#FFA852',
     RGB: { R: 255, G: 168, B: 82 },

@@ -15,5 +15,21 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './pc-ff704d';
-export * from './pc-ffa852';
+// #ff704d
+// #FF704D
+// 12°, 100%, 65%
+// 255, 112, 77
+// often orange
+// black-pass
+// luminance: 0.3338416291
+
+import {Discriminators} from 'discriminator';
+import {PaletteColor} from 'palette';
+
+export const PC_FF704D: PaletteColor = {
+    HEX: '#FF704D',
+    RGB: { R: 255, G: 112, B: 77 },
+    HSL: { H: 12, S: 100, L: 65 },
+    NAME: 'often orange',
+    DISCRIMINATOR: Discriminators.PALETTE_COLOR
+};
