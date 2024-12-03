@@ -22,8 +22,6 @@ import { StringMap } from 'map';
 import { PaletteColor } from 'palette';
 import { StringValidator } from 'string';
 
-import colornames from 'color-name-list';
-
 interface NearestColorMatch {
     name: string;
     value: string;
@@ -31,21 +29,29 @@ interface NearestColorMatch {
     distance: number;
 }
 
-const _COLORS = colornames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
-const _NEAREST_COLOR = nearestColor.from(_COLORS);
+// TODO - test building nearest color match in project
+// TODO -if successful, remove color-name-list dependency and add to project
 
 /**
  * Manager to store and retrieve the names of colors based on their
  * hex string value.
- *
- * @category Color
  */
-export class ColorNameManager {
+export default class ColorNameManager {
     /**
      * A map of colors whose names have already been retrieved from the
      * nearest color method.
      */
     static readonly #MATCHED_COLORS: StringMap<string> = new StringMap<string>();
+
+    static #NEAREST_COLOR: (hex: string) => NearestColorMatch | null;
+
+    // TODO - test
+    // TODO - docs
+    // TODO - release notes
+    public static buildNearestColorMatch(colorNames: { name: string; hex: string; }[]): void {
+        const _COLORS = colorNames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
+        ColorNameManager.#NEAREST_COLOR = nearestColor.from(_COLORS);
+    }
 
     /**
      * Retrieves the name of the color represented by the given {@link colorHex}.
@@ -62,7 +68,7 @@ export class ColorNameManager {
             match = ColorNameManager.#MATCHED_COLORS.get(colorHex);
         } else {
             try {
-                const result: NearestColorMatch | null = _NEAREST_COLOR(colorHex);
+                const result: NearestColorMatch | null = ColorNameManager.#NEAREST_COLOR(colorHex);
 
                 if (result) {
                     match = result.name;

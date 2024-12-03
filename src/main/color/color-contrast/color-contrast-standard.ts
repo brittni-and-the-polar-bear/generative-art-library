@@ -66,7 +66,7 @@ export enum ContrastFontSize {
  * @category Color
  * @category Color Contrast
  */
-export class ColorContrastTester {
+export class ColorContrastStandard {
     /**
      * Evaluates if two {@link Color} objects have an appropriate contrast ratio
      * for the {@link ContrastStandard.AA AA} contrast standard  and
@@ -75,7 +75,7 @@ export class ColorContrastTester {
      * @param colorA
      * @param colorB
      */
-    public static meetsContrastStandard(
+    public static meetsStandard(
         colorA: Color,
         colorB: Color): boolean;
     /**
@@ -86,7 +86,7 @@ export class ColorContrastTester {
      * @param colorA
      * @param colorB
      */
-    public static meetsContrastStandard(
+    public static meetsStandard(
         colorA: PaletteColor,
         colorB: PaletteColor): boolean;
     /**
@@ -97,7 +97,7 @@ export class ColorContrastTester {
      * @param hexA
      * @param hexB
      */
-    public static meetsContrastStandard(
+    public static meetsStandard(
         hexA: string,
         hexB: string): boolean;
     /**
@@ -109,7 +109,7 @@ export class ColorContrastTester {
      * @param standard
      * @param fontSize
      */
-    public static meetsContrastStandard(
+    public static meetsStandard(
         colorA: Color,
         colorB: Color,
         standard: ContrastStandard,
@@ -123,7 +123,7 @@ export class ColorContrastTester {
      * @param standard
      * @param fontSize
      */
-    public static meetsContrastStandard(
+    public static meetsStandard(
         colorA: PaletteColor,
         colorB: PaletteColor,
         standard: ContrastStandard,
@@ -137,15 +137,15 @@ export class ColorContrastTester {
      * @param standard
      * @param fontSize
      */
-    public static meetsContrastStandard(
+    public static meetsStandard(
         hexA: string,
         hexB: string,
         standard: ContrastStandard,
         fontSize: ContrastFontSize): boolean;
-    public static meetsContrastStandard(colorA: Color | PaletteColor | string,
-                                        colorB: Color | PaletteColor | string,
-                                        standard?: ContrastStandard,
-                                        fontSize?: ContrastFontSize): boolean {
+    public static meetsStandard(colorA: Color | PaletteColor | string,
+                                colorB: Color | PaletteColor | string,
+                                standard?: ContrastStandard,
+                                fontSize?: ContrastFontSize): boolean {
         let hexA: string = '#000000';
         let hexB: string = '#000000';
 
@@ -160,7 +160,7 @@ export class ColorContrastTester {
             hexB = colorB;
         }
 
-        return ColorContrastTester.#haveAppropriateContrastRatio(
+        return ColorContrastStandard.#hasAppropriateContrastRatio(
             hexA,
             hexB,
             standard ?? ContrastStandard.AA,
@@ -180,7 +180,7 @@ export class ColorContrastTester {
      * for the given {@link ContrastStandard} and {@link ContrastFontSize},
      * `false` if they do not have an acceptable ratio.
      */
-    static #haveAppropriateContrastRatio(hexA: string,
+    static #hasAppropriateContrastRatio(hexA: string,
                                          hexB: string,
                                          standard: ContrastStandard,
                                          fontSize: ContrastFontSize): boolean {

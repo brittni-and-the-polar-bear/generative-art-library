@@ -15,8 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from 'color';
-export * from 'color-contrast';
+import * as Color from 'color'
+export { Color };
+
 export * from 'discriminator';
 export * from 'geometry';
 export * from 'map';

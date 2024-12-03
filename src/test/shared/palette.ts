@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color, ColorContrastTester, ContrastFontSize, ContrastStandard } from 'color';
+import { Color, ColorContrastStandard, ContrastFontSize, ContrastStandard } from 'color';
 import { Discriminators } from 'discriminator';
 import { StringMap } from 'map';
 import { Palette, PaletteColor } from 'palette';
@@ -66,14 +66,14 @@ function checkForValidContrastMap(palette: Palette): void {
                 expect(validHexes).toContain(hex);
 
                 const meetsNormalRatio: boolean =
-                    ColorContrastTester.meetsContrastStandard(
+                    ColorContrastStandard.meetsStandard(
                         key,
                         hex,
                         ContrastStandard.AA,
                         ContrastFontSize.NORMAL
                     );
                 const meetsLargeRatio: boolean =
-                    ColorContrastTester.meetsContrastStandard(
+                    ColorContrastStandard.meetsStandard(
                         key,
                         hex,
                         ContrastStandard.AA,
