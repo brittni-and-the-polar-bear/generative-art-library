@@ -22,7 +22,7 @@ import { StringMap } from 'map';
 import { PaletteColor } from 'palette';
 import { StringValidator } from 'string';
 
-import colorNames from './colornames.json';
+import colornames from 'color-name-list';
 
 interface NearestColorMatch {
     name: string;
@@ -31,7 +31,7 @@ interface NearestColorMatch {
     distance: number;
 }
 
-const _COLORS = colorNames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
+const _COLORS = colornames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
 const _NEAREST_COLOR = nearestColor.from(_COLORS);
 
 /**
