@@ -1,7 +1,7 @@
 {
   "name": "@batpb/genart",
   "version": "2.0.0-rc2",
-  "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
+  "description": "A TypeScript compatible library built with p5.js for creating responsive generative art projects.",
   "main": "./out/dist/batpb-genart.js",
   "module": "./out/dist/batpb-genart.mjs",
   "types": "./out/dist/batpb-genart.d.ts",
