@@ -35,7 +35,7 @@ interface NearestColorMatch {
 /**
  * Manager to store and retrieve the names of colors based on their
  * hex string value. When a name has not yet been stored or found,
- * a nearest color algorithm will be applied to find the name of the next
+ * the nearest color algorithm will be applied to find the name of the next
  * closest color.
  */
 export class ColorNames {

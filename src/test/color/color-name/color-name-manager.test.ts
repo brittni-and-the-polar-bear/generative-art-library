@@ -17,7 +17,7 @@
 
 import nearestColor from 'nearest-color';
 
-import { ColorNameManager } from 'color';
+import { ColorNames } from 'color';
 import { Discriminators } from 'discriminator';
 import { StringMap } from 'map';
 import { PaletteColor } from 'palette';

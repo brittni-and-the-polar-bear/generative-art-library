@@ -42,6 +42,8 @@
 
 [`Palette` Naming Update](#palette-naming-update)
 
+[Deprecated Classes](#deprecated-classes)
+
 [New Classes](#new-classes)
 
 [New Constants](#new-constants)
@@ -67,6 +69,8 @@ in all uppercase letters.
 
 For example, the color constant `_121212` is now `PC_121212`.
 
+[Table of Contents](#table-of-contents)
+
 ----
 
 # `Palette` Naming Update
@@ -74,6 +78,19 @@ For example, the color constant `_121212` is now `PC_121212`.
 All `Palette` constants will now end with a `_PALETTE` suffix.
 
 For example, the palette constant `GLITTER` is now `GLITTER_PALETTE`.
+
+[Table of Contents](#table-of-contents)
+
+----
+
+# Deprecated Classes
+
+## Deprecated Class: `ColorNameManager`
+
+The `ColorNameManager` class has been deprecated and replaced by the `ColorNames` class.
+It will be permanently removed in version 3.0.0.
+
+[Table of Contents](#table-of-contents)
 
 ----
 
@@ -104,6 +121,8 @@ declare interface AspectRatio {
     readonly HEIGHT_RATIO: number
 }
 ```
+
+[Table of Contents](#table-of-contents)
 
 ## New Class: `AspectRatioHandler`
 
@@ -156,6 +175,8 @@ declare class AspectRatioHandler {
     public get height(): number;
 }
 ```
+
+[Table of Contents](#table-of-contents)
 
 ## New Class: `CanvasContext`
 
@@ -253,6 +274,150 @@ declare class CanvasContext {
 }
 ```
 
+[Table of Contents](#table-of-contents)
+
+## New Class: `ColorNames`
+
+```typescript
+/**
+ * Manager to store and retrieve the names of colors based on their
+ * hex string value. When a name has not yet been stored or found,
+ * the nearest color algorithm will be applied to find the name of the next
+ * closest color.
+ */
+declare class ColorNames {
+    /**
+     * A map of colors whose names have already been retrieved from the
+     * nearest-color library or set by the {@link addColor} method.
+     */
+    static readonly #MATCHED_COLORS: StringMap<string> = new StringMap<string>();
+
+    // TODO - unit test
+    /**
+     * The method used in the {@link getColorName} function to find the nearest color.
+     * If the method is `null`, the nearest-color library will use its list of default colors;
+     */
+    static #nearestColor: ((hex: string) => NearestColorMatch | null) | null = null;
+
+    // TODO - test
+    // TODO - docs
+    // TODO - release notes
+    /**
+     * Set the color names that could possibly be selected when searching for the nearest
+     * color match in {@link getColorName}.
+     *
+     * @param colorNames -
+     */
+    public static setPossibleColors(colorNames: { name: string; hex: string; }[]): void {
+        const colors = colorNames.reduce((o, { name, hex }) => Object.assign(o, { [name]: hex }), {});
+        ColorNames.#nearestColor = nearestColor.from(colors);
+    }
+
+    /**
+     * Retrieves the name of the color represented by the given {@link colorHex}.
+     * If the {@link colorHex} string is not well formatted or the nearest color function
+     * encounters an error, the method will return undefined.
+     *
+     * @param colorHex - The hex string representation of the color (format: `#RRGGBB`).
+     */
+    public static getColorName(colorHex: string): string | undefined {
+        colorHex = ColorNames.#formatHex(colorHex);
+        let match: string | undefined = undefined;
+
+        if (ColorNames.hasMatch(colorHex)) {
+            match = ColorNames.#MATCHED_COLORS.get(colorHex);
+        } else {
+            try {
+                let result: NearestColorMatch | string | null;
+
+                if (ColorNames.#nearestColor) {
+                    result = ColorNames.#nearestColor(colorHex);
+                } else {
+                    result = nearestColor(colorHex);
+                }
+
+                if (result) {
+                    if (typeof result === 'string') {
+                        match = result;
+                    } else {
+                        match = result.name;
+                    }
+                }
+
+                if (match) {
+                    ColorNames.#MATCHED_COLORS.setUndefinedKey(colorHex, match);
+                }
+            } catch {
+                match = undefined;
+            }
+        }
+
+        if (match) {
+            match = match.toLowerCase();
+        }
+
+        return match;
+    }
+
+    /**
+     * Does the given {@link hex} string already have a color name match?
+     *
+     * @param hex
+     *
+     * @return `true` if the {@link hex} has a direct color name match in the manager,
+     * `false` if it does not.
+     */
+    public static hasMatch(hex: string): boolean {
+        return ColorNames.#MATCHED_COLORS.hasKey(hex);
+    }
+
+    // TODO - release notes
+    // TODO - unit tests
+    /**
+     * Map the given hex to the given name.
+     *
+     * @param hex
+     * @param name
+     */
+    public static addColor(hex: string, name: string): void;
+    /**
+     * Map the given {@link PaletteColor.HEX} to the given {@link PaletteColor.NAME}.
+     *
+     * @param color
+     */
+    public static addColor(color: PaletteColor): void;
+    public static addColor(color: PaletteColor | string, name?: string): void {
+        if (typeof color === 'string' && name) {
+            const hexColor: string = ColorNames.#formatHex(color);
+
+            if (StringValidator.isHex(hexColor) && name) {
+                ColorNames.#MATCHED_COLORS.setKey(hexColor, name);
+            }
+        } else if (Discriminator.isPaletteColor(color)) {
+            const hex: string = ColorNames.#formatHex(color.HEX);
+            ColorNames.#MATCHED_COLORS.setKey(hex, color.NAME);
+        }
+    }
+
+    /**
+     * Adds a hash symbol (#) to the beginning of the given string
+     * if one is missing and returns the result with all uppercase
+     * characters.
+     *
+     * @param original
+     */
+    static #formatHex(original: string): string {
+        let hex: string = original;
+
+        if (!hex.startsWith('#')) {
+            hex = '#' + hex;
+        }
+
+        return hex.toUpperCase();
+    }
+}
+```
+
 ----
 
 # New Constants
@@ -267,6 +432,8 @@ declare class CanvasContext {
  */
 declare const ASPECT_RATIOS: Record<string, AspectRatio>;
 ```
+
+[Table of Contents](#table-of-contents)
 
 ## `FOOTBALL_PALETTES`
 
@@ -283,6 +450,8 @@ declare const ASPECT_RATIOS: Record<string, AspectRatio>;
 declare const FOOTBALL_PALETTES: StringMap<Palette>;
 ```
 
+[Table of Contents](#table-of-contents)
+
 ## `SPORTS_PALETTES`
 
 ```typescript
@@ -296,6 +465,8 @@ declare const FOOTBALL_PALETTES: StringMap<Palette>;
  */
 declare const SPORTS_PALETTES: StringMap<Palette>;
 ```
+
+[Table of Contents](#table-of-contents)
 
 ----
 
@@ -331,6 +502,8 @@ declare class P5Context {
 }
 ```
 
+[Table of Contents](#table-of-contents)
+
 ----
 
 # Updated Constants
@@ -342,6 +515,8 @@ The `FLOWER_PALETTES` constant has been renamed to `FLOWERS_PALETTES`.
 ## `HOLIDAYS_PALETTES` rename
 
 The `HOLIDAY_PALETTES` constant has been renamed to `HOLIDAYS_PALETTES`.
+
+[Table of Contents](#table-of-contents)
 
 ----
 
@@ -364,6 +539,8 @@ declare interface Palette {
     readonly SOURCE_URL?: string;
 }
 ```
+
+[Table of Contents](#table-of-contents)
 
 ----
 
@@ -522,6 +699,8 @@ declare const PC_FFFFFF: PaletteColor;
  */
 declare const DALLAS_COWBOYS_PALETTE: Palette;
 ```
+
+[Table of Contents](#table-of-contents)
 
 ----
 

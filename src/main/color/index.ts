@@ -15,10 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color-contrast';
+// export * from './color-contrast';
+// export * from './color-name';
+// export * from './color';
+// export * from './color-selector-type';
+// export * from './color-selector';
+// export * from './default-color-selector';
+// export * from './color-selector-manager';
+
 export * from './color-name';
-export * from './color';
-export * from './color-selector-type';
-export * from './color-selector';
-export * from './default-color-selector';
-export * from './color-selector-manager';
+
+import * as name from './color-name';
+export default { name };

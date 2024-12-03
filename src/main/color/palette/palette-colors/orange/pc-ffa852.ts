@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { ColorNameManager } from 'color';
+import { ColorNames } from 'color';
 import { Discriminators } from 'discriminator';
 import { PaletteColor } from 'palette';
 

@@ -15,17 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import * as Color from 'color'
-export { Color };
+// export * from 'discriminator';
+// export * from 'geometry';
+// export * from 'map';
+// export * from 'math';
+// export * from 'palette';
+// export * from 'palette-colors';
+// export * from 'palettes';
+// export * from 'screen';
+// export * from 'sketch-context';
+// export * from 'random';
+// export * from 'string';
 
-export * from 'discriminator';
-export * from 'geometry';
-export * from 'map';
-export * from 'math';
-export * from 'palette';
-export * from 'palette-colors';
-export * from 'palettes';
-export * from 'screen';
-export * from 'sketch-context';
-export * from 'random';
-export * from 'string';
+export * from './color';
+
+import color from './color';
+export default { color };

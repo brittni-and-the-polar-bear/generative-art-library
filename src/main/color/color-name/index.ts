@@ -16,3 +16,4 @@
  */
 
 export * from './color-name-manager';
+export * from './color-names';

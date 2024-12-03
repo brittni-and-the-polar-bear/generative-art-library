@@ -21,7 +21,7 @@ import { Discriminator } from 'discriminator';
 import { PaletteColor } from 'palette';
 import { P5Context } from 'sketch-context';
 
-import { ColorNameManager } from './color-name';
+import { ColorNames } from './color-name';
 
 /**
  * Color information and functionality.
