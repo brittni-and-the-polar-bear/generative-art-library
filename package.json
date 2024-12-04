@@ -39,10 +39,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-library.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/genart.git"
   },
   "keywords": [
     "code art",
+    "creative coding",
+    "genart",
     "generative art",
     "p5",
     "p5.js",
@@ -67,9 +69,9 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library/issues"
+    "url": "https://github.com/brittni-and-the-polar-bear/genart/issues"
   },
-  "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
+  "homepage": "https://brittni-and-the-polar-bear.github.io/genart/",
   "dependencies": {
     "@types/nearest-color": "^0.4.1",
     "@types/p5": "^1.7.6",
