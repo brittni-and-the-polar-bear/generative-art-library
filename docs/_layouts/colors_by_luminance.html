@@ -16,7 +16,7 @@ layout: default
 </p>
 
 <p>
-    <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library/colors/all-colors.html">
+    <a href="https://brittni-and-the-polar-bear.github.io/genart/colors/all-colors.html">
         All Colors
     </a>
 </p>
@@ -33,7 +33,7 @@ layout: default
     {%- if color.color_category == page.color_category -%}
     {%- assign lowercase_hex = color.hex | downcase -%}
     <div class="color-block" style="background: #{{ color.hex }};">
-        <a href="https://brittni-and-the-polar-bear.github.io/generative-art-library{{ color.url }}">
+        <a href="https://brittni-and-the-polar-bear.github.io/genart{{ color.url }}">
             <h2 class="color-block {{ color.contrast }}">{{ color.name }} (#{{ color.hex }})</h2>
         </a>
     </div>
