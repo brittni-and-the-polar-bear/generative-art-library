@@ -21,9 +21,26 @@ import { CoordinateMode } from './coordinate-mode';
 import { CoordinateMapper } from './coordinate-mapper';
 
 // TODO - unit tests
-// TODO - documentation
+// TODO - release notes
+/**
+ * Represents a coordinate in a 2D space with support for different coordinate modes.
+ *
+ * @see CoordinateMode
+ */
 export class Coordinate {
+    /**
+     * The canvas coordinate vector.
+     * This vector represents the coordinate
+     * in the canvas coordinate system.
+     */
     readonly #CANVAS: P5Lib.Vector;
+
+    /**
+     * The ratio coordinate vector.
+     * This vector represents the coordinate
+     * as a ratio of the canvas width and height,
+     * respectively.
+     */
     readonly #RATIO: P5Lib.Vector;
 
     public constructor() {
@@ -31,6 +48,10 @@ export class Coordinate {
         this.#RATIO = new P5Lib.Vector();
     }
 
+    /**
+     * @param mode -
+     * @returns The x-axis coordinate for the given {@link CoordinateMode}.
+     */
     public getX(mode: CoordinateMode): number {
         if (mode === CoordinateMode.RATIO) {
             return this.#RATIO.x;
@@ -39,6 +60,15 @@ export class Coordinate {
         }
     }
 
+    /**
+     * Sets the x-axis coordinate using the given
+     * {@link CoordinateMode}.
+     * Setting the x-axis coordinate in one mode will
+     * automatically update the coordinate in all other modes.
+     *
+     * @param x -
+     * @param mode -
+     */
     public setX(x: number, mode: CoordinateMode): void {
         if (mode === CoordinateMode.RATIO) {
             this.#RATIO.x = x;
@@ -49,6 +79,10 @@ export class Coordinate {
         }
     }
 
+    /**
+     * @param mode -
+     * @returns The y-axis coordinate for the given {@link CoordinateMode}.
+     */
     public getY(mode: CoordinateMode): number {
         if (mode === CoordinateMode.RATIO) {
             return this.#RATIO.y;
@@ -57,6 +91,15 @@ export class Coordinate {
         }
     }
 
+    /**
+     * Sets the y-axis coordinate using the given
+     * {@link CoordinateMode}.
+     * Setting the y-axis coordinate in one mode will
+     * automatically update the coordinate in all other modes.
+     *
+     * @param y -
+     * @param mode -
+     */
     public setY(y: number, mode: CoordinateMode): void {
         if (mode === CoordinateMode.RATIO) {
             this.#RATIO.y = y;
@@ -67,6 +110,11 @@ export class Coordinate {
         }
     }
 
+    /**
+     * Sets the position vector using the given {@link CoordinateMode}.
+     * @param position -
+     * @param mode -
+     */
     public setPosition(position: P5Lib.Vector, mode: CoordinateMode): void {
         if (mode === CoordinateMode.RATIO) {
             this.#ratio = position;
@@ -75,23 +123,31 @@ export class Coordinate {
         }
     }
 
+    /**
+     * Remaps the canvas coordinate according to the current ratio coordinate.
+     * This method should be called when the resolution or aspect ratio of the canvas changes.
+     */
     public remap(): void {
         this.#CANVAS.set(CoordinateMapper.mapRatioToCanvas(this.#RATIO));
     }
 
-    get #canvas(): undefined {
-        return undefined;
-    }
-
+    /**
+     * Sets the canvas position vector.
+     * This method will update the ratio position vector accordingly.
+     *
+     * @param position -
+     */
     set #canvas(position: P5Lib.Vector) {
         this.#CANVAS.set(position);
         this.#RATIO.set(CoordinateMapper.mapCanvasToRatio(this.#CANVAS));
     }
 
-    get #ratio(): undefined {
-        return undefined;
-    }
-
+    /**
+     * Sets the ratio position vector.
+     * This method will update the canvas position vector accordingly.
+     *
+     * @param position -
+     */
     set #ratio(position: P5Lib.Vector) {
         this.#RATIO.set(position);
         this.remap();
