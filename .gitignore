@@ -8,6 +8,3 @@ node_modules/
 
 # output
 out/
-
-# jest
-src/**/*.js

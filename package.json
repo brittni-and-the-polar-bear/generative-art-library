@@ -1,7 +1,7 @@
 {
   "name": "@batpb/genart",
-  "version": "2.0.0-rc2-test03",
-  "description": "A TypeScript compatible library built on p5.js for creating responsive generative art projects.",
+  "version": "2.0.0-rc2",
+  "description": "A TypeScript compatible library built with p5.js for creating responsive generative art projects.",
   "main": "./out/dist/batpb-genart.js",
   "module": "./out/dist/batpb-genart.mjs",
   "types": "./out/dist/batpb-genart.d.ts",
@@ -39,10 +39,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-library.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/genart.git"
   },
   "keywords": [
     "code art",
+    "creative coding",
+    "genart",
     "generative art",
     "p5",
     "p5.js",
@@ -67,35 +69,35 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library/issues"
+    "url": "https://github.com/brittni-and-the-polar-bear/genart/issues"
   },
-  "homepage": "https://brittni-and-the-polar-bear.github.io/generative-art-library/",
+  "homepage": "https://brittni-and-the-polar-bear.github.io/genart/",
   "dependencies": {
     "@types/nearest-color": "^0.4.1",
     "@types/p5": "^1.7.6",
     "cococh": "^1.2.4",
-    "color-name-list": "^11.0.0",
     "nearest-color": "^0.4.4",
-    "p5": "^1.11.1"
+    "p5": "^1.11.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
-    "@happy-dom/jest-environment": "^15.11.6",
-    "@stylistic/eslint-plugin": "^2.10.1",
+    "@eslint/js": "^9.16.0",
+    "@happy-dom/jest-environment": "^15.11.7",
+    "@stylistic/eslint-plugin": "^2.11.0",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.14",
-    "eslint": "^9.15.0",
-    "eslint-plugin-es-x": "^8.3.1",
-    "eslint-plugin-n": "^17.13.2",
+    "color-name-list": "^11.0.0",
+    "eslint": "^9.16.0",
+    "eslint-plugin-es-x": "^8.4.1",
+    "eslint-plugin-n": "^17.14.0",
     "eslint-plugin-security": "^3.0.1",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "tsup": "^8.3.5",
-    "typedoc": "^0.26.11",
-    "typedoc-plugin-coverage": "^3.3.0",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.14.0"
+    "typedoc": "^0.27.3",
+    "typedoc-plugin-coverage": "^3.4.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.17.0"
   }
 }
