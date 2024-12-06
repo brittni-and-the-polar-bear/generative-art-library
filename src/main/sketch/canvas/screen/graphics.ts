@@ -15,22 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// export * from 'discriminator';
-// export * from 'geometry';
-// export * from 'map';
-// export * from 'math';
-// export * from 'palette';
-// export * from 'palette-colors';
-// export * from 'palettes';
-// export * from 'screen';
-// export * from 'sketch-context';
-// export * from 'random';
-// export * from 'string';
+import { Canvas } from '../canvas';
 
-export * from './color';
-
-import color from './color';
-export default { color };
-
-import * as canvas from 'sketch-context';
-export { canvas };
+export class Graphics extends Canvas {
+    /**
+     * Is the canvas rendering in WebGL?
+     *
+     * @defaultValue false
+     */
+    #isWebGL: boolean = false;
+}
