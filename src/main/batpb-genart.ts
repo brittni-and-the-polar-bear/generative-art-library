@@ -15,6 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// import * as canvas from 'sketch-context';
+// export { canvas };
+
 // export * from 'discriminator';
 // export * from 'geometry';
 // export * from 'map';
@@ -31,6 +34,3 @@ export * from './color';
 
 import color from './color';
 export default { color };
-
-import * as canvas from 'sketch-context';
-export { canvas };
