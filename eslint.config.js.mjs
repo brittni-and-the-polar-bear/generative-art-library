@@ -23,12 +23,12 @@ import es_x from 'eslint-plugin-es-x';
 import node from 'eslint-plugin-n';
 import security from 'eslint-plugin-security';
 
-import stylistic from '@stylistic/eslint-plugin'
+import stylistic from '@stylistic/eslint-plugin';
 
 export default [
     eslint.configs.recommended,
     es_x.configs['flat/restrict-to-es2022'],
-    node.configs["flat/recommended"],
+    node.configs['flat/recommended'],
     security.configs.recommended,
     stylistic.configs['recommended-flat'],
     {
@@ -147,7 +147,7 @@ export default [
 
             /* eslint-plugin-n */
 
-            'n/no-missing-import': 'off',
+            'n/no-missing-import': 'off'
         }
     }
 ];

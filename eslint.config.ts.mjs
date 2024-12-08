@@ -23,14 +23,14 @@ import es_x from 'eslint-plugin-es-x';
 import node from 'eslint-plugin-n';
 import security from 'eslint-plugin-security';
 
-import stylistic from '@stylistic/eslint-plugin'
+import stylistic from '@stylistic/eslint-plugin';
 
 import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
     eslint.configs.recommended,
     es_x.configs['flat/restrict-to-es2022'],
-    node.configs["flat/recommended"],
+    node.configs['flat/recommended'],
     security.configs.recommended,
     stylistic.configs['recommended-flat'],
     ...tsEslint.configs.recommendedTypeChecked,
@@ -42,7 +42,7 @@ export default tsEslint.config(
             sourceType: 'module',
             parserOptions: {
                 projectService: true,
-                tsconfigRootDir: import.meta.dirname,
+                tsconfigRootDir: import.meta.dirname
             }
         },
         rules: {
@@ -203,7 +203,7 @@ export default tsEslint.config(
             '@typescript-eslint/no-explicit-any': 'off',
 
             '@typescript-eslint/no-extraneous-class': ['error', {
-                allowStaticOnly: true,
+                allowStaticOnly: true
             }],
 
             '@typescript-eslint/no-inferrable-types': 'off',
