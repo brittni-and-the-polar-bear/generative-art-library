@@ -15,5 +15,5 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color-name-manager';
+export * from './DEP-color-name-manager';
 export * from './color-names';
