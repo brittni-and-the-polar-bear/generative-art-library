@@ -16,9 +16,10 @@ jobs:
         with:
           node-version: '22.x'
       - run: npm ci
-      - run: npm run lint
+      - run: npm run lint:js
+      - run: npm run lint:ts
       - run: npm run build
-      # - run: npm test
+      - run: npm test
 
   publish-npm:
     needs: build

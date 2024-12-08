@@ -32,10 +32,11 @@
   ],
   "scripts": {
     "build": "rm -r ./out; tsup",
-    "test": "jest",
-    "lint": "eslint ./src",
     "docs": "typedoc",
-    "prepack": "npm run build"
+    "lint:js": "eslint -c ./eslint.config.js.mjs",
+    "lint:ts": "eslint -c ./eslint.config.ts.mjs ./src",
+    "prepack": "npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
