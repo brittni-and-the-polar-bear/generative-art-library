@@ -15,6 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// This configuration is designed to parse all TypeScript files in the `src` directory
+
 import eslint from '@eslint/js';
 
 import es_x from 'eslint-plugin-es-x';
@@ -33,13 +35,15 @@ export default tsEslint.config(
     stylistic.configs['recommended-flat'],
     ...tsEslint.configs.recommendedTypeChecked,
     ...tsEslint.configs.strictTypeChecked,
-    ...tsEslint.configs.strictTypeChecked,
+    ...tsEslint.configs.stylisticTypeChecked,
     {
         languageOptions: {
+            ecmaVersion: 2022,
+            sourceType: 'module',
             parserOptions: {
                 projectService: true,
                 tsconfigRootDir: import.meta.dirname,
-            },
+            }
         },
         rules: {
             /* @eslint/js */
