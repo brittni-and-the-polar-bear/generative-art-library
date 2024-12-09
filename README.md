@@ -9,18 +9,18 @@ for creating responsive generative art projects.
 
 ----
 
-## package stats
+# package stats
 
 ----
 
-### actions
+## actions
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/genart/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/genart/actions/workflows/codeql.yml)
 [![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/genart/actions/workflows/node-js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/genart/actions/workflows/node-js.yml)
 
 ----
 
-### npm
+## npm
 
 [![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/genart)
@@ -31,13 +31,13 @@ for creating responsive generative art projects.
 
 ----
 
-### security
+## security
 
 [![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart)](https://socket.dev/npm/package/@batpb/genart)
 
 ----
 
-### github
+## github
 
 ![GitHub followers](https://img.shields.io/github/followers/brittni-and-the-polar-bear)
 ![GitHub Repo stars](https://img.shields.io/github/stars/brittni-and-the-polar-bear/genart)
@@ -57,7 +57,7 @@ for creating responsive generative art projects.
 
 ----
 
-### docs coverage
+## docs coverage
 
 ![Documentation Coverage](https://brittni-and-the-polar-bear.github.io/genart/doc/coverage.svg)
 
@@ -85,7 +85,7 @@ npm install @batpb/genart
 
 ----
 
-# LICENSE
+# license
 
 The source code of this project is licensed under the 
 [GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html).
