@@ -8,7 +8,7 @@
     /* Modules */
     "module": "es2022",
     "moduleResolution": "node",
-    "rootDir": "./src",
+    "rootDir": "./",
     "paths": {},
 
     /* JSON Modules */
