@@ -15,6 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// TODO - update copyright
+// TODO - test minifySyntax: true vs false
+
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
@@ -25,5 +28,5 @@ export default defineConfig({
     clean: true,
     dts: true,
     format: ['cjs', 'esm'],
-    minifySyntax: true
+    minifySyntax: false
 });
