@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// This configuration is designed to parse all JavaScript configuration files
+/* This configuration is designed to lint all JavaScript configuration files */
 
 import eslint from '@eslint/js';
 
