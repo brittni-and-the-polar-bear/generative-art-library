@@ -50,5 +50,6 @@
 
     "allowUnusedLabels": false,
     "allowUnreachableCode": false
-  }
+  },
+  "exclude": ["OLD_BKUP"]
 }
