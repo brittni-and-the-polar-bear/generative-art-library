@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// This configuration is designed to parse all TypeScript files in the `src` directory
+/* This configuration is designed to parse all TypeScript files in the `src` directory */
 
 import eslint from '@eslint/js';
 
