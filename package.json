@@ -33,7 +33,7 @@
   "scripts": {
     "build": "rm -r ./out; tsup",
     "docs": "typedoc",
-    "lint:js": "eslint -c ./eslint.config.js.mjs eslint.config.js.mjs eslint.config.ts.mjs",
+    "lint:js": "eslint -c eslint.config.js.mjs ./eslint.config.js.mjs ./eslint.config.ts.mjs",
     "lint:ts": "eslint -c eslint.config.ts.mjs ./src ./jest.config.ts ./tsup.config.ts",
     "prepack": "npm run build",
     "test": "jest"
