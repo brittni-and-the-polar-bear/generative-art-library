@@ -200,7 +200,7 @@ export default tsEslint.config(
 
             '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 
-            '@typescript-eslint/no-explicit-any': 'off',
+            '@typescript-eslint/no-explicit-any': 'error',
 
             '@typescript-eslint/no-extraneous-class': ['error', {
                 allowStaticOnly: true
