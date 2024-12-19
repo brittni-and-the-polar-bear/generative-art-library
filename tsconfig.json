@@ -9,7 +9,11 @@
     "module": "es2022",
     "moduleResolution": "node",
     "rootDir": "./",
-    "paths": {},
+    "paths": {
+      "color": ["./src/main/color"],
+      "discriminator": ["./src/main/discriminator"],
+      "random": ["./src/main/random"]
+    },
 
     /* JSON Modules */
     "resolveJsonModule": true,
