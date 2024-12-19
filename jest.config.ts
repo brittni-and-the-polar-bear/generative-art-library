@@ -25,7 +25,7 @@ const config: JestConfigWithTsJest = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
         // '^color$': '<rootDir>/src/main/color'
-        // '^discriminator$': '<rootDir>/src/main/discriminator',
+        '^discriminator$': '<rootDir>/src/main/discriminator'
         // '^map$': '<rootDir>/src/main/map',
         // '^math$': '<rootDir>/src/main/math',
         // '^palette$': '<rootDir>/src/main/color/palette',
