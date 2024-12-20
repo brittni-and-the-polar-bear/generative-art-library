@@ -208,7 +208,7 @@ export default tsEslint.config(
 
             '@typescript-eslint/no-inferrable-types': 'off',
 
-            '@typescript-eslint/prefer-for-of': 'off',
+            '@typescript-eslint/prefer-for-of': 'error',
 
             '@typescript-eslint/restrict-template-expressions': ['error', {
                 allowNumber: true,
