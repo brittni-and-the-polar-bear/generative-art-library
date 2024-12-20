@@ -24,6 +24,56 @@ import { Discriminable, Discriminators } from 'discriminator';
  */
 export interface PaletteColor extends Discriminable {
     /**
+     * The hex string representation of the color (format: `#RRGGBB`).
+     */
+    readonly HEX: string;
+
+    /**
+     * The name of the color.
+     */
+    readonly NAME: string;
+
+    /**
+     * The RGB (red, green, blue) components of the color.
+     */
+    readonly RGB?: {
+        /**
+         * The red component (0-255).
+         */
+        readonly R: number;
+
+        /**
+         * The green component (0-255).
+         */
+        readonly G: number;
+
+        /**
+         * The blue component (0-255).
+         */
+        readonly B: number;
+    };
+
+    /**
+     * The HSL (hue, saturation, lightness) components of the color.
+     */
+    readonly HSL?: {
+        /**
+         * The hue component (0-360).
+         */
+        readonly H: number;
+
+        /**
+         * The saturation component (0-100).
+         */
+        readonly S: number;
+
+        /**
+         * The lightness component (0-100).
+         */
+        readonly L: number;
+    };
+
+    /**
      * @inheritDoc
      */
     readonly DISCRIMINATOR: Discriminators.PALETTE_COLOR;
