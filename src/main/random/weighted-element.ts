@@ -26,19 +26,9 @@ import { Discriminable, Discriminators } from 'discriminator';
  */
 export interface WeightedElement<Type> extends Discriminable {
     /**
-     * @deprecated Replaced with {@link VALUE}. To be removed in v3.0.0.
-     */
-    readonly value: Type;
-
-    /**
      * The value returned if this element is selected.
      */
     readonly VALUE: Type;
-
-    /**
-     * @deprecated Replaced with {@link WEIGHT}. To be removed in v3.0.0.
-     */
-    readonly weight: number;
 
     /**
      * The weight associated with this element.
