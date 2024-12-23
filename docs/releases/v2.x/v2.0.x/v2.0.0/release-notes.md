@@ -26,60 +26,34 @@
 
 Released on TBD.
 
+> [!CAUTION]
+> This release contains breaking changes from v1.1.0.
+>
+> Breaking Changes:
+> - [New `AspectRatio` Class](#aspectratio)
+> - [Updated `WeightedElement` Interface](#weightedelement)
+
 ----
 
 # Table of Contents
 
-[Updated Classes](#updated-classes)
-- [`WeightedElement`](#weightedelement)
+[New Classes](#new-classes)
+- [`AspectRatio`](#aspectratio)
 
 [Updated Interfaces](#updated-interfaces)
 - [`PaletteColor`](#palettecolor)
+- [`WeightedElement`](#weightedelement)
 
 ----
 
-# Updated Classes
+# New Classes
 
-## `WeightedElement`
+## `AspectRatio`
 
-### Deprecated Properties
-- `value: Type`
-- `weight: number`
-
-### New Properties
-- `VALUE: Type`
-- `WEIGHT: number`
-- `DISCRIMINATOR: Discriminators.WEIGHTED_ELEMENT`
-
-```typescript
-declare interface WeightedElement<Type> extends Discriminable {
-    /**
-     * @deprecated Replaced with {@link VALUE}. To be removed in v3.0.0.
-     */
-    readonly value: Type;
-
-    /**
-     * The value returned if this element is selected.
-     */
-    readonly VALUE: Type;
-
-    /**
-     * @deprecated Replaced with {@link WEIGHT}. To be removed in v3.0.0.
-     */
-    readonly weight: number;
-
-    /**
-     * The weight associated with this element.
-     * The greater the weight, the more likely the element will be selected.
-     */
-    readonly WEIGHT: number;
-
-    /**
-     * @inheritDoc
-     */
-    readonly DISCRIMINATOR: Discriminators.WEIGHTED_ELEMENT;
-}
-```
+[!CAUTION]
+> Breaking Change!
+> 
+> `AspectRatio` has been changed from an interface to a class.
 
 [Table of Contents](#table-of-contents)
 
@@ -152,6 +126,38 @@ declare interface PaletteColor extends Discriminable {
      * @inheritDoc
      */
     readonly DISCRIMINATOR: Discriminators.PALETTE_COLOR;
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+## `WeightedElement`
+
+[!CAUTION]
+> Breaking Change!
+>
+> The `value` and `weight` properties have been renamed to `VALUE` and `WEIGHT`.
+
+### New Properties
+- `DISCRIMINATOR: Discriminators.WEIGHTED_ELEMENT`
+
+```typescript
+declare interface WeightedElement<Type> extends Discriminable {
+    /**
+     * The value returned if this element is selected.
+     */
+    readonly VALUE: Type;
+
+    /**
+     * The weight associated with this element.
+     * The greater the weight, the more likely the element will be selected.
+     */
+    readonly WEIGHT: number;
+
+    /**
+     * @inheritDoc
+     */
+    readonly DISCRIMINATOR: Discriminators.WEIGHTED_ELEMENT;
 }
 ```
 
