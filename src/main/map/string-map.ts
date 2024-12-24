@@ -54,18 +54,18 @@ export class StringMap<ValueType> {
     /**
      * @param key - The key of the desired value in the map.
      *
-     * @returns The value associated with the given {@link key}.
+     * @returns The value associated with the given key.
      */
     public get(key: string): ValueType | undefined {
         return this.#MAP.get(key);
     }
 
     /**
-     * Does the map contain the given {@link key}?
+     * Does the map contain the given key?
      *
      * @param key -
      *
-     * @returns `true` if the map contains the given {@link key},
+     * @returns `true` if the map contains the given key,
      * returns `false` if it does not.
      */
     public hasKey(key: string): boolean {
@@ -73,7 +73,7 @@ export class StringMap<ValueType> {
     }
 
     /**
-     * Associate the given {@link key} with the given {@link value} in the map.
+     * Associate the given key with the given value in the map.
      *
      * @param key -
      * @param value -
@@ -83,7 +83,7 @@ export class StringMap<ValueType> {
     }
 
     /**
-     * Associate the given {@link key} with the given {@link value} in the map
+     * Associate the given key with the given value in the map
      * only if the key has not been set in the map.
      *
      * @param key -
