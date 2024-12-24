@@ -17,5 +17,6 @@
 
 export * from 'color';
 export * from 'discriminator';
+export * from 'map';
 export * from 'p5-context';
 export * from 'random';
