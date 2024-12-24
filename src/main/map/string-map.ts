@@ -17,80 +17,84 @@
 
 /**
  * A map of string keys to some ValueType.
+ *
  * @category Map
  */
-class StringMap<ValueType> {
+export class StringMap<ValueType> {
     /**
      * The underlying map object.
      */
-    private readonly _map: Map<string, ValueType>;
+    readonly #MAP: Map<string, ValueType>;
 
     public constructor() {
-        this._map = new Map<string, ValueType>();
+        this.#MAP = new Map<string, ValueType>();
     }
 
     /**
      * @returns All the keys of the map.
      */
     public get keys(): IterableIterator<string> {
-        return this._map.keys();
+        return this.#MAP.keys();
     }
 
     /**
      * @returns All the values of the map.
      */
     public get values(): IterableIterator<ValueType> {
-        return this._map.values();
+        return this.#MAP.values();
     }
 
     /**
      * @returns The size of the map.
      */
     public get size(): number {
-        return this._map.size;
+        return this.#MAP.size;
     }
 
     /**
-     * Retrieve the value associated with the given {@link key}.
-     *
      * @param key - The key of the desired value in the map.
+     *
+     * @returns The value associated with the given {@link key}.
      */
     public get(key: string): ValueType | undefined {
-        return this._map.get(key);
+        return this.#MAP.get(key);
     }
 
     /**
-     * Returns `true` if the map contains the given {@link key},
-     * returns `false` if it does not.
+     * Does the map contain the given {@link key}?
+     *
      * @param key -
+     *
+     * @returns `true` if the map contains the given {@link key},
+     * returns `false` if it does not.
      */
     public hasKey(key: string): boolean {
-        return this._map.has(key);
+        return this.#MAP.has(key);
     }
 
     /**
      * Associate the given {@link key} with the given {@link value} in the map.
      *
-     * @param key - Key to set in the map.
-     * @param value - Value to be associated with the key.
+     * @param key -
+     * @param value -
      */
     public setKey(key: string, value: ValueType): void {
-        this._map.set(key, value);
+        this.#MAP.set(key, value);
     }
 
     /**
      * Associate the given {@link key} with the given {@link value} in the map
      * only if the key has not been set in the map.
      *
-     * @param key - Key to set in the map.
-     * @param value - Value to be associated with the key.
+     * @param key -
+     * @param value -
      * @param errorMessage - Message to log if the key already has a value.
      * @returns `true` if the operation is successful, `false` if it is not.
      */
     public setUndefinedKey(key: string, value: ValueType, errorMessage?: string): boolean {
         let isSet: boolean;
 
-        if (this._map.has(key)) {
+        if (this.#MAP.has(key)) {
             if (errorMessage) {
                 console.warn(errorMessage);
             }
@@ -104,5 +108,3 @@ class StringMap<ValueType> {
         return isSet;
     }
 }
-
-export { StringMap };
