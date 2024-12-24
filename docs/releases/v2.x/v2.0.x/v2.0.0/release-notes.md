@@ -68,6 +68,9 @@ Released on TBD.
 /**
  * P5Context provides static access to the p5.js context.
  * This context allows access to all methods and variables of the p5.js library.
+ *
+ * @category Sketch
+ * @category Sketch / P5 Context
  */
 declare class P5Context {
     /**
@@ -80,10 +83,17 @@ declare class P5Context {
 
     /**
      * The current p5.js context.<br/>
-     * If no context has been initialized, the method will return
-     * an "empty" sketch context (0x0 canvas; no loop).
+     * If no context has been initialized with {@link P5Context.initialize},
+     * the method will return an "empty" sketch context (0x0 canvas; no loop).
      */
     public static get p5(): P5Lib;
+
+    /**
+     * Resets the p5.js context to null.
+     * This will allow the context to be re-initialized
+     * using the {@link P5Context.initialize} method.
+     */
+    public static reset(): void;
 }
 ```
 

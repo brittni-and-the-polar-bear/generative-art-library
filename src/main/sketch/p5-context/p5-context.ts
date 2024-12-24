@@ -52,10 +52,19 @@ export class P5Context {
 
     /**
      * The current p5.js context.<br/>
-     * If no context has been initialized, the method will return
-     * an "empty" sketch context (0x0 canvas; no loop).
+     * If no context has been initialized with {@link P5Context.initialize},
+     * the method will return an "empty" sketch context (0x0 canvas; no loop).
      */
     public static get p5(): P5Lib {
         return this.#p5 ?? noP5;
+    }
+
+    /**
+     * Resets the p5.js context to null.
+     * This will allow the context to be re-initialized
+     * using the {@link P5Context.initialize} method.
+     */
+    public static reset(): void {
+        this.#p5 = null;
     }
 }

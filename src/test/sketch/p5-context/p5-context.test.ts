@@ -15,9 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
+
 import { P5Context } from 'p5-context';
 
 describe('P5Context tests', (): void => {
+    afterEach((): void => {
+        P5Context.reset();
+    });
+
     test('P5Context.p5 default context', (): void => {
         expect(P5Context.p5).toBeTruthy();
         expect(P5Context.p5.width).toBe(0);
@@ -25,47 +31,66 @@ describe('P5Context tests', (): void => {
         expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
     });
 
-    test.todo('P5Context.p5 initialized context');
+    test('P5Context.initialize()', (): void => {
+        expect(P5Context.p5).toBeTruthy();
+        const p5: P5Lib = new P5Lib((p: P5Lib): void => {
+            p.setup = (): void => {
+                p.createCanvas(250, 250);
+                p.noLoop();
+            };
+        });
+        P5Context.initialize(p5);
+        expect(P5Context.p5).toBe(p5);
+        expect(P5Context.p5.color(255, 255, 0)).toBeTruthy();
+    });
 
-    // test('P5Context.p5 initialized context', (): void => {
-    //     const canvasSize: number = 250;
-    //     expect(P5Context.p5).toBeTruthy();
-    //     P5Context.initialize(new P5Lib((p: P5Lib): void => {
-    //         p.setup = (): void => {
-    //             p.createCanvas(canvasSize, canvasSize);
-    //             p.noLoop();
-    //         };
-    //     }));
-    //
-    //     expect(P5Context.p5.width).toBe(canvasSize);
-    //     expect(P5Context.p5.height).toBe(canvasSize);
-    //     expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
-    // });
+    test('P5Context.p5 singleton', (): void => {
+        expect(P5Context.p5).toBeTruthy();
+        const p5: P5Lib = new P5Lib((p: P5Lib): void => {
+            p.setup = (): void => {
+                p.createCanvas(250, 250);
+                p.noLoop();
+            };
+        });
+        P5Context.initialize(p5);
+        expect(P5Context.p5).toBe(p5);
+        expect(P5Context.p5.color(255, 175, 255)).toBeTruthy();
 
-    test.todo('P5Context.p5 singleton');
+        const otherP5: P5Lib = new P5Lib((p: P5Lib): void => {
+            p.setup = (): void => {
+                p.createCanvas(500, 500);
+                p.noLoop();
+            };
+        });
+        P5Context.initialize(otherP5);
+        expect(P5Context.p5).not.toBe(otherP5);
+        expect(P5Context.p5).toBe(p5);
+        expect(P5Context.p5.color(175, 175, 255)).toBeTruthy();
+    });
 
-    // test('P5Context.p5 singleton', (): void => {
-    //     const canvasSize: number = 100;
-    //     expect(P5Context.p5).toBeTruthy();
-    //     P5Context.initialize(new P5Lib((p: P5Lib): void => {
-    //         p.setup = (): void => {
-    //             p.createCanvas(canvasSize, canvasSize);
-    //             p.noLoop();
-    //         };
-    //     }));
-    //     expect(P5Context.p5.width).toBe(canvasSize);
-    //     expect(P5Context.p5.height).toBe(canvasSize);
-    //     expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
-    //
-    //     const newCanvasSize: number = 500;
-    //     expect(P5Context.p5).toBeTruthy();
-    //     P5Context.initialize(new P5Lib((p: P5Lib) => {
-    //         p.setup = (): void => {
-    //             p.createCanvas(newCanvasSize, newCanvasSize);
-    //         };
-    //     }));
-    //     expect(P5Context.p5.width).toBe(canvasSize);
-    //     expect(P5Context.p5.height).toBe(canvasSize);
-    //     expect(P5Context.p5.color(255, 0, 0)).toBeTruthy();
-    // });
+    test('P5Context.reset()', (): void => {
+        expect(P5Context.p5).toBeTruthy();
+        const p5: P5Lib = new P5Lib((p: P5Lib): void => {
+            p.setup = (): void => {
+                p.createCanvas(250, 250);
+                p.noLoop();
+            };
+        });
+        P5Context.initialize(p5);
+        expect(P5Context.p5).toBe(p5);
+        expect(P5Context.p5.color(255, 0, 255)).toBeTruthy();
+
+        P5Context.reset();
+
+        const otherP5: P5Lib = new P5Lib((p: P5Lib): void => {
+            p.setup = (): void => {
+                p.createCanvas(500, 500);
+                p.noLoop();
+            };
+        });
+        P5Context.initialize(otherP5);
+        expect(P5Context.p5).toBe(otherP5);
+        expect(P5Context.p5).not.toBe(p5);
+        expect(P5Context.p5.color(0, 175, 255)).toBeTruthy();
+    });
 });
