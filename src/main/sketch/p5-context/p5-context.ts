@@ -27,6 +27,9 @@ const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
 /**
  * P5Context provides static access to the p5.js context.
  * This context allows access to all methods and variables of the p5.js library.
+ *
+ * @category Sketch
+ * @category Sketch / P5 Context
  */
 export class P5Context {
     /**
