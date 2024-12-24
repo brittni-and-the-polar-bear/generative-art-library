@@ -42,7 +42,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isPaletteColor(other object)', (): void => {
-            const myObject: { KEY: string } = {
+            const myObject: { KEY: string; } = {
                 KEY: 'the key'
             };
 
@@ -50,7 +50,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isPaletteColor() - other object with discriminator', (): void => {
-            const myObject: { KEY: string; DISCRIMINATOR: 'other' } = {
+            const myObject: { KEY: string; DISCRIMINATOR: 'other'; } = {
                 KEY: 'the key',
                 DISCRIMINATOR: 'other'
             };
@@ -59,7 +59,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isPaletteColor() - other object with Palette discriminator', (): void => {
-            const myObject: { KEY: string; DISCRIMINATOR: string } = {
+            const myObject: { KEY: string; DISCRIMINATOR: string; } = {
                 KEY: 'the key',
                 DISCRIMINATOR: Discriminators.PALETTE
             };
@@ -102,7 +102,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isPalette(other object)', (): void => {
-            const myObject: { KEY: string } = {
+            const myObject: { KEY: string; } = {
                 KEY: 'the key'
             };
 
@@ -110,7 +110,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isPalette() - other object with discriminator', (): void => {
-            const myObject: { KEY: string; DISCRIMINATOR: 'other' } = {
+            const myObject: { KEY: string; DISCRIMINATOR: 'other'; } = {
                 KEY: 'the key',
                 DISCRIMINATOR: 'other'
             };
@@ -119,7 +119,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isPalette() - other object with WeightedElement discriminator', (): void => {
-            const myObject: { KEY: string; DISCRIMINATOR: string } = {
+            const myObject: { KEY: string; DISCRIMINATOR: string; } = {
                 KEY: 'the key',
                 DISCRIMINATOR: Discriminators.WEIGHTED_ELEMENT
             };
@@ -160,7 +160,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isWeightedElement(other object)', (): void => {
-            const myObject: { KEY: string } = {
+            const myObject: { KEY: string; } = {
                 KEY: 'the key'
             };
 
@@ -168,7 +168,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isWeightedElement() - other object with discriminator', (): void => {
-            const myObject: { KEY: string; DISCRIMINATOR: 'other' } = {
+            const myObject: { KEY: string; DISCRIMINATOR: 'other'; } = {
                 KEY: 'the key',
                 DISCRIMINATOR: 'other'
             };
@@ -177,7 +177,7 @@ describe('discriminator tests', (): void => {
         });
 
         test('Discriminator.isWeightedElement() - other object with PaletteColor discriminator', (): void => {
-            const myObject: { KEY: string; DISCRIMINATOR: string } = {
+            const myObject: { KEY: string; DISCRIMINATOR: string; } = {
                 KEY: 'the key',
                 DISCRIMINATOR: Discriminators.PALETTE_COLOR
             };

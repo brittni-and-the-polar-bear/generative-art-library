@@ -19,7 +19,7 @@ import { StringMap } from 'map';
 
 interface KeyValuePair {
     readonly key: string;
-    readonly value: number
+    readonly value: number;
 }
 
 describe('StringMap tests', (): void => {

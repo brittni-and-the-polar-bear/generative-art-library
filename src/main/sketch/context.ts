@@ -23,7 +23,7 @@ export abstract class Context {
     #isWebGL: boolean;
 
     protected constructor(config: ContextConfig) {
-        this.#isWebGL = config.isWebGL
+        this.#isWebGL = config.isWebGL;
     }
 
     // #resolution: number;
