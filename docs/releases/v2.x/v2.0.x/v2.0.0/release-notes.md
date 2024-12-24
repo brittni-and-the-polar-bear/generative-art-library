@@ -30,8 +30,9 @@ Released on TBD.
 > This release contains breaking changes from v1.1.0.
 >
 > Breaking Changes:
-> - [New `AspectRatio` Class](#aspectratio)
-> - [Updated `WeightedElement` Interface](#weightedelement)
+> - [New `AspectRatio` class](#aspectratio)
+> - [`SketchContext` renamed](#sketchcontext)
+> - [Updated `WeightedElement` interface](#weightedelement)
 
 ----
 
@@ -39,6 +40,10 @@ Released on TBD.
 
 [New Classes](#new-classes)
 - [`AspectRatio`](#aspectratio)
+- [`P5Context`](#p5context)
+
+[Updated Classes](#updated-classes)
+- [`SketchContext`](#sketchcontext)
 
 [Updated Interfaces](#updated-interfaces)
 - [`PaletteColor`](#palettecolor)
@@ -54,6 +59,46 @@ Released on TBD.
 > Breaking Change!
 > 
 > `AspectRatio` has been changed from an interface to a class.
+
+[Table of Contents](#table-of-contents)
+
+## `P5Context`
+
+```typescript
+/**
+ * P5Context provides static access to the p5.js context.
+ * This context allows access to all methods and variables of the p5.js library.
+ */
+declare class P5Context {
+    /**
+     * Initializes the context to allow other accessors to have
+     * accurate canvas, environment, and runtime information.
+     *
+     * @param p5 - The sketch context of the running p5.js script.
+     */
+    public static initialize(p5: P5Lib): void;
+
+    /**
+     * The current p5.js context.<br/>
+     * If no context has been initialized, the method will return
+     * an "empty" sketch context (0x0 canvas; no loop).
+     */
+    public static get p5(): P5Lib;
+}
+```
+
+[Table of Contents](#table-of-contents)
+
+----
+
+# Updated Classes
+
+## `SketchContext`
+
+[!CAUTION]
+> Breaking Change!
+>
+> The `SketchContext` class has been renamed to `P5Context`.
 
 [Table of Contents](#table-of-contents)
 

@@ -470,42 +470,6 @@ declare const SPORTS_PALETTES: StringMap<Palette>;
 
 ----
 
-# Updated Classes
-
-## `SketchContext` rename
-
-The `SketchContext` class has been renamed to `P5Context`.
-
-```typescript
-/**
- * The P5Context provides static access to the p5.js sketch context.
- * This context allows access to all methods and variables of the p5.js library.
- *
- * @category Sketch Context
- * @category Sketch Context: p5.js
- */
-declare class P5Context {
-    /**
-     * Initializes the sketch context to allow other accessors to have
-     * accurate canvas, environment, and runtime information.
-     *
-     * @param p5 - The sketch context of the running p5.js script.
-     */
-    public static initialize(p5: P5Lib): void;
-
-    /**
-     * The current sketch context.<br/>
-     * If no context has been initialized, the method will return
-     * an "empty" sketch context (0x0 canvas; no loop).
-     */
-    public static get p5(): P5Lib;
-}
-```
-
-[Table of Contents](#table-of-contents)
-
-----
-
 # Updated Constants
 
 ## `FLOWERS_PALETTES` rename
