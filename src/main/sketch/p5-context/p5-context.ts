@@ -17,12 +17,8 @@
 
 import P5Lib from 'p5';
 
-const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
-    p.setup = (): void => {
-        p.createCanvas(0, 0);
-        p.noLoop();
-    };
-});
+const noP5: P5Lib = new P5Lib((): void => {});
+noP5.noCanvas();
 
 /**
  * P5Context provides static access to the p5.js context.
@@ -46,7 +42,6 @@ export class P5Context {
     public static initialize(p5: P5Lib): void {
         if (!this.#p5) {
             this.#p5 = p5;
-            noP5.noCanvas();
         }
     }
 
@@ -65,6 +60,7 @@ export class P5Context {
      * using the {@link P5Context.initialize} method.
      */
     public static reset(): void {
+        this.#p5?.noCanvas();
         this.#p5 = null;
     }
 }
