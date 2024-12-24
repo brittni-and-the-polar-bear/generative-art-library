@@ -15,6 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './discriminator';
-export * from './random';
+export * from 'color';
+export * from 'discriminator';
+export * from 'p5-context';
+export * from 'random';
